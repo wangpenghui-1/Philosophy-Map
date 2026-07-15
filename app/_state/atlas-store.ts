@@ -60,9 +60,12 @@ export const useAtlasStore = create<AtlasState>((set) => ({
         return { compareIds: state.compareIds.filter((value) => value !== id) };
       }
       if (state.compareIds.length >= 2) {
-        return { compareIds: [state.compareIds[1], id] };
+        return { compareIds: [state.compareIds[1], id], selectedThinkerId: null, selectedRelationId: null };
       }
-      return { compareIds: [...state.compareIds, id] };
+      const compareIds = [...state.compareIds, id];
+      return compareIds.length === 2
+        ? { compareIds, selectedThinkerId: null, selectedRelationId: null }
+        : { compareIds };
     }),
   clearCompare: () => set({ compareIds: [] }),
 }));

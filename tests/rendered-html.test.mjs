@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -24,6 +24,7 @@ test("server-renders the Atlas product shell", async () => {
   assert.match(html, /世界同时开始提问/);
   assert.match(html, /关系证据/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is building|codex-preview/);
+  assert.doesNotMatch(html, /<img[^>]+\/media\/thinkers\/full\//);
 });
 
 test("renders the public exploration and thinker routes", async () => {
@@ -45,3 +46,30 @@ test("keeps relation evidence and resonance semantics explicit in source data", 
   assert.match(data, /validateAtlasData\(\)/);
 });
 
+test("keeps thinker media metadata complete and backed by public files", async () => {
+  const data = await readFile(new URL("../app/_data/atlas.ts", import.meta.url), "utf8");
+  const mediaEntries = [...data.matchAll(/media: \{ fullSrc: "([^"]+)", thumbSrc: "([^"]+)", alt: "([^"]+)", objectPosition: "([^"]+)", depictionNote: "([^"]+)" \}/g)];
+  assert.equal(mediaEntries.length, 8);
+
+  for (const [, fullSrc, thumbSrc, alt, objectPosition, depictionNote] of mediaEntries) {
+    assert.match(fullSrc, /^\/media\/thinkers\/full\/.+\.webp$/);
+    assert.match(thumbSrc, /^\/media\/thinkers\/thumb\/.+\.webp$/);
+    assert.ok(alt.length > 4);
+    assert.match(objectPosition, /^\d+% \d+%$/);
+    assert.match(depictionNote, /艺术化人物形象/);
+    await Promise.all([
+      access(new URL(`../public${fullSrc}`, import.meta.url)),
+      access(new URL(`../public${thumbSrc}`, import.meta.url)),
+    ]);
+  }
+});
+
+test("returns 404 for invalid public resource routes", async () => {
+  const responses = await Promise.all([
+    render("/thinker/not-a-thinker"),
+    render("/story/not-a-chapter"),
+    render("/compare/confucius/confucius"),
+    render("/compare/confucius/not-a-thinker"),
+  ]);
+  for (const response of responses) assert.equal(response.status, 404);
+});

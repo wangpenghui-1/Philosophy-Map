@@ -9,7 +9,7 @@ import * as THREE from "three";
 import type { FeatureCollection, Geometry, Position } from "geojson";
 import type { Topology } from "topojson-specification";
 import type { RefObject } from "react";
-import { useEffect, useMemo, useRef, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import {
   relations,
@@ -28,8 +28,12 @@ let cachedWebgl2Availability: boolean | null = null;
 
 function getWebgl2Availability() {
   if (cachedWebgl2Availability !== null) return cachedWebgl2Availability;
-  const canvas = document.createElement("canvas");
-  cachedWebgl2Availability = Boolean(canvas.getContext("webgl2", { failIfMajorPerformanceCaveat: true }));
+  try {
+    const canvas = document.createElement("canvas");
+    cachedWebgl2Availability = Boolean(canvas.getContext("webgl2"));
+  } catch {
+    cachedWebgl2Availability = false;
+  }
   return cachedWebgl2Availability;
 }
 
@@ -485,18 +489,31 @@ function GlobeScene(props: Omit<GlobeCanvasProps, "onFallback">) {
 }
 
 export default function GlobeCanvas(props: GlobeCanvasProps) {
-  const webgl2Available = useSyncExternalStore(
-    () => () => undefined,
-    getWebgl2Availability,
-    () => null,
+  const [webgl2Available, setWebgl2Available] = useState<boolean | null>(() =>
+    typeof document === "undefined" ? null : getWebgl2Availability(),
   );
+  const [attempt, setAttempt] = useState(0);
+  const { onFallback } = props;
+
+  useEffect(() => {
+    if (webgl2Available === false) onFallback();
+  }, [onFallback, webgl2Available]);
+
+  const retry = () => {
+    cachedWebgl2Availability = null;
+    setWebgl2Available(getWebgl2Availability());
+    setAttempt((value) => value + 1);
+  };
 
   if (webgl2Available === false) {
     return (
       <div className="globe-fallback" role="status">
         <span>3D渲染不可用</span>
         <strong>内容仍然完整。</strong>
-        <button type="button" onClick={props.onFallback}>打开文字探索</button>
+        <div className="globe-fallback__actions">
+          <button type="button" onClick={props.onFallback}>打开文字探索</button>
+          <button type="button" onClick={retry}>重新尝试3D</button>
+        </div>
       </div>
     );
   }
@@ -516,6 +533,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
 
   return (
     <Canvas
+      key={attempt}
       dpr={dpr}
       camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
       frameloop={props.mode === "story" && props.isPlaying ? "always" : "demand"}
@@ -524,6 +542,11 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         gl.outputColorSpace = THREE.SRGBColorSpace;
         gl.toneMapping = THREE.ACESFilmicToneMapping;
         gl.toneMappingExposure = 0.92;
+        gl.domElement.addEventListener("webglcontextlost", (event) => {
+          event.preventDefault();
+          cachedWebgl2Availability = false;
+          setWebgl2Available(false);
+        }, { once: true });
       }}
       aria-label="可旋转的3D思想地球。人物节点锚定在主要活动区域，关系线跨越球面。"
     >

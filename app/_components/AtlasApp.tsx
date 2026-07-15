@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "motion/react";
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
   evidenceLabels,
   questions,
@@ -20,6 +20,7 @@ import {
   type QuestionId,
 } from "../_data/atlas";
 import { useAtlasStore, type AtlasMode, type QualityTier } from "../_state/atlas-store";
+import ThinkerPortrait from "./ThinkerPortrait";
 
 const GlobeCanvas = dynamic(() => import("./GlobeCanvas"), {
   ssr: false,
@@ -199,6 +200,7 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
         <span>{thinker.region}</span>
         <span>{thinker.anchors.map((anchor) => anchor.label).join(" · ")}</span>
       </div>
+      <ThinkerPortrait thinker={thinker} variant="full" showNote />
       <section className="detail-card__statement">
         <small>他／她试图回答</small>
         <h3>{thinker.question}</h3>
@@ -296,9 +298,9 @@ function CompareDetail({ ids }: { ids: string[] }) {
     <motion.article className="detail-card compare-card" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className="detail-card__index">双人物比较</div>
       <div className="compare-card__names">
-        <div><h2>{left.name}</h2><small>{left.period}</small></div>
+        <div><ThinkerPortrait thinker={left} variant="thumb" /><h2>{left.name}</h2><small>{left.period}</small></div>
         <span>×</span>
-        <div><h2>{right.name}</h2><small>{right.period}</small></div>
+        <div><ThinkerPortrait thinker={right} variant="thumb" /><h2>{right.name}</h2><small>{right.period}</small></div>
       </div>
       <section>
         <h4>共同问题</h4>
@@ -342,6 +344,9 @@ function EmptyDetail({ onSelectRelation }: { onSelectRelation: (id: string) => v
 
 function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () => void; onSelect: (id: string) => void }) {
   const [query, setQuery] = useState("");
+  const dialogRef = useRef<HTMLElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const results = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     if (!normalized) return thinkers;
@@ -360,15 +365,59 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
     onClose();
   };
 
+  useEffect(() => {
+    if (!open) return;
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const frame = window.requestAnimationFrame(() => inputRef.current?.focus());
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.body.style.overflow = previousOverflow;
+      previousFocusRef.current?.focus();
+    };
+  }, [open]);
+
+  const handleDialogKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      close();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
+      'button:not([disabled]), input:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])',
+    );
+    if (!focusable?.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <AnimatePresence>
       {open ? (
-        <motion.div className="modal-backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <motion.div
+          className="modal-backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onMouseDown={(event) => { if (event.target === event.currentTarget) close(); }}
+        >
           <motion.section
+            ref={dialogRef}
             className="search-dialog"
             role="dialog"
             aria-modal="true"
             aria-labelledby="search-title"
+            onKeyDown={handleDialogKeyDown}
             initial={{ opacity: 0, y: -18, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.98 }}
@@ -379,7 +428,7 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
             </div>
             <label className="search-input">
               <span>人物、别名、著作或概念</span>
-              <input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：空、德性、Kant、《论语》" />
+              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：空、德性、Kant、《论语》" />
               <kbd>/</kbd>
             </label>
             <div className="search-results">
@@ -389,7 +438,7 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
                   key={thinker.id}
                   onClick={() => { onSelect(thinker.id); close(); }}
                 >
-                  <span className="search-results__mark" style={{ background: thinker.color }} />
+                  <ThinkerPortrait thinker={thinker} variant="thumb" />
                   <span><strong>{thinker.name}</strong><small>{thinker.englishName} · {thinker.period}</small></span>
                   <i>定位</i>
                 </button>
@@ -403,18 +452,51 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
 }
 
 function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose: () => void; onSelect: (id: string) => void }) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const frame = window.requestAnimationFrame(() => panelRef.current?.focus());
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.body.style.overflow = previousOverflow;
+      previousFocusRef.current?.focus();
+    };
+  }, [open]);
+
   return (
     <AnimatePresence>
       {open ? (
-        <motion.div className="semantic-panel" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <motion.div
+          ref={panelRef}
+          className="semantic-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="semantic-title"
+          tabIndex={-1}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              event.stopPropagation();
+              onClose();
+            }
+          }}
+        >
           <div className="semantic-panel__head">
-            <div><small>ACCESSIBLE INDEX</small><h2>文字探索</h2></div>
+            <div><small>ACCESSIBLE INDEX</small><h2 id="semantic-title">文字探索</h2></div>
             <button type="button" onClick={onClose}>返回地球</button>
           </div>
           <p className="semantic-panel__intro">这里提供与3D地球同源的完整人物和关系入口，适用于键盘、读屏器或低性能设备。</p>
           <div className="semantic-panel__grid">
             {thinkers.map((thinker) => (
               <article key={thinker.id}>
+                <ThinkerPortrait thinker={thinker} variant="thumb" showNote />
                 <small>{thinker.region} · {thinker.period}</small>
                 <h3>{thinker.name}<span>{thinker.englishName}</span></h3>
                 <p>{thinker.thesis}</p>
@@ -483,7 +565,7 @@ function BottomDock({ mode }: { mode: AtlasMode }) {
         type="range"
         min={-600}
         max={1961}
-        step={10}
+        step={1}
         value={timelineYear}
         onChange={(event) => setTimelineYear(Number(event.target.value))}
       />
@@ -567,21 +649,24 @@ export default function AtlasApp({
     }
     const query = new URLSearchParams(window.location.search);
     const question = query.get("question") as QuestionId | null;
-    const year = Number(query.get("year"));
+    const relation = query.get("relation");
+    const yearParam = query.get("year");
+    const year = yearParam === null ? Number.NaN : Number(yearParam);
     if (question && questions.some((item) => item.id === question)) setQuestion(question);
+    if (relation && relationById.has(relation)) selectRelation(relation);
     if (Number.isFinite(year) && year >= -600 && year <= 1961) setTimelineYear(year);
-  }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectThinker, setChapterIndex, setMode, setPlaying, setQuestion, setTimelineYear, toggleCompare]);
+  }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuestion, setTimelineYear, toggleCompare]);
 
   useEffect(() => {
-    const setAdaptiveQuality = () => {
-      const cores = navigator.hardwareConcurrency || 4;
-      if (window.innerWidth <= 680 || cores <= 4) setQuality("low");
-      else if (window.innerWidth <= 1180 || cores <= 8) setQuality("medium");
-      else setQuality("high");
-    };
-    setAdaptiveQuality();
-    window.addEventListener("resize", setAdaptiveQuality);
-    return () => window.removeEventListener("resize", setAdaptiveQuality);
+    const stored = window.sessionStorage.getItem("atlas-quality") as QualityTier | null;
+    if (stored === "high" || stored === "medium" || stored === "low") {
+      setQuality(stored);
+      return;
+    }
+    const cores = navigator.hardwareConcurrency || 4;
+    if (window.innerWidth <= 680 || cores <= 4) setQuality("low");
+    else if (window.innerWidth <= 1180 || cores <= 8) setQuality("medium");
+    else setQuality("high");
   }, [setQuality]);
 
   useEffect(() => {
@@ -612,6 +697,11 @@ export default function AtlasApp({
         setSearchOpen(true);
       }
       if (event.key === "Escape") {
+        if (searchOpen || listViewOpen) {
+          setSearchOpen(false);
+          setListViewOpen(false);
+          return;
+        }
         setSearchOpen(false);
         setListViewOpen(false);
         selectThinker(null);
@@ -622,7 +712,34 @@ export default function AtlasApp({
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [chapterIndex, mode, selectRelation, selectThinker, setChapterIndex, setListViewOpen, setSearchOpen]);
+  }, [chapterIndex, listViewOpen, mode, searchOpen, selectRelation, selectThinker, setChapterIndex, setListViewOpen, setSearchOpen]);
+
+  const chooseQuality = (nextQuality: QualityTier) => {
+    window.sessionStorage.setItem("atlas-quality", nextQuality);
+    setQuality(nextQuality);
+  };
+
+  const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);
+
+  const handleSelectThinker = useCallback((id: string | null) => {
+    selectThinker(id);
+    if (!id) return;
+    const thinker = thinkerById.get(id);
+    if (thinker) window.history.replaceState({}, "", `/thinker/${thinker.slug}`);
+  }, [selectThinker]);
+
+  const handleSelectRelation = useCallback((id: string | null) => {
+    selectRelation(id);
+    if (!id) return;
+    window.history.replaceState({}, "", `/explore?relation=${encodeURIComponent(id)}&year=${timelineYear}`);
+  }, [selectRelation, timelineYear]);
+
+  useEffect(() => {
+    if (!initialized || compareIds.length !== 2 || selectedThinkerId || selectedRelationId) return;
+    const left = thinkerById.get(compareIds[0]);
+    const right = thinkerById.get(compareIds[1]);
+    if (left && right) window.history.replaceState({}, "", `/compare/${left.slug}/${right.slug}`);
+  }, [compareIds, initialized, selectedRelationId, selectedThinkerId]);
 
   const changeMode = (nextMode: AtlasMode) => {
     setMode(nextMode);
@@ -639,7 +756,7 @@ export default function AtlasApp({
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className={`atlas-shell atlas-shell--${displayMode}`}>
+      <div className={`atlas-shell atlas-shell--${displayMode}`} data-hydrated={initialized ? "true" : "false"}>
         <a className="skip-link" href="#atlas-content">跳到思想内容</a>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="思想星图首页">
@@ -648,10 +765,10 @@ export default function AtlasApp({
           </Link>
           <p className="site-header__prompt">人类在不同地方，如何回答相同的问题？</p>
           <div className="header-actions">
-            <button className="search-button" type="button" onClick={() => setSearchOpen(true)}>
+            <button className="search-button" type="button" aria-label="搜索思想星图" onClick={() => setSearchOpen(true)}>
               <span>搜索</span><kbd>/</kbd>
             </button>
-            <button className="text-view-button" type="button" onClick={() => setListViewOpen(true)}>文字探索</button>
+            <button className="text-view-button" type="button" aria-label="打开文字探索" onClick={() => setListViewOpen(true)}>文字探索</button>
             <div className="mode-switch" aria-label="浏览模式">
               <button type="button" className={displayMode === "story" ? "is-active" : ""} onClick={() => changeMode("story")}>故事</button>
               <button type="button" className={displayMode === "explore" ? "is-active" : ""} onClick={() => changeMode("explore")}>探索</button>
@@ -676,17 +793,17 @@ export default function AtlasApp({
                 timelineYear={timelineYear}
                 quality={quality}
                 reduceMotion={reduceMotion}
-                onSelectThinker={selectThinker}
-                onSelectRelation={selectRelation}
-                onFallback={() => setListViewOpen(true)}
+                onSelectThinker={handleSelectThinker}
+                onSelectRelation={handleSelectRelation}
+                onFallback={openSemanticExplorer}
               />
             </div>
             <div className="globe-vignette" aria-hidden="true" />
-            <QualityBadge quality={quality} onChange={setQuality} />
+            <QualityBadge quality={quality} onChange={chooseQuality} />
             {displayMode === "story" ? <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} /> : (
               <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />
             )}
-            <RelationLegend onSelect={selectRelation} />
+            <RelationLegend onSelect={handleSelectRelation} />
             <div className="globe-instruction">
               <span>{displayMode === "story" && isPlaying ? "镜头正在讲述" : "拖动旋转 · 滚轮缩放 · 点击节点"}</span>
             </div>
@@ -698,14 +815,14 @@ export default function AtlasApp({
               {displaySelectedThinkerId ? <ThinkerDetail thinkerId={displaySelectedThinkerId} />
                 : displaySelectedRelationId ? <RelationDetail relationId={displaySelectedRelationId} />
                   : showCompare ? <CompareDetail ids={displayCompareIds} />
-                    : <EmptyDetail onSelectRelation={selectRelation} />}
+                    : <EmptyDetail onSelectRelation={handleSelectRelation} />}
             </AnimatePresence>
           </aside>
         </main>
 
         <BottomDock mode={displayMode} />
-        <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} onSelect={selectThinker} />
-        <SemanticExplorer open={listViewOpen} onClose={() => setListViewOpen(false)} onSelect={selectThinker} />
+        <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} onSelect={handleSelectThinker} />
+        <SemanticExplorer open={listViewOpen} onClose={() => setListViewOpen(false)} onSelect={handleSelectThinker} />
       </div>
     </MotionConfig>
   );

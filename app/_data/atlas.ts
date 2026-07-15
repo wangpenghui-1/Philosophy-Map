@@ -61,6 +61,13 @@ export interface Thinker {
   anchors: GeoAnchor[];
   sourceIds: string[];
   color: string;
+  media: {
+    fullSrc: string;
+    thumbSrc: string;
+    alt: string;
+    objectPosition: string;
+    depictionNote: string;
+  };
   uncertainty?: string;
 }
 
@@ -221,6 +228,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-confucius"],
     color: "#82a987",
+    media: { fullSrc: "/media/thinkers/full/confucius.webp", thumbSrc: "/media/thinkers/thumb/confucius.webp", alt: "孔子的艺术化人物形象", objectPosition: "50% 24%", depictionNote: "艺术化人物形象，并非可考的历史肖像。" },
     uncertainty: "早期材料中的生平细节与后世叙述并不完全一致。",
   },
   {
@@ -244,6 +252,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-zhuangzi"],
     color: "#71a59b",
+    media: { fullSrc: "/media/thinkers/full/zhuangzi.webp", thumbSrc: "/media/thinkers/thumb/zhuangzi.webp", alt: "庄子的艺术化人物形象", objectPosition: "50% 22%", depictionNote: "艺术化人物形象，并非可考的历史肖像。" },
     uncertainty: "《庄子》由不同时期材料构成，不能将全书观点都直接归于庄周本人。",
   },
   {
@@ -267,6 +276,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-buddha"],
     color: "#c18b5f",
+    media: { fullSrc: "/media/thinkers/full/buddha.webp", thumbSrc: "/media/thinkers/thumb/buddha.webp", alt: "佛陀的艺术化人物形象", objectPosition: "50% 30%", depictionNote: "艺术化人物形象，不代表可考的历史肖像。" },
     uncertainty: "现代研究对其确切生卒年代仍有不同估计。",
   },
   {
@@ -290,6 +300,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-nagarjuna"],
     color: "#9a75ad",
+    media: { fullSrc: "/media/thinkers/full/nagarjuna.webp", thumbSrc: "/media/thinkers/thumb/nagarjuna.webp", alt: "龙树的艺术化人物形象", objectPosition: "50% 24%", depictionNote: "艺术化人物形象，并非可考的历史肖像。" },
     uncertainty: "可靠生平材料极少，活动地点与具体著作归属存在争议。",
   },
   {
@@ -313,6 +324,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-aristotle"],
     color: "#c3a15f",
+    media: { fullSrc: "/media/thinkers/full/aristotle.webp", thumbSrc: "/media/thinkers/thumb/aristotle.webp", alt: "亚里士多德的艺术化人物形象", objectPosition: "50% 20%", depictionNote: "艺术化人物形象，参考后世传统形象而非历史照片。" },
   },
   {
     id: "avicenna",
@@ -336,6 +348,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-avicenna"],
     color: "#5f9f9a",
+    media: { fullSrc: "/media/thinkers/full/avicenna.webp", thumbSrc: "/media/thinkers/thumb/avicenna.webp", alt: "阿维森纳的艺术化人物形象", objectPosition: "50% 22%", depictionNote: "艺术化人物形象，参考后世传统形象而非历史照片。" },
   },
   {
     id: "kant",
@@ -358,6 +371,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-kant"],
     color: "#7589b6",
+    media: { fullSrc: "/media/thinkers/full/kant.webp", thumbSrc: "/media/thinkers/thumb/kant.webp", alt: "康德的艺术化人物形象", objectPosition: "50% 18%", depictionNote: "艺术化人物形象，参考历史肖像进行风格化处理。" },
   },
   {
     id: "fanon",
@@ -381,6 +395,7 @@ export const thinkers: Thinker[] = [
     ],
     sourceIds: ["src-fanon"],
     color: "#b45c4e",
+    media: { fullSrc: "/media/thinkers/full/fanon.webp", thumbSrc: "/media/thinkers/thumb/fanon.webp", alt: "法农的艺术化人物形象", objectPosition: "48% 38%", depictionNote: "艺术化人物形象，参考历史照片进行风格化处理。" },
   },
 ];
 
@@ -513,6 +528,12 @@ function validateAtlasData() {
   for (const thinker of thinkers) {
     if (!thinker.sourceIds.length) throw new Error(`Thinker ${thinker.id} has no source.`);
     if (!thinker.anchors.length) throw new Error(`Thinker ${thinker.id} has no geographic anchor.`);
+    if (!thinker.media.fullSrc || !thinker.media.thumbSrc || !thinker.media.alt || !thinker.media.depictionNote) {
+      throw new Error(`Thinker ${thinker.id} has incomplete media metadata.`);
+    }
+    if (!thinker.media.fullSrc.startsWith("/media/thinkers/full/") || !thinker.media.thumbSrc.startsWith("/media/thinkers/thumb/")) {
+      throw new Error(`Thinker ${thinker.id} has invalid media paths.`);
+    }
     for (const sourceId of thinker.sourceIds) {
       if (!sourceById.has(sourceId)) throw new Error(`Thinker ${thinker.id} references missing source ${sourceId}.`);
     }

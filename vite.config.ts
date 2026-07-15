@@ -11,6 +11,30 @@ const { d1, r2 } = hostingConfig;
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
+function clientChunkStrategy() {
+  return {
+    name: "atlas-client-chunk-strategy",
+    configEnvironment(name: string) {
+      if (name !== "client") return;
+      return {
+        build: {
+          rolldownOptions: {
+            output: {
+              codeSplitting: {
+                groups: [
+                  { name: "three-core", test: /node_modules[\\/]three[\\/]/, maxSize: 450 * 1024 },
+                  { name: "react-three", test: /node_modules[\\/]@react-three[\\/]/, maxSize: 450 * 1024 },
+                  { name: "globe-support", test: /node_modules[\\/](three-stdlib|gsap|topojson-client|world-atlas)[\\/]/, maxSize: 450 * 1024 },
+                ],
+              },
+            },
+          },
+        },
+      };
+    },
+  };
+}
+
 const localBindingConfig = {
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
@@ -49,6 +73,7 @@ export default defineConfig(async () => {
       : undefined,
     plugins: [
       vinext(),
+      clientChunkStrategy(),
       sites(),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },

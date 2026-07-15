@@ -41,7 +41,10 @@
 npm run dev
 npm run lint
 npm test
+npm run test:e2e
+npm run test:all
 ```
 
-`npm test`会先生成发布构建，再检查首屏、公开路径以及关系语义保护。
+`npm test`会先生成发布构建，再检查首屏、公开路径、媒体文件、关系语义和客户端分包预算。`npm run test:e2e`使用桌面与移动端 Chromium 检查核心交互、降级模式和视觉快照。
 
+公开演示版的发布验收记录见 `docs/RELEASE_CHECKLIST.md`。

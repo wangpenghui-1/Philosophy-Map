@@ -62,6 +62,11 @@ export interface KnowledgePerson extends EditorialMetadata {
     authenticity: string;
     rightsStatus: string;
     credit: string;
+    sourceUrl?: string;
+    sourceFile?: string;
+    license?: string;
+    creator?: string;
+    retrievedAt?: string;
   };
   uncertainty?: string;
   color: string;

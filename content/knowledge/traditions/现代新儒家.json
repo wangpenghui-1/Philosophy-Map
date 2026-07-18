@@ -12,10 +12,12 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "liang-shuming"
+    "liang-shuming",
+    "mou-zongsan"
   ],
   "conceptIds": [
-    "concept-文化路向"
+    "concept-文化路向",
+    "concept-智的直觉"
   ],
   "sourceIds": [
     "src-encyclopedia-chinese-philosophy"

@@ -26,7 +26,7 @@ export default async function KnowledgeDirectoryPage({
             <span><strong>{knowledgeBase.traditions.length}</strong> 传统</span>
             <span><strong>{knowledgeBase.works.length}</strong> 著作</span>
           </div>
-          <p>120人物版本已覆盖八个主要思想区域。索引条目提供可靠入口，不以简短摘要冒充完整解释；思想关系只有在能够说明证据与传播路径时才会发布。</p>
+          <p>210人物版本已覆盖八个主要思想区域。索引条目提供可靠入口，不以简短摘要冒充完整解释；思想关系只有在能够说明证据与传播路径时才会发布。</p>
         </section>
         <KnowledgeDirectory filters={filters} />
       </main>

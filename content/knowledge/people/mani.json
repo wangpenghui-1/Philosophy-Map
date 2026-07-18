@@ -1,0 +1,108 @@
+{
+  "id": "mani",
+  "slug": "mani",
+  "entityType": "person",
+  "names": {
+    "display": "摩尼",
+    "english": "Mani",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "216–274",
+    "startYear": 216,
+    "endYear": 274,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-摩尼教"
+  ],
+  "conceptIds": [
+    "concept-光暗二元"
+  ],
+  "questionIds": [
+    "knowledge",
+    "reality"
+  ],
+  "guidingQuestion": "世界中的恶与痛苦如何由宇宙性冲突解释？",
+  "thesis": "光与暗的混合构成现世处境，知识、节制和宗教共同体协助释放光明。",
+  "summary": "摩尼是西亚、中亚及伊斯兰思想世界摩尼教的重要思想人物，主要追问“世界中的恶与痛苦如何由宇宙性冲突解释？”。其思想以“光暗二元”为入口，主张光与暗的混合构成现世处境，知识、节制和宗教共同体协助释放光明。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "shabuhragan"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "ctesiphon",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Mani / 摩尼”",
+      "claim": "支持摩尼的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "摩尼是西亚、中亚及伊斯兰思想世界摩尼教的重要思想人物，主要追问“世界中的恶与痛苦如何由宇宙性冲突解释？”。其思想以“光暗二元”为入口，主张光与暗的混合构成现世处境，知识、节制和宗教共同体协助释放光明。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Mani / 摩尼”",
+              "claim": "支持摩尼的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：世界中的恶与痛苦如何由宇宙性冲突解释？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Mani / 摩尼”",
+              "claim": "支持对摩尼核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：光与暗的混合构成现世处境，知识、节制和宗教共同体协助释放光明。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Mani / 摩尼”",
+              "claim": "支持对摩尼核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/mani.webp",
+    "thumbSrc": "/media/thinkers/thumb/mani.webp",
+    "alt": "摩尼的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

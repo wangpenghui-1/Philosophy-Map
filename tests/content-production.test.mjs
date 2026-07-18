@@ -171,11 +171,11 @@ test("state machine requires verified sources, located claims, and all reviews",
   assert.equal(task.target.publicVisibility, false);
 });
 
-test("repository production audit validates all 90 release batch tasks", async () => {
+test("repository production audit validates all 180 release batch tasks", async () => {
   const audit = await auditContentProduction({ contentRoot: path.join(projectRoot, "content/knowledge") });
-  assert.equal(audit.summary.batchCount, 3);
-  assert.equal(audit.summary.taskCount, 90);
-  assert.equal(audit.summary.runnableJobs, 180);
+  assert.equal(audit.summary.batchCount, 6);
+  assert.equal(audit.summary.taskCount, 180);
+  assert.equal(audit.summary.runnableJobs, 360);
   assert.equal(audit.summary.publicCandidates, 0);
   assert.deepEqual(audit.findings.filter((item) => item.severity === "blocker"), []);
   assert.ok(audit.findings.some((item) => item.code === "production-progress"));

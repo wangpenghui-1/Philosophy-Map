@@ -1,0 +1,113 @@
+{
+  "id": "francis-bacon",
+  "slug": "francis-bacon",
+  "entityType": "person",
+  "names": {
+    "display": "弗朗西斯·培根",
+    "english": "Francis Bacon",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1561–1626",
+    "startYear": 1561,
+    "endYear": 1626,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-近代知识论"
+  ],
+  "conceptIds": [
+    "concept-归纳与偶像"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self"
+  ],
+  "guidingQuestion": "知识方法如何克服心智偏见并产生可靠发现？",
+  "thesis": "系统观察、实验和逐步归纳应取代仓促概括，同时清理四类心智偶像。",
+  "summary": "弗朗西斯·培根是欧洲与地中海近代知识论的重要思想人物，主要追问“知识方法如何克服心智偏见并产生可靠发现？”。其思想以“归纳与偶像”为入口，主张系统观察、实验和逐步归纳应取代仓促概括，同时清理四类心智偶像。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "novum-organum"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Francis Bacon / 弗朗西斯·培根”",
+      "claim": "支持弗朗西斯·培根的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "弗朗西斯·培根是欧洲与地中海近代知识论的重要思想人物，主要追问“知识方法如何克服心智偏见并产生可靠发现？”。其思想以“归纳与偶像”为入口，主张系统观察、实验和逐步归纳应取代仓促概括，同时清理四类心智偶像。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Francis Bacon / 弗朗西斯·培根”",
+              "claim": "支持弗朗西斯·培根的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：知识方法如何克服心智偏见并产生可靠发现？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Francis Bacon / 弗朗西斯·培根”",
+              "claim": "支持对弗朗西斯·培根核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：系统观察、实验和逐步归纳应取代仓促概括，同时清理四类心智偶像。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Francis Bacon / 弗朗西斯·培根”",
+              "claim": "支持对弗朗西斯·培根核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/francis-bacon.webp",
+    "thumbSrc": "/media/thinkers/thumb/francis-bacon.webp",
+    "alt": "弗朗西斯·培根的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Paul van Somer I / Formerly attributed to Frans Pourbus the Younger · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somer_Francis_Bacon.jpg",
+    "sourceFile": "File:Somer Francis Bacon.jpg",
+    "license": "Public domain",
+    "creator": "Paul van Somer I / Formerly attributed to Frans Pourbus the Younger",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

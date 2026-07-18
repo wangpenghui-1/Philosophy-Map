@@ -1,0 +1,42 @@
+{
+  "id": "can-subaltern-speak",
+  "slug": "can-subaltern-speak",
+  "entityType": "work",
+  "title": "《底层能发声吗？》",
+  "originalTitle": "Can the Subaltern Speak?",
+  "authorRefs": [
+    {
+      "personId": "gayatri-chakravorty-spivak",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1988年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《底层能发声吗？》是进入斯皮瓦克思想语境的代表文本入口。条目以“底层能否发声”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-底层能否发声"
+  ],
+  "traditionIds": [
+    "tradition-后殖民思想"
+  ],
+  "sourceIds": [
+    "src-cultural-studies-reader"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-cultural-studies-reader",
+      "locator": "对应作者选文及编者导言：“Gayatri Chakravorty Spivak / 斯皮瓦克”",
+      "claim": "支持《底层能发声吗？》与斯皮瓦克的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -68,7 +68,15 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
               const other = knowledgePersonById.get(otherId);
               return { href: other ? `/thinker/${other.slug}` : "/knowledge", title: relation.title, subtitle: other?.names.display };
             })} />
-            <section className="knowledge-media-note"><h2>图像说明</h2><p>{thinker.media.depictionNote}</p><small>{thinker.media.credit} · {thinker.media.rightsStatus}</small></section>
+            <section className="knowledge-media-note">
+              <h2>图像说明</h2>
+              <p>{thinker.media.depictionNote}</p>
+              <small>
+                {thinker.media.sourceUrl
+                  ? <a href={thinker.media.sourceUrl} target="_blank" rel="noreferrer">{thinker.media.credit} · {thinker.media.license ?? thinker.media.rightsStatus}</a>
+                  : `${thinker.media.credit} · ${thinker.media.rightsStatus}`}
+              </small>
+            </section>
           </aside>
         </div>
       </main>

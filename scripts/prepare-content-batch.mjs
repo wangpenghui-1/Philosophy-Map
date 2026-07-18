@@ -281,14 +281,20 @@ function parseBatchNumber(argv) {
   return value;
 }
 
+function parseBatchNumbers(argv) {
+  return argv.includes("--all") ? [1, 2, 3, 4, 5, 6] : [parseBatchNumber(argv)];
+}
+
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const write = process.argv.includes("--write");
-  const result = await prepareContentBatch({ batchNumber: parseBatchNumber(process.argv.slice(2)), write });
-  if (result.changes.length) {
-    console.log(`${write ? "Prepared" : "Required"} ${result.batchId}: ${result.changes.length} file(s) ${write ? "written" : "missing or stale"}.`);
-    result.changes.slice(0, 12).forEach((file) => console.log(`- ${path.relative(projectRoot, file)}`));
-    if (!write) process.exitCode = 1;
-  } else {
-    console.log(`${result.batchId} production scaffold is complete and stable.`);
+  for (const batchNumber of parseBatchNumbers(process.argv.slice(2))) {
+    const result = await prepareContentBatch({ batchNumber, write });
+    if (result.changes.length) {
+      console.log(`${write ? "Prepared" : "Required"} ${result.batchId}: ${result.changes.length} file(s) ${write ? "written" : "missing or stale"}.`);
+      result.changes.slice(0, 12).forEach((file) => console.log(`- ${path.relative(projectRoot, file)}`));
+      if (!write) process.exitCode = 1;
+    } else {
+      console.log(`${result.batchId} production scaffold is complete and stable.`);
+    }
   }
 }

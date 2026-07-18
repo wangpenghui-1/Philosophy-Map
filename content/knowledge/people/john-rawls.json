@@ -86,12 +86,20 @@
     }
   ],
   "media": {
-    "alt": "罗尔斯的中性占位图",
-    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
-    "presentationType": "placeholder",
-    "authenticity": "unavailable",
-    "rightsStatus": "not-applicable-placeholder",
-    "credit": "思想星图中性占位"
+    "fullSrc": "/media/thinkers/full/john-rawls.webp",
+    "thumbSrc": "/media/thinkers/thumb/john-rawls.webp",
+    "alt": "罗尔斯的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Rawls_(1971_photo_portrait).jpg",
+    "sourceFile": "File:John Rawls (1971 photo portrait).jpg",
+    "license": "Public domain",
+    "creator": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G",
+    "retrievedAt": "2026-07-19"
   },
   "color": "#d87f9d",
   "mapVisible": true,
@@ -100,6 +108,6 @@
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
+  "lastReviewedAt": "2026-07-19",
   "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
 }

@@ -86,12 +86,20 @@
     }
   ],
   "media": {
-    "alt": "王夫之的中性占位图",
-    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
-    "presentationType": "placeholder",
-    "authenticity": "unavailable",
-    "rightsStatus": "not-applicable-placeholder",
-    "credit": "思想星图中性占位"
+    "fullSrc": "/media/thinkers/full/wang-fuzhi.webp",
+    "thumbSrc": "/media/thinkers/thumb/wang-fuzhi.webp",
+    "alt": "王夫之的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "叶公绰辑，杨鹏秋摹绘。 · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E5%A4%AB%E4%B9%8B.jpg",
+    "sourceFile": "File:王夫之.jpg",
+    "license": "Public domain",
+    "creator": "叶公绰辑，杨鹏秋摹绘。",
+    "retrievedAt": "2026-07-19"
   },
   "color": "#86b79b",
   "mapVisible": true,
@@ -100,6 +108,6 @@
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
+  "lastReviewedAt": "2026-07-19",
   "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
 }

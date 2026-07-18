@@ -1,0 +1,113 @@
+{
+  "id": "john-stuart-mill",
+  "slug": "john-stuart-mill",
+  "entityType": "person",
+  "names": {
+    "display": "约翰·斯图亚特·密尔",
+    "english": "John Stuart Mill",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1806–1873",
+    "startYear": 1806,
+    "endYear": 1873,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-自由主义与功利主义"
+  ],
+  "conceptIds": [
+    "concept-伤害原则"
+  ],
+  "questionIds": [
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "社会何时可以正当地限制个人自由？",
+  "thesis": "只有防止对他人造成伤害才足以强制干预，个性发展具有公共价值。",
+  "summary": "约翰·斯图亚特·密尔是欧洲与地中海自由主义与功利主义的重要思想人物，主要追问“社会何时可以正当地限制个人自由？”。其思想以“伤害原则”为入口，主张只有防止对他人造成伤害才足以强制干预，个性发展具有公共价值。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "on-liberty"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“John Stuart Mill / 约翰·斯图亚特·密尔”",
+      "claim": "支持约翰·斯图亚特·密尔的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "约翰·斯图亚特·密尔是欧洲与地中海自由主义与功利主义的重要思想人物，主要追问“社会何时可以正当地限制个人自由？”。其思想以“伤害原则”为入口，主张只有防止对他人造成伤害才足以强制干预，个性发展具有公共价值。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“John Stuart Mill / 约翰·斯图亚特·密尔”",
+              "claim": "支持约翰·斯图亚特·密尔的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：社会何时可以正当地限制个人自由？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“John Stuart Mill / 约翰·斯图亚特·密尔”",
+              "claim": "支持对约翰·斯图亚特·密尔核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：只有防止对他人造成伤害才足以强制干预，个性发展具有公共价值。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“John Stuart Mill / 约翰·斯图亚特·密尔”",
+              "claim": "支持对约翰·斯图亚特·密尔核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/john-stuart-mill.webp",
+    "thumbSrc": "/media/thinkers/thumb/john-stuart-mill.webp",
+    "alt": "约翰·斯图亚特·密尔的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "London Stereoscopic Company · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg",
+    "sourceFile": "File:John Stuart Mill by London Stereoscopic Company, c1870.jpg",
+    "license": "Public domain",
+    "creator": "London Stereoscopic Company",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

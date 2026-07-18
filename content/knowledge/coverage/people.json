@@ -1,32 +1,32 @@
 {
   "version": 2,
-  "publishedBaseline": 120,
+  "publishedBaseline": 210,
   "candidateCount": 0,
-  "targetTotal": 120,
+  "targetTotal": 210,
   "status": "release-candidate",
   "regionTargets": {
     "北非—地中海": 1,
     "地中海": 3,
-    "东南亚与大洋洲": 5,
-    "东亚": 17,
-    "非洲": 9,
+    "东南亚与大洋洲": 9,
+    "东亚": 31,
+    "非洲": 19,
     "加勒比—北非": 1,
-    "跨区域与离散思想传统": 3,
-    "美洲与加勒比": 13,
-    "南亚": 17,
+    "跨区域与离散思想传统": 8,
+    "美洲与加勒比": 25,
+    "南亚": 30,
     "欧洲": 19,
     "欧洲—北美": 1,
-    "欧洲与地中海": 18,
-    "西亚、中亚及伊斯兰思想世界": 12,
+    "欧洲与地中海": 36,
+    "西亚、中亚及伊斯兰思想世界": 26,
     "伊斯兰思想世界": 1
   },
   "eraTargets": {
-    "1500–1800年": 22,
-    "1800–1945年": 43,
-    "1945年至今": 4,
-    "500–1500年": 23,
-    "公元前500年以前": 8,
-    "公元前500年至公元500年": 20
+    "1500–1800年": 30,
+    "1800–1945年": 80,
+    "1945年至今": 13,
+    "500–1500年": 38,
+    "公元前500年以前": 13,
+    "公元前500年至公元500年": 36
   },
   "batchRules": {
     "batchCount": 0,
@@ -34,7 +34,7 @@
     "minimumRegionsPerBatch": 4,
     "minimumErasPerBatch": 3,
     "maximumSingleRegionShare": 0.4,
-    "publicationRule": "120人版本已完成自动编辑与结构审核；外部同行评审不在自动审核声明范围内。"
+    "publicationRule": "210人版本已完成自动编辑与结构审核；外部同行评审不在自动审核声明范围内。"
   },
   "candidates": [],
   "releaseCandidates": [
@@ -90,6 +90,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-004",
+      "name": "荀子",
+      "englishName": "Xunzi",
+      "primaryRegion": "东亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "儒家",
+      "selectionReason": "补充东亚与儒家在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "公元前500年至公元500年",
+        "儒家"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-005",
+      "name": "韩非",
+      "englishName": "Han Fei",
+      "primaryRegion": "东亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "法家",
+      "selectionReason": "补充东亚与法家在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "公元前500年至公元500年",
+        "法家"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-006",
+      "name": "董仲舒",
+      "englishName": "Dong Zhongshu",
+      "primaryRegion": "东亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "汉代儒学",
+      "selectionReason": "补充东亚与汉代儒学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "公元前500年至公元500年",
+        "汉代儒学"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-008",
       "name": "郭象",
       "englishName": "Guo Xiang",
@@ -139,6 +190,57 @@
         "天台宗"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-011",
+      "name": "法藏",
+      "englishName": "Fazang",
+      "primaryRegion": "东亚",
+      "era": "500–1500年",
+      "tradition": "华严宗",
+      "selectionReason": "补充东亚与华严宗在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "500–1500年",
+        "华严宗"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-012",
+      "name": "韩愈",
+      "englishName": "Han Yu",
+      "primaryRegion": "东亚",
+      "era": "500–1500年",
+      "tradition": "儒学复兴",
+      "selectionReason": "补充东亚与儒学复兴在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "500–1500年",
+        "儒学复兴"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-013",
+      "name": "朱熹",
+      "englishName": "Zhu Xi",
+      "primaryRegion": "东亚",
+      "era": "500–1500年",
+      "tradition": "理学",
+      "selectionReason": "补充东亚与理学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "500–1500年",
+        "理学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-015",
@@ -192,6 +294,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-018",
+      "name": "戴震",
+      "englishName": "Dai Zhen",
+      "primaryRegion": "东亚",
+      "era": "1500–1800年",
+      "tradition": "清代考据与哲学",
+      "selectionReason": "补充东亚与清代考据与哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1500–1800年",
+        "清代考据与哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-019",
+      "name": "康有为",
+      "englishName": "Kang Youwei",
+      "primaryRegion": "东亚",
+      "era": "1800–1945年",
+      "tradition": "近代经学与改革",
+      "selectionReason": "补充东亚与近代经学与改革在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1800–1945年",
+        "近代经学与改革"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-020",
+      "name": "梁启超",
+      "englishName": "Liang Qichao",
+      "primaryRegion": "东亚",
+      "era": "1800–1945年",
+      "tradition": "近代政治思想",
+      "selectionReason": "补充东亚与近代政治思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1800–1945年",
+        "近代政治思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-022",
       "name": "胡适",
       "englishName": "Hu Shi",
@@ -241,6 +394,57 @@
         "现代中国哲学"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-025",
+      "name": "牟宗三",
+      "englishName": "Mou Zongsan",
+      "primaryRegion": "东亚",
+      "era": "1945年至今",
+      "tradition": "现代新儒家",
+      "selectionReason": "补充东亚与现代新儒家在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1945年至今",
+        "现代新儒家"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-026",
+      "name": "西田几多郎",
+      "englishName": "Nishida Kitaro",
+      "primaryRegion": "东亚",
+      "era": "1800–1945年",
+      "tradition": "京都学派",
+      "selectionReason": "补充东亚与京都学派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1800–1945年",
+        "京都学派"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-027",
+      "name": "和辻哲郎",
+      "englishName": "Watsuji Tetsuro",
+      "primaryRegion": "东亚",
+      "era": "1800–1945年",
+      "tradition": "日本伦理学",
+      "selectionReason": "补充东亚与日本伦理学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1800–1945年",
+        "日本伦理学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-029",
@@ -294,6 +498,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-032",
+      "name": "李滉",
+      "englishName": "Yi Hwang",
+      "primaryRegion": "东亚",
+      "era": "1500–1800年",
+      "tradition": "朝鲜性理学",
+      "selectionReason": "补充东亚与朝鲜性理学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1500–1800年",
+        "朝鲜性理学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-033",
+      "name": "丁若镛",
+      "englishName": "Jeong Yak-yong",
+      "primaryRegion": "东亚",
+      "era": "1500–1800年",
+      "tradition": "朝鲜实学",
+      "selectionReason": "补充东亚与朝鲜实学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东亚",
+        "1500–1800年",
+        "朝鲜实学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-034",
+      "name": "筏驮摩那",
+      "englishName": "Mahavira",
+      "primaryRegion": "南亚",
+      "era": "公元前500年以前",
+      "tradition": "耆那教",
+      "selectionReason": "补充南亚与耆那教在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年以前",
+        "耆那教"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-036",
       "name": "迦尔吉",
       "englishName": "Gargi Vachaknavi",
@@ -343,6 +598,57 @@
         "数论"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-039",
+      "name": "钵颠阇利",
+      "englishName": "Patanjali",
+      "primaryRegion": "南亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "瑜伽哲学",
+      "selectionReason": "补充南亚与瑜伽哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年至公元500年",
+        "瑜伽哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-040",
+      "name": "迦那陀",
+      "englishName": "Kanada",
+      "primaryRegion": "南亚",
+      "era": "公元前500年以前",
+      "tradition": "胜论",
+      "selectionReason": "补充南亚与胜论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年以前",
+        "胜论"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-041",
+      "name": "乔达摩",
+      "englishName": "Akshapada Gautama",
+      "primaryRegion": "南亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "正理派",
+      "selectionReason": "补充南亚与正理派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年至公元500年",
+        "正理派"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-043",
@@ -396,6 +702,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-046",
+      "name": "无著",
+      "englishName": "Asanga",
+      "primaryRegion": "南亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "瑜伽行派",
+      "selectionReason": "补充南亚与瑜伽行派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年至公元500年",
+        "瑜伽行派"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-047",
+      "name": "陈那",
+      "englishName": "Dignaga",
+      "primaryRegion": "南亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "佛教逻辑学",
+      "selectionReason": "补充南亚与佛教逻辑学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年至公元500年",
+        "佛教逻辑学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-048",
+      "name": "法称",
+      "englishName": "Dharmakirti",
+      "primaryRegion": "南亚",
+      "era": "500–1500年",
+      "tradition": "佛教认识论",
+      "selectionReason": "补充南亚与佛教认识论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "500–1500年",
+        "佛教认识论"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-050",
       "name": "罗摩奴阇",
       "englishName": "Ramanuja",
@@ -445,6 +802,57 @@
         "克什米尔湿婆教"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-053",
+      "name": "伐致呵利",
+      "englishName": "Bhartrhari",
+      "primaryRegion": "南亚",
+      "era": "公元前500年至公元500年",
+      "tradition": "语言哲学",
+      "selectionReason": "补充南亚与语言哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "公元前500年至公元500年",
+        "语言哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-054",
+      "name": "鸠摩梨罗",
+      "englishName": "Kumarila Bhatta",
+      "primaryRegion": "南亚",
+      "era": "500–1500年",
+      "tradition": "弥曼差",
+      "selectionReason": "补充南亚与弥曼差在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "500–1500年",
+        "弥曼差"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-055",
+      "name": "阇衍多",
+      "englishName": "Jayanta Bhatta",
+      "primaryRegion": "南亚",
+      "era": "500–1500年",
+      "tradition": "正理派",
+      "selectionReason": "补充南亚与正理派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "500–1500年",
+        "正理派"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-057",
@@ -498,6 +906,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-060",
+      "name": "罗姆摩罕·罗伊",
+      "englishName": "Rammohan Roy",
+      "primaryRegion": "南亚",
+      "era": "1800–1945年",
+      "tradition": "近代印度改革思想",
+      "selectionReason": "补充南亚与近代印度改革思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "1800–1945年",
+        "近代印度改革思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-061",
+      "name": "维韦卡南达",
+      "englishName": "Swami Vivekananda",
+      "primaryRegion": "南亚",
+      "era": "1800–1945年",
+      "tradition": "现代吠檀多",
+      "selectionReason": "补充南亚与现代吠檀多在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "1800–1945年",
+        "现代吠檀多"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-062",
+      "name": "泰戈尔",
+      "englishName": "Rabindranath Tagore",
+      "primaryRegion": "南亚",
+      "era": "1800–1945年",
+      "tradition": "现代印度人文思想",
+      "selectionReason": "补充南亚与现代印度人文思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "南亚",
+        "1800–1945年",
+        "现代印度人文思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-064",
       "name": "安贝德卡尔",
       "englishName": "B. R. Ambedkar",
@@ -547,6 +1006,57 @@
         "现代精神哲学"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-067",
+      "name": "琐罗亚斯德",
+      "englishName": "Zoroaster",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "公元前500年以前",
+      "tradition": "祆教思想",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与祆教思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "公元前500年以前",
+        "祆教思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-068",
+      "name": "摩尼",
+      "englishName": "Mani",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "公元前500年至公元500年",
+      "tradition": "摩尼教",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与摩尼教在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "公元前500年至公元500年",
+        "摩尼教"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-069",
+      "name": "肯迪",
+      "englishName": "Al-Kindi",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "500–1500年",
+      "tradition": "阿拉伯语哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与阿拉伯语哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "500–1500年",
+        "阿拉伯语哲学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-071",
@@ -600,6 +1110,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-074",
+      "name": "苏哈拉瓦迪",
+      "englishName": "Suhrawardi",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "500–1500年",
+      "tradition": "照明哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与照明哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "500–1500年",
+        "照明哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-075",
+      "name": "伊本·阿拉比",
+      "englishName": "Ibn Arabi",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "500–1500年",
+      "tradition": "苏菲形而上学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与苏菲形而上学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "500–1500年",
+        "苏菲形而上学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-076",
+      "name": "穆拉·萨德拉",
+      "englishName": "Mulla Sadra",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1500–1800年",
+      "tradition": "伊斯兰后古典哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与伊斯兰后古典哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1500–1800年",
+        "伊斯兰后古典哲学"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-078",
       "name": "比鲁尼",
       "englishName": "Al-Biruni",
@@ -649,6 +1210,57 @@
         "苏菲思想"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-081",
+      "name": "萨阿迪亚·高昂",
+      "englishName": "Saadia Gaon",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "500–1500年",
+      "tradition": "犹太哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与犹太哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "500–1500年",
+        "犹太哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-082",
+      "name": "迈蒙尼德",
+      "englishName": "Maimonides",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "500–1500年",
+      "tradition": "犹太哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与犹太哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "500–1500年",
+        "犹太哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-083",
+      "name": "斐洛",
+      "englishName": "Philo of Alexandria",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "公元前500年至公元500年",
+      "tradition": "希腊化犹太哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与希腊化犹太哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "公元前500年至公元500年",
+        "希腊化犹太哲学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-085",
@@ -702,6 +1314,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-088",
+      "name": "穆罕默德·伊克巴尔",
+      "englishName": "Muhammad Iqbal",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1800–1945年",
+      "tradition": "现代伊斯兰哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与现代伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1800–1945年",
+        "现代伊斯兰哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-089",
+      "name": "阿里·沙里亚蒂",
+      "englishName": "Ali Shariati",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1945年至今",
+      "tradition": "现代伊朗政治思想",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与现代伊朗政治思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1945年至今",
+        "现代伊朗政治思想"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-090",
+      "name": "阿卜杜勒卡里姆·索鲁什",
+      "englishName": "Abdolkarim Soroush",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1945年至今",
+      "tradition": "当代伊斯兰思想",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与当代伊斯兰思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1945年至今",
+        "当代伊斯兰思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-092",
       "name": "莱拉·艾哈迈德",
       "englishName": "Leila Ahmed",
@@ -751,6 +1414,57 @@
         "伊斯兰女性主义"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-095",
+      "name": "塔拉勒·阿萨德",
+      "englishName": "Talal Asad",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1945年至今",
+      "tradition": "宗教与世俗批判",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与宗教与世俗批判在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1945年至今",
+        "宗教与世俗批判"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-096",
+      "name": "赛义德·侯赛因·纳斯尔",
+      "englishName": "Seyyed Hossein Nasr",
+      "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+      "era": "1945年至今",
+      "tradition": "当代伊斯兰哲学",
+      "selectionReason": "补充西亚、中亚及伊斯兰思想世界与当代伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "西亚、中亚及伊斯兰思想世界",
+        "1945年至今",
+        "当代伊斯兰哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-097",
+      "name": "泰勒斯",
+      "englishName": "Thales",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年以前",
+      "tradition": "前苏格拉底哲学",
+      "selectionReason": "补充欧洲与地中海与前苏格拉底哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年以前",
+        "前苏格拉底哲学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-099",
@@ -804,6 +1518,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-102",
+      "name": "恩培多克勒",
+      "englishName": "Empedocles",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年以前",
+      "tradition": "前苏格拉底哲学",
+      "selectionReason": "补充欧洲与地中海与前苏格拉底哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年以前",
+        "前苏格拉底哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-103",
+      "name": "德谟克利特",
+      "englishName": "Democritus",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年以前",
+      "tradition": "原子论",
+      "selectionReason": "补充欧洲与地中海与原子论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年以前",
+        "原子论"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-104",
+      "name": "普罗泰戈拉",
+      "englishName": "Protagoras",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年至公元500年",
+      "tradition": "智者学派",
+      "selectionReason": "补充欧洲与地中海与智者学派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年至公元500年",
+        "智者学派"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-106",
       "name": "伊壁鸠鲁",
       "englishName": "Epicurus",
@@ -853,6 +1618,57 @@
         "斯多亚学派"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-109",
+      "name": "西塞罗",
+      "englishName": "Cicero",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年至公元500年",
+      "tradition": "罗马哲学",
+      "selectionReason": "补充欧洲与地中海与罗马哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年至公元500年",
+        "罗马哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-110",
+      "name": "塞涅卡",
+      "englishName": "Seneca",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年至公元500年",
+      "tradition": "斯多亚学派",
+      "selectionReason": "补充欧洲与地中海与斯多亚学派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年至公元500年",
+        "斯多亚学派"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-111",
+      "name": "爱比克泰德",
+      "englishName": "Epictetus",
+      "primaryRegion": "欧洲与地中海",
+      "era": "公元前500年至公元500年",
+      "tradition": "斯多亚学派",
+      "selectionReason": "补充欧洲与地中海与斯多亚学派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "公元前500年至公元500年",
+        "斯多亚学派"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-113",
@@ -906,6 +1722,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-116",
+      "name": "安瑟伦",
+      "englishName": "Anselm of Canterbury",
+      "primaryRegion": "欧洲与地中海",
+      "era": "500–1500年",
+      "tradition": "经院哲学",
+      "selectionReason": "补充欧洲与地中海与经院哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "500–1500年",
+        "经院哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-117",
+      "name": "阿伯拉尔",
+      "englishName": "Peter Abelard",
+      "primaryRegion": "欧洲与地中海",
+      "era": "500–1500年",
+      "tradition": "经院哲学",
+      "selectionReason": "补充欧洲与地中海与经院哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "500–1500年",
+        "经院哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-118",
+      "name": "宾根的希尔德加德",
+      "englishName": "Hildegard of Bingen",
+      "primaryRegion": "欧洲与地中海",
+      "era": "500–1500年",
+      "tradition": "中世纪思想",
+      "selectionReason": "补充欧洲与地中海与中世纪思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "500–1500年",
+        "中世纪思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-120",
       "name": "奥卡姆",
       "englishName": "William of Ockham",
@@ -955,6 +1822,57 @@
         "中世纪政治思想"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-123",
+      "name": "伊拉斯谟",
+      "englishName": "Erasmus",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1500–1800年",
+      "tradition": "文艺复兴人文主义",
+      "selectionReason": "补充欧洲与地中海与文艺复兴人文主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1500–1800年",
+        "文艺复兴人文主义"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-124",
+      "name": "弗朗西斯·培根",
+      "englishName": "Francis Bacon",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1500–1800年",
+      "tradition": "近代知识论",
+      "selectionReason": "补充欧洲与地中海与近代知识论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1500–1800年",
+        "近代知识论"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-125",
+      "name": "帕斯卡",
+      "englishName": "Blaise Pascal",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1500–1800年",
+      "tradition": "近代宗教哲学",
+      "selectionReason": "补充欧洲与地中海与近代宗教哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1500–1800年",
+        "近代宗教哲学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-127",
@@ -1008,6 +1926,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-130",
+      "name": "约翰·斯图亚特·密尔",
+      "englishName": "John Stuart Mill",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1800–1945年",
+      "tradition": "自由主义与功利主义",
+      "selectionReason": "补充欧洲与地中海与自由主义与功利主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1800–1945年",
+        "自由主义与功利主义"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-131",
+      "name": "叔本华",
+      "englishName": "Arthur Schopenhauer",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1800–1945年",
+      "tradition": "意志哲学",
+      "selectionReason": "补充欧洲与地中海与意志哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1800–1945年",
+        "意志哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-132",
+      "name": "费尔巴哈",
+      "englishName": "Ludwig Feuerbach",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1800–1945年",
+      "tradition": "青年黑格尔派",
+      "selectionReason": "补充欧洲与地中海与青年黑格尔派在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1800–1945年",
+        "青年黑格尔派"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-134",
       "name": "威廉·詹姆斯",
       "englishName": "William James",
@@ -1057,6 +2026,57 @@
         "分析哲学"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-137",
+      "name": "弗雷格",
+      "englishName": "Gottlob Frege",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1800–1945年",
+      "tradition": "逻辑与语言哲学",
+      "selectionReason": "补充欧洲与地中海与逻辑与语言哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1800–1945年",
+        "逻辑与语言哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-138",
+      "name": "卡尔纳普",
+      "englishName": "Rudolf Carnap",
+      "primaryRegion": "欧洲与地中海",
+      "era": "1800–1945年",
+      "tradition": "逻辑经验主义",
+      "selectionReason": "补充欧洲与地中海与逻辑经验主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "欧洲与地中海",
+        "1800–1945年",
+        "逻辑经验主义"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-139",
+      "name": "普塔霍特普",
+      "englishName": "Ptahhotep",
+      "primaryRegion": "非洲",
+      "era": "公元前500年以前",
+      "tradition": "古埃及智慧传统",
+      "selectionReason": "补充非洲与古埃及智慧传统在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "公元前500年以前",
+        "古埃及智慧传统"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-141",
@@ -1110,6 +2130,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-144",
+      "name": "爱德华·布莱登",
+      "englishName": "Edward Wilmot Blyden",
+      "primaryRegion": "非洲",
+      "era": "1800–1945年",
+      "tradition": "泛非思想",
+      "selectionReason": "补充非洲与泛非思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1800–1945年",
+        "泛非思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-145",
+      "name": "詹姆斯·霍顿",
+      "englishName": "Africanus Horton",
+      "primaryRegion": "非洲",
+      "era": "1800–1945年",
+      "tradition": "西非政治思想",
+      "selectionReason": "补充非洲与西非政治思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1800–1945年",
+        "西非政治思想"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-146",
+      "name": "夸梅·恩克鲁玛",
+      "englishName": "Kwame Nkrumah",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "泛非主义",
+      "selectionReason": "补充非洲与泛非主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "泛非主义"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-148",
       "name": "利奥波德·桑戈尔",
       "englishName": "Leopold Sedar Senghor",
@@ -1159,6 +2230,57 @@
         "反殖民政治思想"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-151",
+      "name": "史蒂夫·比科",
+      "englishName": "Steve Biko",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "黑人意识思想",
+      "selectionReason": "补充非洲与黑人意识思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "黑人意识思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-152",
+      "name": "约翰·姆比蒂",
+      "englishName": "John Mbiti",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "非洲宗教哲学",
+      "selectionReason": "补充非洲与非洲宗教哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "非洲宗教哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-153",
+      "name": "夸西·维雷杜",
+      "englishName": "Kwasi Wiredu",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "当代非洲哲学",
+      "selectionReason": "补充非洲与当代非洲哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "当代非洲哲学"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-155",
@@ -1212,6 +2334,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-158",
+      "name": "苏莱曼·巴希尔·迪亚涅",
+      "englishName": "Souleymane Bachir Diagne",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "非洲与伊斯兰哲学",
+      "selectionReason": "补充非洲与非洲与伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "非洲与伊斯兰哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-159",
+      "name": "伊菲·阿马迪乌梅",
+      "englishName": "Ifi Amadiume",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "非洲女性主义",
+      "selectionReason": "补充非洲与非洲女性主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "非洲女性主义"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-160",
+      "name": "奥耶龙克·奥耶乌米",
+      "englishName": "Oyeronke Oyewumi",
+      "primaryRegion": "非洲",
+      "era": "1945年至今",
+      "tradition": "非洲性别思想",
+      "selectionReason": "补充非洲与非洲性别思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "非洲",
+        "1945年至今",
+        "非洲性别思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-162",
       "name": "内萨瓦尔科约特尔",
       "englishName": "Nezahualcoyotl",
@@ -1261,6 +2434,57 @@
         "安第斯殖民批判"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-165",
+      "name": "爱默生",
+      "englishName": "Ralph Waldo Emerson",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1800–1945年",
+      "tradition": "超验主义",
+      "selectionReason": "补充美洲与加勒比与超验主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1800–1945年",
+        "超验主义"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-166",
+      "name": "梭罗",
+      "englishName": "Henry David Thoreau",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1800–1945年",
+      "tradition": "超验主义与公民不服从",
+      "selectionReason": "补充美洲与加勒比与超验主义与公民不服从在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1800–1945年",
+        "超验主义与公民不服从"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-167",
+      "name": "弗雷德里克·道格拉斯",
+      "englishName": "Frederick Douglass",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1800–1945年",
+      "tradition": "废奴与自由思想",
+      "selectionReason": "补充美洲与加勒比与废奴与自由思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1800–1945年",
+        "废奴与自由思想"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-169",
@@ -1314,6 +2538,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-172",
+      "name": "蒯因",
+      "englishName": "W. V. O. Quine",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "分析哲学",
+      "selectionReason": "补充美洲与加勒比与分析哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "分析哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-173",
+      "name": "库恩",
+      "englishName": "Thomas Kuhn",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "科学哲学",
+      "selectionReason": "补充美洲与加勒比与科学哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "科学哲学"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-174",
+      "name": "朱迪斯·巴特勒",
+      "englishName": "Judith Butler",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "性别与政治哲学",
+      "selectionReason": "补充美洲与加勒比与性别与政治哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "性别与政治哲学"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-176",
       "name": "安吉拉·戴维斯",
       "englishName": "Angela Davis",
@@ -1363,6 +2638,57 @@
         "加勒比思想与人之批判"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-179",
+      "name": "爱德华·格利桑",
+      "englishName": "Edouard Glissant",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "加勒比关系哲学",
+      "selectionReason": "补充美洲与加勒比与加勒比关系哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "加勒比关系哲学"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-180",
+      "name": "C. L. R. 詹姆斯",
+      "englishName": "C. L. R. James",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "加勒比马克思主义",
+      "selectionReason": "补充美洲与加勒比与加勒比马克思主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "加勒比马克思主义"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-181",
+      "name": "艾梅·塞泽尔",
+      "englishName": "Aime Cesaire",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "反殖民思想",
+      "selectionReason": "补充美洲与加勒比与反殖民思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "反殖民思想"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-183",
@@ -1416,6 +2742,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-186",
+      "name": "阿尼巴尔·基哈诺",
+      "englishName": "Anibal Quijano",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "殖民性理论",
+      "selectionReason": "补充美洲与加勒比与殖民性理论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "殖民性理论"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-187",
+      "name": "玛丽亚·卢戈内斯",
+      "englishName": "Maria Lugones",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "去殖民女性主义",
+      "selectionReason": "补充美洲与加勒比与去殖民女性主义在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "去殖民女性主义"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-188",
+      "name": "查尔斯·米尔斯",
+      "englishName": "Charles W. Mills",
+      "primaryRegion": "美洲与加勒比",
+      "era": "1945年至今",
+      "tradition": "种族契约论",
+      "selectionReason": "补充美洲与加勒比与种族契约论在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "美洲与加勒比",
+        "1945年至今",
+        "种族契约论"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-190",
       "name": "瓦因·德洛里亚",
       "englishName": "Vine Deloria Jr.",
@@ -1465,6 +2842,57 @@
         "泰国政治思想"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-193",
+      "name": "黎刹",
+      "englishName": "Jose Rizal",
+      "primaryRegion": "东南亚与大洋洲",
+      "era": "1800–1945年",
+      "tradition": "菲律宾反殖民思想",
+      "selectionReason": "补充东南亚与大洋洲与菲律宾反殖民思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东南亚与大洋洲",
+        "1800–1945年",
+        "菲律宾反殖民思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-194",
+      "name": "马比尼",
+      "englishName": "Apolinario Mabini",
+      "primaryRegion": "东南亚与大洋洲",
+      "era": "1800–1945年",
+      "tradition": "菲律宾政治思想",
+      "selectionReason": "补充东南亚与大洋洲与菲律宾政治思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东南亚与大洋洲",
+        "1800–1945年",
+        "菲律宾政治思想"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-195",
+      "name": "基·哈查尔·德万托罗",
+      "englishName": "Ki Hajar Dewantara",
+      "primaryRegion": "东南亚与大洋洲",
+      "era": "1800–1945年",
+      "tradition": "印度尼西亚教育思想",
+      "selectionReason": "补充东南亚与大洋洲与印度尼西亚教育思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东南亚与大洋洲",
+        "1800–1945年",
+        "印度尼西亚教育思想"
+      ],
+      "batch": 6
     },
     {
       "id": "candidate-197",
@@ -1518,6 +2946,57 @@
       "batch": 3
     },
     {
+      "id": "candidate-200",
+      "name": "埃佩利·豪奥法",
+      "englishName": "Epeli Hauofa",
+      "primaryRegion": "东南亚与大洋洲",
+      "era": "1945年至今",
+      "tradition": "太平洋思想",
+      "selectionReason": "补充东南亚与大洋洲与太平洋思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "东南亚与大洋洲",
+        "1945年至今",
+        "太平洋思想"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-201",
+      "name": "爱德华·萨义德",
+      "englishName": "Edward Said",
+      "primaryRegion": "跨区域与离散思想传统",
+      "era": "1945年至今",
+      "tradition": "后殖民思想",
+      "selectionReason": "补充跨区域与离散思想传统与后殖民思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "跨区域与离散思想传统",
+        "1945年至今",
+        "后殖民思想"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-202",
+      "name": "斯皮瓦克",
+      "englishName": "Gayatri Chakravorty Spivak",
+      "primaryRegion": "跨区域与离散思想传统",
+      "era": "1945年至今",
+      "tradition": "后殖民思想",
+      "selectionReason": "补充跨区域与离散思想传统与后殖民思想在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "跨区域与离散思想传统",
+        "1945年至今",
+        "后殖民思想"
+      ],
+      "batch": 6
+    },
+    {
       "id": "candidate-204",
       "name": "斯图亚特·霍尔",
       "englishName": "Stuart Hall",
@@ -1567,74 +3046,77 @@
         "科学技术研究"
       ],
       "batch": 3
+    },
+    {
+      "id": "candidate-207",
+      "name": "朱迪思·施克拉",
+      "englishName": "Judith Shklar",
+      "primaryRegion": "跨区域与离散思想传统",
+      "era": "1945年至今",
+      "tradition": "政治思想与流亡经验",
+      "selectionReason": "补充跨区域与离散思想传统与政治思想与流亡经验在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "跨区域与离散思想传统",
+        "1945年至今",
+        "政治思想与流亡经验"
+      ],
+      "batch": 4
+    },
+    {
+      "id": "candidate-208",
+      "name": "玛莎·努斯鲍姆",
+      "englishName": "Martha Nussbaum",
+      "primaryRegion": "跨区域与离散思想传统",
+      "era": "1945年至今",
+      "tradition": "伦理与能力进路",
+      "selectionReason": "补充跨区域与离散思想传统与伦理与能力进路在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "跨区域与离散思想传统",
+        "1945年至今",
+        "伦理与能力进路"
+      ],
+      "batch": 5
+    },
+    {
+      "id": "candidate-209",
+      "name": "夸梅·安东尼·阿皮亚",
+      "englishName": "Kwame Anthony Appiah",
+      "primaryRegion": "跨区域与离散思想传统",
+      "era": "1945年至今",
+      "tradition": "世界主义与身份哲学",
+      "selectionReason": "补充跨区域与离散思想传统与世界主义与身份哲学在世界思想史中的代表性、争论或传播路径。",
+      "sourceAvailability": "audit-required",
+      "expectedTier": "index",
+      "gapTags": [
+        "跨区域与离散思想传统",
+        "1945年至今",
+        "世界主义与身份哲学"
+      ],
+      "batch": 6
     }
   ],
   "release": {
-    "releaseId": "public-120",
+    "releaseId": "public-210",
     "baselinePeople": 30,
-    "addedPeople": 90,
-    "publicPeople": 120,
+    "addedPeople": 180,
+    "publicPeople": 210,
     "sourceBatches": [
       1,
       2,
-      3
+      3,
+      4,
+      5,
+      6
     ]
   },
   "archivedRoadmap": {
-    "status": "superseded-by-120-person-scope",
-    "candidateCount": 120,
+    "status": "deferred-after-210-person-release",
+    "candidateCount": 30,
     "candidates": [
-      {
-        "id": "candidate-004",
-        "name": "荀子",
-        "englishName": "Xunzi",
-        "primaryRegion": "东亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "儒家",
-        "selectionReason": "补充东亚与儒家在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "公元前500年至公元500年",
-          "儒家"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-005",
-        "name": "韩非",
-        "englishName": "Han Fei",
-        "primaryRegion": "东亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "法家",
-        "selectionReason": "补充东亚与法家在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "公元前500年至公元500年",
-          "法家"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-006",
-        "name": "董仲舒",
-        "englishName": "Dong Zhongshu",
-        "primaryRegion": "东亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "汉代儒学",
-        "selectionReason": "补充东亚与汉代儒学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "公元前500年至公元500年",
-          "汉代儒学"
-        ],
-        "batch": 6
-      },
       {
         "id": "candidate-007",
         "name": "王充",
@@ -1651,57 +3133,6 @@
           "汉代批判思想"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-011",
-        "name": "法藏",
-        "englishName": "Fazang",
-        "primaryRegion": "东亚",
-        "era": "500–1500年",
-        "tradition": "华严宗",
-        "selectionReason": "补充东亚与华严宗在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "500–1500年",
-          "华严宗"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-012",
-        "name": "韩愈",
-        "englishName": "Han Yu",
-        "primaryRegion": "东亚",
-        "era": "500–1500年",
-        "tradition": "儒学复兴",
-        "selectionReason": "补充东亚与儒学复兴在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "500–1500年",
-          "儒学复兴"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-013",
-        "name": "朱熹",
-        "englishName": "Zhu Xi",
-        "primaryRegion": "东亚",
-        "era": "500–1500年",
-        "tradition": "理学",
-        "selectionReason": "补充东亚与理学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "500–1500年",
-          "理学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-014",
@@ -1721,57 +3152,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-018",
-        "name": "戴震",
-        "englishName": "Dai Zhen",
-        "primaryRegion": "东亚",
-        "era": "1500–1800年",
-        "tradition": "清代考据与哲学",
-        "selectionReason": "补充东亚与清代考据与哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1500–1800年",
-          "清代考据与哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-019",
-        "name": "康有为",
-        "englishName": "Kang Youwei",
-        "primaryRegion": "东亚",
-        "era": "1800–1945年",
-        "tradition": "近代经学与改革",
-        "selectionReason": "补充东亚与近代经学与改革在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1800–1945年",
-          "近代经学与改革"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-020",
-        "name": "梁启超",
-        "englishName": "Liang Qichao",
-        "primaryRegion": "东亚",
-        "era": "1800–1945年",
-        "tradition": "近代政治思想",
-        "selectionReason": "补充东亚与近代政治思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1800–1945年",
-          "近代政治思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-021",
         "name": "孙中山",
         "englishName": "Sun Yat-sen",
@@ -1787,57 +3167,6 @@
           "近代政治思想"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-025",
-        "name": "牟宗三",
-        "englishName": "Mou Zongsan",
-        "primaryRegion": "东亚",
-        "era": "1945年至今",
-        "tradition": "现代新儒家",
-        "selectionReason": "补充东亚与现代新儒家在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1945年至今",
-          "现代新儒家"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-026",
-        "name": "西田几多郎",
-        "englishName": "Nishida Kitaro",
-        "primaryRegion": "东亚",
-        "era": "1800–1945年",
-        "tradition": "京都学派",
-        "selectionReason": "补充东亚与京都学派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1800–1945年",
-          "京都学派"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-027",
-        "name": "和辻哲郎",
-        "englishName": "Watsuji Tetsuro",
-        "primaryRegion": "东亚",
-        "era": "1800–1945年",
-        "tradition": "日本伦理学",
-        "selectionReason": "补充东亚与日本伦理学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1800–1945年",
-          "日本伦理学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-028",
@@ -1857,57 +3186,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-032",
-        "name": "李滉",
-        "englishName": "Yi Hwang",
-        "primaryRegion": "东亚",
-        "era": "1500–1800年",
-        "tradition": "朝鲜性理学",
-        "selectionReason": "补充东亚与朝鲜性理学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1500–1800年",
-          "朝鲜性理学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-033",
-        "name": "丁若镛",
-        "englishName": "Jeong Yak-yong",
-        "primaryRegion": "东亚",
-        "era": "1500–1800年",
-        "tradition": "朝鲜实学",
-        "selectionReason": "补充东亚与朝鲜实学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东亚",
-          "1500–1800年",
-          "朝鲜实学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-034",
-        "name": "筏驮摩那",
-        "englishName": "Mahavira",
-        "primaryRegion": "南亚",
-        "era": "公元前500年以前",
-        "tradition": "耆那教",
-        "selectionReason": "补充南亚与耆那教在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年以前",
-          "耆那教"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-035",
         "name": "耶若婆佉",
         "englishName": "Yajnavalkya",
@@ -1923,57 +3201,6 @@
           "奥义书传统"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-039",
-        "name": "钵颠阇利",
-        "englishName": "Patanjali",
-        "primaryRegion": "南亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "瑜伽哲学",
-        "selectionReason": "补充南亚与瑜伽哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年至公元500年",
-          "瑜伽哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-040",
-        "name": "迦那陀",
-        "englishName": "Kanada",
-        "primaryRegion": "南亚",
-        "era": "公元前500年以前",
-        "tradition": "胜论",
-        "selectionReason": "补充南亚与胜论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年以前",
-          "胜论"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-041",
-        "name": "乔达摩",
-        "englishName": "Akshapada Gautama",
-        "primaryRegion": "南亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "正理派",
-        "selectionReason": "补充南亚与正理派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年至公元500年",
-          "正理派"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-042",
@@ -1993,57 +3220,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-046",
-        "name": "无著",
-        "englishName": "Asanga",
-        "primaryRegion": "南亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "瑜伽行派",
-        "selectionReason": "补充南亚与瑜伽行派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年至公元500年",
-          "瑜伽行派"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-047",
-        "name": "陈那",
-        "englishName": "Dignaga",
-        "primaryRegion": "南亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "佛教逻辑学",
-        "selectionReason": "补充南亚与佛教逻辑学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年至公元500年",
-          "佛教逻辑学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-048",
-        "name": "法称",
-        "englishName": "Dharmakirti",
-        "primaryRegion": "南亚",
-        "era": "500–1500年",
-        "tradition": "佛教认识论",
-        "selectionReason": "补充南亚与佛教认识论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "500–1500年",
-          "佛教认识论"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-049",
         "name": "商羯罗",
         "englishName": "Shankara",
@@ -2059,57 +3235,6 @@
           "不二论吠檀多"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-053",
-        "name": "伐致呵利",
-        "englishName": "Bhartrhari",
-        "primaryRegion": "南亚",
-        "era": "公元前500年至公元500年",
-        "tradition": "语言哲学",
-        "selectionReason": "补充南亚与语言哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "公元前500年至公元500年",
-          "语言哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-054",
-        "name": "鸠摩梨罗",
-        "englishName": "Kumarila Bhatta",
-        "primaryRegion": "南亚",
-        "era": "500–1500年",
-        "tradition": "弥曼差",
-        "selectionReason": "补充南亚与弥曼差在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "500–1500年",
-          "弥曼差"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-055",
-        "name": "阇衍多",
-        "englishName": "Jayanta Bhatta",
-        "primaryRegion": "南亚",
-        "era": "500–1500年",
-        "tradition": "正理派",
-        "selectionReason": "补充南亚与正理派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "500–1500年",
-          "正理派"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-056",
@@ -2129,57 +3254,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-060",
-        "name": "罗姆摩罕·罗伊",
-        "englishName": "Rammohan Roy",
-        "primaryRegion": "南亚",
-        "era": "1800–1945年",
-        "tradition": "近代印度改革思想",
-        "selectionReason": "补充南亚与近代印度改革思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "1800–1945年",
-          "近代印度改革思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-061",
-        "name": "维韦卡南达",
-        "englishName": "Swami Vivekananda",
-        "primaryRegion": "南亚",
-        "era": "1800–1945年",
-        "tradition": "现代吠檀多",
-        "selectionReason": "补充南亚与现代吠檀多在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "1800–1945年",
-          "现代吠檀多"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-062",
-        "name": "泰戈尔",
-        "englishName": "Rabindranath Tagore",
-        "primaryRegion": "南亚",
-        "era": "1800–1945年",
-        "tradition": "现代印度人文思想",
-        "selectionReason": "补充南亚与现代印度人文思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "南亚",
-          "1800–1945年",
-          "现代印度人文思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-063",
         "name": "甘地",
         "englishName": "Mahatma Gandhi",
@@ -2195,57 +3269,6 @@
           "非暴力政治哲学"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-067",
-        "name": "琐罗亚斯德",
-        "englishName": "Zoroaster",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "公元前500年以前",
-        "tradition": "祆教思想",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与祆教思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "公元前500年以前",
-          "祆教思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-068",
-        "name": "摩尼",
-        "englishName": "Mani",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "公元前500年至公元500年",
-        "tradition": "摩尼教",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与摩尼教在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "公元前500年至公元500年",
-          "摩尼教"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-069",
-        "name": "肯迪",
-        "englishName": "Al-Kindi",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "500–1500年",
-        "tradition": "阿拉伯语哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与阿拉伯语哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "500–1500年",
-          "阿拉伯语哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-070",
@@ -2265,57 +3288,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-074",
-        "name": "苏哈拉瓦迪",
-        "englishName": "Suhrawardi",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "500–1500年",
-        "tradition": "照明哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与照明哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "500–1500年",
-          "照明哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-075",
-        "name": "伊本·阿拉比",
-        "englishName": "Ibn Arabi",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "500–1500年",
-        "tradition": "苏菲形而上学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与苏菲形而上学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "500–1500年",
-          "苏菲形而上学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-076",
-        "name": "穆拉·萨德拉",
-        "englishName": "Mulla Sadra",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1500–1800年",
-        "tradition": "伊斯兰后古典哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与伊斯兰后古典哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1500–1800年",
-          "伊斯兰后古典哲学"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-077",
         "name": "纳西尔丁·图西",
         "englishName": "Nasir al-Din Tusi",
@@ -2331,57 +3303,6 @@
           "伊斯兰哲学与科学"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-081",
-        "name": "萨阿迪亚·高昂",
-        "englishName": "Saadia Gaon",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "500–1500年",
-        "tradition": "犹太哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与犹太哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "500–1500年",
-          "犹太哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-082",
-        "name": "迈蒙尼德",
-        "englishName": "Maimonides",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "500–1500年",
-        "tradition": "犹太哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与犹太哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "500–1500年",
-          "犹太哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-083",
-        "name": "斐洛",
-        "englishName": "Philo of Alexandria",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "公元前500年至公元500年",
-        "tradition": "希腊化犹太哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与希腊化犹太哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "公元前500年至公元500年",
-          "希腊化犹太哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-084",
@@ -2401,57 +3322,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-088",
-        "name": "穆罕默德·伊克巴尔",
-        "englishName": "Muhammad Iqbal",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1800–1945年",
-        "tradition": "现代伊斯兰哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与现代伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1800–1945年",
-          "现代伊斯兰哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-089",
-        "name": "阿里·沙里亚蒂",
-        "englishName": "Ali Shariati",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1945年至今",
-        "tradition": "现代伊朗政治思想",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与现代伊朗政治思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1945年至今",
-          "现代伊朗政治思想"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-090",
-        "name": "阿卜杜勒卡里姆·索鲁什",
-        "englishName": "Abdolkarim Soroush",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1945年至今",
-        "tradition": "当代伊斯兰思想",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与当代伊斯兰思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1945年至今",
-          "当代伊斯兰思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-091",
         "name": "法蒂玛·梅尔尼西",
         "englishName": "Fatema Mernissi",
@@ -2467,57 +3337,6 @@
           "伊斯兰女性主义"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-095",
-        "name": "塔拉勒·阿萨德",
-        "englishName": "Talal Asad",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1945年至今",
-        "tradition": "宗教与世俗批判",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与宗教与世俗批判在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1945年至今",
-          "宗教与世俗批判"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-096",
-        "name": "赛义德·侯赛因·纳斯尔",
-        "englishName": "Seyyed Hossein Nasr",
-        "primaryRegion": "西亚、中亚及伊斯兰思想世界",
-        "era": "1945年至今",
-        "tradition": "当代伊斯兰哲学",
-        "selectionReason": "补充西亚、中亚及伊斯兰思想世界与当代伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "西亚、中亚及伊斯兰思想世界",
-          "1945年至今",
-          "当代伊斯兰哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-097",
-        "name": "泰勒斯",
-        "englishName": "Thales",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年以前",
-        "tradition": "前苏格拉底哲学",
-        "selectionReason": "补充欧洲与地中海与前苏格拉底哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年以前",
-          "前苏格拉底哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-098",
@@ -2537,57 +3356,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-102",
-        "name": "恩培多克勒",
-        "englishName": "Empedocles",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年以前",
-        "tradition": "前苏格拉底哲学",
-        "selectionReason": "补充欧洲与地中海与前苏格拉底哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年以前",
-          "前苏格拉底哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-103",
-        "name": "德谟克利特",
-        "englishName": "Democritus",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年以前",
-        "tradition": "原子论",
-        "selectionReason": "补充欧洲与地中海与原子论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年以前",
-          "原子论"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-104",
-        "name": "普罗泰戈拉",
-        "englishName": "Protagoras",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年至公元500年",
-        "tradition": "智者学派",
-        "selectionReason": "补充欧洲与地中海与智者学派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年至公元500年",
-          "智者学派"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-105",
         "name": "狄奥提玛",
         "englishName": "Diotima of Mantinea",
@@ -2603,57 +3371,6 @@
           "古希腊思想史候选"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-109",
-        "name": "西塞罗",
-        "englishName": "Cicero",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年至公元500年",
-        "tradition": "罗马哲学",
-        "selectionReason": "补充欧洲与地中海与罗马哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年至公元500年",
-          "罗马哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-110",
-        "name": "塞涅卡",
-        "englishName": "Seneca",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年至公元500年",
-        "tradition": "斯多亚学派",
-        "selectionReason": "补充欧洲与地中海与斯多亚学派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年至公元500年",
-          "斯多亚学派"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-111",
-        "name": "爱比克泰德",
-        "englishName": "Epictetus",
-        "primaryRegion": "欧洲与地中海",
-        "era": "公元前500年至公元500年",
-        "tradition": "斯多亚学派",
-        "selectionReason": "补充欧洲与地中海与斯多亚学派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "公元前500年至公元500年",
-          "斯多亚学派"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-112",
@@ -2673,57 +3390,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-116",
-        "name": "安瑟伦",
-        "englishName": "Anselm of Canterbury",
-        "primaryRegion": "欧洲与地中海",
-        "era": "500–1500年",
-        "tradition": "经院哲学",
-        "selectionReason": "补充欧洲与地中海与经院哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "500–1500年",
-          "经院哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-117",
-        "name": "阿伯拉尔",
-        "englishName": "Peter Abelard",
-        "primaryRegion": "欧洲与地中海",
-        "era": "500–1500年",
-        "tradition": "经院哲学",
-        "selectionReason": "补充欧洲与地中海与经院哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "500–1500年",
-          "经院哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-118",
-        "name": "宾根的希尔德加德",
-        "englishName": "Hildegard of Bingen",
-        "primaryRegion": "欧洲与地中海",
-        "era": "500–1500年",
-        "tradition": "中世纪思想",
-        "selectionReason": "补充欧洲与地中海与中世纪思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "500–1500年",
-          "中世纪思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-119",
         "name": "邓斯·司各脱",
         "englishName": "John Duns Scotus",
@@ -2739,57 +3405,6 @@
           "经院哲学"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-123",
-        "name": "伊拉斯谟",
-        "englishName": "Erasmus",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1500–1800年",
-        "tradition": "文艺复兴人文主义",
-        "selectionReason": "补充欧洲与地中海与文艺复兴人文主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1500–1800年",
-          "文艺复兴人文主义"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-124",
-        "name": "弗朗西斯·培根",
-        "englishName": "Francis Bacon",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1500–1800年",
-        "tradition": "近代知识论",
-        "selectionReason": "补充欧洲与地中海与近代知识论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1500–1800年",
-          "近代知识论"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-125",
-        "name": "帕斯卡",
-        "englishName": "Blaise Pascal",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1500–1800年",
-        "tradition": "近代宗教哲学",
-        "selectionReason": "补充欧洲与地中海与近代宗教哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1500–1800年",
-          "近代宗教哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-126",
@@ -2809,57 +3424,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-130",
-        "name": "约翰·斯图亚特·密尔",
-        "englishName": "John Stuart Mill",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1800–1945年",
-        "tradition": "自由主义与功利主义",
-        "selectionReason": "补充欧洲与地中海与自由主义与功利主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1800–1945年",
-          "自由主义与功利主义"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-131",
-        "name": "叔本华",
-        "englishName": "Arthur Schopenhauer",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1800–1945年",
-        "tradition": "意志哲学",
-        "selectionReason": "补充欧洲与地中海与意志哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1800–1945年",
-          "意志哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-132",
-        "name": "费尔巴哈",
-        "englishName": "Ludwig Feuerbach",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1800–1945年",
-        "tradition": "青年黑格尔派",
-        "selectionReason": "补充欧洲与地中海与青年黑格尔派在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1800–1945年",
-          "青年黑格尔派"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-133",
         "name": "巴枯宁",
         "englishName": "Mikhail Bakunin",
@@ -2875,57 +3439,6 @@
           "无政府主义"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-137",
-        "name": "弗雷格",
-        "englishName": "Gottlob Frege",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1800–1945年",
-        "tradition": "逻辑与语言哲学",
-        "selectionReason": "补充欧洲与地中海与逻辑与语言哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1800–1945年",
-          "逻辑与语言哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-138",
-        "name": "卡尔纳普",
-        "englishName": "Rudolf Carnap",
-        "primaryRegion": "欧洲与地中海",
-        "era": "1800–1945年",
-        "tradition": "逻辑经验主义",
-        "selectionReason": "补充欧洲与地中海与逻辑经验主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "欧洲与地中海",
-          "1800–1945年",
-          "逻辑经验主义"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-139",
-        "name": "普塔霍特普",
-        "englishName": "Ptahhotep",
-        "primaryRegion": "非洲",
-        "era": "公元前500年以前",
-        "tradition": "古埃及智慧传统",
-        "selectionReason": "补充非洲与古埃及智慧传统在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "公元前500年以前",
-          "古埃及智慧传统"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-140",
@@ -2945,57 +3458,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-144",
-        "name": "爱德华·布莱登",
-        "englishName": "Edward Wilmot Blyden",
-        "primaryRegion": "非洲",
-        "era": "1800–1945年",
-        "tradition": "泛非思想",
-        "selectionReason": "补充非洲与泛非思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1800–1945年",
-          "泛非思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-145",
-        "name": "詹姆斯·霍顿",
-        "englishName": "Africanus Horton",
-        "primaryRegion": "非洲",
-        "era": "1800–1945年",
-        "tradition": "西非政治思想",
-        "selectionReason": "补充非洲与西非政治思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1800–1945年",
-          "西非政治思想"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-146",
-        "name": "夸梅·恩克鲁玛",
-        "englishName": "Kwame Nkrumah",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "泛非主义",
-        "selectionReason": "补充非洲与泛非主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "泛非主义"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-147",
         "name": "朱利叶斯·尼雷尔",
         "englishName": "Julius Nyerere",
@@ -3011,57 +3473,6 @@
           "非洲社会主义"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-151",
-        "name": "史蒂夫·比科",
-        "englishName": "Steve Biko",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "黑人意识思想",
-        "selectionReason": "补充非洲与黑人意识思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "黑人意识思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-152",
-        "name": "约翰·姆比蒂",
-        "englishName": "John Mbiti",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "非洲宗教哲学",
-        "selectionReason": "补充非洲与非洲宗教哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "非洲宗教哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-153",
-        "name": "夸西·维雷杜",
-        "englishName": "Kwasi Wiredu",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "当代非洲哲学",
-        "selectionReason": "补充非洲与当代非洲哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "当代非洲哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-154",
@@ -3081,57 +3492,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-158",
-        "name": "苏莱曼·巴希尔·迪亚涅",
-        "englishName": "Souleymane Bachir Diagne",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "非洲与伊斯兰哲学",
-        "selectionReason": "补充非洲与非洲与伊斯兰哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "非洲与伊斯兰哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-159",
-        "name": "伊菲·阿马迪乌梅",
-        "englishName": "Ifi Amadiume",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "非洲女性主义",
-        "selectionReason": "补充非洲与非洲女性主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "非洲女性主义"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-160",
-        "name": "奥耶龙克·奥耶乌米",
-        "englishName": "Oyeronke Oyewumi",
-        "primaryRegion": "非洲",
-        "era": "1945年至今",
-        "tradition": "非洲性别思想",
-        "selectionReason": "补充非洲与非洲性别思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "非洲",
-          "1945年至今",
-          "非洲性别思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-161",
         "name": "莫戈贝·拉莫斯",
         "englishName": "Mogobe Ramose",
@@ -3147,57 +3507,6 @@
           "乌班图哲学"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-165",
-        "name": "爱默生",
-        "englishName": "Ralph Waldo Emerson",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1800–1945年",
-        "tradition": "超验主义",
-        "selectionReason": "补充美洲与加勒比与超验主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1800–1945年",
-          "超验主义"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-166",
-        "name": "梭罗",
-        "englishName": "Henry David Thoreau",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1800–1945年",
-        "tradition": "超验主义与公民不服从",
-        "selectionReason": "补充美洲与加勒比与超验主义与公民不服从在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1800–1945年",
-          "超验主义与公民不服从"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-167",
-        "name": "弗雷德里克·道格拉斯",
-        "englishName": "Frederick Douglass",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1800–1945年",
-        "tradition": "废奴与自由思想",
-        "selectionReason": "补充美洲与加勒比与废奴与自由思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1800–1945年",
-          "废奴与自由思想"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-168",
@@ -3217,57 +3526,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-172",
-        "name": "蒯因",
-        "englishName": "W. V. O. Quine",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "分析哲学",
-        "selectionReason": "补充美洲与加勒比与分析哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "分析哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-173",
-        "name": "库恩",
-        "englishName": "Thomas Kuhn",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "科学哲学",
-        "selectionReason": "补充美洲与加勒比与科学哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "科学哲学"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-174",
-        "name": "朱迪斯·巴特勒",
-        "englishName": "Judith Butler",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "性别与政治哲学",
-        "selectionReason": "补充美洲与加勒比与性别与政治哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "性别与政治哲学"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-175",
         "name": "贝尔·胡克斯",
         "englishName": "bell hooks",
@@ -3283,57 +3541,6 @@
           "黑人女性主义"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-179",
-        "name": "爱德华·格利桑",
-        "englishName": "Edouard Glissant",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "加勒比关系哲学",
-        "selectionReason": "补充美洲与加勒比与加勒比关系哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "加勒比关系哲学"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-180",
-        "name": "C. L. R. 詹姆斯",
-        "englishName": "C. L. R. James",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "加勒比马克思主义",
-        "selectionReason": "补充美洲与加勒比与加勒比马克思主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "加勒比马克思主义"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-181",
-        "name": "艾梅·塞泽尔",
-        "englishName": "Aime Cesaire",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "反殖民思想",
-        "selectionReason": "补充美洲与加勒比与反殖民思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "反殖民思想"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-182",
@@ -3353,57 +3560,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-186",
-        "name": "阿尼巴尔·基哈诺",
-        "englishName": "Anibal Quijano",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "殖民性理论",
-        "selectionReason": "补充美洲与加勒比与殖民性理论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "殖民性理论"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-187",
-        "name": "玛丽亚·卢戈内斯",
-        "englishName": "Maria Lugones",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "去殖民女性主义",
-        "selectionReason": "补充美洲与加勒比与去殖民女性主义在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "去殖民女性主义"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-188",
-        "name": "查尔斯·米尔斯",
-        "englishName": "Charles W. Mills",
-        "primaryRegion": "美洲与加勒比",
-        "era": "1945年至今",
-        "tradition": "种族契约论",
-        "selectionReason": "补充美洲与加勒比与种族契约论在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "美洲与加勒比",
-          "1945年至今",
-          "种族契约论"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-189",
         "name": "刘易斯·戈登",
         "englishName": "Lewis Gordon",
@@ -3419,57 +3575,6 @@
           "黑人存在主义"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-193",
-        "name": "黎刹",
-        "englishName": "Jose Rizal",
-        "primaryRegion": "东南亚与大洋洲",
-        "era": "1800–1945年",
-        "tradition": "菲律宾反殖民思想",
-        "selectionReason": "补充东南亚与大洋洲与菲律宾反殖民思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东南亚与大洋洲",
-          "1800–1945年",
-          "菲律宾反殖民思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-194",
-        "name": "马比尼",
-        "englishName": "Apolinario Mabini",
-        "primaryRegion": "东南亚与大洋洲",
-        "era": "1800–1945年",
-        "tradition": "菲律宾政治思想",
-        "selectionReason": "补充东南亚与大洋洲与菲律宾政治思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东南亚与大洋洲",
-          "1800–1945年",
-          "菲律宾政治思想"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-195",
-        "name": "基·哈查尔·德万托罗",
-        "englishName": "Ki Hajar Dewantara",
-        "primaryRegion": "东南亚与大洋洲",
-        "era": "1800–1945年",
-        "tradition": "印度尼西亚教育思想",
-        "selectionReason": "补充东南亚与大洋洲与印度尼西亚教育思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东南亚与大洋洲",
-          "1800–1945年",
-          "印度尼西亚教育思想"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-196",
@@ -3489,57 +3594,6 @@
         "batch": 7
       },
       {
-        "id": "candidate-200",
-        "name": "埃佩利·豪奥法",
-        "englishName": "Epeli Hauofa",
-        "primaryRegion": "东南亚与大洋洲",
-        "era": "1945年至今",
-        "tradition": "太平洋思想",
-        "selectionReason": "补充东南亚与大洋洲与太平洋思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "东南亚与大洋洲",
-          "1945年至今",
-          "太平洋思想"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-201",
-        "name": "爱德华·萨义德",
-        "englishName": "Edward Said",
-        "primaryRegion": "跨区域与离散思想传统",
-        "era": "1945年至今",
-        "tradition": "后殖民思想",
-        "selectionReason": "补充跨区域与离散思想传统与后殖民思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "跨区域与离散思想传统",
-          "1945年至今",
-          "后殖民思想"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-202",
-        "name": "斯皮瓦克",
-        "englishName": "Gayatri Chakravorty Spivak",
-        "primaryRegion": "跨区域与离散思想传统",
-        "era": "1945年至今",
-        "tradition": "后殖民思想",
-        "selectionReason": "补充跨区域与离散思想传统与后殖民思想在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "跨区域与离散思想传统",
-          "1945年至今",
-          "后殖民思想"
-        ],
-        "batch": 6
-      },
-      {
         "id": "candidate-203",
         "name": "霍米·巴巴",
         "englishName": "Homi K. Bhabha",
@@ -3555,57 +3609,6 @@
           "后殖民思想"
         ],
         "batch": 7
-      },
-      {
-        "id": "candidate-207",
-        "name": "朱迪思·施克拉",
-        "englishName": "Judith Shklar",
-        "primaryRegion": "跨区域与离散思想传统",
-        "era": "1945年至今",
-        "tradition": "政治思想与流亡经验",
-        "selectionReason": "补充跨区域与离散思想传统与政治思想与流亡经验在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "跨区域与离散思想传统",
-          "1945年至今",
-          "政治思想与流亡经验"
-        ],
-        "batch": 4
-      },
-      {
-        "id": "candidate-208",
-        "name": "玛莎·努斯鲍姆",
-        "englishName": "Martha Nussbaum",
-        "primaryRegion": "跨区域与离散思想传统",
-        "era": "1945年至今",
-        "tradition": "伦理与能力进路",
-        "selectionReason": "补充跨区域与离散思想传统与伦理与能力进路在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "跨区域与离散思想传统",
-          "1945年至今",
-          "伦理与能力进路"
-        ],
-        "batch": 5
-      },
-      {
-        "id": "candidate-209",
-        "name": "夸梅·安东尼·阿皮亚",
-        "englishName": "Kwame Anthony Appiah",
-        "primaryRegion": "跨区域与离散思想传统",
-        "era": "1945年至今",
-        "tradition": "世界主义与身份哲学",
-        "selectionReason": "补充跨区域与离散思想传统与世界主义与身份哲学在世界思想史中的代表性、争论或传播路径。",
-        "sourceAvailability": "audit-required",
-        "expectedTier": "index",
-        "gapTags": [
-          "跨区域与离散思想传统",
-          "1945年至今",
-          "世界主义与身份哲学"
-        ],
-        "batch": 6
       },
       {
         "id": "candidate-210",

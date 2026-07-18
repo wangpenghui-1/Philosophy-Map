@@ -1,0 +1,48 @@
+{
+  "id": "concept-四端七情",
+  "slug": "四端七情",
+  "entityType": "concept",
+  "name": "四端七情",
+  "originalTerms": [],
+  "summary": "“四端七情”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-朝鲜性理学",
+      "label": "四端七情",
+      "explanation": "在李滉及朝鲜性理学语境中，“四端七情”用于说明：通过四端七情之辩分析理气发动和道德修养，强调敬的持续实践。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目：“Yi Hwang / 李滉”",
+          "claim": "支持李滉语境中的“四端七情”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "yi-hwang"
+  ],
+  "workIds": [
+    "ten-diagrams-sage-learning"
+  ],
+  "traditionIds": [
+    "tradition-朝鲜性理学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Yi Hwang / 李滉”",
+      "claim": "支持“四端七情”作为李滉思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

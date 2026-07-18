@@ -35,7 +35,7 @@ export async function auditContentProduction({ contentRoot }) {
     ...(coverage.archivedRoadmap?.candidates ?? []),
   ];
   const candidateById = new Map(candidatePool.map((candidate) => [candidate.id, candidate]));
-  const releaseManifest = await readJson(path.join(contentRoot, "coverage", "release-120.json"));
+  const releaseManifest = await readJson(path.join(contentRoot, "coverage", "release-210.json"));
   const releasedCandidateIds = new Set(releaseManifest.members.map((member) => member.candidateId));
   const people = await Promise.all(
     (await readdir(path.join(contentRoot, "people")))

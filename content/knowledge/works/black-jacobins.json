@@ -1,0 +1,42 @@
+{
+  "id": "black-jacobins",
+  "slug": "black-jacobins",
+  "entityType": "work",
+  "title": "《黑色雅各宾派》",
+  "originalTitle": "The Black Jacobins",
+  "authorRefs": [
+    {
+      "personId": "c-l-r-james",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1938年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《黑色雅各宾派》是进入C. L. R. 詹姆斯思想语境的代表文本入口。条目以“群众自我活动”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-群众自我活动"
+  ],
+  "traditionIds": [
+    "tradition-加勒比马克思主义"
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+      "claim": "支持《黑色雅各宾派》与C. L. R. 詹姆斯的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

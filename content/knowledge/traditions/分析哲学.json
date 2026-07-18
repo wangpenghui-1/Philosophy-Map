@@ -8,23 +8,27 @@
   "periodLabel": "跨历史时期",
   "regionLabels": [
     "欧洲",
-    "欧洲与地中海"
+    "欧洲与地中海",
+    "美洲与加勒比"
   ],
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
     "wittgenstein",
-    "bertrand-russell"
+    "bertrand-russell",
+    "w-v-o-quine"
   ],
   "conceptIds": [
     "concept-语言游戏",
     "concept-意义",
     "concept-生活形式",
-    "concept-逻辑分析"
+    "concept-逻辑分析",
+    "concept-确认整体论"
   ],
   "sourceIds": [
     "src-wittgenstein",
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-companion-american-philosophy"
   ],
   "citations": [
     {

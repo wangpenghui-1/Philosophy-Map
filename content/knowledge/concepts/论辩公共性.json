@@ -1,0 +1,48 @@
+{
+  "id": "concept-论辩公共性",
+  "slug": "论辩公共性",
+  "entityType": "concept",
+  "name": "论辩公共性",
+  "originalTerms": [],
+  "summary": "“论辩公共性”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-正理派",
+      "label": "论辩公共性",
+      "explanation": "在阇衍多及正理派语境中，“论辩公共性”用于说明：以正理方法检验推论、证言和宗教主张，并讨论法律与公共秩序。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Jayanta Bhatta / 阇衍多”",
+          "claim": "支持阇衍多语境中的“论辩公共性”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "jayanta-bhatta"
+  ],
+  "workIds": [
+    "nyaya-manjari"
+  ],
+  "traditionIds": [
+    "tradition-正理派"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Jayanta Bhatta / 阇衍多”",
+      "claim": "支持“论辩公共性”作为阇衍多思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

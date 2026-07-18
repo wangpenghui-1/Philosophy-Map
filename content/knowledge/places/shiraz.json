@@ -1,0 +1,24 @@
+{
+  "id": "shiraz",
+  "slug": "shiraz",
+  "entityType": "place",
+  "historicalName": "设拉子",
+  "historicalRegion": "萨法维伊朗",
+  "modernReferenceName": "设拉子",
+  "coordinates": {
+    "lat": 29.59,
+    "lon": 52.58
+  },
+  "certainty": "approximate",
+  "note": "坐标用于世界思想地图的现代参考定位，不等同于对全部生平活动范围的断言。",
+  "relatedPersonIds": [
+    "mulla-sadra"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

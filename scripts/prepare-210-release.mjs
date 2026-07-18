@@ -1,11 +1,14 @@
 import { access, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { RELEASE_PEOPLE, RELEASE_SOURCE_LIBRARY } from "./release-120-data.mjs";
+import { RELEASE_PEOPLE as RELEASE_120_PEOPLE, RELEASE_SOURCE_LIBRARY } from "./release-120-data.mjs";
+import { RELEASE_210_ADDITIONS } from "./release-210-data.mjs";
+
+const RELEASE_PEOPLE = [...RELEASE_120_PEOPLE, ...RELEASE_210_ADDITIONS];
 
 const projectRoot = path.resolve(import.meta.dirname, "..");
 const contentRoot = path.join(projectRoot, "content", "knowledge");
 const write = process.argv.includes("--write");
-const reviewDate = "2026-07-18";
+const reviewDate = "2026-07-19";
 const reviewer = "automated-editorial-review/v2";
 const editor = "思想星图自动编辑流水线";
 const notes = "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。";
@@ -32,7 +35,15 @@ const colorByRegion = {
 };
 
 const disputedWorkAuthors = new Set([
+  "akshapada-gautama",
+  "kanada",
+  "mahavira",
+  "patanjali",
+  "philo-alexandria",
+  "ptahhotep",
   "pythagoras",
+  "thales",
+  "zoroaster",
   "hypatia",
   "rabia-al-adawiyya",
   "nezahualcoyotl",
@@ -104,6 +115,9 @@ function queueRecord(directory, fileName, record) {
 
 const coveragePath = path.join(contentRoot, "coverage", "people.json");
 const coverage = await readJson(coveragePath);
+const mediaCatalogPath = path.join(contentRoot, "coverage", "media-210.json");
+const mediaCatalog = await fileExists(mediaCatalogPath) ? await readJson(mediaCatalogPath) : { members: [] };
+const mediaByPersonId = new Map((mediaCatalog.members ?? []).map((member) => [member.personId, member.media]));
 const coverageCandidatePool = [
   ...(coverage.candidates ?? []),
   ...(coverage.releaseCandidates ?? []),
@@ -112,11 +126,11 @@ const coverageCandidatePool = [
 const candidateById = new Map(coverageCandidatePool.map((candidate) => [candidate.id, candidate]));
 const releaseCandidateIds = new Set(RELEASE_PEOPLE.map((entry) => entry.candidateId));
 
-if (RELEASE_PEOPLE.length !== 90 || releaseCandidateIds.size !== 90) throw new Error("120-person release must contain exactly 90 unique additions.");
+if (RELEASE_PEOPLE.length !== 180 || releaseCandidateIds.size !== 180) throw new Error("210-person release must contain exactly 180 unique additions.");
 for (const seed of RELEASE_PEOPLE) {
   const candidate = candidateById.get(seed.candidateId);
   if (!candidate) throw new Error(`Missing coverage candidate ${seed.candidateId}`);
-  if (candidate.batch > 3) throw new Error(`${seed.candidateId} is outside release batches 1–3.`);
+  if (candidate.batch > 6) throw new Error(`${seed.candidateId} is outside release batches 1–6.`);
 }
 
 for (const source of Object.values(RELEASE_SOURCE_LIBRARY)) {
@@ -182,7 +196,7 @@ for (const seed of RELEASE_PEOPLE) {
         { text: `核心主张：${cleanSentence(seed.thesis)}。`, citations: [citation(source.id, locator, `支持对${candidate.name}核心主张的概括。`)] },
       ],
     }],
-    media: {
+    media: mediaByPersonId.get(personId) ?? {
       alt: `${candidate.name}的中性占位图`,
       depictionNote: "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
       presentationType: "placeholder",
@@ -308,19 +322,19 @@ for (const seed of RELEASE_PEOPLE) {
 
 const releaseManifest = {
   version: 1,
-  releaseId: "public-120",
+  releaseId: "public-210",
   status: "release-candidate",
   baselinePeople: 30,
-  addedPeople: 90,
-  publicPeople: 120,
-  sourceBatches: [1, 2, 3],
+  addedPeople: 180,
+  publicPeople: 210,
+  sourceBatches: [1, 2, 3, 4, 5, 6],
   reviewMode: reviewer,
   externalPeerReviewClaimed: false,
   generatedAt: reviewDate,
   members: releaseMembers,
 };
 
-queueRecord("coverage", "release-120", releaseManifest);
+queueRecord("coverage", "release-210", releaseManifest);
 
 const peopleDirectory = path.join(contentRoot, "people");
 const publishedPeople = new Map();
@@ -331,7 +345,7 @@ for (const file of (await readdir(peopleDirectory)).filter((file) => file.endsWi
 for (const [file, record] of pendingWrites) {
   if (path.dirname(file) === peopleDirectory && record.editorialStatus === "published") publishedPeople.set(record.id, record);
 }
-if (publishedPeople.size !== 120) throw new Error(`Expected 120 published people after release, found ${publishedPeople.size}.`);
+if (publishedPeople.size !== 210) throw new Error(`Expected 210 published people after release, found ${publishedPeople.size}.`);
 
 const countBy = (values) => Object.fromEntries([...new Set(values)].sort((left, right) => left.localeCompare(right, "zh-CN")).map((value) => [value, values.filter((item) => item === value).length]));
 const eraForYear = (year) => {
@@ -349,9 +363,9 @@ const archivedCandidates = [...new Map(coverageCandidatePool.filter((candidate) 
 const peopleRecords = [...publishedPeople.values()];
 queueRecord("coverage", "people", {
   version: 2,
-  publishedBaseline: 120,
+  publishedBaseline: 210,
   candidateCount: 0,
-  targetTotal: 120,
+  targetTotal: 210,
   status: "release-candidate",
   regionTargets: countBy(peopleRecords.map((person) => person.primaryRegion)),
   eraTargets: countBy(peopleRecords.map((person) => eraForYear(person.chronology.startYear))),
@@ -361,19 +375,19 @@ queueRecord("coverage", "people", {
     minimumRegionsPerBatch: 4,
     minimumErasPerBatch: 3,
     maximumSingleRegionShare: 0.4,
-    publicationRule: "120人版本已完成自动编辑与结构审核；外部同行评审不在自动审核声明范围内。",
+    publicationRule: "210人版本已完成自动编辑与结构审核；外部同行评审不在自动审核声明范围内。",
   },
   candidates: [],
   releaseCandidates: releasedCandidates,
   release: {
-    releaseId: "public-120",
+    releaseId: "public-210",
     baselinePeople: 30,
-    addedPeople: 90,
-    publicPeople: 120,
-    sourceBatches: [1, 2, 3],
+    addedPeople: 180,
+    publicPeople: 210,
+    sourceBatches: [1, 2, 3, 4, 5, 6],
   },
   archivedRoadmap: {
-    status: "superseded-by-120-person-scope",
+    status: "deferred-after-210-person-release",
     candidateCount: archivedCandidates.length,
     candidates: archivedCandidates,
   },
@@ -385,8 +399,8 @@ if (!write) {
     const expected = `${JSON.stringify(record, null, 2)}\n`;
     if (!(await fileExists(file)) || await readFile(file, "utf8") !== expected) drifted.push(path.relative(projectRoot, file));
   }
-  if (drifted.length) throw new Error(`120-person release has ${drifted.length} drifted record(s): ${drifted.slice(0, 10).join(", ")}`);
-  console.log(`120-person release check passed: ${releaseMembers.length} additions and ${pendingWrites.size} normalized records are stable.`);
+  if (drifted.length) throw new Error(`210-person release has ${drifted.length} drifted record(s): ${drifted.slice(0, 10).join(", ")}`);
+  console.log(`210-person release check passed: ${releaseMembers.length} additions and ${pendingWrites.size} normalized records are stable.`);
   process.exit(0);
 }
 
@@ -395,4 +409,4 @@ for (const [file, record] of [...pendingWrites.entries()].sort(([left], [right])
   await writeFile(file, `${JSON.stringify(record, null, 2)}\n`);
 }
 
-console.log(`120-person release written: ${releaseMembers.length} additions across ${pendingWrites.size} normalized records.`);
+console.log(`210-person release written: ${releaseMembers.length} additions across ${pendingWrites.size} normalized records.`);

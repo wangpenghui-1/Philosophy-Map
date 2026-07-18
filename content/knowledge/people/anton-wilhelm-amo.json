@@ -86,12 +86,20 @@
     }
   ],
   "media": {
-    "alt": "安东·威廉·阿莫的中性占位图",
-    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
-    "presentationType": "placeholder",
-    "authenticity": "unavailable",
-    "rightsStatus": "not-applicable-placeholder",
-    "credit": "思想星图中性占位"
+    "fullSrc": "/media/thinkers/full/anton-wilhelm-amo.webp",
+    "thumbSrc": "/media/thinkers/thumb/anton-wilhelm-amo.webp",
+    "alt": "安东·威廉·阿莫的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sketch_portrait_of_Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759).jpg",
+    "sourceFile": "File:Sketch portrait of Anton Wilhelm Amo (c. 1703 – c. 1759).jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
   },
   "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
   "color": "#df8b68",
@@ -101,6 +109,6 @@
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
+  "lastReviewedAt": "2026-07-19",
   "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
 }

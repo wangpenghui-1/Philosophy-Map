@@ -1,0 +1,42 @@
+{
+  "id": "two-dogmas",
+  "slug": "two-dogmas",
+  "entityType": "work",
+  "title": "《经验主义的两个教条》",
+  "originalTitle": "Two Dogmas of Empiricism",
+  "authorRefs": [
+    {
+      "personId": "w-v-o-quine",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1951年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《经验主义的两个教条》是进入蒯因思想语境的代表文本入口。条目以“确认整体论”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-确认整体论"
+  ],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“W. V. O. Quine / 蒯因”",
+      "claim": "支持《经验主义的两个教条》与蒯因的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

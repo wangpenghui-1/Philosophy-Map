@@ -1,0 +1,112 @@
+{
+  "id": "talal-asad",
+  "slug": "talal-asad",
+  "entityType": "person",
+  "names": {
+    "display": "塔拉勒·阿萨德",
+    "english": "Talal Asad",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1932–",
+    "startYear": 1932,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-宗教与世俗批判"
+  ],
+  "conceptIds": [
+    "concept-世俗的谱系"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "宗教与世俗是否真是普遍且中立的分类？",
+  "thesis": "宗教和世俗由特定权力、身体训练与历史制度共同塑造，不能脱离谱系理解。",
+  "summary": "塔拉勒·阿萨德是西亚、中亚及伊斯兰思想世界宗教与世俗批判的重要思想人物，主要追问“宗教与世俗是否真是普遍且中立的分类？”。其思想以“世俗的谱系”为入口，主张宗教和世俗由特定权力、身体训练与历史制度共同塑造，不能脱离谱系理解。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "formations-secular"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "new-york",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Talal Asad / 塔拉勒·阿萨德”",
+      "claim": "支持塔拉勒·阿萨德的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "塔拉勒·阿萨德是西亚、中亚及伊斯兰思想世界宗教与世俗批判的重要思想人物，主要追问“宗教与世俗是否真是普遍且中立的分类？”。其思想以“世俗的谱系”为入口，主张宗教和世俗由特定权力、身体训练与历史制度共同塑造，不能脱离谱系理解。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Talal Asad / 塔拉勒·阿萨德”",
+              "claim": "支持塔拉勒·阿萨德的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：宗教与世俗是否真是普遍且中立的分类？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Talal Asad / 塔拉勒·阿萨德”",
+              "claim": "支持对塔拉勒·阿萨德核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：宗教和世俗由特定权力、身体训练与历史制度共同塑造，不能脱离谱系理解。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Talal Asad / 塔拉勒·阿萨德”",
+              "claim": "支持对塔拉勒·阿萨德核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/talal-asad.webp",
+    "thumbSrc": "/media/thinkers/thumb/talal-asad.webp",
+    "alt": "塔拉勒·阿萨德的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY 3.0",
+    "credit": "The Graduate Center, CUNY · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Professor_Talal_Asad_01_(cropped).jpg",
+    "sourceFile": "File:Professor Talal Asad 01 (cropped).jpg",
+    "license": "CC BY 3.0",
+    "creator": "The Graduate Center, CUNY",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

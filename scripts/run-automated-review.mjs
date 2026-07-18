@@ -40,7 +40,8 @@ async function gitValue(args) {
 
 if (fix) stages.push(await run(process.execPath, ["scripts/automated-editor.mjs", "--write"], "Automated editor fix"));
 stages.push(await run(process.execPath, ["scripts/automated-editor.mjs"], "Automated editor check"));
-stages.push(await run("npm", ["run", "content:release:check"], "120-person release integrity"));
+stages.push(await run("npm", ["run", "content:release:check"], "210-person release integrity"));
+stages.push(await run("npm", ["run", "content:media:check"], "210-person media integrity"));
 stages.push(await run("npm", ["run", "content:batch:check"], "Content production scaffold"));
 stages.push(await run("npm", ["run", "content:build"], "Knowledge schema and generation"));
 

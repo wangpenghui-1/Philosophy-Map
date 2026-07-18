@@ -12,10 +12,12 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "vasubandhu"
+    "vasubandhu",
+    "asanga"
   ],
   "conceptIds": [
-    "concept-三性"
+    "concept-三性",
+    "concept-阿赖耶识"
   ],
   "sourceIds": [
     "src-encyclopedia-indian-philosophies"

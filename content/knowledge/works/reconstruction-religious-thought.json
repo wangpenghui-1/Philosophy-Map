@@ -1,0 +1,42 @@
+{
+  "id": "reconstruction-religious-thought",
+  "slug": "reconstruction-religious-thought",
+  "entityType": "work",
+  "title": "《伊斯兰宗教思想的重建》",
+  "originalTitle": "The Reconstruction of Religious Thought in Islam",
+  "authorRefs": [
+    {
+      "personId": "muhammad-iqbal",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1930至1934年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《伊斯兰宗教思想的重建》是进入穆罕默德·伊克巴尔思想语境的代表文本入口。条目以“自我强化”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-自我强化"
+  ],
+  "traditionIds": [
+    "tradition-现代伊斯兰哲学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Muhammad Iqbal / 穆罕默德·伊克巴尔”",
+      "claim": "支持《伊斯兰宗教思想的重建》与穆罕默德·伊克巴尔的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

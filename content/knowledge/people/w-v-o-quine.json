@@ -1,0 +1,112 @@
+{
+  "id": "w-v-o-quine",
+  "slug": "w-v-o-quine",
+  "entityType": "person",
+  "names": {
+    "display": "蒯因",
+    "english": "W. V. O. Quine",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1908–2000",
+    "startYear": 1908,
+    "endYear": 2000,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "conceptIds": [
+    "concept-确认整体论"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "单个命题能否独立面对经验检验？",
+  "thesis": "知识体系整体承受经验压力，分析与综合及理论与观察之间没有绝对边界。",
+  "summary": "蒯因是美洲与加勒比分析哲学的重要思想人物，主要追问“单个命题能否独立面对经验检验？”。其思想以“确认整体论”为入口，主张知识体系整体承受经验压力，分析与综合及理论与观察之间没有绝对边界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "two-dogmas"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "harvard",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“W. V. O. Quine / 蒯因”",
+      "claim": "支持蒯因的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "蒯因是美洲与加勒比分析哲学的重要思想人物，主要追问“单个命题能否独立面对经验检验？”。其思想以“确认整体论”为入口，主张知识体系整体承受经验压力，分析与综合及理论与观察之间没有绝对边界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“W. V. O. Quine / 蒯因”",
+              "claim": "支持蒯因的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：单个命题能否独立面对经验检验？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“W. V. O. Quine / 蒯因”",
+              "claim": "支持对蒯因核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：知识体系整体承受经验压力，分析与综合及理论与观察之间没有绝对边界。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“W. V. O. Quine / 蒯因”",
+              "claim": "支持对蒯因核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/w-v-o-quine.webp",
+    "thumbSrc": "/media/thinkers/thumb/w-v-o-quine.webp",
+    "alt": "蒯因的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY 4.0",
+    "credit": "Maryclaire Quine · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Willard_Van_Orman_Quine_on_Bluenose_II_in_Halifax_NS_harbor_1980.jpg",
+    "sourceFile": "File:Willard Van Orman Quine on Bluenose II in Halifax NS harbor 1980.jpg",
+    "license": "CC BY 4.0",
+    "creator": "Maryclaire Quine",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

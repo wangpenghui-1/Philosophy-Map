@@ -87,12 +87,20 @@
     }
   ],
   "media": {
-    "alt": "孟子的中性占位图",
-    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
-    "presentationType": "placeholder",
-    "authenticity": "unavailable",
-    "rightsStatus": "not-applicable-placeholder",
-    "credit": "思想星图中性占位"
+    "fullSrc": "/media/thinkers/full/mencius.webp",
+    "thumbSrc": "/media/thinkers/thumb/mencius.webp",
+    "alt": "孟子的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "anonymous · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg",
+    "sourceFile": "File:Half Portraits of the Great Sage and Virtuous Men of Old - Meng Ke (孟軻).jpg",
+    "license": "Public domain",
+    "creator": "anonymous",
+    "retrievedAt": "2026-07-19"
   },
   "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
   "color": "#86b79b",
@@ -102,6 +110,6 @@
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
+  "lastReviewedAt": "2026-07-19",
   "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
 }

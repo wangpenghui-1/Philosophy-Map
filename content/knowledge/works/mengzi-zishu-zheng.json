@@ -1,0 +1,42 @@
+{
+  "id": "mengzi-zishu-zheng",
+  "slug": "mengzi-zishu-zheng",
+  "entityType": "work",
+  "title": "《孟子字义疏证》",
+  "originalTitle": "孟子字義疏證",
+  "authorRefs": [
+    {
+      "personId": "dai-zhen",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1777年",
+  "languages": [
+    "zh"
+  ],
+  "summary": "《孟子字义疏证》是进入戴震思想语境的代表文本入口。条目以“理欲之辨”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-理欲之辨"
+  ],
+  "traditionIds": [
+    "tradition-清代考据与哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Dai Zhen / 戴震”",
+      "claim": "支持《孟子字义疏证》与戴震的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mongmin-simseo",
+  "slug": "mongmin-simseo",
+  "entityType": "work",
+  "title": "《牧民心书》",
+  "originalTitle": "牧民心書",
+  "authorRefs": [
+    {
+      "personId": "jeong-yak-yong",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1818年",
+  "languages": [
+    "ko"
+  ],
+  "summary": "《牧民心书》是进入丁若镛思想语境的代表文本入口。条目以“实学经世”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-实学经世"
+  ],
+  "traditionIds": [
+    "tradition-朝鲜实学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Jeong Yak-yong / 丁若镛”",
+      "claim": "支持《牧民心书》与丁若镛的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

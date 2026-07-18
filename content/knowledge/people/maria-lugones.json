@@ -1,0 +1,112 @@
+{
+  "id": "maria-lugones",
+  "slug": "maria-lugones",
+  "entityType": "person",
+  "names": {
+    "display": "玛丽亚·卢戈内斯",
+    "english": "Maria Lugones",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1944–2020",
+    "startYear": 1944,
+    "endYear": 2020,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-去殖民女性主义"
+  ],
+  "conceptIds": [
+    "concept-殖民性别体系"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "殖民权力如何重塑性别、种族和劳动关系？",
+  "thesis": "现代殖民性别体系把欧洲二元性别强加于被殖民社会，抵抗来自关系性世界建构。",
+  "summary": "玛丽亚·卢戈内斯是美洲与加勒比去殖民女性主义的重要思想人物，主要追问“殖民权力如何重塑性别、种族和劳动关系？”。其思想以“殖民性别体系”为入口，主张现代殖民性别体系把欧洲二元性别强加于被殖民社会，抵抗来自关系性世界建构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "colonial-modern-gender"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "binghamton",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Maria Lugones / 玛丽亚·卢戈内斯”",
+      "claim": "支持玛丽亚·卢戈内斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "玛丽亚·卢戈内斯是美洲与加勒比去殖民女性主义的重要思想人物，主要追问“殖民权力如何重塑性别、种族和劳动关系？”。其思想以“殖民性别体系”为入口，主张现代殖民性别体系把欧洲二元性别强加于被殖民社会，抵抗来自关系性世界建构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Maria Lugones / 玛丽亚·卢戈内斯”",
+              "claim": "支持玛丽亚·卢戈内斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民权力如何重塑性别、种族和劳动关系？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Maria Lugones / 玛丽亚·卢戈内斯”",
+              "claim": "支持对玛丽亚·卢戈内斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：现代殖民性别体系把欧洲二元性别强加于被殖民社会，抵抗来自关系性世界建构。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Maria Lugones / 玛丽亚·卢戈内斯”",
+              "claim": "支持对玛丽亚·卢戈内斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/maria-lugones.webp",
+    "thumbSrc": "/media/thinkers/thumb/maria-lugones.webp",
+    "alt": "玛丽亚·卢戈内斯的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Revista Lavaca · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Mar%C3%ADa_Lugones.jpg",
+    "sourceFile": "File:Retrato de María Lugones.jpg",
+    "license": "CC BY-SA 4.0",
+    "creator": "Revista Lavaca",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

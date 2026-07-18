@@ -85,12 +85,20 @@
     }
   ],
   "media": {
-    "alt": "伊藤仁斋的中性占位图",
-    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
-    "presentationType": "placeholder",
-    "authenticity": "unavailable",
-    "rightsStatus": "not-applicable-placeholder",
-    "credit": "思想星图中性占位"
+    "fullSrc": "/media/thinkers/full/ito-jinsai.webp",
+    "thumbSrc": "/media/thinkers/thumb/ito-jinsai.webp",
+    "alt": "伊藤仁斋的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BC%8A%E8%97%A4%E4%BB%81%E6%96%8E%E5%83%8F.jpg",
+    "sourceFile": "File:伊藤仁斎像.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
   },
   "color": "#86b79b",
   "mapVisible": true,
@@ -99,6 +107,6 @@
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
+  "lastReviewedAt": "2026-07-19",
   "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
 }

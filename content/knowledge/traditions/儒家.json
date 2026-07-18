@@ -13,13 +13,15 @@
   "relatedTraditionIds": [],
   "personIds": [
     "confucius",
-    "mencius"
+    "mencius",
+    "xunzi"
   ],
   "conceptIds": [
     "concept-仁",
     "concept-礼",
     "concept-修身",
-    "concept-性善"
+    "concept-性善",
+    "concept-性恶"
   ],
   "sourceIds": [
     "src-confucius",

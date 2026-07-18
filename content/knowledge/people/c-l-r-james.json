@@ -1,0 +1,113 @@
+{
+  "id": "c-l-r-james",
+  "slug": "c-l-r-james",
+  "entityType": "person",
+  "names": {
+    "display": "C. L. R. 詹姆斯",
+    "english": "C. L. R. James",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1901–1989",
+    "startYear": 1901,
+    "endYear": 1989,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-加勒比马克思主义"
+  ],
+  "conceptIds": [
+    "concept-群众自我活动"
+  ],
+  "questionIds": [
+    "society",
+    "self"
+  ],
+  "guidingQuestion": "殖民革命如何由普通人的集体行动推动？",
+  "thesis": "被殖民者不是精英领导的被动对象，劳动、文化和群众组织具有自主创造力。",
+  "summary": "C. L. R. 詹姆斯是美洲与加勒比加勒比马克思主义的重要思想人物，主要追问“殖民革命如何由普通人的集体行动推动？”。其思想以“群众自我活动”为入口，主张被殖民者不是精英领导的被动对象，劳动、文化和群众组织具有自主创造力。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "black-jacobins"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "port-of-spain",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+      "claim": "支持C. L. R. 詹姆斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "C. L. R. 詹姆斯是美洲与加勒比加勒比马克思主义的重要思想人物，主要追问“殖民革命如何由普通人的集体行动推动？”。其思想以“群众自我活动”为入口，主张被殖民者不是精英领导的被动对象，劳动、文化和群众组织具有自主创造力。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+              "claim": "支持C. L. R. 詹姆斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民革命如何由普通人的集体行动推动？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+              "claim": "支持对C. L. R. 詹姆斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：被殖民者不是精英领导的被动对象，劳动、文化和群众组织具有自主创造力。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+              "claim": "支持对C. L. R. 詹姆斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/c-l-r-james.webp",
+    "thumbSrc": "/media/thinkers/thumb/c-l-r-james.webp",
+    "alt": "C. L. R. 詹姆斯的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY-SA 3.0",
+    "credit": "By Hill123 (Own work) [CC BY-SA 3.0 ( https://creativecommons.org/licenses/by-sa/3.0 )], via Wikimedia Commons · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CLR_James_Cropped.png",
+    "sourceFile": "File:CLR James Cropped.png",
+    "license": "CC BY-SA 3.0",
+    "creator": "By Hill123 (Own work) [CC BY-SA 3.0 ( https://creativecommons.org/licenses/by-sa/3.0 )], via Wikimedia Commons",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

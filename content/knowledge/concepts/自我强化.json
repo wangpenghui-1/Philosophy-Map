@@ -1,0 +1,48 @@
+{
+  "id": "concept-自我强化",
+  "slug": "自我强化",
+  "entityType": "concept",
+  "name": "自我强化",
+  "originalTerms": [],
+  "summary": "“自我强化”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-现代伊斯兰哲学",
+      "label": "自我强化",
+      "explanation": "在穆罕默德·伊克巴尔及现代伊斯兰哲学语境中，“自我强化”用于说明：自我不是静止实体，而在行动、爱与责任中增强并参与开放的宇宙进程。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Muhammad Iqbal / 穆罕默德·伊克巴尔”",
+          "claim": "支持穆罕默德·伊克巴尔语境中的“自我强化”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "muhammad-iqbal"
+  ],
+  "workIds": [
+    "reconstruction-religious-thought"
+  ],
+  "traditionIds": [
+    "tradition-现代伊斯兰哲学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Muhammad Iqbal / 穆罕默德·伊克巴尔”",
+      "claim": "支持“自我强化”作为穆罕默德·伊克巴尔思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

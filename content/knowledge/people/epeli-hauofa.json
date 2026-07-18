@@ -1,0 +1,107 @@
+{
+  "id": "epeli-hauofa",
+  "slug": "epeli-hauofa",
+  "entityType": "person",
+  "names": {
+    "display": "埃佩利·豪奥法",
+    "english": "Epeli Hauofa",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1939–2009",
+    "startYear": 1939,
+    "endYear": 2009,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-太平洋思想"
+  ],
+  "conceptIds": [
+    "concept-岛海共同体"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "太平洋岛屿为何不应被想象成孤立而微小？",
+  "thesis": "海洋连接而非分割岛屿，迁徙、亲属和交换构成广阔的区域共同体。",
+  "summary": "埃佩利·豪奥法是东南亚与大洋洲太平洋思想的重要思想人物，主要追问“太平洋岛屿为何不应被想象成孤立而微小？”。其思想以“岛海共同体”为入口，主张海洋连接而非分割岛屿，迁徙、亲属和交换构成广阔的区域共同体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "our-sea-islands"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "suva",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-indigenous-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-indigenous-philosophy",
+      "locator": "相关传统、人物与政治哲学专章：“Epeli Hauofa / 埃佩利·豪奥法”",
+      "claim": "支持埃佩利·豪奥法的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "埃佩利·豪奥法是东南亚与大洋洲太平洋思想的重要思想人物，主要追问“太平洋岛屿为何不应被想象成孤立而微小？”。其思想以“岛海共同体”为入口，主张海洋连接而非分割岛屿，迁徙、亲属和交换构成广阔的区域共同体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-indigenous-philosophy",
+              "locator": "相关传统、人物与政治哲学专章：“Epeli Hauofa / 埃佩利·豪奥法”",
+              "claim": "支持埃佩利·豪奥法的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：太平洋岛屿为何不应被想象成孤立而微小？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-indigenous-philosophy",
+              "locator": "相关传统、人物与政治哲学专章：“Epeli Hauofa / 埃佩利·豪奥法”",
+              "claim": "支持对埃佩利·豪奥法核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：海洋连接而非分割岛屿，迁徙、亲属和交换构成广阔的区域共同体。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-indigenous-philosophy",
+              "locator": "相关传统、人物与政治哲学专章：“Epeli Hauofa / 埃佩利·豪奥法”",
+              "claim": "支持对埃佩利·豪奥法核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/epeli-hauofa.webp",
+    "thumbSrc": "/media/thinkers/thumb/epeli-hauofa.webp",
+    "alt": "埃佩利·豪奥法的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

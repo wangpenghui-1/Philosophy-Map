@@ -12,10 +12,14 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "gersonides"
+    "gersonides",
+    "saadia-gaon",
+    "maimonides"
   ],
   "conceptIds": [
-    "concept-能动理智"
+    "concept-能动理智",
+    "concept-理性与启示",
+    "concept-否定神学"
   ],
   "sourceIds": [
     "src-history-jewish-philosophy"

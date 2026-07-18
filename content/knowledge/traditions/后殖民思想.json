@@ -7,18 +7,24 @@
   "summary": "后殖民思想是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
   "periodLabel": "1945年至今",
   "regionLabels": [
-    "非洲"
+    "非洲",
+    "跨区域与离散思想传统"
   ],
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "achille-mbembe"
+    "achille-mbembe",
+    "edward-said",
+    "gayatri-chakravorty-spivak"
   ],
   "conceptIds": [
-    "concept-死政治"
+    "concept-死政治",
+    "concept-东方主义",
+    "concept-底层能否发声"
   ],
   "sourceIds": [
-    "src-companion-african-philosophy"
+    "src-companion-african-philosophy",
+    "src-cultural-studies-reader"
   ],
   "citations": [
     {

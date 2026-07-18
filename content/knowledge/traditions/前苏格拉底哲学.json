@@ -14,12 +14,16 @@
   "personIds": [
     "pythagoras",
     "heraclitus",
-    "parmenides"
+    "parmenides",
+    "thales",
+    "empedocles"
   ],
   "conceptIds": [
     "concept-数的秩序",
     "concept-逻各斯",
-    "concept-存在之路"
+    "concept-存在之路",
+    "concept-水本原",
+    "concept-四根爱争"
   ],
   "sourceIds": [
     "src-routledge-encyclopedia-philosophy"

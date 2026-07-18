@@ -79,6 +79,14 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
 
   const mediaFailures = all.people.filter((person) => person.editorialStatus === "published" && (!person.media.credit || !person.media.rightsStatus || !person.media.authenticity || !person.media.presentationType || !person.media.depictionNote));
   if (mediaFailures.length) findings.push(finding("blocker", "media-governance-failure", "人物媒体缺少授权、真实性或呈现说明。", mediaFailures));
+  const externalMediaFailures = all.people.filter((person) => person.editorialStatus === "published"
+    && person.media.presentationType !== "placeholder"
+    && person.media.rightsStatus !== "project-commissioned"
+    && (!person.media.sourceUrl || !person.media.sourceFile || !person.media.license || !person.media.retrievedAt));
+  if (externalMediaFailures.length) findings.push(finding("blocker", "external-media-provenance-failure", "外部人物形象缺少来源页面、文件名、许可或获取日期。", externalMediaFailures));
+  const generatedMediaFailures = all.people.filter((person) => /AI辅助/u.test(person.media.credit ?? "")
+    && (person.media.presentationType !== "stylized" || person.media.authenticity !== "interpretive" || !/不是历史照片/u.test(person.media.depictionNote)));
+  if (generatedMediaFailures.length) findings.push(finding("blocker", "generated-media-label-failure", "AI辅助艺术形象必须明确标注为非历史照片和解释性呈现。", generatedMediaFailures));
 
   const relationFailures = all.relations.filter((relation) =>
     relation.citations.length === 0
@@ -88,17 +96,17 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   if (relationFailures.length) findings.push(finding("blocker", "relation-evidence-failure", "思想关系不满足证据、方向性或争议说明规则。", relationFailures));
 
   const coverage = JSON.parse(await readFile(path.join(contentRoot, "coverage", "people.json"), "utf8"));
-  const release = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-120.json"), "utf8"));
+  const release = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-210.json"), "utf8"));
   const releasedPeople = new Map(all.people.map((person) => [person.id, person]));
   const releaseFailures = [];
-  if (coverage.targetTotal !== 120 || coverage.publishedBaseline !== 120 || coverage.candidateCount !== 0 || coverage.candidates.length !== 0) releaseFailures.push("coverage-counts");
-  if (Object.values(coverage.regionTargets).reduce((sum, count) => sum + count, 0) !== 120) releaseFailures.push("region-targets");
-  if (Object.values(coverage.eraTargets).reduce((sum, count) => sum + count, 0) !== 120) releaseFailures.push("era-targets");
-  if (release.baselinePeople !== 30 || release.addedPeople !== 90 || release.publicPeople !== 120 || release.members.length !== 90) releaseFailures.push("release-manifest");
-  if (new Set(release.members.map((member) => member.personId)).size !== 90) releaseFailures.push("release-member-ids");
+  if (coverage.targetTotal !== 210 || coverage.publishedBaseline !== 210 || coverage.candidateCount !== 0 || coverage.candidates.length !== 0) releaseFailures.push("coverage-counts");
+  if (Object.values(coverage.regionTargets).reduce((sum, count) => sum + count, 0) !== 210) releaseFailures.push("region-targets");
+  if (Object.values(coverage.eraTargets).reduce((sum, count) => sum + count, 0) !== 210) releaseFailures.push("era-targets");
+  if (release.baselinePeople !== 30 || release.addedPeople !== 180 || release.publicPeople !== 210 || release.members.length !== 180) releaseFailures.push("release-manifest");
+  if (new Set(release.members.map((member) => member.personId)).size !== 180) releaseFailures.push("release-member-ids");
   if (release.members.some((member) => releasedPeople.get(member.personId)?.editorialStatus !== "published")) releaseFailures.push("release-member-status");
-  if (all.people.length !== 120) releaseFailures.push("public-people");
-  if (releaseFailures.length) findings.push(finding("blocker", "coverage-release-failure", "120人发布清单、覆盖统计或公开条目不一致。", releaseFailures));
+  if (all.people.length !== 210) releaseFailures.push("public-people");
+  if (releaseFailures.length) findings.push(finding("blocker", "coverage-release-failure", "210人发布清单、覆盖统计或公开条目不一致。", releaseFailures));
 
   const knowledge = JSON.parse(await readFile(path.join(generatedRoot, "knowledge.json"), "utf8"));
   const publicRecords = Object.values(knowledge).flat();

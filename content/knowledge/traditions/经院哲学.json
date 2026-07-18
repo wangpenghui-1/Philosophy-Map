@@ -14,13 +14,17 @@
   "relatedTraditionIds": [],
   "personIds": [
     "aquinas",
-    "william-ockham"
+    "william-ockham",
+    "anselm-canterbury",
+    "peter-abelard"
   ],
   "conceptIds": [
     "concept-存在",
     "concept-自然法",
     "concept-目的",
-    "concept-唯名论"
+    "concept-唯名论",
+    "concept-信仰寻求理解",
+    "concept-意向伦理"
   ],
   "sourceIds": [
     "src-aquinas",

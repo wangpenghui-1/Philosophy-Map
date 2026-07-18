@@ -13,11 +13,15 @@
   "relatedTraditionIds": [],
   "personIds": [
     "zeno-citium",
-    "chrysippus"
+    "chrysippus",
+    "seneca",
+    "epictetus"
   ],
   "conceptIds": [
     "concept-顺应自然",
-    "concept-命题逻辑"
+    "concept-命题逻辑",
+    "concept-时间占有",
+    "concept-控制二分"
   ],
   "sourceIds": [
     "src-routledge-encyclopedia-philosophy"

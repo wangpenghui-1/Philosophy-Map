@@ -2,8 +2,9 @@ name: Quality gates
 
 on:
   push:
-    branches: [main, "codex/**"]
+    branches: [main, "codex/**", "agent/**"]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -15,12 +16,16 @@ jobs:
           node-version: 22.13.0
           cache: npm
       - run: npm ci
-      - run: npm run lint
-      - run: npm test
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
+      - run: npm run review:full
         env:
           CI: "true"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: automated-review-report
+          path: artifacts/review/
+          retention-days: 30
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

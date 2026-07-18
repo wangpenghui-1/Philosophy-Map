@@ -8,19 +8,25 @@
   "scripts": {
     "content:build": "node scripts/build-knowledge-base.mjs",
     "content:audit": "node scripts/build-knowledge-base.mjs",
+    "content:edit": "node scripts/automated-editor.mjs --write",
+    "content:edit:check": "node scripts/automated-editor.mjs",
+    "content:enrich-sources": "node scripts/enrich-source-metadata.mjs",
     "predev": "npm run content:build",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "prebuild": "npm run content:build",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/bundle-budget.test.mjs tests/globe-marker-layout.test.mjs",
+    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/bundle-budget.test.mjs tests/globe-marker-layout.test.mjs tests/review-pipeline.test.mjs",
     "test:e2e": "NO_PROXY=localhost,127.0.0.1 no_proxy=localhost,127.0.0.1 playwright test",
     "test:e2e:update": "NO_PROXY=localhost,127.0.0.1 no_proxy=localhost,127.0.0.1 playwright test --update-snapshots",
     "test:all": "npm run lint && npm test && npm run test:e2e",
     "prelint": "npm run content:build",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "pretypecheck": "npm run content:build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "review:automated": "node scripts/run-automated-review.mjs",
+    "review:fix": "node scripts/run-automated-review.mjs --fix",
+    "review:full": "node scripts/run-automated-review.mjs --full"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

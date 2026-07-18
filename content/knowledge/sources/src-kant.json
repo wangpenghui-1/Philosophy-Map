@@ -2,7 +2,9 @@
   "id": "src-kant",
   "entityType": "source",
   "title": "Immanuel Kant",
-  "authors": [],
+  "authors": [
+    "Rohlf, Michael"
+  ],
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/kant/",
@@ -12,7 +14,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

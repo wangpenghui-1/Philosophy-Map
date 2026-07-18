@@ -49,7 +49,7 @@
     {
       "sourceId": "src-zhuangzi",
       "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持庄子的摘要主张：庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-zhuangzi",
               "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-zhuangzi",
               "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：当语言和立场不断变化，我们如何保存行动与生命的自由？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-zhuangzi",
               "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：松动固执的区分，从多重视角理解变化中的世界。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

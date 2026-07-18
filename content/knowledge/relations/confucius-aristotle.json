@@ -19,17 +19,17 @@
     {
       "sourceId": "src-confucius",
       "locator": "Sections 3–4: ritual psychology, virtues and character formation",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持德性如何被培养的摘要主张：两种传统都把品格培养、实践和共同生活置于伦理讨论中心；这是比较研究建立的主题共鸣，不主张历史传播。"
     },
     {
       "sourceId": "src-aristotle",
       "locator": "Introduction and Section 2: the human good",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持德性如何被培养的摘要主张：两种传统都把品格培养、实践和共同生活置于伦理讨论中心；这是比较研究建立的主题共鸣，不主张历史传播。"
     },
     {
       "sourceId": "src-confucius-aristotle",
       "locator": "Comparative discussion of Aristotelian and Confucian virtue ethics",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持德性如何被培养的摘要主张：两种传统都把品格培养、实践和共同生活置于伦理讨论中心；这是比较研究建立的主题共鸣，不主张历史传播。"
     }
   ],
   "atlasVisibility": true,
@@ -37,7 +37,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

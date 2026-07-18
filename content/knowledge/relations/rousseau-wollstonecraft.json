@@ -18,12 +18,12 @@
     {
       "sourceId": "src-rousseau",
       "locator": "Sections on inequality, freedom, education and the general will",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持谁被允许接受理性教育的摘要主张：沃斯通克拉夫特明确批评卢梭对女性教育与性别角色的安排，把启蒙的普遍理性要求推向性别平等。"
     },
     {
       "sourceId": "src-wollstonecraft",
       "locator": "Sections on education, rights and her critique of Rousseau",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持谁被允许接受理性教育的摘要主张：沃斯通克拉夫特明确批评卢梭对女性教育与性别角色的安排，把启蒙的普遍理性要求推向性别平等。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -50,7 +50,7 @@
     {
       "sourceId": "src-locke",
       "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持洛克的摘要主张：洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、…"
     }
   ],
   "sections": [
@@ -64,7 +64,7 @@
             {
               "sourceId": "src-locke",
               "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、…"
             }
           ]
         },
@@ -74,7 +74,7 @@
             {
               "sourceId": "src-locke",
               "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：经验如何形成观念，政治权力又从何处获得正当性？"
             }
           ]
         },
@@ -84,7 +84,7 @@
             {
               "sourceId": "src-locke",
               "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

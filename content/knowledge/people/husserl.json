@@ -49,7 +49,7 @@
     {
       "sourceId": "src-husserl",
       "locator": "Sections on intentionality, epoché and the lifeworld",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持胡塞尔的摘要主张：胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-husserl",
               "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-husserl",
               "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：经验中的对象如何向意识显现？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-husserl",
               "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

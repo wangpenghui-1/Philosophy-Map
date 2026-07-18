@@ -26,14 +26,14 @@
     {
       "sourceId": "src-wittgenstein",
       "locator": "Sections on the picture theory, language-games and forms of life",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持分析哲学的摘要主张：分析哲学是本知识库用于组织人物、文本与概念的一项思想传统索引。它不把传统理解为封闭或同质的体系，而用于呈现内部差异、历史传播与跨传统接触。"
     }
   ],
   "contentTier": "index",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

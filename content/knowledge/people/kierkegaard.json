@@ -49,7 +49,7 @@
     {
       "sourceId": "src-kierkegaard",
       "locator": "Sections on existence, anxiety, choice and the critique of system",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持克尔凯郭尔的摘要主张：克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-kierkegaard",
               "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-kierkegaard",
               "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：个体如何在焦虑、不确定与选择中成为自己？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-kierkegaard",
               "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

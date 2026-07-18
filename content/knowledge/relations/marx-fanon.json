@@ -18,12 +18,12 @@
     {
       "sourceId": "src-marx",
       "locator": "Sections on alienation, history, capital and emancipation",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持阶级分析进入殖民世界的摘要主张：法农吸收并改造马克思主义，把土地、种族化、殖民暴力与民族解放纳入对物质社会关系的分析。"
     },
     {
       "sourceId": "src-fanon",
       "locator": "Introduction and sections on colonial subjectivity and liberation",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持阶级分析进入殖民世界的摘要主张：法农吸收并改造马克思主义，把土地、种族化、殖民暴力与民族解放纳入对物质社会关系的分析。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

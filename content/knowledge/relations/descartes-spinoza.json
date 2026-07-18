@@ -18,12 +18,12 @@
     {
       "sourceId": "src-descartes",
       "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持从二元论到单一实体的摘要主张：斯宾诺莎沿用笛卡尔的实体与观念词汇，却拒绝心物二元结构，把自然理解为唯一实体的无限表达。"
     },
     {
       "sourceId": "src-spinoza",
       "locator": "Sections on substance, affects, freedom and politics",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持从二元论到单一实体的摘要主张：斯宾诺莎沿用笛卡尔的实体与观念词汇，却拒绝心物二元结构，把自然理解为唯一实体的无限表达。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

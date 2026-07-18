@@ -18,12 +18,12 @@
     {
       "sourceId": "src-aristotle",
       "locator": "Introduction and Section 2: the human good",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持亚里士多德主义的经院重构的摘要主张：阿奎那广泛使用亚里士多德的逻辑、自然哲学与形而上学，并在基督教神学框架内重新组织这些资源。"
     },
     {
       "sourceId": "src-aquinas",
       "locator": "Sections on being, natural law and Aristotelian philosophy",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持亚里士多德主义的经院重构的摘要主张：阿奎那广泛使用亚里士多德的逻辑、自然哲学与形而上学，并在基督教神学框架内重新组织这些资源。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -1,0 +1,117 @@
+{
+  "id": "fanon",
+  "slug": "fanon",
+  "entityType": "person",
+  "names": {
+    "display": "法农",
+    "english": "Frantz Fanon",
+    "original": "Frantz Omar Fanon",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1925–1961",
+    "startYear": 1925,
+    "endYear": 1961,
+    "certainty": "established"
+  },
+  "primaryRegion": "加勒比—北非",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-反殖民思想"
+  ],
+  "conceptIds": [
+    "concept-殖民",
+    "concept-异化",
+    "concept-解放"
+  ],
+  "questionIds": [
+    "freedom",
+    "self",
+    "society"
+  ],
+  "guidingQuestion": "殖民权力如何进入身体、自我与被承认的可能？",
+  "thesis": "殖民不仅控制土地，也制造被种族化的主体与心理结构。",
+  "summary": "法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主体与心理结构。 本站以殖民、异化、解放为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "black-skin",
+    "wretched"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "fort-de-france",
+      "role": "activity"
+    },
+    {
+      "placeId": "blida",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-fanon"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-fanon",
+      "locator": "Introduction and sections on colonial subjectivity and liberation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主体与心理结构。 本站以殖民、异化、解放为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-fanon",
+              "locator": "Introduction and sections on colonial subjectivity and liberation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民权力如何进入身体、自我与被承认的可能？",
+          "citations": [
+            {
+              "sourceId": "src-fanon",
+              "locator": "Introduction and sections on colonial subjectivity and liberation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：殖民不仅控制土地，也制造被种族化的主体与心理结构。",
+          "citations": [
+            {
+              "sourceId": "src-fanon",
+              "locator": "Introduction and sections on colonial subjectivity and liberation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/fanon.webp",
+    "thumbSrc": "/media/thinkers/thumb/fanon.webp",
+    "alt": "法农的艺术化人物形象",
+    "objectPosition": "48% 38%",
+    "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#b45c4e",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

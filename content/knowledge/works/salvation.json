@@ -1,0 +1,42 @@
+{
+  "id": "salvation",
+  "slug": "salvation",
+  "entityType": "work",
+  "title": "《拯救之书》",
+  "originalTitle": "Kitāb al-Najāt",
+  "authorRefs": [
+    {
+      "personId": "avicenna",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "11世纪",
+  "languages": [],
+  "summary": "《拯救之书》是阿维森纳的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-存在",
+    "concept-本质",
+    "concept-灵魂"
+  ],
+  "traditionIds": [
+    "tradition-阿拉伯语哲学"
+  ],
+  "sourceIds": [
+    "src-avicenna"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-avicenna",
+      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

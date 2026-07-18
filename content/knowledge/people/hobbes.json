@@ -1,0 +1,112 @@
+{
+  "id": "hobbes",
+  "slug": "hobbes",
+  "entityType": "person",
+  "names": {
+    "display": "霍布斯",
+    "english": "Thomas Hobbes",
+    "original": "Thomas Hobbes",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1588–1679",
+    "startYear": 1588,
+    "endYear": 1679,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-近代政治哲学"
+  ],
+  "conceptIds": [
+    "concept-契约",
+    "concept-主权",
+    "concept-自然状态"
+  ],
+  "questionIds": [
+    "society",
+    "freedom",
+    "self"
+  ],
+  "guidingQuestion": "彼此脆弱而相互戒惧的人为何需要共同权威？",
+  "thesis": "和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。",
+  "summary": "霍布斯是1588–1679活跃于欧洲的近代政治哲学思想人物，主要追问“彼此脆弱而相互戒惧的人为何需要共同权威？”。其核心主张可概括为：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。 本站以契约、主权、自然状态为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "leviathan"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london-hobbes",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-hobbes"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-hobbes",
+      "locator": "Sections on human nature, authority and the social contract",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "霍布斯是1588–1679活跃于欧洲的近代政治哲学思想人物，主要追问“彼此脆弱而相互戒惧的人为何需要共同权威？”。其核心主张可概括为：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。 本站以契约、主权、自然状态为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-hobbes",
+              "locator": "Sections on human nature, authority and the social contract",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：彼此脆弱而相互戒惧的人为何需要共同权威？",
+          "citations": [
+            {
+              "sourceId": "src-hobbes",
+              "locator": "Sections on human nature, authority and the social contract",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。",
+          "citations": [
+            {
+              "sourceId": "src-hobbes",
+              "locator": "Sections on human nature, authority and the social contract",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/hobbes.webp",
+    "thumbSrc": "/media/thinkers/thumb/hobbes.webp",
+    "alt": "霍布斯的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#976e63",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

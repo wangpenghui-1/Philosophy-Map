@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import AtlasApp from "../../../_components/AtlasApp";
 import { thinkerBySlug, thinkers } from "../../../_data/atlas";
-
-export function generateStaticParams() {
-  return thinkers.flatMap((left, leftIndex) =>
-    thinkers.slice(leftIndex + 1).map((right) => ({ leftSlug: left.slug, rightSlug: right.slug })),
-  );
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ leftSlug: string; rightSlug: string }> }): Promise<Metadata> {
   const { leftSlug, rightSlug } = await params;
@@ -20,6 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ leftSlug:
 export default async function ComparePage({ params }: { params: Promise<{ leftSlug: string; rightSlug: string }> }) {
   const { leftSlug, rightSlug } = await params;
   if (!thinkerBySlug.has(leftSlug) || !thinkerBySlug.has(rightSlug) || leftSlug === rightSlug) notFound();
+  const leftIndex = thinkers.findIndex((thinker) => thinker.slug === leftSlug);
+  const rightIndex = thinkers.findIndex((thinker) => thinker.slug === rightSlug);
+  if (leftIndex > rightIndex) redirect(`/compare/${rightSlug}/${leftSlug}`);
   return <AtlasApp initialMode="explore" initialCompareSlugs={[leftSlug, rightSlug]} />;
 }
-

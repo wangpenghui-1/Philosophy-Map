@@ -1,0 +1,22 @@
+{
+  "id": "berlin-hegel",
+  "slug": "berlin-hegel",
+  "entityType": "place",
+  "historicalName": "柏林",
+  "historicalRegion": "普鲁士王国",
+  "coordinates": {
+    "lat": 52.52,
+    "lon": 13.405
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "hegel"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

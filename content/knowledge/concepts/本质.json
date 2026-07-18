@@ -1,0 +1,49 @@
+{
+  "id": "concept-本质",
+  "slug": "本质",
+  "entityType": "concept",
+  "name": "本质",
+  "originalTerms": [],
+  "summary": "“本质”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "senses": [
+    {
+      "traditionId": "tradition-阿拉伯语哲学",
+      "label": "本质",
+      "explanation": "在阿维森纳条目中，“本质”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "citations": [
+        {
+          "sourceId": "src-avicenna",
+          "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+          "claim": "支持本条目的生平、思想概述或关系说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "avicenna"
+  ],
+  "workIds": [
+    "healing",
+    "salvation"
+  ],
+  "traditionIds": [
+    "tradition-阿拉伯语哲学"
+  ],
+  "sourceIds": [
+    "src-avicenna"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-avicenna",
+      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

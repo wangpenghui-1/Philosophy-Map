@@ -1,0 +1,114 @@
+{
+  "id": "confucius",
+  "slug": "confucius",
+  "entityType": "person",
+  "names": {
+    "display": "孔子",
+    "english": "Confucius",
+    "original": "孔丘",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前551–479",
+    "startYear": -551,
+    "endYear": -479,
+    "certainty": "approximate",
+    "note": "早期材料中的生平细节与后世叙述并不完全一致。"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-儒家"
+  ],
+  "conceptIds": [
+    "concept-仁",
+    "concept-礼",
+    "concept-修身"
+  ],
+  "questionIds": [
+    "good-life",
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "一个人如何在关系与共同生活中成为更好的人？",
+  "thesis": "以礼与仁的日常实践，塑造能够承担关系责任的人。",
+  "summary": "孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。 本站以仁、礼、修身为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "analects"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "qufu",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-confucius"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-confucius",
+      "locator": "Sections 3–4: ritual psychology, virtues and character formation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。 本站以仁、礼、修身为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-confucius",
+              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：一个人如何在关系与共同生活中成为更好的人？",
+          "citations": [
+            {
+              "sourceId": "src-confucius",
+              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以礼与仁的日常实践，塑造能够承担关系责任的人。",
+          "citations": [
+            {
+              "sourceId": "src-confucius",
+              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/confucius.webp",
+    "thumbSrc": "/media/thinkers/thumb/confucius.webp",
+    "alt": "孔子的艺术化人物形象",
+    "objectPosition": "50% 24%",
+    "depictionNote": "艺术化人物形象，并非可考的历史肖像。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "uncertainty": "早期材料中的生平细节与后世叙述并不完全一致。",
+  "color": "#82a987",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

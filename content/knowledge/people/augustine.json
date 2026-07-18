@@ -1,0 +1,114 @@
+{
+  "id": "augustine",
+  "slug": "augustine",
+  "entityType": "person",
+  "names": {
+    "display": "奥古斯丁",
+    "english": "Augustine of Hippo",
+    "original": "Aurelius Augustinus",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "354–430",
+    "startYear": 354,
+    "endYear": 430,
+    "certainty": "established"
+  },
+  "primaryRegion": "北非—地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-晚期古代基督教哲学"
+  ],
+  "conceptIds": [
+    "concept-意志",
+    "concept-时间",
+    "concept-内在性"
+  ],
+  "questionIds": [
+    "self",
+    "freedom",
+    "reality",
+    "society"
+  ],
+  "guidingQuestion": "意志为何会与自身冲突，时间又如何存在于心灵之中？",
+  "thesis": "内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。",
+  "summary": "奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。 本站以意志、时间、内在性为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "confessions",
+    "city-of-god"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "hippo",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-augustine"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-augustine",
+      "locator": "Sections on Platonism, will, time and the two cities",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。 本站以意志、时间、内在性为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-augustine",
+              "locator": "Sections on Platonism, will, time and the two cities",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：意志为何会与自身冲突，时间又如何存在于心灵之中？",
+          "citations": [
+            {
+              "sourceId": "src-augustine",
+              "locator": "Sections on Platonism, will, time and the two cities",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。",
+          "citations": [
+            {
+              "sourceId": "src-augustine",
+              "locator": "Sections on Platonism, will, time and the two cities",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/augustine.webp",
+    "thumbSrc": "/media/thinkers/thumb/augustine.webp",
+    "alt": "奥古斯丁的艺术化人物形象",
+    "objectPosition": "50% 20%",
+    "depictionNote": "艺术化人物形象，参考后世宗教绘画传统而非历史照片。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#a66f62",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

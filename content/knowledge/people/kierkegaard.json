@@ -1,0 +1,113 @@
+{
+  "id": "kierkegaard",
+  "slug": "kierkegaard",
+  "entityType": "person",
+  "names": {
+    "display": "克尔凯郭尔",
+    "english": "Søren Kierkegaard",
+    "original": "Søren Aabye Kierkegaard",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1813–1855",
+    "startYear": 1813,
+    "endYear": 1855,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-存在哲学"
+  ],
+  "conceptIds": [
+    "concept-存在",
+    "concept-焦虑",
+    "concept-选择"
+  ],
+  "questionIds": [
+    "self",
+    "freedom",
+    "good-life"
+  ],
+  "guidingQuestion": "个体如何在焦虑、不确定与选择中成为自己？",
+  "thesis": "存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。",
+  "summary": "克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。 本站以存在、焦虑、选择为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "either-or",
+    "fear-trembling"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "copenhagen",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-kierkegaard"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kierkegaard",
+      "locator": "Sections on existence, anxiety, choice and the critique of system",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。 本站以存在、焦虑、选择为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard",
+              "locator": "Sections on existence, anxiety, choice and the critique of system",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：个体如何在焦虑、不确定与选择中成为自己？",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard",
+              "locator": "Sections on existence, anxiety, choice and the critique of system",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard",
+              "locator": "Sections on existence, anxiety, choice and the critique of system",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/kierkegaard.webp",
+    "thumbSrc": "/media/thinkers/thumb/kierkegaard.webp",
+    "alt": "克尔凯郭尔的艺术化人物形象",
+    "objectPosition": "50% 17%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#6c8da5",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

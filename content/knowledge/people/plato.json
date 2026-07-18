@@ -1,0 +1,116 @@
+{
+  "id": "plato",
+  "slug": "plato",
+  "entityType": "person",
+  "names": {
+    "display": "柏拉图",
+    "english": "Plato",
+    "original": "Πλάτων",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前427–347",
+    "startYear": -427,
+    "endYear": -347,
+    "certainty": "approximate",
+    "note": "对话作品中的发言者不能简单等同于柏拉图本人。"
+  },
+  "primaryRegion": "地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-古希腊哲学"
+  ],
+  "conceptIds": [
+    "concept-理念",
+    "concept-辩证法",
+    "concept-正义"
+  ],
+  "questionIds": [
+    "reality",
+    "knowledge",
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "变化世界中的知识如何可能，正义城邦又应如何组织？",
+  "thesis": "哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。",
+  "summary": "柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。 本站以理念、辩证法、正义为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "republic",
+    "symposium"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "athens-plato",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-plato"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-plato",
+      "locator": "Sections 2–4: dialogues, forms, ethics and politics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。 本站以理念、辩证法、正义为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-plato",
+              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：变化世界中的知识如何可能，正义城邦又应如何组织？",
+          "citations": [
+            {
+              "sourceId": "src-plato",
+              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。",
+          "citations": [
+            {
+              "sourceId": "src-plato",
+              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/plato.webp",
+    "thumbSrc": "/media/thinkers/thumb/plato.webp",
+    "alt": "柏拉图的艺术化人物形象",
+    "objectPosition": "50% 19%",
+    "depictionNote": "艺术化人物形象，参考古代雕像传统而非可考的历史肖像。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "uncertainty": "对话作品中的发言者不能简单等同于柏拉图本人。",
+  "color": "#9f83b5",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

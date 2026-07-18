@@ -1,0 +1,42 @@
+{
+  "id": "black-skin",
+  "slug": "black-skin",
+  "entityType": "work",
+  "title": "《黑皮肤，白面具》",
+  "originalTitle": "Peau noire, masques blancs",
+  "authorRefs": [
+    {
+      "personId": "fanon",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1952",
+  "languages": [],
+  "summary": "《黑皮肤，白面具》是法农的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-殖民",
+    "concept-异化",
+    "concept-解放"
+  ],
+  "traditionIds": [
+    "tradition-反殖民思想"
+  ],
+  "sourceIds": [
+    "src-fanon"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-fanon",
+      "locator": "Introduction and sections on colonial subjectivity and liberation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

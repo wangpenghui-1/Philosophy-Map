@@ -1,0 +1,113 @@
+{
+  "id": "hume",
+  "slug": "hume",
+  "entityType": "person",
+  "names": {
+    "display": "休谟",
+    "english": "David Hume",
+    "original": "David Hume",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1711–1776",
+    "startYear": 1711,
+    "endYear": 1776,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-苏格兰启蒙运动"
+  ],
+  "conceptIds": [
+    "concept-习惯",
+    "concept-因果",
+    "concept-情感"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "good-life"
+  ],
+  "guidingQuestion": "因果、自我与道德判断究竟来自理性还是经验习惯？",
+  "thesis": "许多确定感来自习惯与情感，而不是理性能够独立证明的必然联系。",
+  "summary": "休谟是1711–1776活跃于欧洲的苏格兰启蒙运动思想人物，主要追问“因果、自我与道德判断究竟来自理性还是经验习惯？”。其核心主张可概括为：许多确定感来自习惯与情感，而不是理性能够独立证明的必然联系。 本站以习惯、因果、情感为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "treatise-human-nature",
+    "enquiry-understanding"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "edinburgh",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-hume"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-hume",
+      "locator": "Sections on causation, self, morals and skepticism",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "休谟是1711–1776活跃于欧洲的苏格兰启蒙运动思想人物，主要追问“因果、自我与道德判断究竟来自理性还是经验习惯？”。其核心主张可概括为：许多确定感来自习惯与情感，而不是理性能够独立证明的必然联系。 本站以习惯、因果、情感为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections on causation, self, morals and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：因果、自我与道德判断究竟来自理性还是经验习惯？",
+          "citations": [
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections on causation, self, morals and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：许多确定感来自习惯与情感，而不是理性能够独立证明的必然联系。",
+          "citations": [
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections on causation, self, morals and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/hume.webp",
+    "thumbSrc": "/media/thinkers/thumb/hume.webp",
+    "alt": "休谟的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#bc9162",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

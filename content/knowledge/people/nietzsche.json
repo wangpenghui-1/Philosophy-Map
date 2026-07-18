@@ -1,0 +1,114 @@
+{
+  "id": "nietzsche",
+  "slug": "nietzsche",
+  "entityType": "person",
+  "names": {
+    "display": "尼采",
+    "english": "Friedrich Nietzsche",
+    "original": "Friedrich Wilhelm Nietzsche",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1844–1900",
+    "startYear": 1844,
+    "endYear": 1900,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-生命哲学与谱系学"
+  ],
+  "conceptIds": [
+    "concept-谱系",
+    "concept-价值",
+    "concept-视角"
+  ],
+  "questionIds": [
+    "good-life",
+    "self",
+    "knowledge",
+    "freedom"
+  ],
+  "guidingQuestion": "价值从何而来，谁从既有的善恶判断中获益？",
+  "thesis": "价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。",
+  "summary": "尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。 本站以谱系、价值、视角为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "genealogy-morality",
+    "zarathustra"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "basel",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-nietzsche"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-nietzsche",
+      "locator": "Sections on genealogy, values, perspectivism and agency",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。 本站以谱系、价值、视角为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche",
+              "locator": "Sections on genealogy, values, perspectivism and agency",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：价值从何而来，谁从既有的善恶判断中获益？",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche",
+              "locator": "Sections on genealogy, values, perspectivism and agency",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche",
+              "locator": "Sections on genealogy, values, perspectivism and agency",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/nietzsche.webp",
+    "thumbSrc": "/media/thinkers/thumb/nietzsche.webp",
+    "alt": "尼采的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#b8784f",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

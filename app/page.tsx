@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import AtlasApp from "./_components/AtlasApp";
 
 export const metadata: Metadata = {
-  title: "思想星图 · 3D世界哲学样片",
-  description: "从故事模式进入一个以3D地球为主体、关系均带来源的世界哲学探索样片。",
+  title: "思想星图 · 30位哲学家的3D思想地图",
+  description: "从苏格拉底、柏拉图到康德、马克思与福柯，在3D地球上探索30位哲学家及其有来源的思想关系。",
 };
 
 export default function Home() {
   return <AtlasApp initialMode="story" />;
 }
-

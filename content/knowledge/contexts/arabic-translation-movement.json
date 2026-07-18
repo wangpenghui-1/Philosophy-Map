@@ -1,0 +1,34 @@
+{
+  "id": "context-arabic-translation",
+  "slug": "arabic-translation-movement",
+  "entityType": "context",
+  "contextType": "translation-network",
+  "name": "阿拉伯语翻译与注释网络",
+  "chronologyLabel": "约8–11世纪",
+  "summary": "候选语境条目：用于呈现希腊语、叙利亚语与阿拉伯语文本传播，以及阿维森纳等哲学家的主动重构。",
+  "personIds": [
+    "aristotle",
+    "avicenna"
+  ],
+  "placeIds": [],
+  "sourceIds": [
+    "src-aristotle",
+    "src-avicenna"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-aristotle",
+      "locator": "Introduction and Section 2: the human good",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-avicenna",
+      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图编辑组"
+}

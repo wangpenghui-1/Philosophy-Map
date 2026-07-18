@@ -1,0 +1,113 @@
+{
+  "id": "marx",
+  "slug": "marx",
+  "entityType": "person",
+  "names": {
+    "display": "马克思",
+    "english": "Karl Marx",
+    "original": "Karl Heinrich Marx",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1818–1883",
+    "startYear": 1818,
+    "endYear": 1883,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-历史唯物主义"
+  ],
+  "conceptIds": [
+    "concept-资本",
+    "concept-异化",
+    "concept-阶级"
+  ],
+  "questionIds": [
+    "society",
+    "freedom",
+    "self"
+  ],
+  "guidingQuestion": "资本主义生产关系如何塑造劳动、意识与解放的条件？",
+  "thesis": "社会关系不是静止观念，而是在物质生产、阶级冲突和集体实践中形成并改变。",
+  "summary": "马克思是1818–1883活跃于欧洲的历史唯物主义思想人物，主要追问“资本主义生产关系如何塑造劳动、意识与解放的条件？”。其核心主张可概括为：社会关系不是静止观念，而是在物质生产、阶级冲突和集体实践中形成并改变。 本站以资本、异化、阶级为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "capital",
+    "german-ideology"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london-marx",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-marx"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-marx",
+      "locator": "Sections on alienation, history, capital and emancipation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "马克思是1818–1883活跃于欧洲的历史唯物主义思想人物，主要追问“资本主义生产关系如何塑造劳动、意识与解放的条件？”。其核心主张可概括为：社会关系不是静止观念，而是在物质生产、阶级冲突和集体实践中形成并改变。 本站以资本、异化、阶级为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-marx",
+              "locator": "Sections on alienation, history, capital and emancipation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：资本主义生产关系如何塑造劳动、意识与解放的条件？",
+          "citations": [
+            {
+              "sourceId": "src-marx",
+              "locator": "Sections on alienation, history, capital and emancipation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：社会关系不是静止观念，而是在物质生产、阶级冲突和集体实践中形成并改变。",
+          "citations": [
+            {
+              "sourceId": "src-marx",
+              "locator": "Sections on alienation, history, capital and emancipation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/marx.webp",
+    "thumbSrc": "/media/thinkers/thumb/marx.webp",
+    "alt": "马克思的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史照片与肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#b05c51",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

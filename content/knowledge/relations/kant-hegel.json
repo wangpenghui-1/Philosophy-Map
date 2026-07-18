@@ -1,0 +1,37 @@
+{
+  "id": "kant-hegel",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "kant"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "hegel"
+  },
+  "directed": true,
+  "relationType": "critique",
+  "evidenceStatus": "established",
+  "title": "从先验条件到历史制度",
+  "explanation": "黑格尔从康德的自主与理性问题出发，批评抽象二分，并把自由放入承认、历史与制度的展开之中。",
+  "citations": [
+    {
+      "sourceId": "src-kant",
+      "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-hegel",
+      "locator": "Sections on recognition, history, freedom and ethical life",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

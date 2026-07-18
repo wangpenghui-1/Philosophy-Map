@@ -1,0 +1,36 @@
+{
+  "id": "context-plato-academy",
+  "slug": "plato-academy",
+  "entityType": "context",
+  "contextType": "institution",
+  "name": "柏拉图学园",
+  "chronologyLabel": "古典希腊时期",
+  "summary": "候选语境条目：用于连接柏拉图、亚里士多德及古典希腊教育实践，正式发布前需补充原典与现代研究。",
+  "personIds": [
+    "plato",
+    "aristotle"
+  ],
+  "placeIds": [
+    "athens-plato"
+  ],
+  "sourceIds": [
+    "src-plato",
+    "src-aristotle"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-plato",
+      "locator": "Sections 2–4: dialogues, forms, ethics and politics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-aristotle",
+      "locator": "Introduction and Section 2: the human good",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图编辑组"
+}

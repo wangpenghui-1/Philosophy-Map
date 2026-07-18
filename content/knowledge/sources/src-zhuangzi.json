@@ -1,0 +1,18 @@
+{
+  "id": "src-zhuangzi",
+  "entityType": "source",
+  "title": "Zhuangzi",
+  "authors": [],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/archives/sum2025/entries/zhuangzi/",
+  "defaultLocator": "Sections 4.3–4.8: language, perspectives and skepticism",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

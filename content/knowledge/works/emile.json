@@ -1,0 +1,42 @@
+{
+  "id": "emile",
+  "slug": "emile",
+  "entityType": "work",
+  "title": "《爱弥儿》",
+  "originalTitle": "Émile",
+  "authorRefs": [
+    {
+      "personId": "rousseau",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1762",
+  "languages": [],
+  "summary": "《爱弥儿》是卢梭的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-普遍意志",
+    "concept-不平等",
+    "concept-教育"
+  ],
+  "traditionIds": [
+    "tradition-启蒙政治哲学"
+  ],
+  "sourceIds": [
+    "src-rousseau"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-rousseau",
+      "locator": "Sections on inequality, freedom, education and the general will",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

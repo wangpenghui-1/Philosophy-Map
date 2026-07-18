@@ -1,0 +1,22 @@
+{
+  "id": "athens",
+  "slug": "athens",
+  "entityType": "place",
+  "historicalName": "雅典",
+  "historicalRegion": "阿提卡",
+  "coordinates": {
+    "lat": 37.984,
+    "lon": 23.728
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "aristotle"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

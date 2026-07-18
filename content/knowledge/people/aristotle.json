@@ -1,0 +1,114 @@
+{
+  "id": "aristotle",
+  "slug": "aristotle",
+  "entityType": "person",
+  "names": {
+    "display": "亚里士多德",
+    "english": "Aristotle",
+    "original": "Ἀριστοτέλης",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "公元前384–322",
+    "startYear": -384,
+    "endYear": -322,
+    "certainty": "established"
+  },
+  "primaryRegion": "地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-古希腊哲学"
+  ],
+  "conceptIds": [
+    "concept-德性",
+    "concept-实践智慧",
+    "concept-幸福"
+  ],
+  "questionIds": [
+    "good-life",
+    "knowledge",
+    "society",
+    "reality"
+  ],
+  "guidingQuestion": "德性如何在完整的人生与共同体中成为实践？",
+  "thesis": "好生活是德性、判断与行动在完整人生中的持续实践。",
+  "summary": "亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中的持续实践。 本站以德性、实践智慧、幸福为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "nicomachean-ethics",
+    "metaphysics"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "athens",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-aristotle"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-aristotle",
+      "locator": "Introduction and Section 2: the human good",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中的持续实践。 本站以德性、实践智慧、幸福为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-aristotle",
+              "locator": "Introduction and Section 2: the human good",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：德性如何在完整的人生与共同体中成为实践？",
+          "citations": [
+            {
+              "sourceId": "src-aristotle",
+              "locator": "Introduction and Section 2: the human good",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：好生活是德性、判断与行动在完整人生中的持续实践。",
+          "citations": [
+            {
+              "sourceId": "src-aristotle",
+              "locator": "Introduction and Section 2: the human good",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/aristotle.webp",
+    "thumbSrc": "/media/thinkers/thumb/aristotle.webp",
+    "alt": "亚里士多德的艺术化人物形象",
+    "objectPosition": "50% 20%",
+    "depictionNote": "艺术化人物形象，参考后世传统形象而非历史照片。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#c3a15f",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

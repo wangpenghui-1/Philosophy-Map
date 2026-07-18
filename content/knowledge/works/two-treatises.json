@@ -1,0 +1,42 @@
+{
+  "id": "two-treatises",
+  "slug": "two-treatises",
+  "entityType": "work",
+  "title": "《政府论》",
+  "originalTitle": "Two Treatises of Government",
+  "authorRefs": [
+    {
+      "personId": "locke",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1689",
+  "languages": [],
+  "summary": "《政府论》是洛克的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-经验",
+    "concept-人格同一",
+    "concept-权利"
+  ],
+  "traditionIds": [
+    "tradition-英国经验主义"
+  ],
+  "sourceIds": [
+    "src-locke"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-locke",
+      "locator": "Sections on ideas, personal identity and political authority",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

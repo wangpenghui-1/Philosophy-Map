@@ -1,0 +1,114 @@
+{
+  "id": "foucault",
+  "slug": "foucault",
+  "entityType": "person",
+  "names": {
+    "display": "福柯",
+    "english": "Michel Foucault",
+    "original": "Paul-Michel Foucault",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1926–1984",
+    "startYear": 1926,
+    "endYear": 1984,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-谱系学与权力分析"
+  ],
+  "conceptIds": [
+    "concept-权力",
+    "concept-规训",
+    "concept-主体化"
+  ],
+  "questionIds": [
+    "freedom",
+    "self",
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "知识、制度与日常规范如何共同制造可被治理的主体？",
+  "thesis": "权力并非只从中心压下，也通过分类、训练与自我实践在局部关系中运行。",
+  "summary": "福柯是1926–1984活跃于欧洲的谱系学与权力分析思想人物，主要追问“知识、制度与日常规范如何共同制造可被治理的主体？”。其核心主张可概括为：权力并非只从中心压下，也通过分类、训练与自我实践在局部关系中运行。 本站以权力、规训、主体化为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "discipline-punish",
+    "history-sexuality"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris-foucault",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-foucault"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-foucault",
+      "locator": "Sections on archaeology, genealogy, power and subjectivation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "福柯是1926–1984活跃于欧洲的谱系学与权力分析思想人物，主要追问“知识、制度与日常规范如何共同制造可被治理的主体？”。其核心主张可概括为：权力并非只从中心压下，也通过分类、训练与自我实践在局部关系中运行。 本站以权力、规训、主体化为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-foucault",
+              "locator": "Sections on archaeology, genealogy, power and subjectivation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：知识、制度与日常规范如何共同制造可被治理的主体？",
+          "citations": [
+            {
+              "sourceId": "src-foucault",
+              "locator": "Sections on archaeology, genealogy, power and subjectivation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：权力并非只从中心压下，也通过分类、训练与自我实践在局部关系中运行。",
+          "citations": [
+            {
+              "sourceId": "src-foucault",
+              "locator": "Sections on archaeology, genealogy, power and subjectivation",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/foucault.webp",
+    "thumbSrc": "/media/thinkers/thumb/foucault.webp",
+    "alt": "福柯的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#9a7065",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

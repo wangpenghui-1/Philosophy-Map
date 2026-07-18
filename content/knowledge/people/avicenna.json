@@ -1,0 +1,117 @@
+{
+  "id": "avicenna",
+  "slug": "avicenna",
+  "entityType": "person",
+  "names": {
+    "display": "阿维森纳",
+    "english": "Avicenna / Ibn Sīnā",
+    "original": "ابن سينا",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "980–1037",
+    "startYear": 980,
+    "endYear": 1037,
+    "certainty": "established"
+  },
+  "primaryRegion": "伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-阿拉伯语哲学"
+  ],
+  "conceptIds": [
+    "concept-存在",
+    "concept-本质",
+    "concept-灵魂"
+  ],
+  "questionIds": [
+    "reality",
+    "knowledge",
+    "self"
+  ],
+  "guidingQuestion": "理性如何说明存在、灵魂与必然性？",
+  "thesis": "在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。",
+  "summary": "阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。 本站以存在、本质、灵魂为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "healing",
+    "salvation"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "bukhara",
+      "role": "activity"
+    },
+    {
+      "placeId": "hamadan",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-avicenna"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-avicenna",
+      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。 本站以存在、本质、灵魂为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-avicenna",
+              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：理性如何说明存在、灵魂与必然性？",
+          "citations": [
+            {
+              "sourceId": "src-avicenna",
+              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。",
+          "citations": [
+            {
+              "sourceId": "src-avicenna",
+              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/avicenna.webp",
+    "thumbSrc": "/media/thinkers/thumb/avicenna.webp",
+    "alt": "阿维森纳的艺术化人物形象",
+    "objectPosition": "50% 22%",
+    "depictionNote": "艺术化人物形象，参考后世传统形象而非历史照片。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#5f9f9a",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

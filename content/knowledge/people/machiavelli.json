@@ -1,0 +1,113 @@
+{
+  "id": "machiavelli",
+  "slug": "machiavelli",
+  "entityType": "person",
+  "names": {
+    "display": "马基雅维利",
+    "english": "Niccolò Machiavelli",
+    "original": "Niccolò di Bernardo dei Machiavelli",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1469–1527",
+    "startYear": 1469,
+    "endYear": 1527,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-文艺复兴政治思想"
+  ],
+  "conceptIds": [
+    "concept-权力",
+    "concept-共和",
+    "concept-命运"
+  ],
+  "questionIds": [
+    "society",
+    "freedom",
+    "good-life"
+  ],
+  "guidingQuestion": "政治秩序如何在冲突、偶然与权力斗争中维持？",
+  "thesis": "政治判断必须面对现实力量、制度冲突与运气，而不能只诉诸私人德性。",
+  "summary": "马基雅维利是1469–1527活跃于欧洲的文艺复兴政治思想思想人物，主要追问“政治秩序如何在冲突、偶然与权力斗争中维持？”。其核心主张可概括为：政治判断必须面对现实力量、制度冲突与运气，而不能只诉诸私人德性。 本站以权力、共和、命运为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "the-prince",
+    "discourses-livy"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "florence",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-machiavelli"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-machiavelli",
+      "locator": "Sections 2–5: power, liberty and republican conflict",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "马基雅维利是1469–1527活跃于欧洲的文艺复兴政治思想思想人物，主要追问“政治秩序如何在冲突、偶然与权力斗争中维持？”。其核心主张可概括为：政治判断必须面对现实力量、制度冲突与运气，而不能只诉诸私人德性。 本站以权力、共和、命运为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-machiavelli",
+              "locator": "Sections 2–5: power, liberty and republican conflict",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：政治秩序如何在冲突、偶然与权力斗争中维持？",
+          "citations": [
+            {
+              "sourceId": "src-machiavelli",
+              "locator": "Sections 2–5: power, liberty and republican conflict",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：政治判断必须面对现实力量、制度冲突与运气，而不能只诉诸私人德性。",
+          "citations": [
+            {
+              "sourceId": "src-machiavelli",
+              "locator": "Sections 2–5: power, liberty and republican conflict",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/machiavelli.webp",
+    "thumbSrc": "/media/thinkers/thumb/machiavelli.webp",
+    "alt": "马基雅维利的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#ad7555",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

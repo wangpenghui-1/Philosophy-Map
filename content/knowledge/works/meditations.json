@@ -1,0 +1,42 @@
+{
+  "id": "meditations",
+  "slug": "meditations",
+  "entityType": "work",
+  "title": "《第一哲学沉思集》",
+  "originalTitle": "Meditationes de prima philosophia",
+  "authorRefs": [
+    {
+      "personId": "descartes",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1641",
+  "languages": [],
+  "summary": "《第一哲学沉思集》是笛卡尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-怀疑",
+    "concept-我思",
+    "concept-心物二元"
+  ],
+  "traditionIds": [
+    "tradition-近代理性主义"
+  ],
+  "sourceIds": [
+    "src-descartes"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-descartes",
+      "locator": "Sections on methodic doubt, mind and knowledge",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

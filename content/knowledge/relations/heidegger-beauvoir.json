@@ -1,0 +1,37 @@
+{
+  "id": "heidegger-beauvoir",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "heidegger"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "beauvoir"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "有限存在与处境自由",
+  "explanation": "波伏娃通过存在主义语境吸收在世存在与有限性的论题，并以处境、身体和相互自由把它重新定向。",
+  "citations": [
+    {
+      "sourceId": "src-heidegger",
+      "locator": "Sections on being-in-the-world, temporality and technology",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-beauvoir",
+      "locator": "Sections on ambiguity, situated freedom and becoming woman",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

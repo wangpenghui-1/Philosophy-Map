@@ -11,6 +11,8 @@
     "content:edit": "node scripts/automated-editor.mjs --write",
     "content:edit:check": "node scripts/automated-editor.mjs",
     "content:enrich-sources": "node scripts/enrich-source-metadata.mjs",
+    "content:batch:prepare": "node scripts/prepare-content-batch.mjs --batch 1 --write",
+    "content:batch:check": "node scripts/prepare-content-batch.mjs --batch 1",
     "predev": "npm run content:build",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "prebuild": "npm run content:build",

@@ -1,0 +1,37 @@
+{
+  "id": "husserl-heidegger",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "husserl"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "heidegger"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "现象学转向存在问题",
+  "explanation": "海德格尔在胡塞尔的现象学训练中成长，又把意向性描述转向在世存在、时间性与存在之问。",
+  "citations": [
+    {
+      "sourceId": "src-husserl",
+      "locator": "Sections on intentionality, epoché and the lifeworld",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-heidegger",
+      "locator": "Sections on being-in-the-world, temporality and technology",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

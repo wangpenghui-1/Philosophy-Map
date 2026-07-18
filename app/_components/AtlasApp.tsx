@@ -5,6 +5,8 @@ import Link from "next/link";
 import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "motion/react";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
+  atlasTimelineEndYear,
+  atlasTimelineStartYear,
   evidenceLabels,
   questions,
   relationById,
@@ -20,6 +22,7 @@ import {
   type QuestionId,
 } from "../_data/atlas";
 import { useAtlasStore, type AtlasMode, type QualityTier } from "../_state/atlas-store";
+import type { EarthLightingMode } from "./GlobeCanvas";
 import ThinkerPortrait from "./ThinkerPortrait";
 
 const GlobeCanvas = dynamic(() => import("./GlobeCanvas"), {
@@ -63,6 +66,37 @@ function QualityBadge({ quality, onChange }: { quality: QualityTier; onChange: (
       <span className="quality-badge__dot" />
       {labels[quality]}
     </button>
+  );
+}
+
+function EarthModeSwitch({
+  mode,
+  onChange,
+}: {
+  mode: EarthLightingMode;
+  onChange: (mode: EarthLightingMode) => void;
+}) {
+  return (
+    <div className="earth-mode-switch" role="group" aria-label="地球光照模式">
+      <button
+        type="button"
+        className={mode === "day" ? "is-active" : ""}
+        aria-pressed={mode === "day"}
+        onClick={() => onChange("day")}
+      >
+        <i className="earth-mode-switch__sun" aria-hidden="true" />
+        白昼
+      </button>
+      <button
+        type="button"
+        className={mode === "night" ? "is-active" : ""}
+        aria-pressed={mode === "night"}
+        onClick={() => onChange("night")}
+      >
+        <i className="earth-mode-switch__moon" aria-hidden="true" />
+        夜幕
+      </button>
+    </div>
   );
 }
 
@@ -248,7 +282,7 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
         >
           {compareIds.includes(thinker.id) ? "已加入比较" : "加入比较"}
         </button>
-        <Link href={`/thinker/${thinker.slug}`}>人物独立链接</Link>
+        <Link href={`/thinker/${thinker.slug}`}>深入阅读</Link>
       </div>
     </motion.article>
   );
@@ -322,13 +356,13 @@ function CompareDetail({ ids }: { ids: string[] }) {
 function EmptyDetail({ onSelectRelation }: { onSelectRelation: (id: string) => void }) {
   return (
     <article className="detail-card detail-card--empty">
-      <div className="detail-card__index">样片说明 · 8个节点</div>
+      <div className="detail-card__index">扩展版 · {thinkers.length}个节点</div>
       <h2>把注意力放在连接上</h2>
       <p>点击人物，查看问题、主张和文本；点击关系线，查看它为什么存在。灰白虚线只表示主题共鸣。</p>
       <div className="sample-stats">
-        <div><strong>08</strong><span>人物节点</span></div>
-        <div><strong>03</strong><span>示范关系</span></div>
-        <div><strong>09</strong><span>权威来源</span></div>
+        <div><strong>{String(thinkers.length).padStart(2, "0")}</strong><span>人物节点</span></div>
+        <div><strong>{String(relations.length).padStart(2, "0")}</strong><span>证据关系</span></div>
+        <div><strong>{String(sourceById.size).padStart(2, "0")}</strong><span>权威来源</span></div>
       </div>
       <div className="related-links">
         {relations.map((relation) => (
@@ -349,7 +383,7 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
   const previousFocusRef = useRef<HTMLElement | null>(null);
   const results = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    if (!normalized) return thinkers;
+    if (!normalized) return [];
     const workOwnerIds = works
       .filter((work) => `${work.title} ${work.originalTitle ?? ""}`.toLowerCase().includes(normalized))
       .map((work) => work.thinkerId);
@@ -357,7 +391,7 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
       `${thinker.name} ${thinker.englishName} ${thinker.originalName ?? ""} ${thinker.keywords.join(" ")}`
         .toLowerCase()
         .includes(normalized) || workOwnerIds.includes(thinker.id),
-    );
+    ).slice(0, 20);
   }, [query]);
 
   const close = () => {
@@ -442,8 +476,9 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
                   <span><strong>{thinker.name}</strong><small>{thinker.englishName} · {thinker.period}</small></span>
                   <i>定位</i>
                 </button>
-              )) : <p>没有找到匹配节点。</p>}
+              )) : <p>{query.trim() ? "没有找到匹配节点。" : "输入人物、别名、著作或概念开始搜索。"}</p>}
             </div>
+            <Link className="search-dialog__knowledge" href={`/knowledge${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`}>在完整知识库中浏览与筛选 →</Link>
           </motion.section>
         </motion.div>
       ) : null}
@@ -494,7 +529,7 @@ function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose:
           </div>
           <p className="semantic-panel__intro">这里提供与3D地球同源的完整人物和关系入口，适用于键盘、读屏器或低性能设备。</p>
           <div className="semantic-panel__grid">
-            {thinkers.map((thinker) => (
+            {thinkers.slice(0, 24).map((thinker) => (
               <article key={thinker.id}>
                 <ThinkerPortrait thinker={thinker} variant="thumb" showNote />
                 <small>{thinker.region} · {thinker.period}</small>
@@ -505,6 +540,7 @@ function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose:
               </article>
             ))}
           </div>
+          <Link className="semantic-panel__knowledge" href="/knowledge">进入完整、可分页的世界哲学知识库 →</Link>
           <section className="semantic-relations">
             <h2>关系及其证据</h2>
             {relations.map((relation) => (
@@ -563,13 +599,13 @@ function BottomDock({ mode }: { mode: AtlasMode }) {
       <input
         aria-label="历史时间轴"
         type="range"
-        min={-600}
-        max={1961}
+        min={atlasTimelineStartYear}
+        max={atlasTimelineEndYear}
         step={1}
         value={timelineYear}
         onChange={(event) => setTimelineYear(Number(event.target.value))}
       />
-      <div className="timeline-scale" aria-hidden="true"><span>前600</span><span>0</span><span>1000</span><span>1961</span></div>
+      <div className="timeline-scale" aria-hidden="true"><span>前600</span><span>0</span><span>1000</span><span>{atlasTimelineEndYear}</span></div>
       <div className="compare-status">
         <small>人物比较</small>
         {compareThinkers.length ? <span>{compareThinkers.map((item) => item?.name).join(" × ")}</span> : <span>从人物档案加入</span>}
@@ -585,6 +621,7 @@ export default function AtlasApp({
   initialCompareSlugs,
 }: AtlasAppProps) {
   const reduceMotion = Boolean(useReducedMotion());
+  const [earthMode, setEarthMode] = useState<EarthLightingMode>("night");
   const mode = useAtlasStore((state) => state.mode);
   const isPlaying = useAtlasStore((state) => state.isPlaying);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
@@ -654,7 +691,7 @@ export default function AtlasApp({
     const year = yearParam === null ? Number.NaN : Number(yearParam);
     if (question && questions.some((item) => item.id === question)) setQuestion(question);
     if (relation && relationById.has(relation)) selectRelation(relation);
-    if (Number.isFinite(year) && year >= -600 && year <= 1961) setTimelineYear(year);
+    if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
   }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuestion, setTimelineYear, toggleCompare]);
 
   useEffect(() => {
@@ -668,6 +705,13 @@ export default function AtlasApp({
     else if (window.innerWidth <= 1180 || cores <= 8) setQuality("medium");
     else setQuality("high");
   }, [setQuality]);
+
+  useEffect(() => {
+    const stored = window.sessionStorage.getItem("atlas-earth-mode");
+    if (stored !== "day" && stored !== "night") return;
+    const timeout = window.setTimeout(() => setEarthMode(stored), 0);
+    return () => window.clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     if (!initialized || mode !== "story" || !isPlaying) return;
@@ -719,14 +763,29 @@ export default function AtlasApp({
     setQuality(nextQuality);
   };
 
+  const chooseEarthMode = (nextMode: EarthLightingMode) => {
+    window.sessionStorage.setItem("atlas-earth-mode", nextMode);
+    setEarthMode(nextMode);
+  };
+
   const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);
 
   const handleSelectThinker = useCallback((id: string | null) => {
     selectThinker(id);
-    if (!id) return;
+    const url = new URL(window.location.href);
+    url.pathname = "/explore";
+    if (!id) {
+      url.searchParams.delete("thinker");
+      window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+      return;
+    }
     const thinker = thinkerById.get(id);
-    if (thinker) window.history.replaceState({}, "", `/thinker/${thinker.slug}`);
-  }, [selectThinker]);
+    if (thinker) {
+      url.searchParams.set("thinker", thinker.slug);
+      url.searchParams.set("year", String(timelineYear));
+      window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+    }
+  }, [selectThinker, timelineYear]);
 
   const handleSelectRelation = useCallback((id: string | null) => {
     selectRelation(id);
@@ -769,6 +828,7 @@ export default function AtlasApp({
               <span>搜索</span><kbd>/</kbd>
             </button>
             <button className="text-view-button" type="button" aria-label="打开文字探索" onClick={() => setListViewOpen(true)}>文字探索</button>
+            <Link className="knowledge-button" href="/knowledge">知识库</Link>
             <div className="mode-switch" aria-label="浏览模式">
               <button type="button" className={displayMode === "story" ? "is-active" : ""} onClick={() => changeMode("story")}>故事</button>
               <button type="button" className={displayMode === "explore" ? "is-active" : ""} onClick={() => changeMode("explore")}>探索</button>
@@ -779,12 +839,13 @@ export default function AtlasApp({
         <main id="atlas-content" className="atlas-main">
           <section className="globe-stage" aria-label="思想星图3D地球">
             <div className="globe-stage__topline">
-              <span>VERTICAL SLICE · 08 NODES</span>
-              <span>WEBGL2 · EVIDENCE LED</span>
+              <span>EXPANDED ATLAS · {String(thinkers.length).padStart(2, "0")} NODES</span>
+              <span>WEBGL2 · {earthMode === "day" ? "DAYLIGHT" : "NIGHT LIGHTS"}</span>
             </div>
             <div className="globe-canvas-wrap">
               <GlobeCanvas
                 mode={displayMode}
+                earthMode={earthMode}
                 isPlaying={isPlaying}
                 chapterIndex={displayChapterIndex}
                 selectedThinkerId={displaySelectedThinkerId}
@@ -800,6 +861,7 @@ export default function AtlasApp({
             </div>
             <div className="globe-vignette" aria-hidden="true" />
             <QualityBadge quality={quality} onChange={chooseQuality} />
+            <EarthModeSwitch mode={earthMode} onChange={chooseEarthMode} />
             {displayMode === "story" ? <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} /> : (
               <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />
             )}

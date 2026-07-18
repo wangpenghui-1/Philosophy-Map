@@ -1,0 +1,37 @@
+{
+  "id": "rousseau-wollstonecraft",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "rousseau"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "wollstonecraft"
+  },
+  "directed": true,
+  "relationType": "critique",
+  "evidenceStatus": "established",
+  "title": "谁被允许接受理性教育",
+  "explanation": "沃斯通克拉夫特明确批评卢梭对女性教育与性别角色的安排，把启蒙的普遍理性要求推向性别平等。",
+  "citations": [
+    {
+      "sourceId": "src-rousseau",
+      "locator": "Sections on inequality, freedom, education and the general will",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-wollstonecraft",
+      "locator": "Sections on education, rights and her critique of Rousseau",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "song",
+  "slug": "song",
+  "entityType": "place",
+  "historicalName": "宋地",
+  "historicalRegion": "战国宋国",
+  "coordinates": {
+    "lat": 34.45,
+    "lon": 115.65
+  },
+  "certainty": "approximate",
+  "note": "具体活动地点只能近似表示。",
+  "relatedPersonIds": [
+    "zhuangzi"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

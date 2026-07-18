@@ -1,0 +1,38 @@
+{
+  "id": "wollstonecraft-beauvoir",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "wollstonecraft"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "beauvoir"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "性别不是自然命运",
+  "explanation": "两人都把女性的从属处境追溯到教育、制度与社会塑造；这是女性主义思想史中的主题延续，不声称单一直接传播路径。",
+  "note": "传统谱系与主题比较，不代表直接影响。",
+  "citations": [
+    {
+      "sourceId": "src-wollstonecraft",
+      "locator": "Sections on education, rights and her critique of Rousseau",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-beauvoir",
+      "locator": "Sections on ambiguity, situated freedom and becoming woman",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "discourses-livy",
+  "slug": "discourses-livy",
+  "entityType": "work",
+  "title": "《论李维》",
+  "originalTitle": "Discorsi sopra Livio",
+  "authorRefs": [
+    {
+      "personId": "machiavelli",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "约1517",
+  "languages": [],
+  "summary": "《论李维》是马基雅维利的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-权力",
+    "concept-共和",
+    "concept-命运"
+  ],
+  "traditionIds": [
+    "tradition-文艺复兴政治思想"
+  ],
+  "sourceIds": [
+    "src-machiavelli"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-machiavelli",
+      "locator": "Sections 2–5: power, liberty and republican conflict",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

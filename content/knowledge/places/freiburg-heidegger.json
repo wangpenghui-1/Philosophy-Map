@@ -1,0 +1,22 @@
+{
+  "id": "freiburg-heidegger",
+  "slug": "freiburg-heidegger",
+  "entityType": "place",
+  "historicalName": "弗赖堡",
+  "historicalRegion": "德国",
+  "coordinates": {
+    "lat": 48.01,
+    "lon": 7.85
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "heidegger"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

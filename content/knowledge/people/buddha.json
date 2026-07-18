@@ -1,0 +1,114 @@
+{
+  "id": "buddha",
+  "slug": "buddha",
+  "entityType": "person",
+  "names": {
+    "display": "佛陀",
+    "english": "Gautama Buddha",
+    "original": "Siddhārtha Gautama",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前5世纪",
+    "startYear": -480,
+    "endYear": -400,
+    "certainty": "approximate",
+    "note": "现代研究对其确切生卒年代仍有不同估计。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-早期佛教"
+  ],
+  "conceptIds": [
+    "concept-苦",
+    "concept-无我",
+    "concept-解脱"
+  ],
+  "questionIds": [
+    "good-life",
+    "self",
+    "knowledge"
+  ],
+  "guidingQuestion": "痛苦从何而来，又如何可能止息？",
+  "thesis": "苦有其成因，也可以通过训练、洞见与实践止息。",
+  "summary": "佛陀是约公元前5世纪活跃于南亚的早期佛教思想人物，主要追问“痛苦从何而来，又如何可能止息？”。其核心主张可概括为：苦有其成因，也可以通过训练、洞见与实践止息。 本站以苦、无我、解脱为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "nikayas"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "bodh-gaya",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-buddha"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-buddha",
+      "locator": "Section 2: Core Teachings",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "佛陀是约公元前5世纪活跃于南亚的早期佛教思想人物，主要追问“痛苦从何而来，又如何可能止息？”。其核心主张可概括为：苦有其成因，也可以通过训练、洞见与实践止息。 本站以苦、无我、解脱为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-buddha",
+              "locator": "Section 2: Core Teachings",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：痛苦从何而来，又如何可能止息？",
+          "citations": [
+            {
+              "sourceId": "src-buddha",
+              "locator": "Section 2: Core Teachings",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：苦有其成因，也可以通过训练、洞见与实践止息。",
+          "citations": [
+            {
+              "sourceId": "src-buddha",
+              "locator": "Section 2: Core Teachings",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/buddha.webp",
+    "thumbSrc": "/media/thinkers/thumb/buddha.webp",
+    "alt": "佛陀的艺术化人物形象",
+    "objectPosition": "50% 30%",
+    "depictionNote": "艺术化人物形象，不代表可考的历史肖像。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "uncertainty": "现代研究对其确切生卒年代仍有不同估计。",
+  "color": "#c18b5f",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

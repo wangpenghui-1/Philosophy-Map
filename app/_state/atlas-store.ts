@@ -1,7 +1,7 @@
 "use client";
 
 import { create } from "zustand";
-import type { QuestionId } from "../_data/atlas";
+import { atlasTimelineEndYear, type QuestionId } from "../_data/atlas";
 
 export type AtlasMode = "story" | "explore";
 export type QualityTier = "high" | "medium" | "low";
@@ -39,7 +39,7 @@ export const useAtlasStore = create<AtlasState>((set) => ({
   selectedThinkerId: null,
   selectedRelationId: null,
   activeQuestionId: null,
-  timelineYear: 1961,
+  timelineYear: atlasTimelineEndYear,
   listViewOpen: false,
   searchOpen: false,
   quality: "high",

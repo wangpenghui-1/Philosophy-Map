@@ -1,0 +1,42 @@
+{
+  "id": "ethics-ambiguity",
+  "slug": "ethics-ambiguity",
+  "entityType": "work",
+  "title": "《模棱两可的伦理学》",
+  "originalTitle": "Pour une morale de l’ambiguïté",
+  "authorRefs": [
+    {
+      "personId": "beauvoir",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1947",
+  "languages": [],
+  "summary": "《模棱两可的伦理学》是波伏娃的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-处境",
+    "concept-他者",
+    "concept-成为"
+  ],
+  "traditionIds": [
+    "tradition-存在主义女性主义"
+  ],
+  "sourceIds": [
+    "src-beauvoir"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-beauvoir",
+      "locator": "Sections on ambiguity, situated freedom and becoming woman",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

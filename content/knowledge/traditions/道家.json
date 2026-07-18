@@ -1,0 +1,39 @@
+{
+  "id": "tradition-道家",
+  "slug": "道家",
+  "entityType": "tradition",
+  "name": "道家",
+  "originalNames": [],
+  "summary": "道家是本知识库用于组织人物、文本与概念的一项思想传统索引。它不把传统理解为封闭或同质的体系，而用于呈现内部差异、历史传播与跨传统接触。",
+  "periodLabel": "跨历史时期",
+  "regionLabels": [
+    "东亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "zhuangzi"
+  ],
+  "conceptIds": [
+    "concept-道",
+    "concept-逍遥",
+    "concept-齐物"
+  ],
+  "sourceIds": [
+    "src-zhuangzi"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-zhuangzi",
+      "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

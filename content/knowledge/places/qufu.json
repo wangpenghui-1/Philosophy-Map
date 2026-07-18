@@ -1,0 +1,22 @@
+{
+  "id": "qufu",
+  "slug": "qufu",
+  "entityType": "place",
+  "historicalName": "曲阜",
+  "historicalRegion": "鲁",
+  "coordinates": {
+    "lat": 35.596,
+    "lon": 116.991
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "confucius"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

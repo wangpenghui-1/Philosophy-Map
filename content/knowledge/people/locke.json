@@ -1,0 +1,114 @@
+{
+  "id": "locke",
+  "slug": "locke",
+  "entityType": "person",
+  "names": {
+    "display": "洛克",
+    "english": "John Locke",
+    "original": "John Locke",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1632–1704",
+    "startYear": 1632,
+    "endYear": 1704,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-英国经验主义"
+  ],
+  "conceptIds": [
+    "concept-经验",
+    "concept-人格同一",
+    "concept-权利"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "经验如何形成观念，政治权力又从何处获得正当性？",
+  "thesis": "心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。",
+  "summary": "洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。 本站以经验、人格同一、权利为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "essay-understanding",
+    "two-treatises"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london-locke",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-locke"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-locke",
+      "locator": "Sections on ideas, personal identity and political authority",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。 本站以经验、人格同一、权利为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-locke",
+              "locator": "Sections on ideas, personal identity and political authority",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经验如何形成观念，政治权力又从何处获得正当性？",
+          "citations": [
+            {
+              "sourceId": "src-locke",
+              "locator": "Sections on ideas, personal identity and political authority",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。",
+          "citations": [
+            {
+              "sourceId": "src-locke",
+              "locator": "Sections on ideas, personal identity and political authority",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/locke.webp",
+    "thumbSrc": "/media/thinkers/thumb/locke.webp",
+    "alt": "洛克的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#7d91b0",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "bodh-gaya",
+  "slug": "bodh-gaya",
+  "entityType": "place",
+  "historicalName": "菩提伽耶",
+  "historicalRegion": "摩揭陀地区",
+  "coordinates": {
+    "lat": 24.696,
+    "lon": 84.991
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "buddha"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

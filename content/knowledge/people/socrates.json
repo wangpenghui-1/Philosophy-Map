@@ -1,0 +1,114 @@
+{
+  "id": "socrates",
+  "slug": "socrates",
+  "entityType": "person",
+  "names": {
+    "display": "苏格拉底",
+    "english": "Socrates",
+    "original": "Σωκράτης",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前470–399",
+    "startYear": -470,
+    "endYear": -399,
+    "certainty": "approximate",
+    "note": "苏格拉底没有留下著作，其思想主要通过柏拉图、色诺芬等人的文本重建。"
+  },
+  "primaryRegion": "地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-古希腊哲学"
+  ],
+  "conceptIds": [
+    "concept-诘问",
+    "concept-无知",
+    "concept-德性"
+  ],
+  "questionIds": [
+    "knowledge",
+    "good-life",
+    "society"
+  ],
+  "guidingQuestion": "未经反省的生活为何不值得过？",
+  "thesis": "承认无知并持续追问，是照料灵魂和检验公共意见的起点。",
+  "summary": "苏格拉底是约公元前470–399活跃于地中海的古希腊哲学思想人物，主要追问“未经反省的生活为何不值得过？”。其核心主张可概括为：承认无知并持续追问，是照料灵魂和检验公共意见的起点。 本站以诘问、无知、德性为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "apology"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "athens-socrates",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-socrates"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-socrates",
+      "locator": "Sections 1–3: the historical problem, method and ethics",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "苏格拉底是约公元前470–399活跃于地中海的古希腊哲学思想人物，主要追问“未经反省的生活为何不值得过？”。其核心主张可概括为：承认无知并持续追问，是照料灵魂和检验公共意见的起点。 本站以诘问、无知、德性为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-socrates",
+              "locator": "Sections 1–3: the historical problem, method and ethics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：未经反省的生活为何不值得过？",
+          "citations": [
+            {
+              "sourceId": "src-socrates",
+              "locator": "Sections 1–3: the historical problem, method and ethics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：承认无知并持续追问，是照料灵魂和检验公共意见的起点。",
+          "citations": [
+            {
+              "sourceId": "src-socrates",
+              "locator": "Sections 1–3: the historical problem, method and ethics",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/socrates.webp",
+    "thumbSrc": "/media/thinkers/thumb/socrates.webp",
+    "alt": "苏格拉底的艺术化人物形象",
+    "objectPosition": "50% 20%",
+    "depictionNote": "艺术化人物形象，参考古代雕像传统而非可考的历史肖像。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "uncertainty": "苏格拉底没有留下著作，其思想主要通过柏拉图、色诺芬等人的文本重建。",
+  "color": "#c6a565",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

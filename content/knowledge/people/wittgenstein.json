@@ -1,0 +1,113 @@
+{
+  "id": "wittgenstein",
+  "slug": "wittgenstein",
+  "entityType": "person",
+  "names": {
+    "display": "维特根斯坦",
+    "english": "Ludwig Wittgenstein",
+    "original": "Ludwig Josef Johann Wittgenstein",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1889–1951",
+    "startYear": 1889,
+    "endYear": 1951,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "conceptIds": [
+    "concept-语言游戏",
+    "concept-意义",
+    "concept-生活形式"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "reality"
+  ],
+  "guidingQuestion": "哲学困惑是否来自语言脱离了实际使用？",
+  "thesis": "意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。",
+  "summary": "维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。 本站以语言游戏、意义、生活形式为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "tractatus",
+    "philosophical-investigations"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "cambridge",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-wittgenstein"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Sections on the picture theory, language-games and forms of life",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。 本站以语言游戏、意义、生活形式为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Sections on the picture theory, language-games and forms of life",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：哲学困惑是否来自语言脱离了实际使用？",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Sections on the picture theory, language-games and forms of life",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Sections on the picture theory, language-games and forms of life",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/wittgenstein.webp",
+    "thumbSrc": "/media/thinkers/thumb/wittgenstein.webp",
+    "alt": "维特根斯坦的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#6c91a0",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "london-locke",
+  "slug": "london-locke",
+  "entityType": "place",
+  "historicalName": "伦敦",
+  "historicalRegion": "英格兰王国",
+  "coordinates": {
+    "lat": 51.515,
+    "lon": -0.1
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "locke"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

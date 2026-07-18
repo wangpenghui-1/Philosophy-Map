@@ -1,0 +1,38 @@
+{
+  "id": "arendt-foucault",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "arendt"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "foucault"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "权力是关系还是共同能力",
+  "explanation": "阿伦特把权力理解为共同行动的能力，福柯则分析分散的权力关系；并置两者可显示现代权力概念的分歧，不主张直接影响。",
+  "note": "概念对照，不代表历史传播。",
+  "citations": [
+    {
+      "sourceId": "src-arendt",
+      "locator": "Sections on action, plurality, totalitarianism and judgment",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-foucault",
+      "locator": "Sections on archaeology, genealogy, power and subjectivation",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

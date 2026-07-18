@@ -1,0 +1,113 @@
+{
+  "id": "descartes",
+  "slug": "descartes",
+  "entityType": "person",
+  "names": {
+    "display": "笛卡尔",
+    "english": "René Descartes",
+    "original": "René Descartes",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1596–1650",
+    "startYear": 1596,
+    "endYear": 1650,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-近代理性主义"
+  ],
+  "conceptIds": [
+    "concept-怀疑",
+    "concept-我思",
+    "concept-心物二元"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "reality"
+  ],
+  "guidingQuestion": "当一切都可以怀疑时，知识从何处重新开始？",
+  "thesis": "方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。",
+  "summary": "笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。 本站以怀疑、我思、心物二元为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "meditations",
+    "discourse-method"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "amsterdam-descartes",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-descartes"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-descartes",
+      "locator": "Sections on methodic doubt, mind and knowledge",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。 本站以怀疑、我思、心物二元为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-descartes",
+              "locator": "Sections on methodic doubt, mind and knowledge",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：当一切都可以怀疑时，知识从何处重新开始？",
+          "citations": [
+            {
+              "sourceId": "src-descartes",
+              "locator": "Sections on methodic doubt, mind and knowledge",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。",
+          "citations": [
+            {
+              "sourceId": "src-descartes",
+              "locator": "Sections on methodic doubt, mind and knowledge",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/descartes.webp",
+    "thumbSrc": "/media/thinkers/thumb/descartes.webp",
+    "alt": "笛卡尔的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#6f8eac",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

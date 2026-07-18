@@ -1,0 +1,23 @@
+{
+  "id": "deccan",
+  "slug": "deccan",
+  "entityType": "place",
+  "historicalName": "德干地区",
+  "historicalRegion": "南印度（约）",
+  "coordinates": {
+    "lat": 17.4,
+    "lon": 78.5
+  },
+  "certainty": "disputed",
+  "note": "生平资料稀少，地点仅作为区域性锚点。",
+  "relatedPersonIds": [
+    "nagarjuna"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

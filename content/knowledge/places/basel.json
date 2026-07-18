@@ -1,0 +1,22 @@
+{
+  "id": "basel",
+  "slug": "basel",
+  "entityType": "place",
+  "historicalName": "巴塞尔",
+  "historicalRegion": "瑞士联邦",
+  "coordinates": {
+    "lat": 47.56,
+    "lon": 7.588
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "nietzsche"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

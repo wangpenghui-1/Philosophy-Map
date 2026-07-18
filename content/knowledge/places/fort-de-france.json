@@ -1,0 +1,22 @@
+{
+  "id": "fort-de-france",
+  "slug": "fort-de-france",
+  "entityType": "place",
+  "historicalName": "法兰西堡",
+  "historicalRegion": "马提尼克",
+  "coordinates": {
+    "lat": 14.617,
+    "lon": -61.058
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "fanon"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

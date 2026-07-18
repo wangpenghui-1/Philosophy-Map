@@ -1,0 +1,38 @@
+{
+  "id": "heidegger-arendt",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "heidegger"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "arendt"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "从存在分析到公共行动",
+  "explanation": "阿伦特早年接受海德格尔的哲学训练，但其成熟政治思想把重点转向多元行动、公共世界与判断。",
+  "note": "思想影响与两人的私人、政治关系需要分开陈述。",
+  "citations": [
+    {
+      "sourceId": "src-heidegger",
+      "locator": "Sections on being-in-the-world, temporality and technology",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    },
+    {
+      "sourceId": "src-arendt",
+      "locator": "Sections on action, plurality, totalitarianism and judgment",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

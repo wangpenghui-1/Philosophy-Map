@@ -1,0 +1,22 @@
+{
+  "id": "amsterdam-descartes",
+  "slug": "amsterdam-descartes",
+  "entityType": "place",
+  "historicalName": "阿姆斯特丹",
+  "historicalRegion": "荷兰共和国",
+  "coordinates": {
+    "lat": 52.367,
+    "lon": 4.904
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "descartes"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "kant",
+  "slug": "kant",
+  "entityType": "person",
+  "names": {
+    "display": "康德",
+    "english": "Immanuel Kant",
+    "original": "Immanuel Kant",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1724–1804",
+    "startYear": 1724,
+    "endYear": 1804,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-批判哲学"
+  ],
+  "conceptIds": [
+    "concept-批判",
+    "concept-先验",
+    "concept-自主"
+  ],
+  "questionIds": [
+    "knowledge",
+    "freedom",
+    "society"
+  ],
+  "guidingQuestion": "人的认识能够达到哪里，自由又如何可能？",
+  "thesis": "经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。",
+  "summary": "康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。 本站以批判、先验、自主为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "pure-reason",
+    "groundwork"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "konigsberg",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-kant"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kant",
+      "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。 本站以批判、先验、自主为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-kant",
+              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：人的认识能够达到哪里，自由又如何可能？",
+          "citations": [
+            {
+              "sourceId": "src-kant",
+              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。",
+          "citations": [
+            {
+              "sourceId": "src-kant",
+              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/kant.webp",
+    "thumbSrc": "/media/thinkers/thumb/kant.webp",
+    "alt": "康德的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#7589b6",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

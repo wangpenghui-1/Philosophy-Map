@@ -1,0 +1,42 @@
+{
+  "id": "origins-totalitarianism",
+  "slug": "origins-totalitarianism",
+  "entityType": "work",
+  "title": "《极权主义的起源》",
+  "originalTitle": "The Origins of Totalitarianism",
+  "authorRefs": [
+    {
+      "personId": "arendt",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1951",
+  "languages": [],
+  "summary": "《极权主义的起源》是阿伦特的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-行动",
+    "concept-多元",
+    "concept-公共世界"
+  ],
+  "traditionIds": [
+    "tradition-现代政治思想"
+  ],
+  "sourceIds": [
+    "src-arendt"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-arendt",
+      "locator": "Sections on action, plurality, totalitarianism and judgment",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

@@ -1,0 +1,114 @@
+{
+  "id": "beauvoir",
+  "slug": "beauvoir",
+  "entityType": "person",
+  "names": {
+    "display": "波伏娃",
+    "english": "Simone de Beauvoir",
+    "original": "Simone Lucie Ernestine Marie Bertrand de Beauvoir",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1908–1986",
+    "startYear": 1908,
+    "endYear": 1986,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-存在主义女性主义"
+  ],
+  "conceptIds": [
+    "concept-处境",
+    "concept-他者",
+    "concept-成为"
+  ],
+  "questionIds": [
+    "freedom",
+    "self",
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "一个人如何在既定处境中争取自由，又不把他人变成客体？",
+  "thesis": "主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。",
+  "summary": "波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。 本站以处境、他者、成为为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "second-sex",
+    "ethics-ambiguity"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris-beauvoir",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-beauvoir"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-beauvoir",
+      "locator": "Sections on ambiguity, situated freedom and becoming woman",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。 本站以处境、他者、成为为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir",
+              "locator": "Sections on ambiguity, situated freedom and becoming woman",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：一个人如何在既定处境中争取自由，又不把他人变成客体？",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir",
+              "locator": "Sections on ambiguity, situated freedom and becoming woman",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir",
+              "locator": "Sections on ambiguity, situated freedom and becoming woman",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/beauvoir.webp",
+    "thumbSrc": "/media/thinkers/thumb/beauvoir.webp",
+    "alt": "波伏娃的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#a96e88",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

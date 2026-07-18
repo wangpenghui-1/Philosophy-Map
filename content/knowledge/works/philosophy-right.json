@@ -1,0 +1,42 @@
+{
+  "id": "philosophy-right",
+  "slug": "philosophy-right",
+  "entityType": "work",
+  "title": "《法哲学原理》",
+  "originalTitle": "Grundlinien der Philosophie des Rechts",
+  "authorRefs": [
+    {
+      "personId": "hegel",
+      "role": "attributed-author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "1820",
+  "languages": [],
+  "summary": "《法哲学原理》是黑格尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "conceptIds": [
+    "concept-承认",
+    "concept-辩证法",
+    "concept-伦理生活"
+  ],
+  "traditionIds": [
+    "tradition-德国观念论"
+  ],
+  "sourceIds": [
+    "src-hegel"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-hegel",
+      "locator": "Sections on recognition, history, freedom and ethical life",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

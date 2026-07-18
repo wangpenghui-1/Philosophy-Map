@@ -19,7 +19,7 @@ test("story controls pause and advance the guided narrative", async ({ page }) =
   await expect(page.getByRole("heading", { name: "怎样才算过好一生？" })).toBeVisible();
 });
 
-test("search traps focus, restores it, and opens a stable thinker URL", async ({ page }) => {
+test("search traps focus and links the globe state to the reading page", async ({ page }) => {
   await openHydrated(page, "/explore");
   const trigger = page.getByRole("button", { name: "搜索思想星图" });
   await trigger.focus();
@@ -31,14 +31,19 @@ test("search traps focus, restores it, and opens a stable thinker URL", async ({
 
   await trigger.click();
   await input.fill("Kant");
-  await page.getByRole("dialog", { name: "搜索思想星图" }).getByRole("button", { name: /康德/ }).click();
-  await expect(page).toHaveURL(/\/thinker\/kant$/);
+  await page.getByRole("dialog", { name: "搜索思想星图" }).getByRole("button", { name: /康德/ }).evaluate((button) => (button as HTMLButtonElement).click());
+  await expect(page).toHaveURL(/\/explore\?[^#]*thinker=kant/);
   await expect(page.locator('img[src="/media/thinkers/full/kant.webp"]')).toBeVisible();
+  await page.getByRole("link", { name: "深入阅读" }).click();
+  await expect(page).toHaveURL(/\/thinker\/kant$/);
+  await page.getByRole("link", { name: "在3D地球中定位" }).click();
+  await waitForHydration(page);
+  await expect(page).toHaveURL(/\/explore\?thinker=kant/);
 });
 
 test("question and timeline filters are reflected in the exploration URL", async ({ page }) => {
   await openHydrated(page, "/explore");
-  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1961");
+  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1986");
   await page.getByRole("button", { name: /人是否自由/ }).click();
   await expect(page).toHaveURL(/question=freedom/);
   await page.getByRole("slider", { name: "历史时间轴" }).fill("1000");
@@ -50,7 +55,7 @@ test("question and timeline filters are reflected in the exploration URL", async
 });
 
 test("two selected thinkers produce and restore a shareable comparison", async ({ page }) => {
-  await openHydrated(page, "/thinker/confucius");
+  await openHydrated(page, "/explore?thinker=confucius");
   await page.getByRole("button", { name: "加入比较" }).click();
   await page.getByRole("button", { name: "搜索思想星图" }).click();
   await page.getByPlaceholder("例如：空、德性、Kant、《论语》").fill("Aristotle");
@@ -64,6 +69,18 @@ test("two selected thinkers produce and restore a shareable comparison", async (
   await expect(page.getByText("双人物比较")).toBeVisible();
   await expect(page.getByRole("heading", { name: "孔子" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "亚里士多德" })).toBeVisible();
+});
+
+test("knowledge filters and search survive a URL reload", async ({ page }) => {
+  await page.goto("/knowledge?q=Kant&type=person&tier=index");
+  await expect(page.getByRole("heading", { name: "从人物出发，沿着概念与文本阅读思想史" })).toBeVisible();
+  await expect(page.locator('input[name="q"]')).toHaveValue("Kant");
+  await expect(page.locator('select[name="type"]')).toHaveValue("person");
+  await expect(page.locator('select[name="tier"]')).toHaveValue("index");
+  await expect(page.getByRole("link", { name: "康德" })).toBeVisible();
+  await page.reload();
+  await expect(page.locator('input[name="q"]')).toHaveValue("Kant");
+  await expect(page.getByText("索引条目").first()).toBeVisible();
 });
 
 test("the complete text explorer remains keyboard accessible", async ({ page }) => {
@@ -120,6 +137,18 @@ test("supported responsive widths have no horizontal overflow or hidden header c
       expect(control.right).toBeLessThanOrEqual(metrics.viewport);
     }
   }
+
+  await page.goto("/knowledge");
+  for (const width of [360, 390, 768, 1024, 1440]) {
+    await page.setViewportSize({ width, height: width <= 768 ? 844 : 900 });
+    const metrics = await page.evaluate(() => ({
+      viewport: window.innerWidth,
+      documentWidth: document.documentElement.scrollWidth,
+      bodyWidth: document.body.scrollWidth,
+    }));
+    expect(metrics.documentWidth).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.bodyWidth).toBeLessThanOrEqual(metrics.viewport);
+  }
 });
 
 test("critical interface layers match approved visual snapshots", async ({ page }, testInfo) => {
@@ -130,7 +159,7 @@ test("critical interface layers match approved visual snapshots", async ({ page 
     await page.getByRole("button", { name: "打开文字探索" }).click();
     await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
   } else {
-    await openHydrated(page, "/thinker/confucius");
+    await page.goto("/thinker/confucius");
     await expect(page.getByRole("img", { name: "孔子的艺术化人物形象" })).toBeVisible();
   }
   await page.locator("canvas").evaluateAll((canvases) => {

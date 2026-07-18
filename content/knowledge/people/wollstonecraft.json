@@ -1,0 +1,113 @@
+{
+  "id": "wollstonecraft",
+  "slug": "wollstonecraft",
+  "entityType": "person",
+  "names": {
+    "display": "沃斯通克拉夫特",
+    "english": "Mary Wollstonecraft",
+    "original": "Mary Wollstonecraft",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1759–1797",
+    "startYear": 1759,
+    "endYear": 1797,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-启蒙女性主义"
+  ],
+  "conceptIds": [
+    "concept-平等",
+    "concept-教育",
+    "concept-独立"
+  ],
+  "questionIds": [
+    "society",
+    "freedom",
+    "knowledge",
+    "good-life"
+  ],
+  "guidingQuestion": "当教育制造依赖时，平等与理性如何真正属于所有人？",
+  "thesis": "女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。",
+  "summary": "沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。 本站以平等、教育、独立为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "vindication-woman"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "london-wollstonecraft",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-wollstonecraft"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wollstonecraft",
+      "locator": "Sections on education, rights and her critique of Rousseau",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。 本站以平等、教育、独立为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft",
+              "locator": "Sections on education, rights and her critique of Rousseau",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：当教育制造依赖时，平等与理性如何真正属于所有人？",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft",
+              "locator": "Sections on education, rights and her critique of Rousseau",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft",
+              "locator": "Sections on education, rights and her critique of Rousseau",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/wollstonecraft.webp",
+    "thumbSrc": "/media/thinkers/thumb/wollstonecraft.webp",
+    "alt": "沃斯通克拉夫特的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#aa718f",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

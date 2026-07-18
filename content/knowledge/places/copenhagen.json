@@ -1,0 +1,22 @@
+{
+  "id": "copenhagen",
+  "slug": "copenhagen",
+  "entityType": "place",
+  "historicalName": "哥本哈根",
+  "historicalRegion": "丹麦王国",
+  "coordinates": {
+    "lat": 55.676,
+    "lon": 12.568
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "kierkegaard"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

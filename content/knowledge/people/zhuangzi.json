@@ -1,0 +1,114 @@
+{
+  "id": "zhuangzi",
+  "slug": "zhuangzi",
+  "entityType": "person",
+  "names": {
+    "display": "庄子",
+    "english": "Zhuangzi",
+    "original": "莊周",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前4世纪",
+    "startYear": -369,
+    "endYear": -286,
+    "certainty": "approximate",
+    "note": "《庄子》由不同时期材料构成，不能将全书观点都直接归于庄周本人。"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-道家"
+  ],
+  "conceptIds": [
+    "concept-道",
+    "concept-逍遥",
+    "concept-齐物"
+  ],
+  "questionIds": [
+    "self",
+    "knowledge",
+    "freedom"
+  ],
+  "guidingQuestion": "当语言和立场不断变化，我们如何保存行动与生命的自由？",
+  "thesis": "松动固执的区分，从多重视角理解变化中的世界。",
+  "summary": "庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。 本站以道、逍遥、齐物为入口，连接其代表文本、思想关系与学术来源。",
+  "workIds": [
+    "zhuangzi-text"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "song",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-zhuangzi"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-zhuangzi",
+      "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+      "claim": "支持本条目的生平、思想概述或关系说明。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。 本站以道、逍遥、齐物为入口，连接其代表文本、思想关系与学术来源。",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi",
+              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：当语言和立场不断变化，我们如何保存行动与生命的自由？",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi",
+              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：松动固执的区分，从多重视角理解变化中的世界。",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi",
+              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+              "claim": "支持本条目的生平、思想概述或关系说明。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/zhuangzi.webp",
+    "thumbSrc": "/media/thinkers/thumb/zhuangzi.webp",
+    "alt": "庄子的艺术化人物形象",
+    "objectPosition": "50% 22%",
+    "depictionNote": "艺术化人物形象，并非可考的历史肖像。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "uncertainty": "《庄子》由不同时期材料构成，不能将全书观点都直接归于庄周本人。",
+  "color": "#71a59b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

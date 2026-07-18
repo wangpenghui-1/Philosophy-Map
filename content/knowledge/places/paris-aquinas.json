@@ -1,0 +1,22 @@
+{
+  "id": "paris-aquinas",
+  "slug": "paris-aquinas",
+  "entityType": "place",
+  "historicalName": "巴黎",
+  "historicalRegion": "法兰西王国",
+  "coordinates": {
+    "lat": 48.856,
+    "lon": 2.352
+  },
+  "certainty": "established",
+  "relatedPersonIds": [
+    "aquinas"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "首轮迁移复核",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+}

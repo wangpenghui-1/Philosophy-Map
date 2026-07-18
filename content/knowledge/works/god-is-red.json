@@ -1,0 +1,42 @@
+{
+  "id": "god-is-red",
+  "slug": "god-is-red",
+  "entityType": "work",
+  "title": "《上帝是红色的》",
+  "originalTitle": "God Is Red",
+  "authorRefs": [
+    {
+      "personId": "vine-deloria-jr",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1973年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《上帝是红色的》是进入瓦因·德洛里亚思想语境的代表文本入口。条目以“关系性土地”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-关系性土地"
+  ],
+  "traditionIds": [
+    "tradition-北美原住民思想"
+  ],
+  "sourceIds": [
+    "src-routledge-indigenous-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-indigenous-philosophy",
+      "locator": "相关传统、人物与政治哲学专章：“Vine Deloria Jr. / 瓦因·德洛里亚”",
+      "claim": "支持《上帝是红色的》与瓦因·德洛里亚的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

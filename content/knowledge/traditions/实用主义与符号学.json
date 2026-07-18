@@ -1,0 +1,37 @@
+{
+  "id": "tradition-实用主义与符号学",
+  "slug": "实用主义与符号学",
+  "entityType": "tradition",
+  "name": "实用主义与符号学",
+  "originalNames": [],
+  "summary": "实用主义与符号学是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "1800–1945年",
+  "regionLabels": [
+    "欧洲与地中海"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "charles-sanders-peirce"
+  ],
+  "conceptIds": [
+    "concept-实用主义准则"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+      "claim": "支持实用主义与符号学与皮尔士的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

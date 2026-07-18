@@ -10,7 +10,10 @@
   },
   "certainty": "established",
   "relatedPersonIds": [
-    "aristotle"
+    "aristotle",
+    "epicurus",
+    "zeno-citium",
+    "chrysippus"
   ],
   "contentTier": "index",
   "editorialStatus": "published",

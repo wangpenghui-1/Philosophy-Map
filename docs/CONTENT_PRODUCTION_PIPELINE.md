@@ -1,15 +1,14 @@
-# 首批内容自动生产流水线
+# 120人物内容自动生产流水线
 
 ## 阶段边界
 
-首批选择覆盖矩阵中的 `batch-01`，共30人，覆盖8个主地区和6个时代。生产任务存放在：
+120人物版本选择原覆盖矩阵中的 `batch-01`、`batch-02` 和 `batch-03`，共90名新增人物；与原有30人合并后形成120人公开版本。三个批次均满足跨地区与跨时代约束，生产任务存放在：
 
 ```text
-content/knowledge/production/batches/batch-01/
-  manifest.json
-  tasks/
-    candidate-001.json
-    ...
+content/knowledge/production/batches/
+  batch-01/
+  batch-02/
+  batch-03/
 ```
 
 这些文件是研究与编辑任务，不是公开知识实体。任务始终保持：
@@ -19,7 +18,7 @@ editorialStatus: candidate
 publicVisibility: false
 ```
 
-只有 `content/knowledge/people`、`concepts`、`traditions` 等正式实体目录中的 `published` 记录才进入网站。生产任务不会进入搜索索引、3D地球或详情页。
+只有 `content/knowledge/people`、`concepts`、`traditions` 等正式实体目录中的 `published` 记录才进入网站。生产任务不会进入搜索索引、3D地球或详情页。`coverage/release-120.json` 记录90个生产候选与正式人物ID的可追溯映射。
 
 ## 七阶段状态机
 
@@ -45,7 +44,7 @@ publicVisibility: false
 # 首次生成或补齐缺失任务；不会覆盖已经推进的任务状态
 npm run content:batch:prepare
 
-# 验证覆盖矩阵、manifest和30个独立任务是否稳定
+# 验证批次一的manifest和独立任务是否稳定；仓库审计同时检查三个批次
 npm run content:batch:check
 
 # 生成当前可执行的工作包和批次报告
@@ -61,7 +60,7 @@ npm run content:batch:retry
 npm run content:batch:report
 ```
 
-队列和报告写入 `artifacts/production/batch-01/`，不进入版本库。工作者结果必须说明自动工作者身份；失败结果必须包含错误码、说明和是否可重试。任何结果都不能写入 `published`。
+队列和报告写入 `artifacts/production/<batch-id>/`，不进入版本库。工作者结果必须说明自动工作者身份；失败结果必须包含错误码、说明和是否可重试。研究任务本身始终不能写入 `published`；120人本地发布候选由独立的确定性装配步骤生成，并保留自动审核身份。
 
 每个队列工作包都包含建议的 `resultId`、阶段说明、当前候选上下文、阶段专用字段契约和安全边界。工作者应原样返回该 `resultId`。相同结果重复投递是幂等的，不会重复增加尝试次数；同一结果文件出现重复 `resultId` 会在任何任务写回前整体拒绝。
 
@@ -95,4 +94,4 @@ npm run content:batch:report
 - 跨文化偏差、反例和归属不确定性检查全部通过；
 - 所有七个工作项通过，且任务仍为私有candidate。
 
-`ready-for-promotion` 只表示可以形成正式candidate实体，并不等于 `published`。最终发布、合并 `main` 和部署仍需用户最终批准。
+`ready-for-promotion` 只表示研究任务通过装配门禁。为便于最终审核，120人版本在当前发布分支中生成可见的 `published` 实体，但这不代表外部同行评审、合并 `main` 或线上部署；这些动作仍需用户最终批准。

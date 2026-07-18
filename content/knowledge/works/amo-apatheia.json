@@ -1,0 +1,42 @@
+{
+  "id": "amo-apatheia",
+  "slug": "amo-apatheia",
+  "entityType": "work",
+  "title": "《论人类心灵无感受性》",
+  "originalTitle": "De humanae mentis apatheia",
+  "authorRefs": [
+    {
+      "personId": "anton-wilhelm-amo",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1734年",
+  "languages": [
+    "la"
+  ],
+  "summary": "《论人类心灵无感受性》是进入安东·威廉·阿莫思想语境的代表文本入口。条目以“心灵非感受性”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-心灵非感受性"
+  ],
+  "traditionIds": [
+    "tradition-非洲与欧洲启蒙哲学"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Anton Wilhelm Amo / 安东·威廉·阿莫”",
+      "claim": "支持《论人类心灵无感受性》与安东·威廉·阿莫的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

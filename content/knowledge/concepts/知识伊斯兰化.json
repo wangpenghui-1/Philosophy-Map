@@ -1,0 +1,48 @@
+{
+  "id": "concept-知识伊斯兰化",
+  "slug": "知识伊斯兰化",
+  "entityType": "concept",
+  "name": "知识伊斯兰化",
+  "originalTerms": [],
+  "summary": "“知识伊斯兰化”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-马来伊斯兰思想",
+      "label": "知识伊斯兰化",
+      "explanation": "在赛义德·穆罕默德·纳吉布·阿塔斯及马来伊斯兰思想语境中，“知识伊斯兰化”用于说明：以知识伊斯兰化批判世俗概念移植，并以礼序和恰当位置重建教育目的。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+          "claim": "支持赛义德·穆罕默德·纳吉布·阿塔斯语境中的“知识伊斯兰化”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "syed-muhammad-naquib-al-attas"
+  ],
+  "workIds": [
+    "islam-secularism"
+  ],
+  "traditionIds": [
+    "tradition-马来伊斯兰思想"
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+      "claim": "支持“知识伊斯兰化”作为赛义德·穆罕默德·纳吉布·阿塔斯思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

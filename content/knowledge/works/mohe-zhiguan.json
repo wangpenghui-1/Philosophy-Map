@@ -1,0 +1,42 @@
+{
+  "id": "mohe-zhiguan",
+  "slug": "mohe-zhiguan",
+  "entityType": "work",
+  "title": "《摩诃止观》",
+  "originalTitle": "摩訶止觀",
+  "authorRefs": [
+    {
+      "personId": "zhiyi",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "隋代讲述、弟子记录",
+  "languages": [
+    "zh"
+  ],
+  "summary": "《摩诃止观》是进入智顗思想语境的代表文本入口。条目以“一念三千”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-一念三千"
+  ],
+  "traditionIds": [
+    "tradition-天台宗"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Zhiyi / 智顗”",
+      "claim": "支持《摩诃止观》与智顗的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

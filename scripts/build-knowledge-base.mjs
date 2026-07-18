@@ -201,7 +201,7 @@ const atlasThinkers = published.people.map((person) => ({
   color: person.color,
   media: {
     fullSrc: person.media.fullSrc ?? "",
-    thumbSrc: person.media.thumbSrc ?? "",
+    thumbSrc: person.media.thumbSrc ?? "/globe.svg",
     alt: person.media.alt,
     objectPosition: person.media.objectPosition ?? "50% 50%",
     depictionNote: person.media.depictionNote,
@@ -291,9 +291,11 @@ let scaleSimulation = null;
 if (coveragePlan) {
   const candidates = coveragePlan.candidates ?? [];
   if (coveragePlan.publishedBaseline !== published.people.length) throw new Error("Coverage baseline does not match the published people count.");
-  if (candidates.length !== 210 || coveragePlan.publishedBaseline + candidates.length !== 240) throw new Error("Coverage plan must contain 30 published people and 210 candidates.");
-  if (Object.values(coveragePlan.regionTargets).reduce((sum, value) => sum + value, 0) !== 240) throw new Error("Region targets must total 240.");
-  if (Object.values(coveragePlan.eraTargets).reduce((sum, value) => sum + value, 0) !== 240) throw new Error("Era targets must total 240.");
+  if (candidates.length !== coveragePlan.candidateCount || coveragePlan.publishedBaseline + candidates.length !== coveragePlan.targetTotal) {
+    throw new Error("Coverage plan counts do not match its published baseline and target total.");
+  }
+  if (Object.values(coveragePlan.regionTargets).reduce((sum, value) => sum + value, 0) !== coveragePlan.targetTotal) throw new Error("Region targets must match the coverage target total.");
+  if (Object.values(coveragePlan.eraTargets).reduce((sum, value) => sum + value, 0) !== coveragePlan.targetTotal) throw new Error("Era targets must match the coverage target total.");
   assertUnique("coverage candidate ids", candidates.map((candidate) => candidate.id));
   assertUnique("coverage candidate English names", candidates.map((candidate) => candidate.englishName));
   for (let batch = 1; batch <= coveragePlan.batchRules.batchCount; batch += 1) {

@@ -1,0 +1,104 @@
+{
+  "id": "nezahualcoyotl",
+  "slug": "nezahualcoyotl",
+  "entityType": "person",
+  "names": {
+    "display": "内萨瓦尔科约特尔",
+    "english": "Nezahualcoyotl",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1402–1472",
+    "startYear": 1402,
+    "endYear": 1472,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-纳瓦思想传统"
+  ],
+  "conceptIds": [
+    "concept-花与歌"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "短暂生命中何种言说能够接近真实并留下共同记忆？",
+  "thesis": "诗性传统以花与歌探索无常、友谊和真实，但现存文本的具体作者归属仍需谨慎。",
+  "summary": "内萨瓦尔科约特尔是美洲与加勒比纳瓦思想传统的重要思想人物，主要追问“短暂生命中何种言说能够接近真实并留下共同记忆？”。其思想以“花与歌”为入口，主张诗性传统以花与歌探索无常、友谊和真实，但现存文本的具体作者归属仍需谨慎。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "cantares-mexicanos"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "texcoco",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+      "claim": "支持内萨瓦尔科约特尔的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "内萨瓦尔科约特尔是美洲与加勒比纳瓦思想传统的重要思想人物，主要追问“短暂生命中何种言说能够接近真实并留下共同记忆？”。其思想以“花与歌”为入口，主张诗性传统以花与歌探索无常、友谊和真实，但现存文本的具体作者归属仍需谨慎。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+              "claim": "支持内萨瓦尔科约特尔的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：短暂生命中何种言说能够接近真实并留下共同记忆？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+              "claim": "支持对内萨瓦尔科约特尔核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：诗性传统以花与歌探索无常、友谊和真实，但现存文本的具体作者归属仍需谨慎。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+              "claim": "支持对内萨瓦尔科约特尔核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "内萨瓦尔科约特尔的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

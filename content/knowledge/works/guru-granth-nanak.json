@@ -1,0 +1,42 @@
+{
+  "id": "guru-granth-nanak",
+  "slug": "guru-granth-nanak",
+  "entityType": "work",
+  "title": "《古鲁·格兰特·萨希卜》中的那纳克赞歌",
+  "originalTitle": "Guru Granth Sahib",
+  "authorRefs": [
+    {
+      "personId": "guru-nanak",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "16世纪作品、1604年初编",
+  "languages": [
+    "pa"
+  ],
+  "summary": "《古鲁·格兰特·萨希卜》中的那纳克赞歌是进入古鲁那纳克思想语境的代表文本入口。条目以“唯一者”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-唯一者"
+  ],
+  "traditionIds": [
+    "tradition-锡克思想"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Guru Nanak / 古鲁那纳克”",
+      "claim": "支持《古鲁·格兰特·萨希卜》中的那纳克赞歌与古鲁那纳克的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

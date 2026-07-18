@@ -1,0 +1,48 @@
+{
+  "id": "concept-文化抵抗",
+  "slug": "文化抵抗",
+  "entityType": "concept",
+  "name": "文化抵抗",
+  "originalTerms": [],
+  "summary": "“文化抵抗”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-反殖民政治思想",
+      "label": "文化抵抗",
+      "explanation": "在阿米尔卡·卡布拉尔及反殖民政治思想语境中，“文化抵抗”用于说明：民族解放必须分析具体生产结构，并通过文化抵抗使人民重新成为自身历史的主体。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章：“Amilcar Cabral / 阿米尔卡·卡布拉尔”",
+          "claim": "支持阿米尔卡·卡布拉尔语境中的“文化抵抗”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "amilcar-cabral"
+  ],
+  "workIds": [
+    "return-source-cabral"
+  ],
+  "traditionIds": [
+    "tradition-反殖民政治思想"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Amilcar Cabral / 阿米尔卡·卡布拉尔”",
+      "claim": "支持“文化抵抗”作为阿米尔卡·卡布拉尔思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

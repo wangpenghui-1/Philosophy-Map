@@ -1,0 +1,106 @@
+{
+  "id": "william-ockham",
+  "slug": "william-ockham",
+  "entityType": "person",
+  "names": {
+    "display": "奥卡姆",
+    "english": "William of Ockham",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约1287–1347",
+    "startYear": 1287,
+    "endYear": 1347,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-经院哲学"
+  ],
+  "conceptIds": [
+    "concept-唯名论"
+  ],
+  "questionIds": [
+    "reality"
+  ],
+  "guidingQuestion": "普遍概念是否需要对应独立存在的普遍实体？",
+  "thesis": "个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。",
+  "summary": "奥卡姆是欧洲与地中海经院哲学的重要思想人物，主要追问“普遍概念是否需要对应独立存在的普遍实体？”。其思想以“唯名论”为入口，主张个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "summa-logicae"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "oxford",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+      "claim": "支持奥卡姆的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "奥卡姆是欧洲与地中海经院哲学的重要思想人物，主要追问“普遍概念是否需要对应独立存在的普遍实体？”。其思想以“唯名论”为入口，主张个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+              "claim": "支持奥卡姆的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：普遍概念是否需要对应独立存在的普遍实体？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+              "claim": "支持对奥卡姆核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+              "claim": "支持对奥卡姆核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "奥卡姆的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

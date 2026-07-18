@@ -1,0 +1,42 @@
+{
+  "id": "stoic-testimonia-zeno",
+  "slug": "stoic-testimonia-zeno",
+  "entityType": "work",
+  "title": "《早期斯多亚派残篇》中的芝诺材料",
+  "originalTitle": "Stoicorum Veterum Fragmenta",
+  "authorRefs": [
+    {
+      "personId": "zeno-citium",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "古代材料、近代汇编",
+  "languages": [
+    "grc"
+  ],
+  "summary": "《早期斯多亚派残篇》中的芝诺材料是进入芝诺思想语境的代表文本入口。条目以“顺应自然”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-顺应自然"
+  ],
+  "traditionIds": [
+    "tradition-斯多亚学派"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Zeno of Citium / 芝诺”",
+      "claim": "支持《早期斯多亚派残篇》中的芝诺材料与芝诺的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

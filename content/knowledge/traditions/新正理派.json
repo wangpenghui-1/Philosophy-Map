@@ -1,0 +1,37 @@
+{
+  "id": "tradition-新正理派",
+  "slug": "新正理派",
+  "entityType": "tradition",
+  "name": "新正理派",
+  "originalNames": [],
+  "summary": "新正理派是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "500–1500年",
+  "regionLabels": [
+    "南亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "gangesha"
+  ],
+  "conceptIds": [
+    "concept-认知根据"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Gangesha / 恒伽沙”",
+      "claim": "支持新正理派与恒伽沙的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

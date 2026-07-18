@@ -1,0 +1,42 @@
+{
+  "id": "brihadaranyaka-maitreyi",
+  "slug": "brihadaranyaka-maitreyi",
+  "entityType": "work",
+  "title": "《广林奥义书·弥勒依对话》",
+  "originalTitle": "Bṛhadāraṇyaka Upaniṣad",
+  "authorRefs": [
+    {
+      "personId": "maitreyi",
+      "role": "author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "约公元前一千纪中叶",
+  "languages": [
+    "sa"
+  ],
+  "summary": "《广林奥义书·弥勒依对话》是进入弥勒依思想语境的代表文本入口。条目以“不朽”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-不朽"
+  ],
+  "traditionIds": [
+    "tradition-奥义书传统"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Maitreyi / 弥勒依”",
+      "claim": "支持《广林奥义书·弥勒依对话》与弥勒依的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

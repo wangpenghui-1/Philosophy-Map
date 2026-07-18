@@ -1,0 +1,48 @@
+{
+  "id": "concept-梵经诠释",
+  "slug": "梵经诠释",
+  "entityType": "concept",
+  "name": "梵经诠释",
+  "originalTerms": [],
+  "summary": "“梵经诠释”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-吠檀多",
+      "label": "梵经诠释",
+      "explanation": "在跋陀罗衍那及吠檀多语境中，“梵经诠释”用于说明：以简约经句组织关于梵、自我、世界和解脱的论争，奠定吠檀多注释传统。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Badarayana / 跋陀罗衍那”",
+          "claim": "支持跋陀罗衍那语境中的“梵经诠释”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "badarayana"
+  ],
+  "workIds": [
+    "brahma-sutra"
+  ],
+  "traditionIds": [
+    "tradition-吠檀多"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Badarayana / 跋陀罗衍那”",
+      "claim": "支持“梵经诠释”作为跋陀罗衍那思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

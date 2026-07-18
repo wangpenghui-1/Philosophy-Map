@@ -1,0 +1,104 @@
+{
+  "id": "henry-odera-oruka",
+  "slug": "henry-odera-oruka",
+  "entityType": "person",
+  "names": {
+    "display": "亨利·奥德拉·奥鲁卡",
+    "english": "Henry Odera Oruka",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1944–1995",
+    "startYear": 1944,
+    "endYear": 1995,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-贤哲哲学"
+  ],
+  "conceptIds": [
+    "concept-贤哲哲学"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "口述传统中的个人批判反思如何被识别为哲学？",
+  "thesis": "通过访谈区分民间智慧与贤哲的论证性反思，挑战哲学只存在于书面经典的偏见。",
+  "summary": "亨利·奥德拉·奥鲁卡是非洲贤哲哲学的重要思想人物，主要追问“口述传统中的个人批判反思如何被识别为哲学？”。其思想以“贤哲哲学”为入口，主张通过访谈区分民间智慧与贤哲的论证性反思，挑战哲学只存在于书面经典的偏见。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "sage-philosophy"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "nairobi",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Henry Odera Oruka / 亨利·奥德拉·奥鲁卡”",
+      "claim": "支持亨利·奥德拉·奥鲁卡的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "亨利·奥德拉·奥鲁卡是非洲贤哲哲学的重要思想人物，主要追问“口述传统中的个人批判反思如何被识别为哲学？”。其思想以“贤哲哲学”为入口，主张通过访谈区分民间智慧与贤哲的论证性反思，挑战哲学只存在于书面经典的偏见。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Henry Odera Oruka / 亨利·奥德拉·奥鲁卡”",
+              "claim": "支持亨利·奥德拉·奥鲁卡的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：口述传统中的个人批判反思如何被识别为哲学？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Henry Odera Oruka / 亨利·奥德拉·奥鲁卡”",
+              "claim": "支持对亨利·奥德拉·奥鲁卡核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：通过访谈区分民间智慧与贤哲的论证性反思，挑战哲学只存在于书面经典的偏见。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Henry Odera Oruka / 亨利·奥德拉·奥鲁卡”",
+              "claim": "支持对亨利·奥德拉·奥鲁卡核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "亨利·奥德拉·奥鲁卡的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

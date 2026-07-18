@@ -29,7 +29,14 @@ async function readBatch(contentRoot, directory) {
 export async function auditContentProduction({ contentRoot }) {
   const findings = [];
   const coverage = await readJson(path.join(contentRoot, "coverage", "people.json"));
-  const candidateById = new Map(coverage.candidates.map((candidate) => [candidate.id, candidate]));
+  const candidatePool = [
+    ...(coverage.candidates ?? []),
+    ...(coverage.releaseCandidates ?? []),
+    ...(coverage.archivedRoadmap?.candidates ?? []),
+  ];
+  const candidateById = new Map(candidatePool.map((candidate) => [candidate.id, candidate]));
+  const releaseManifest = await readJson(path.join(contentRoot, "coverage", "release-120.json"));
+  const releasedCandidateIds = new Set(releaseManifest.members.map((member) => member.candidateId));
   const people = await Promise.all(
     (await readdir(path.join(contentRoot, "people")))
       .filter((file) => file.endsWith(".json"))
@@ -76,12 +83,15 @@ export async function auditContentProduction({ contentRoot }) {
       || candidate.era !== task.coverage.era
       || candidate.tradition !== task.coverage.tradition;
   });
-  if (coverageFailures.length) findings.push(finding("blocker", "production-coverage-drift", "生产任务与240人覆盖矩阵发生偏移。", coverageFailures));
+  if (coverageFailures.length) findings.push(finding("blocker", "production-coverage-drift", "生产任务与其覆盖批次记录发生偏移。", coverageFailures));
 
   const publicLeaks = tasks.filter((task) => task.target.publicVisibility || task.target.editorialStatus !== "candidate");
   if (publicLeaks.length) findings.push(finding("blocker", "production-candidate-leak", "研究任务只能保持私有candidate状态。", publicLeaks));
 
-  const personIdCollisions = tasks.filter((task) => existingPersonIds.has(task.proposedPersonId) || existingPersonSlugs.has(task.proposedPersonId));
+  const personIdCollisions = tasks.filter((task) =>
+    !releasedCandidateIds.has(task.candidateId)
+    && (existingPersonIds.has(task.proposedPersonId) || existingPersonSlugs.has(task.proposedPersonId)),
+  );
   const proposedIds = tasks.map((task) => task.proposedPersonId);
   const duplicateProposedIds = proposedIds.filter((id, index) => proposedIds.indexOf(id) !== index);
   if (personIdCollisions.length || duplicateProposedIds.length) {

@@ -1,0 +1,104 @@
+{
+  "id": "donna-haraway",
+  "slug": "donna-haraway",
+  "entityType": "person",
+  "names": {
+    "display": "唐娜·哈拉维",
+    "english": "Donna Haraway",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1944–",
+    "startYear": 1944,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "跨区域与离散思想传统",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-科学技术与女性主义"
+  ],
+  "conceptIds": [
+    "concept-情境知识"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "科学客观性如何承认观察者位置而不滑向任意相对主义？",
+  "thesis": "情境知识要求可追责的局部视角，并以赛博格和伴侣物种重构人类与技术生命关系。",
+  "summary": "唐娜·哈拉维是跨区域与离散思想传统科学技术与女性主义的重要思想人物，主要追问“科学客观性如何承认观察者位置而不滑向任意相对主义？”。其思想以“情境知识”为入口，主张情境知识要求可追责的局部视角，并以赛博格和伴侣物种重构人类与技术生命关系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "simians-cyborgs-women"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "santa-cruz",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-handbook-science-technology-studies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-handbook-science-technology-studies",
+      "locator": "行动者网络、女性主义科学研究与相关作者专章：“Donna Haraway / 唐娜·哈拉维”",
+      "claim": "支持唐娜·哈拉维的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "唐娜·哈拉维是跨区域与离散思想传统科学技术与女性主义的重要思想人物，主要追问“科学客观性如何承认观察者位置而不滑向任意相对主义？”。其思想以“情境知识”为入口，主张情境知识要求可追责的局部视角，并以赛博格和伴侣物种重构人类与技术生命关系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-handbook-science-technology-studies",
+              "locator": "行动者网络、女性主义科学研究与相关作者专章：“Donna Haraway / 唐娜·哈拉维”",
+              "claim": "支持唐娜·哈拉维的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：科学客观性如何承认观察者位置而不滑向任意相对主义？",
+          "citations": [
+            {
+              "sourceId": "src-handbook-science-technology-studies",
+              "locator": "行动者网络、女性主义科学研究与相关作者专章：“Donna Haraway / 唐娜·哈拉维”",
+              "claim": "支持对唐娜·哈拉维核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：情境知识要求可追责的局部视角，并以赛博格和伴侣物种重构人类与技术生命关系。",
+          "citations": [
+            {
+              "sourceId": "src-handbook-science-technology-studies",
+              "locator": "行动者网络、女性主义科学研究与相关作者专章：“Donna Haraway / 唐娜·哈拉维”",
+              "claim": "支持对唐娜·哈拉维核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "唐娜·哈拉维的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#a5a3df",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

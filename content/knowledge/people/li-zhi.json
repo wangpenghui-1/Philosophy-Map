@@ -1,0 +1,104 @@
+{
+  "id": "li-zhi",
+  "slug": "li-zhi",
+  "entityType": "person",
+  "names": {
+    "display": "李贽",
+    "english": "Li Zhi",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1527–1602",
+    "startYear": 1527,
+    "endYear": 1602,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-明代批判思想"
+  ],
+  "conceptIds": [
+    "concept-童心"
+  ],
+  "questionIds": [
+    "self"
+  ],
+  "guidingQuestion": "个体真诚如何抵抗以经典权威为名的伪饰？",
+  "thesis": "童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。",
+  "summary": "李贽是东亚明代批判思想的重要思想人物，主要追问“个体真诚如何抵抗以经典权威为名的伪饰？”。其思想以“童心”为入口，主张童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "book-to-burn"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "quanzhou",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Li Zhi / 李贽”",
+      "claim": "支持李贽的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "李贽是东亚明代批判思想的重要思想人物，主要追问“个体真诚如何抵抗以经典权威为名的伪饰？”。其思想以“童心”为入口，主张童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Li Zhi / 李贽”",
+              "claim": "支持李贽的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：个体真诚如何抵抗以经典权威为名的伪饰？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Li Zhi / 李贽”",
+              "claim": "支持对李贽核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Li Zhi / 李贽”",
+              "claim": "支持对李贽核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "李贽的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

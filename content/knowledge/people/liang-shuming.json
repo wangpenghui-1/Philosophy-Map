@@ -1,0 +1,105 @@
+{
+  "id": "liang-shuming",
+  "slug": "liang-shuming",
+  "entityType": "person",
+  "names": {
+    "display": "梁漱溟",
+    "english": "Liang Shuming",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1893–1988",
+    "startYear": 1893,
+    "endYear": 1988,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现代新儒家"
+  ],
+  "conceptIds": [
+    "concept-文化路向"
+  ],
+  "questionIds": [
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "不同文明的生活取向如何回应现代性的共同困境？",
+  "thesis": "文化体现处理欲望、关系和自然的不同路向，中国社会更新应重建伦理共同体。",
+  "summary": "梁漱溟是东亚现代新儒家的重要思想人物，主要追问“不同文明的生活取向如何回应现代性的共同困境？”。其思想以“文化路向”为入口，主张文化体现处理欲望、关系和自然的不同路向，中国社会更新应重建伦理共同体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "eastern-western-cultures"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "beijing",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Liang Shuming / 梁漱溟”",
+      "claim": "支持梁漱溟的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "梁漱溟是东亚现代新儒家的重要思想人物，主要追问“不同文明的生活取向如何回应现代性的共同困境？”。其思想以“文化路向”为入口，主张文化体现处理欲望、关系和自然的不同路向，中国社会更新应重建伦理共同体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Shuming / 梁漱溟”",
+              "claim": "支持梁漱溟的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：不同文明的生活取向如何回应现代性的共同困境？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Shuming / 梁漱溟”",
+              "claim": "支持对梁漱溟核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：文化体现处理欲望、关系和自然的不同路向，中国社会更新应重建伦理共同体。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Shuming / 梁漱溟”",
+              "claim": "支持对梁漱溟核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "梁漱溟的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

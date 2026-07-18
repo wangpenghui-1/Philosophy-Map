@@ -1,0 +1,42 @@
+{
+  "id": "liberte-senghor",
+  "slug": "liberte-senghor",
+  "entityType": "work",
+  "title": "《自由》文集",
+  "originalTitle": "Liberté",
+  "authorRefs": [
+    {
+      "personId": "leopold-sedar-senghor",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1964至1993年",
+  "languages": [
+    "fr"
+  ],
+  "summary": "《自由》文集是进入利奥波德·桑戈尔思想语境的代表文本入口。条目以“黑人性”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-黑人性"
+  ],
+  "traditionIds": [
+    "tradition-黑人性与人文主义"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Leopold Sedar Senghor / 利奥波德·桑戈尔”",
+      "claim": "支持《自由》文集与利奥波德·桑戈尔的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -21,7 +21,7 @@ import {
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const coverage = JSON.parse(await readFile(path.join(projectRoot, "content/knowledge/coverage/people.json"), "utf8"));
-const batchOne = coverage.candidates.filter((candidate) => candidate.batch === 1);
+const batchOne = coverage.releaseCandidates.filter((candidate) => candidate.batch === 1);
 
 test("batch one spans the required world regions and eras", () => {
   const manifest = createBatchManifest(1, batchOne, coverage.batchRules);
@@ -171,11 +171,11 @@ test("state machine requires verified sources, located claims, and all reviews",
   assert.equal(task.target.publicVisibility, false);
 });
 
-test("repository production audit validates all 30 private batch tasks", async () => {
+test("repository production audit validates all 90 release batch tasks", async () => {
   const audit = await auditContentProduction({ contentRoot: path.join(projectRoot, "content/knowledge") });
-  assert.equal(audit.summary.batchCount, 1);
-  assert.equal(audit.summary.taskCount, 30);
-  assert.equal(audit.summary.runnableJobs, 60);
+  assert.equal(audit.summary.batchCount, 3);
+  assert.equal(audit.summary.taskCount, 90);
+  assert.equal(audit.summary.runnableJobs, 180);
   assert.equal(audit.summary.publicCandidates, 0);
   assert.deepEqual(audit.findings.filter((item) => item.severity === "blocker"), []);
   assert.ok(audit.findings.some((item) => item.code === "production-progress"));

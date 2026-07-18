@@ -1,0 +1,22 @@
+{
+  "id": "src-history-jewish-philosophy",
+  "entityType": "source",
+  "title": "History of Jewish Philosophy",
+  "authors": [
+    "Frank, Daniel H.",
+    "Leaman, Oliver (eds.)"
+  ],
+  "sourceType": "scholarly-book",
+  "publication": "Routledge",
+  "year": 1997,
+  "isbn": "9780415080644",
+  "defaultLocator": "对应人物与时期专章",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

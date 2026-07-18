@@ -1,0 +1,42 @@
+{
+  "id": "islam-secularism",
+  "slug": "islam-secularism",
+  "entityType": "work",
+  "title": "《伊斯兰与世俗主义》",
+  "originalTitle": "Islam and Secularism",
+  "authorRefs": [
+    {
+      "personId": "syed-muhammad-naquib-al-attas",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1978年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《伊斯兰与世俗主义》是进入赛义德·穆罕默德·纳吉布·阿塔斯思想语境的代表文本入口。条目以“知识伊斯兰化”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-知识伊斯兰化"
+  ],
+  "traditionIds": [
+    "tradition-马来伊斯兰思想"
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+      "claim": "支持《伊斯兰与世俗主义》与赛义德·穆罕默德·纳吉布·阿塔斯的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

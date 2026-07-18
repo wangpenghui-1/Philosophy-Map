@@ -1,0 +1,42 @@
+{
+  "id": "simians-cyborgs-women",
+  "slug": "simians-cyborgs-women",
+  "entityType": "work",
+  "title": "《类人猿、赛博格和女人》",
+  "originalTitle": "Simians, Cyborgs, and Women",
+  "authorRefs": [
+    {
+      "personId": "donna-haraway",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1991年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《类人猿、赛博格和女人》是进入唐娜·哈拉维思想语境的代表文本入口。条目以“情境知识”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-情境知识"
+  ],
+  "traditionIds": [
+    "tradition-科学技术与女性主义"
+  ],
+  "sourceIds": [
+    "src-handbook-science-technology-studies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-handbook-science-technology-studies",
+      "locator": "行动者网络、女性主义科学研究与相关作者专章：“Donna Haraway / 唐娜·哈拉维”",
+      "claim": "支持《类人猿、赛博格和女人》与唐娜·哈拉维的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

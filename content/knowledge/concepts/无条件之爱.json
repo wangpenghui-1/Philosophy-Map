@@ -1,0 +1,48 @@
+{
+  "id": "concept-无条件之爱",
+  "slug": "无条件之爱",
+  "entityType": "concept",
+  "name": "无条件之爱",
+  "originalTerms": [],
+  "summary": "“无条件之爱”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-苏菲思想",
+      "label": "无条件之爱",
+      "explanation": "在拉比娅·阿达维娅及苏菲思想语境中，“无条件之爱”用于说明：以无条件的神爱净化敬拜动机，使精神实践不再由天堂希望或地狱恐惧支配。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Rabia al-Adawiyya / 拉比娅·阿达维娅”",
+          "claim": "支持拉比娅·阿达维娅语境中的“无条件之爱”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "rabia-al-adawiyya"
+  ],
+  "workIds": [
+    "rabia-sayings"
+  ],
+  "traditionIds": [
+    "tradition-苏菲思想"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Rabia al-Adawiyya / 拉比娅·阿达维娅”",
+      "claim": "支持“无条件之爱”作为拉比娅·阿达维娅思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

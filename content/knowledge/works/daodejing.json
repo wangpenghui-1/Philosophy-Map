@@ -1,0 +1,42 @@
+{
+  "id": "daodejing",
+  "slug": "daodejing",
+  "entityType": "work",
+  "title": "《道德经》",
+  "originalTitle": "道德經",
+  "authorRefs": [
+    {
+      "personId": "laozi",
+      "role": "author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "战国时期逐步形成",
+  "languages": [
+    "zh"
+  ],
+  "summary": "《道德经》是进入老子思想语境的代表文本入口。条目以“无为”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-无为"
+  ],
+  "traditionIds": [
+    "tradition-道家"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Laozi / 老子”",
+      "claim": "支持《道德经》与老子的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

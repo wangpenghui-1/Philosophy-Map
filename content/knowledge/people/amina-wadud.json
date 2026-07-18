@@ -1,0 +1,104 @@
+{
+  "id": "amina-wadud",
+  "slug": "amina-wadud",
+  "entityType": "person",
+  "names": {
+    "display": "阿米娜·瓦杜德",
+    "english": "Amina Wadud",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1952–",
+    "startYear": 1952,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-伊斯兰女性主义"
+  ],
+  "conceptIds": [
+    "concept-性别公正诠释"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "经典诠释如何识别并纠正父权阅读带来的性别不平等？",
+  "thesis": "从文本整体、语法和历史语境重读古兰经，以神圣统一原则批判性别等级化。",
+  "summary": "阿米娜·瓦杜德是西亚、中亚及伊斯兰思想世界伊斯兰女性主义的重要思想人物，主要追问“经典诠释如何识别并纠正父权阅读带来的性别不平等？”。其思想以“性别公正诠释”为入口，主张从文本整体、语法和历史语境重读古兰经，以神圣统一原则批判性别等级化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "quran-woman"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "jakarta",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+      "claim": "支持阿米娜·瓦杜德的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "阿米娜·瓦杜德是西亚、中亚及伊斯兰思想世界伊斯兰女性主义的重要思想人物，主要追问“经典诠释如何识别并纠正父权阅读带来的性别不平等？”。其思想以“性别公正诠释”为入口，主张从文本整体、语法和历史语境重读古兰经，以神圣统一原则批判性别等级化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+              "claim": "支持阿米娜·瓦杜德的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经典诠释如何识别并纠正父权阅读带来的性别不平等？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+              "claim": "支持对阿米娜·瓦杜德核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：从文本整体、语法和历史语境重读古兰经，以神圣统一原则批判性别等级化。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+              "claim": "支持对阿米娜·瓦杜德核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "阿米娜·瓦杜德的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "german-sermons-eckhart",
+  "slug": "german-sermons-eckhart",
+  "entityType": "work",
+  "title": "《德语讲道集》",
+  "originalTitle": "Deutsche Predigten",
+  "authorRefs": [
+    {
+      "personId": "meister-eckhart",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "13至14世纪",
+  "languages": [
+    "mhg"
+  ],
+  "summary": "《德语讲道集》是进入艾克哈特思想语境的代表文本入口。条目以“离执”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-离执"
+  ],
+  "traditionIds": [
+    "tradition-中世纪神秘哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Meister Eckhart / 艾克哈特”",
+      "claim": "支持《德语讲道集》与艾克哈特的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tradition-日本密教",
+  "slug": "日本密教",
+  "entityType": "tradition",
+  "name": "日本密教",
+  "originalNames": [],
+  "summary": "日本密教是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "500–1500年",
+  "regionLabels": [
+    "东亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "kukai"
+  ],
+  "conceptIds": [
+    "concept-即身成佛"
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Kukai / 空海”",
+      "claim": "支持日本密教与空海的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "consolation-philosophy",
+  "slug": "consolation-philosophy",
+  "entityType": "work",
+  "title": "《哲学的慰藉》",
+  "originalTitle": "De consolatione philosophiae",
+  "authorRefs": [
+    {
+      "personId": "boethius",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约524年",
+  "languages": [
+    "la"
+  ],
+  "summary": "《哲学的慰藉》是进入波爱修斯思想语境的代表文本入口。条目以“永恒与预知”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-永恒与预知"
+  ],
+  "traditionIds": [
+    "tradition-晚期古代与中世纪哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Boethius / 波爱修斯”",
+      "claim": "支持《哲学的慰藉》与波爱修斯的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

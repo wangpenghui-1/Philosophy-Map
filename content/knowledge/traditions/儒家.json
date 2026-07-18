@@ -12,15 +12,18 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "confucius"
+    "confucius",
+    "mencius"
   ],
   "conceptIds": [
     "concept-仁",
     "concept-礼",
-    "concept-修身"
+    "concept-修身",
+    "concept-性善"
   ],
   "sourceIds": [
-    "src-confucius"
+    "src-confucius",
+    "src-encyclopedia-chinese-philosophy"
   ],
   "citations": [
     {

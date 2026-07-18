@@ -1,0 +1,42 @@
+{
+  "id": "quran-woman",
+  "slug": "quran-woman",
+  "entityType": "work",
+  "title": "《古兰经与女性》",
+  "originalTitle": "Qur'an and Woman",
+  "authorRefs": [
+    {
+      "personId": "amina-wadud",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1992年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《古兰经与女性》是进入阿米娜·瓦杜德思想语境的代表文本入口。条目以“性别公正诠释”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-性别公正诠释"
+  ],
+  "traditionIds": [
+    "tradition-伊斯兰女性主义"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+      "claim": "支持《古兰经与女性》与阿米娜·瓦杜德的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

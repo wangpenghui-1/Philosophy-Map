@@ -223,7 +223,10 @@ async function readJsonIfPresent(file) {
 export async function prepareContentBatch({ batchNumber, contentRoot = defaultContentRoot, write = false }) {
   const coverageFile = path.join(contentRoot, "coverage", "people.json");
   const coveragePlan = JSON.parse(await readFile(coverageFile, "utf8"));
-  const candidates = coveragePlan.candidates
+  const candidatePool = coveragePlan.candidates.length > 0
+    ? coveragePlan.candidates
+    : coveragePlan.releaseCandidates ?? [];
+  const candidates = candidatePool
     .filter((candidate) => candidate.batch === batchNumber)
     .map((candidate) => coverageCandidateSchema.parse(candidate));
   const batchId = batchIdFor(batchNumber);

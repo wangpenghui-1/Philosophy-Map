@@ -1,0 +1,105 @@
+{
+  "id": "sri-aurobindo",
+  "slug": "sri-aurobindo",
+  "entityType": "person",
+  "names": {
+    "display": "奥罗宾多",
+    "english": "Sri Aurobindo",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1872–1950",
+    "startYear": 1872,
+    "endYear": 1950,
+    "certainty": "established"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现代印度哲学"
+  ],
+  "conceptIds": [
+    "concept-整体瑜伽"
+  ],
+  "questionIds": [
+    "self",
+    "reality"
+  ],
+  "guidingQuestion": "意识与物质的演化能否被理解为同一精神进程？",
+  "thesis": "现实是意识逐步显现的演化，整体瑜伽旨在转化个体与集体生命而非逃离世界。",
+  "summary": "奥罗宾多是南亚现代印度哲学的重要思想人物，主要追问“意识与物质的演化能否被理解为同一精神进程？”。其思想以“整体瑜伽”为入口，主张现实是意识逐步显现的演化，整体瑜伽旨在转化个体与集体生命而非逃离世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "life-divine"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "pondicherry",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+      "claim": "支持奥罗宾多的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "奥罗宾多是南亚现代印度哲学的重要思想人物，主要追问“意识与物质的演化能否被理解为同一精神进程？”。其思想以“整体瑜伽”为入口，主张现实是意识逐步显现的演化，整体瑜伽旨在转化个体与集体生命而非逃离世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+              "claim": "支持奥罗宾多的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：意识与物质的演化能否被理解为同一精神进程？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+              "claim": "支持对奥罗宾多核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：现实是意识逐步显现的演化，整体瑜伽旨在转化个体与集体生命而非逃离世界。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+              "claim": "支持对奥罗宾多核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "奥罗宾多的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

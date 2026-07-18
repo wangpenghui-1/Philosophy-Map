@@ -1,0 +1,104 @@
+{
+  "id": "cornel-west",
+  "slug": "cornel-west",
+  "entityType": "person",
+  "names": {
+    "display": "科内尔·韦斯特",
+    "english": "Cornel West",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1953–",
+    "startYear": 1953,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-实用主义与种族思想"
+  ],
+  "conceptIds": [
+    "concept-先知实用主义"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "民主批判如何结合历史苦难、宗教希望和公共行动？",
+  "thesis": "先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。",
+  "summary": "科内尔·韦斯特是美洲与加勒比实用主义与种族思想的重要思想人物，主要追问“民主批判如何结合历史苦难、宗教希望和公共行动？”。其思想以“先知实用主义”为入口，主张先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "race-matters"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "princeton",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Cornel West / 科内尔·韦斯特”",
+      "claim": "支持科内尔·韦斯特的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "科内尔·韦斯特是美洲与加勒比实用主义与种族思想的重要思想人物，主要追问“民主批判如何结合历史苦难、宗教希望和公共行动？”。其思想以“先知实用主义”为入口，主张先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Cornel West / 科内尔·韦斯特”",
+              "claim": "支持科内尔·韦斯特的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：民主批判如何结合历史苦难、宗教希望和公共行动？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Cornel West / 科内尔·韦斯特”",
+              "claim": "支持对科内尔·韦斯特核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Cornel West / 科内尔·韦斯特”",
+              "claim": "支持对科内尔·韦斯特核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "科内尔·韦斯特的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

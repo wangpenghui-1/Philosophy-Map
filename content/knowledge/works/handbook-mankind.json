@@ -1,0 +1,42 @@
+{
+  "id": "handbook-mankind",
+  "slug": "handbook-mankind",
+  "entityType": "work",
+  "title": "《人类手册》",
+  "originalTitle": "Handbook for Mankind",
+  "authorRefs": [
+    {
+      "personId": "buddhadasa-bhikkhu",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1956年",
+  "languages": [
+    "th"
+  ],
+  "summary": "《人类手册》是进入佛使比丘思想语境的代表文本入口。条目以“空心”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-空心"
+  ],
+  "traditionIds": [
+    "tradition-泰国佛教现代主义"
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+      "claim": "支持《人类手册》与佛使比丘的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "buddhadasa-bhikkhu",
+  "slug": "buddhadasa-bhikkhu",
+  "entityType": "person",
+  "names": {
+    "display": "佛使比丘",
+    "english": "Buddhadasa Bhikkhu",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1906–1993",
+    "startYear": 1906,
+    "endYear": 1993,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-泰国佛教现代主义"
+  ],
+  "conceptIds": [
+    "concept-空心"
+  ],
+  "questionIds": [
+    "society",
+    "self"
+  ],
+  "guidingQuestion": "佛教解脱如何转化为面向现代社会的日常实践？",
+  "thesis": "以缘起和空重释无我，主张在工作与公共生活中减弱执著而非把修行局限于仪式。",
+  "summary": "佛使比丘是东南亚与大洋洲泰国佛教现代主义的重要思想人物，主要追问“佛教解脱如何转化为面向现代社会的日常实践？”。其思想以“空心”为入口，主张以缘起和空重释无我，主张在工作与公共生活中减弱执著而非把修行局限于仪式。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "handbook-mankind"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "chaiya",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+      "claim": "支持佛使比丘的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "佛使比丘是东南亚与大洋洲泰国佛教现代主义的重要思想人物，主要追问“佛教解脱如何转化为面向现代社会的日常实践？”。其思想以“空心”为入口，主张以缘起和空重释无我，主张在工作与公共生活中减弱执著而非把修行局限于仪式。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+              "claim": "支持佛使比丘的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：佛教解脱如何转化为面向现代社会的日常实践？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+              "claim": "支持对佛使比丘核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以缘起和空重释无我，主张在工作与公共生活中减弱执著而非把修行局限于仪式。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+              "claim": "支持对佛使比丘核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "佛使比丘的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

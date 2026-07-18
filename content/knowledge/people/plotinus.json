@@ -1,0 +1,106 @@
+{
+  "id": "plotinus",
+  "slug": "plotinus",
+  "entityType": "person",
+  "names": {
+    "display": "普罗提诺",
+    "english": "Plotinus",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约204–270",
+    "startYear": 204,
+    "endYear": 270,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-新柏拉图主义"
+  ],
+  "conceptIds": [
+    "concept-流溢"
+  ],
+  "questionIds": [
+    "reality"
+  ],
+  "guidingQuestion": "多样存在如何从绝对统一者产生而不损害其统一？",
+  "thesis": "万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。",
+  "summary": "普罗提诺是欧洲与地中海新柏拉图主义的重要思想人物，主要追问“多样存在如何从绝对统一者产生而不损害其统一？”。其思想以“流溢”为入口，主张万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "enneads"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "rome",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+      "claim": "支持普罗提诺的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "普罗提诺是欧洲与地中海新柏拉图主义的重要思想人物，主要追问“多样存在如何从绝对统一者产生而不损害其统一？”。其思想以“流溢”为入口，主张万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+              "claim": "支持普罗提诺的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：多样存在如何从绝对统一者产生而不损害其统一？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+              "claim": "支持对普罗提诺核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+              "claim": "支持对普罗提诺核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "普罗提诺的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

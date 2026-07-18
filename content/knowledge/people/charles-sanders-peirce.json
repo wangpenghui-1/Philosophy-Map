@@ -1,0 +1,104 @@
+{
+  "id": "charles-sanders-peirce",
+  "slug": "charles-sanders-peirce",
+  "entityType": "person",
+  "names": {
+    "display": "皮尔士",
+    "english": "Charles Sanders Peirce",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1839–1914",
+    "startYear": 1839,
+    "endYear": 1914,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-实用主义与符号学"
+  ],
+  "conceptIds": [
+    "concept-实用主义准则"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "概念的意义如何通过可设想的实践效果澄清？",
+  "thesis": "以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。",
+  "summary": "皮尔士是欧洲与地中海实用主义与符号学的重要思想人物，主要追问“概念的意义如何通过可设想的实践效果澄清？”。其思想以“实用主义准则”为入口，主张以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "peirce-papers"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "cambridge-mass",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+      "claim": "支持皮尔士的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "皮尔士是欧洲与地中海实用主义与符号学的重要思想人物，主要追问“概念的意义如何通过可设想的实践效果澄清？”。其思想以“实用主义准则”为入口，主张以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+              "claim": "支持皮尔士的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：概念的意义如何通过可设想的实践效果澄清？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+              "claim": "支持对皮尔士核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+              "claim": "支持对皮尔士核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "皮尔士的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

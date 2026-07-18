@@ -1,0 +1,37 @@
+{
+  "id": "tradition-虔信运动",
+  "slug": "虔信运动",
+  "entityType": "tradition",
+  "name": "虔信运动",
+  "originalNames": [],
+  "summary": "虔信运动是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "500–1500年",
+  "regionLabels": [
+    "南亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "kabir"
+  ],
+  "conceptIds": [
+    "concept-无属性神"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Kabir / 迦比尔”",
+      "claim": "支持虔信运动与迦比尔的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

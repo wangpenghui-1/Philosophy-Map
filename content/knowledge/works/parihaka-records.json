@@ -1,0 +1,42 @@
+{
+  "id": "parihaka-records",
+  "slug": "parihaka-records",
+  "entityType": "work",
+  "title": "《帕里哈卡历史记录与演说》",
+  "originalTitle": "Parihaka records and speeches",
+  "authorRefs": [
+    {
+      "personId": "te-whiti-o-rongomai",
+      "role": "attributed-author",
+      "certainty": "disputed"
+    }
+  ],
+  "dateLabel": "19世纪记录",
+  "languages": [
+    "mi"
+  ],
+  "summary": "《帕里哈卡历史记录与演说》是进入蒂·怀蒂·奥·龙戈迈思想语境的代表文本入口。条目以“非暴力守土”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-非暴力守土"
+  ],
+  "traditionIds": [
+    "tradition-毛利非暴力政治思想"
+  ],
+  "sourceIds": [
+    "src-routledge-indigenous-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-indigenous-philosophy",
+      "locator": "相关传统、人物与政治哲学专章：“Te Whiti o Rongomai / 蒂·怀蒂·奥·龙戈迈”",
+      "claim": "支持《帕里哈卡历史记录与演说》与蒂·怀蒂·奥·龙戈迈的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

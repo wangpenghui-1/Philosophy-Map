@@ -1,0 +1,42 @@
+{
+  "id": "tantraloka",
+  "slug": "tantraloka",
+  "entityType": "work",
+  "title": "《密续之光》",
+  "originalTitle": "Tantrāloka",
+  "authorRefs": [
+    {
+      "personId": "abhinavagupta",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约10至11世纪",
+  "languages": [
+    "sa"
+  ],
+  "summary": "《密续之光》是进入阿毗那婆笈多思想语境的代表文本入口。条目以“再认识”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-再认识"
+  ],
+  "traditionIds": [
+    "tradition-克什米尔湿婆教"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Abhinavagupta / 阿毗那婆笈多”",
+      "claim": "支持《密续之光》与阿毗那婆笈多的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

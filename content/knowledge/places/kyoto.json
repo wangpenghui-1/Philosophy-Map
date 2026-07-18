@@ -1,0 +1,25 @@
+{
+  "id": "kyoto",
+  "slug": "kyoto",
+  "entityType": "place",
+  "historicalName": "平安京",
+  "historicalRegion": "平安时代日本",
+  "modernReferenceName": "平安京",
+  "coordinates": {
+    "lat": 35.01,
+    "lon": 135.77
+  },
+  "certainty": "established",
+  "note": "坐标用于世界思想地图的现代参考定位，不等同于对全部生平活动范围的断言。",
+  "relatedPersonIds": [
+    "kukai",
+    "ito-jinsai"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

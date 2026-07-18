@@ -1,0 +1,42 @@
+{
+  "id": "rabia-sayings",
+  "slug": "rabia-sayings",
+  "entityType": "work",
+  "title": "《拉比娅言行录》传统",
+  "originalTitle": "Akhbār Rābiʿa",
+  "authorRefs": [
+    {
+      "personId": "rabia-al-adawiyya",
+      "role": "attributed-author",
+      "certainty": "disputed"
+    }
+  ],
+  "dateLabel": "后世传记汇编",
+  "languages": [
+    "ar"
+  ],
+  "summary": "《拉比娅言行录》传统是进入拉比娅·阿达维娅思想语境的代表文本入口。条目以“无条件之爱”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-无条件之爱"
+  ],
+  "traditionIds": [
+    "tradition-苏菲思想"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Rabia al-Adawiyya / 拉比娅·阿达维娅”",
+      "claim": "支持《拉比娅言行录》传统与拉比娅·阿达维娅的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

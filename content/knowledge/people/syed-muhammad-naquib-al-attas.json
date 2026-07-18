@@ -1,0 +1,106 @@
+{
+  "id": "syed-muhammad-naquib-al-attas",
+  "slug": "syed-muhammad-naquib-al-attas",
+  "entityType": "person",
+  "names": {
+    "display": "赛义德·穆罕默德·纳吉布·阿塔斯",
+    "english": "Syed Muhammad Naquib al-Attas",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1931–",
+    "startYear": 1931,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-马来伊斯兰思想"
+  ],
+  "conceptIds": [
+    "concept-知识伊斯兰化"
+  ],
+  "questionIds": [
+    "knowledge",
+    "reality",
+    "good-life"
+  ],
+  "guidingQuestion": "教育与知识分类如何体现关于人和世界的伦理秩序？",
+  "thesis": "以知识伊斯兰化批判世俗概念移植，并以礼序和恰当位置重建教育目的。",
+  "summary": "赛义德·穆罕默德·纳吉布·阿塔斯是东南亚与大洋洲马来伊斯兰思想的重要思想人物，主要追问“教育与知识分类如何体现关于人和世界的伦理秩序？”。其思想以“知识伊斯兰化”为入口，主张以知识伊斯兰化批判世俗概念移植，并以礼序和恰当位置重建教育目的。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "islam-secularism"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "kuala-lumpur",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+      "claim": "支持赛义德·穆罕默德·纳吉布·阿塔斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "赛义德·穆罕默德·纳吉布·阿塔斯是东南亚与大洋洲马来伊斯兰思想的重要思想人物，主要追问“教育与知识分类如何体现关于人和世界的伦理秩序？”。其思想以“知识伊斯兰化”为入口，主张以知识伊斯兰化批判世俗概念移植，并以礼序和恰当位置重建教育目的。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+              "claim": "支持赛义德·穆罕默德·纳吉布·阿塔斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：教育与知识分类如何体现关于人和世界的伦理秩序？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+              "claim": "支持对赛义德·穆罕默德·纳吉布·阿塔斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以知识伊斯兰化批判世俗概念移植，并以礼序和恰当位置重建教育目的。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Muhammad Naquib al-Attas / 赛义德·穆罕默德·纳吉布·阿塔斯”",
+              "claim": "支持对赛义德·穆罕默德·纳吉布·阿塔斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "赛义德·穆罕默德·纳吉布·阿塔斯的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

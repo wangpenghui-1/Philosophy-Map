@@ -1,0 +1,20 @@
+{
+  "id": "src-routledge-indigenous-philosophy",
+  "entityType": "source",
+  "title": "The Routledge Handbook of Indigenous Philosophy",
+  "authors": [
+    "Waters, Anne (ed.)"
+  ],
+  "sourceType": "scholarly-book",
+  "publication": "Routledge",
+  "year": 2024,
+  "defaultLocator": "相关传统、人物与政治哲学专章",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

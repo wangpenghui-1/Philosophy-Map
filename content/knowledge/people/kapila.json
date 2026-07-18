@@ -1,0 +1,107 @@
+{
+  "id": "kapila",
+  "slug": "kapila",
+  "entityType": "person",
+  "names": {
+    "display": "迦毗罗",
+    "english": "Kapila",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前700–400",
+    "startYear": -700,
+    "endYear": -400,
+    "certainty": "disputed",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-数论"
+  ],
+  "conceptIds": [
+    "concept-原质"
+  ],
+  "questionIds": [
+    "self",
+    "reality"
+  ],
+  "guidingQuestion": "经验世界与纯粹意识为何必须区分？",
+  "thesis": "数论传统以原质的演化解释经验世界，并以辨别神我与原质通向解脱。",
+  "summary": "迦毗罗是南亚数论的重要思想人物，主要追问“经验世界与纯粹意识为何必须区分？”。其思想以“原质”为入口，主张数论传统以原质的演化解释经验世界，并以辨别神我与原质通向解脱。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "samkhya-tradition"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "gangetic-north",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+      "claim": "支持迦毗罗的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "迦毗罗是南亚数论的重要思想人物，主要追问“经验世界与纯粹意识为何必须区分？”。其思想以“原质”为入口，主张数论传统以原质的演化解释经验世界，并以辨别神我与原质通向解脱。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+              "claim": "支持迦毗罗的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经验世界与纯粹意识为何必须区分？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+              "claim": "支持对迦毗罗核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：数论传统以原质的演化解释经验世界，并以辨别神我与原质通向解脱。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+              "claim": "支持对迦毗罗核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "迦毗罗的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

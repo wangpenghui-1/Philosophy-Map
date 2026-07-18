@@ -1,0 +1,37 @@
+{
+  "id": "tradition-泰国佛教现代主义",
+  "slug": "泰国佛教现代主义",
+  "entityType": "tradition",
+  "name": "泰国佛教现代主义",
+  "originalNames": [],
+  "summary": "泰国佛教现代主义是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "1945年至今",
+  "regionLabels": [
+    "东南亚与大洋洲"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "buddhadasa-bhikkhu"
+  ],
+  "conceptIds": [
+    "concept-空心"
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Buddhadasa Bhikkhu / 佛使比丘”",
+      "claim": "支持泰国佛教现代主义与佛使比丘的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

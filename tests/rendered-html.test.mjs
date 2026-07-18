@@ -64,16 +64,40 @@ test("server-renders the knowledge directory and all four entity types", async (
   assert.match(html[4], /论语|Analects/);
 });
 
-test("migrates the legacy corpus without changing its public cardinality", async () => {
+test("new release people, concepts, traditions, and works are publicly searchable", async () => {
+  const routes = [
+    "/knowledge?q=Laozi&type=person",
+    `/knowledge?q=${encodeURIComponent("道德经")}&type=work`,
+    "/thinker/laozi",
+    `/concept/${encodeURIComponent("无为")}`,
+    `/tradition/${encodeURIComponent("道家")}`,
+    "/work/daodejing",
+  ];
+  const responses = await Promise.all(routes.map(render));
+  for (const response of responses) assert.equal(response.status, 200);
+  const html = await Promise.all(responses.map((response) => response.text()));
+  assert.match(html[0], /老子|Laozi/);
+  assert.match(html[1], /道德经/);
+  assert.match(html[2], /老子|无为|深入阅读/);
+  assert.match(html[3], /无为/);
+  assert.match(html[4], /道家/);
+  assert.match(html[5], /道德经/);
+});
+
+test("publishes the 120-person release while preserving the legacy corpus and relations", async () => {
   const [people, relations, sources] = await Promise.all([
     readEntities("people"),
     readEntities("relations"),
     readEntities("sources"),
   ]);
-  assert.equal(people.length, 30);
+  const release = JSON.parse(await readFile(new URL("coverage/release-120.json", knowledgeRoot), "utf8"));
+  assert.equal(people.length, 120);
   assert.equal(relations.length, 27);
-  assert.equal(sources.length, 31);
-  assert.equal(new Set(people.map((person) => person.slug)).size, 30);
+  assert.equal(sources.length, 44);
+  assert.equal(new Set(people.map((person) => person.slug)).size, 120);
+  assert.equal(release.members.length, 90);
+  assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));
+  assert.ok(release.members.every((member) => people.some((person) => person.id === member.personId)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
 });
 
@@ -90,42 +114,50 @@ test("keeps relation evidence and resonance semantics explicit in entity data", 
 
 test("keeps thinker media metadata complete and backed by public files", async () => {
   const people = await readEntities("people");
-  assert.equal(people.length, 30);
+  assert.equal(people.length, 120);
 
   for (const { media } of people) {
     const { fullSrc, thumbSrc, alt, objectPosition, depictionNote } = media;
-    assert.match(fullSrc, /^\/media\/thinkers\/full\/.+\.webp$/);
-    assert.match(thumbSrc, /^\/media\/thinkers\/thumb\/.+\.webp$/);
     assert.ok(alt.length > 4);
-    assert.match(objectPosition, /^\d+% \d+%$/);
     assert.ok(depictionNote.length > 4);
     assert.ok(media.credit.length > 0);
     assert.ok(media.rightsStatus.length > 0);
     assert.ok(["documented", "traditional", "interpretive", "unavailable"].includes(media.authenticity));
-    await Promise.all([
-      access(new URL(`../public${fullSrc}`, import.meta.url)),
-      access(new URL(`../public${thumbSrc}`, import.meta.url)),
-    ]);
+    if (media.presentationType === "placeholder") {
+      assert.equal(fullSrc, undefined);
+      assert.equal(thumbSrc, undefined);
+      assert.equal(media.authenticity, "unavailable");
+    } else {
+      assert.match(fullSrc, /^\/media\/thinkers\/full\/.+\.webp$/);
+      assert.match(thumbSrc, /^\/media\/thinkers\/thumb\/.+\.webp$/);
+      assert.match(objectPosition, /^\d+% \d+%$/);
+      await Promise.all([
+        access(new URL(`../public${fullSrc}`, import.meta.url)),
+        access(new URL(`../public${thumbSrc}`, import.meta.url)),
+      ]);
+    }
   }
 });
 
-test("keeps candidates private and validates the 240-person editorial matrix", async () => {
-  const [contexts, coverage, publishedKnowledge, atlasIndex, searchIndex] = await Promise.all([
+test("publishes exactly 120 people and keeps non-published records out of client indexes", async () => {
+  const [contexts, coverage, release, publishedKnowledge, atlasIndex, searchIndex] = await Promise.all([
     readEntities("contexts"),
     JSON.parse(await readFile(new URL("coverage/people.json", knowledgeRoot), "utf8")),
+    JSON.parse(await readFile(new URL("coverage/release-120.json", knowledgeRoot), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/knowledge.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/atlas.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/search-index.json", import.meta.url), "utf8")),
   ]);
-  assert.equal(coverage.publishedBaseline, 30);
-  assert.equal(coverage.candidates.length, 210);
-  assert.equal(coverage.publishedBaseline + coverage.candidates.length, 240);
-  for (let batch = 1; batch <= 7; batch += 1) {
-    assert.equal(coverage.candidates.filter((candidate) => candidate.batch === batch).length, 30);
-  }
+  assert.equal(coverage.targetTotal, 120);
+  assert.equal(coverage.publishedBaseline, 120);
+  assert.equal(coverage.candidates.length, 0);
+  assert.equal(release.baselinePeople, 30);
+  assert.equal(release.addedPeople, 90);
+  assert.equal(release.members.length, 90);
   assert.ok(contexts.some((context) => context.editorialStatus === "candidate"));
   assert.equal(publishedKnowledge.contexts.length, 0);
-  assert.equal(atlasIndex.thinkers.length, 30);
+  assert.equal(publishedKnowledge.people.length, 120);
+  assert.equal(atlasIndex.thinkers.length, 120);
   assert.ok(atlasIndex.thinkers.every((thinker) => !("sections" in thinker)));
   assert.ok(searchIndex.every((item) => !("sections" in item) && !("paragraphs" in item)));
 });

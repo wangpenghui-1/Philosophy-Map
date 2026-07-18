@@ -1,0 +1,104 @@
+{
+  "id": "epicurus",
+  "slug": "epicurus",
+  "entityType": "person",
+  "names": {
+    "display": "伊壁鸠鲁",
+    "english": "Epicurus",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "公元前341–270",
+    "startYear": -341,
+    "endYear": -270,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-伊壁鸠鲁学派"
+  ],
+  "conceptIds": [
+    "concept-宁静"
+  ],
+  "questionIds": [
+    "reality"
+  ],
+  "guidingQuestion": "有限生命如何摆脱对神与死亡的恐惧？",
+  "thesis": "通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
+  "summary": "伊壁鸠鲁是欧洲与地中海伊壁鸠鲁学派的重要思想人物，主要追问“有限生命如何摆脱对神与死亡的恐惧？”。其思想以“宁静”为入口，主张通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "letter-menoeceus"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "athens",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
+      "claim": "支持伊壁鸠鲁的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "伊壁鸠鲁是欧洲与地中海伊壁鸠鲁学派的重要思想人物，主要追问“有限生命如何摆脱对神与死亡的恐惧？”。其思想以“宁静”为入口，主张通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
+              "claim": "支持伊壁鸠鲁的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：有限生命如何摆脱对神与死亡的恐惧？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
+              "claim": "支持对伊壁鸠鲁核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
+              "claim": "支持对伊壁鸠鲁核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "伊壁鸠鲁的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

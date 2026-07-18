@@ -1,0 +1,42 @@
+{
+  "id": "first-last-freedom",
+  "slug": "first-last-freedom",
+  "entityType": "work",
+  "title": "《最初与最终的自由》",
+  "originalTitle": "The First and Last Freedom",
+  "authorRefs": [
+    {
+      "personId": "jiddu-krishnamurti",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1954年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《最初与最终的自由》是进入克里希那穆提思想语境的代表文本入口。条目以“无选择觉察”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-无选择觉察"
+  ],
+  "traditionIds": [
+    "tradition-现代精神哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Jiddu Krishnamurti / 克里希那穆提”",
+      "claim": "支持《最初与最终的自由》与克里希那穆提的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

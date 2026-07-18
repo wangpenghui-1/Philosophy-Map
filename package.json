@@ -11,6 +11,8 @@
     "content:edit": "node scripts/automated-editor.mjs --write",
     "content:edit:check": "node scripts/automated-editor.mjs",
     "content:enrich-sources": "node scripts/enrich-source-metadata.mjs",
+    "content:release:prepare": "node scripts/prepare-120-release.mjs --write",
+    "content:release:check": "node scripts/prepare-120-release.mjs",
     "content:batch:prepare": "node scripts/prepare-content-batch.mjs --batch 1 --write",
     "content:batch:check": "node scripts/prepare-content-batch.mjs --batch 1",
     "content:batch:queue": "node scripts/content-batch-runner.mjs --batch 1 --limit 60",

@@ -1,0 +1,107 @@
+{
+  "id": "christine-de-pizan",
+  "slug": "christine-de-pizan",
+  "entityType": "person",
+  "names": {
+    "display": "克里斯蒂娜·德·皮桑",
+    "english": "Christine de Pizan",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约1364–1430",
+    "startYear": 1364,
+    "endYear": 1430,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-中世纪政治思想"
+  ],
+  "conceptIds": [
+    "concept-女性之城"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "贬抑女性的知识传统如何由历史反例和理性论证加以反驳？",
+  "thesis": "以寓言之城汇聚女性的德性、能力和贡献，揭示厌女论述的偏见与教育成因。",
+  "summary": "克里斯蒂娜·德·皮桑是欧洲与地中海中世纪政治思想的重要思想人物，主要追问“贬抑女性的知识传统如何由历史反例和理性论证加以反驳？”。其思想以“女性之城”为入口，主张以寓言之城汇聚女性的德性、能力和贡献，揭示厌女论述的偏见与教育成因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "book-city-ladies"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+      "claim": "支持克里斯蒂娜·德·皮桑的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "克里斯蒂娜·德·皮桑是欧洲与地中海中世纪政治思想的重要思想人物，主要追问“贬抑女性的知识传统如何由历史反例和理性论证加以反驳？”。其思想以“女性之城”为入口，主张以寓言之城汇聚女性的德性、能力和贡献，揭示厌女论述的偏见与教育成因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+              "claim": "支持克里斯蒂娜·德·皮桑的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：贬抑女性的知识传统如何由历史反例和理性论证加以反驳？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+              "claim": "支持对克里斯蒂娜·德·皮桑核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以寓言之城汇聚女性的德性、能力和贡献，揭示厌女论述的偏见与教育成因。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+              "claim": "支持对克里斯蒂娜·德·皮桑核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "克里斯蒂娜·德·皮桑的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

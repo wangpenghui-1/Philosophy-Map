@@ -88,13 +88,17 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   if (relationFailures.length) findings.push(finding("blocker", "relation-evidence-failure", "思想关系不满足证据、方向性或争议说明规则。", relationFailures));
 
   const coverage = JSON.parse(await readFile(path.join(contentRoot, "coverage", "people.json"), "utf8"));
-  const batchFailures = [];
-  for (let batch = 1; batch <= 7; batch += 1) {
-    const entries = coverage.candidates.filter((candidate) => candidate.batch === batch);
-    const regionCounts = Object.values(Object.groupBy(entries, (candidate) => candidate.primaryRegion)).map((items) => items.length);
-    if (entries.length !== 30 || new Set(entries.map((candidate) => candidate.primaryRegion)).size < 4 || new Set(entries.map((candidate) => candidate.era)).size < 3 || Math.max(...regionCounts) / entries.length > 0.4) batchFailures.push(`batch-${batch}`);
-  }
-  if (coverage.candidates.length !== 210 || batchFailures.length) findings.push(finding("blocker", "coverage-matrix-failure", "240人覆盖矩阵或批次约束无效。", batchFailures));
+  const release = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-120.json"), "utf8"));
+  const releasedPeople = new Map(all.people.map((person) => [person.id, person]));
+  const releaseFailures = [];
+  if (coverage.targetTotal !== 120 || coverage.publishedBaseline !== 120 || coverage.candidateCount !== 0 || coverage.candidates.length !== 0) releaseFailures.push("coverage-counts");
+  if (Object.values(coverage.regionTargets).reduce((sum, count) => sum + count, 0) !== 120) releaseFailures.push("region-targets");
+  if (Object.values(coverage.eraTargets).reduce((sum, count) => sum + count, 0) !== 120) releaseFailures.push("era-targets");
+  if (release.baselinePeople !== 30 || release.addedPeople !== 90 || release.publicPeople !== 120 || release.members.length !== 90) releaseFailures.push("release-manifest");
+  if (new Set(release.members.map((member) => member.personId)).size !== 90) releaseFailures.push("release-member-ids");
+  if (release.members.some((member) => releasedPeople.get(member.personId)?.editorialStatus !== "published")) releaseFailures.push("release-member-status");
+  if (all.people.length !== 120) releaseFailures.push("public-people");
+  if (releaseFailures.length) findings.push(finding("blocker", "coverage-release-failure", "120人发布清单、覆盖统计或公开条目不一致。", releaseFailures));
 
   const knowledge = JSON.parse(await readFile(path.join(generatedRoot, "knowledge.json"), "utf8"));
   const publicRecords = Object.values(knowledge).flat();
@@ -122,6 +126,7 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
       relations: all.relations.length,
       sources: all.sources.length,
       coverageCandidates: coverage.candidates.length,
+      releasedCandidates: release.members.length,
       production: production.summary,
     },
     findings,

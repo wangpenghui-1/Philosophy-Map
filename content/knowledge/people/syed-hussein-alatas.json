@@ -1,0 +1,106 @@
+{
+  "id": "syed-hussein-alatas",
+  "slug": "syed-hussein-alatas",
+  "entityType": "person",
+  "names": {
+    "display": "赛义德·侯赛因·阿拉塔斯",
+    "english": "Syed Hussein Alatas",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1928–2007",
+    "startYear": 1928,
+    "endYear": 2007,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-殖民知识批判"
+  ],
+  "conceptIds": [
+    "concept-懒惰土著神话"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge",
+    "reality"
+  ],
+  "guidingQuestion": "殖民知识如何把支配秩序伪装成关于被殖民者的事实？",
+  "thesis": "揭示懒惰土著形象服务于殖民资本和官僚制度，并要求自主社会科学检验概念来源。",
+  "summary": "赛义德·侯赛因·阿拉塔斯是东南亚与大洋洲殖民知识批判的重要思想人物，主要追问“殖民知识如何把支配秩序伪装成关于被殖民者的事实？”。其思想以“懒惰土著神话”为入口，主张揭示懒惰土著形象服务于殖民资本和官僚制度，并要求自主社会科学检验概念来源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "myth-lazy-native"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "singapore",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Syed Hussein Alatas / 赛义德·侯赛因·阿拉塔斯”",
+      "claim": "支持赛义德·侯赛因·阿拉塔斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "赛义德·侯赛因·阿拉塔斯是东南亚与大洋洲殖民知识批判的重要思想人物，主要追问“殖民知识如何把支配秩序伪装成关于被殖民者的事实？”。其思想以“懒惰土著神话”为入口，主张揭示懒惰土著形象服务于殖民资本和官僚制度，并要求自主社会科学检验概念来源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Hussein Alatas / 赛义德·侯赛因·阿拉塔斯”",
+              "claim": "支持赛义德·侯赛因·阿拉塔斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民知识如何把支配秩序伪装成关于被殖民者的事实？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Hussein Alatas / 赛义德·侯赛因·阿拉塔斯”",
+              "claim": "支持对赛义德·侯赛因·阿拉塔斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：揭示懒惰土著形象服务于殖民资本和官僚制度，并要求自主社会科学检验概念来源。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Syed Hussein Alatas / 赛义德·侯赛因·阿拉塔斯”",
+              "claim": "支持对赛义德·侯赛因·阿拉塔斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "alt": "赛义德·侯赛因·阿拉塔斯的中性占位图",
+    "depictionNote": "暂无经自动审核确认且符合本站授权条件的可靠形象，当前使用明确标注的中性占位。",
+    "presentationType": "placeholder",
+    "authenticity": "unavailable",
+    "rightsStatus": "not-applicable-placeholder",
+    "credit": "思想星图中性占位"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

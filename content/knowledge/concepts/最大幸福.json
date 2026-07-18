@@ -1,0 +1,48 @@
+{
+  "id": "concept-最大幸福",
+  "slug": "最大幸福",
+  "entityType": "concept",
+  "name": "最大幸福",
+  "originalTerms": [],
+  "summary": "“最大幸福”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-功利主义",
+      "label": "最大幸福",
+      "explanation": "在边沁及功利主义语境中，“最大幸福”用于说明：以受影响者的快乐与痛苦衡量行动和制度，反对缺乏经验依据的自然权利修辞。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Jeremy Bentham / 边沁”",
+          "claim": "支持边沁语境中的“最大幸福”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "jeremy-bentham"
+  ],
+  "workIds": [
+    "principles-morals-legislation"
+  ],
+  "traditionIds": [
+    "tradition-功利主义"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Jeremy Bentham / 边沁”",
+      "claim": "支持“最大幸福”作为边沁思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -11,7 +11,7 @@ import * as THREE from "three";
 import type { FeatureCollection, Geometry, Position } from "geojson";
 import type { Topology } from "topojson-specification";
 import type { CSSProperties, RefObject } from "react";
-import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Line2, LineMaterial, OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import {
   relations,
@@ -68,6 +68,16 @@ interface SharedEarthUniforms {
   uSunDirection: THREE.IUniform<THREE.Vector3>;
   uNightMix: THREE.IUniform<number>;
   uCloudOffset: THREE.IUniform<number>;
+}
+
+interface GlobeCameraSnapshot {
+  position: [number, number, number];
+  target: [number, number, number];
+  mode: AtlasMode;
+  chapterIndex: number;
+  selectedThinkerId: string | null;
+  directorActive: boolean;
+  directorInitialized: boolean;
 }
 
 const EARTH_VERTEX_SHADER = `
@@ -216,7 +226,8 @@ const ATMOSPHERE_FRAGMENT_SHADER = `
     vec3 viewDirection = normalize(-vViewPosition);
     vec3 lightDirection = normalize((viewMatrix * vec4(normalize(uSunDirection), 0.0)).xyz);
     float lightAmount = dot(normal, lightDirection);
-    float rim = pow(1.0 - abs(dot(normal, viewDirection)), 2.45);
+    float rimBase = max(1.0 - abs(clamp(dot(normal, viewDirection), -1.0, 1.0)), 0.0);
+    float rim = pow(rimBase, 2.45);
     float daySide = smoothstep(-0.28, 0.34, lightAmount);
     float terminator = 1.0 - smoothstep(0.0, 0.28, abs(lightAmount));
     vec3 nightAtmosphere = vec3(0.18, 0.25, 0.50);
@@ -281,9 +292,18 @@ function CountryBorderGeometry({
     for (const country of countries.features) {
       if (!country.geometry) continue;
       for (const ring of collectRings(country.geometry)) {
+        let lastConnectedIndex = 0;
         for (let index = 0; index < ring.length - step; index += step) {
           const current = ring[index];
-          const next = ring[Math.min(index + step, ring.length - 1)];
+          lastConnectedIndex = Math.min(index + step, ring.length - 1);
+          const next = ring[lastConnectedIndex];
+          const a = latLonToVector3(current[1], current[0], GLOBE_RADIUS + 0.011);
+          const b = latLonToVector3(next[1], next[0], GLOBE_RADIUS + 0.011);
+          positions.push(a.x, a.y, a.z, b.x, b.y, b.z);
+        }
+        if (lastConnectedIndex < ring.length - 1) {
+          const current = ring[lastConnectedIndex];
+          const next = ring[ring.length - 1];
           const a = latLonToVector3(current[1], current[0], GLOBE_RADIUS + 0.011);
           const b = latLonToVector3(next[1], next[0], GLOBE_RADIUS + 0.011);
           positions.push(a.x, a.y, a.z, b.x, b.y, b.z);
@@ -404,12 +424,23 @@ function EarthSystem({
   shared: SharedEarthUniforms;
 }) {
   const { gl, invalidate } = useThree();
-  const textureUrls = useMemo(
-    () => quality === "low" ? EARTH_TEXTURE_URLS.slice(0, 2) : [...EARTH_TEXTURE_URLS],
-    [quality],
-  );
+  const textureUrls = useMemo(() => {
+    if (quality === "low") return EARTH_TEXTURE_URLS.slice(0, 2);
+    if (quality === "medium") {
+      return [
+        EARTH_TEXTURE_URLS[0],
+        EARTH_TEXTURE_URLS[1],
+        EARTH_TEXTURE_URLS[3],
+        EARTH_TEXTURE_URLS[4],
+      ];
+    }
+    return [...EARTH_TEXTURE_URLS];
+  }, [quality]);
   const loadedTextures = useTexture(textureUrls as string[]) as THREE.Texture[];
-  const [dayMap, nightMap, loadedNormalMap, loadedSpecularMap, loadedCloudMap] = loadedTextures;
+  const [dayMap, nightMap] = loadedTextures;
+  const loadedNormalMap = quality === "high" ? loadedTextures[2] : undefined;
+  const loadedSpecularMap = quality === "high" ? loadedTextures[3] : loadedTextures[2];
+  const loadedCloudMap = quality === "high" ? loadedTextures[4] : loadedTextures[3];
   const normalMap = loadedNormalMap ?? dayMap;
   const specularMap = loadedSpecularMap ?? dayMap;
   const cloudMap = loadedCloudMap ?? dayMap;
@@ -603,6 +634,30 @@ function greatCirclePoints(relation: Relation, quality: QualityTier) {
   const arcHeight = THREE.MathUtils.clamp(angularDistance * 0.32, 0.13, 0.48);
   const points: THREE.Vector3[] = [];
 
+  if (angularDistance < 0.012) {
+    const normal = start.clone().normalize();
+    const reference = Math.abs(normal.y) < 0.88
+      ? new THREE.Vector3(0, 1, 0)
+      : new THREE.Vector3(1, 0, 0);
+    const tangent = new THREE.Vector3().crossVectors(normal, reference).normalize();
+    const bitangent = new THREE.Vector3().crossVectors(normal, tangent).normalize();
+    const hash = Array.from(relation.id).reduce((total, character) => total + character.charCodeAt(0), 0);
+    const phase = THREE.MathUtils.degToRad(hash % 360);
+    const outward = tangent.clone().multiplyScalar(Math.cos(phase))
+      .add(bitangent.clone().multiplyScalar(Math.sin(phase)));
+    const sideways = new THREE.Vector3().crossVectors(normal, outward).normalize();
+    for (let index = 0; index <= pointCount; index += 1) {
+      const progress = index / pointCount;
+      const lift = Math.sin(Math.PI * progress);
+      const point = start.clone().lerp(end, progress).normalize().multiplyScalar(GLOBE_RADIUS + 0.042)
+        .addScaledVector(normal, lift * 0.13)
+        .addScaledVector(outward, lift * 0.2)
+        .addScaledVector(sideways, Math.sin(Math.PI * 2 * progress) * 0.055);
+      points.push(point);
+    }
+    return points;
+  }
+
   for (let index = 0; index <= pointCount; index += 1) {
     const progress = index / pointCount;
     const point = start.clone().lerp(end, progress).normalize();
@@ -644,7 +699,7 @@ function RelationArc({
   const isResonance = relation.type === "thematic-resonance";
 
   useEffect(() => {
-    if (!animate || reduceMotion || !pulseRef.current) return;
+    if (!visible || !animate || reduceMotion || !pulseRef.current) return;
     const material = pulseRef.current.material as LineMaterial;
     const travel = { offset: material.dashOffset };
     const tween = gsap.to(travel, {
@@ -660,7 +715,7 @@ function RelationArc({
     return () => {
       tween.kill();
     };
-  }, [animate, invalidate, reduceMotion, relation.directed, relation.id, selected]);
+  }, [animate, invalidate, reduceMotion, relation.directed, relation.id, selected, visible]);
 
   if (!visible || points.length === 0) return null;
   const showHalo = selected || (emphasized && quality !== "low");
@@ -783,20 +838,57 @@ function ThinkerAnchor({
 
 function CameraDirector({
   controlsRef,
+  snapshotRef,
+  directorActiveRef,
+  directorInitializedRef,
   mode,
   chapterIndex,
   selectedThinkerId,
   reduceMotion,
 }: {
   controlsRef: RefObject<OrbitControlsImpl | null>;
+  snapshotRef: RefObject<GlobeCameraSnapshot | null>;
+  directorActiveRef: RefObject<boolean>;
+  directorInitializedRef: RefObject<boolean>;
   mode: AtlasMode;
   chapterIndex: number;
   selectedThinkerId: string | null;
   reduceMotion: boolean;
 }) {
   const { camera, invalidate } = useThree();
+  const suppressedDirectionRef = useRef<Pick<
+    GlobeCameraSnapshot,
+    "mode" | "chapterIndex" | "selectedThinkerId"
+  > | null>(null);
+  const restorationProcessedRef = useRef(false);
 
   useEffect(() => {
+    const restored = snapshotRef.current;
+    const matchesDirection = (direction: Pick<
+      GlobeCameraSnapshot,
+      "mode" | "chapterIndex" | "selectedThinkerId"
+    >) => direction.mode === mode
+      && direction.chapterIndex === chapterIndex
+      && direction.selectedThinkerId === selectedThinkerId;
+
+    if (!restorationProcessedRef.current) {
+      restorationProcessedRef.current = true;
+      if (restored
+        && restored.directorInitialized
+        && !restored.directorActive
+        && matchesDirection(restored)) {
+        suppressedDirectionRef.current = {
+          mode,
+          chapterIndex,
+          selectedThinkerId,
+        };
+        directorInitializedRef.current = true;
+      }
+    }
+    if (suppressedDirectionRef.current) {
+      if (matchesDirection(suppressedDirectionRef.current)) return;
+      suppressedDirectionRef.current = null;
+    }
     const controls = controlsRef.current;
     if (!controls) return;
 
@@ -808,34 +900,92 @@ function CameraDirector({
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 0.42)
       : new THREE.Vector3(0, 0, 0);
     const duration = reduceMotion ? 0.12 : thinker ? 0.92 : mode === "story" ? 1.75 : 1.05;
+    directorInitializedRef.current = true;
+    directorActiveRef.current = true;
 
-    const context = gsap.context(() => {
-      gsap.to(camera.position, {
-        x: destination.x,
-        y: destination.y,
-        z: destination.z,
-        duration,
-        ease: "power3.inOut",
-        onUpdate: () => {
-          camera.lookAt(controls.target);
-          invalidate();
-        },
-      });
-      gsap.to(controls.target, {
-        x: target.x,
-        y: target.y,
-        z: target.z,
-        duration,
-        ease: "power3.inOut",
-        onUpdate: () => {
-          controls.update();
-          invalidate();
-        },
-      });
+    const cameraTween = gsap.to(camera.position, {
+      x: destination.x,
+      y: destination.y,
+      z: destination.z,
+      duration,
+      ease: "power3.inOut",
+      onUpdate: () => {
+        camera.lookAt(controls.target);
+        invalidate();
+      },
+    });
+    const targetTween = gsap.to(controls.target, {
+      x: target.x,
+      y: target.y,
+      z: target.z,
+      duration,
+      ease: "power3.inOut",
+      onUpdate: () => {
+        controls.update();
+        invalidate();
+      },
+      onComplete: () => {
+        directorActiveRef.current = false;
+      },
     });
 
-    return () => context.revert();
-  }, [camera, chapterIndex, controlsRef, invalidate, mode, reduceMotion, selectedThinkerId]);
+    return () => {
+      cameraTween.kill();
+      targetTween.kill();
+      directorActiveRef.current = false;
+    };
+  }, [camera, chapterIndex, controlsRef, directorActiveRef, directorInitializedRef, invalidate, mode, reduceMotion, selectedThinkerId, snapshotRef]);
+
+  return null;
+}
+
+function CameraPersistence({
+  controlsRef,
+  snapshotRef,
+  directorActiveRef,
+  directorInitializedRef,
+  mode,
+  chapterIndex,
+  selectedThinkerId,
+}: {
+  controlsRef: RefObject<OrbitControlsImpl | null>;
+  snapshotRef: RefObject<GlobeCameraSnapshot | null>;
+  directorActiveRef: RefObject<boolean>;
+  directorInitializedRef: RefObject<boolean>;
+  mode: AtlasMode;
+  chapterIndex: number;
+  selectedThinkerId: string | null;
+}) {
+  const { camera, invalidate } = useThree();
+  const directionRef = useRef({ mode, chapterIndex, selectedThinkerId });
+
+  useLayoutEffect(() => {
+    directionRef.current = { mode, chapterIndex, selectedThinkerId };
+  }, [chapterIndex, mode, selectedThinkerId]);
+
+  useLayoutEffect(() => {
+    const controls = controlsRef.current;
+    const snapshot = snapshotRef.current;
+    if (controls && snapshot) {
+      camera.position.set(...snapshot.position);
+      controls.target.set(...snapshot.target);
+      controls.update();
+      invalidate();
+    }
+
+    return () => {
+      if (!controls) return;
+      snapshotRef.current = {
+        position: [camera.position.x, camera.position.y, camera.position.z],
+        target: [controls.target.x, controls.target.y, controls.target.z],
+        ...directionRef.current,
+        // eslint-disable-next-line react-hooks/exhaustive-deps -- Capture the live tween state at unmount.
+        directorActive: directorActiveRef.current,
+        // eslint-disable-next-line react-hooks/exhaustive-deps -- Capture whether initial direction ran before unmount.
+        directorInitialized: directorInitializedRef.current,
+      };
+    };
+  }, [camera, controlsRef, directorActiveRef, directorInitializedRef, invalidate, snapshotRef]);
 
   return null;
 }
@@ -948,6 +1098,7 @@ function MarkerLayoutController({
         Math.round(item.screenY * 2),
         item.lod,
         item.clusterCount,
+        Math.round(item.scale * 100),
       ].join(":"))
       .join("|");
     if (signature !== lastSignatureRef.current) {
@@ -961,12 +1112,16 @@ function MarkerLayoutController({
 
 function GlobeScene({
   onMarkerLayout,
+  cameraSnapshotRef,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
   onMarkerLayout: (layout: GlobeMarkerLayoutItem[]) => void;
+  cameraSnapshotRef: RefObject<GlobeCameraSnapshot | null>;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
+  const directorActiveRef = useRef(false);
+  const directorInitializedRef = useRef(false);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
   const storyThinkerIds = useMemo(
     () => new Set(currentChapter.thinkerIds),
@@ -1063,13 +1218,29 @@ function GlobeScene({
         rotateSpeed={0.42}
         zoomSpeed={0.58}
         zoomToCursor
+        onChange={() => {
+          const controls = controlsRef.current;
+          if (controls && controls.target.length() > 0.58) controls.target.setLength(0.58);
+        }}
         minDistance={2.78}
         maxDistance={8.2}
         minPolarAngle={0.13}
         maxPolarAngle={Math.PI - 0.13}
       />
+      <CameraPersistence
+        controlsRef={controlsRef}
+        snapshotRef={cameraSnapshotRef}
+        directorActiveRef={directorActiveRef}
+        directorInitializedRef={directorInitializedRef}
+        mode={props.mode}
+        chapterIndex={props.chapterIndex}
+        selectedThinkerId={props.selectedThinkerId}
+      />
       <CameraDirector
         controlsRef={controlsRef}
+        snapshotRef={cameraSnapshotRef}
+        directorActiveRef={directorActiveRef}
+        directorInitializedRef={directorInitializedRef}
         mode={props.mode}
         chapterIndex={props.chapterIndex}
         selectedThinkerId={props.selectedThinkerId}
@@ -1130,6 +1301,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   );
   const [attempt, setAttempt] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
+  const cameraSnapshotRef = useRef<GlobeCameraSnapshot | null>(null);
   const { onFallback } = props;
 
   useEffect(() => {
@@ -1188,7 +1360,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   return (
     <div className={"globe-runtime globe-runtime--" + props.earthMode}>
       <Canvas
-        key={attempt}
+        key={String(attempt) + ":" + props.quality}
         dpr={dpr}
         camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
         frameloop="demand"
@@ -1201,7 +1373,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         onCreated={({ gl }) => {
           gl.outputColorSpace = THREE.SRGBColorSpace;
           gl.toneMapping = THREE.ACESFilmicToneMapping;
-          gl.toneMappingExposure = props.earthMode === "night" ? 1.02 : 0.94;
+          gl.toneMappingExposure = 0.98;
           gl.domElement.addEventListener("webglcontextlost", (event) => {
             event.preventDefault();
             cachedWebgl2Availability = false;
@@ -1210,7 +1382,11 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         }}
         aria-label="可旋转缩放的3D思想地球。人物肖像锚定在主要活动区域，发光关系线跨越球面。"
       >
-        <GlobeScene {...props} onMarkerLayout={handleMarkerLayout} />
+        <GlobeScene
+          {...props}
+          cameraSnapshotRef={cameraSnapshotRef}
+          onMarkerLayout={handleMarkerLayout}
+        />
       </Canvas>
       <div className="globe-marker-layer" aria-label="地图人物">
         {mountedThinkers.map((thinker) => {
@@ -1228,7 +1404,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
               type="button"
               tabIndex={visible ? 0 : -1}
               aria-hidden={!visible}
-              aria-label={"查看" + thinker.name + "，" + thinker.period}
+              aria-label={
+                "查看" + thinker.name + "，" + thinker.period
+                + (clustered ? "；此地点共" + String(item!.clusterCount) + "人，放大后显示更多人物" : "")
+              }
               onClick={() => props.onSelectThinker(thinker.id)}
             >
               {item ? <MarkerLeader item={item} /> : null}

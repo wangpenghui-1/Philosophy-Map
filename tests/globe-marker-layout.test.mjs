@@ -1,7 +1,10 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { layoutGlobeMarkers } from "../app/_components/globe-marker-layout.ts";
+import {
+  getGlobeMarkerExclusionRects,
+  layoutGlobeMarkers,
+} from "../app/_components/globe-marker-layout.ts";
 
 const viewport = { width: 960, height: 640 };
 
@@ -151,4 +154,32 @@ test("240-person synthetic input respects desktop and mobile marker budgets", ()
   assert.equal(mobile.filter((item) => item.visible).length, 16);
   assert.equal(desktop.length, 240);
   assert.equal(mobile.length, 240);
+});
+
+test("screen-space exclusion rectangles reserve room for interface panels", () => {
+  const reserved = { left: 420, top: 260, right: 540, bottom: 380 };
+  const layout = layoutGlobeMarkers(
+    [marker("panel-adjacent", 480, 320, { selected: true, priority: 100 })],
+    viewport,
+    3.2,
+    { exclusionRects: [reserved] },
+  );
+  const item = layout[0];
+
+  assert.equal(item.visible, true);
+  assert.equal(overlaps(item.bounds, reserved), false);
+});
+
+test("atlas control regions and mobile detail panels become marker exclusions", () => {
+  const desktop = getGlobeMarkerExclusionRects(viewport, "explore", false);
+  const mobileViewport = { width: 390, height: 693 };
+  const mobile = getGlobeMarkerExclusionRects(mobileViewport, "explore", true);
+
+  assert.equal(desktop.some((rect) => rect.left <= 24 && rect.top <= 80 && rect.right >= 300), true);
+  assert.equal(mobile.some((rect) => (
+    rect.left === 0
+    && rect.right === mobileViewport.width
+    && rect.bottom === mobileViewport.height
+    && rect.height >= 240
+  )), true);
 });

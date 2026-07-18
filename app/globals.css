@@ -242,7 +242,8 @@
     position: relative;
     display: grid;
     grid-template-rows: 74px minmax(0, 1fr) 88px;
-    min-height: 100dvh;
+    height: 100dvh;
+    min-height: 0;
     overflow: hidden;
     isolation: isolate;
   }
@@ -655,6 +656,11 @@
     opacity: .94;
     pointer-events: auto;
   }
+  .globe-marker::after {
+    position: absolute;
+    inset: -5px;
+    content: "";
+  }
   .globe-marker:hover,
   .globe-marker--selected {
     z-index: 4;
@@ -762,6 +768,25 @@
   }
   .detail-pane__rail span { writing-mode: vertical-rl; }
   .detail-pane__rail i { flex: 1; width: 1px; margin: 14px 0; background: linear-gradient(var(--bronze-soft), transparent); }
+
+  .detail-pane__close {
+    position: absolute;
+    z-index: 6;
+    top: 9px;
+    right: 9px;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 50%;
+    background: rgba(5, 7, 8, .88);
+    color: var(--paper-soft);
+    font: 18px/1 var(--sans);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .28);
+    backdrop-filter: blur(10px);
+  }
+  .detail-pane__close:hover { border-color: var(--bronze-soft); color: var(--paper); }
 
   .detail-card {
     min-height: 0;
@@ -960,7 +985,7 @@
     .story-overlay { top: 62px; left: 20px; width: min(82vw, 420px); }
     .story-overlay h2 { font-size: clamp(32px, 10vw, 52px); }
     .story-overlay p { max-width: 90%; font-size: 12px; line-height: 1.75; }
-    .question-rail { top: 48px; right: 14px; left: 14px; width: auto; }
+    .question-rail { top: 72px; right: 14px; left: 14px; width: auto; }
     .question-rail__header { display: none; }
     .question-rail__items { display: flex; gap: 5px; overflow-x: auto; scrollbar-width: none; }
     .question-rail__items button { display: block; min-width: max-content; padding: 7px 9px; border: 1px solid var(--hairline); background: rgba(5, 6, 6, .7); }

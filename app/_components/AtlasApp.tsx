@@ -644,6 +644,7 @@ export default function AtlasApp({
   const setSearchOpen = useAtlasStore((state) => state.setSearchOpen);
   const setQuality = useAtlasStore((state) => state.setQuality);
   const toggleCompare = useAtlasStore((state) => state.toggleCompare);
+  const clearCompare = useAtlasStore((state) => state.clearCompare);
   const initialized = useSyncExternalStore(
     () => () => undefined,
     () => true,
@@ -668,6 +669,13 @@ export default function AtlasApp({
       const nextIndex = storyChapters.findIndex((chapter) => chapter.id === initialChapterId);
       if (nextIndex >= 0) setChapterIndex(nextIndex);
     }
+    const query = new URLSearchParams(window.location.search);
+    const question = query.get("question") as QuestionId | null;
+    const relation = query.get("relation");
+    const yearParam = query.get("year");
+    const year = yearParam === null ? Number.NaN : Number(yearParam);
+    if (question && questions.some((item) => item.id === question)) setQuestion(question);
+    if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
     if (initialThinkerSlug) {
       const thinker = thinkerBySlug.get(initialThinkerSlug);
       if (thinker) {
@@ -684,14 +692,7 @@ export default function AtlasApp({
       setMode("explore");
       setPlaying(false);
     }
-    const query = new URLSearchParams(window.location.search);
-    const question = query.get("question") as QuestionId | null;
-    const relation = query.get("relation");
-    const yearParam = query.get("year");
-    const year = yearParam === null ? Number.NaN : Number(yearParam);
-    if (question && questions.some((item) => item.id === question)) setQuestion(question);
     if (relation && relationById.has(relation)) selectRelation(relation);
-    if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
   }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuestion, setTimelineYear, toggleCompare]);
 
   useEffect(() => {
@@ -732,6 +733,18 @@ export default function AtlasApp({
     if (mode === "explore") syncExploreUrl(activeQuestionId, timelineYear);
   }, [activeQuestionId, mode, timelineYear]);
 
+  const handleCloseDetail = useCallback(() => {
+    selectThinker(null);
+    selectRelation(null);
+    clearCompare();
+    if (mode !== "explore") return;
+
+    const params = new URLSearchParams();
+    if (activeQuestionId) params.set("question", activeQuestionId);
+    params.set("year", String(timelineYear));
+    window.history.replaceState({}, "", `/explore?${params.toString()}`);
+  }, [activeQuestionId, clearCompare, mode, selectRelation, selectThinker, timelineYear]);
+
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
@@ -748,15 +761,14 @@ export default function AtlasApp({
         }
         setSearchOpen(false);
         setListViewOpen(false);
-        selectThinker(null);
-        selectRelation(null);
+        if (selectedThinkerId || selectedRelationId || compareIds.length > 0) handleCloseDetail();
       }
       if (mode === "story" && event.key === "ArrowRight") setChapterIndex(Math.min(storyChapters.length - 1, chapterIndex + 1));
       if (mode === "story" && event.key === "ArrowLeft") setChapterIndex(Math.max(0, chapterIndex - 1));
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [chapterIndex, listViewOpen, mode, searchOpen, selectRelation, selectThinker, setChapterIndex, setListViewOpen, setSearchOpen]);
+  }, [chapterIndex, compareIds.length, handleCloseDetail, listViewOpen, mode, searchOpen, selectedRelationId, selectedThinkerId, setChapterIndex, setListViewOpen, setSearchOpen]);
 
   const chooseQuality = (nextQuality: QualityTier) => {
     window.sessionStorage.setItem("atlas-quality", nextQuality);
@@ -812,6 +824,12 @@ export default function AtlasApp({
   };
 
   const showCompare = displayCompareIds.length === 2 && !displaySelectedThinkerId && !displaySelectedRelationId;
+  const detailOpen = Boolean(displaySelectedThinkerId || displaySelectedRelationId || showCompare);
+  const closeDetailLabel = displaySelectedThinkerId
+    ? "关闭人物详情"
+    : displaySelectedRelationId
+      ? "关闭关系详情"
+      : "关闭比较详情";
 
   return (
     <MotionConfig reducedMotion="user">
@@ -846,6 +864,7 @@ export default function AtlasApp({
               <GlobeCanvas
                 mode={displayMode}
                 earthMode={earthMode}
+                detailOpen={detailOpen}
                 isPlaying={isPlaying}
                 chapterIndex={displayChapterIndex}
                 selectedThinkerId={displaySelectedThinkerId}
@@ -871,7 +890,10 @@ export default function AtlasApp({
             </div>
           </section>
 
-          <aside className={`detail-pane${displaySelectedThinkerId || displaySelectedRelationId || showCompare ? " detail-pane--active" : ""}`}>
+          <aside className={`detail-pane${detailOpen ? " detail-pane--active" : ""}`}>
+            {detailOpen ? (
+              <button className="detail-pane__close" type="button" aria-label={closeDetailLabel} onClick={handleCloseDetail}>×</button>
+            ) : null}
             <div className="detail-pane__rail"><span>ARCHIVE</span><i /></div>
             <AnimatePresence mode="wait">
               {displaySelectedThinkerId ? <ThinkerDetail thinkerId={displaySelectedThinkerId} />

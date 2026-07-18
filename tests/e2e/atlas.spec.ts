@@ -54,6 +54,19 @@ test("question and timeline filters are reflected in the exploration URL", async
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1000");
 });
 
+test("closing a detail pane clears the selection and preserves exploration filters", async ({ page }) => {
+  await openHydrated(page, "/explore?thinker=confucius&question=good-life&year=1000");
+  await expect(page.getByRole("heading", { name: "孔子" })).toBeVisible();
+  await page.getByRole("button", { name: "关闭人物详情" }).click();
+  await expect(page).toHaveURL(/\/explore\?question=good-life&year=1000$/);
+  await expect(page.locator(".detail-pane")).not.toHaveClass(/detail-pane--active/);
+
+  await page.reload();
+  await waitForHydration(page);
+  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1000");
+  await expect(page.getByRole("button", { name: /怎样才算过好一生/ })).toHaveClass(/is-active/);
+});
+
 test("two selected thinkers produce and restore a shareable comparison", async ({ page }) => {
   await openHydrated(page, "/explore?thinker=confucius");
   await page.getByRole("button", { name: "加入比较" }).click();

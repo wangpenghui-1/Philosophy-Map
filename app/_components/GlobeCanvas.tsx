@@ -26,6 +26,7 @@ import {
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
   getGlobeMarkerLod,
+  getGlobeMarkerExclusionRects,
   layoutGlobeMarkers,
   type GlobeMarkerLayoutItem,
   type GlobeMarkerLod,
@@ -49,6 +50,7 @@ export type EarthLightingMode = "day" | "night";
 interface GlobeCanvasProps {
   mode: AtlasMode;
   earthMode: EarthLightingMode;
+  detailOpen: boolean;
   isPlaying: boolean;
   chapterIndex: number;
   selectedThinkerId: string | null;
@@ -393,34 +395,51 @@ function LegacyEarth({
 function EarthSystem({
   globeRef,
   quality,
+  reduceMotion,
   shared,
 }: {
   globeRef: RefObject<THREE.Mesh | null>;
   quality: QualityTier;
+  reduceMotion: boolean;
   shared: SharedEarthUniforms;
 }) {
-  const { gl } = useThree();
-  const [dayMap, nightMap, normalMap, specularMap, cloudMap] = useTexture(
-    EARTH_TEXTURE_URLS as unknown as string[],
-  ) as unknown as [THREE.Texture, THREE.Texture, THREE.Texture, THREE.Texture, THREE.Texture];
+  const { gl, invalidate } = useThree();
+  const textureUrls = useMemo(
+    () => quality === "low" ? EARTH_TEXTURE_URLS.slice(0, 2) : [...EARTH_TEXTURE_URLS],
+    [quality],
+  );
+  const loadedTextures = useTexture(textureUrls as string[]) as THREE.Texture[];
+  const [dayMap, nightMap, loadedNormalMap, loadedSpecularMap, loadedCloudMap] = loadedTextures;
+  const normalMap = loadedNormalMap ?? dayMap;
+  const specularMap = loadedSpecularMap ?? dayMap;
+  const cloudMap = loadedCloudMap ?? dayMap;
 
   useEffect(() => {
     dayMap.colorSpace = THREE.SRGBColorSpace;
     nightMap.colorSpace = THREE.SRGBColorSpace;
-    normalMap.colorSpace = THREE.NoColorSpace;
-    specularMap.colorSpace = THREE.NoColorSpace;
-    cloudMap.colorSpace = THREE.NoColorSpace;
+    if (loadedNormalMap) loadedNormalMap.colorSpace = THREE.NoColorSpace;
+    if (loadedSpecularMap) loadedSpecularMap.colorSpace = THREE.NoColorSpace;
+    if (loadedCloudMap) loadedCloudMap.colorSpace = THREE.NoColorSpace;
     const anisotropy = Math.min(
       quality === "high" ? 8 : quality === "medium" ? 4 : 2,
       gl.capabilities.getMaxAnisotropy(),
     );
-    for (const texture of [dayMap, nightMap, normalMap, specularMap, cloudMap]) {
+    for (const texture of loadedTextures) {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.ClampToEdgeWrapping;
       texture.anisotropy = anisotropy;
       texture.needsUpdate = true;
     }
-  }, [cloudMap, dayMap, gl, nightMap, normalMap, quality, specularMap]);
+  }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality]);
+
+  useEffect(() => {
+    if (reduceMotion || quality === "low") return;
+    const interval = window.setInterval(
+      () => invalidate(),
+      quality === "high" ? 1000 / 24 : 1000 / 18,
+    );
+    return () => window.clearInterval(interval);
+  }, [invalidate, quality, reduceMotion]);
 
   const surfaceUniforms = useMemo(() => ({
     uDayMap: { value: dayMap },
@@ -843,12 +862,16 @@ function markerClusterKey(thinker: Thinker) {
 }
 
 function MarkerLayoutController({
+  mode,
+  detailOpen,
   visibleThinkerIds,
   storyThinkerIds,
   selectedThinkerId,
   selectedRelationId,
   onLayout,
 }: {
+  mode: AtlasMode;
+  detailOpen: boolean;
   visibleThinkerIds: Set<string>;
   storyThinkerIds: Set<string>;
   selectedThinkerId: string | null;
@@ -908,6 +931,7 @@ function MarkerLayoutController({
       cameraDistance,
       {
         lodOverride: lodRef.current,
+        exclusionRects: getGlobeMarkerExclusionRects(size, mode, detailOpen),
         viewportPadding: size.width < 620 ? 8 : 16,
         collisionPadding: size.width < 620 ? 6 : 9,
         maxVisible: size.width < 620
@@ -980,7 +1004,12 @@ function GlobeScene({
       <StarField quality={props.quality} />
       <group>
         <Suspense fallback={<LegacyEarth globeRef={globeRef} />}>
-          <EarthSystem globeRef={globeRef} quality={props.quality} shared={shared} />
+          <EarthSystem
+            globeRef={globeRef}
+            quality={props.quality}
+            reduceMotion={props.reduceMotion}
+            shared={shared}
+          />
         </Suspense>
         <CountryBorders quality={props.quality} />
         <Atmosphere quality={props.quality} shared={shared} />
@@ -1052,6 +1081,8 @@ function GlobeScene({
         shared={shared}
       />
       <MarkerLayoutController
+        mode={props.mode}
+        detailOpen={props.detailOpen}
         visibleThinkerIds={visibleThinkerIds}
         storyThinkerIds={storyThinkerIds}
         selectedThinkerId={props.selectedThinkerId}

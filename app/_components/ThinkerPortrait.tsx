@@ -13,7 +13,7 @@ interface ThinkerPortraitProps {
 export default function ThinkerPortrait({ thinker, variant, showNote = false, className = "" }: ThinkerPortraitProps) {
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const source = variant === "full" ? thinker.media.fullSrc : thinker.media.thumbSrc;
-  const failed = !source || failedSource === source;
+  const failed = !source || source === "/globe.svg" || failedSource === source;
 
   return (
     <figure

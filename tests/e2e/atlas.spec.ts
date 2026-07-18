@@ -43,7 +43,7 @@ test("search traps focus and links the globe state to the reading page", async (
 
 test("question and timeline filters are reflected in the exploration URL", async ({ page }) => {
   await openHydrated(page, "/explore");
-  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1986");
+  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("2026");
   await page.getByRole("button", { name: /人是否自由/ }).click();
   await expect(page).toHaveURL(/question=freedom/);
   await page.getByRole("slider", { name: "历史时间轴" }).fill("1000");

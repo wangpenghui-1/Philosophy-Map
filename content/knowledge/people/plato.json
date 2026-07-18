@@ -51,7 +51,7 @@
     {
       "sourceId": "src-plato",
       "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持柏拉图的摘要主张：柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形…"
     }
   ],
   "sections": [
@@ -65,7 +65,7 @@
             {
               "sourceId": "src-plato",
               "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形…"
             }
           ]
         },
@@ -75,7 +75,7 @@
             {
               "sourceId": "src-plato",
               "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：变化世界中的知识如何可能，正义城邦又应如何组织？"
             }
           ]
         },
@@ -85,7 +85,7 @@
             {
               "sourceId": "src-plato",
               "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。"
             }
           ]
         }
@@ -110,7 +110,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -66,8 +66,11 @@ npm run typecheck
 npm test
 npm run test:e2e
 npm run test:all
+npm run review:full
 ```
 
 `npm run content:audit`会阻止无效引用、缺失端点、不合格发布状态和不满足内容层级的条目进入生成物。`npm test`会先生成发布构建，再检查知识库路由、30/27/31迁移基线、候选隔离、240人规模模拟、媒体文件、关系语义和客户端分包预算。`npm run test:e2e`使用桌面与移动端 Chromium 检查核心交互、知识库URL恢复、降级模式和视觉快照。
+
+`npm run review:full` 是最终审核前的统一入口：它执行安全编辑检查、内容与证据审计、代码检查、构建、数据测试和浏览器回归，并在 `artifacts/review/` 生成审核包。完整自动化边界见 `docs/AUTOMATED_REVIEW_PIPELINE.md`。
 
 公开演示版的发布验收记录见 `docs/RELEASE_CHECKLIST.md`。

@@ -50,7 +50,7 @@
     {
       "sourceId": "src-augustine",
       "locator": "Sections on Platonism, will, time and the two cities",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持奥古斯丁的摘要主张：奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志…"
     }
   ],
   "sections": [
@@ -64,7 +64,7 @@
             {
               "sourceId": "src-augustine",
               "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志…"
             }
           ]
         },
@@ -74,7 +74,7 @@
             {
               "sourceId": "src-augustine",
               "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：意志为何会与自身冲突，时间又如何存在于心灵之中？"
             }
           ]
         },
@@ -84,7 +84,7 @@
             {
               "sourceId": "src-augustine",
               "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

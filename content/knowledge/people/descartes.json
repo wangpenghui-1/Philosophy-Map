@@ -49,7 +49,7 @@
     {
       "sourceId": "src-descartes",
       "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持笛卡尔的摘要主张：笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-descartes",
               "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-descartes",
               "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：当一切都可以怀疑时，知识从何处重新开始？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-descartes",
               "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -49,7 +49,7 @@
     {
       "sourceId": "src-arendt",
       "locator": "Sections on action, plurality, totalitarianism and judgment",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持阿伦特的摘要主张：阿伦特是1906–1975活跃于欧洲—北美的现代政治思想思想人物，主要追问“公共自由如何在人们共同言说和行动时出现？”。其核心主张可概括为：政治不只是治理技术，而是不同的人在共…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-arendt",
               "locator": "Sections on action, plurality, totalitarianism and judgment",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：阿伦特是1906–1975活跃于欧洲—北美的现代政治思想思想人物，主要追问“公共自由如何在人们共同言说和行动时出现？”。其核心主张可概括为：政治不只是治理技术，而是不同的人在共…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-arendt",
               "locator": "Sections on action, plurality, totalitarianism and judgment",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：公共自由如何在人们共同言说和行动时出现？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-arendt",
               "locator": "Sections on action, plurality, totalitarianism and judgment",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：政治不只是治理技术，而是不同的人在共享世界中行动、承诺和开始新事物。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -18,12 +18,12 @@
     {
       "sourceId": "src-hume",
       "locator": "Sections on causation, self, morals and skepticism",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持因果怀疑唤醒批判哲学的摘要主张：康德明确把休谟对因果必然性的挑战视为批判哲学的重要触发点，并以先验条件回应经验主义难题。"
     },
     {
       "sourceId": "src-kant",
       "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持因果怀疑唤醒批判哲学的摘要主张：康德明确把休谟对因果必然性的挑战视为批判哲学的重要触发点，并以先验条件回应经验主义难题。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

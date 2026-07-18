@@ -50,7 +50,7 @@
     {
       "sourceId": "src-nietzsche",
       "locator": "Sections on genealogy, values, perspectivism and agency",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持尼采的摘要主张：尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道…"
     }
   ],
   "sections": [
@@ -64,7 +64,7 @@
             {
               "sourceId": "src-nietzsche",
               "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道…"
             }
           ]
         },
@@ -74,7 +74,7 @@
             {
               "sourceId": "src-nietzsche",
               "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：价值从何而来，谁从既有的善恶判断中获益？"
             }
           ]
         },
@@ -84,7 +84,7 @@
             {
               "sourceId": "src-nietzsche",
               "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

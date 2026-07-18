@@ -50,7 +50,7 @@
     {
       "sourceId": "src-aquinas",
       "locator": "Sections on being, natural law and Aristotelian philosophy",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持托马斯·阿奎那的摘要主张：托马斯·阿奎那是约1225–1274活跃于欧洲的经院哲学思想人物，主要追问“理性、自然与信仰能否在同一知识秩序中相容？”。其核心主张可概括为：从存在、因果与目的的层级出发，理性…"
     }
   ],
   "sections": [
@@ -64,7 +64,7 @@
             {
               "sourceId": "src-aquinas",
               "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：托马斯·阿奎那是约1225–1274活跃于欧洲的经院哲学思想人物，主要追问“理性、自然与信仰能否在同一知识秩序中相容？”。其核心主张可概括为：从存在、因果与目的的层级出发，理性…"
             }
           ]
         },
@@ -74,7 +74,7 @@
             {
               "sourceId": "src-aquinas",
               "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：理性、自然与信仰能否在同一知识秩序中相容？"
             }
           ]
         },
@@ -84,7 +84,7 @@
             {
               "sourceId": "src-aquinas",
               "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：从存在、因果与目的的层级出发，理性能够探究自然法与人的善。"
             }
           ]
         }
@@ -109,7 +109,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

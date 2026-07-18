@@ -49,7 +49,7 @@
     {
       "sourceId": "src-wollstonecraft",
       "locator": "Sections on education, rights and her critique of Rousseau",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持沃斯通克拉夫特的摘要主张：沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-wollstonecraft",
               "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-wollstonecraft",
               "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：当教育制造依赖时，平等与理性如何真正属于所有人？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-wollstonecraft",
               "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

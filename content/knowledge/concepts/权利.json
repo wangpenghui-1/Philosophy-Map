@@ -14,7 +14,7 @@
         {
           "sourceId": "src-locke",
           "locator": "Sections on ideas, personal identity and political authority",
-          "claim": "支持本条目的生平、思想概述或关系说明。"
+          "claim": "支持“权利”义项：在洛克条目中，“权利”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
         }
       ]
     }
@@ -36,14 +36,14 @@
     {
       "sourceId": "src-locke",
       "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持权利的摘要主张：“权利”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
   "contentTier": "index",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

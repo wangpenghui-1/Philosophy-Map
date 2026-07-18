@@ -18,12 +18,12 @@
     {
       "sourceId": "src-descartes",
       "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持经验主义对天赋观念的挑战的摘要主张：洛克以经验中的观念形成反驳近代理性主义的天赋观念路线，笛卡尔式知识起点成为其明确的争论背景。"
     },
     {
       "sourceId": "src-locke",
       "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持经验主义对天赋观念的挑战的摘要主张：洛克以经验中的观念形成反驳近代理性主义的天赋观念路线，笛卡尔式知识起点成为其明确的争论背景。"
     }
   ],
   "atlasVisibility": true,
@@ -31,7 +31,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

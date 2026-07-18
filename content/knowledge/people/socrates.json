@@ -49,7 +49,7 @@
     {
       "sourceId": "src-socrates",
       "locator": "Sections 1–3: the historical problem, method and ethics",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持苏格拉底的摘要主张：苏格拉底是约公元前470–399活跃于地中海的古希腊哲学思想人物，主要追问“未经反省的生活为何不值得过？”。其核心主张可概括为：承认无知并持续追问，是照料灵魂和检验公共意见的起…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-socrates",
               "locator": "Sections 1–3: the historical problem, method and ethics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：苏格拉底是约公元前470–399活跃于地中海的古希腊哲学思想人物，主要追问“未经反省的生活为何不值得过？”。其核心主张可概括为：承认无知并持续追问，是照料灵魂和检验公共意见的起…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-socrates",
               "locator": "Sections 1–3: the historical problem, method and ethics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：未经反省的生活为何不值得过？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-socrates",
               "locator": "Sections 1–3: the historical problem, method and ethics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：承认无知并持续追问，是照料灵魂和检验公共意见的起点。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

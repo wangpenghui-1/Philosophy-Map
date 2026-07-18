@@ -49,7 +49,7 @@
     {
       "sourceId": "src-hume",
       "locator": "Sections on causation, self, morals and skepticism",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持休谟的摘要主张：休谟是1711–1776活跃于欧洲的苏格兰启蒙运动思想人物，主要追问“因果、自我与道德判断究竟来自理性还是经验习惯？”。其核心主张可概括为：许多确定感来自习惯与情感，而不是理性…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-hume",
               "locator": "Sections on causation, self, morals and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：休谟是1711–1776活跃于欧洲的苏格兰启蒙运动思想人物，主要追问“因果、自我与道德判断究竟来自理性还是经验习惯？”。其核心主张可概括为：许多确定感来自习惯与情感，而不是理性…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-hume",
               "locator": "Sections on causation, self, morals and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：因果、自我与道德判断究竟来自理性还是经验习惯？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-hume",
               "locator": "Sections on causation, self, morals and skepticism",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：许多确定感来自习惯与情感，而不是理性能够独立证明的必然联系。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

@@ -19,12 +19,12 @@
     {
       "sourceId": "src-kierkegaard",
       "locator": "Sections on existence, anxiety, choice and the critique of system",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持体系之外的个体与价值的摘要主张：两人都从不同方向挑战抽象体系并追问个体如何承担价值；这条线只表示后世比较建立的主题共鸣，不主张历史影响。"
     },
     {
       "sourceId": "src-nietzsche",
       "locator": "Sections on genealogy, values, perspectivism and agency",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持体系之外的个体与价值的摘要主张：两人都从不同方向挑战抽象体系并追问个体如何承担价值；这条线只表示后世比较建立的主题共鸣，不主张历史影响。"
     }
   ],
   "atlasVisibility": true,
@@ -32,7 +32,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

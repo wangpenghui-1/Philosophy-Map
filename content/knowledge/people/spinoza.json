@@ -49,7 +49,7 @@
     {
       "sourceId": "src-spinoza",
       "locator": "Sections on substance, affects, freedom and politics",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持斯宾诺莎的摘要主张：斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并…"
     }
   ],
   "sections": [
@@ -63,7 +63,7 @@
             {
               "sourceId": "src-spinoza",
               "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并…"
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "sourceId": "src-spinoza",
               "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：如果万物都在因果秩序中，自由还能意味着什么？"
             }
           ]
         },
@@ -83,7 +83,7 @@
             {
               "sourceId": "src-spinoza",
               "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。"
             }
           ]
         }
@@ -107,7 +107,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

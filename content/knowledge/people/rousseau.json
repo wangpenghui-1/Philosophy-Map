@@ -50,7 +50,7 @@
     {
       "sourceId": "src-rousseau",
       "locator": "Sections on inequality, freedom, education and the general will",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持卢梭的摘要主张：卢梭是1712–1778活跃于欧洲的启蒙政治哲学思想人物，主要追问“人如何在共同体中服从法律却仍保持自由？”。其核心主张可概括为：政治自由要求公民共同形成普遍意志，而社会制度也…"
     }
   ],
   "sections": [
@@ -64,7 +64,7 @@
             {
               "sourceId": "src-rousseau",
               "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：卢梭是1712–1778活跃于欧洲的启蒙政治哲学思想人物，主要追问“人如何在共同体中服从法律却仍保持自由？”。其核心主张可概括为：政治自由要求公民共同形成普遍意志，而社会制度也…"
             }
           ]
         },
@@ -74,7 +74,7 @@
             {
               "sourceId": "src-rousseau",
               "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：人如何在共同体中服从法律却仍保持自由？"
             }
           ]
         },
@@ -84,7 +84,7 @@
             {
               "sourceId": "src-rousseau",
               "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。"
             }
           ]
         }
@@ -108,7 +108,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

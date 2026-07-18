@@ -53,7 +53,7 @@
     {
       "sourceId": "src-fanon",
       "locator": "Introduction and sections on colonial subjectivity and liberation",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持法农的摘要主张：法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主…"
     }
   ],
   "sections": [
@@ -67,7 +67,7 @@
             {
               "sourceId": "src-fanon",
               "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主…"
             }
           ]
         },
@@ -77,7 +77,7 @@
             {
               "sourceId": "src-fanon",
               "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心问题：殖民权力如何进入身体、自我与被承认的可能？"
             }
           ]
         },
@@ -87,7 +87,7 @@
             {
               "sourceId": "src-fanon",
               "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本条目的生平、思想概述或关系说明。"
+              "claim": "支持本段主张：核心主张：殖民不仅控制土地，也制造被种族化的主体与心理结构。"
             }
           ]
         }
@@ -111,7 +111,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

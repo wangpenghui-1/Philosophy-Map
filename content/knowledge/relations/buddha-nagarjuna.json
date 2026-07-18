@@ -19,12 +19,12 @@
     {
       "sourceId": "src-buddha",
       "locator": "Section 2: Core Teachings",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持佛教传统中的哲学展开的摘要主张：龙树在佛教传统内部发展中道与空的论证；这条线表示思想传统的延展，不表示两人存在直接师承。"
     },
     {
       "sourceId": "src-nagarjuna",
       "locator": "Introduction and sections on emptiness and the middle way",
-      "claim": "支持本条目的生平、思想概述或关系说明。"
+      "claim": "支持佛教传统中的哲学展开的摘要主张：龙树在佛教传统内部发展中道与空的论证；这条线表示思想传统的延展，不表示两人存在直接师承。"
     }
   ],
   "atlasVisibility": true,
@@ -32,7 +32,7 @@
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "首轮迁移复核",
+  "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
   "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
 }

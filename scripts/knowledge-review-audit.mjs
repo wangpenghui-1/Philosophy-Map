@@ -1,5 +1,6 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { auditContentProduction } from "./content-production-audit.mjs";
 
 const entityDirectories = ["people", "concepts", "traditions", "works", "contexts", "places", "sources", "relations"];
 const sourceQuality = {
@@ -107,6 +108,9 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   }
   if (heavyweightIndexes.length) findings.push(finding("blocker", "client-index-leak", "轻量客户端索引包含正文段落。", heavyweightIndexes));
 
+  const production = await auditContentProduction({ contentRoot });
+  findings.push(...production.findings);
+
   findings.push(finding("approval", "final-human-approval", `自动审核不会发布或部署；${published.length}个published记录及本次代码变更仍需最终人工批准。`, published));
 
   return {
@@ -118,6 +122,7 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
       relations: all.relations.length,
       sources: all.sources.length,
       coverageCandidates: coverage.candidates.length,
+      production: production.summary,
     },
     findings,
   };

@@ -11,6 +11,7 @@ import {
   retryFailedJobs,
   summarizeBatch,
 } from "../scripts/content-batch-runner.mjs";
+import { auditContentProduction } from "../scripts/content-production-audit.mjs";
 import {
   createBatchManifest,
   createProductionTask,
@@ -149,4 +150,14 @@ test("state machine requires verified sources, located claims, and all reviews",
   assert.equal(task.workflow.status, "ready-for-promotion");
   assert.deepEqual(evaluatePromotionReadiness(task), []);
   assert.equal(task.target.publicVisibility, false);
+});
+
+test("repository production audit validates all 30 private batch tasks", async () => {
+  const audit = await auditContentProduction({ contentRoot: path.join(projectRoot, "content/knowledge") });
+  assert.equal(audit.summary.batchCount, 1);
+  assert.equal(audit.summary.taskCount, 30);
+  assert.equal(audit.summary.runnableJobs, 60);
+  assert.equal(audit.summary.publicCandidates, 0);
+  assert.deepEqual(audit.findings.filter((item) => item.severity === "blocker"), []);
+  assert.ok(audit.findings.some((item) => item.code === "production-progress"));
 });

@@ -40,6 +40,7 @@ async function gitValue(args) {
 
 if (fix) stages.push(await run(process.execPath, ["scripts/automated-editor.mjs", "--write"], "Automated editor fix"));
 stages.push(await run(process.execPath, ["scripts/automated-editor.mjs"], "Automated editor check"));
+stages.push(await run("npm", ["run", "content:batch:check"], "Content production scaffold"));
 stages.push(await run("npm", ["run", "content:build"], "Knowledge schema and generation"));
 
 let audit = { summary: {}, findings: [{ severity: "blocker", code: "audit-not-run", message: "内容审计未运行。", count: 0, samples: [] }] };

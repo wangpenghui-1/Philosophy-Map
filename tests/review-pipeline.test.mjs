@@ -29,6 +29,9 @@ test("knowledge review audit reports no deterministic blockers", async () => {
   assert.equal(result.summary.relations, 27);
   assert.equal(result.summary.sources, 31);
   assert.equal(result.summary.coverageCandidates, 210);
+  assert.equal(result.summary.production.batchCount, 1);
+  assert.equal(result.summary.production.taskCount, 30);
+  assert.equal(result.summary.production.publicCandidates, 0);
   assert.deepEqual(result.findings.filter((item) => item.severity === "blocker"), []);
   assert.ok(result.findings.some((item) => item.code === "final-human-approval"));
 });

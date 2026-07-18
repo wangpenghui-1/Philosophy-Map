@@ -100,6 +100,39 @@ const stageInstructions = {
   "editorial-assembly": "确认所有自动门禁通过，只将任务标记为可形成candidate实体；不得改为published或进入公开生成物。",
 };
 
+const stagePayloadContracts = {
+  "identity-and-chronology": {
+    required: ["originalName", "aliases", "chronology"],
+    chronologyRequired: ["label", "startYear", "endYear", "certainty", "note"],
+  },
+  "source-discovery": {
+    required: ["sourceLeads"],
+    sourceLeadRequired: ["id", "title", "authors", "sourceType", "publication", "year", "identifiers", "verification", "relevance"],
+    constraint: "all verification.status values must be pending",
+  },
+  "source-verification": {
+    required: ["sourceLeads"],
+    constraint: "verified sources require method, checkedAt, and URL/DOI/ISBN; reference datasets cannot stand alone",
+  },
+  "index-draft": {
+    required: ["guidingQuestion", "thesis", "summary", "proposedConcepts", "proposedWorks", "proposedPlaces", "claims"],
+    constraint: "summary is 80–180 Chinese characters and every claim task is addressed",
+  },
+  "citation-location": {
+    required: ["citations"],
+    citationRequired: ["claimTaskId", "sourceLeadId", "locator"],
+    constraint: "every claim task uses a verified source and a precise locator",
+  },
+  "bias-and-counterevidence": {
+    required: ["crossCulturalBias", "counterEvidence", "attributionAndUncertainty"],
+    constraint: "all three checks must pass and include non-empty notes",
+  },
+  "editorial-assembly": {
+    required: ["decision", "notes"],
+    constraint: "decision must be ready-for-promotion; published is forbidden",
+  },
+};
+
 const batchIdFor = (batchNumber) => `batch-${String(batchNumber).padStart(2, "0")}`;
 const jsonText = (value) => `${JSON.stringify(value, null, 2)}\n`;
 
@@ -229,6 +262,7 @@ export function applyWorkerResult(taskInput, resultInput) {
   const result = workerResultSchema.parse(resultInput);
   if (task.batchId !== result.batchId || task.candidateId !== result.candidateId) throw new Error("Worker result does not belong to this task.");
   const job = jobById(task, result.stage);
+  if (job.lastResultId === result.resultId) return productionTaskSchema.parse(task);
   if (job.status !== "pending") throw new Error(`${result.stage} is not pending.`);
   if (!runnableJobs(task).some((candidate) => candidate.id === result.stage)) throw new Error(`${result.stage} dependencies are incomplete.`);
   if (job.attempts >= job.maxAttempts) throw new Error(`${result.stage} has exhausted its retry budget.`);
@@ -237,6 +271,7 @@ export function applyWorkerResult(taskInput, resultInput) {
   if (result.outcome === "failed") {
     job.status = "failed";
     job.lastError = result.error;
+    job.lastResultId = result.resultId;
     task.workflow.status = "blocked";
     task.workflow.revision += 1;
     return productionTaskSchema.parse(task);
@@ -250,6 +285,7 @@ export function applyWorkerResult(taskInput, resultInput) {
   }
   job.status = "passed";
   job.lastError = null;
+  job.lastResultId = result.resultId;
   task.workflow.status = workflowStatusAfter(result.stage);
   task.workflow.revision += 1;
   return productionTaskSchema.parse(task);
@@ -283,6 +319,7 @@ export function buildWorkerQueue(tasks, { limit = Number.POSITIVE_INFINITY } = {
         proposedPersonId: task.proposedPersonId,
         stage: job.id,
         attempt: job.attempts + 1,
+        suggestedResultId: `${task.batchId}:${task.candidateId}:${job.id}:attempt-${job.attempts + 1}`,
         instruction: stageInstructions[job.id],
         context: {
           identity: task.identity,
@@ -296,10 +333,10 @@ export function buildWorkerQueue(tasks, { limit = Number.POSITIVE_INFINITY } = {
           review: task.review,
         },
         resultContract: {
-          outcome: "passed|failed",
-          worker: "必须明确自动工作者身份",
-          payload: `必须满足 ${job.id} 阶段结构；不得返回published状态`,
-          error: "失败时包含code、message、retryable",
+          envelopeRequired: ["schemaVersion", "resultId", "batchId", "candidateId", "stage", "outcome", "worker"],
+          payload: stagePayloadContracts[job.id],
+          failureRequired: ["error.code", "error.message", "error.retryable"],
+          idempotency: "同一resultId重复投递不会重复增加尝试次数",
         },
         guardrails: [
           "只使用可追溯来源，不把搜索摘要当作证据。",
@@ -312,6 +349,22 @@ export function buildWorkerQueue(tasks, { limit = Number.POSITIVE_INFINITY } = {
   return packets
     .sort((left, right) => left.candidateId.localeCompare(right.candidateId) || left.stage.localeCompare(right.stage))
     .slice(0, limit);
+}
+
+export function applyWorkerResults(tasks, results) {
+  const parsedResults = results.map((result) => workerResultSchema.parse(result));
+  const resultIds = parsedResults.map((result) => result.resultId);
+  if (new Set(resultIds).size !== resultIds.length) throw new Error("Worker result batch contains duplicate resultId values.");
+  const byCandidate = new Map(tasks.map((task) => {
+    const parsed = productionTaskSchema.parse(task);
+    return [parsed.candidateId, parsed];
+  }));
+  for (const result of parsedResults) {
+    const current = byCandidate.get(result.candidateId);
+    if (!current) throw new Error(`Unknown candidate ${result.candidateId}.`);
+    byCandidate.set(result.candidateId, applyWorkerResult(current, result));
+  }
+  return [...byCandidate.values()].sort((left, right) => left.candidateId.localeCompare(right.candidateId));
 }
 
 export function summarizeBatch(tasks) {
@@ -408,13 +461,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     const raw = JSON.parse(await readFile(path.resolve(resultFile), "utf8"));
     const results = Array.isArray(raw) ? raw : raw.results;
     if (!Array.isArray(results)) throw new Error("Worker result file must be an array or contain a results array.");
-    const byCandidate = new Map(tasks.map((task) => [task.candidateId, task]));
-    for (const result of results) {
-      const current = byCandidate.get(result.candidateId);
-      if (!current) throw new Error(`Unknown candidate ${result.candidateId}.`);
-      byCandidate.set(result.candidateId, applyWorkerResult(current, result));
-    }
-    tasks = [...byCandidate.values()].sort((left, right) => left.candidateId.localeCompare(right.candidateId));
+    tasks = applyWorkerResults(tasks, results);
     await Promise.all(tasks.map((task) => writeTask(batch.batchRoot, task)));
     console.log(`Applied ${results.length} worker result(s) to ${batch.batchId}.`);
   }

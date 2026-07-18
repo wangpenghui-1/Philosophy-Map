@@ -63,6 +63,7 @@ function initialJobs() {
     dependsOn: jobDependencies[id],
     attempts: 0,
     maxAttempts: 3,
+    lastResultId: null,
     lastError: null,
   }));
 }
@@ -246,6 +247,10 @@ export async function prepareContentBatch({ batchNumber, contentRoot = defaultCo
     if (existing) {
       const task = productionTaskSchema.parse(existing);
       assertTaskMatchesCandidate(task, candidate);
+      if (jsonText(task) !== jsonText(existing)) {
+        changes.push(file);
+        if (write) await writeFile(file, jsonText(task));
+      }
       continue;
     }
     changes.push(file);

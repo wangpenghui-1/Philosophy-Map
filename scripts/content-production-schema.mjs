@@ -30,6 +30,7 @@ export const productionJobSchema = z.object({
   dependsOn: z.array(z.enum(productionStages)),
   attempts: z.number().int().nonnegative(),
   maxAttempts: z.number().int().positive(),
+  lastResultId: z.string().min(1).nullable().default(null),
   lastError: z.object({
     code: z.string().min(1),
     message: z.string().min(1),
@@ -176,6 +177,7 @@ export const productionManifestSchema = z.object({
 
 export const workerResultSchema = z.object({
   schemaVersion: z.literal(1),
+  resultId: z.string().min(1),
   batchId: z.string().regex(/^batch-\d{2}$/),
   candidateId: z.string().regex(/^candidate-\d{3}$/),
   stage: z.enum(productionStages),

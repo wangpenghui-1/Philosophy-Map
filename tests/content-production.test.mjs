@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { productionTaskSchema } from "../scripts/content-production-schema.mjs";
 import {
   applyWorkerResult,
+  applyWorkerResults,
   buildWorkerQueue,
   evaluatePromotionReadiness,
   retryFailedJobs,
@@ -54,6 +55,7 @@ test("romanized names produce stable repository-safe ids", () => {
 function workerResult(task, stage, payload) {
   return {
     schemaVersion: 1,
+    resultId: `${task.candidateId}:${stage}:test`,
     batchId: task.batchId,
     candidateId: task.candidateId,
     stage,
@@ -97,6 +99,7 @@ test("failed jobs retry only within their explicit budget", () => {
   const task = createProductionTask(batchOne[0]);
   const failed = applyWorkerResult(task, {
     schemaVersion: 1,
+    resultId: "candidate-001:source-discovery:failed-1",
     batchId: task.batchId,
     candidateId: task.candidateId,
     stage: "source-discovery",
@@ -109,6 +112,22 @@ test("failed jobs retry only within their explicit budget", () => {
   const retried = retryFailedJobs(failed);
   assert.equal(retried.retried, 1);
   assert.equal(retried.task.workflow.jobs.find((job) => job.id === "source-discovery").status, "pending");
+});
+
+test("worker result batches are transactional and duplicate delivery is idempotent", () => {
+  const task = createProductionTask(batchOne[0]);
+  const result = workerResult(task, "identity-and-chronology", {
+    originalName: "老子",
+    aliases: [],
+    chronology: { label: "约公元前6至5世纪", startYear: -600, endYear: -400, certainty: "disputed", note: "年代有争议。" },
+  });
+  const once = applyWorkerResults([task], [result])[0];
+  const twice = applyWorkerResult(once, result);
+  assert.deepEqual(twice, once);
+  assert.equal(twice.workflow.jobs.find((job) => job.id === "identity-and-chronology").attempts, 1);
+
+  assert.throws(() => applyWorkerResults([task], [result, result]), /duplicate resultId/);
+  assert.equal(task.workflow.jobs.find((job) => job.id === "identity-and-chronology").attempts, 0);
 });
 
 test("state machine requires verified sources, located claims, and all reviews", () => {

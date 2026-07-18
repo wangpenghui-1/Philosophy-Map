@@ -63,6 +63,27 @@ npm run content:batch:report
 
 队列和报告写入 `artifacts/production/batch-01/`，不进入版本库。工作者结果必须说明自动工作者身份；失败结果必须包含错误码、说明和是否可重试。任何结果都不能写入 `published`。
 
+每个队列工作包都包含建议的 `resultId`、阶段说明、当前候选上下文、阶段专用字段契约和安全边界。工作者应原样返回该 `resultId`。相同结果重复投递是幂等的，不会重复增加尝试次数；同一结果文件出现重复 `resultId` 会在任何任务写回前整体拒绝。
+
+失败结果的最小结构如下：
+
+```json
+{
+  "schemaVersion": 1,
+  "resultId": "batch-01:candidate-001:source-discovery:attempt-1",
+  "batchId": "batch-01",
+  "candidateId": "candidate-001",
+  "stage": "source-discovery",
+  "outcome": "failed",
+  "worker": "automated-content-worker/v1",
+  "error": {
+    "code": "source-access-failed",
+    "message": "无法访问足够的学术来源元数据。",
+    "retryable": true
+  }
+}
+```
+
 ## 装配门禁
 
 任务进入 `ready-for-promotion` 前必须同时满足：

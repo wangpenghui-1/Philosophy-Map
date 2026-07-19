@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  getGlobeAnchorMountIds,
   getGlobeMarkerExclusionRects,
   layoutGlobeMarkers,
 } from "../app/_components/globe-marker-layout.ts";
@@ -124,14 +125,19 @@ test("camera hysteresis can hold a near layout across the raw LOD boundary", () 
   assert.equal(layout.filter((item) => item.visible).length, 2);
 });
 
-test("the live globe uses the collision layout, portrait assets, and local day/night textures", () => {
+test("the live globe uses budgeted surface anchors, portrait assets, and local day/night textures", () => {
   const source = readFileSync(new URL("../app/_components/GlobeCanvas.tsx", import.meta.url), "utf8");
 
   assert.match(source, /layoutGlobeMarkers\(/);
   assert.match(source, /thinker\.media\.thumbSrc/);
   assert.match(source, /earth-day\.jpg/);
   assert.match(source, /earth-night\.png/);
+  assert.match(source, /getGlobeAnchorMountIds\(/);
+  assert.match(source, /circleGeometry/);
+  assert.match(source, /ringGeometry/);
+  assert.match(source, /surfaceQuaternion/);
   assert.match(source, /THREE\.AdditiveBlending/);
+  assert.doesNotMatch(source, /torusGeometry/);
   assert.doesNotMatch(source, /<Html\b/);
 });
 
@@ -154,6 +160,40 @@ test("240-person synthetic input respects desktop and mobile marker budgets", ()
   assert.equal(mobile.filter((item) => item.visible).length, 16);
   assert.equal(desktop.length, 240);
   assert.equal(mobile.length, 240);
+});
+
+test("WebGL anchors use the same budget while retaining selected people and relation endpoints", () => {
+  const layout = Array.from({ length: 36 }, (_, index) => ({
+    id: `visible-${String(index).padStart(2, "0")}`,
+    visible: true,
+    screenX: index,
+    screenY: index,
+    offsetX: 0,
+    offsetY: 0,
+    scale: 1,
+    clusterCount: 1,
+    lod: "near",
+    bounds: null,
+  }));
+  const desktop = getGlobeAnchorMountIds(
+    layout,
+    ["selected", "relation-from", "relation-to"],
+    36,
+  );
+  const mobile = getGlobeAnchorMountIds(
+    layout,
+    ["selected", "relation-from", "relation-to"],
+    16,
+  );
+
+  for (const ids of [desktop, mobile]) {
+    assert.equal(ids.has("selected"), true);
+    assert.equal(ids.has("relation-from"), true);
+    assert.equal(ids.has("relation-to"), true);
+  }
+  assert.equal(desktop.size, 36);
+  assert.equal(mobile.size, 16);
+  assert.equal(mobile.has("visible-13"), false);
 });
 
 test("screen-space exclusion rectangles reserve room for interface panels", () => {

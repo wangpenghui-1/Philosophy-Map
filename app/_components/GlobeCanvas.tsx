@@ -26,6 +26,7 @@ import {
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
   getGlobeMarkerLod,
+  getGlobeAnchorMountIds,
   getGlobeMarkerExclusionRects,
   layoutGlobeMarkers,
   type GlobeMarkerLayoutItem,
@@ -784,48 +785,54 @@ function RelationArc({
 
 function ThinkerAnchor({
   thinker,
-  active,
-  visible,
+  emphasized,
   selected,
   quality,
   onSelect,
 }: {
   thinker: Thinker;
-  active: boolean;
-  visible: boolean;
+  emphasized: boolean;
   selected: boolean;
   quality: QualityTier;
   onSelect: (id: string) => void;
 }) {
-  const point = useMemo(
-    () => latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, GLOBE_RADIUS + 0.04),
-    [thinker],
-  );
-  if (!visible) return null;
+  const { point, surfaceQuaternion } = useMemo(() => {
+    const point = latLonToVector3(
+      thinker.anchors[0].lat,
+      thinker.anchors[0].lon,
+      GLOBE_RADIUS + 0.014,
+    );
+    const surfaceQuaternion = new THREE.Quaternion().setFromUnitVectors(
+      new THREE.Vector3(0, 0, 1),
+      point.clone().normalize(),
+    );
+    return { point, surfaceQuaternion };
+  }, [thinker]);
 
   return (
-    <group position={point} scale={selected ? 1.35 : active ? 1 : 0.72}>
+    <group position={point} quaternion={surfaceQuaternion}>
       <mesh
         onClick={(event) => {
           event.stopPropagation();
           onSelect(thinker.id);
         }}
       >
-        <sphereGeometry args={[selected ? 0.04 : 0.026, quality === "low" ? 10 : 16, quality === "low" ? 10 : 16]} />
+        <circleGeometry args={[selected ? 0.018 : 0.012, quality === "low" ? 10 : 16]} />
         <meshBasicMaterial
           color={thinker.color}
           transparent
-          opacity={selected ? 1 : active ? 0.82 : 0.34}
+          opacity={selected ? 1 : emphasized ? 0.9 : 0.64}
+          depthWrite={false}
           toneMapped={false}
         />
       </mesh>
-      {active || selected ? (
-        <mesh rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[selected ? 0.082 : 0.058, 0.004, 8, quality === "low" ? 24 : 40]} />
+      {emphasized ? (
+        <mesh>
+          <ringGeometry args={[selected ? 0.04 : 0.034, selected ? 0.047 : 0.04, quality === "low" ? 16 : 24]} />
           <meshBasicMaterial
             color={thinker.color}
             transparent
-            opacity={selected ? 0.92 : 0.46}
+            opacity={selected ? 0.88 : 0.64}
             blending={THREE.AdditiveBlending}
             depthWrite={false}
             toneMapped={false}
@@ -1026,7 +1033,7 @@ function MarkerLayoutController({
   storyThinkerIds: Set<string>;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
-  onLayout: (layout: GlobeMarkerLayoutItem[]) => void;
+  onLayout: (layout: GlobeMarkerLayoutItem[], anchorBudget: number) => void;
 }) {
   const lodRef = useRef<GlobeMarkerLod>("far");
   const lastUpdateRef = useRef(-1);
@@ -1075,6 +1082,7 @@ function MarkerLayoutController({
       })
       .filter((candidate): candidate is NonNullable<typeof candidate> => candidate !== null);
 
+    const anchorBudget = size.width < 620 ? 16 : 36;
     const layout = layoutGlobeMarkers(
       candidates,
       { width: size.width, height: size.height },
@@ -1098,12 +1106,12 @@ function MarkerLayoutController({
         Math.round(item.screenY * 2),
         item.lod,
         item.clusterCount,
-        Math.round(item.scale * 100),
+        anchorBudget,
       ].join(":"))
       .join("|");
     if (signature !== lastSignatureRef.current) {
       lastSignatureRef.current = signature;
-      onLayout(layout);
+      onLayout(layout, anchorBudget);
     }
   });
 
@@ -1113,10 +1121,14 @@ function MarkerLayoutController({
 function GlobeScene({
   onMarkerLayout,
   cameraSnapshotRef,
+  markerLayout,
+  anchorBudget,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
-  onMarkerLayout: (layout: GlobeMarkerLayoutItem[]) => void;
+  onMarkerLayout: (layout: GlobeMarkerLayoutItem[], anchorBudget: number) => void;
   cameraSnapshotRef: RefObject<GlobeCameraSnapshot | null>;
+  markerLayout: GlobeMarkerLayoutItem[];
+  anchorBudget: number;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
@@ -1130,6 +1142,25 @@ function GlobeScene({
   const storyRelationIds = useMemo(
     () => new Set(currentChapter.relationIds),
     [currentChapter.relationIds],
+  );
+  const selectedRelation = props.selectedRelationId
+    ? relations.find((relation) => relation.id === props.selectedRelationId)
+    : undefined;
+  const selectedRelationEndpoints = useMemo(
+    () => new Set(selectedRelation ? [selectedRelation.from, selectedRelation.to] : []),
+    [selectedRelation],
+  );
+  const mountedAnchorIds = useMemo(
+    () => getGlobeAnchorMountIds(
+      markerLayout,
+      [
+        props.selectedThinkerId,
+        selectedRelation?.from,
+        selectedRelation?.to,
+      ],
+      anchorBudget,
+    ),
+    [anchorBudget, markerLayout, props.selectedThinkerId, selectedRelation],
   );
   const visibleThinkerIds = useMemo(
     () => new Set(
@@ -1197,17 +1228,21 @@ function GlobeScene({
             />
           );
         })}
-        {thinkers.map((thinker) => (
-          <ThinkerAnchor
-            key={thinker.id}
-            thinker={thinker}
-            active={props.mode === "explore" || storyThinkerIds.has(thinker.id)}
-            visible={visibleThinkerIds.has(thinker.id)}
-            selected={props.selectedThinkerId === thinker.id}
-            quality={props.quality}
-            onSelect={props.onSelectThinker}
-          />
-        ))}
+        {thinkers
+          .filter((thinker) => mountedAnchorIds.has(thinker.id))
+          .map((thinker) => (
+            <ThinkerAnchor
+              key={thinker.id}
+              thinker={thinker}
+              emphasized={
+                props.selectedThinkerId === thinker.id
+                || selectedRelationEndpoints.has(thinker.id)
+              }
+              selected={props.selectedThinkerId === thinker.id}
+              quality={props.quality}
+              onSelect={props.onSelectThinker}
+            />
+          ))}
       </group>
       <OrbitControls
         ref={controlsRef}
@@ -1301,6 +1336,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   );
   const [attempt, setAttempt] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
+  const [anchorBudget, setAnchorBudget] = useState(0);
   const cameraSnapshotRef = useRef<GlobeCameraSnapshot | null>(null);
   const { onFallback } = props;
 
@@ -1314,8 +1350,9 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     setAttempt((value) => value + 1);
   };
 
-  const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[]) => {
+  const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[], nextAnchorBudget: number) => {
     setMarkerLayout(layout);
+    setAnchorBudget(nextAnchorBudget);
   }, []);
 
   if (webgl2Available === false) {
@@ -1385,6 +1422,8 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         <GlobeScene
           {...props}
           cameraSnapshotRef={cameraSnapshotRef}
+          anchorBudget={anchorBudget}
+          markerLayout={markerLayout}
           onMarkerLayout={handleMarkerLayout}
         />
       </Canvas>

@@ -121,6 +121,21 @@ test("WebGL2 failure automatically opens the complete text fallback", async ({ p
   await expect(page.getByRole("button", { name: "重新尝试3D" })).toBeVisible();
 });
 
+test("globe keeps its visible portrait markers within budget while selected people and relations remain readable", async ({ page }, testInfo) => {
+  const budget = testInfo.project.name === "mobile-chromium" ? 16 : 36;
+  await openHydrated(page, "/explore?thinker=kant");
+  await expect(page.locator("canvas")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+  await expect.poll(() => page.locator('.globe-marker[data-visible="true"]').count())
+    .toBeLessThanOrEqual(budget);
+
+  await openHydrated(page, "/explore?relation=hume-kant");
+  await expect(page.locator("canvas")).toBeVisible();
+  await expect(page.getByText("因果怀疑唤醒批判哲学", { exact: false })).toBeVisible();
+  await expect.poll(() => page.locator('.globe-marker[data-visible="true"]').count())
+    .toBeLessThanOrEqual(budget);
+});
+
 test("reduced-motion mode keeps story controls usable", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await openHydrated(page, "/");

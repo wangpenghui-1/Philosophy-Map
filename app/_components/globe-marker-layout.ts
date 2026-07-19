@@ -43,6 +43,28 @@ export interface GlobeMarkerLayoutItem {
   bounds: GlobeMarkerBounds | null;
 }
 
+/**
+ * Limits mounted WebGL anchors to the same small budget as the portrait-label
+ * layout while reserving room for a selected thinker or relation endpoints.
+ */
+export function getGlobeAnchorMountIds(
+  layout: readonly GlobeMarkerLayoutItem[],
+  protectedIds: readonly (string | null | undefined)[],
+  maximum: number,
+) {
+  const mounted = new Set<string>();
+  const limit = Math.max(0, Math.floor(maximum));
+
+  for (const id of protectedIds) {
+    if (id && mounted.size < limit) mounted.add(id);
+  }
+  for (const item of layout) {
+    if (item.visible && mounted.size < limit) mounted.add(item.id);
+  }
+
+  return mounted;
+}
+
 export interface GlobeMarkerSize {
   width: number;
   height: number;

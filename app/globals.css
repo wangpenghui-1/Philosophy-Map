@@ -805,7 +805,10 @@
   .detail-card__location span + span::before { margin-right: 8px; color: var(--bronze-soft); content: "/"; }
   .thinker-portrait { position: relative; margin: 0; overflow: hidden; border: 1px solid var(--hairline); background: color-mix(in oklch, var(--portrait-color) 14%, var(--ink-1)); }
   .thinker-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.8) contrast(1.04); }
-  .thinker-portrait--full { width: 100%; aspect-ratio: 16 / 10; margin-top: 20px; }
+  /* Full source portraits are prepared predominantly in a 4:5 frame. Keep the
+     whole source visible so a differently proportioned portrait never loses its head. */
+  .thinker-portrait--full { width: 100%; aspect-ratio: 4 / 5; margin-top: 20px; }
+  .thinker-portrait--full img { object-fit: contain; }
   .thinker-portrait figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 16px 10px 8px; background: linear-gradient(transparent, rgba(3, 4, 3, .88)); color: var(--paper-dim); font-size: 8px; line-height: 1.45; }
   .thinker-portrait__fallback { display: grid; width: 100%; height: 100%; place-content: center; gap: 4px; text-align: center; }
   .thinker-portrait__fallback strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
@@ -940,7 +943,8 @@
   .semantic-panel__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 28px; }
   .semantic-panel__grid > article,
   .semantic-relations > article { padding: 18px; border: 1px solid var(--hairline); }
-  .semantic-panel__grid .thinker-portrait { width: 100%; aspect-ratio: 16 / 10; margin-bottom: 15px; }
+  .semantic-panel__grid .thinker-portrait { width: 100%; aspect-ratio: 4 / 5; margin-bottom: 15px; }
+  .semantic-panel__grid .thinker-portrait img { object-fit: contain; }
   .semantic-panel__grid > article > small,
   .semantic-relations > article > span { color: var(--bronze); font: 8px var(--mono); }
   .semantic-panel__grid h3 { margin: 15px 0; font-family: var(--serif); font-size: 21px; font-weight: 500; }

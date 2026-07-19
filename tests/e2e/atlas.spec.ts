@@ -106,6 +106,30 @@ test("the complete text explorer remains keyboard accessible", async ({ page }) 
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
 });
 
+test("text explorer portraits keep their vertical frames without cropping", async ({ page }) => {
+  await openHydrated(page, "/explore");
+  await page.getByRole("button", { name: "打开文字探索" }).click();
+  const portraits = page.locator(".semantic-panel__grid .thinker-portrait");
+  await expect(portraits).toHaveCount(24);
+
+  const framings = await portraits.evaluateAll((elements) => elements.map((element) => {
+    const image = element.querySelector("img");
+    if (!image) return null;
+    const frame = element.getBoundingClientRect();
+    return {
+      frameAspect: frame.width / frame.height,
+      objectFit: getComputedStyle(image).objectFit,
+    };
+  }));
+
+  for (const framing of framings) {
+    expect(framing).not.toBeNull();
+    if (!framing) throw new Error("Missing text explorer portrait");
+    expect(Math.abs(framing.frameAspect - 4 / 5)).toBeLessThanOrEqual(0.01);
+    expect(framing.objectFit).toBe("contain");
+  }
+});
+
 test("WebGL2 failure automatically opens the complete text fallback", async ({ page }) => {
   await page.addInitScript(() => {
     const original = HTMLCanvasElement.prototype.getContext;
@@ -119,6 +143,37 @@ test("WebGL2 failure automatically opens the complete text fallback", async ({ p
   await page.getByRole("button", { name: "返回地球" }).click();
   await expect(page.getByText("3D渲染不可用")).toBeVisible();
   await expect(page.getByRole("button", { name: "重新尝试3D" })).toBeVisible();
+});
+
+test("full detail portraits retain their source frames without cropping heads", async ({ page }) => {
+  for (const thinkerId of ["dai-zhen", "aquinas"]) {
+    await openHydrated(page, `/explore?thinker=${thinkerId}`);
+    const portrait = page.locator(".detail-card .thinker-portrait--full");
+    const image = portrait.locator("img");
+    await expect(image).toBeVisible();
+    await expect.poll(() => image.evaluate((element) => {
+      const portraitImage = element as HTMLImageElement;
+      return portraitImage.complete && portraitImage.naturalWidth > 0;
+    })).toBe(true);
+
+    const framing = await portrait.evaluate((element) => {
+      const image = element.querySelector("img");
+      if (!(image instanceof HTMLImageElement)) return null;
+      const frame = element.getBoundingClientRect();
+      const scale = Math.min(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
+      return {
+        objectFit: getComputedStyle(image).objectFit,
+        horizontalOverflow: Math.max(0, image.naturalWidth * scale - frame.width),
+        verticalOverflow: Math.max(0, image.naturalHeight * scale - frame.height),
+      };
+    });
+
+    expect(framing).not.toBeNull();
+    if (!framing) throw new Error(`Missing full portrait for ${thinkerId}`);
+    expect(framing.objectFit).toBe("contain");
+    expect(framing.horizontalOverflow).toBeLessThanOrEqual(0.5);
+    expect(framing.verticalOverflow).toBeLessThanOrEqual(0.5);
+  }
 });
 
 test("globe keeps its visible portrait markers within budget while selected people and relations remain readable", async ({ page }, testInfo) => {

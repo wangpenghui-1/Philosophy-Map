@@ -186,6 +186,7 @@ export interface KnowledgeIndexItem {
   period?: string;
   startYear?: number;
   traditionIds: string[];
+  media?: { thumbSrc: string; alt: string; objectPosition: string };
   searchText: string;
   href: string;
 }

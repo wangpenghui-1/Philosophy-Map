@@ -11,10 +11,12 @@ import * as THREE from "three";
 import type { FeatureCollection, Geometry, Position } from "geojson";
 import type { Topology } from "topojson-specification";
 import type { CSSProperties, RefObject } from "react";
-import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Line2, LineMaterial, OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import {
+  evidenceLabels,
   relations,
+  relationTypeLabels,
   storyChapters,
   thinkerById,
   thinkers,
@@ -25,6 +27,13 @@ import {
 } from "../_data/atlas";
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
+  getFocusedThinkerIds,
+  percentile,
+  type FocusDepth,
+  type GlobeCameraSnapshot,
+} from "./atlas-visual-policy";
+import { createElevatedArcPoints, GLOBE_RADIUS } from "./globe-visual-geometry";
+import {
   getGlobeMarkerLod,
   getGlobeAnchorMountIds,
   getGlobeMarkerExclusionRects,
@@ -33,7 +42,6 @@ import {
   type GlobeMarkerLod,
 } from "./globe-marker-layout";
 
-const GLOBE_RADIUS = 2;
 const MARKER_RADIUS = GLOBE_RADIUS + 0.065;
 const DETAIL_BORDERS_URL = "/media/globe/countries-50m.json";
 const EARTH_TEXTURE_URLS = [
@@ -45,6 +53,7 @@ const EARTH_TEXTURE_URLS = [
 ] as const;
 
 let cachedWebgl2Availability: boolean | null = null;
+const AtlasPostprocessing = lazy(() => import("./AtlasPostprocessing"));
 
 export type EarthLightingMode = "day" | "night";
 
@@ -58,27 +67,22 @@ interface GlobeCanvasProps {
   selectedRelationId: string | null;
   activeQuestionId: QuestionId | null;
   timelineYear: number;
+  timelineScrubbing: boolean;
   quality: QualityTier;
+  focusDepth: FocusDepth;
+  cameraSnapshot: GlobeCameraSnapshot | null;
   reduceMotion: boolean;
   onSelectThinker: (id: string) => void;
   onSelectRelation: (id: string) => void;
   onFallback: () => void;
+  onCameraSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
+  onPerformanceSample: (p75FrameMs: number) => void;
 }
 
 interface SharedEarthUniforms {
   uSunDirection: THREE.IUniform<THREE.Vector3>;
   uNightMix: THREE.IUniform<number>;
   uCloudOffset: THREE.IUniform<number>;
-}
-
-interface GlobeCameraSnapshot {
-  position: [number, number, number];
-  target: [number, number, number];
-  mode: AtlasMode;
-  chapterIndex: number;
-  selectedThinkerId: string | null;
-  directorActive: boolean;
-  directorInitialized: boolean;
 }
 
 const EARTH_VERTEX_SHADER = `
@@ -162,7 +166,7 @@ const EARTH_FRAGMENT_SHADER = `
       cloudMask = texture2D(uCloudMap, cloudUv).a;
     #endif
 
-    float ambient = mix(0.15, 0.032, uNightMix);
+    float ambient = mix(0.15, 0.068, uNightMix);
     float sunEnergy = mix(uSunIntensity, uSunIntensity * 0.34, uNightMix);
     vec3 color = dayColor * (ambient + diffuse * sunEnergy);
     color *= 1.0 - cloudMask * daylight * uCloudShadowStrength;
@@ -236,7 +240,7 @@ const ATMOSPHERE_FRAGMENT_SHADER = `
     vec3 sunset = vec3(0.95, 0.43, 0.15);
     vec3 color = mix(nightAtmosphere, dayAtmosphere, daySide);
     color = mix(color, sunset, terminator * daySide * 0.28);
-    float alpha = rim * mix(0.16, 0.40, daySide) * mix(0.94, 1.12, uNightMix);
+    float alpha = rim * mix(0.24, 0.40, daySide) * mix(0.94, 1.06, uNightMix);
     gl_FragColor = vec4(color, alpha);
     #include <tonemapping_fragment>
     #include <colorspace_fragment>
@@ -425,23 +429,12 @@ function EarthSystem({
   shared: SharedEarthUniforms;
 }) {
   const { gl, invalidate } = useThree();
-  const textureUrls = useMemo(() => {
-    if (quality === "low") return EARTH_TEXTURE_URLS.slice(0, 2);
-    if (quality === "medium") {
-      return [
-        EARTH_TEXTURE_URLS[0],
-        EARTH_TEXTURE_URLS[1],
-        EARTH_TEXTURE_URLS[3],
-        EARTH_TEXTURE_URLS[4],
-      ];
-    }
-    return [...EARTH_TEXTURE_URLS];
-  }, [quality]);
+  const textureUrls = useMemo(
+    () => quality === "low" ? EARTH_TEXTURE_URLS.slice(0, 2) : [...EARTH_TEXTURE_URLS],
+    [quality],
+  );
   const loadedTextures = useTexture(textureUrls as string[]) as THREE.Texture[];
-  const [dayMap, nightMap] = loadedTextures;
-  const loadedNormalMap = quality === "high" ? loadedTextures[2] : undefined;
-  const loadedSpecularMap = quality === "high" ? loadedTextures[3] : loadedTextures[2];
-  const loadedCloudMap = quality === "high" ? loadedTextures[4] : loadedTextures[3];
+  const [dayMap, nightMap, loadedNormalMap, loadedSpecularMap, loadedCloudMap] = loadedTextures;
   const normalMap = loadedNormalMap ?? dayMap;
   const specularMap = loadedSpecularMap ?? dayMap;
   const cloudMap = loadedCloudMap ?? dayMap;
@@ -484,7 +477,7 @@ function EarthSystem({
     uCloudOffset: shared.uCloudOffset,
     uNormalScale: { value: 0.58 },
     uSunIntensity: { value: 1.42 },
-    uCityIntensity: { value: 1.95 },
+    uCityIntensity: { value: 1.32 },
     uSpecularStrength: { value: 0.72 },
     uCloudShadowStrength: { value: 0.18 },
   }), [cloudMap, dayMap, nightMap, normalMap, shared, specularMap]);
@@ -584,34 +577,64 @@ function DayNightDirector({
   reduceMotion: boolean;
   shared: SharedEarthUniforms;
 }) {
-  const { camera, invalidate } = useThree();
+  const { camera, gl, invalidate } = useThree();
+  const targetSun = useMemo(() => new THREE.Vector3(), []);
+  const nightTangent = useMemo(() => new THREE.Vector3(), []);
+  const rotation = useMemo(() => new THREE.Quaternion(), []);
+  const partial = useMemo(() => new THREE.Quaternion(), []);
+  const identity = useMemo(() => new THREE.Quaternion(), []);
+
+  const updateTargetSun = useCallback(() => {
+    targetSun.copy(camera.position).normalize();
+    if (earthMode === "day") return;
+
+    nightTangent.set(0, 1, 0).addScaledVector(targetSun, -targetSun.y);
+    if (nightTangent.lengthSq() < 0.0001) nightTangent.set(1, 0, 0);
+    nightTangent.normalize();
+    targetSun.multiplyScalar(-0.38).addScaledVector(nightTangent, 0.925).normalize();
+  }, [camera, earthMode, nightTangent, targetSun]);
+
+  useFrame((_, delta) => {
+    updateTargetSun();
+
+    const currentSun = shared.uSunDirection.value.normalize();
+    const alignment = THREE.MathUtils.clamp(currentSun.dot(targetSun), -1, 1);
+    if (alignment > 0.99999) return;
+
+    rotation.setFromUnitVectors(currentSun, targetSun);
+    const amount = reduceMotion ? 1 : 1 - Math.exp(-6 * delta);
+    partial.slerpQuaternions(identity, rotation, amount);
+    currentSun.applyQuaternion(partial).normalize();
+  });
 
   useEffect(() => {
-    const visibleSide = camera.position.clone().normalize();
-    const targetSun = earthMode === "day" ? visibleSide : visibleSide.clone().negate();
-    const startSun = shared.uSunDirection.value.clone().normalize();
     const targetMix = earthMode === "night" ? 1 : 0;
+    const targetExposure = earthMode === "night" ? 1.02 : 0.94;
 
     if (reduceMotion) {
+      updateTargetSun();
       shared.uSunDirection.value.copy(targetSun);
       shared.uNightMix.value = targetMix;
+      gl.toneMappingExposure = targetExposure;
       invalidate();
       return;
     }
 
-    const rotation = new THREE.Quaternion().setFromUnitVectors(startSun, targetSun);
-    const identity = new THREE.Quaternion();
-    const partial = new THREE.Quaternion();
     const progress = { value: 0 };
     const startMix = shared.uNightMix.value;
+    const startExposure = gl.toneMappingExposure;
     const tween = gsap.to(progress, {
       value: 1,
       duration: 0.95,
       ease: "power2.inOut",
       onUpdate: () => {
-        partial.slerpQuaternions(identity, rotation, progress.value);
-        shared.uSunDirection.value.copy(startSun).applyQuaternion(partial).normalize();
         shared.uNightMix.value = THREE.MathUtils.lerp(startMix, targetMix, progress.value);
+        gl.toneMappingExposure = THREE.MathUtils.lerp(startExposure, targetExposure, progress.value);
+        invalidate();
+      },
+      onComplete: () => {
+        updateTargetSun();
+        shared.uSunDirection.value.copy(targetSun);
         invalidate();
       },
     });
@@ -619,7 +642,7 @@ function DayNightDirector({
     return () => {
       tween.kill();
     };
-  }, [camera, earthMode, invalidate, reduceMotion, shared]);
+  }, [earthMode, gl, invalidate, reduceMotion, shared, targetSun, updateTargetSun]);
 
   return null;
 }
@@ -632,7 +655,6 @@ function greatCirclePoints(relation: Relation, quality: QualityTier) {
   const end = latLonToVector3(to.anchors[0].lat, to.anchors[0].lon, GLOBE_RADIUS + 0.042);
   const pointCount = quality === "high" ? 64 : quality === "medium" ? 48 : 32;
   const angularDistance = start.clone().normalize().angleTo(end.clone().normalize());
-  const arcHeight = THREE.MathUtils.clamp(angularDistance * 0.32, 0.13, 0.48);
   const points: THREE.Vector3[] = [];
 
   if (angularDistance < 0.012) {
@@ -650,7 +672,7 @@ function greatCirclePoints(relation: Relation, quality: QualityTier) {
     for (let index = 0; index <= pointCount; index += 1) {
       const progress = index / pointCount;
       const lift = Math.sin(Math.PI * progress);
-      const point = start.clone().lerp(end, progress).normalize().multiplyScalar(GLOBE_RADIUS + 0.042)
+      const point = start.clone()
         .addScaledVector(normal, lift * 0.13)
         .addScaledVector(outward, lift * 0.2)
         .addScaledVector(sideways, Math.sin(Math.PI * 2 * progress) * 0.055);
@@ -659,45 +681,49 @@ function greatCirclePoints(relation: Relation, quality: QualityTier) {
     return points;
   }
 
-  for (let index = 0; index <= pointCount; index += 1) {
-    const progress = index / pointCount;
-    const point = start.clone().lerp(end, progress).normalize();
-    const altitude = GLOBE_RADIUS + 0.05 + Math.sin(Math.PI * progress) * arcHeight;
-    points.push(point.multiplyScalar(altitude));
-  }
-  return points;
+  return createElevatedArcPoints(start, end, pointCount);
 }
 
 function relationColor(relation: Relation) {
   if (relation.type === "lineage") return "#72deb2";
-  if (relation.type === "thematic-resonance") return "#58cff2";
-  return "#a98cff";
+  if (relation.type === "thematic-resonance") return "#c8cac8";
+  if (relation.type === "critique") return "#e07256";
+  if (relation.type === "text-transmission") return "#8ba9ed";
+  return "#d3ab67";
 }
 
 function RelationArc({
   relation,
   emphasized,
   selected,
+  hovered,
+  dimmed,
   visible,
   animate,
   quality,
   reduceMotion,
   onSelect,
+  onHover,
 }: {
   relation: Relation;
   emphasized: boolean;
   selected: boolean;
+  hovered: boolean;
+  dimmed: boolean;
   visible: boolean;
   animate: boolean;
   quality: QualityTier;
   reduceMotion: boolean;
   onSelect: (id: string) => void;
+  onHover: (id: string | null) => void;
 }) {
   const points = useMemo(() => greatCirclePoints(relation, quality), [quality, relation]);
   const pulseRef = useRef<Line2 | null>(null);
   const { invalidate } = useThree();
   const color = relationColor(relation);
   const isResonance = relation.type === "thematic-resonance";
+  const isCritique = relation.type === "critique";
+  const isTextTransmission = relation.type === "text-transmission";
 
   useEffect(() => {
     if (!visible || !animate || reduceMotion || !pulseRef.current) return;
@@ -719,7 +745,7 @@ function RelationArc({
   }, [animate, invalidate, reduceMotion, relation.directed, relation.id, selected, visible]);
 
   if (!visible || points.length === 0) return null;
-  const showHalo = selected || (emphasized && quality !== "low");
+  const showHalo = selected || hovered || (emphasized && quality !== "low");
 
   const handleSelect = (event: { stopPropagation: () => void }) => {
     event.stopPropagation();
@@ -727,14 +753,35 @@ function RelationArc({
   };
 
   return (
-    <group>
+    <group
+      onPointerOver={(event) => {
+        event.stopPropagation();
+        onHover(relation.id);
+      }}
+      onPointerOut={() => onHover(null)}
+    >
       {showHalo ? (
         <Line
           points={points}
           color={color}
-          lineWidth={selected ? 11 : 7}
+          lineWidth={selected ? 11 : hovered ? 9 : 7}
           transparent
-          opacity={selected ? 0.2 : 0.08}
+          opacity={selected ? 0.22 : hovered ? 0.14 : 0.08}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+          depthTest
+          toneMapped={false}
+          renderOrder={4}
+          onClick={handleSelect}
+        />
+      ) : null}
+      {isTextTransmission && !dimmed ? (
+        <Line
+          points={points}
+          color="#dce6ff"
+          lineWidth={selected || hovered ? 4.4 : 2.8}
+          transparent
+          opacity={selected || hovered ? 0.22 : 0.08}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
           depthTest
@@ -746,12 +793,12 @@ function RelationArc({
       <Line
         points={points}
         color={color}
-        lineWidth={selected ? 2.7 : emphasized ? 1.6 : 0.72}
+        lineWidth={selected ? 2.7 : hovered ? 2.15 : emphasized ? 1.6 : 0.72}
         transparent
-        opacity={selected ? 0.98 : emphasized ? 0.76 : 0.11}
-        dashed={isResonance}
-        dashSize={0.08}
-        gapSize={0.055}
+        opacity={dimmed ? 0.035 : selected ? 0.98 : hovered ? 0.9 : emphasized ? 0.76 : 0.11}
+        dashed={isResonance || isCritique}
+        dashSize={isCritique ? 0.055 : 0.08}
+        gapSize={isCritique ? 0.085 : 0.055}
         dashScale={1}
         depthWrite={false}
         depthTest
@@ -770,7 +817,7 @@ function RelationArc({
           gapSize={0.34}
           dashScale={1}
           transparent
-          opacity={reduceMotion ? 0.5 : 0.92}
+          opacity={dimmed ? 0 : reduceMotion ? 0.5 : 0.92}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
           depthTest
@@ -787,12 +834,16 @@ function ThinkerAnchor({
   thinker,
   emphasized,
   selected,
+  hovered,
+  dimmed,
   quality,
   onSelect,
 }: {
   thinker: Thinker;
   emphasized: boolean;
   selected: boolean;
+  hovered: boolean;
+  dimmed: boolean;
   quality: QualityTier;
   onSelect: (id: string) => void;
 }) {
@@ -810,7 +861,11 @@ function ThinkerAnchor({
   }, [thinker]);
 
   return (
-    <group position={point} quaternion={surfaceQuaternion}>
+    <group
+      position={point}
+      quaternion={surfaceQuaternion}
+      scale={hovered ? 1.08 : selected ? 1.12 : 1}
+    >
       <mesh
         onClick={(event) => {
           event.stopPropagation();
@@ -821,7 +876,7 @@ function ThinkerAnchor({
         <meshBasicMaterial
           color={thinker.color}
           transparent
-          opacity={selected ? 1 : emphasized ? 0.9 : 0.64}
+          opacity={dimmed ? 0.12 : selected ? 1 : emphasized || hovered ? 0.9 : 0.64}
           depthWrite={false}
           toneMapped={false}
         />
@@ -845,70 +900,58 @@ function ThinkerAnchor({
 
 function CameraDirector({
   controlsRef,
-  snapshotRef,
-  directorActiveRef,
-  directorInitializedRef,
+  abortRef,
   mode,
   chapterIndex,
   selectedThinkerId,
+  selectedRelationId,
   reduceMotion,
+  onSnapshotChange,
+  suppressInitialDirection,
 }: {
   controlsRef: RefObject<OrbitControlsImpl | null>;
-  snapshotRef: RefObject<GlobeCameraSnapshot | null>;
-  directorActiveRef: RefObject<boolean>;
-  directorInitializedRef: RefObject<boolean>;
+  abortRef: RefObject<(() => void) | null>;
   mode: AtlasMode;
   chapterIndex: number;
   selectedThinkerId: string | null;
+  selectedRelationId: string | null;
   reduceMotion: boolean;
+  onSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
+  suppressInitialDirection: boolean;
 }) {
-  const { camera, invalidate } = useThree();
-  const suppressedDirectionRef = useRef<Pick<
-    GlobeCameraSnapshot,
-    "mode" | "chapterIndex" | "selectedThinkerId"
-  > | null>(null);
-  const restorationProcessedRef = useRef(false);
+  const { camera, invalidate, size } = useThree();
+  const suppressInitialRef = useRef(suppressInitialDirection);
 
   useEffect(() => {
-    const restored = snapshotRef.current;
-    const matchesDirection = (direction: Pick<
-      GlobeCameraSnapshot,
-      "mode" | "chapterIndex" | "selectedThinkerId"
-    >) => direction.mode === mode
-      && direction.chapterIndex === chapterIndex
-      && direction.selectedThinkerId === selectedThinkerId;
-
-    if (!restorationProcessedRef.current) {
-      restorationProcessedRef.current = true;
-      if (restored
-        && restored.directorInitialized
-        && !restored.directorActive
-        && matchesDirection(restored)) {
-        suppressedDirectionRef.current = {
-          mode,
-          chapterIndex,
-          selectedThinkerId,
-        };
-        directorInitializedRef.current = true;
-      }
-    }
-    if (suppressedDirectionRef.current) {
-      if (matchesDirection(suppressedDirectionRef.current)) return;
-      suppressedDirectionRef.current = null;
+    if (suppressInitialRef.current) {
+      suppressInitialRef.current = false;
+      return;
     }
     const controls = controlsRef.current;
     if (!controls) return;
 
     const thinker = selectedThinkerId ? thinkerById.get(selectedThinkerId) : undefined;
+    const relation = selectedRelationId ? relations.find((item) => item.id === selectedRelationId) : undefined;
+    const relationFrom = relation ? thinkerById.get(relation.from) : undefined;
+    const relationTo = relation ? thinkerById.get(relation.to) : undefined;
+    const relationDirection = relationFrom && relationTo
+      ? (() => {
+          const fromDirection = latLonToVector3(relationFrom.anchors[0].lat, relationFrom.anchors[0].lon, 1);
+          const midpoint = fromDirection.clone().add(latLonToVector3(relationTo.anchors[0].lat, relationTo.anchors[0].lon, 1));
+          return midpoint.lengthSq() < 0.01 ? fromDirection : midpoint.normalize();
+        })()
+      : null;
     const destination = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 3.72)
-      : cameraPositionFromPreset(storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
+      : relationDirection
+        ? relationDirection.clone().multiplyScalar(4.25)
+        : cameraPositionFromPreset(storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
     const target = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 0.42)
-      : new THREE.Vector3(0, 0, 0);
-    const duration = reduceMotion ? 0.12 : thinker ? 0.92 : mode === "story" ? 1.75 : 1.05;
-    directorInitializedRef.current = true;
-    directorActiveRef.current = true;
+      : relationDirection
+        ? relationDirection.clone().multiplyScalar(0.34)
+        : new THREE.Vector3(0, 0, 0);
+    const duration = reduceMotion ? 0.01 : thinker || relation ? (size.width <= 820 ? 0.65 : 0.9) : mode === "story" ? 1.45 : 0.9;
 
     const cameraTween = gsap.to(camera.position, {
       x: destination.x,
@@ -932,68 +975,84 @@ function CameraDirector({
         invalidate();
       },
       onComplete: () => {
-        directorActiveRef.current = false;
+        onSnapshotChange({
+          position: [camera.position.x, camera.position.y, camera.position.z],
+          target: [controls.target.x, controls.target.y, controls.target.z],
+          distance: camera.position.distanceTo(controls.target),
+        });
       },
     });
 
-    return () => {
+    const abort = () => {
       cameraTween.kill();
       targetTween.kill();
-      directorActiveRef.current = false;
     };
-  }, [camera, chapterIndex, controlsRef, directorActiveRef, directorInitializedRef, invalidate, mode, reduceMotion, selectedThinkerId, snapshotRef]);
+    abortRef.current = abort;
+
+    return () => {
+      abort();
+      if (abortRef.current === abort) abortRef.current = null;
+    };
+  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width]);
 
   return null;
 }
 
-function CameraPersistence({
+function CameraStateBridge({
   controlsRef,
-  snapshotRef,
-  directorActiveRef,
-  directorInitializedRef,
-  mode,
-  chapterIndex,
-  selectedThinkerId,
+  initialSnapshot,
+  onSnapshotChange,
 }: {
   controlsRef: RefObject<OrbitControlsImpl | null>;
-  snapshotRef: RefObject<GlobeCameraSnapshot | null>;
-  directorActiveRef: RefObject<boolean>;
-  directorInitializedRef: RefObject<boolean>;
-  mode: AtlasMode;
-  chapterIndex: number;
-  selectedThinkerId: string | null;
+  initialSnapshot: GlobeCameraSnapshot | null;
+  onSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
 }) {
   const { camera, invalidate } = useThree();
-  const directionRef = useRef({ mode, chapterIndex, selectedThinkerId });
+  const restoredRef = useRef(false);
+  const lastReportRef = useRef(0);
+  const lastSignatureRef = useRef("");
 
-  useLayoutEffect(() => {
-    directionRef.current = { mode, chapterIndex, selectedThinkerId };
-  }, [chapterIndex, mode, selectedThinkerId]);
-
-  useLayoutEffect(() => {
+  useEffect(() => {
+    if (restoredRef.current) return;
     const controls = controlsRef.current;
-    const snapshot = snapshotRef.current;
-    if (controls && snapshot) {
-      camera.position.set(...snapshot.position);
-      controls.target.set(...snapshot.target);
-      controls.update();
-      invalidate();
-    }
+    restoredRef.current = true;
+    if (!controls || !initialSnapshot) return;
+    camera.position.set(...initialSnapshot.position);
+    controls.target.set(...initialSnapshot.target);
+    controls.update();
+    invalidate();
+  }, [camera, controlsRef, initialSnapshot, invalidate]);
 
-    return () => {
-      if (!controls) return;
-      snapshotRef.current = {
-        position: [camera.position.x, camera.position.y, camera.position.z],
-        target: [controls.target.x, controls.target.y, controls.target.z],
-        ...directionRef.current,
-        // eslint-disable-next-line react-hooks/exhaustive-deps -- Capture the live tween state at unmount.
-        directorActive: directorActiveRef.current,
-        // eslint-disable-next-line react-hooks/exhaustive-deps -- Capture whether initial direction ran before unmount.
-        directorInitialized: directorInitializedRef.current,
-      };
+  useFrame(({ clock }) => {
+    const controls = controlsRef.current;
+    if (!controls || clock.elapsedTime - lastReportRef.current < 0.25) return;
+    lastReportRef.current = clock.elapsedTime;
+    const snapshot: GlobeCameraSnapshot = {
+      position: [camera.position.x, camera.position.y, camera.position.z],
+      target: [controls.target.x, controls.target.y, controls.target.z],
+      distance: camera.position.distanceTo(controls.target),
     };
-  }, [camera, controlsRef, directorActiveRef, directorInitializedRef, invalidate, snapshotRef]);
+    const signature = [...snapshot.position, ...snapshot.target].map((value) => value.toFixed(3)).join(":");
+    if (signature === lastSignatureRef.current) return;
+    lastSignatureRef.current = signature;
+    onSnapshotChange(snapshot);
+  });
 
+  return null;
+}
+
+function FramePerformanceReporter({ onSample }: { onSample: (p75FrameMs: number) => void }) {
+  const samplesRef = useRef<number[]>([]);
+  const elapsedRef = useRef(0);
+
+  useFrame((_, delta) => {
+    if (delta > 0 && delta < 0.25) samplesRef.current.push(delta * 1_000);
+    elapsedRef.current += delta;
+    if (elapsedRef.current < 1 || samplesRef.current.length < 8) return;
+    onSample(percentile(samplesRef.current, 0.75));
+    samplesRef.current = [];
+    elapsedRef.current = 0;
+  });
   return null;
 }
 
@@ -1120,20 +1179,22 @@ function MarkerLayoutController({
 
 function GlobeScene({
   onMarkerLayout,
-  cameraSnapshotRef,
   markerLayout,
   anchorBudget,
+  hoveredRelationId,
+  onHoverRelation,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
   onMarkerLayout: (layout: GlobeMarkerLayoutItem[], anchorBudget: number) => void;
-  cameraSnapshotRef: RefObject<GlobeCameraSnapshot | null>;
   markerLayout: GlobeMarkerLayoutItem[];
   anchorBudget: number;
+  hoveredRelationId: string | null;
+  onHoverRelation: (id: string | null) => void;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
-  const directorActiveRef = useRef(false);
-  const directorInitializedRef = useRef(false);
+  const directorAbortRef = useRef<(() => void) | null>(null);
+  const bloomGroupRef = useRef<THREE.Group | null>(null);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
   const storyThinkerIds = useMemo(
     () => new Set(currentChapter.thinkerIds),
@@ -1149,6 +1210,17 @@ function GlobeScene({
   const selectedRelationEndpoints = useMemo(
     () => new Set(selectedRelation ? [selectedRelation.from, selectedRelation.to] : []),
     [selectedRelation],
+  );
+  const hoveredRelation = hoveredRelationId
+    ? relations.find((relation) => relation.id === hoveredRelationId)
+    : undefined;
+  const hoveredRelationEndpoints = useMemo(
+    () => new Set(hoveredRelation ? [hoveredRelation.from, hoveredRelation.to] : []),
+    [hoveredRelation],
+  );
+  const focusedThinkerIds = useMemo(
+    () => getFocusedThinkerIds(props.selectedThinkerId, props.focusDepth, relations),
+    [props.focusDepth, props.selectedThinkerId],
   );
   const mountedAnchorIds = useMemo(
     () => getGlobeAnchorMountIds(
@@ -1198,8 +1270,9 @@ function GlobeScene({
           />
         </Suspense>
         <CountryBorders quality={props.quality} />
-        <Atmosphere quality={props.quality} shared={shared} />
-        {relations.map((relation) => {
+        <group ref={bloomGroupRef}>
+          <Atmosphere quality={props.quality} shared={shared} />
+          {relations.map((relation) => {
           const endpointsVisible = visibleThinkerIds.has(relation.from)
             && visibleThinkerIds.has(relation.to);
           const incidentToSelection = Boolean(
@@ -1207,10 +1280,15 @@ function GlobeScene({
             && (relation.from === props.selectedThinkerId || relation.to === props.selectedThinkerId),
           );
           const selected = props.selectedRelationId === relation.id;
+          const hovered = hoveredRelationId === relation.id;
           const storyEmphasis = props.mode === "story" && storyRelationIds.has(relation.id);
           const emphasized = selected || incidentToSelection || storyEmphasis;
+          const dimmed = Boolean(
+            focusedThinkerIds
+            && (!focusedThinkerIds.has(relation.from) || !focusedThinkerIds.has(relation.to)),
+          );
           const visible = endpointsVisible && (
-            props.mode === "explore"
+            (props.mode === "explore" && (!props.timelineScrubbing || selected || incidentToSelection))
             || storyEmphasis
             || selected
           );
@@ -1220,15 +1298,18 @@ function GlobeScene({
               relation={relation}
               emphasized={emphasized}
               selected={selected}
+              hovered={hovered}
+              dimmed={dimmed}
               visible={visible}
-              animate={selected || storyEmphasis}
-              quality={props.quality}
+              animate={selected || storyEmphasis || incidentToSelection}
+              quality={props.timelineScrubbing && props.quality === "high" ? "medium" : props.quality}
               reduceMotion={props.reduceMotion}
               onSelect={props.onSelectRelation}
+              onHover={onHoverRelation}
             />
           );
-        })}
-        {thinkers
+          })}
+          {thinkers
           .filter((thinker) => mountedAnchorIds.has(thinker.id))
           .map((thinker) => (
             <ThinkerAnchor
@@ -1239,10 +1320,13 @@ function GlobeScene({
                 || selectedRelationEndpoints.has(thinker.id)
               }
               selected={props.selectedThinkerId === thinker.id}
+              hovered={hoveredRelationEndpoints.has(thinker.id)}
+              dimmed={Boolean(focusedThinkerIds && !focusedThinkerIds.has(thinker.id))}
               quality={props.quality}
               onSelect={props.onSelectThinker}
             />
           ))}
+        </group>
       </group>
       <OrbitControls
         ref={controlsRef}
@@ -1253,6 +1337,7 @@ function GlobeScene({
         rotateSpeed={0.42}
         zoomSpeed={0.58}
         zoomToCursor
+        onStart={() => directorAbortRef.current?.()}
         onChange={() => {
           const controls = controlsRef.current;
           if (controls && controls.target.length() > 0.58) controls.target.setLength(0.58);
@@ -1262,24 +1347,21 @@ function GlobeScene({
         minPolarAngle={0.13}
         maxPolarAngle={Math.PI - 0.13}
       />
-      <CameraPersistence
-        controlsRef={controlsRef}
-        snapshotRef={cameraSnapshotRef}
-        directorActiveRef={directorActiveRef}
-        directorInitializedRef={directorInitializedRef}
-        mode={props.mode}
-        chapterIndex={props.chapterIndex}
-        selectedThinkerId={props.selectedThinkerId}
-      />
       <CameraDirector
         controlsRef={controlsRef}
-        snapshotRef={cameraSnapshotRef}
-        directorActiveRef={directorActiveRef}
-        directorInitializedRef={directorInitializedRef}
+        abortRef={directorAbortRef}
         mode={props.mode}
         chapterIndex={props.chapterIndex}
         selectedThinkerId={props.selectedThinkerId}
+        selectedRelationId={props.selectedRelationId}
         reduceMotion={props.reduceMotion}
+        onSnapshotChange={props.onCameraSnapshotChange}
+        suppressInitialDirection={Boolean(props.cameraSnapshot)}
+      />
+      <CameraStateBridge
+        controlsRef={controlsRef}
+        initialSnapshot={props.cameraSnapshot}
+        onSnapshotChange={props.onCameraSnapshotChange}
       />
       <DayNightDirector
         earthMode={props.earthMode}
@@ -1295,6 +1377,12 @@ function GlobeScene({
         selectedRelationId={props.selectedRelationId}
         onLayout={onMarkerLayout}
       />
+      <FramePerformanceReporter onSample={props.onPerformanceSample} />
+      {props.quality === "high" ? (
+        <Suspense fallback={null}>
+          <AtlasPostprocessing selection={bloomGroupRef} />
+        </Suspense>
+      ) : null}
     </>
   );
 }
@@ -1337,7 +1425,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   const [attempt, setAttempt] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
   const [anchorBudget, setAnchorBudget] = useState(0);
-  const cameraSnapshotRef = useRef<GlobeCameraSnapshot | null>(null);
+  const [hoveredRelationId, setHoveredRelationId] = useState<string | null>(null);
   const { onFallback } = props;
 
   useEffect(() => {
@@ -1384,6 +1472,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
     : undefined;
+  const hoveredRelation = hoveredRelationId
+    ? relations.find((relation) => relation.id === hoveredRelationId)
+    : undefined;
+  const focusedThinkerIds = getFocusedThinkerIds(props.selectedThinkerId, props.focusDepth, relations);
   const mountedMarkerIds = new Set(
     markerLayout.filter((item) => item.visible).map((item) => item.id),
   );
@@ -1392,12 +1484,16 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     mountedMarkerIds.add(selectedRelation.from);
     mountedMarkerIds.add(selectedRelation.to);
   }
+  if (hoveredRelation) {
+    mountedMarkerIds.add(hoveredRelation.from);
+    mountedMarkerIds.add(hoveredRelation.to);
+  }
   const mountedThinkers = thinkers.filter((thinker) => mountedMarkerIds.has(thinker.id));
 
   return (
     <div className={"globe-runtime globe-runtime--" + props.earthMode}>
       <Canvas
-        key={String(attempt) + ":" + props.quality}
+        key={attempt}
         dpr={dpr}
         camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
         frameloop="demand"
@@ -1410,7 +1506,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         onCreated={({ gl }) => {
           gl.outputColorSpace = THREE.SRGBColorSpace;
           gl.toneMapping = THREE.ACESFilmicToneMapping;
-          gl.toneMappingExposure = 0.98;
+          gl.toneMappingExposure = props.earthMode === "night" ? 1.02 : 0.94;
           gl.domElement.addEventListener("webglcontextlost", (event) => {
             event.preventDefault();
             cachedWebgl2Availability = false;
@@ -1421,9 +1517,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
       >
         <GlobeScene
           {...props}
-          cameraSnapshotRef={cameraSnapshotRef}
           anchorBudget={anchorBudget}
           markerLayout={markerLayout}
+          hoveredRelationId={hoveredRelationId}
+          onHoverRelation={setHoveredRelationId}
           onMarkerLayout={handleMarkerLayout}
         />
       </Canvas>
@@ -1433,10 +1530,18 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           const visible = Boolean(item?.visible);
           const selected = props.selectedThinkerId === thinker.id;
           const clustered = Boolean(item && item.clusterCount > 1 && item.lod !== "near");
+          const dimmed = Boolean(focusedThinkerIds && !focusedThinkerIds.has(thinker.id));
+          const hovered = Boolean(
+            hoveredRelation
+            && (hoveredRelation.from === thinker.id || hoveredRelation.to === thinker.id),
+          );
           return (
             <button
               key={thinker.id}
-              className={"globe-marker" + (selected ? " globe-marker--selected" : "")}
+              className={"globe-marker"
+                + (selected ? " globe-marker--selected" : "")
+                + (dimmed ? " globe-marker--dimmed" : "")
+                + (hovered ? " globe-marker--relation-hover" : "")}
               data-visible={visible ? "true" : "false"}
               data-lod={item?.lod ?? getGlobeMarkerLod(8)}
               style={markerStyle(item, thinker)}
@@ -1472,6 +1577,12 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           );
         })}
       </div>
+      {hoveredRelation ? (
+        <div className="relation-hover-card" role="status">
+          <small>{relationTypeLabels[hoveredRelation.type]} · {evidenceLabels[hoveredRelation.evidence]}</small>
+          <strong>{hoveredRelation.title}</strong>
+        </div>
+      ) : null}
     </div>
   );
 }

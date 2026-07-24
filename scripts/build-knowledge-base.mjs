@@ -237,6 +237,11 @@ const indexItems = [
     period: person.chronology.label,
     startYear: person.chronology.startYear,
     traditionIds: person.traditionIds,
+    media: {
+      thumbSrc: person.media.thumbSrc,
+      alt: person.media.alt,
+      objectPosition: person.media.objectPosition ?? "50% 50%",
+    },
     searchText: [person.names.display, person.names.english, person.names.original, ...person.names.aliases, person.summary].filter(Boolean).join(" ").toLowerCase(),
     href: `/thinker/${person.slug}`,
   })),

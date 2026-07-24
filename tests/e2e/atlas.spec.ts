@@ -19,6 +19,39 @@ test("story controls pause and advance the guided narrative", async ({ page }) =
   await expect(page.getByRole("heading", { name: "怎样才算过好一生？" })).toBeVisible();
 });
 
+test("first visit starts the story and returning visitors resume exploration", async ({ page }) => {
+  await openHydrated(page, "/");
+  await expect(page.getByRole("heading", { name: "世界同时开始提问" })).toBeVisible();
+  await page.getByRole("button", { name: "暂停并接管地球" }).click();
+  await expect(page).toHaveURL(/\/explore\?from=story/);
+  await page.goto("/");
+  await waitForHydration(page);
+  await expect(page.getByRole("button", { name: "探索", exact: true })).toHaveClass(/is-active/);
+  await expect(page.getByRole("slider", { name: "历史时间轴" })).toBeVisible();
+});
+
+test("display settings preserve the canvas while changing light and quality", async ({ page }) => {
+  await openHydrated(page, "/explore");
+  const canvas = page.locator("canvas");
+  await expect(canvas).toBeVisible();
+  await canvas.evaluate((element) => { element.dataset.visualProbe = "stable"; });
+  await page.getByLabel("打开显示设置").click();
+  await page.getByRole("button", { name: "白昼" }).click();
+  await page.getByRole("button", { name: /典藏/ }).click();
+  await expect(page.locator('canvas[data-visual-probe="stable"]')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").qualityPreference)).toBe("high");
+});
+
+test("selected thinkers expose relationship focus depth", async ({ page }, testInfo) => {
+  await openHydrated(page, "/explore?thinker=kant");
+  await expect(page.getByRole("group", { name: "思想关系聚焦范围" })).toBeVisible();
+  await page.getByRole("button", { name: "两度" }).click();
+  await expect(page.getByRole("button", { name: "两度" })).toHaveClass(/is-active/);
+  if (testInfo.project.name === "desktop-chromium") {
+    await expect.poll(() => page.locator('.globe-marker--dimmed[data-visible="true"]').count()).toBeGreaterThan(0);
+  }
+});
+
 test("search traps focus and links the globe state to the reading page", async ({ page }) => {
   await openHydrated(page, "/explore");
   const trigger = page.getByRole("button", { name: "搜索思想星图" });
@@ -33,7 +66,7 @@ test("search traps focus and links the globe state to the reading page", async (
   await input.fill("Kant");
   await page.getByRole("dialog", { name: "搜索思想星图" }).getByRole("button", { name: /康德/ }).evaluate((button) => (button as HTMLButtonElement).click());
   await expect(page).toHaveURL(/\/explore\?[^#]*thinker=kant/);
-  await expect(page.locator('img[src="/media/thinkers/full/kant.webp"]')).toBeVisible();
+  await expect(page.locator('img.thinker-portrait__image[src="/media/thinkers/full/kant.webp"]')).toBeVisible();
   await page.getByRole("link", { name: "深入阅读" }).click();
   await expect(page).toHaveURL(/\/thinker\/kant$/);
   await page.getByRole("link", { name: "在3D地球中定位" }).click();
@@ -110,10 +143,10 @@ test("text explorer portraits keep their vertical frames without cropping", asyn
   await openHydrated(page, "/explore");
   await page.getByRole("button", { name: "打开文字探索" }).click();
   const portraits = page.locator(".semantic-panel__grid .thinker-portrait");
-  await expect(portraits).toHaveCount(24);
+  await expect(portraits).toHaveCount(210);
 
   const framings = await portraits.evaluateAll((elements) => elements.map((element) => {
-    const image = element.querySelector("img");
+    const image = element.querySelector(".thinker-portrait__image");
     if (!image) return null;
     const frame = element.getBoundingClientRect();
     return {
@@ -149,7 +182,7 @@ test("full detail portraits retain their source frames without cropping heads", 
   for (const thinkerId of ["dai-zhen", "aquinas"]) {
     await openHydrated(page, `/explore?thinker=${thinkerId}`);
     const portrait = page.locator(".detail-card .thinker-portrait--full");
-    const image = portrait.locator("img");
+    const image = portrait.locator(".thinker-portrait__image");
     await expect(image).toBeVisible();
     await expect.poll(() => image.evaluate((element) => {
       const portraitImage = element as HTMLImageElement;
@@ -157,7 +190,7 @@ test("full detail portraits retain their source frames without cropping heads", 
     })).toBe(true);
 
     const framing = await portrait.evaluate((element) => {
-      const image = element.querySelector("img");
+      const image = element.querySelector(".thinker-portrait__image");
       if (!(image instanceof HTMLImageElement)) return null;
       const frame = element.getBoundingClientRect();
       const scale = Math.min(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
@@ -234,6 +267,15 @@ test("supported responsive widths have no horizontal overflow or hidden header c
   }
 });
 
+test("mobile details use the three-stage archive sheet", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile-chromium", "Mobile sheet behavior only applies to compact layouts.");
+  await openHydrated(page, "/explore?thinker=kant");
+  const detail = page.locator(".detail-pane");
+  await expect(detail).toHaveAttribute("data-snap", "half");
+  await page.getByRole("button", { name: "调整详情面板高度" }).click();
+  await expect(detail).toHaveAttribute("data-snap", "full");
+});
+
 test("critical interface layers match approved visual snapshots", async ({ page }, testInfo) => {
   test.skip(Boolean(process.env.CI), "Release-candidate snapshots are reviewed locally to avoid platform font drift.");
   const isMobile = testInfo.project.name === "mobile-chromium";
@@ -249,6 +291,93 @@ test("critical interface layers match approved visual snapshots", async ({ page 
     for (const canvas of canvases) (canvas as HTMLElement).style.visibility = "hidden";
   });
   await expect(page).toHaveScreenshot(isMobile ? "mobile-text-explorer.png" : "desktop-thinker-detail.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.06,
+  });
+});
+
+test("cinematic museum views match the release-candidate visual set", async ({ page }, testInfo) => {
+  test.skip(Boolean(process.env.CI), "WebGL release-candidate snapshots are reviewed on the reference machine.");
+  const isMobile = testInfo.project.name === "mobile-chromium";
+
+  if (isMobile) {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await openHydrated(page, "/explore?thinker=kant");
+    await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+    await page.waitForTimeout(1300);
+    await expect(page).toHaveScreenshot("mobile-thinker-sheet-390x844.png", {
+      animations: "disabled",
+      maxDiffPixelRatio: 0.08,
+    });
+
+    await page.goto("/knowledge?type=person");
+    await expect(page.getByRole("heading", { name: "从人物出发，沿着概念与文本阅读思想史" })).toBeVisible();
+    await expect(page.locator(".knowledge-card__portrait").first()).toBeVisible();
+    await expect(page).toHaveScreenshot("mobile-knowledge-390x844.png", {
+      animations: "disabled",
+      maxDiffPixelRatio: 0.06,
+    });
+
+    await page.goto("/thinker/confucius");
+    await expect(page.getByRole("img", { name: "孔子的艺术化人物形象" })).toBeVisible();
+    await expect(page).toHaveScreenshot("mobile-thinker-reading-390x844.png", {
+      animations: "disabled",
+      maxDiffPixelRatio: 0.06,
+    });
+    return;
+  }
+
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/");
+  await page.evaluate(() => localStorage.clear());
+  await openHydrated(page, "/");
+  await page.getByRole("button", { name: "暂停故事" }).click();
+  await page.waitForTimeout(1800);
+  await expect(page).toHaveScreenshot("desktop-story-night-1440x900.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
+
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await openHydrated(page, "/explore");
+  await page.waitForTimeout(1300);
+  await expect(page).toHaveScreenshot("tablet-explore-empty-1024x768.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
+
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await openHydrated(page, "/explore?thinker=kant");
+  await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+  await page.waitForTimeout(1300);
+  await expect(page).toHaveScreenshot("desktop-thinker-focus-1440x900.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
+
+  await openHydrated(page, "/explore?relation=hume-kant");
+  await expect(page.getByText("因果怀疑唤醒批判哲学", { exact: false })).toBeVisible();
+  await page.waitForTimeout(1300);
+  await expect(page).toHaveScreenshot("desktop-relation-focus-1440x900.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
+
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await openHydrated(page, "/explore");
+  await page.getByLabel("打开显示设置").click();
+  await page.getByRole("button", { name: "白昼" }).click();
+  await page.getByLabel("打开显示设置").click();
+  await page.waitForTimeout(1300);
+  await expect(page).toHaveScreenshot("tablet-explore-day-1024x768.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
+
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/knowledge?type=person");
+  await expect(page.locator(".knowledge-card__portrait").first()).toBeVisible();
+  await expect(page).toHaveScreenshot("desktop-knowledge-1440x900.png", {
     animations: "disabled",
     maxDiffPixelRatio: 0.06,
   });

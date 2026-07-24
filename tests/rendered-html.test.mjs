@@ -30,7 +30,8 @@ test("server-renders the Atlas product shell", async () => {
   assert.match(html, /思想星图/);
   assert.match(html, /ATLAS OF IDEAS/);
   assert.match(html, /世界同时开始提问/);
-  assert.match(html, /关系证据/);
+  assert.match(html, /展陈设置/);
+  assert.match(html, /WORLD PHILOSOPHY/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is building|codex-preview/);
   assert.doesNotMatch(html, /<img[^>]+\/media\/thinkers\/full\//);
 });

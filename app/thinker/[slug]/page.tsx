@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CitationList, KnowledgePage, KnowledgeTierBadge, RelatedLinks } from "../../_components/knowledge/KnowledgeChrome";
+import KnowledgeReadingProgress from "../../_components/knowledge/KnowledgeReadingProgress";
 import {
   getKnowledgePerson,
   knowledgeBase,
@@ -28,18 +29,24 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
   const concepts = thinker.conceptIds.map((id) => knowledgeConceptById.get(id)).filter(Boolean);
   const traditions = thinker.traditionIds.map((id) => knowledgeTraditionById.get(id)).filter(Boolean);
   const relations = knowledgeBase.relations.filter((relation) => relation.from.id === thinker.id || relation.to.id === thinker.id);
+  const thinkerIndex = knowledgeBase.people.findIndex((person) => person.id === thinker.id);
+  const previousThinker = thinkerIndex > 0 ? knowledgeBase.people[thinkerIndex - 1] : null;
+  const nextThinker = thinkerIndex < knowledgeBase.people.length - 1 ? knowledgeBase.people[thinkerIndex + 1] : null;
 
   return (
     <KnowledgePage>
+      <KnowledgeReadingProgress />
       <main className="knowledge-article">
         <nav className="knowledge-breadcrumb"><Link href="/knowledge">知识库</Link><span>/</span><span>人物</span><span>/</span><strong>{thinker.names.display}</strong></nav>
         <header className="knowledge-article__hero">
           <div className="knowledge-article__portrait">
             {thinker.media.fullSrc ? (
-              // The Vinext asset binding is not available in every local/Cloudflare runtime;
-              // these already-optimized WebP files should be served directly.
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={thinker.media.fullSrc} alt={thinker.media.alt} width={960} height={1200} style={{ objectPosition: thinker.media.objectPosition }} />
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="knowledge-article__portrait-backdrop" src={thinker.media.fullSrc} alt="" aria-hidden="true" width={960} height={1200} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="knowledge-article__portrait-image" src={thinker.media.fullSrc} alt={thinker.media.alt} width={960} height={1200} style={{ objectPosition: thinker.media.objectPosition }} />
+              </>
             ) : <span aria-hidden="true">{thinker.names.display.slice(0, 1)}</span>}
           </div>
           <div>
@@ -54,12 +61,20 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
 
         <div className="knowledge-article__layout">
           <article className="knowledge-prose">
-            <section className="knowledge-question"><small>核心问题</small><h2>{thinker.guidingQuestion}</h2><p>{thinker.thesis}</p></section>
-            {thinker.sections.map((section) => <section key={section.id}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, index) => <p key={`${section.id}-${index}`}>{paragraph.text}</p>)}</section>)}
+            <section id="core-question" className="knowledge-question"><small>核心问题</small><h2>{thinker.guidingQuestion}</h2><p>{thinker.thesis}</p></section>
+            {thinker.sections.map((section) => <section id={`section-${section.id}`} key={section.id}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, index) => <p key={`${section.id}-${index}`}>{paragraph.text}</p>)}</section>)}
             {thinker.uncertainty ? <aside className="knowledge-note"><strong>不确定性说明</strong><p>{thinker.uncertainty}</p></aside> : null}
-            <CitationList citations={thinker.citations} />
+            <div id="sources"><CitationList citations={thinker.citations} /></div>
           </article>
           <aside className="knowledge-sidebar">
+            <details className="knowledge-toc" open>
+              <summary>本页目录</summary>
+              <nav aria-label="人物条目页内目录">
+                <a href="#core-question">核心问题</a>
+                {thinker.sections.map((section) => <a key={section.id} href={`#section-${section.id}`}>{section.heading}</a>)}
+                <a href="#sources">来源与定位</a>
+              </nav>
+            </details>
             <RelatedLinks heading="思想传统" items={traditions.map((item) => ({ href: `/tradition/${encodeURIComponent(item!.slug)}`, title: item!.name, subtitle: item!.periodLabel }))} />
             <RelatedLinks heading="核心概念" items={concepts.map((item) => ({ href: `/concept/${encodeURIComponent(item!.slug)}`, title: item!.name, subtitle: item!.summary }))} />
             <RelatedLinks heading="代表著作" items={works.map((item) => ({ href: `/work/${item!.slug}`, title: item!.title, subtitle: item!.dateLabel }))} />
@@ -79,6 +94,10 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
             </section>
           </aside>
         </div>
+        <nav className="knowledge-sequence" aria-label="人物条目顺序导航">
+          {previousThinker ? <Link href={`/thinker/${previousThinker.slug}`}><small>上一篇</small><strong>← {previousThinker.names.display}</strong></Link> : <span />}
+          {nextThinker ? <Link href={`/thinker/${nextThinker.slug}`}><small>下一篇</small><strong>{nextThinker.names.display} →</strong></Link> : <span />}
+        </nav>
       </main>
     </KnowledgePage>
   );

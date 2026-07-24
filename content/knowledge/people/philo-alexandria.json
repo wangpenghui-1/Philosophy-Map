@@ -1,0 +1,114 @@
+{
+  "id": "philo-alexandria",
+  "slug": "philo-alexandria",
+  "entityType": "person",
+  "names": {
+    "display": "斐洛",
+    "english": "Philo of Alexandria",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前20–公元50",
+    "startYear": -20,
+    "endYear": 50,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-希腊化犹太哲学"
+  ],
+  "conceptIds": [
+    "concept-寓意解释"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "经典叙事如何与希腊哲学的理性概念协调？",
+  "thesis": "寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。",
+  "summary": "斐洛是西亚、中亚及伊斯兰思想世界希腊化犹太哲学的重要思想人物，主要追问“经典叙事如何与希腊哲学的理性概念协调？”。其思想以“寓意解释”为入口，主张寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "philo-works"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "alexandria",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-jewish-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章：“Philo of Alexandria / 斐洛”",
+      "claim": "支持斐洛的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "斐洛是西亚、中亚及伊斯兰思想世界希腊化犹太哲学的重要思想人物，主要追问“经典叙事如何与希腊哲学的理性概念协调？”。其思想以“寓意解释”为入口，主张寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Philo of Alexandria / 斐洛”",
+              "claim": "支持斐洛的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经典叙事如何与希腊哲学的理性概念协调？",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Philo of Alexandria / 斐洛”",
+              "claim": "支持对斐洛核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Philo of Alexandria / 斐洛”",
+              "claim": "支持对斐洛核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/philo-alexandria.webp",
+    "thumbSrc": "/media/thinkers/thumb/philo-alexandria.webp",
+    "alt": "斐洛的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "André Thévet · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:PhiloThevet.jpg",
+    "sourceFile": "File:PhiloThevet.jpg",
+    "license": "Public domain",
+    "creator": "André Thévet",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

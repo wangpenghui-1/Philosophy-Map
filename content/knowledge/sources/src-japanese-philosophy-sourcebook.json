@@ -1,0 +1,23 @@
+{
+  "id": "src-japanese-philosophy-sourcebook",
+  "entityType": "source",
+  "title": "Japanese Philosophy: A Sourcebook",
+  "authors": [
+    "Heisig, James W.",
+    "Kasulis, Thomas P.",
+    "Maraldo, John C. (eds.)"
+  ],
+  "sourceType": "scholarly-book",
+  "publication": "University of Hawai‘i Press",
+  "year": 2011,
+  "isbn": "9780824835525",
+  "defaultLocator": "对应人物、学派与选文导言",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

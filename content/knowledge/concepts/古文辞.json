@@ -1,0 +1,48 @@
+{
+  "id": "concept-古文辞",
+  "slug": "古文辞",
+  "entityType": "concept",
+  "name": "古文辞",
+  "originalTerms": [],
+  "summary": "“古文辞”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-日本古学",
+      "label": "古文辞",
+      "explanation": "在荻生徂徕及日本古学语境中，“古文辞”用于说明：回到古代语言和礼乐制度理解先王之道，反对把政治简化为内在心性修养。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+          "claim": "支持荻生徂徕语境中的“古文辞”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "ogyu-sorai"
+  ],
+  "workIds": [
+    "bendo"
+  ],
+  "traditionIds": [
+    "tradition-日本古学"
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+      "claim": "支持“古文辞”作为荻生徂徕思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

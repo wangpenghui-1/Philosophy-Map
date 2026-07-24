@@ -1,0 +1,107 @@
+{
+  "id": "sophie-oluwole",
+  "slug": "sophie-oluwole",
+  "entityType": "person",
+  "names": {
+    "display": "索菲·奥卢沃莱",
+    "english": "Sophie Oluwole",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1935–2018",
+    "startYear": 1935,
+    "endYear": 2018,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-约鲁巴哲学"
+  ],
+  "conceptIds": [
+    "concept-互补二元"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "约鲁巴思想中的二元关系是否必然意味着相互排斥？",
+  "thesis": "通过口述文本和概念分析呈现互补而非排他的二元结构，反驳非洲没有哲学的论断。",
+  "summary": "索菲·奥卢沃莱是非洲约鲁巴哲学的重要思想人物，主要追问“约鲁巴思想中的二元关系是否必然意味着相互排斥？”。其思想以“互补二元”为入口，主张通过口述文本和概念分析呈现互补而非排他的二元结构，反驳非洲没有哲学的论断。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "socrates-orunmila"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "lagos",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Sophie Oluwole / 索菲·奥卢沃莱”",
+      "claim": "支持索菲·奥卢沃莱的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "索菲·奥卢沃莱是非洲约鲁巴哲学的重要思想人物，主要追问“约鲁巴思想中的二元关系是否必然意味着相互排斥？”。其思想以“互补二元”为入口，主张通过口述文本和概念分析呈现互补而非排他的二元结构，反驳非洲没有哲学的论断。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Sophie Oluwole / 索菲·奥卢沃莱”",
+              "claim": "支持索菲·奥卢沃莱的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：约鲁巴思想中的二元关系是否必然意味着相互排斥？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Sophie Oluwole / 索菲·奥卢沃莱”",
+              "claim": "支持对索菲·奥卢沃莱核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：通过口述文本和概念分析呈现互补而非排他的二元结构，反驳非洲没有哲学的论断。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Sophie Oluwole / 索菲·奥卢沃莱”",
+              "claim": "支持对索菲·奥卢沃莱核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/sophie-oluwole.webp",
+    "thumbSrc": "/media/thinkers/thumb/sophie-oluwole.webp",
+    "alt": "索菲·奥卢沃莱的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

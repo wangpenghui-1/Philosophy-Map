@@ -1,0 +1,42 @@
+{
+  "id": "kitab-i-iqan",
+  "slug": "kitab-i-iqan",
+  "entityType": "work",
+  "title": "《笃信经》",
+  "originalTitle": "Kitáb-i-Íqán",
+  "authorRefs": [
+    {
+      "personId": "bahaullah",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1861至1862年",
+  "languages": [
+    "fa"
+  ],
+  "summary": "《笃信经》是进入巴哈欧拉思想语境的代表文本入口。条目以“人类一体”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-人类一体"
+  ],
+  "traditionIds": [
+    "tradition-巴哈伊思想"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Bahaullah / 巴哈欧拉”",
+      "claim": "支持《笃信经》与巴哈欧拉的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "concept-女性求知权",
+  "slug": "女性求知权",
+  "entityType": "concept",
+  "name": "女性求知权",
+  "originalTerms": [],
+  "summary": "“女性求知权”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-新西班牙思想",
+      "label": "女性求知权",
+      "explanation": "在胡安娜修女及新西班牙思想语境中，“女性求知权”用于说明：以自传式论辩和经典例证捍卫女性求知，将服从话语转化为对教育制度的批判。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+          "claim": "支持胡安娜修女语境中的“女性求知权”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "sor-juana-ines-de-la-cruz"
+  ],
+  "workIds": [
+    "reply-sor-filotea"
+  ],
+  "traditionIds": [
+    "tradition-新西班牙思想"
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+      "claim": "支持“女性求知权”作为胡安娜修女思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

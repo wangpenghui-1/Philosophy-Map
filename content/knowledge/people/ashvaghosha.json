@@ -1,0 +1,114 @@
+{
+  "id": "ashvaghosha",
+  "slug": "ashvaghosha",
+  "entityType": "person",
+  "names": {
+    "display": "马鸣",
+    "english": "Ashvaghosha",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约80–150",
+    "startYear": 80,
+    "endYear": 150,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-佛教哲学"
+  ],
+  "conceptIds": [
+    "concept-信与修行"
+  ],
+  "questionIds": [
+    "good-life"
+  ],
+  "guidingQuestion": "诗歌与叙事如何引导人理解觉悟之路？",
+  "thesis": "借佛陀生平和大乘论述把信、智慧与修行结合，使哲学教义获得文学表达。",
+  "summary": "马鸣是南亚佛教哲学的重要思想人物，主要追问“诗歌与叙事如何引导人理解觉悟之路？”。其思想以“信与修行”为入口，主张借佛陀生平和大乘论述把信、智慧与修行结合，使哲学教义获得文学表达。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "buddhacarita"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "ayodhya",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Ashvaghosha / 马鸣”",
+      "claim": "支持马鸣的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "马鸣是南亚佛教哲学的重要思想人物，主要追问“诗歌与叙事如何引导人理解觉悟之路？”。其思想以“信与修行”为入口，主张借佛陀生平和大乘论述把信、智慧与修行结合，使哲学教义获得文学表达。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Ashvaghosha / 马鸣”",
+              "claim": "支持马鸣的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：诗歌与叙事如何引导人理解觉悟之路？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Ashvaghosha / 马鸣”",
+              "claim": "支持对马鸣核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：借佛陀生平和大乘论述把信、智慧与修行结合，使哲学教义获得文学表达。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Ashvaghosha / 马鸣”",
+              "claim": "支持对马鸣核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ashvaghosha.webp",
+    "thumbSrc": "/media/thinkers/thumb/ashvaghosha.webp",
+    "alt": "马鸣的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashvaghosha.jpg",
+    "sourceFile": "File:Ashvaghosha.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "zeno-citium",
+  "slug": "zeno-citium",
+  "entityType": "person",
+  "names": {
+    "display": "芝诺",
+    "english": "Zeno of Citium",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前334–262",
+    "startYear": -334,
+    "endYear": -262,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-斯多亚学派"
+  ],
+  "conceptIds": [
+    "concept-顺应自然"
+  ],
+  "questionIds": [
+    "reality",
+    "freedom"
+  ],
+  "guidingQuestion": "自由如何可能于一个因果有序的宇宙之中？",
+  "thesis": "德性在于理性地顺应自然，通过判断训练使行动与共同宇宙的秩序协调。",
+  "summary": "芝诺是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由如何可能于一个因果有序的宇宙之中？”。其思想以“顺应自然”为入口，主张德性在于理性地顺应自然，通过判断训练使行动与共同宇宙的秩序协调。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "stoic-testimonia-zeno"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "athens",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Zeno of Citium / 芝诺”",
+      "claim": "支持芝诺的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "芝诺是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由如何可能于一个因果有序的宇宙之中？”。其思想以“顺应自然”为入口，主张德性在于理性地顺应自然，通过判断训练使行动与共同宇宙的秩序协调。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Zeno of Citium / 芝诺”",
+              "claim": "支持芝诺的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：自由如何可能于一个因果有序的宇宙之中？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Zeno of Citium / 芝诺”",
+              "claim": "支持对芝诺核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：德性在于理性地顺应自然，通过判断训练使行动与共同宇宙的秩序协调。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Zeno of Citium / 芝诺”",
+              "claim": "支持对芝诺核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/zeno-citium.webp",
+    "thumbSrc": "/media/thinkers/thumb/zeno-citium.webp",
+    "alt": "芝诺的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Paolo Monti · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Napoli,_1969)_-_BEIC_6353768.jpg",
+    "sourceFile": "File:Paolo Monti - Servizio fotografico (Napoli, 1969) - BEIC 6353768.jpg",
+    "license": "CC BY-SA 4.0",
+    "creator": "Paolo Monti",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

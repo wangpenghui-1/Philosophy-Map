@@ -1,0 +1,42 @@
+{
+  "id": "ten-luminous-stages",
+  "slug": "ten-luminous-stages",
+  "entityType": "work",
+  "title": "《十住心论》",
+  "originalTitle": "十住心論",
+  "authorRefs": [
+    {
+      "personId": "kukai",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "830年代",
+  "languages": [
+    "ja"
+  ],
+  "summary": "《十住心论》是进入空海思想语境的代表文本入口。条目以“即身成佛”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-即身成佛"
+  ],
+  "traditionIds": [
+    "tradition-日本密教"
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Kukai / 空海”",
+      "claim": "支持《十住心论》与空海的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

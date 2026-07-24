@@ -1,0 +1,112 @@
+{
+  "id": "thomas-kuhn",
+  "slug": "thomas-kuhn",
+  "entityType": "person",
+  "names": {
+    "display": "库恩",
+    "english": "Thomas Kuhn",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1922–1996",
+    "startYear": 1922,
+    "endYear": 1996,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-科学哲学"
+  ],
+  "conceptIds": [
+    "concept-范式转换"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "科学知识是否只通过连续积累而发展？",
+  "thesis": "常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。",
+  "summary": "库恩是美洲与加勒比科学哲学的重要思想人物，主要追问“科学知识是否只通过连续积累而发展？”。其思想以“范式转换”为入口，主张常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "structure-scientific-revolutions"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "princeton",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Thomas Kuhn / 库恩”",
+      "claim": "支持库恩的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "库恩是美洲与加勒比科学哲学的重要思想人物，主要追问“科学知识是否只通过连续积累而发展？”。其思想以“范式转换”为入口，主张常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Thomas Kuhn / 库恩”",
+              "claim": "支持库恩的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：科学知识是否只通过连续积累而发展？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Thomas Kuhn / 库恩”",
+              "claim": "支持对库恩核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Thomas Kuhn / 库恩”",
+              "claim": "支持对库恩核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/thomas-kuhn.webp",
+    "thumbSrc": "/media/thinkers/thumb/thomas-kuhn.webp",
+    "alt": "库恩的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Bob Bielk · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Kuhn_(1977)_(cropped).jpg",
+    "sourceFile": "File:Thomas Kuhn (1977) (cropped).jpg",
+    "license": "Public domain",
+    "creator": "Bob Bielk",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

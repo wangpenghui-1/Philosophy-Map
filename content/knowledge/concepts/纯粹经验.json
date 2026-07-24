@@ -1,0 +1,48 @@
+{
+  "id": "concept-纯粹经验",
+  "slug": "纯粹经验",
+  "entityType": "concept",
+  "name": "纯粹经验",
+  "originalTerms": [],
+  "summary": "“纯粹经验”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-京都学派",
+      "label": "纯粹经验",
+      "explanation": "在西田几多郎及京都学派语境中，“纯粹经验”用于说明：纯粹经验在反思分化之前统一认识与实在，并发展为空间性的场所逻辑。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言：“Nishida Kitaro / 西田几多郎”",
+          "claim": "支持西田几多郎语境中的“纯粹经验”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "nishida-kitaro"
+  ],
+  "workIds": [
+    "inquiry-good"
+  ],
+  "traditionIds": [
+    "tradition-京都学派"
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Nishida Kitaro / 西田几多郎”",
+      "claim": "支持“纯粹经验”作为西田几多郎思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

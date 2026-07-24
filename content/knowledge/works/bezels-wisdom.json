@@ -1,0 +1,42 @@
+{
+  "id": "bezels-wisdom",
+  "slug": "bezels-wisdom",
+  "entityType": "work",
+  "title": "《智慧珍宝》",
+  "originalTitle": "Fuṣūṣ al-ḥikam",
+  "authorRefs": [
+    {
+      "personId": "ibn-arabi",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1229年",
+  "languages": [
+    "ar"
+  ],
+  "summary": "《智慧珍宝》是进入伊本·阿拉比思想语境的代表文本入口。条目以“存在统一”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-存在统一"
+  ],
+  "traditionIds": [
+    "tradition-苏菲形而上学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Ibn Arabi / 伊本·阿拉比”",
+      "claim": "支持《智慧珍宝》与伊本·阿拉比的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

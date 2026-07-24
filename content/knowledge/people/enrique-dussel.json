@@ -1,0 +1,112 @@
+{
+  "id": "enrique-dussel",
+  "slug": "enrique-dussel",
+  "entityType": "person",
+  "names": {
+    "display": "恩里克·杜塞尔",
+    "english": "Enrique Dussel",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1934–2023",
+    "startYear": 1934,
+    "endYear": 2023,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-解放哲学"
+  ],
+  "conceptIds": [
+    "concept-外在性"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "哲学如何从被现代体系排除者的立场开始？",
+  "thesis": "他者的外在性向总体化秩序提出伦理要求，解放实践须从殖民受害者的生命出发。",
+  "summary": "恩里克·杜塞尔是美洲与加勒比解放哲学的重要思想人物，主要追问“哲学如何从被现代体系排除者的立场开始？”。其思想以“外在性”为入口，主张他者的外在性向总体化秩序提出伦理要求，解放实践须从殖民受害者的生命出发。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "philosophy-liberation"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "mexico-city",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Enrique Dussel / 恩里克·杜塞尔”",
+      "claim": "支持恩里克·杜塞尔的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "恩里克·杜塞尔是美洲与加勒比解放哲学的重要思想人物，主要追问“哲学如何从被现代体系排除者的立场开始？”。其思想以“外在性”为入口，主张他者的外在性向总体化秩序提出伦理要求，解放实践须从殖民受害者的生命出发。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Enrique Dussel / 恩里克·杜塞尔”",
+              "claim": "支持恩里克·杜塞尔的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：哲学如何从被现代体系排除者的立场开始？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Enrique Dussel / 恩里克·杜塞尔”",
+              "claim": "支持对恩里克·杜塞尔核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：他者的外在性向总体化秩序提出伦理要求，解放实践须从殖民受害者的生命出发。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Enrique Dussel / 恩里克·杜塞尔”",
+              "claim": "支持对恩里克·杜塞尔核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/enrique-dussel.webp",
+    "thumbSrc": "/media/thinkers/thumb/enrique-dussel.webp",
+    "alt": "恩里克·杜塞尔的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Ralg23 · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:EnriqueDussel.jpg",
+    "sourceFile": "File:EnriqueDussel.jpg",
+    "license": "Public domain",
+    "creator": "Ralg23",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

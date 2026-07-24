@@ -1,0 +1,48 @@
+{
+  "id": "concept-废除主义",
+  "slug": "废除主义",
+  "entityType": "concept",
+  "name": "废除主义",
+  "originalTerms": [],
+  "summary": "“废除主义”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-批判理论与废除主义",
+      "label": "废除主义",
+      "explanation": "在安吉拉·戴维斯及批判理论与废除主义语境中，“废除主义”用于说明：废除主义把监狱置于种族、性别和资本结构中分析，并建设教育、照护与修复性替代方案。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章：“Angela Davis / 安吉拉·戴维斯”",
+          "claim": "支持安吉拉·戴维斯语境中的“废除主义”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "angela-davis"
+  ],
+  "workIds": [
+    "are-prisons-obsolete"
+  ],
+  "traditionIds": [
+    "tradition-批判理论与废除主义"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Angela Davis / 安吉拉·戴维斯”",
+      "claim": "支持“废除主义”作为安吉拉·戴维斯思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

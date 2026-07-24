@@ -1,0 +1,48 @@
+{
+  "id": "concept-宗教理性改革",
+  "slug": "宗教理性改革",
+  "entityType": "concept",
+  "name": "宗教理性改革",
+  "originalTerms": [],
+  "summary": "“宗教理性改革”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-近代印度改革思想",
+      "label": "宗教理性改革",
+      "explanation": "在罗姆摩罕·罗伊及近代印度改革思想语境中，“宗教理性改革”用于说明：以奥义书一神论和公共论辩反对陋习，推动教育、出版与妇女权利改革。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Rammohan Roy / 罗姆摩罕·罗伊”",
+          "claim": "支持罗姆摩罕·罗伊语境中的“宗教理性改革”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "rammohan-roy"
+  ],
+  "workIds": [
+    "precepts-jesus-roy"
+  ],
+  "traditionIds": [
+    "tradition-近代印度改革思想"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Rammohan Roy / 罗姆摩罕·罗伊”",
+      "claim": "支持“宗教理性改革”作为罗姆摩罕·罗伊思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

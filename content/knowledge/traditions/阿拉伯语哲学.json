@@ -7,20 +7,24 @@
   "summary": "阿拉伯语哲学是本知识库用于组织人物、文本与概念的一项思想传统索引。它不把传统理解为封闭或同质的体系，而用于呈现内部差异、历史传播与跨传统接触。",
   "periodLabel": "跨历史时期",
   "regionLabels": [
-    "伊斯兰思想世界"
+    "伊斯兰思想世界",
+    "西亚、中亚及伊斯兰思想世界"
   ],
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "avicenna"
+    "avicenna",
+    "al-kindi"
   ],
   "conceptIds": [
     "concept-存在",
     "concept-本质",
-    "concept-灵魂"
+    "concept-灵魂",
+    "concept-第一哲学"
   ],
   "sourceIds": [
-    "src-avicenna"
+    "src-avicenna",
+    "src-history-islamic-philosophy"
   ],
   "citations": [
     {

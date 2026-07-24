@@ -1,0 +1,110 @@
+{
+  "id": "seneca",
+  "slug": "seneca",
+  "entityType": "person",
+  "names": {
+    "display": "塞涅卡",
+    "english": "Seneca",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前4–公元65",
+    "startYear": -4,
+    "endYear": 65,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-斯多亚学派"
+  ],
+  "conceptIds": [
+    "concept-时间占有"
+  ],
+  "questionIds": [
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "人在权力、财富和死亡面前如何保持内在自由？",
+  "thesis": "分辨可控判断与外在偶然，珍惜有限时间并以理性训练情绪。",
+  "summary": "塞涅卡是欧洲与地中海斯多亚学派的重要思想人物，主要追问“人在权力、财富和死亡面前如何保持内在自由？”。其思想以“时间占有”为入口，主张分辨可控判断与外在偶然，珍惜有限时间并以理性训练情绪。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "letters-lucilius"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "rome",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Seneca / 塞涅卡”",
+      "claim": "支持塞涅卡的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "塞涅卡是欧洲与地中海斯多亚学派的重要思想人物，主要追问“人在权力、财富和死亡面前如何保持内在自由？”。其思想以“时间占有”为入口，主张分辨可控判断与外在偶然，珍惜有限时间并以理性训练情绪。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Seneca / 塞涅卡”",
+              "claim": "支持塞涅卡的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：人在权力、财富和死亡面前如何保持内在自由？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Seneca / 塞涅卡”",
+              "claim": "支持对塞涅卡核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：分辨可控判断与外在偶然，珍惜有限时间并以理性训练情绪。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Seneca / 塞涅卡”",
+              "claim": "支持对塞涅卡核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/seneca.webp",
+    "thumbSrc": "/media/thinkers/thumb/seneca.webp",
+    "alt": "塞涅卡的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

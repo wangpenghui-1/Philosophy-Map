@@ -1,0 +1,42 @@
+{
+  "id": "male-daughters-female-husbands",
+  "slug": "male-daughters-female-husbands",
+  "entityType": "work",
+  "title": "《男性女儿、女性丈夫》",
+  "originalTitle": "Male Daughters, Female Husbands",
+  "authorRefs": [
+    {
+      "personId": "ifi-amadiume",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1987年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《男性女儿、女性丈夫》是进入伊菲·阿马迪乌梅思想语境的代表文本入口。条目以“性别制度历史性”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-性别制度历史性"
+  ],
+  "traditionIds": [
+    "tradition-非洲女性主义"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Ifi Amadiume / 伊菲·阿马迪乌梅”",
+      "claim": "支持《男性女儿、女性丈夫》与伊菲·阿马迪乌梅的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

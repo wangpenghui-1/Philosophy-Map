@@ -1,0 +1,48 @@
+{
+  "id": "concept-性别公正诠释",
+  "slug": "性别公正诠释",
+  "entityType": "concept",
+  "name": "性别公正诠释",
+  "originalTerms": [],
+  "summary": "“性别公正诠释”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-伊斯兰女性主义",
+      "label": "性别公正诠释",
+      "explanation": "在阿米娜·瓦杜德及伊斯兰女性主义语境中，“性别公正诠释”用于说明：从文本整体、语法和历史语境重读古兰经，以神圣统一原则批判性别等级化。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+          "claim": "支持阿米娜·瓦杜德语境中的“性别公正诠释”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "amina-wadud"
+  ],
+  "workIds": [
+    "quran-woman"
+  ],
+  "traditionIds": [
+    "tradition-伊斯兰女性主义"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Amina Wadud / 阿米娜·瓦杜德”",
+      "claim": "支持“性别公正诠释”作为阿米娜·瓦杜德思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

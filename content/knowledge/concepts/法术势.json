@@ -1,0 +1,48 @@
+{
+  "id": "concept-法术势",
+  "slug": "法术势",
+  "entityType": "concept",
+  "name": "法术势",
+  "originalTerms": [],
+  "summary": "“法术势”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-法家",
+      "label": "法术势",
+      "explanation": "在韩非及法家语境中，“法术势”用于说明：公开的法、行政之术与职位之势共同约束官僚和政治行为。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+          "claim": "支持韩非语境中的“法术势”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "han-fei"
+  ],
+  "workIds": [
+    "han-feizi"
+  ],
+  "traditionIds": [
+    "tradition-法家"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+      "claim": "支持“法术势”作为韩非思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

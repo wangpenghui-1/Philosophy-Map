@@ -1,0 +1,48 @@
+{
+  "id": "concept-安第斯善治",
+  "slug": "安第斯善治",
+  "entityType": "concept",
+  "name": "安第斯善治",
+  "originalTerms": [],
+  "summary": "“安第斯善治”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-安第斯殖民批判",
+      "label": "安第斯善治",
+      "explanation": "在瓜曼·波马及安第斯殖民批判语境中，“安第斯善治”用于说明：结合图像、编年史与劝谏揭露殖民暴力，并以安第斯共同体经验提出善治秩序。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章：“Felipe Guaman Poma de Ayala / 瓜曼·波马”",
+          "claim": "支持瓜曼·波马语境中的“安第斯善治”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "felipe-guaman-poma"
+  ],
+  "workIds": [
+    "new-chronicle-good-government"
+  ],
+  "traditionIds": [
+    "tradition-安第斯殖民批判"
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Felipe Guaman Poma de Ayala / 瓜曼·波马”",
+      "claim": "支持“安第斯善治”作为瓜曼·波马思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "xunzi-text",
+  "slug": "xunzi-text",
+  "entityType": "work",
+  "title": "《荀子》",
+  "originalTitle": "荀子",
+  "authorRefs": [
+    {
+      "personId": "xunzi",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "战国晚期至汉初编成",
+  "languages": [
+    "zh"
+  ],
+  "summary": "《荀子》是进入荀子思想语境的代表文本入口。条目以“性恶”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-性恶"
+  ],
+  "traditionIds": [
+    "tradition-儒家"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Xunzi / 荀子”",
+      "claim": "支持《荀子》与荀子的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

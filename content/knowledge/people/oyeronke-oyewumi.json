@@ -1,0 +1,112 @@
+{
+  "id": "oyeronke-oyewumi",
+  "slug": "oyeronke-oyewumi",
+  "entityType": "person",
+  "names": {
+    "display": "奥耶龙克·奥耶乌米",
+    "english": "Oyeronke Oyewumi",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1957–",
+    "startYear": 1957,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-非洲性别思想"
+  ],
+  "conceptIds": [
+    "concept-性别范畴殖民性"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "身体性别为何不应被视为所有社会的首要分类？",
+  "thesis": "约鲁巴社会的社会等级曾更多依据年龄等关系，殖民知识将西方性别体系普遍化。",
+  "summary": "奥耶龙克·奥耶乌米是非洲非洲性别思想的重要思想人物，主要追问“身体性别为何不应被视为所有社会的首要分类？”。其思想以“性别范畴殖民性”为入口，主张约鲁巴社会的社会等级曾更多依据年龄等关系，殖民知识将西方性别体系普遍化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "invention-women"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "stony-brook",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+      "claim": "支持奥耶龙克·奥耶乌米的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "奥耶龙克·奥耶乌米是非洲非洲性别思想的重要思想人物，主要追问“身体性别为何不应被视为所有社会的首要分类？”。其思想以“性别范畴殖民性”为入口，主张约鲁巴社会的社会等级曾更多依据年龄等关系，殖民知识将西方性别体系普遍化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+              "claim": "支持奥耶龙克·奥耶乌米的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：身体性别为何不应被视为所有社会的首要分类？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+              "claim": "支持对奥耶龙克·奥耶乌米核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：约鲁巴社会的社会等级曾更多依据年龄等关系，殖民知识将西方性别体系普遍化。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+              "claim": "支持对奥耶龙克·奥耶乌米核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/oyeronke-oyewumi.webp",
+    "thumbSrc": "/media/thinkers/thumb/oyeronke-oyewumi.webp",
+    "alt": "奥耶龙克·奥耶乌米的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Oyeronke Oyewumi · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oy%C3%A8r%C3%B3nk%E1%BA%B9%CC%81_Oy%C4%9Bw%C3%B9m%C3%AD,_2020_(cropped).jpg",
+    "sourceFile": "File:Oyèrónkẹ́ Oyěwùmí, 2020 (cropped).jpg",
+    "license": "CC BY-SA 4.0",
+    "creator": "Oyeronke Oyewumi",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "workflowVersion": "index-candidate/v1",
+  "batchId": "batch-04",
+  "batchNumber": 4,
+  "status": "prepared",
+  "candidateCount": 30,
+  "candidateIds": [
+    "candidate-004",
+    "candidate-011",
+    "candidate-018",
+    "candidate-025",
+    "candidate-032",
+    "candidate-039",
+    "candidate-046",
+    "candidate-053",
+    "candidate-060",
+    "candidate-067",
+    "candidate-074",
+    "candidate-081",
+    "candidate-088",
+    "candidate-095",
+    "candidate-102",
+    "candidate-109",
+    "candidate-116",
+    "candidate-123",
+    "candidate-130",
+    "candidate-137",
+    "candidate-144",
+    "candidate-151",
+    "candidate-158",
+    "candidate-165",
+    "candidate-172",
+    "candidate-179",
+    "candidate-186",
+    "candidate-193",
+    "candidate-200",
+    "candidate-207"
+  ],
+  "coverage": {
+    "regionCounts": {
+      "东南亚与大洋洲": 2,
+      "东亚": 5,
+      "非洲": 3,
+      "跨区域与离散思想传统": 1,
+      "美洲与加勒比": 4,
+      "南亚": 4,
+      "欧洲与地中海": 6,
+      "西亚、中亚及伊斯兰思想世界": 5
+    },
+    "eraCounts": {
+      "1500–1800年": 3,
+      "1800–1945年": 7,
+      "1945年至今": 9,
+      "500–1500年": 4,
+      "公元前500年以前": 2,
+      "公元前500年至公元500年": 5
+    },
+    "maximumSingleRegionShare": 0.2
+  },
+  "gates": {
+    "minimumRegions": 4,
+    "minimumEras": 3,
+    "maximumSingleRegionShare": 0.4,
+    "requireLocatorForEveryClaim": true,
+    "automaticPublicationAllowed": false
+  },
+  "generatedBy": "content-batch-preparer/v1"
+}

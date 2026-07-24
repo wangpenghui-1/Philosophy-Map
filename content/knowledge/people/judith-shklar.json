@@ -1,0 +1,113 @@
+{
+  "id": "judith-shklar",
+  "slug": "judith-shklar",
+  "entityType": "person",
+  "names": {
+    "display": "朱迪思·施克拉",
+    "english": "Judith Shklar",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1928–1992",
+    "startYear": 1928,
+    "endYear": 1992,
+    "certainty": "established"
+  },
+  "primaryRegion": "跨区域与离散思想传统",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-政治思想与流亡经验"
+  ],
+  "conceptIds": [
+    "concept-恐惧自由主义"
+  ],
+  "questionIds": [
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "政治制度首先应避免哪一种可预见的恶？",
+  "thesis": "自由主义的最低共同点是防止国家残酷和恐惧，因为弱者最易承受制度伤害。",
+  "summary": "朱迪思·施克拉是跨区域与离散思想传统政治思想与流亡经验的重要思想人物，主要追问“政治制度首先应避免哪一种可预见的恶？”。其思想以“恐惧自由主义”为入口，主张自由主义的最低共同点是防止国家残酷和恐惧，因为弱者最易承受制度伤害。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "liberalism-fear"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "harvard",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Judith Shklar / 朱迪思·施克拉”",
+      "claim": "支持朱迪思·施克拉的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "朱迪思·施克拉是跨区域与离散思想传统政治思想与流亡经验的重要思想人物，主要追问“政治制度首先应避免哪一种可预见的恶？”。其思想以“恐惧自由主义”为入口，主张自由主义的最低共同点是防止国家残酷和恐惧，因为弱者最易承受制度伤害。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Judith Shklar / 朱迪思·施克拉”",
+              "claim": "支持朱迪思·施克拉的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：政治制度首先应避免哪一种可预见的恶？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Judith Shklar / 朱迪思·施克拉”",
+              "claim": "支持对朱迪思·施克拉核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：自由主义的最低共同点是防止国家残酷和恐惧，因为弱者最易承受制度伤害。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Judith Shklar / 朱迪思·施克拉”",
+              "claim": "支持对朱迪思·施克拉核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/judith-shklar.webp",
+    "thumbSrc": "/media/thinkers/thumb/judith-shklar.webp",
+    "alt": "朱迪思·施克拉的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "U.S. District Court for the District of Massachusetts. 1789 · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SHKLAR,_Judith_Nisse_-_DPLA_-_b9993e01b706573027b79088904d69c1.jpg",
+    "sourceFile": "File:SHKLAR, Judith Nisse - DPLA - b9993e01b706573027b79088904d69c1.jpg",
+    "license": "Public domain",
+    "creator": "U.S. District Court for the District of Massachusetts. 1789",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#a5a3df",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

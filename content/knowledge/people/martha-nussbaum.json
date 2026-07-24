@@ -1,0 +1,114 @@
+{
+  "id": "martha-nussbaum",
+  "slug": "martha-nussbaum",
+  "entityType": "person",
+  "names": {
+    "display": "玛莎·努斯鲍姆",
+    "english": "Martha Nussbaum",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1947–",
+    "startYear": 1947,
+    "endYear": 2026,
+    "certainty": "established"
+  },
+  "primaryRegion": "跨区域与离散思想传统",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-伦理与能力进路"
+  ],
+  "conceptIds": [
+    "concept-核心能力"
+  ],
+  "questionIds": [
+    "society",
+    "self",
+    "good-life"
+  ],
+  "guidingQuestion": "正义制度应保障每个人具备哪些真实生活机会？",
+  "thesis": "能力进路以人的实际选择和行动机会评价发展，并设定尊严所需的核心门槛。",
+  "summary": "玛莎·努斯鲍姆是跨区域与离散思想传统伦理与能力进路的重要思想人物，主要追问“正义制度应保障每个人具备哪些真实生活机会？”。其思想以“核心能力”为入口，主张能力进路以人的实际选择和行动机会评价发展，并设定尊严所需的核心门槛。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "frontiers-justice"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "chicago",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Martha Nussbaum / 玛莎·努斯鲍姆”",
+      "claim": "支持玛莎·努斯鲍姆的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "玛莎·努斯鲍姆是跨区域与离散思想传统伦理与能力进路的重要思想人物，主要追问“正义制度应保障每个人具备哪些真实生活机会？”。其思想以“核心能力”为入口，主张能力进路以人的实际选择和行动机会评价发展，并设定尊严所需的核心门槛。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Martha Nussbaum / 玛莎·努斯鲍姆”",
+              "claim": "支持玛莎·努斯鲍姆的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：正义制度应保障每个人具备哪些真实生活机会？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Martha Nussbaum / 玛莎·努斯鲍姆”",
+              "claim": "支持对玛莎·努斯鲍姆核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：能力进路以人的实际选择和行动机会评价发展，并设定尊严所需的核心门槛。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Martha Nussbaum / 玛莎·努斯鲍姆”",
+              "claim": "支持对玛莎·努斯鲍姆核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/martha-nussbaum.webp",
+    "thumbSrc": "/media/thinkers/thumb/martha-nussbaum.webp",
+    "alt": "玛莎·努斯鲍姆的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY-SA 3.0",
+    "credit": "Sally Ryan, photographer, www.sallyryanphoto.com · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martha_Nussbaum_2010_(cropped).jpg",
+    "sourceFile": "File:Martha Nussbaum 2010 (cropped).jpg",
+    "license": "CC BY-SA 3.0",
+    "creator": "Sally Ryan, photographer, www.sallyryanphoto.com",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#a5a3df",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

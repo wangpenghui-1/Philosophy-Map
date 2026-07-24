@@ -62,6 +62,11 @@ export interface KnowledgePerson extends EditorialMetadata {
     authenticity: string;
     rightsStatus: string;
     credit: string;
+    sourceUrl?: string;
+    sourceFile?: string;
+    license?: string;
+    creator?: string;
+    retrievedAt?: string;
   };
   uncertainty?: string;
   color: string;
@@ -181,6 +186,7 @@ export interface KnowledgeIndexItem {
   period?: string;
   startYear?: number;
   traditionIds: string[];
+  media?: { thumbSrc: string; alt: string; objectPosition: string };
   searchText: string;
   href: string;
 }

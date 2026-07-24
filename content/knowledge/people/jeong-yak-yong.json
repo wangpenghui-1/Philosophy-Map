@@ -1,0 +1,113 @@
+{
+  "id": "jeong-yak-yong",
+  "slug": "jeong-yak-yong",
+  "entityType": "person",
+  "names": {
+    "display": "丁若镛",
+    "english": "Jeong Yak-yong",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1762–1836",
+    "startYear": 1762,
+    "endYear": 1836,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-朝鲜实学"
+  ],
+  "conceptIds": [
+    "concept-实学经世"
+  ],
+  "questionIds": [
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "经典伦理如何转化为改善民生和行政的具体制度？",
+  "thesis": "以经世实学重释儒家德性，强调官员责任、土地制度和可实行的治理改革。",
+  "summary": "丁若镛是东亚朝鲜实学的重要思想人物，主要追问“经典伦理如何转化为改善民生和行政的具体制度？”。其思想以“实学经世”为入口，主张以经世实学重释儒家德性，强调官员责任、土地制度和可实行的治理改革。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "mongmin-simseo"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "gangjin",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Jeong Yak-yong / 丁若镛”",
+      "claim": "支持丁若镛的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "丁若镛是东亚朝鲜实学的重要思想人物，主要追问“经典伦理如何转化为改善民生和行政的具体制度？”。其思想以“实学经世”为入口，主张以经世实学重释儒家德性，强调官员责任、土地制度和可实行的治理改革。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Jeong Yak-yong / 丁若镛”",
+              "claim": "支持丁若镛的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经典伦理如何转化为改善民生和行政的具体制度？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Jeong Yak-yong / 丁若镛”",
+              "claim": "支持对丁若镛核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以经世实学重释儒家德性，强调官员责任、土地制度和可实行的治理改革。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Jeong Yak-yong / 丁若镛”",
+              "claim": "支持对丁若镛核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/jeong-yak-yong.webp",
+    "thumbSrc": "/media/thinkers/thumb/jeong-yak-yong.webp",
+    "alt": "丁若镛的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeong_Yak-yong.jpg",
+    "sourceFile": "File:Jeong Yak-yong.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

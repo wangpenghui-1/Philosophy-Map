@@ -1,0 +1,48 @@
+{
+  "id": "concept-比较方法",
+  "slug": "比较方法",
+  "entityType": "concept",
+  "name": "比较方法",
+  "originalTerms": [],
+  "summary": "“比较方法”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-比较思想与科学",
+      "label": "比较方法",
+      "explanation": "在比鲁尼及比较思想与科学语境中，“比较方法”用于说明：结合语言学习、观察和文本比较描述印度宗教与科学，区分报告、证据与评价。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Al-Biruni / 比鲁尼”",
+          "claim": "支持比鲁尼语境中的“比较方法”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "al-biruni"
+  ],
+  "workIds": [
+    "biruni-india"
+  ],
+  "traditionIds": [
+    "tradition-比较思想与科学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Al-Biruni / 比鲁尼”",
+      "claim": "支持“比较方法”作为比鲁尼思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

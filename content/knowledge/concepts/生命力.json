@@ -1,0 +1,48 @@
+{
+  "id": "concept-生命力",
+  "slug": "生命力",
+  "entityType": "concept",
+  "name": "生命力",
+  "originalTerms": [],
+  "summary": "“生命力”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-中世纪思想",
+      "label": "生命力",
+      "explanation": "在宾根的希尔德加德及中世纪思想语境中，“生命力”用于说明：生命力贯穿宇宙和身体，视觉、音乐与自然观察共同表达受造秩序。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Hildegard of Bingen / 宾根的希尔德加德”",
+          "claim": "支持宾根的希尔德加德语境中的“生命力”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "hildegard-bingen"
+  ],
+  "workIds": [
+    "scivias"
+  ],
+  "traditionIds": [
+    "tradition-中世纪思想"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Hildegard of Bingen / 宾根的希尔德加德”",
+      "claim": "支持“生命力”作为宾根的希尔德加德思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

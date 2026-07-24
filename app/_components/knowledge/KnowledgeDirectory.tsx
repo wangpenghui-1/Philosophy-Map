@@ -59,6 +59,17 @@ function toQuery(filters: KnowledgeFilters, page: number) {
   return `/knowledge${params.size ? `?${params}` : ""}`;
 }
 
+function withoutFilter(filters: KnowledgeFilters, key: keyof KnowledgeFilters) {
+  return toQuery({ ...filters, [key]: key === "page" ? 1 : "", page: 1 }, 1);
+}
+
+const entitySymbols = {
+  person: "人",
+  concept: "义",
+  tradition: "脉",
+  work: "文",
+} as const;
+
 export default function KnowledgeDirectory({ filters }: { filters: KnowledgeFilters }) {
   const normalizedQuery = filters.q.toLowerCase();
   const filtered = knowledgeIndex.filter((item) => {
@@ -76,6 +87,14 @@ export default function KnowledgeDirectory({ filters }: { filters: KnowledgeFilt
   const items = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
   const regions = [...new Set(knowledgeBase.people.map((person) => person.primaryRegion))].sort((a, b) => a.localeCompare(b, "zh-CN"));
   const traditions = [...knowledgeBase.traditions].sort((a, b) => a.name.localeCompare(b.name, "zh-CN"));
+  const activeFilters = [
+    filters.q ? { key: "q" as const, label: `关键词：${filters.q}` } : null,
+    filters.type ? { key: "type" as const, label: `类型：${entityTypeLabels[filters.type as keyof typeof entityTypeLabels]}` } : null,
+    filters.region ? { key: "region" as const, label: `地区：${filters.region}` } : null,
+    filters.tradition ? { key: "tradition" as const, label: `传统：${knowledgeTraditionById.get(filters.tradition)?.name ?? filters.tradition}` } : null,
+    filters.period ? { key: "period" as const, label: `时代：${periodLabels[filters.period as keyof typeof periodLabels]}` } : null,
+    filters.tier ? { key: "tier" as const, label: `深度：${contentTierLabels[filters.tier as keyof typeof contentTierLabels]}` } : null,
+  ].filter((item): item is NonNullable<typeof item> => Boolean(item));
 
   return (
     <>
@@ -93,6 +112,17 @@ export default function KnowledgeDirectory({ filters }: { filters: KnowledgeFilt
         <Link href="/knowledge">清除</Link>
       </form>
 
+      {activeFilters.length ? (
+        <nav className="knowledge-active-filters" aria-label="当前筛选条件">
+          <span>当前视野</span>
+          {activeFilters.map((filter) => (
+            <Link key={filter.key} href={withoutFilter(filters, filter.key)} aria-label={`移除${filter.label}`}>
+              {filter.label}<i aria-hidden="true">×</i>
+            </Link>
+          ))}
+        </nav>
+      ) : null}
+
       <div className="knowledge-results-head">
         <p>找到 <strong>{filtered.length}</strong> 个条目</p>
         <span>第 {currentPage} / {totalPages} 页</span>
@@ -100,13 +130,25 @@ export default function KnowledgeDirectory({ filters }: { filters: KnowledgeFilt
       {items.length ? (
         <div className="knowledge-grid">
           {items.map((item) => (
-            <article key={`${item.entityType}:${item.id}`}>
-              <div><span>{entityTypeLabels[item.entityType]}</span><KnowledgeTierBadge tier={item.contentTier as ContentTier} /></div>
-              <h2><Link href={item.href}>{item.title}</Link></h2>
-              <small>{item.subtitle}</small>
-              <p>{item.summary}</p>
-              {item.traditionIds.length ? <ul>{item.traditionIds.slice(0, 3).map((id) => <li key={id}>{knowledgeTraditionById.get(id)?.name ?? id}</li>)}</ul> : null}
-              <Link className="knowledge-card-link" href={item.href}>打开条目 →</Link>
+            <article className={`knowledge-card knowledge-card--${item.entityType}`} key={`${item.entityType}:${item.id}`}>
+              <div className="knowledge-card__visual" aria-hidden={item.media ? undefined : true}>
+                {item.media ? (
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img className="knowledge-card__backdrop" src={item.media.thumbSrc} alt="" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img className="knowledge-card__portrait" src={item.media.thumbSrc} alt={item.media.alt} style={{ objectPosition: item.media.objectPosition }} />
+                  </>
+                ) : <span>{entitySymbols[item.entityType]}</span>}
+              </div>
+              <div className="knowledge-card__body">
+                <div><span>{entityTypeLabels[item.entityType]}</span><KnowledgeTierBadge tier={item.contentTier as ContentTier} /></div>
+                <h2><Link href={item.href}>{item.title}</Link></h2>
+                <small>{item.subtitle}</small>
+                <p>{item.summary}</p>
+                {item.traditionIds.length ? <ul>{item.traditionIds.slice(0, 3).map((id) => <li key={id}>{knowledgeTraditionById.get(id)?.name ?? id}</li>)}</ul> : null}
+                <Link className="knowledge-card-link" href={item.href}>打开条目 →</Link>
+              </div>
             </article>
           ))}
         </div>

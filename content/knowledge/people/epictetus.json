@@ -1,0 +1,114 @@
+{
+  "id": "epictetus",
+  "slug": "epictetus",
+  "entityType": "person",
+  "names": {
+    "display": "爱比克泰德",
+    "english": "Epictetus",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约50–135",
+    "startYear": 50,
+    "endYear": 135,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-斯多亚学派"
+  ],
+  "conceptIds": [
+    "concept-控制二分"
+  ],
+  "questionIds": [
+    "freedom"
+  ],
+  "guidingQuestion": "自由是否取决于外部处境还是对判断的掌握？",
+  "thesis": "把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。",
+  "summary": "爱比克泰德是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由是否取决于外部处境还是对判断的掌握？”。其思想以“控制二分”为入口，主张把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "enchiridion"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "nicopolis",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
+      "claim": "支持爱比克泰德的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "爱比克泰德是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由是否取决于外部处境还是对判断的掌握？”。其思想以“控制二分”为入口，主张把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
+              "claim": "支持爱比克泰德的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：自由是否取决于外部处境还是对判断的掌握？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
+              "claim": "支持对爱比克泰德核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
+              "claim": "支持对爱比克泰德核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/epictetus.webp",
+    "thumbSrc": "/media/thinkers/thumb/epictetus.webp",
+    "alt": "爱比克泰德的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "\"A.C.\" · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Notice_sur_les_traductions_fran%C3%A7aises_du_Manuel_d%27%C3%89pict%C3%A8te_-_frontispiece.png",
+    "sourceFile": "File:Notice sur les traductions françaises du Manuel d'Épictète - frontispiece.png",
+    "license": "Public domain",
+    "creator": "\"A.C.\"",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

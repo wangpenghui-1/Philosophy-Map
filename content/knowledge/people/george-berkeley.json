@@ -1,0 +1,112 @@
+{
+  "id": "george-berkeley",
+  "slug": "george-berkeley",
+  "entityType": "person",
+  "names": {
+    "display": "贝克莱",
+    "english": "George Berkeley",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1685–1753",
+    "startYear": 1685,
+    "endYear": 1753,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-经验主义"
+  ],
+  "conceptIds": [
+    "concept-被感知即存在"
+  ],
+  "questionIds": [
+    "reality"
+  ],
+  "guidingQuestion": "物质实体是否超出我们能够经验和说明的范围？",
+  "thesis": "感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。",
+  "summary": "贝克莱是欧洲与地中海经验主义的重要思想人物，主要追问“物质实体是否超出我们能够经验和说明的范围？”。其思想以“被感知即存在”为入口，主张感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "principles-human-knowledge"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "dublin",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
+      "claim": "支持贝克莱的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "贝克莱是欧洲与地中海经验主义的重要思想人物，主要追问“物质实体是否超出我们能够经验和说明的范围？”。其思想以“被感知即存在”为入口，主张感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
+              "claim": "支持贝克莱的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：物质实体是否超出我们能够经验和说明的范围？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
+              "claim": "支持对贝克莱核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
+              "claim": "支持对贝克莱核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/george-berkeley.webp",
+    "thumbSrc": "/media/thinkers/thumb/george-berkeley.webp",
+    "alt": "贝克莱的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "John Smibert · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_(cropped).jpg",
+    "sourceFile": "File:John Smibert - Bishop George Berkeley - Google Art Project (cropped).jpg",
+    "license": "Public domain",
+    "creator": "John Smibert",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "mencius",
+  "slug": "mencius",
+  "entityType": "person",
+  "names": {
+    "display": "孟子",
+    "english": "Mencius",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前372–289",
+    "startYear": -372,
+    "endYear": -289,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-儒家"
+  ],
+  "conceptIds": [
+    "concept-性善"
+  ],
+  "questionIds": [
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "人的道德能力如何在政治与日常实践中生长？",
+  "thesis": "人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。",
+  "summary": "孟子是东亚儒家的重要思想人物，主要追问“人的道德能力如何在政治与日常实践中生长？”。其思想以“性善”为入口，主张人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "mencius-text"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "zoucheng",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Mencius / 孟子”",
+      "claim": "支持孟子的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "孟子是东亚儒家的重要思想人物，主要追问“人的道德能力如何在政治与日常实践中生长？”。其思想以“性善”为入口，主张人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mencius / 孟子”",
+              "claim": "支持孟子的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：人的道德能力如何在政治与日常实践中生长？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mencius / 孟子”",
+              "claim": "支持对孟子核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mencius / 孟子”",
+              "claim": "支持对孟子核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/mencius.webp",
+    "thumbSrc": "/media/thinkers/thumb/mencius.webp",
+    "alt": "孟子的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "anonymous · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg",
+    "sourceFile": "File:Half Portraits of the Great Sage and Virtuous Men of Old - Meng Ke (孟軻).jpg",
+    "license": "Public domain",
+    "creator": "anonymous",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

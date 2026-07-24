@@ -1,0 +1,42 @@
+{
+  "id": "parmenides-poem",
+  "slug": "parmenides-poem",
+  "entityType": "work",
+  "title": "《论自然》残篇",
+  "originalTitle": "On Nature",
+  "authorRefs": [
+    {
+      "personId": "parmenides",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约公元前5世纪",
+  "languages": [
+    "grc"
+  ],
+  "summary": "《论自然》残篇是进入巴门尼德思想语境的代表文本入口。条目以“存在之路”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-存在之路"
+  ],
+  "traditionIds": [
+    "tradition-前苏格拉底哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Parmenides / 巴门尼德”",
+      "claim": "支持《论自然》残篇与巴门尼德的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

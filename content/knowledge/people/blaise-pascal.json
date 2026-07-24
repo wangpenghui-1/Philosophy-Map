@@ -1,0 +1,114 @@
+{
+  "id": "blaise-pascal",
+  "slug": "blaise-pascal",
+  "entityType": "person",
+  "names": {
+    "display": "帕斯卡",
+    "english": "Blaise Pascal",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1623–1662",
+    "startYear": 1623,
+    "endYear": 1662,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-近代宗教哲学"
+  ],
+  "conceptIds": [
+    "concept-心的理由"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "freedom"
+  ],
+  "guidingQuestion": "理性证明的边界如何影响信仰与人生选择？",
+  "thesis": "人的伟大与悲惨并存，理性有界而习惯、直觉和实践选择参与信念形成。",
+  "summary": "帕斯卡是欧洲与地中海近代宗教哲学的重要思想人物，主要追问“理性证明的边界如何影响信仰与人生选择？”。其思想以“心的理由”为入口，主张人的伟大与悲惨并存，理性有界而习惯、直觉和实践选择参与信念形成。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "pensees"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Blaise Pascal / 帕斯卡”",
+      "claim": "支持帕斯卡的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "帕斯卡是欧洲与地中海近代宗教哲学的重要思想人物，主要追问“理性证明的边界如何影响信仰与人生选择？”。其思想以“心的理由”为入口，主张人的伟大与悲惨并存，理性有界而习惯、直觉和实践选择参与信念形成。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Blaise Pascal / 帕斯卡”",
+              "claim": "支持帕斯卡的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：理性证明的边界如何影响信仰与人生选择？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Blaise Pascal / 帕斯卡”",
+              "claim": "支持对帕斯卡核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：人的伟大与悲惨并存，理性有界而习惯、直觉和实践选择参与信念形成。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Blaise Pascal / 帕斯卡”",
+              "claim": "支持对帕斯卡核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/blaise-pascal.webp",
+    "thumbSrc": "/media/thinkers/thumb/blaise-pascal.webp",
+    "alt": "帕斯卡的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] . · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles.JPG",
+    "sourceFile": "File:Blaise Pascal Versailles.JPG",
+    "license": "Public domain",
+    "creator": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] .",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

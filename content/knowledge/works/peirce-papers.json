@@ -1,0 +1,42 @@
+{
+  "id": "peirce-papers",
+  "slug": "peirce-papers",
+  "entityType": "work",
+  "title": "《皮尔士论文集》",
+  "originalTitle": "Collected Papers of Charles Sanders Peirce",
+  "authorRefs": [
+    {
+      "personId": "charles-sanders-peirce",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "20世纪编订",
+  "languages": [
+    "en"
+  ],
+  "summary": "《皮尔士论文集》是进入皮尔士思想语境的代表文本入口。条目以“实用主义准则”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-实用主义准则"
+  ],
+  "traditionIds": [
+    "tradition-实用主义与符号学"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Charles Sanders Peirce / 皮尔士”",
+      "claim": "支持《皮尔士论文集》与皮尔士的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

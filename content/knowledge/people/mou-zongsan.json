@@ -1,0 +1,114 @@
+{
+  "id": "mou-zongsan",
+  "slug": "mou-zongsan",
+  "entityType": "person",
+  "names": {
+    "display": "牟宗三",
+    "english": "Mou Zongsan",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1909–1995",
+    "startYear": 1909,
+    "endYear": 1995,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现代新儒家"
+  ],
+  "conceptIds": [
+    "concept-智的直觉"
+  ],
+  "questionIds": [
+    "knowledge",
+    "freedom",
+    "good-life"
+  ],
+  "guidingQuestion": "儒家道德主体如何回应现代哲学关于知识与自由的问题？",
+  "thesis": "以道德自觉和智的直觉重构儒家形上学，并区分科学民主与价值根源。",
+  "summary": "牟宗三是东亚现代新儒家的重要思想人物，主要追问“儒家道德主体如何回应现代哲学关于知识与自由的问题？”。其思想以“智的直觉”为入口，主张以道德自觉和智的直觉重构儒家形上学，并区分科学民主与价值根源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "phenomenon-thing-itself"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "taipei",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Mou Zongsan / 牟宗三”",
+      "claim": "支持牟宗三的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "牟宗三是东亚现代新儒家的重要思想人物，主要追问“儒家道德主体如何回应现代哲学关于知识与自由的问题？”。其思想以“智的直觉”为入口，主张以道德自觉和智的直觉重构儒家形上学，并区分科学民主与价值根源。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mou Zongsan / 牟宗三”",
+              "claim": "支持牟宗三的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：儒家道德主体如何回应现代哲学关于知识与自由的问题？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mou Zongsan / 牟宗三”",
+              "claim": "支持对牟宗三核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以道德自觉和智的直觉重构儒家形上学，并区分科学民主与价值根源。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Mou Zongsan / 牟宗三”",
+              "claim": "支持对牟宗三核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/mou-zongsan.webp",
+    "thumbSrc": "/media/thinkers/thumb/mou-zongsan.webp",
+    "alt": "牟宗三的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mou_Tsung-san_1960s.jpg",
+    "sourceFile": "File:Mou Tsung-san 1960s.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

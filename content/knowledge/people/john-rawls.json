@@ -1,0 +1,113 @@
+{
+  "id": "john-rawls",
+  "slug": "john-rawls",
+  "entityType": "person",
+  "names": {
+    "display": "罗尔斯",
+    "english": "John Rawls",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1921–2002",
+    "startYear": 1921,
+    "endYear": 2002,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-政治自由主义"
+  ],
+  "conceptIds": [
+    "concept-原初状态"
+  ],
+  "questionIds": [
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "公平的社会基本制度应依据何种不偏私的原则选择？",
+  "thesis": "思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。",
+  "summary": "罗尔斯是美洲与加勒比政治自由主义的重要思想人物，主要追问“公平的社会基本制度应依据何种不偏私的原则选择？”。其思想以“原初状态”为入口，主张思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "theory-justice"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "harvard",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
+      "claim": "支持罗尔斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "罗尔斯是美洲与加勒比政治自由主义的重要思想人物，主要追问“公平的社会基本制度应依据何种不偏私的原则选择？”。其思想以“原初状态”为入口，主张思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
+              "claim": "支持罗尔斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：公平的社会基本制度应依据何种不偏私的原则选择？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
+              "claim": "支持对罗尔斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
+              "claim": "支持对罗尔斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/john-rawls.webp",
+    "thumbSrc": "/media/thinkers/thumb/john-rawls.webp",
+    "alt": "罗尔斯的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Rawls_(1971_photo_portrait).jpg",
+    "sourceFile": "File:John Rawls (1971 photo portrait).jpg",
+    "license": "Public domain",
+    "creator": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

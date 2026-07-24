@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, MotionConfig, useReducedMotion, type PanInfo } from "motion/react";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
   atlasTimelineEndYear,
@@ -21,9 +21,21 @@ import {
   works,
   type QuestionId,
 } from "../_data/atlas";
-import { useAtlasStore, type AtlasMode, type QualityTier } from "../_state/atlas-store";
+import { useAtlasStore, type AtlasMode } from "../_state/atlas-store";
 import type { EarthLightingMode } from "./GlobeCanvas";
 import ThinkerPortrait from "./ThinkerPortrait";
+import { DisplaySettings, FocusDepthControl } from "./AtlasVisualControls";
+import {
+  ATLAS_VISUAL_STORAGE_KEY,
+  advanceAutoQuality,
+  initialAutoQuality,
+  parsePersistedVisualState,
+  timelineDensity,
+  type AutoQualityState,
+  type DetailSheetSnap,
+  type GlobeCameraSnapshot,
+  type QualityPreference,
+} from "./atlas-visual-policy";
 
 const GlobeCanvas = dynamic(() => import("./GlobeCanvas"), {
   ssr: false,
@@ -56,48 +68,6 @@ function syncExploreUrl(questionId: QuestionId | null, timelineYear: number) {
   else url.searchParams.delete("question");
   url.searchParams.set("year", String(timelineYear));
   window.history.replaceState({}, "", `${url.pathname}${url.search}`);
-}
-
-function QualityBadge({ quality, onChange }: { quality: QualityTier; onChange: (value: QualityTier) => void }) {
-  const labels: Record<QualityTier, string> = { high: "高画质", medium: "均衡", low: "省电" };
-  const next: Record<QualityTier, QualityTier> = { high: "medium", medium: "low", low: "high" };
-  return (
-    <button className="quality-badge" type="button" onClick={() => onChange(next[quality])}>
-      <span className="quality-badge__dot" />
-      {labels[quality]}
-    </button>
-  );
-}
-
-function EarthModeSwitch({
-  mode,
-  onChange,
-}: {
-  mode: EarthLightingMode;
-  onChange: (mode: EarthLightingMode) => void;
-}) {
-  return (
-    <div className="earth-mode-switch" role="group" aria-label="地球光照模式">
-      <button
-        type="button"
-        className={mode === "day" ? "is-active" : ""}
-        aria-pressed={mode === "day"}
-        onClick={() => onChange("day")}
-      >
-        <i className="earth-mode-switch__sun" aria-hidden="true" />
-        白昼
-      </button>
-      <button
-        type="button"
-        className={mode === "night" ? "is-active" : ""}
-        aria-pressed={mode === "night"}
-        onClick={() => onChange("night")}
-      >
-        <i className="earth-mode-switch__moon" aria-hidden="true" />
-        夜幕
-      </button>
-    </div>
-  );
 }
 
 function StoryOverlay({
@@ -167,21 +137,26 @@ function QuestionRail({
 }
 
 function RelationLegend({ onSelect }: { onSelect: (id: string) => void }) {
+  const types = [
+    { type: "direct-influence", className: "direct" },
+    { type: "text-transmission", className: "transmission" },
+    { type: "critique", className: "critique" },
+    { type: "lineage", className: "lineage" },
+    { type: "thematic-resonance", className: "resonance" },
+  ] as const;
   return (
     <aside className="relation-legend" aria-label="关系图例">
       <span className="relation-legend__title">关系证据</span>
-      <button type="button" onClick={() => onSelect("aristotle-avicenna")}>
-        <i className="line-sample line-sample--direct" />
-        <span>直接影响</span>
-      </button>
-      <button type="button" onClick={() => onSelect("buddha-nagarjuna")}>
-        <i className="line-sample line-sample--lineage" />
-        <span>传统延展</span>
-      </button>
-      <button type="button" onClick={() => onSelect("confucius-aristotle")}>
-        <i className="line-sample line-sample--resonance" />
-        <span>主题共鸣</span>
-      </button>
+      {types.map(({ type, className }) => {
+        const relation = relations.find((item) => item.type === type);
+        if (!relation) return null;
+        return (
+          <button type="button" key={type} onClick={() => onSelect(relation.id)}>
+            <i className={`line-sample line-sample--${className}`} />
+            <span>{relationTypeLabels[type]}</span>
+          </button>
+        );
+      })}
     </aside>
   );
 }
@@ -378,6 +353,13 @@ function EmptyDetail({ onSelectRelation }: { onSelectRelation: (id: string) => v
 
 function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () => void; onSelect: (id: string) => void }) {
   const [query, setQuery] = useState("");
+  const [knowledgeSearchIndex, setKnowledgeSearchIndex] = useState<Array<{
+    id: string;
+    entityType: "person" | "concept" | "tradition" | "work";
+    title: string;
+    href: string;
+    searchText: string;
+  }>>([]);
   const dialogRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
@@ -393,11 +375,27 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
         .includes(normalized) || workOwnerIds.includes(thinker.id),
     ).slice(0, 20);
   }, [query]);
+  const knowledgeResults = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    if (!normalized) return [];
+    return knowledgeSearchIndex
+      .filter((item) => item.entityType !== "person" && item.searchText.includes(normalized))
+      .slice(0, 12);
+  }, [knowledgeSearchIndex, query]);
 
   const close = () => {
     setQuery("");
     onClose();
   };
+
+  useEffect(() => {
+    if (!open) return;
+    if (!knowledgeSearchIndex.length) {
+      void import("../_generated/search-index.json").then((module) => {
+        setKnowledgeSearchIndex(module.default as typeof knowledgeSearchIndex);
+      });
+    }
+  }, [knowledgeSearchIndex.length, open]);
 
   useEffect(() => {
     if (!open) return;
@@ -417,6 +415,18 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
       event.preventDefault();
       event.stopPropagation();
       close();
+      return;
+    }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      const results = [...(dialogRef.current?.querySelectorAll<HTMLElement>("[data-search-result]") ?? [])];
+      if (!results.length) return;
+      event.preventDefault();
+      const currentIndex = results.indexOf(document.activeElement as HTMLElement);
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      const nextIndex = currentIndex < 0
+        ? direction > 0 ? 0 : results.length - 1
+        : (currentIndex + direction + results.length) % results.length;
+      results[nextIndex]?.focus();
       return;
     }
     if (event.key !== "Tab") return;
@@ -466,17 +476,28 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
               <kbd>/</kbd>
             </label>
             <div className="search-results">
-              {results.length ? results.map((thinker) => (
-                <button
-                  type="button"
-                  key={thinker.id}
-                  onClick={() => { onSelect(thinker.id); close(); }}
-                >
-                  <ThinkerPortrait thinker={thinker} variant="thumb" />
-                  <span><strong>{thinker.name}</strong><small>{thinker.englishName} · {thinker.period}</small></span>
-                  <i>定位</i>
-                </button>
-              )) : <p>{query.trim() ? "没有找到匹配节点。" : "输入人物、别名、著作或概念开始搜索。"}</p>}
+              {results.length ? <h3>人物</h3> : null}
+              {results.map((thinker) => (
+                  <button
+                    type="button"
+                    data-search-result
+                    key={thinker.id}
+                    onClick={() => { onSelect(thinker.id); close(); }}
+                  >
+                    <ThinkerPortrait thinker={thinker} variant="thumb" />
+                    <span><strong>{thinker.name}</strong><small>{thinker.englishName} · {thinker.period}</small></span>
+                    <i>定位</i>
+                  </button>
+                ))}
+              {knowledgeResults.length ? <h3>概念、传统与著作</h3> : null}
+              {knowledgeResults.map((item) => (
+                <Link data-search-result className="search-results__knowledge" href={item.href} key={`${item.entityType}:${item.id}`} onClick={close}>
+                  <span aria-hidden="true">{item.entityType === "concept" ? "义" : item.entityType === "tradition" ? "脉" : "文"}</span>
+                  <strong>{item.title}</strong>
+                  <small>{item.entityType === "concept" ? "概念" : item.entityType === "tradition" ? "传统" : "著作"}</small>
+                </Link>
+              ))}
+              {!results.length && !knowledgeResults.length ? <p>{query.trim() ? "没有找到匹配条目。" : "输入人物、别名、著作或概念开始搜索。"}</p> : null}
             </div>
             <Link className="search-dialog__knowledge" href={`/knowledge${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`}>在完整知识库中浏览与筛选 →</Link>
           </motion.section>
@@ -529,13 +550,16 @@ function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose:
           </div>
           <p className="semantic-panel__intro">这里提供与3D地球同源的完整人物和关系入口，适用于键盘、读屏器或低性能设备。</p>
           <div className="semantic-panel__grid">
-            {thinkers.slice(0, 24).map((thinker) => (
+            {thinkers.map((thinker) => (
               <article key={thinker.id}>
                 <ThinkerPortrait thinker={thinker} variant="thumb" showNote />
                 <small>{thinker.region} · {thinker.period}</small>
                 <h3>{thinker.name}<span>{thinker.englishName}</span></h3>
                 <p>{thinker.thesis}</p>
-                <button type="button" onClick={() => { onSelect(thinker.id); onClose(); }}>在地球中定位</button>
+                <div className="semantic-card__actions">
+                  <button type="button" onClick={() => { onSelect(thinker.id); onClose(); }}>在地球中定位</button>
+                  <Link href={`/thinker/${thinker.slug}`}>深入阅读</Link>
+                </div>
                 <SourceLinks sourceIds={thinker.sourceIds} />
               </article>
             ))}
@@ -558,7 +582,7 @@ function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose:
   );
 }
 
-function BottomDock({ mode }: { mode: AtlasMode }) {
+function BottomDock({ mode, onTakeover }: { mode: AtlasMode; onTakeover: () => void }) {
   const isPlaying = useAtlasStore((state) => state.isPlaying);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
   const timelineYear = useAtlasStore((state) => state.timelineYear);
@@ -566,11 +590,17 @@ function BottomDock({ mode }: { mode: AtlasMode }) {
   const setPlaying = useAtlasStore((state) => state.setPlaying);
   const setChapterIndex = useAtlasStore((state) => state.setChapterIndex);
   const setTimelineYear = useAtlasStore((state) => state.setTimelineYear);
+  const setTimelineScrubbing = useAtlasStore((state) => state.setTimelineScrubbing);
   const setMode = useAtlasStore((state) => state.setMode);
+  const density = useMemo(
+    () => timelineDensity(thinkers.map((thinker) => thinker.startYear), atlasTimelineStartYear, atlasTimelineEndYear),
+    [],
+  );
 
   const takeover = () => {
     setPlaying(false);
     setMode("explore");
+    onTakeover();
     window.history.replaceState({}, "", "/explore?from=story");
   };
 
@@ -596,16 +626,25 @@ function BottomDock({ mode }: { mode: AtlasMode }) {
   return (
     <footer className="bottom-dock bottom-dock--explore">
       <div className="timeline-label"><small>历史时间</small><strong>{formatYear(timelineYear)}</strong></div>
-      <input
-        aria-label="历史时间轴"
-        type="range"
-        min={atlasTimelineStartYear}
-        max={atlasTimelineEndYear}
-        step={1}
-        value={timelineYear}
-        onChange={(event) => setTimelineYear(Number(event.target.value))}
-      />
-      <div className="timeline-scale" aria-hidden="true"><span>前600</span><span>0</span><span>1000</span><span>{atlasTimelineEndYear}</span></div>
+      <div className="timeline-control">
+        <div className="timeline-density" aria-hidden="true">
+          {density.map((height, index) => <i key={index} style={{ height: `${Math.max(8, height * 100)}%` }} />)}
+        </div>
+        <input
+          aria-label="历史时间轴"
+          type="range"
+          min={atlasTimelineStartYear}
+          max={atlasTimelineEndYear}
+          step={1}
+          value={timelineYear}
+          onPointerDown={() => setTimelineScrubbing(true)}
+          onPointerUp={() => setTimelineScrubbing(false)}
+          onPointerCancel={() => setTimelineScrubbing(false)}
+          onBlur={() => setTimelineScrubbing(false)}
+          onChange={(event) => setTimelineYear(Number(event.target.value))}
+        />
+        <div className="timeline-scale" aria-hidden="true"><span>前600</span><span>0</span><span>1000</span><span>{atlasTimelineEndYear}</span></div>
+      </div>
       <div className="compare-status">
         <small>人物比较</small>
         {compareThinkers.length ? <span>{compareThinkers.map((item) => item?.name).join(" × ")}</span> : <span>从人物档案加入</span>}
@@ -629,9 +668,12 @@ export default function AtlasApp({
   const selectedRelationId = useAtlasStore((state) => state.selectedRelationId);
   const activeQuestionId = useAtlasStore((state) => state.activeQuestionId);
   const timelineYear = useAtlasStore((state) => state.timelineYear);
+  const isTimelineScrubbing = useAtlasStore((state) => state.isTimelineScrubbing);
   const listViewOpen = useAtlasStore((state) => state.listViewOpen);
   const searchOpen = useAtlasStore((state) => state.searchOpen);
   const quality = useAtlasStore((state) => state.quality);
+  const qualityPreference = useAtlasStore((state) => state.qualityPreference);
+  const focusDepth = useAtlasStore((state) => state.focusDepth);
   const compareIds = useAtlasStore((state) => state.compareIds);
   const setMode = useAtlasStore((state) => state.setMode);
   const setPlaying = useAtlasStore((state) => state.setPlaying);
@@ -643,7 +685,22 @@ export default function AtlasApp({
   const setListViewOpen = useAtlasStore((state) => state.setListViewOpen);
   const setSearchOpen = useAtlasStore((state) => state.setSearchOpen);
   const setQuality = useAtlasStore((state) => state.setQuality);
+  const setQualityPreference = useAtlasStore((state) => state.setQualityPreference);
+  const setFocusDepth = useAtlasStore((state) => state.setFocusDepth);
   const toggleCompare = useAtlasStore((state) => state.toggleCompare);
+  const clearCompare = useAtlasStore((state) => state.clearCompare);
+  const [cameraSnapshot, setCameraSnapshot] = useState<GlobeCameraSnapshot | null>(null);
+  const [detailSheetSnap, setDetailSheetSnap] = useState<DetailSheetSnap>("half");
+  const [isCompact, setIsCompact] = useState(false);
+  const [persistenceReady, setPersistenceReady] = useState(false);
+  const initializationAppliedRef = useRef(false);
+  const entrySeenRef = useRef(false);
+  const autoQualityRef = useRef<AutoQualityState>({
+    quality: "medium",
+    aboveBudgetSince: null,
+    belowBudgetSince: null,
+    lastChangeAt: -20_000,
+  });
   const initialized = useSyncExternalStore(
     () => () => undefined,
     () => true,
@@ -663,11 +720,63 @@ export default function AtlasApp({
   const displayCompareIds = initialized ? compareIds : initialCompareIds;
 
   useEffect(() => {
-    setMode(initialMode);
+    if (initializationAppliedRef.current) return;
+    initializationAppliedRef.current = true;
+    const query = new URLSearchParams(window.location.search);
+    const explicitRoute = window.location.pathname !== "/"
+      || ["thinker", "relation", "question", "year"].some((key) => query.has(key));
+    const persisted = parsePersistedVisualState(
+      window.localStorage.getItem(ATLAS_VISUAL_STORAGE_KEY),
+      {
+        isQuestionId: (value): value is QuestionId => questions.some((item) => item.id === value),
+        isThinkerSlug: (value) => thinkerBySlug.has(value),
+        isRelationId: (value) => relationById.has(value),
+        minYear: atlasTimelineStartYear,
+        maxYear: atlasTimelineEndYear,
+      },
+    );
+    entrySeenRef.current = Boolean(persisted?.entrySeen || explicitRoute);
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const automaticQuality = initialAutoQuality(window.innerWidth, coarsePointer);
+    const restoredPreference = persisted?.qualityPreference ?? "auto";
+    const restoredQuality = restoredPreference === "auto" ? automaticQuality : restoredPreference;
+    setQualityPreference(restoredPreference);
+    setQuality(restoredQuality);
+    autoQualityRef.current = {
+      quality: restoredQuality,
+      aboveBudgetSince: null,
+      belowBudgetSince: null,
+      lastChangeAt: performance.now() - 20_000,
+    };
+    setEarthMode(persisted?.earthMode ?? "night");
+
+    const restoredCamera = !explicitRoute && persisted?.entrySeen ? persisted.camera : null;
+    if (!explicitRoute && persisted?.entrySeen) {
+      setMode(persisted.mode);
+      setPlaying(persisted.mode === "story");
+      setTimelineYear(persisted.timelineYear);
+      setQuestion(persisted.questionId);
+      if (persisted.thinkerSlug) {
+        const thinker = thinkerBySlug.get(persisted.thinkerSlug);
+        if (thinker) selectThinker(thinker.id);
+      } else if (persisted.relationId) {
+        selectRelation(persisted.relationId);
+      }
+    } else {
+      setMode(initialMode);
+      setPlaying(initialMode === "story");
+    }
+
     if (initialChapterId) {
       const nextIndex = storyChapters.findIndex((chapter) => chapter.id === initialChapterId);
       if (nextIndex >= 0) setChapterIndex(nextIndex);
     }
+    const question = query.get("question") as QuestionId | null;
+    const relation = query.get("relation");
+    const yearParam = query.get("year");
+    const year = yearParam === null ? Number.NaN : Number(yearParam);
+    if (question && questions.some((item) => item.id === question)) setQuestion(question);
+    if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
     if (initialThinkerSlug) {
       const thinker = thinkerBySlug.get(initialThinkerSlug);
       if (thinker) {
@@ -684,33 +793,20 @@ export default function AtlasApp({
       setMode("explore");
       setPlaying(false);
     }
-    const query = new URLSearchParams(window.location.search);
-    const question = query.get("question") as QuestionId | null;
-    const relation = query.get("relation");
-    const yearParam = query.get("year");
-    const year = yearParam === null ? Number.NaN : Number(yearParam);
-    if (question && questions.some((item) => item.id === question)) setQuestion(question);
     if (relation && relationById.has(relation)) selectRelation(relation);
-    if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
-  }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuestion, setTimelineYear, toggleCompare]);
+    const frame = window.requestAnimationFrame(() => {
+      setCameraSnapshot(restoredCamera);
+      setPersistenceReady(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuality, setQualityPreference, setQuestion, setTimelineYear, toggleCompare]);
 
   useEffect(() => {
-    const stored = window.sessionStorage.getItem("atlas-quality") as QualityTier | null;
-    if (stored === "high" || stored === "medium" || stored === "low") {
-      setQuality(stored);
-      return;
-    }
-    const cores = navigator.hardwareConcurrency || 4;
-    if (window.innerWidth <= 680 || cores <= 4) setQuality("low");
-    else if (window.innerWidth <= 1180 || cores <= 8) setQuality("medium");
-    else setQuality("high");
-  }, [setQuality]);
-
-  useEffect(() => {
-    const stored = window.sessionStorage.getItem("atlas-earth-mode");
-    if (stored !== "day" && stored !== "night") return;
-    const timeout = window.setTimeout(() => setEarthMode(stored), 0);
-    return () => window.clearTimeout(timeout);
+    const media = window.matchMedia("(max-width: 820px)");
+    const update = () => setIsCompact(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
   }, []);
 
   useEffect(() => {
@@ -728,9 +824,47 @@ export default function AtlasApp({
     return () => window.clearTimeout(timeout);
   }, [chapterIndex, initialized, isPlaying, mode, reduceMotion, setChapterIndex, setMode, setPlaying]);
 
+  const persistVisualState = useCallback((nextMode: AtlasMode = mode) => {
+    if (nextMode === "explore") entrySeenRef.current = true;
+    const thinkerSlug = selectedThinkerId ? thinkerById.get(selectedThinkerId)?.slug ?? null : null;
+    window.localStorage.setItem(ATLAS_VISUAL_STORAGE_KEY, JSON.stringify({
+      version: 1,
+      entrySeen: entrySeenRef.current,
+      mode: nextMode,
+      timelineYear,
+      questionId: activeQuestionId,
+      thinkerSlug,
+      relationId: selectedRelationId,
+      earthMode,
+      qualityPreference,
+      camera: cameraSnapshot,
+    }));
+  }, [activeQuestionId, cameraSnapshot, earthMode, mode, qualityPreference, selectedRelationId, selectedThinkerId, timelineYear]);
+
+  useEffect(() => {
+    if (!persistenceReady) return;
+    const timeout = window.setTimeout(() => {
+      persistVisualState();
+    }, 180);
+    return () => window.clearTimeout(timeout);
+  }, [persistenceReady, persistVisualState]);
+
   useEffect(() => {
     if (mode === "explore") syncExploreUrl(activeQuestionId, timelineYear);
   }, [activeQuestionId, mode, timelineYear]);
+
+  const handleCloseDetail = useCallback(() => {
+    selectThinker(null);
+    selectRelation(null);
+    clearCompare();
+    setDetailSheetSnap("peek");
+    if (mode !== "explore") return;
+
+    const params = new URLSearchParams();
+    if (activeQuestionId) params.set("question", activeQuestionId);
+    params.set("year", String(timelineYear));
+    window.history.replaceState({}, "", `/explore?${params.toString()}`);
+  }, [activeQuestionId, clearCompare, mode, selectRelation, selectThinker, timelineYear]);
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -748,30 +882,50 @@ export default function AtlasApp({
         }
         setSearchOpen(false);
         setListViewOpen(false);
-        selectThinker(null);
-        selectRelation(null);
+        if (selectedThinkerId || selectedRelationId || compareIds.length > 0) handleCloseDetail();
       }
       if (mode === "story" && event.key === "ArrowRight") setChapterIndex(Math.min(storyChapters.length - 1, chapterIndex + 1));
       if (mode === "story" && event.key === "ArrowLeft") setChapterIndex(Math.max(0, chapterIndex - 1));
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [chapterIndex, listViewOpen, mode, searchOpen, selectRelation, selectThinker, setChapterIndex, setListViewOpen, setSearchOpen]);
+  }, [chapterIndex, compareIds.length, handleCloseDetail, listViewOpen, mode, searchOpen, selectedRelationId, selectedThinkerId, setChapterIndex, setListViewOpen, setSearchOpen]);
 
-  const chooseQuality = (nextQuality: QualityTier) => {
-    window.sessionStorage.setItem("atlas-quality", nextQuality);
+  const chooseQualityPreference = useCallback((preference: QualityPreference) => {
+    setQualityPreference(preference);
+    const nextQuality = preference === "auto"
+      ? initialAutoQuality(window.innerWidth, window.matchMedia("(pointer: coarse)").matches)
+      : preference;
+    autoQualityRef.current = {
+      quality: nextQuality,
+      aboveBudgetSince: null,
+      belowBudgetSince: null,
+      lastChangeAt: performance.now(),
+    };
     setQuality(nextQuality);
-  };
+  }, [setQuality, setQualityPreference]);
 
   const chooseEarthMode = (nextMode: EarthLightingMode) => {
-    window.sessionStorage.setItem("atlas-earth-mode", nextMode);
     setEarthMode(nextMode);
   };
+
+  const handlePerformanceSample = useCallback((p75FrameMs: number) => {
+    if (useAtlasStore.getState().qualityPreference !== "auto") return;
+    const previous = autoQualityRef.current;
+    const next = advanceAutoQuality(previous, p75FrameMs, performance.now());
+    autoQualityRef.current = next;
+    if (next.quality !== previous.quality) setQuality(next.quality);
+  }, [setQuality]);
+
+  const handleCameraSnapshotChange = useCallback((snapshot: GlobeCameraSnapshot) => {
+    setCameraSnapshot(snapshot);
+  }, []);
 
   const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);
 
   const handleSelectThinker = useCallback((id: string | null) => {
     selectThinker(id);
+    if (id) setDetailSheetSnap("half");
     const url = new URL(window.location.href);
     url.pathname = "/explore";
     if (!id) {
@@ -790,6 +944,7 @@ export default function AtlasApp({
   const handleSelectRelation = useCallback((id: string | null) => {
     selectRelation(id);
     if (!id) return;
+    setDetailSheetSnap("half");
     window.history.replaceState({}, "", `/explore?relation=${encodeURIComponent(id)}&year=${timelineYear}`);
   }, [selectRelation, timelineYear]);
 
@@ -807,11 +962,29 @@ export default function AtlasApp({
       setChapterIndex(0);
       window.history.replaceState({}, "", "/story/world-asks");
     } else {
+      entrySeenRef.current = true;
       window.history.replaceState({}, "", "/explore");
     }
   };
 
   const showCompare = displayCompareIds.length === 2 && !displaySelectedThinkerId && !displaySelectedRelationId;
+  const detailOpen = Boolean(displaySelectedThinkerId || displaySelectedRelationId || showCompare);
+  const closeDetailLabel = displaySelectedThinkerId
+    ? "关闭人物详情"
+    : displaySelectedRelationId
+      ? "关闭关系详情"
+      : "关闭比较详情";
+
+  const handleDetailDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    const snaps: DetailSheetSnap[] = ["peek", "half", "full"];
+    const currentIndex = snaps.indexOf(detailSheetSnap);
+    const direction = info.offset.y < -70 || info.velocity.y < -450
+      ? 1
+      : info.offset.y > 70 || info.velocity.y > 450
+        ? -1
+        : 0;
+    setDetailSheetSnap(snaps[Math.max(0, Math.min(snaps.length - 1, currentIndex + direction))]);
+  };
 
   return (
     <MotionConfig reducedMotion="user">
@@ -837,41 +1010,75 @@ export default function AtlasApp({
         </header>
 
         <main id="atlas-content" className="atlas-main">
-          <section className="globe-stage" aria-label="思想星图3D地球">
+          <section className={`globe-stage${detailOpen ? " globe-stage--detail-open" : ""}`} aria-label="思想星图3D地球">
             <div className="globe-stage__topline">
-              <span>EXPANDED ATLAS · {String(thinkers.length).padStart(2, "0")} NODES</span>
-              <span>WEBGL2 · {earthMode === "day" ? "DAYLIGHT" : "NIGHT LIGHTS"}</span>
+              <span>WORLD PHILOSOPHY · {String(thinkers.length).padStart(2, "0")} VOICES</span>
             </div>
             <div className="globe-canvas-wrap">
               <GlobeCanvas
                 mode={displayMode}
                 earthMode={earthMode}
+                detailOpen={detailOpen}
                 isPlaying={isPlaying}
                 chapterIndex={displayChapterIndex}
                 selectedThinkerId={displaySelectedThinkerId}
                 selectedRelationId={displaySelectedRelationId}
                 activeQuestionId={activeQuestionId}
                 timelineYear={timelineYear}
+                timelineScrubbing={isTimelineScrubbing}
                 quality={quality}
+                focusDepth={focusDepth}
+                cameraSnapshot={cameraSnapshot}
                 reduceMotion={reduceMotion}
                 onSelectThinker={handleSelectThinker}
                 onSelectRelation={handleSelectRelation}
                 onFallback={openSemanticExplorer}
+                onCameraSnapshotChange={handleCameraSnapshotChange}
+                onPerformanceSample={handlePerformanceSample}
               />
             </div>
             <div className="globe-vignette" aria-hidden="true" />
-            <QualityBadge quality={quality} onChange={chooseQuality} />
-            <EarthModeSwitch mode={earthMode} onChange={chooseEarthMode} />
+            <DisplaySettings
+              earthMode={earthMode}
+              qualityPreference={qualityPreference}
+              effectiveQuality={quality}
+              onEarthModeChange={chooseEarthMode}
+              onQualityPreferenceChange={chooseQualityPreference}
+            />
             {displayMode === "story" ? <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} /> : (
               <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />
             )}
-            <RelationLegend onSelect={handleSelectRelation} />
+            {displayMode === "explore" ? <RelationLegend onSelect={handleSelectRelation} /> : null}
+            {displayMode === "explore" && displaySelectedThinkerId && !isCompact ? (
+              <FocusDepthControl value={focusDepth} onChange={setFocusDepth} />
+            ) : null}
             <div className="globe-instruction">
               <span>{displayMode === "story" && isPlaying ? "镜头正在讲述" : "拖动旋转 · 滚轮缩放 · 点击节点"}</span>
             </div>
           </section>
 
-          <aside className={`detail-pane${displaySelectedThinkerId || displaySelectedRelationId || showCompare ? " detail-pane--active" : ""}`}>
+          <motion.aside
+            className={`detail-pane detail-pane--snap-${detailSheetSnap}${detailOpen ? " detail-pane--active" : ""}`}
+            data-snap={detailSheetSnap}
+            drag={isCompact && detailOpen ? "y" : false}
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={0.08}
+            onDragEnd={handleDetailDragEnd}
+          >
+            {isCompact && detailOpen ? (
+              <button
+                className="detail-sheet-handle"
+                type="button"
+                aria-label="调整详情面板高度"
+                onClick={() => setDetailSheetSnap(detailSheetSnap === "peek" ? "half" : detailSheetSnap === "half" ? "full" : "peek")}
+              ><span /></button>
+            ) : null}
+            {isCompact && displayMode === "explore" && displaySelectedThinkerId ? (
+              <FocusDepthControl value={focusDepth} onChange={setFocusDepth} />
+            ) : null}
+            {detailOpen ? (
+              <button className="detail-pane__close" type="button" aria-label={closeDetailLabel} onClick={handleCloseDetail}>×</button>
+            ) : null}
             <div className="detail-pane__rail"><span>ARCHIVE</span><i /></div>
             <AnimatePresence mode="wait">
               {displaySelectedThinkerId ? <ThinkerDetail thinkerId={displaySelectedThinkerId} />
@@ -879,10 +1086,10 @@ export default function AtlasApp({
                   : showCompare ? <CompareDetail ids={displayCompareIds} />
                     : <EmptyDetail onSelectRelation={handleSelectRelation} />}
             </AnimatePresence>
-          </aside>
+          </motion.aside>
         </main>
 
-        <BottomDock mode={displayMode} />
+        <BottomDock mode={displayMode} onTakeover={() => persistVisualState("explore")} />
         <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} onSelect={handleSelectThinker} />
         <SemanticExplorer open={listViewOpen} onClose={() => setListViewOpen(false)} onSelect={handleSelectThinker} />
       </div>

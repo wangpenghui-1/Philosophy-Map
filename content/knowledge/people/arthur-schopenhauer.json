@@ -1,0 +1,112 @@
+{
+  "id": "arthur-schopenhauer",
+  "slug": "arthur-schopenhauer",
+  "entityType": "person",
+  "names": {
+    "display": "叔本华",
+    "english": "Arthur Schopenhauer",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1788–1860",
+    "startYear": 1788,
+    "endYear": 1860,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-意志哲学"
+  ],
+  "conceptIds": [
+    "concept-意志与表象"
+  ],
+  "questionIds": [
+    "reality"
+  ],
+  "guidingQuestion": "痛苦为何深植于欲求和世界经验之中？",
+  "thesis": "世界作为表象受认识形式组织，而盲目意志推动无尽欲求与痛苦。",
+  "summary": "叔本华是欧洲与地中海意志哲学的重要思想人物，主要追问“痛苦为何深植于欲求和世界经验之中？”。其思想以“意志与表象”为入口，主张世界作为表象受认识形式组织，而盲目意志推动无尽欲求与痛苦。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "world-will-representation"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "frankfurt",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Arthur Schopenhauer / 叔本华”",
+      "claim": "支持叔本华的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "叔本华是欧洲与地中海意志哲学的重要思想人物，主要追问“痛苦为何深植于欲求和世界经验之中？”。其思想以“意志与表象”为入口，主张世界作为表象受认识形式组织，而盲目意志推动无尽欲求与痛苦。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Arthur Schopenhauer / 叔本华”",
+              "claim": "支持叔本华的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：痛苦为何深植于欲求和世界经验之中？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Arthur Schopenhauer / 叔本华”",
+              "claim": "支持对叔本华核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：世界作为表象受认识形式组织，而盲目意志推动无尽欲求与痛苦。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Arthur Schopenhauer / 叔本华”",
+              "claim": "支持对叔本华核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/arthur-schopenhauer.webp",
+    "thumbSrc": "/media/thinkers/thumb/arthur-schopenhauer.webp",
+    "alt": "叔本华的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Johann Schäfer · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arthur_Schopenhauer_by_J_Sch%C3%A4fer,_1859b.jpg",
+    "sourceFile": "File:Arthur Schopenhauer by J Schäfer, 1859b.jpg",
+    "license": "Public domain",
+    "creator": "Johann Schäfer",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

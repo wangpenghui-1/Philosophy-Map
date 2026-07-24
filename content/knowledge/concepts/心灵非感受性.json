@@ -1,0 +1,48 @@
+{
+  "id": "concept-心灵非感受性",
+  "slug": "心灵非感受性",
+  "entityType": "concept",
+  "name": "心灵非感受性",
+  "originalTerms": [],
+  "summary": "“心灵非感受性”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-非洲与欧洲启蒙哲学",
+      "label": "心灵非感受性",
+      "explanation": "在安东·威廉·阿莫及非洲与欧洲启蒙哲学语境中，“心灵非感受性”用于说明：区分心灵的思维活动与身体的感受能力，并以严密论证参与欧洲启蒙哲学争论。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章：“Anton Wilhelm Amo / 安东·威廉·阿莫”",
+          "claim": "支持安东·威廉·阿莫语境中的“心灵非感受性”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "anton-wilhelm-amo"
+  ],
+  "workIds": [
+    "amo-apatheia"
+  ],
+  "traditionIds": [
+    "tradition-非洲与欧洲启蒙哲学"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Anton Wilhelm Amo / 安东·威廉·阿莫”",
+      "claim": "支持“心灵非感受性”作为安东·威廉·阿莫思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

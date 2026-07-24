@@ -1,0 +1,48 @@
+{
+  "id": "concept-即身成佛",
+  "slug": "即身成佛",
+  "entityType": "concept",
+  "name": "即身成佛",
+  "originalTerms": [],
+  "summary": "“即身成佛”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-日本密教",
+      "label": "即身成佛",
+      "explanation": "在空海及日本密教语境中，“即身成佛”用于说明：身语意与宇宙佛的活动相应，使成佛不是遥远结果而可在当下身体中实现。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言：“Kukai / 空海”",
+          "claim": "支持空海语境中的“即身成佛”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "kukai"
+  ],
+  "workIds": [
+    "ten-luminous-stages"
+  ],
+  "traditionIds": [
+    "tradition-日本密教"
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Kukai / 空海”",
+      "claim": "支持“即身成佛”作为空海思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

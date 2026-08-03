@@ -2,7 +2,9 @@
   "id": "src-kuhn-structure-1962",
   "entityType": "source",
   "title": "The Structure of Scientific Revolutions",
-  "authors": ["Thomas S. Kuhn"],
+  "authors": [
+    "Thomas S. Kuhn"
+  ],
   "sourceType": "primary-text",
   "publication": "University of Chicago Press",
   "year": 1962,

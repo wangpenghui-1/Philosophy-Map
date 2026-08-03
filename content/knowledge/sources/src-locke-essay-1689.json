@@ -2,7 +2,9 @@
   "id": "src-locke-essay-1689",
   "entityType": "source",
   "title": "An Essay Concerning Human Understanding",
-  "authors": ["John Locke"],
+  "authors": [
+    "John Locke"
+  ],
   "sourceType": "primary-text",
   "publication": "First published 1689",
   "year": 1689,

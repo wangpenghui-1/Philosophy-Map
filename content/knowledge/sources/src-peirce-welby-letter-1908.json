@@ -2,7 +2,9 @@
   "id": "src-peirce-welby-letter-1908",
   "entityType": "source",
   "title": "Letter to Victoria, Lady Welby",
-  "authors": ["Charles Sanders Peirce"],
+  "authors": [
+    "Charles Sanders Peirce"
+  ],
   "sourceType": "primary-text",
   "publication": "Semiotic and Significs: The Correspondence between Charles S. Peirce and Victoria Lady Welby",
   "year": 1908,

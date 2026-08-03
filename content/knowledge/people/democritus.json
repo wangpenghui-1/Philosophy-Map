@@ -1,0 +1,115 @@
+{
+  "id": "democritus",
+  "slug": "democritus",
+  "entityType": "person",
+  "names": {
+    "display": "德谟克利特",
+    "english": "Democritus",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前460–370",
+    "startYear": -460,
+    "endYear": -370,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-原子论"
+  ],
+  "conceptIds": [
+    "concept-原子与虚空"
+  ],
+  "questionIds": [
+    "knowledge",
+    "reality"
+  ],
+  "guidingQuestion": "复杂世界能否由不可分割的微粒和运动解释？",
+  "thesis": "原子在虚空中的排列与运动构成可感事物，性质差异不需诉诸目的因。",
+  "summary": "德谟克利特是欧洲与地中海原子论的重要思想人物，主要追问“复杂世界能否由不可分割的微粒和运动解释？”。其思想以“原子与虚空”为入口，主张原子在虚空中的排列与运动构成可感事物，性质差异不需诉诸目的因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "democritus-fragments"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "abdera",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Democritus / 德谟克利特”",
+      "claim": "支持德谟克利特的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "德谟克利特是欧洲与地中海原子论的重要思想人物，主要追问“复杂世界能否由不可分割的微粒和运动解释？”。其思想以“原子与虚空”为入口，主张原子在虚空中的排列与运动构成可感事物，性质差异不需诉诸目的因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Democritus / 德谟克利特”",
+              "claim": "支持德谟克利特的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：复杂世界能否由不可分割的微粒和运动解释？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Democritus / 德谟克利特”",
+              "claim": "支持对德谟克利特核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：原子在虚空中的排列与运动构成可感事物，性质差异不需诉诸目的因。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Democritus / 德谟克利特”",
+              "claim": "支持对德谟克利特核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/democritus.webp",
+    "thumbSrc": "/media/thinkers/thumb/democritus.webp",
+    "alt": "德谟克利特的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY-SA 3.0",
+    "credit": "user:shakko · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unknown_greek_pushkin.jpg",
+    "sourceFile": "File:Unknown greek pushkin.jpg",
+    "license": "CC BY-SA 3.0",
+    "creator": "user:shakko",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

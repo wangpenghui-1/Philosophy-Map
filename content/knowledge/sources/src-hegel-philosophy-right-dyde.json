@@ -1,0 +1,20 @@
+{
+  "id": "src-hegel-philosophy-right-dyde",
+  "entityType": "source",
+  "title": "Philosophy of Right",
+  "authors": [
+    "G. W. F. Hegel",
+    "S. W. Dyde (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "George Bell and Sons",
+  "year": 1896,
+  "defaultLocator": "Preface, pp. xxvii–xxviii",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

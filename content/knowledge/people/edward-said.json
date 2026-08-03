@@ -1,0 +1,112 @@
+{
+  "id": "edward-said",
+  "slug": "edward-said",
+  "entityType": "person",
+  "names": {
+    "display": "爱德华·萨义德",
+    "english": "Edward Said",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1935–2003",
+    "startYear": 1935,
+    "endYear": 2003,
+    "certainty": "established"
+  },
+  "primaryRegion": "跨区域与离散思想传统",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-后殖民思想"
+  ],
+  "conceptIds": [
+    "concept-东方主义"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "知识表述如何参与帝国对他者的治理？",
+  "thesis": "东方主义以制度化表述生产可支配的东方对象，批评应追踪知识与权力的关系。",
+  "summary": "爱德华·萨义德是跨区域与离散思想传统后殖民思想的重要思想人物，主要追问“知识表述如何参与帝国对他者的治理？”。其思想以“东方主义”为入口，主张东方主义以制度化表述生产可支配的东方对象，批评应追踪知识与权力的关系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "orientalism"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "new-york",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-cultural-studies-reader"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-cultural-studies-reader",
+      "locator": "对应作者选文及编者导言：“Edward Said / 爱德华·萨义德”",
+      "claim": "支持爱德华·萨义德的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "爱德华·萨义德是跨区域与离散思想传统后殖民思想的重要思想人物，主要追问“知识表述如何参与帝国对他者的治理？”。其思想以“东方主义”为入口，主张东方主义以制度化表述生产可支配的东方对象，批评应追踪知识与权力的关系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-cultural-studies-reader",
+              "locator": "对应作者选文及编者导言：“Edward Said / 爱德华·萨义德”",
+              "claim": "支持爱德华·萨义德的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：知识表述如何参与帝国对他者的治理？",
+          "citations": [
+            {
+              "sourceId": "src-cultural-studies-reader",
+              "locator": "对应作者选文及编者导言：“Edward Said / 爱德华·萨义德”",
+              "claim": "支持对爱德华·萨义德核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：东方主义以制度化表述生产可支配的东方对象，批评应追踪知识与权力的关系。",
+          "citations": [
+            {
+              "sourceId": "src-cultural-studies-reader",
+              "locator": "对应作者选文及编者导言：“Edward Said / 爱德华·萨义德”",
+              "claim": "支持对爱德华·萨义德核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/edward-said.webp",
+    "thumbSrc": "/media/thinkers/thumb/edward-said.webp",
+    "alt": "爱德华·萨义德的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC0",
+    "credit": "Barenboim-Said Akademie gGmbH · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edward_Said_and_Daniel_Barenboim_in_Sevilla,_2002_Crop.jpg",
+    "sourceFile": "File:Edward Said and Daniel Barenboim in Sevilla, 2002 Crop.jpg",
+    "license": "CC0",
+    "creator": "Barenboim-Said Akademie gGmbH",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#a5a3df",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

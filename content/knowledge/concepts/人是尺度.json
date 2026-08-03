@@ -1,0 +1,48 @@
+{
+  "id": "concept-人是尺度",
+  "slug": "人是尺度",
+  "entityType": "concept",
+  "name": "人是尺度",
+  "originalTerms": [],
+  "summary": "“人是尺度”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-智者学派",
+      "label": "人是尺度",
+      "explanation": "在普罗泰戈拉及智者学派语境中，“人是尺度”用于说明：人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
+          "claim": "支持普罗泰戈拉语境中的“人是尺度”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "protagoras"
+  ],
+  "workIds": [
+    "protagoras-testimonia"
+  ],
+  "traditionIds": [
+    "tradition-智者学派"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
+      "claim": "支持“人是尺度”作为普罗泰戈拉思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

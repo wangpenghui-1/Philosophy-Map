@@ -1,0 +1,20 @@
+{
+  "id": "src-descartes-discourse-veitch",
+  "entityType": "source",
+  "title": "Discourse on the Method",
+  "authors": [
+    "René Descartes",
+    "John Veitch (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "The Method, Meditations and Philosophy of Descartes, M. Walter Dunne",
+  "year": 1901,
+  "defaultLocator": "Part IV",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

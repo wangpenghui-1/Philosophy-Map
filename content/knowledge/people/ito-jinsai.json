@@ -1,0 +1,112 @@
+{
+  "id": "ito-jinsai",
+  "slug": "ito-jinsai",
+  "entityType": "person",
+  "names": {
+    "display": "伊藤仁斋",
+    "english": "Ito Jinsai",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1627–1705",
+    "startYear": 1627,
+    "endYear": 1705,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-日本古学"
+  ],
+  "conceptIds": [
+    "concept-古义学"
+  ],
+  "questionIds": [
+    "good-life"
+  ],
+  "guidingQuestion": "伦理意义如何从日常人伦而非抽象形上原则中产生？",
+  "thesis": "以古义学重读经典，强调仁义在具体情感、交往和共同生活中实现。",
+  "summary": "伊藤仁斋是东亚日本古学的重要思想人物，主要追问“伦理意义如何从日常人伦而非抽象形上原则中产生？”。其思想以“古义学”为入口，主张以古义学重读经典，强调仁义在具体情感、交往和共同生活中实现。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "gomojigi"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "kyoto",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Ito Jinsai / 伊藤仁斋”",
+      "claim": "支持伊藤仁斋的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "伊藤仁斋是东亚日本古学的重要思想人物，主要追问“伦理意义如何从日常人伦而非抽象形上原则中产生？”。其思想以“古义学”为入口，主张以古义学重读经典，强调仁义在具体情感、交往和共同生活中实现。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ito Jinsai / 伊藤仁斋”",
+              "claim": "支持伊藤仁斋的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：伦理意义如何从日常人伦而非抽象形上原则中产生？",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ito Jinsai / 伊藤仁斋”",
+              "claim": "支持对伊藤仁斋核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以古义学重读经典，强调仁义在具体情感、交往和共同生活中实现。",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ito Jinsai / 伊藤仁斋”",
+              "claim": "支持对伊藤仁斋核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ito-jinsai.webp",
+    "thumbSrc": "/media/thinkers/thumb/ito-jinsai.webp",
+    "alt": "伊藤仁斋的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BC%8A%E8%97%A4%E4%BB%81%E6%96%8E%E5%83%8F.jpg",
+    "sourceFile": "File:伊藤仁斎像.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

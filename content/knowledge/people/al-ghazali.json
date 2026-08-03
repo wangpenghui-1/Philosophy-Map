@@ -1,0 +1,112 @@
+{
+  "id": "al-ghazali",
+  "slug": "al-ghazali",
+  "entityType": "person",
+  "names": {
+    "display": "安萨里",
+    "english": "Al-Ghazali",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1058–1111",
+    "startYear": 1058,
+    "endYear": 1111,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-伊斯兰神学与哲学"
+  ],
+  "conceptIds": [
+    "concept-因果习惯"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "哲学证明、宗教启示和灵性体验各有何种认知边界？",
+  "thesis": "批判哲学家的若干必然性主张，同时把逻辑、神学与苏菲实践置于不同认识层次。",
+  "summary": "安萨里是西亚、中亚及伊斯兰思想世界伊斯兰神学与哲学的重要思想人物，主要追问“哲学证明、宗教启示和灵性体验各有何种认知边界？”。其思想以“因果习惯”为入口，主张批判哲学家的若干必然性主张，同时把逻辑、神学与苏菲实践置于不同认识层次。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "incoherence-philosophers"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "tus",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Al-Ghazali / 安萨里”",
+      "claim": "支持安萨里的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "安萨里是西亚、中亚及伊斯兰思想世界伊斯兰神学与哲学的重要思想人物，主要追问“哲学证明、宗教启示和灵性体验各有何种认知边界？”。其思想以“因果习惯”为入口，主张批判哲学家的若干必然性主张，同时把逻辑、神学与苏菲实践置于不同认识层次。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Al-Ghazali / 安萨里”",
+              "claim": "支持安萨里的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：哲学证明、宗教启示和灵性体验各有何种认知边界？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Al-Ghazali / 安萨里”",
+              "claim": "支持对安萨里核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：批判哲学家的若干必然性主张，同时把逻辑、神学与苏菲实践置于不同认识层次。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Al-Ghazali / 安萨里”",
+              "claim": "支持对安萨里核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/al-ghazali.webp",
+    "thumbSrc": "/media/thinkers/thumb/al-ghazali.webp",
+    "alt": "安萨里的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Claud Field · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al_Ghazzali_illustration.gif",
+    "sourceFile": "File:Al Ghazzali illustration.gif",
+    "license": "Public domain",
+    "creator": "Claud Field",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

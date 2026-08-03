@@ -1,0 +1,48 @@
+{
+  "id": "concept-性别范畴殖民性",
+  "slug": "性别范畴殖民性",
+  "entityType": "concept",
+  "name": "性别范畴殖民性",
+  "originalTerms": [],
+  "summary": "“性别范畴殖民性”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-非洲性别思想",
+      "label": "性别范畴殖民性",
+      "explanation": "在奥耶龙克·奥耶乌米及非洲性别思想语境中，“性别范畴殖民性”用于说明：约鲁巴社会的社会等级曾更多依据年龄等关系，殖民知识将西方性别体系普遍化。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+          "claim": "支持奥耶龙克·奥耶乌米语境中的“性别范畴殖民性”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "oyeronke-oyewumi"
+  ],
+  "workIds": [
+    "invention-women"
+  ],
+  "traditionIds": [
+    "tradition-非洲性别思想"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Oyeronke Oyewumi / 奥耶龙克·奥耶乌米”",
+      "claim": "支持“性别范畴殖民性”作为奥耶龙克·奥耶乌米思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

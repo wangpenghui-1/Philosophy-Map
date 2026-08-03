@@ -1,0 +1,113 @@
+{
+  "id": "ralph-waldo-emerson",
+  "slug": "ralph-waldo-emerson",
+  "entityType": "person",
+  "names": {
+    "display": "爱默生",
+    "english": "Ralph Waldo Emerson",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1803–1882",
+    "startYear": 1803,
+    "endYear": 1882,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-超验主义"
+  ],
+  "conceptIds": [
+    "concept-自我信赖"
+  ],
+  "questionIds": [
+    "society",
+    "self"
+  ],
+  "guidingQuestion": "个体如何在传统与社会从众压力中形成独立判断？",
+  "thesis": "自我信赖要求信任当下直觉，同时通过自然和公共行动超越封闭自我。",
+  "summary": "爱默生是美洲与加勒比超验主义的重要思想人物，主要追问“个体如何在传统与社会从众压力中形成独立判断？”。其思想以“自我信赖”为入口，主张自我信赖要求信任当下直觉，同时通过自然和公共行动超越封闭自我。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "essays-emerson"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "concord",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Ralph Waldo Emerson / 爱默生”",
+      "claim": "支持爱默生的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "爱默生是美洲与加勒比超验主义的重要思想人物，主要追问“个体如何在传统与社会从众压力中形成独立判断？”。其思想以“自我信赖”为入口，主张自我信赖要求信任当下直觉，同时通过自然和公共行动超越封闭自我。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Ralph Waldo Emerson / 爱默生”",
+              "claim": "支持爱默生的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：个体如何在传统与社会从众压力中形成独立判断？",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Ralph Waldo Emerson / 爱默生”",
+              "claim": "支持对爱默生核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：自我信赖要求信任当下直觉，同时通过自然和公共行动超越封闭自我。",
+          "citations": [
+            {
+              "sourceId": "src-companion-american-philosophy",
+              "locator": "对应人物与思想运动专章：“Ralph Waldo Emerson / 爱默生”",
+              "claim": "支持对爱默生核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ralph-waldo-emerson.webp",
+    "thumbSrc": "/media/thinkers/thumb/ralph-waldo-emerson.webp",
+    "alt": "爱默生的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Josiah Johnson Hawes · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg",
+    "sourceFile": "File:Ralph Waldo Emerson by Josiah Johnson Hawes 1857.jpg",
+    "license": "Public domain",
+    "creator": "Josiah Johnson Hawes",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

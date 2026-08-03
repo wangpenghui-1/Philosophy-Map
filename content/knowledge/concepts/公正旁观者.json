@@ -1,0 +1,48 @@
+{
+  "id": "concept-公正旁观者",
+  "slug": "公正旁观者",
+  "entityType": "concept",
+  "name": "公正旁观者",
+  "originalTerms": [],
+  "summary": "“公正旁观者”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-道德与政治经济思想",
+      "label": "公正旁观者",
+      "explanation": "在亚当·斯密及道德与政治经济思想语境中，“公正旁观者”用于说明：同感与想象中的公正旁观者校正自爱，使道德规范在社会互动与制度中形成。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Adam Smith / 亚当·斯密”",
+          "claim": "支持亚当·斯密语境中的“公正旁观者”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "adam-smith"
+  ],
+  "workIds": [
+    "theory-moral-sentiments"
+  ],
+  "traditionIds": [
+    "tradition-道德与政治经济思想"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Adam Smith / 亚当·斯密”",
+      "claim": "支持“公正旁观者”作为亚当·斯密思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

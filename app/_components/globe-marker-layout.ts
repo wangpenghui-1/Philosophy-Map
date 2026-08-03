@@ -43,6 +43,28 @@ export interface GlobeMarkerLayoutItem {
   bounds: GlobeMarkerBounds | null;
 }
 
+/**
+ * Limits mounted WebGL anchors to the same small budget as the portrait-label
+ * layout while reserving room for a selected thinker or relation endpoints.
+ */
+export function getGlobeAnchorMountIds(
+  layout: readonly GlobeMarkerLayoutItem[],
+  protectedIds: readonly (string | null | undefined)[],
+  maximum: number,
+) {
+  const mounted = new Set<string>();
+  const limit = Math.max(0, Math.floor(maximum));
+
+  for (const id of protectedIds) {
+    if (id && mounted.size < limit) mounted.add(id);
+  }
+  for (const item of layout) {
+    if (item.visible && mounted.size < limit) mounted.add(item.id);
+  }
+
+  return mounted;
+}
+
 export interface GlobeMarkerSize {
   width: number;
   height: number;
@@ -51,6 +73,8 @@ export interface GlobeMarkerSize {
 export interface GlobeMarkerLayoutOptions {
   /** Forces a LOD chosen by a camera controller with hysteresis. */
   lodOverride?: GlobeMarkerLod;
+  /** Screen-space UI regions that portrait markers must not cover. */
+  exclusionRects?: readonly GlobeMarkerBounds[];
   viewportPadding?: number;
   collisionPadding?: number;
   nearLodMaxDistance?: number;
@@ -72,6 +96,7 @@ interface ResolvedOptions {
   mediumLodMaxDistance: number;
   minimumCameraDistance: number;
   maximumCameraDistance: number;
+  exclusionRects: readonly GlobeMarkerBounds[];
   maxVisible: Partial<Record<GlobeMarkerLod, number>>;
   measureMarker: NonNullable<GlobeMarkerLayoutOptions["measureMarker"]>;
 }
@@ -110,6 +135,65 @@ const DENSITY = {
   medium: { pixelsPerMarker: 34_000, minimum: 10, maximum: 40 },
   far: { pixelsPerMarker: 72_000, minimum: 5, maximum: 20 },
 } as const;
+
+function boundedRect(
+  viewport: GlobeMarkerViewport,
+  left: number,
+  top: number,
+  right: number,
+  bottom: number,
+): GlobeMarkerBounds | null {
+  const resolvedLeft = clamp(left, 0, viewport.width);
+  const resolvedTop = clamp(top, 0, viewport.height);
+  const resolvedRight = clamp(right, 0, viewport.width);
+  const resolvedBottom = clamp(bottom, 0, viewport.height);
+  if (resolvedRight <= resolvedLeft || resolvedBottom <= resolvedTop) return null;
+  return {
+    left: resolvedLeft,
+    top: resolvedTop,
+    right: resolvedRight,
+    bottom: resolvedBottom,
+    width: resolvedRight - resolvedLeft,
+    height: resolvedBottom - resolvedTop,
+  };
+}
+
+/** Returns the screen regions occupied by the atlas controls and reading pane. */
+export function getGlobeMarkerExclusionRects(
+  viewport: GlobeMarkerViewport,
+  mode: "story" | "explore",
+  detailOpen: boolean,
+): GlobeMarkerBounds[] {
+  if (!Number.isFinite(viewport.width) || !Number.isFinite(viewport.height)
+    || viewport.width <= 0 || viewport.height <= 0) return [];
+
+  const mobile = viewport.width <= 820;
+  const candidates: Array<[number, number, number, number]> = [
+    // Quality and day/night controls.
+    [Math.max(0, viewport.width - (mobile ? 224 : 226)), 18, viewport.width - 8, mobile ? 72 : 76],
+    // Story copy or the question filter rail.
+    mode === "story"
+      ? mobile
+        ? [10, 52, Math.min(viewport.width - 10, Math.max(270, viewport.width * 0.86)), Math.min(viewport.height - 10, 340)]
+        : [20, 50, Math.min(viewport.width - 16, 530), Math.min(viewport.height - 16, 390)]
+      : mobile
+        ? [8, 62, viewport.width - 8, Math.min(viewport.height - 8, 138)]
+        : [14, 58, Math.min(viewport.width - 14, 330), Math.min(viewport.height - 12, 430)],
+    // Relationship legend.
+    mobile
+      ? [8, Math.max(0, viewport.height - 72), Math.min(viewport.width - 8, 152), viewport.height - 8]
+      : [14, Math.max(0, viewport.height - 216), Math.min(viewport.width - 14, 190), viewport.height - 8],
+  ];
+
+  if (mobile && detailOpen) {
+    const overlayHeight = Math.min(520, Math.max(240, (viewport.height + 151) * 0.6));
+    candidates.push([0, Math.max(0, viewport.height - overlayHeight - 6), viewport.width, viewport.height]);
+  }
+
+  return candidates
+    .map(([left, top, right, bottom]) => boundedRect(viewport, left, top, right, bottom))
+    .filter((bounds): bounds is GlobeMarkerBounds => bounds !== null);
+}
 
 const clamp = (value: number, minimum: number, maximum: number) =>
   Math.min(maximum, Math.max(minimum, value));
@@ -153,6 +237,7 @@ function resolveOptions(options: GlobeMarkerLayoutOptions): ResolvedOptions {
     mediumLodMaxDistance,
     minimumCameraDistance,
     maximumCameraDistance,
+    exclusionRects: options.exclusionRects ?? [],
     maxVisible: options.maxVisible ?? {},
     measureMarker: options.measureMarker ?? defaultMarkerSize,
   };
@@ -200,8 +285,8 @@ function defaultMarkerSize(candidate: ProjectedGlobeMarker, scale: number): Glob
   const portraitDiameter = 40;
   const labelGap = 7;
   return {
-    width: clamp((portraitDiameter + labelGap + estimatedTextWidth(candidate.name)) * scale, 54, 176),
-    height: clamp(portraitDiameter * scale, 28, 56),
+    width: clamp((portraitDiameter + labelGap + estimatedTextWidth(candidate.name) + 16) * scale, 58, 192),
+    height: clamp((portraitDiameter + 4) * scale, 30, 62),
   };
 }
 
@@ -502,7 +587,9 @@ export function layoutGlobeMarkers(
 
   const placements = placementCandidates(groups, lod, resolved.collisionPadding);
   const maximumVisible = densityLimit(lod, viewport, resolved.maxVisible[lod]);
-  const occupied: GlobeMarkerBounds[] = [];
+  const occupied: GlobeMarkerBounds[] = resolved.exclusionRects
+    .filter((bounds) => [bounds.left, bounds.top, bounds.right, bounds.bottom].every(Number.isFinite))
+    .map((bounds) => ({ ...bounds }));
   let visibleCount = 0;
 
   for (const placement of placements) {

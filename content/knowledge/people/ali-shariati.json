@@ -1,0 +1,113 @@
+{
+  "id": "ali-shariati",
+  "slug": "ali-shariati",
+  "entityType": "person",
+  "names": {
+    "display": "阿里·沙里亚蒂",
+    "english": "Ali Shariati",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1933–1977",
+    "startYear": 1933,
+    "endYear": 1977,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现代伊朗政治思想"
+  ],
+  "conceptIds": [
+    "concept-革命主体"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "宗教传统如何转化为反压迫和社会变革的语言？",
+  "thesis": "重释什叶派殉难与责任，使被异化者成为反殖民和反专制的行动主体。",
+  "summary": "阿里·沙里亚蒂是西亚、中亚及伊斯兰思想世界现代伊朗政治思想的重要思想人物，主要追问“宗教传统如何转化为反压迫和社会变革的语言？”。其思想以“革命主体”为入口，主张重释什叶派殉难与责任，使被异化者成为反殖民和反专制的行动主体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "red-shiism"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "tehran",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Ali Shariati / 阿里·沙里亚蒂”",
+      "claim": "支持阿里·沙里亚蒂的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "阿里·沙里亚蒂是西亚、中亚及伊斯兰思想世界现代伊朗政治思想的重要思想人物，主要追问“宗教传统如何转化为反压迫和社会变革的语言？”。其思想以“革命主体”为入口，主张重释什叶派殉难与责任，使被异化者成为反殖民和反专制的行动主体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Ali Shariati / 阿里·沙里亚蒂”",
+              "claim": "支持阿里·沙里亚蒂的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：宗教传统如何转化为反压迫和社会变革的语言？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Ali Shariati / 阿里·沙里亚蒂”",
+              "claim": "支持对阿里·沙里亚蒂核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：重释什叶派殉难与责任，使被异化者成为反殖民和反专制的行动主体。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Ali Shariati / 阿里·沙里亚蒂”",
+              "claim": "支持对阿里·沙里亚蒂核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ali-shariati.webp",
+    "thumbSrc": "/media/thinkers/thumb/ali-shariati.webp",
+    "alt": "阿里·沙里亚蒂的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dr_Ali_Shariati.jpg",
+    "sourceFile": "File:Dr Ali Shariati.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

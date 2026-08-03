@@ -1,0 +1,42 @@
+{
+  "id": "african-religions-philosophy",
+  "slug": "african-religions-philosophy",
+  "entityType": "work",
+  "title": "《非洲宗教与哲学》",
+  "originalTitle": "African Religions and Philosophy",
+  "authorRefs": [
+    {
+      "personId": "john-mbiti",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1969年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《非洲宗教与哲学》是进入约翰·姆比蒂思想语境的代表文本入口。条目以“共同体时间”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-共同体时间"
+  ],
+  "traditionIds": [
+    "tradition-非洲宗教哲学"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“John Mbiti / 约翰·姆比蒂”",
+      "claim": "支持《非洲宗教与哲学》与约翰·姆比蒂的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

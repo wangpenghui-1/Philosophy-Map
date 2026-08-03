@@ -1,0 +1,42 @@
+{
+  "id": "vakyapadiya",
+  "slug": "vakyapadiya",
+  "entityType": "work",
+  "title": "《语句论》",
+  "originalTitle": "Vākyapadīya",
+  "authorRefs": [
+    {
+      "personId": "bhartrhari",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约5世纪",
+  "languages": [
+    "sa"
+  ],
+  "summary": "《语句论》是进入伐致呵利思想语境的代表文本入口。条目以“语句整体”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-语句整体"
+  ],
+  "traditionIds": [
+    "tradition-语言哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Bhartrhari / 伐致呵利”",
+      "claim": "支持《语句论》与伐致呵利的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

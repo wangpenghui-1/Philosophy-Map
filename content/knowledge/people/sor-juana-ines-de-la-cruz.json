@@ -1,0 +1,113 @@
+{
+  "id": "sor-juana-ines-de-la-cruz",
+  "slug": "sor-juana-ines-de-la-cruz",
+  "entityType": "person",
+  "names": {
+    "display": "胡安娜修女",
+    "english": "Sor Juana Ines de la Cruz",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1648–1695",
+    "startYear": 1648,
+    "endYear": 1695,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-新西班牙思想"
+  ],
+  "conceptIds": [
+    "concept-女性求知权"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "女性为何有权接受教育并参与知识共同体？",
+  "thesis": "以自传式论辩和经典例证捍卫女性求知，将服从话语转化为对教育制度的批判。",
+  "summary": "胡安娜修女是美洲与加勒比新西班牙思想的重要思想人物，主要追问“女性为何有权接受教育并参与知识共同体？”。其思想以“女性求知权”为入口，主张以自传式论辩和经典例证捍卫女性求知，将服从话语转化为对教育制度的批判。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "reply-sor-filotea"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "mexico-city",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+      "claim": "支持胡安娜修女的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "胡安娜修女是美洲与加勒比新西班牙思想的重要思想人物，主要追问“女性为何有权接受教育并参与知识共同体？”。其思想以“女性求知权”为入口，主张以自传式论辩和经典例证捍卫女性求知，将服从话语转化为对教育制度的批判。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+              "claim": "支持胡安娜修女的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：女性为何有权接受教育并参与知识共同体？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+              "claim": "支持对胡安娜修女核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以自传式论辩和经典例证捍卫女性求知，将服从话语转化为对教育制度的批判。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Sor Juana Ines de la Cruz / 胡安娜修女”",
+              "claim": "支持对胡安娜修女核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/sor-juana-ines-de-la-cruz.webp",
+    "thumbSrc": "/media/thinkers/thumb/sor-juana-ines-de-la-cruz.webp",
+    "alt": "胡安娜修女的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Miguel Cabrera · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sor_Juana_by_Miguel_Cabrera.png",
+    "sourceFile": "File:Sor Juana by Miguel Cabrera.png",
+    "license": "Public domain",
+    "creator": "Miguel Cabrera",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

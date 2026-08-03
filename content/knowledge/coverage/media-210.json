@@ -1,0 +1,3891 @@
+{
+  "version": 1,
+  "releaseId": "media-public-210",
+  "status": "release-candidate",
+  "publicPeople": 210,
+  "generatedAt": "2026-07-19",
+  "counts": {
+    "photographic": 68,
+    "stylized": 68,
+    "historical": 74
+  },
+  "policy": {
+    "openLicensesOnly": true,
+    "generatedImagesPresentedAsHistorical": false,
+    "traditionalDepictionsExplicitlyLabeled": true,
+    "fullImage": {
+      "width": 800,
+      "height": 1000,
+      "format": "webp",
+      "quality": 80
+    },
+    "thumbnail": {
+      "width": 200,
+      "height": 250,
+      "format": "webp",
+      "quality": 80
+    }
+  },
+  "members": [
+    {
+      "personId": "abdolkarim-soroush",
+      "slug": "abdolkarim-soroush",
+      "media": {
+        "fullSrc": "/media/thinkers/full/abdolkarim-soroush.webp",
+        "thumbSrc": "/media/thinkers/thumb/abdolkarim-soroush.webp",
+        "alt": "阿卜杜勒卡里姆·索鲁什的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Hessam M.Armandehi · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abdolkarim_Soroush_02.jpg",
+        "sourceFile": "File:Abdolkarim Soroush 02.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Hessam M.Armandehi",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "abhinavagupta",
+      "slug": "abhinavagupta",
+      "media": {
+        "fullSrc": "/media/thinkers/full/abhinavagupta.webp",
+        "thumbSrc": "/media/thinkers/thumb/abhinavagupta.webp",
+        "alt": "阿毗那婆笈多的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "abu-bakr-al-razi",
+      "slug": "abu-bakr-al-razi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/abu-bakr-al-razi.webp",
+        "thumbSrc": "/media/thinkers/thumb/abu-bakr-al-razi.webp",
+        "alt": "拉齐的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Hossein Behzad · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D8%B2%DA%A9%D8%B1%DB%8C%D8%A7%DB%8C_%D8%B1%D8%A7%D8%B2%DB%8C_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_(cropped).jpg",
+        "sourceFile": "File:زکریای رازی اثر حسین بهزاد (cropped).jpg",
+        "license": "Public domain",
+        "creator": "Hossein Behzad",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "achille-mbembe",
+      "slug": "achille-mbembe",
+      "media": {
+        "fullSrc": "/media/thinkers/full/achille-mbembe.webp",
+        "thumbSrc": "/media/thinkers/thumb/achille-mbembe.webp",
+        "alt": "阿希尔·姆本贝的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "adam-smith",
+      "slug": "adam-smith",
+      "media": {
+        "fullSrc": "/media/thinkers/full/adam-smith.webp",
+        "thumbSrc": "/media/thinkers/thumb/adam-smith.webp",
+        "alt": "亚当·斯密的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adam_Smith_The_Muir_portrait.jpg",
+        "sourceFile": "File:Adam Smith The Muir portrait.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "africanus-horton",
+      "slug": "africanus-horton",
+      "media": {
+        "fullSrc": "/media/thinkers/full/africanus-horton.webp",
+        "thumbSrc": "/media/thinkers/thumb/africanus-horton.webp",
+        "alt": "詹姆斯·霍顿的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Army Medical Department, England · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Africanus_Horton.jpg",
+        "sourceFile": "File:Africanus Horton.jpg",
+        "license": "Public domain",
+        "creator": "Army Medical Department, England",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ahmad-baba",
+      "slug": "ahmad-baba",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ahmad-baba.webp",
+        "thumbSrc": "/media/thinkers/thumb/ahmad-baba.webp",
+        "alt": "艾哈迈德·巴巴的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "aime-cesaire",
+      "slug": "aime-cesaire",
+      "media": {
+        "fullSrc": "/media/thinkers/full/aime-cesaire.webp",
+        "thumbSrc": "/media/thinkers/thumb/aime-cesaire.webp",
+        "alt": "艾梅·塞泽尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Jean Baptiste Devaux · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aime_Cesaire_2003.jpg",
+        "sourceFile": "File:Aime Cesaire 2003.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Jean Baptiste Devaux",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "akshapada-gautama",
+      "slug": "akshapada-gautama",
+      "media": {
+        "fullSrc": "/media/thinkers/full/akshapada-gautama.webp",
+        "thumbSrc": "/media/thinkers/thumb/akshapada-gautama.webp",
+        "alt": "乔达摩的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "al-biruni",
+      "slug": "al-biruni",
+      "media": {
+        "fullSrc": "/media/thinkers/full/al-biruni.webp",
+        "thumbSrc": "/media/thinkers/thumb/al-biruni.webp",
+        "alt": "比鲁尼的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Michel Bakni · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al-Biruni_Portrait.jpg",
+        "sourceFile": "File:Al-Biruni Portrait.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Michel Bakni",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "al-ghazali",
+      "slug": "al-ghazali",
+      "media": {
+        "fullSrc": "/media/thinkers/full/al-ghazali.webp",
+        "thumbSrc": "/media/thinkers/thumb/al-ghazali.webp",
+        "alt": "安萨里的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Claud Field · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al_Ghazzali_illustration.gif",
+        "sourceFile": "File:Al Ghazzali illustration.gif",
+        "license": "Public domain",
+        "creator": "Claud Field",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "al-kindi",
+      "slug": "al-kindi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/al-kindi.webp",
+        "thumbSrc": "/media/thinkers/thumb/al-kindi.webp",
+        "alt": "肯迪的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Michel Bakni · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al-Kindi_Portrait.jpg",
+        "sourceFile": "File:Al-Kindi Portrait.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Michel Bakni",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "alain-locke",
+      "slug": "alain-locke",
+      "media": {
+        "fullSrc": "/media/thinkers/full/alain-locke.webp",
+        "thumbSrc": "/media/thinkers/thumb/alain-locke.webp",
+        "alt": "阿兰·洛克的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alain_LeRoy_Locke_cr.jpg",
+        "sourceFile": "File:Alain LeRoy Locke cr.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ali-shariati",
+      "slug": "ali-shariati",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ali-shariati.webp",
+        "thumbSrc": "/media/thinkers/thumb/ali-shariati.webp",
+        "alt": "阿里·沙里亚蒂的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dr_Ali_Shariati.jpg",
+        "sourceFile": "File:Dr Ali Shariati.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "amilcar-cabral",
+      "slug": "amilcar-cabral",
+      "media": {
+        "fullSrc": "/media/thinkers/full/amilcar-cabral.webp",
+        "thumbSrc": "/media/thinkers/thumb/amilcar-cabral.webp",
+        "alt": "阿米尔卡·卡布拉尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Anonymous Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabral_2.png",
+        "sourceFile": "File:Cabral 2.png",
+        "license": "Public domain",
+        "creator": "Anonymous Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "amina-wadud",
+      "slug": "amina-wadud",
+      "media": {
+        "fullSrc": "/media/thinkers/full/amina-wadud.webp",
+        "thumbSrc": "/media/thinkers/thumb/amina-wadud.webp",
+        "alt": "阿米娜·瓦杜德的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 2.0",
+        "credit": "Oregon State University · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amina_Wadud.jpg",
+        "sourceFile": "File:Amina Wadud.jpg",
+        "license": "CC BY-SA 2.0",
+        "creator": "Oregon State University",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "angela-davis",
+      "slug": "angela-davis",
+      "media": {
+        "fullSrc": "/media/thinkers/full/angela-davis.webp",
+        "thumbSrc": "/media/thinkers/thumb/angela-davis.webp",
+        "alt": "安吉拉·戴维斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Philippe Halsman · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angela_Davis,_1974.jpg",
+        "sourceFile": "File:Angela Davis, 1974.jpg",
+        "license": "Public domain",
+        "creator": "Philippe Halsman",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "anibal-quijano",
+      "slug": "anibal-quijano",
+      "media": {
+        "fullSrc": "/media/thinkers/full/anibal-quijano.webp",
+        "thumbSrc": "/media/thinkers/thumb/anibal-quijano.webp",
+        "alt": "阿尼巴尔·基哈诺的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "anselm-canterbury",
+      "slug": "anselm-canterbury",
+      "media": {
+        "fullSrc": "/media/thinkers/full/anselm-canterbury.webp",
+        "thumbSrc": "/media/thinkers/thumb/anselm-canterbury.webp",
+        "alt": "安瑟伦的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "anton-wilhelm-amo",
+      "slug": "anton-wilhelm-amo",
+      "media": {
+        "fullSrc": "/media/thinkers/full/anton-wilhelm-amo.webp",
+        "thumbSrc": "/media/thinkers/thumb/anton-wilhelm-amo.webp",
+        "alt": "安东·威廉·阿莫的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sketch_portrait_of_Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759).jpg",
+        "sourceFile": "File:Sketch portrait of Anton Wilhelm Amo (c. 1703 – c. 1759).jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "apolinario-mabini",
+      "slug": "apolinario-mabini",
+      "media": {
+        "fullSrc": "/media/thinkers/full/apolinario-mabini.webp",
+        "thumbSrc": "/media/thinkers/thumb/apolinario-mabini.webp",
+        "alt": "马比尼的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Apolinario_Mabini.jpg",
+        "sourceFile": "File:Apolinario Mabini.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "aquinas",
+      "slug": "aquinas",
+      "media": {
+        "fullSrc": "/media/thinkers/full/aquinas.webp",
+        "thumbSrc": "/media/thinkers/thumb/aquinas.webp",
+        "alt": "托马斯·阿奎那的艺术化人物形象",
+        "objectPosition": "50% 20%",
+        "depictionNote": "艺术化人物形象，参考后世宗教绘画传统而非历史照片。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "arendt",
+      "slug": "arendt",
+      "media": {
+        "fullSrc": "/media/thinkers/full/arendt.webp",
+        "thumbSrc": "/media/thinkers/thumb/arendt.webp",
+        "alt": "阿伦特的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "aristotle",
+      "slug": "aristotle",
+      "media": {
+        "fullSrc": "/media/thinkers/full/aristotle.webp",
+        "thumbSrc": "/media/thinkers/thumb/aristotle.webp",
+        "alt": "亚里士多德的艺术化人物形象",
+        "objectPosition": "50% 20%",
+        "depictionNote": "艺术化人物形象，参考后世传统形象而非历史照片。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "arthur-schopenhauer",
+      "slug": "arthur-schopenhauer",
+      "media": {
+        "fullSrc": "/media/thinkers/full/arthur-schopenhauer.webp",
+        "thumbSrc": "/media/thinkers/thumb/arthur-schopenhauer.webp",
+        "alt": "叔本华的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Johann Schäfer · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arthur_Schopenhauer_by_J_Sch%C3%A4fer,_1859b.jpg",
+        "sourceFile": "File:Arthur Schopenhauer by J Schäfer, 1859b.jpg",
+        "license": "Public domain",
+        "creator": "Johann Schäfer",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "asanga",
+      "slug": "asanga",
+      "media": {
+        "fullSrc": "/media/thinkers/full/asanga.webp",
+        "thumbSrc": "/media/thinkers/thumb/asanga.webp",
+        "alt": "无著的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Wikimedia Commons contributors · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asanga.JPG",
+        "sourceFile": "File:Asanga.JPG",
+        "license": "Public domain",
+        "creator": "Wikimedia Commons contributors",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ashvaghosha",
+      "slug": "ashvaghosha",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ashvaghosha.webp",
+        "thumbSrc": "/media/thinkers/thumb/ashvaghosha.webp",
+        "alt": "马鸣的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashvaghosha.jpg",
+        "sourceFile": "File:Ashvaghosha.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "augustine",
+      "slug": "augustine",
+      "media": {
+        "fullSrc": "/media/thinkers/full/augustine.webp",
+        "thumbSrc": "/media/thinkers/thumb/augustine.webp",
+        "alt": "奥古斯丁的艺术化人物形象",
+        "objectPosition": "50% 20%",
+        "depictionNote": "艺术化人物形象，参考后世宗教绘画传统而非历史照片。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "avicenna",
+      "slug": "avicenna",
+      "media": {
+        "fullSrc": "/media/thinkers/full/avicenna.webp",
+        "thumbSrc": "/media/thinkers/thumb/avicenna.webp",
+        "alt": "阿维森纳的艺术化人物形象",
+        "objectPosition": "50% 22%",
+        "depictionNote": "艺术化人物形象，参考后世传统形象而非历史照片。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "b-r-ambedkar",
+      "slug": "b-r-ambedkar",
+      "media": {
+        "fullSrc": "/media/thinkers/full/b-r-ambedkar.webp",
+        "thumbSrc": "/media/thinkers/thumb/b-r-ambedkar.webp",
+        "alt": "安贝德卡尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dr._Bhimrao_Ambedkar.jpg",
+        "sourceFile": "File:Dr. Bhimrao Ambedkar.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "badarayana",
+      "slug": "badarayana",
+      "media": {
+        "fullSrc": "/media/thinkers/full/badarayana.webp",
+        "thumbSrc": "/media/thinkers/thumb/badarayana.webp",
+        "alt": "跋陀罗衍那的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "bahaullah",
+      "slug": "bahaullah",
+      "media": {
+        "fullSrc": "/media/thinkers/full/bahaullah.webp",
+        "thumbSrc": "/media/thinkers/thumb/bahaullah.webp",
+        "alt": "巴哈欧拉的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bahaullah_from_miller.jpg",
+        "sourceFile": "File:Bahaullah from miller.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "beauvoir",
+      "slug": "beauvoir",
+      "media": {
+        "fullSrc": "/media/thinkers/full/beauvoir.webp",
+        "thumbSrc": "/media/thinkers/thumb/beauvoir.webp",
+        "alt": "波伏娃的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "bertrand-russell",
+      "slug": "bertrand-russell",
+      "media": {
+        "fullSrc": "/media/thinkers/full/bertrand-russell.webp",
+        "thumbSrc": "/media/thinkers/thumb/bertrand-russell.webp",
+        "alt": "罗素的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Bassano Ltd · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bertrand_Russell_smoking_in_1936.jpg",
+        "sourceFile": "File:Bertrand Russell smoking in 1936.jpg",
+        "license": "Public domain",
+        "creator": "Bassano Ltd",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "bhartrhari",
+      "slug": "bhartrhari",
+      "media": {
+        "fullSrc": "/media/thinkers/full/bhartrhari.webp",
+        "thumbSrc": "/media/thinkers/thumb/bhartrhari.webp",
+        "alt": "伐致呵利的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "blaise-pascal",
+      "slug": "blaise-pascal",
+      "media": {
+        "fullSrc": "/media/thinkers/full/blaise-pascal.webp",
+        "thumbSrc": "/media/thinkers/thumb/blaise-pascal.webp",
+        "alt": "帕斯卡的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] . · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles.JPG",
+        "sourceFile": "File:Blaise Pascal Versailles.JPG",
+        "license": "Public domain",
+        "creator": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691 [réf. nécessaire] .",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "boethius",
+      "slug": "boethius",
+      "media": {
+        "fullSrc": "/media/thinkers/full/boethius.webp",
+        "thumbSrc": "/media/thinkers/thumb/boethius.webp",
+        "alt": "波爱修斯的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boethius.jpeg",
+        "sourceFile": "File:Boethius.jpeg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "bruno-latour",
+      "slug": "bruno-latour",
+      "media": {
+        "fullSrc": "/media/thinkers/full/bruno-latour.webp",
+        "thumbSrc": "/media/thinkers/thumb/bruno-latour.webp",
+        "alt": "布鲁诺·拉图尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "KOKUYO · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bruno_Latour_in_Taiwan_P1250394_(cropped).jpg",
+        "sourceFile": "File:Bruno Latour in Taiwan P1250394 (cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "KOKUYO",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "buddha",
+      "slug": "buddha",
+      "media": {
+        "fullSrc": "/media/thinkers/full/buddha.webp",
+        "thumbSrc": "/media/thinkers/thumb/buddha.webp",
+        "alt": "佛陀的艺术化人物形象",
+        "objectPosition": "50% 30%",
+        "depictionNote": "艺术化人物形象，不代表可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "buddhadasa-bhikkhu",
+      "slug": "buddhadasa-bhikkhu",
+      "media": {
+        "fullSrc": "/media/thinkers/full/buddhadasa-bhikkhu.webp",
+        "thumbSrc": "/media/thinkers/thumb/buddhadasa-bhikkhu.webp",
+        "alt": "佛使比丘的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buddhadasa118.jpg",
+        "sourceFile": "File:Buddhadasa118.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "c-l-r-james",
+      "slug": "c-l-r-james",
+      "media": {
+        "fullSrc": "/media/thinkers/full/c-l-r-james.webp",
+        "thumbSrc": "/media/thinkers/thumb/c-l-r-james.webp",
+        "alt": "C. L. R. 詹姆斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "By Hill123 (Own work) [CC BY-SA 3.0 ( https://creativecommons.org/licenses/by-sa/3.0 )], via Wikimedia Commons · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CLR_James_Cropped.png",
+        "sourceFile": "File:CLR James Cropped.png",
+        "license": "CC BY-SA 3.0",
+        "creator": "By Hill123 (Own work) [CC BY-SA 3.0 ( https://creativecommons.org/licenses/by-sa/3.0 )], via Wikimedia Commons",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "charles-sanders-peirce",
+      "slug": "charles-sanders-peirce",
+      "media": {
+        "fullSrc": "/media/thinkers/full/charles-sanders-peirce.webp",
+        "thumbSrc": "/media/thinkers/thumb/charles-sanders-peirce.webp",
+        "alt": "皮尔士的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Charles_Sanders_Peirce_theb3558.jpg : NOAA Office of NOAA Corps Operations derivative work: Ori.livneh ( talk ) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Sanders_Peirce.png",
+        "sourceFile": "File:Charles Sanders Peirce.png",
+        "license": "Public domain",
+        "creator": "Charles_Sanders_Peirce_theb3558.jpg : NOAA Office of NOAA Corps Operations derivative work: Ori.livneh ( talk )",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "charles-w-mills",
+      "slug": "charles-w-mills",
+      "media": {
+        "fullSrc": "/media/thinkers/full/charles-w-mills.webp",
+        "thumbSrc": "/media/thinkers/thumb/charles-w-mills.webp",
+        "alt": "查尔斯·米尔斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "Center for Global Ethics and Politics · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_W._Mills_2015.jpg",
+        "sourceFile": "File:Charles W. Mills 2015.jpg",
+        "license": "CC BY 4.0",
+        "creator": "Center for Global Ethics and Politics",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "cheikh-anta-diop",
+      "slug": "cheikh-anta-diop",
+      "media": {
+        "fullSrc": "/media/thinkers/full/cheikh-anta-diop.webp",
+        "thumbSrc": "/media/thinkers/thumb/cheikh-anta-diop.webp",
+        "alt": "谢赫·安塔·迪奥普的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheikh_Anta_Diop,_late_1940s.jpg",
+        "sourceFile": "File:Cheikh Anta Diop, late 1940s.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "christine-de-pizan",
+      "slug": "christine-de-pizan",
+      "media": {
+        "fullSrc": "/media/thinkers/full/christine-de-pizan.webp",
+        "thumbSrc": "/media/thinkers/thumb/christine-de-pizan.webp",
+        "alt": "克里斯蒂娜·德·皮桑的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Maître de la Cité des dames · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Christine_de_Pizan,_Cit%C3%A9_des_dames,_Troisi%C3%A8me_Partie.png",
+        "sourceFile": "File:Christine de Pizan, Cité des dames, Troisième Partie.png",
+        "license": "Public domain",
+        "creator": "Maître de la Cité des dames",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "chrysippus",
+      "slug": "chrysippus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/chrysippus.webp",
+        "thumbSrc": "/media/thinkers/thumb/chrysippus.webp",
+        "alt": "克律西波的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 2.0",
+        "credit": "Carole Raddato from FRANKFURT, Germany · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_the_Stoic_philosopher_Chrysippus,_2nd_century_AD,_Louvre_Museum_(7462805964).jpg",
+        "sourceFile": "File:Portrait of the Stoic philosopher Chrysippus, 2nd century AD, Louvre Museum (7462805964).jpg",
+        "license": "CC BY-SA 2.0",
+        "creator": "Carole Raddato from FRANKFURT, Germany",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "cicero",
+      "slug": "cicero",
+      "media": {
+        "fullSrc": "/media/thinkers/full/cicero.webp",
+        "thumbSrc": "/media/thinkers/thumb/cicero.webp",
+        "alt": "西塞罗的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "José Luiz · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg",
+        "sourceFile": "File:Bust of Cicero (1st-cent. BC) - Palazzo Nuovo - Musei Capitolini - Rome 2016.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "José Luiz",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "confucius",
+      "slug": "confucius",
+      "media": {
+        "fullSrc": "/media/thinkers/full/confucius.webp",
+        "thumbSrc": "/media/thinkers/thumb/confucius.webp",
+        "alt": "孔子的艺术化人物形象",
+        "objectPosition": "50% 24%",
+        "depictionNote": "艺术化人物形象，并非可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "cornel-west",
+      "slug": "cornel-west",
+      "media": {
+        "fullSrc": "/media/thinkers/full/cornel-west.webp",
+        "thumbSrc": "/media/thinkers/thumb/cornel-west.webp",
+        "alt": "科内尔·韦斯特的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 2.0",
+        "credit": "Gage Skidmore from Peoria, AZ, United States of America · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cornel_West_(39223875064)_(cropped).jpg",
+        "sourceFile": "File:Cornel West (39223875064) (cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "creator": "Gage Skidmore from Peoria, AZ, United States of America",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "dai-zhen",
+      "slug": "dai-zhen",
+      "media": {
+        "fullSrc": "/media/thinkers/full/dai-zhen.webp",
+        "thumbSrc": "/media/thinkers/thumb/dai-zhen.webp",
+        "alt": "戴震的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "楊鵬秋 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dai_Zhen.png",
+        "sourceFile": "File:Dai Zhen.png",
+        "license": "Public domain",
+        "creator": "楊鵬秋",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "democritus",
+      "slug": "democritus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/democritus.webp",
+        "thumbSrc": "/media/thinkers/thumb/democritus.webp",
+        "alt": "德谟克利特的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "user:shakko · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unknown_greek_pushkin.jpg",
+        "sourceFile": "File:Unknown greek pushkin.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "user:shakko",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "descartes",
+      "slug": "descartes",
+      "media": {
+        "fullSrc": "/media/thinkers/full/descartes.webp",
+        "thumbSrc": "/media/thinkers/thumb/descartes.webp",
+        "alt": "笛卡尔的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "dharmakirti",
+      "slug": "dharmakirti",
+      "media": {
+        "fullSrc": "/media/thinkers/full/dharmakirti.webp",
+        "thumbSrc": "/media/thinkers/thumb/dharmakirti.webp",
+        "alt": "法称的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC0",
+        "credit": "https://clevelandart.org/art/2010.474 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tibet,_c._15th-16th_century_-_Portrait_of_Dharmakirti_-_2010.474_-_Cleveland_Museum_of_Art.tif",
+        "sourceFile": "File:Tibet, c. 15th-16th century - Portrait of Dharmakirti - 2010.474 - Cleveland Museum of Art.tif",
+        "license": "CC0",
+        "creator": "https://clevelandart.org/art/2010.474",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "dignaga",
+      "slug": "dignaga",
+      "media": {
+        "fullSrc": "/media/thinkers/full/dignaga.webp",
+        "thumbSrc": "/media/thinkers/thumb/dignaga.webp",
+        "alt": "陈那的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "రహ్మానుద్దీన్ · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Dignagacharyudu.JPG",
+        "sourceFile": "File:Portrait of Dignagacharyudu.JPG",
+        "license": "CC BY-SA 3.0",
+        "creator": "రహ్మానుద్దీన్",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "dong-zhongshu",
+      "slug": "dong-zhongshu",
+      "media": {
+        "fullSrc": "/media/thinkers/full/dong-zhongshu.webp",
+        "thumbSrc": "/media/thinkers/thumb/dong-zhongshu.webp",
+        "alt": "董仲舒的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "歷代聖賢半身像 冊 董仲舒 . 故宮典藏資料檢索. National Palace Museum. · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%91%A3%E4%BB%B2%E8%88%92_(Dong_Zhongshu).png",
+        "sourceFile": "File:歷代聖賢半身像 冊 董仲舒 (Dong Zhongshu).png",
+        "license": "CC BY 4.0",
+        "creator": "歷代聖賢半身像 冊 董仲舒 . 故宮典藏資料檢索. National Palace Museum.",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "donna-haraway",
+      "slug": "donna-haraway",
+      "media": {
+        "fullSrc": "/media/thinkers/full/donna-haraway.webp",
+        "thumbSrc": "/media/thinkers/thumb/donna-haraway.webp",
+        "alt": "唐娜·哈拉维的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Rusten Hogness · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Donna_Haraway_2006_(cropped).jpg",
+        "sourceFile": "File:Donna Haraway 2006 (cropped).jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Rusten Hogness",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "edouard-glissant",
+      "slug": "edouard-glissant",
+      "media": {
+        "fullSrc": "/media/thinkers/full/edouard-glissant.webp",
+        "thumbSrc": "/media/thinkers/thumb/edouard-glissant.webp",
+        "alt": "爱德华·格利桑的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 3.0",
+        "credit": "YEHKRI.COM A.C.C. · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:EdouardGlissant.jpg",
+        "sourceFile": "File:EdouardGlissant.jpg",
+        "license": "CC BY 3.0",
+        "creator": "YEHKRI.COM A.C.C.",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "edward-said",
+      "slug": "edward-said",
+      "media": {
+        "fullSrc": "/media/thinkers/full/edward-said.webp",
+        "thumbSrc": "/media/thinkers/thumb/edward-said.webp",
+        "alt": "爱德华·萨义德的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC0",
+        "credit": "Barenboim-Said Akademie gGmbH · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edward_Said_and_Daniel_Barenboim_in_Sevilla,_2002_Crop.jpg",
+        "sourceFile": "File:Edward Said and Daniel Barenboim in Sevilla, 2002 Crop.jpg",
+        "license": "CC0",
+        "creator": "Barenboim-Said Akademie gGmbH",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "edward-wilmot-blyden",
+      "slug": "edward-wilmot-blyden",
+      "media": {
+        "fullSrc": "/media/thinkers/full/edward-wilmot-blyden.webp",
+        "thumbSrc": "/media/thinkers/thumb/edward-wilmot-blyden.webp",
+        "alt": "爱德华·布莱登的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Johnston, Harry Hamilton, Sir, 1858-1927; Royal Geographical Society (Great Britain) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:E._W._Blyden_Johnston.png",
+        "sourceFile": "File:E. W. Blyden Johnston.png",
+        "license": "Public domain",
+        "creator": "Johnston, Harry Hamilton, Sir, 1858-1927; Royal Geographical Society (Great Britain)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "empedocles",
+      "slug": "empedocles",
+      "media": {
+        "fullSrc": "/media/thinkers/full/empedocles.webp",
+        "thumbSrc": "/media/thinkers/thumb/empedocles.webp",
+        "alt": "恩培多克勒的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "https://wellcomeimages.org/indexplus/obf_images/06/2c/d9438aa5085f4bb052daea164504.jpg Gallery: https://wellcomeimages.org/indexplus/image/M0004262.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/nftrjgzw · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_ofEmpedocles_Wellcome_M0004262.jpg",
+        "sourceFile": "File:Portrait ofEmpedocles Wellcome M0004262.jpg",
+        "license": "CC BY 4.0",
+        "creator": "https://wellcomeimages.org/indexplus/obf_images/06/2c/d9438aa5085f4bb052daea164504.jpg Gallery: https://wellcomeimages.org/indexplus/image/M0004262.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/nftrjgzw",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "enrique-dussel",
+      "slug": "enrique-dussel",
+      "media": {
+        "fullSrc": "/media/thinkers/full/enrique-dussel.webp",
+        "thumbSrc": "/media/thinkers/thumb/enrique-dussel.webp",
+        "alt": "恩里克·杜塞尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Ralg23 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:EnriqueDussel.jpg",
+        "sourceFile": "File:EnriqueDussel.jpg",
+        "license": "Public domain",
+        "creator": "Ralg23",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "epeli-hauofa",
+      "slug": "epeli-hauofa",
+      "media": {
+        "fullSrc": "/media/thinkers/full/epeli-hauofa.webp",
+        "thumbSrc": "/media/thinkers/thumb/epeli-hauofa.webp",
+        "alt": "埃佩利·豪奥法的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "epictetus",
+      "slug": "epictetus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/epictetus.webp",
+        "thumbSrc": "/media/thinkers/thumb/epictetus.webp",
+        "alt": "爱比克泰德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "\"A.C.\" · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Notice_sur_les_traductions_fran%C3%A7aises_du_Manuel_d%27%C3%89pict%C3%A8te_-_frontispiece.png",
+        "sourceFile": "File:Notice sur les traductions françaises du Manuel d'Épictète - frontispiece.png",
+        "license": "Public domain",
+        "creator": "\"A.C.\"",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "epicurus",
+      "slug": "epicurus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/epicurus.webp",
+        "thumbSrc": "/media/thinkers/thumb/epicurus.webp",
+        "alt": "伊壁鸠鲁的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown artist Unknown artist · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Epikouros_BM_1843.jpg",
+        "sourceFile": "File:Epikouros BM 1843.jpg",
+        "license": "Public domain",
+        "creator": "Unknown artist Unknown artist",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "erasmus",
+      "slug": "erasmus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/erasmus.webp",
+        "thumbSrc": "/media/thinkers/thumb/erasmus.webp",
+        "alt": "伊拉斯谟的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Hans Holbein the Younger · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Erasmus_of_Rotterdam_by_Hans_Holbein_d._J._in_Kunstmuseum_Basel.jpg",
+        "sourceFile": "File:Portrait of Erasmus of Rotterdam by Hans Holbein d. J. in Kunstmuseum Basel.jpg",
+        "license": "Public domain",
+        "creator": "Hans Holbein the Younger",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "fanon",
+      "slug": "fanon",
+      "media": {
+        "fullSrc": "/media/thinkers/full/fanon.webp",
+        "thumbSrc": "/media/thinkers/thumb/fanon.webp",
+        "alt": "法农的艺术化人物形象",
+        "objectPosition": "48% 38%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "fazang",
+      "slug": "fazang",
+      "media": {
+        "fullSrc": "/media/thinkers/full/fazang.webp",
+        "thumbSrc": "/media/thinkers/thumb/fazang.webp",
+        "alt": "法藏的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown 13th-century artist · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fazang,_buddhist_Monk,_Japanese_print,_13th_century.jpg",
+        "sourceFile": "File:Fazang, buddhist Monk, Japanese print, 13th century.jpg",
+        "license": "Public domain",
+        "creator": "Unknown 13th-century artist",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "fazlur-rahman",
+      "slug": "fazlur-rahman",
+      "media": {
+        "fullSrc": "/media/thinkers/full/fazlur-rahman.webp",
+        "thumbSrc": "/media/thinkers/thumb/fazlur-rahman.webp",
+        "alt": "法兹鲁尔·拉赫曼的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "felipe-guaman-poma",
+      "slug": "felipe-guaman-poma",
+      "media": {
+        "fullSrc": "/media/thinkers/full/felipe-guaman-poma.webp",
+        "thumbSrc": "/media/thinkers/thumb/felipe-guaman-poma.webp",
+        "alt": "瓜曼·波马的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Felipe Guamán Poma de Ayala · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Felipe_Guam%C3%A1n_Poma_de_Ayala.jpg",
+        "sourceFile": "File:Felipe Guamán Poma de Ayala.jpg",
+        "license": "Public domain",
+        "creator": "Felipe Guamán Poma de Ayala",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "feng-youlan",
+      "slug": "feng-youlan",
+      "media": {
+        "fullSrc": "/media/thinkers/full/feng-youlan.webp",
+        "thumbSrc": "/media/thinkers/thumb/feng-youlan.webp",
+        "alt": "冯友兰的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feng_Youlan.jpg",
+        "sourceFile": "File:Feng Youlan.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "foucault",
+      "slug": "foucault",
+      "media": {
+        "fullSrc": "/media/thinkers/full/foucault.webp",
+        "thumbSrc": "/media/thinkers/thumb/foucault.webp",
+        "alt": "福柯的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "francis-bacon",
+      "slug": "francis-bacon",
+      "media": {
+        "fullSrc": "/media/thinkers/full/francis-bacon.webp",
+        "thumbSrc": "/media/thinkers/thumb/francis-bacon.webp",
+        "alt": "弗朗西斯·培根的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Paul van Somer I / Formerly attributed to Frans Pourbus the Younger · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somer_Francis_Bacon.jpg",
+        "sourceFile": "File:Somer Francis Bacon.jpg",
+        "license": "Public domain",
+        "creator": "Paul van Somer I / Formerly attributed to Frans Pourbus the Younger",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "frederick-douglass",
+      "slug": "frederick-douglass",
+      "media": {
+        "fullSrc": "/media/thinkers/full/frederick-douglass.webp",
+        "thumbSrc": "/media/thinkers/thumb/frederick-douglass.webp",
+        "alt": "弗雷德里克·道格拉斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "George Kendall Warren · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(circa_1879)_(cropped).jpg",
+        "sourceFile": "File:Frederick Douglass (circa 1879) (cropped).jpg",
+        "license": "Public domain",
+        "creator": "George Kendall Warren",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "gangesha",
+      "slug": "gangesha",
+      "media": {
+        "fullSrc": "/media/thinkers/full/gangesha.webp",
+        "thumbSrc": "/media/thinkers/thumb/gangesha.webp",
+        "alt": "恒伽沙的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "gargi-vachaknavi",
+      "slug": "gargi-vachaknavi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/gargi-vachaknavi.webp",
+        "thumbSrc": "/media/thinkers/thumb/gargi-vachaknavi.webp",
+        "alt": "迦尔吉的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Sntshkumar750 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gargi_Vachaknavi.jpg",
+        "sourceFile": "File:Gargi Vachaknavi.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Sntshkumar750",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "gayatri-chakravorty-spivak",
+      "slug": "gayatri-chakravorty-spivak",
+      "media": {
+        "fullSrc": "/media/thinkers/full/gayatri-chakravorty-spivak.webp",
+        "thumbSrc": "/media/thinkers/thumb/gayatri-chakravorty-spivak.webp",
+        "alt": "斯皮瓦克的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Shih-Lun CHANG · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gayatri_Chakravorty_Spivak_at_Goldsmiths_College.jpg",
+        "sourceFile": "File:Gayatri Chakravorty Spivak at Goldsmiths College.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Shih-Lun CHANG",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "george-berkeley",
+      "slug": "george-berkeley",
+      "media": {
+        "fullSrc": "/media/thinkers/full/george-berkeley.webp",
+        "thumbSrc": "/media/thinkers/thumb/george-berkeley.webp",
+        "alt": "贝克莱的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "John Smibert · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_(cropped).jpg",
+        "sourceFile": "File:John Smibert - Bishop George Berkeley - Google Art Project (cropped).jpg",
+        "license": "Public domain",
+        "creator": "John Smibert",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "gersonides",
+      "slug": "gersonides",
+      "media": {
+        "fullSrc": "/media/thinkers/full/gersonides.webp",
+        "thumbSrc": "/media/thinkers/thumb/gersonides.webp",
+        "alt": "格尔松尼德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Monozigote · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Levi_ben_Gerson.jpg",
+        "sourceFile": "File:Levi ben Gerson.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Monozigote",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "gottlob-frege",
+      "slug": "gottlob-frege",
+      "media": {
+        "fullSrc": "/media/thinkers/full/gottlob-frege.webp",
+        "thumbSrc": "/media/thinkers/thumb/gottlob-frege.webp",
+        "alt": "弗雷格的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Young_frege.jpg",
+        "sourceFile": "File:Young frege.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "guo-xiang",
+      "slug": "guo-xiang",
+      "media": {
+        "fullSrc": "/media/thinkers/full/guo-xiang.webp",
+        "thumbSrc": "/media/thinkers/thumb/guo-xiang.webp",
+        "alt": "郭象的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "emmmmer/livejournal · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guo_Xiang_Mask.jpg",
+        "sourceFile": "File:Guo Xiang Mask.jpg",
+        "license": "CC BY 4.0",
+        "creator": "emmmmer/livejournal",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "guru-nanak",
+      "slug": "guru-nanak",
+      "media": {
+        "fullSrc": "/media/thinkers/full/guru-nanak.webp",
+        "thumbSrc": "/media/thinkers/thumb/guru-nanak.webp",
+        "alt": "古鲁那纳克的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Amritpal Singh Mann . Painted by Jaimal Singh Naqqash (1860–1916), Mehtab Singh Naqqash (1871–1940), and Hukum Singh. · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg",
+        "sourceFile": "File:Mural painting of Guru Nanak from Gurdwara Baba Atal Rai.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Amritpal Singh Mann . Painted by Jaimal Singh Naqqash (1860–1916), Mehtab Singh Naqqash (1871–1940), and Hukum Singh.",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "han-fei",
+      "slug": "han-fei",
+      "media": {
+        "fullSrc": "/media/thinkers/full/han-fei.webp",
+        "thumbSrc": "/media/thinkers/thumb/han-fei.webp",
+        "alt": "韩非的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Sabinowitz · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_Of_Han_Fei.png",
+        "sourceFile": "File:Statue Of Han Fei.png",
+        "license": "CC BY-SA 4.0",
+        "creator": "Sabinowitz",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "han-yu",
+      "slug": "han-yu",
+      "media": {
+        "fullSrc": "/media/thinkers/full/han-yu.webp",
+        "thumbSrc": "/media/thinkers/thumb/han-yu.webp",
+        "alt": "韩愈的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Anonymous Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%87%B3%E8%81%96%E5%85%88%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A-110-%E9%9F%93%E6%84%88.jpg",
+        "sourceFile": "File:至聖先賢半身像 冊-110-韓愈.jpg",
+        "license": "Public domain",
+        "creator": "Anonymous Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "hegel",
+      "slug": "hegel",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hegel.webp",
+        "thumbSrc": "/media/thinkers/thumb/hegel.webp",
+        "alt": "黑格尔的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "heidegger",
+      "slug": "heidegger",
+      "media": {
+        "fullSrc": "/media/thinkers/full/heidegger.webp",
+        "thumbSrc": "/media/thinkers/thumb/heidegger.webp",
+        "alt": "海德格尔的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "henry-david-thoreau",
+      "slug": "henry-david-thoreau",
+      "media": {
+        "fullSrc": "/media/thinkers/full/henry-david-thoreau.webp",
+        "thumbSrc": "/media/thinkers/thumb/henry-david-thoreau.webp",
+        "alt": "梭罗的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Appletons%27_Thoreau_Henry_David.jpg",
+        "sourceFile": "File:Appletons' Thoreau Henry David.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "henry-odera-oruka",
+      "slug": "henry-odera-oruka",
+      "media": {
+        "fullSrc": "/media/thinkers/full/henry-odera-oruka.webp",
+        "thumbSrc": "/media/thinkers/thumb/henry-odera-oruka.webp",
+        "alt": "亨利·奥德拉·奥鲁卡的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "heraclitus",
+      "slug": "heraclitus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/heraclitus.webp",
+        "thumbSrc": "/media/thinkers/thumb/heraclitus.webp",
+        "alt": "赫拉克利特的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "RoyFokker · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heraclitus_b_4_compressed.jpg",
+        "sourceFile": "File:Heraclitus b 4 compressed.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "RoyFokker",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "hildegard-bingen",
+      "slug": "hildegard-bingen",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hildegard-bingen.webp",
+        "thumbSrc": "/media/thinkers/thumb/hildegard-bingen.webp",
+        "alt": "宾根的希尔德加德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hildegard_von_Bingen.jpg",
+        "sourceFile": "File:Hildegard von Bingen.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "hobbes",
+      "slug": "hobbes",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hobbes.webp",
+        "thumbSrc": "/media/thinkers/thumb/hobbes.webp",
+        "alt": "霍布斯的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "hu-shih",
+      "slug": "hu-shih",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hu-shih.webp",
+        "thumbSrc": "/media/thinkers/thumb/hu-shih.webp",
+        "alt": "胡适的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg",
+        "sourceFile": "File:Hu Shih 1960 color Crop.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "huiyuan",
+      "slug": "huiyuan",
+      "media": {
+        "fullSrc": "/media/thinkers/full/huiyuan.webp",
+        "thumbSrc": "/media/thinkers/thumb/huiyuan.webp",
+        "alt": "慧远的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "hume",
+      "slug": "hume",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hume.webp",
+        "thumbSrc": "/media/thinkers/thumb/hume.webp",
+        "alt": "休谟的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "husserl",
+      "slug": "husserl",
+      "media": {
+        "fullSrc": "/media/thinkers/full/husserl.webp",
+        "thumbSrc": "/media/thinkers/thumb/husserl.webp",
+        "alt": "胡塞尔的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "hypatia",
+      "slug": "hypatia",
+      "media": {
+        "fullSrc": "/media/thinkers/full/hypatia.webp",
+        "thumbSrc": "/media/thinkers/thumb/hypatia.webp",
+        "alt": "希帕提娅的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Elbert Hubbard (June 19, 1856 – May 7, 1915) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hipatia67.jpg",
+        "sourceFile": "File:Hipatia67.jpg",
+        "license": "Public domain",
+        "creator": "Elbert Hubbard (June 19, 1856 – May 7, 1915)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ibn-arabi",
+      "slug": "ibn-arabi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ibn-arabi.webp",
+        "thumbSrc": "/media/thinkers/thumb/ibn-arabi.webp",
+        "alt": "伊本·阿拉比的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "ibn-khaldun",
+      "slug": "ibn-khaldun",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ibn-khaldun.webp",
+        "thumbSrc": "/media/thinkers/thumb/ibn-khaldun.webp",
+        "alt": "伊本·赫勒敦的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Reda Kerbush · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Ibn_Khaldun_(Casbah_of_Bejaia,_Algeria).jpg",
+        "sourceFile": "File:Bust of Ibn Khaldun (Casbah of Bejaia, Algeria).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Reda Kerbush",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ibn-rushd",
+      "slug": "ibn-rushd",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ibn-rushd.webp",
+        "thumbSrc": "/media/thinkers/thumb/ibn-rushd.webp",
+        "alt": "伊本·鲁世德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "https://wellcomeimages.org/indexplus/obf_images/f8/12/3fae5a55dccf142dbfbd3b10e9c4.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0010438.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/n2wshbzq · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Averroes._Wellcome_L0010438.jpg",
+        "sourceFile": "File:Portrait of Averroes. Wellcome L0010438.jpg",
+        "license": "CC BY 4.0",
+        "creator": "https://wellcomeimages.org/indexplus/obf_images/f8/12/3fae5a55dccf142dbfbd3b10e9c4.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0010438.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/n2wshbzq",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ifi-amadiume",
+      "slug": "ifi-amadiume",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ifi-amadiume.webp",
+        "thumbSrc": "/media/thinkers/thumb/ifi-amadiume.webp",
+        "alt": "伊菲·阿马迪乌梅的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "ito-jinsai",
+      "slug": "ito-jinsai",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ito-jinsai.webp",
+        "thumbSrc": "/media/thinkers/thumb/ito-jinsai.webp",
+        "alt": "伊藤仁斋的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BC%8A%E8%97%A4%E4%BB%81%E6%96%8E%E5%83%8F.jpg",
+        "sourceFile": "File:伊藤仁斎像.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "jayanta-bhatta",
+      "slug": "jayanta-bhatta",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jayanta-bhatta.webp",
+        "thumbSrc": "/media/thinkers/thumb/jayanta-bhatta.webp",
+        "alt": "阇衍多的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "jeong-yak-yong",
+      "slug": "jeong-yak-yong",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jeong-yak-yong.webp",
+        "thumbSrc": "/media/thinkers/thumb/jeong-yak-yong.webp",
+        "alt": "丁若镛的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeong_Yak-yong.jpg",
+        "sourceFile": "File:Jeong Yak-yong.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "jeremy-bentham",
+      "slug": "jeremy-bentham",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jeremy-bentham.webp",
+        "thumbSrc": "/media/thinkers/thumb/jeremy-bentham.webp",
+        "alt": "边沁的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Henry William Pickersgill · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill.jpg",
+        "sourceFile": "File:Jeremy Bentham by Henry William Pickersgill.jpg",
+        "license": "Public domain",
+        "creator": "Henry William Pickersgill",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "jiddu-krishnamurti",
+      "slug": "jiddu-krishnamurti",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jiddu-krishnamurti.webp",
+        "thumbSrc": "/media/thinkers/thumb/jiddu-krishnamurti.webp",
+        "alt": "克里希那穆提的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jiddu_Krishnamurti_01.jpg",
+        "sourceFile": "File:Jiddu Krishnamurti 01.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "john-dewey",
+      "slug": "john-dewey",
+      "media": {
+        "fullSrc": "/media/thinkers/full/john-dewey.webp",
+        "thumbSrc": "/media/thinkers/thumb/john-dewey.webp",
+        "alt": "杜威的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Underwood & Underwood · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Dewey_cph.3a51565.jpg",
+        "sourceFile": "File:John Dewey cph.3a51565.jpg",
+        "license": "Public domain",
+        "creator": "Underwood & Underwood",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "john-mbiti",
+      "slug": "john-mbiti",
+      "media": {
+        "fullSrc": "/media/thinkers/full/john-mbiti.webp",
+        "thumbSrc": "/media/thinkers/thumb/john-mbiti.webp",
+        "alt": "约翰·姆比蒂的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "john-rawls",
+      "slug": "john-rawls",
+      "media": {
+        "fullSrc": "/media/thinkers/full/john-rawls.webp",
+        "thumbSrc": "/media/thinkers/thumb/john-rawls.webp",
+        "alt": "罗尔斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Rawls_(1971_photo_portrait).jpg",
+        "sourceFile": "File:John Rawls (1971 photo portrait).jpg",
+        "license": "Public domain",
+        "creator": "Published by the Belknap Press of Harvard University Press . Photograph taken by Alec Rawls, John's son. The portrait was uncredited on the original dust jacket, but Alec is identified as its photographer on the copyright page of the 1994 G",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "john-stuart-mill",
+      "slug": "john-stuart-mill",
+      "media": {
+        "fullSrc": "/media/thinkers/full/john-stuart-mill.webp",
+        "thumbSrc": "/media/thinkers/thumb/john-stuart-mill.webp",
+        "alt": "约翰·斯图亚特·密尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "London Stereoscopic Company · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg",
+        "sourceFile": "File:John Stuart Mill by London Stereoscopic Company, c1870.jpg",
+        "license": "Public domain",
+        "creator": "London Stereoscopic Company",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "jose-carlos-mariategui",
+      "slug": "jose-carlos-mariategui",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jose-carlos-mariategui.webp",
+        "thumbSrc": "/media/thinkers/thumb/jose-carlos-mariategui.webp",
+        "alt": "何塞·卡洛斯·马里亚特吉的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "José Malanca · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Carlos_Mari%C3%A1tegui_in_1929.jpg",
+        "sourceFile": "File:José Carlos Mariátegui in 1929.jpg",
+        "license": "Public domain",
+        "creator": "José Malanca",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "jose-rizal",
+      "slug": "jose-rizal",
+      "media": {
+        "fullSrc": "/media/thinkers/full/jose-rizal.webp",
+        "thumbSrc": "/media/thinkers/thumb/jose-rizal.webp",
+        "alt": "黎刹的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jose_Rizal_full.jpg",
+        "sourceFile": "File:Jose Rizal full.jpg",
+        "license": "Public domain",
+        "creator": "unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "judith-butler",
+      "slug": "judith-butler",
+      "media": {
+        "fullSrc": "/media/thinkers/full/judith-butler.webp",
+        "thumbSrc": "/media/thinkers/thumb/judith-butler.webp",
+        "alt": "朱迪斯·巴特勒的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC0",
+        "credit": "University of California, Berkeley · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JudithButler2013.jpg",
+        "sourceFile": "File:JudithButler2013.jpg",
+        "license": "CC0",
+        "creator": "University of California, Berkeley",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "judith-shklar",
+      "slug": "judith-shklar",
+      "media": {
+        "fullSrc": "/media/thinkers/full/judith-shklar.webp",
+        "thumbSrc": "/media/thinkers/thumb/judith-shklar.webp",
+        "alt": "朱迪思·施克拉的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "U.S. District Court for the District of Massachusetts. 1789 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SHKLAR,_Judith_Nisse_-_DPLA_-_b9993e01b706573027b79088904d69c1.jpg",
+        "sourceFile": "File:SHKLAR, Judith Nisse - DPLA - b9993e01b706573027b79088904d69c1.jpg",
+        "license": "Public domain",
+        "creator": "U.S. District Court for the District of Massachusetts. 1789",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kabir",
+      "slug": "kabir",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kabir.webp",
+        "thumbSrc": "/media/thinkers/thumb/kabir.webp",
+        "alt": "迦比尔的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabir004.jpg",
+        "sourceFile": "File:Kabir004.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kanada",
+      "slug": "kanada",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kanada.webp",
+        "thumbSrc": "/media/thinkers/thumb/kanada.webp",
+        "alt": "迦那陀的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "kang-youwei",
+      "slug": "kang-youwei",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kang-youwei.webp",
+        "thumbSrc": "/media/thinkers/thumb/kang-youwei.webp",
+        "alt": "康有为的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Elmer Chickering · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kang_Yu-wei_cph.3a36142.jpg",
+        "sourceFile": "File:Kang Yu-wei cph.3a36142.jpg",
+        "license": "Public domain",
+        "creator": "Elmer Chickering",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kant",
+      "slug": "kant",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kant.webp",
+        "thumbSrc": "/media/thinkers/thumb/kant.webp",
+        "alt": "康德的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "kapila",
+      "slug": "kapila",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kapila.webp",
+        "thumbSrc": "/media/thinkers/thumb/kapila.webp",
+        "alt": "迦毗罗的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Company School · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kapila.jpg",
+        "sourceFile": "File:Kapila.jpg",
+        "license": "Public domain",
+        "creator": "Company School",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ki-hajar-dewantara",
+      "slug": "ki-hajar-dewantara",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ki-hajar-dewantara.webp",
+        "thumbSrc": "/media/thinkers/thumb/ki-hajar-dewantara.webp",
+        "alt": "基·哈查尔·德万托罗的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Djawa Sjinboen Sja · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ki_Hadjar_Dewantara,_Djawa_Baroe_(1943),_p5.jpg",
+        "sourceFile": "File:Ki Hadjar Dewantara, Djawa Baroe (1943), p5.jpg",
+        "license": "Public domain",
+        "creator": "Djawa Sjinboen Sja",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kierkegaard",
+      "slug": "kierkegaard",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kierkegaard.webp",
+        "thumbSrc": "/media/thinkers/thumb/kierkegaard.webp",
+        "alt": "克尔凯郭尔的艺术化人物形象",
+        "objectPosition": "50% 17%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "kukai",
+      "slug": "kukai",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kukai.webp",
+        "thumbSrc": "/media/thinkers/thumb/kukai.webp",
+        "alt": "空海的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eight_Patriarchs_of_the_Shingon_Sect_of_Buddhism_Kukai_Cropped.jpg",
+        "sourceFile": "File:Eight Patriarchs of the Shingon Sect of Buddhism Kukai Cropped.jpg",
+        "license": "CC BY 4.0",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kumarila-bhatta",
+      "slug": "kumarila-bhatta",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kumarila-bhatta.webp",
+        "thumbSrc": "/media/thinkers/thumb/kumarila-bhatta.webp",
+        "alt": "鸠摩梨罗的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "kwame-anthony-appiah",
+      "slug": "kwame-anthony-appiah",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kwame-anthony-appiah.webp",
+        "thumbSrc": "/media/thinkers/thumb/kwame-anthony-appiah.webp",
+        "alt": "夸梅·安东尼·阿皮亚的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "David Shankbone · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kwame_Anthony_Appiah_by_David_Shankbone.jpg",
+        "sourceFile": "File:Kwame Anthony Appiah by David Shankbone.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "David Shankbone",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kwame-nkrumah",
+      "slug": "kwame-nkrumah",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kwame-nkrumah.webp",
+        "thumbSrc": "/media/thinkers/thumb/kwame-nkrumah.webp",
+        "alt": "夸梅·恩克鲁玛的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Kwameghana(Bright Kwame Ayisi) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_photo_of_Dr._Kwame_Nkrumah_(6).jpg",
+        "sourceFile": "File:Portrait photo of Dr. Kwame Nkrumah (6).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Kwameghana(Bright Kwame Ayisi)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "kwasi-wiredu",
+      "slug": "kwasi-wiredu",
+      "media": {
+        "fullSrc": "/media/thinkers/full/kwasi-wiredu.webp",
+        "thumbSrc": "/media/thinkers/thumb/kwasi-wiredu.webp",
+        "alt": "夸西·维雷杜的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "laozi",
+      "slug": "laozi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/laozi.webp",
+        "thumbSrc": "/media/thinkers/thumb/laozi.webp",
+        "alt": "老子的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lao_Tzu_-_Project_Gutenberg_eText_15250.jpg",
+        "sourceFile": "File:Lao Tzu - Project Gutenberg eText 15250.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "leila-ahmed",
+      "slug": "leila-ahmed",
+      "media": {
+        "fullSrc": "/media/thinkers/full/leila-ahmed.webp",
+        "thumbSrc": "/media/thinkers/thumb/leila-ahmed.webp",
+        "alt": "莱拉·艾哈迈德的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "leopold-sedar-senghor",
+      "slug": "leopold-sedar-senghor",
+      "media": {
+        "fullSrc": "/media/thinkers/full/leopold-sedar-senghor.webp",
+        "thumbSrc": "/media/thinkers/thumb/leopold-sedar-senghor.webp",
+        "alt": "利奥波德·桑戈尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Erling Mandelmann · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leopold_Sedar_Senghor_(1987)_by_Erling_Mandelmann.jpg",
+        "sourceFile": "File:Leopold Sedar Senghor (1987) by Erling Mandelmann.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Erling Mandelmann",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "leopoldo-zea",
+      "slug": "leopoldo-zea",
+      "media": {
+        "fullSrc": "/media/thinkers/full/leopoldo-zea.webp",
+        "thumbSrc": "/media/thinkers/thumb/leopoldo-zea.webp",
+        "alt": "莱奥波尔多·塞亚的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "KsenyaSh · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:LZea.jpg",
+        "sourceFile": "File:LZea.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "KsenyaSh",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "li-zhi",
+      "slug": "li-zhi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/li-zhi.webp",
+        "thumbSrc": "/media/thinkers/thumb/li-zhi.webp",
+        "alt": "李贽的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "User:曳杖行歌意欲仙 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Li_Zhi.jpg",
+        "sourceFile": "File:Li Zhi.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "User:曳杖行歌意欲仙",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "liang-qichao",
+      "slug": "liang-qichao",
+      "media": {
+        "fullSrc": "/media/thinkers/full/liang-qichao.webp",
+        "thumbSrc": "/media/thinkers/thumb/liang-qichao.webp",
+        "alt": "梁启超的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liang_Qichao_portrait.jpg",
+        "sourceFile": "File:Liang Qichao portrait.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "liang-shuming",
+      "slug": "liang-shuming",
+      "media": {
+        "fullSrc": "/media/thinkers/full/liang-shuming.webp",
+        "thumbSrc": "/media/thinkers/thumb/liang-shuming.webp",
+        "alt": "梁漱溟的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown; scanned by 天竺鼠 ( talk ) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liang_Shuming.jpg",
+        "sourceFile": "File:Liang Shuming.jpg",
+        "license": "Public domain",
+        "creator": "Unknown; scanned by 天竺鼠 ( talk )",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "locke",
+      "slug": "locke",
+      "media": {
+        "fullSrc": "/media/thinkers/full/locke.webp",
+        "thumbSrc": "/media/thinkers/thumb/locke.webp",
+        "alt": "洛克的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "ludwig-feuerbach",
+      "slug": "ludwig-feuerbach",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ludwig-feuerbach.webp",
+        "thumbSrc": "/media/thinkers/thumb/ludwig-feuerbach.webp",
+        "alt": "费尔巴哈的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg",
+        "sourceFile": "File:Ludwig Feuerbach-1.2 V01-1.1.1 cropped and rotated.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "machiavelli",
+      "slug": "machiavelli",
+      "media": {
+        "fullSrc": "/media/thinkers/full/machiavelli.webp",
+        "thumbSrc": "/media/thinkers/thumb/machiavelli.webp",
+        "alt": "马基雅维利的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "madhva",
+      "slug": "madhva",
+      "media": {
+        "fullSrc": "/media/thinkers/full/madhva.webp",
+        "thumbSrc": "/media/thinkers/thumb/madhva.webp",
+        "alt": "摩陀婆的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC0",
+        "credit": "AR767 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Madhvacharya_Vigraha,_Pajaka,_Udupi.jpg",
+        "sourceFile": "File:Shri Madhvacharya Vigraha, Pajaka, Udupi.jpg",
+        "license": "CC0",
+        "creator": "AR767",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "mahavira",
+      "slug": "mahavira",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mahavira.webp",
+        "thumbSrc": "/media/thinkers/thumb/mahavira.webp",
+        "alt": "筏驮摩那的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Unknown 11th century sculptor · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahavira_sculpture.jpg",
+        "sourceFile": "File:Mahavira sculpture.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Unknown 11th century sculptor",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "maimonides",
+      "slug": "maimonides",
+      "media": {
+        "fullSrc": "/media/thinkers/full/maimonides.webp",
+        "thumbSrc": "/media/thinkers/thumb/maimonides.webp",
+        "alt": "迈蒙尼德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Blaisio Ugolino · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Moses_Maimonides_in_Thesaurus_antiquitatum_sacrarum.tif",
+        "sourceFile": "File:Portrait of Moses Maimonides in Thesaurus antiquitatum sacrarum.tif",
+        "license": "Public domain",
+        "creator": "Blaisio Ugolino",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "maitreyi",
+      "slug": "maitreyi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/maitreyi.webp",
+        "thumbSrc": "/media/thinkers/thumb/maitreyi.webp",
+        "alt": "弥勒依的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "mani",
+      "slug": "mani",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mani.webp",
+        "thumbSrc": "/media/thinkers/thumb/mani.webp",
+        "alt": "摩尼的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "maria-lugones",
+      "slug": "maria-lugones",
+      "media": {
+        "fullSrc": "/media/thinkers/full/maria-lugones.webp",
+        "thumbSrc": "/media/thinkers/thumb/maria-lugones.webp",
+        "alt": "玛丽亚·卢戈内斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Revista Lavaca · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Mar%C3%ADa_Lugones.jpg",
+        "sourceFile": "File:Retrato de María Lugones.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Revista Lavaca",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "martha-nussbaum",
+      "slug": "martha-nussbaum",
+      "media": {
+        "fullSrc": "/media/thinkers/full/martha-nussbaum.webp",
+        "thumbSrc": "/media/thinkers/thumb/martha-nussbaum.webp",
+        "alt": "玛莎·努斯鲍姆的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Sally Ryan, photographer, www.sallyryanphoto.com · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martha_Nussbaum_2010_(cropped).jpg",
+        "sourceFile": "File:Martha Nussbaum 2010 (cropped).jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Sally Ryan, photographer, www.sallyryanphoto.com",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "marx",
+      "slug": "marx",
+      "media": {
+        "fullSrc": "/media/thinkers/full/marx.webp",
+        "thumbSrc": "/media/thinkers/thumb/marx.webp",
+        "alt": "马克思的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片与肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "meister-eckhart",
+      "slug": "meister-eckhart",
+      "media": {
+        "fullSrc": "/media/thinkers/full/meister-eckhart.webp",
+        "thumbSrc": "/media/thinkers/thumb/meister-eckhart.webp",
+        "alt": "艾克哈特的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Andrea di Bonaiuto · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meister_Eckhart_base_copie.jpg",
+        "sourceFile": "File:Meister Eckhart base copie.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Andrea di Bonaiuto",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "mencius",
+      "slug": "mencius",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mencius.webp",
+        "thumbSrc": "/media/thinkers/thumb/mencius.webp",
+        "alt": "孟子的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "anonymous · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_(%E5%AD%9F%E8%BB%BB).jpg",
+        "sourceFile": "File:Half Portraits of the Great Sage and Virtuous Men of Old - Meng Ke (孟軻).jpg",
+        "license": "Public domain",
+        "creator": "anonymous",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "moses-mendelssohn",
+      "slug": "moses-mendelssohn",
+      "media": {
+        "fullSrc": "/media/thinkers/full/moses-mendelssohn.webp",
+        "thumbSrc": "/media/thinkers/thumb/moses-mendelssohn.webp",
+        "alt": "摩西·门德尔松的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "After Anton Graff · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moses_Mendelson_P7160073.JPG",
+        "sourceFile": "File:Moses Mendelson P7160073.JPG",
+        "license": "Public domain",
+        "creator": "After Anton Graff",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "mou-zongsan",
+      "slug": "mou-zongsan",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mou-zongsan.webp",
+        "thumbSrc": "/media/thinkers/thumb/mou-zongsan.webp",
+        "alt": "牟宗三的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mou_Tsung-san_1960s.jpg",
+        "sourceFile": "File:Mou Tsung-san 1960s.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "mozi",
+      "slug": "mozi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mozi.webp",
+        "thumbSrc": "/media/thinkers/thumb/mozi.webp",
+        "alt": "墨子的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "muhammad-iqbal",
+      "slug": "muhammad-iqbal",
+      "media": {
+        "fullSrc": "/media/thinkers/full/muhammad-iqbal.webp",
+        "thumbSrc": "/media/thinkers/thumb/muhammad-iqbal.webp",
+        "alt": "穆罕默德·伊克巴尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Iqbal Academy Pakistan · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allama_Iqbal.jpg",
+        "sourceFile": "File:Allama Iqbal.jpg",
+        "license": "Public domain",
+        "creator": "Iqbal Academy Pakistan",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "mulla-sadra",
+      "slug": "mulla-sadra",
+      "media": {
+        "fullSrc": "/media/thinkers/full/mulla-sadra.webp",
+        "thumbSrc": "/media/thinkers/thumb/mulla-sadra.webp",
+        "alt": "穆拉·萨德拉的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "nagarjuna",
+      "slug": "nagarjuna",
+      "media": {
+        "fullSrc": "/media/thinkers/full/nagarjuna.webp",
+        "thumbSrc": "/media/thinkers/thumb/nagarjuna.webp",
+        "alt": "龙树的艺术化人物形象",
+        "objectPosition": "50% 24%",
+        "depictionNote": "艺术化人物形象，并非可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "nezahualcoyotl",
+      "slug": "nezahualcoyotl",
+      "media": {
+        "fullSrc": "/media/thinkers/full/nezahualcoyotl.webp",
+        "thumbSrc": "/media/thinkers/thumb/nezahualcoyotl.webp",
+        "alt": "内萨瓦尔科约特尔的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "nietzsche",
+      "slug": "nietzsche",
+      "media": {
+        "fullSrc": "/media/thinkers/full/nietzsche.webp",
+        "thumbSrc": "/media/thinkers/thumb/nietzsche.webp",
+        "alt": "尼采的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "nishida-kitaro",
+      "slug": "nishida-kitaro",
+      "media": {
+        "fullSrc": "/media/thinkers/full/nishida-kitaro.webp",
+        "thumbSrc": "/media/thinkers/thumb/nishida-kitaro.webp",
+        "alt": "西田几多郎的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait-of-Kitaro-Nishida.png",
+        "sourceFile": "File:Portrait-of-Kitaro-Nishida.png",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ogyu-sorai",
+      "slug": "ogyu-sorai",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ogyu-sorai.webp",
+        "thumbSrc": "/media/thinkers/thumb/ogyu-sorai.webp",
+        "alt": "荻生徂徕的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "有朋堂書店 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ogyuh_Sorai.jpg",
+        "sourceFile": "File:Ogyuh Sorai.jpg",
+        "license": "Public domain",
+        "creator": "有朋堂書店",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "oyeronke-oyewumi",
+      "slug": "oyeronke-oyewumi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/oyeronke-oyewumi.webp",
+        "thumbSrc": "/media/thinkers/thumb/oyeronke-oyewumi.webp",
+        "alt": "奥耶龙克·奥耶乌米的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Oyeronke Oyewumi · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oy%C3%A8r%C3%B3nk%E1%BA%B9%CC%81_Oy%C4%9Bw%C3%B9m%C3%AD,_2020_(cropped).jpg",
+        "sourceFile": "File:Oyèrónkẹ́ Oyěwùmí, 2020 (cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Oyeronke Oyewumi",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "parmenides",
+      "slug": "parmenides",
+      "media": {
+        "fullSrc": "/media/thinkers/full/parmenides.webp",
+        "thumbSrc": "/media/thinkers/thumb/parmenides.webp",
+        "alt": "巴门尼德的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Sergio Spolti · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Busto_di_Parmenide_(cropped).jpg",
+        "sourceFile": "File:Busto di Parmenide (cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Sergio Spolti",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "patanjali",
+      "slug": "patanjali",
+      "media": {
+        "fullSrc": "/media/thinkers/full/patanjali.webp",
+        "thumbSrc": "/media/thinkers/thumb/patanjali.webp",
+        "alt": "钵颠阇利的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Lleve · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pata%C3%B1jali11.JPG",
+        "sourceFile": "File:Patañjali11.JPG",
+        "license": "CC BY-SA 4.0",
+        "creator": "Lleve",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "peter-abelard",
+      "slug": "peter-abelard",
+      "media": {
+        "fullSrc": "/media/thinkers/full/peter-abelard.webp",
+        "thumbSrc": "/media/thinkers/thumb/peter-abelard.webp",
+        "alt": "阿伯拉尔的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Antoni Oleszczyński · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Piotr_Abelard_(cropped).jpg",
+        "sourceFile": "File:Piotr Abelard (cropped).jpg",
+        "license": "Public domain",
+        "creator": "Antoni Oleszczyński",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "philo-alexandria",
+      "slug": "philo-alexandria",
+      "media": {
+        "fullSrc": "/media/thinkers/full/philo-alexandria.webp",
+        "thumbSrc": "/media/thinkers/thumb/philo-alexandria.webp",
+        "alt": "斐洛的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "André Thévet · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PhiloThevet.jpg",
+        "sourceFile": "File:PhiloThevet.jpg",
+        "license": "Public domain",
+        "creator": "André Thévet",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "plato",
+      "slug": "plato",
+      "media": {
+        "fullSrc": "/media/thinkers/full/plato.webp",
+        "thumbSrc": "/media/thinkers/thumb/plato.webp",
+        "alt": "柏拉图的艺术化人物形象",
+        "objectPosition": "50% 19%",
+        "depictionNote": "艺术化人物形象，参考古代雕像传统而非可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "plotinus",
+      "slug": "plotinus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/plotinus.webp",
+        "thumbSrc": "/media/thinkers/thumb/plotinus.webp",
+        "alt": "普罗提诺的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Anonymous Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plotinos.jpg",
+        "sourceFile": "File:Plotinos.jpg",
+        "license": "Public domain",
+        "creator": "Anonymous Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "pridi-banomyong",
+      "slug": "pridi-banomyong",
+      "media": {
+        "fullSrc": "/media/thinkers/full/pridi-banomyong.webp",
+        "thumbSrc": "/media/thinkers/thumb/pridi-banomyong.webp",
+        "alt": "比里·帕侬荣的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Thai government (รัฐบาลไทย) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pridi_Banomyong_in_Uniform_Photo_1946.png",
+        "sourceFile": "File:Pridi Banomyong in Uniform Photo 1946.png",
+        "license": "Public domain",
+        "creator": "Thai government (รัฐบาลไทย)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "protagoras",
+      "slug": "protagoras",
+      "media": {
+        "fullSrc": "/media/thinkers/full/protagoras.webp",
+        "thumbSrc": "/media/thinkers/thumb/protagoras.webp",
+        "alt": "普罗泰戈拉的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Jusepe de Ribera · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ribera_-_Protagoras,_1637.jpg",
+        "sourceFile": "File:Ribera - Protagoras, 1637.jpg",
+        "license": "Public domain",
+        "creator": "Jusepe de Ribera",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ptahhotep",
+      "slug": "ptahhotep",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ptahhotep.webp",
+        "thumbSrc": "/media/thinkers/thumb/ptahhotep.webp",
+        "alt": "普塔霍特普的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Kurohito · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statuevizir095.jpg",
+        "sourceFile": "File:Statuevizir095.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Kurohito",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "pythagoras",
+      "slug": "pythagoras",
+      "media": {
+        "fullSrc": "/media/thinkers/full/pythagoras.webp",
+        "thumbSrc": "/media/thinkers/thumb/pythagoras.webp",
+        "alt": "毕达哥拉斯的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pythagoras_in_the_Roman_Forum,_Colosseum.jpg",
+        "sourceFile": "File:Pythagoras in the Roman Forum, Colosseum.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "rabia-al-adawiyya",
+      "slug": "rabia-al-adawiyya",
+      "media": {
+        "fullSrc": "/media/thinkers/full/rabia-al-adawiyya.webp",
+        "thumbSrc": "/media/thinkers/thumb/rabia-al-adawiyya.webp",
+        "alt": "拉比娅·阿达维娅的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rabia_al-Adawiyya.jpg",
+        "sourceFile": "File:Rabia al-Adawiyya.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "rabindranath-tagore",
+      "slug": "rabindranath-tagore",
+      "media": {
+        "fullSrc": "/media/thinkers/full/rabindranath-tagore.webp",
+        "thumbSrc": "/media/thinkers/thumb/rabindranath-tagore.webp",
+        "alt": "泰戈尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "Georges Chevalier · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1926_Rabindrath_Tagore.jpg",
+        "sourceFile": "File:1926 Rabindrath Tagore.jpg",
+        "license": "CC BY 4.0",
+        "creator": "Georges Chevalier",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ralph-waldo-emerson",
+      "slug": "ralph-waldo-emerson",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ralph-waldo-emerson.webp",
+        "thumbSrc": "/media/thinkers/thumb/ralph-waldo-emerson.webp",
+        "alt": "爱默生的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Josiah Johnson Hawes · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg",
+        "sourceFile": "File:Ralph Waldo Emerson by Josiah Johnson Hawes 1857.jpg",
+        "license": "Public domain",
+        "creator": "Josiah Johnson Hawes",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "ramanuja",
+      "slug": "ramanuja",
+      "media": {
+        "fullSrc": "/media/thinkers/full/ramanuja.webp",
+        "thumbSrc": "/media/thinkers/thumb/ramanuja.webp",
+        "alt": "罗摩奴阇的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Chitrashala Press · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramanuja1920s.jpg",
+        "sourceFile": "File:Ramanuja1920s.jpg",
+        "license": "Public domain",
+        "creator": "Chitrashala Press",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "rammohan-roy",
+      "slug": "rammohan-roy",
+      "media": {
+        "fullSrc": "/media/thinkers/full/rammohan-roy.webp",
+        "thumbSrc": "/media/thinkers/thumb/rammohan-roy.webp",
+        "alt": "罗姆摩罕·罗伊的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Rembrandt Peale · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Raja_Ram_Mohun_Roy,_1833.jpg",
+        "sourceFile": "File:Portrait of Raja Ram Mohun Roy, 1833.jpg",
+        "license": "Public domain",
+        "creator": "Rembrandt Peale",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "rousseau",
+      "slug": "rousseau",
+      "media": {
+        "fullSrc": "/media/thinkers/full/rousseau.webp",
+        "thumbSrc": "/media/thinkers/thumb/rousseau.webp",
+        "alt": "卢梭的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "rudolf-carnap",
+      "slug": "rudolf-carnap",
+      "media": {
+        "fullSrc": "/media/thinkers/full/rudolf-carnap.webp",
+        "thumbSrc": "/media/thinkers/thumb/rudolf-carnap.webp",
+        "alt": "卡尔纳普的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "saadia-gaon",
+      "slug": "saadia-gaon",
+      "media": {
+        "fullSrc": "/media/thinkers/full/saadia-gaon.webp",
+        "thumbSrc": "/media/thinkers/thumb/saadia-gaon.webp",
+        "alt": "萨阿迪亚·高昂的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "seneca",
+      "slug": "seneca",
+      "media": {
+        "fullSrc": "/media/thinkers/full/seneca.webp",
+        "thumbSrc": "/media/thinkers/thumb/seneca.webp",
+        "alt": "塞涅卡的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "seyyed-hossein-nasr",
+      "slug": "seyyed-hossein-nasr",
+      "media": {
+        "fullSrc": "/media/thinkers/full/seyyed-hossein-nasr.webp",
+        "thumbSrc": "/media/thinkers/thumb/seyyed-hossein-nasr.webp",
+        "alt": "赛义德·侯赛因·纳斯尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 3.0",
+        "credit": "Tariqabjotu at English Wikipedia · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hossein_nasr.jpg",
+        "sourceFile": "File:Hossein nasr.jpg",
+        "license": "CC BY 3.0",
+        "creator": "Tariqabjotu at English Wikipedia",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "socrates",
+      "slug": "socrates",
+      "media": {
+        "fullSrc": "/media/thinkers/full/socrates.webp",
+        "thumbSrc": "/media/thinkers/thumb/socrates.webp",
+        "alt": "苏格拉底的艺术化人物形象",
+        "objectPosition": "50% 20%",
+        "depictionNote": "艺术化人物形象，参考古代雕像传统而非可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "sophie-oluwole",
+      "slug": "sophie-oluwole",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sophie-oluwole.webp",
+        "thumbSrc": "/media/thinkers/thumb/sophie-oluwole.webp",
+        "alt": "索菲·奥卢沃莱的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "sor-juana-ines-de-la-cruz",
+      "slug": "sor-juana-ines-de-la-cruz",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sor-juana-ines-de-la-cruz.webp",
+        "thumbSrc": "/media/thinkers/thumb/sor-juana-ines-de-la-cruz.webp",
+        "alt": "胡安娜修女的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Miguel Cabrera · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sor_Juana_by_Miguel_Cabrera.png",
+        "sourceFile": "File:Sor Juana by Miguel Cabrera.png",
+        "license": "Public domain",
+        "creator": "Miguel Cabrera",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "souleymane-bachir-diagne",
+      "slug": "souleymane-bachir-diagne",
+      "media": {
+        "fullSrc": "/media/thinkers/full/souleymane-bachir-diagne.webp",
+        "thumbSrc": "/media/thinkers/thumb/souleymane-bachir-diagne.webp",
+        "alt": "苏莱曼·巴希尔·迪亚涅的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Ji-Elle · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Souleymane_Bachir_Diagne-Strasbourg-Septembre_2018_(2).jpg",
+        "sourceFile": "File:Souleymane Bachir Diagne-Strasbourg-Septembre 2018 (2).jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Ji-Elle",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "spinoza",
+      "slug": "spinoza",
+      "media": {
+        "fullSrc": "/media/thinkers/full/spinoza.webp",
+        "thumbSrc": "/media/thinkers/thumb/spinoza.webp",
+        "alt": "斯宾诺莎的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "sri-aurobindo",
+      "slug": "sri-aurobindo",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sri-aurobindo.webp",
+        "thumbSrc": "/media/thinkers/thumb/sri-aurobindo.webp",
+        "alt": "奥罗宾多的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Rudolf 1922 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sri_aurobindo.jpg",
+        "sourceFile": "File:Sri aurobindo.jpg",
+        "license": "Public domain",
+        "creator": "Rudolf 1922",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "steve-biko",
+      "slug": "steve-biko",
+      "media": {
+        "fullSrc": "/media/thinkers/full/steve-biko.webp",
+        "thumbSrc": "/media/thinkers/thumb/steve-biko.webp",
+        "alt": "史蒂夫·比科的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "stuart-hall",
+      "slug": "stuart-hall",
+      "media": {
+        "fullSrc": "/media/thinkers/full/stuart-hall.webp",
+        "thumbSrc": "/media/thinkers/thumb/stuart-hall.webp",
+        "alt": "斯图亚特·霍尔的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "Jingzart · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stuart_Hall.jpg",
+        "sourceFile": "File:Stuart Hall.jpg",
+        "license": "CC BY-SA 3.0",
+        "creator": "Jingzart",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "suhrawardi",
+      "slug": "suhrawardi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/suhrawardi.webp",
+        "thumbSrc": "/media/thinkers/thumb/suhrawardi.webp",
+        "alt": "苏哈拉瓦迪的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "swami-vivekananda",
+      "slug": "swami-vivekananda",
+      "media": {
+        "fullSrc": "/media/thinkers/full/swami-vivekananda.webp",
+        "thumbSrc": "/media/thinkers/thumb/swami-vivekananda.webp",
+        "alt": "维韦卡南达的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "The original uploader was Dziewa at English Wikipedia . · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swami_Vivekananda-1893-09-signed.jpg",
+        "sourceFile": "File:Swami Vivekananda-1893-09-signed.jpg",
+        "license": "Public domain",
+        "creator": "The original uploader was Dziewa at English Wikipedia .",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "syed-hussein-alatas",
+      "slug": "syed-hussein-alatas",
+      "media": {
+        "fullSrc": "/media/thinkers/full/syed-hussein-alatas.webp",
+        "thumbSrc": "/media/thinkers/thumb/syed-hussein-alatas.webp",
+        "alt": "赛义德·侯赛因·阿拉塔斯的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "syed-muhammad-naquib-al-attas",
+      "slug": "syed-muhammad-naquib-al-attas",
+      "media": {
+        "fullSrc": "/media/thinkers/full/syed-muhammad-naquib-al-attas.webp",
+        "thumbSrc": "/media/thinkers/thumb/syed-muhammad-naquib-al-attas.webp",
+        "alt": "赛义德·穆罕默德·纳吉布·阿塔斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC0",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Professor_Dr_Syed_Muhammad_Naquib_al-Attas.jpg",
+        "sourceFile": "File:Royal Professor Dr Syed Muhammad Naquib al-Attas.jpg",
+        "license": "CC0",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "sylvia-wynter",
+      "slug": "sylvia-wynter",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sylvia-wynter.webp",
+        "thumbSrc": "/media/thinkers/thumb/sylvia-wynter.webp",
+        "alt": "西尔维娅·温特的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "talal-asad",
+      "slug": "talal-asad",
+      "media": {
+        "fullSrc": "/media/thinkers/full/talal-asad.webp",
+        "thumbSrc": "/media/thinkers/thumb/talal-asad.webp",
+        "alt": "塔拉勒·阿萨德的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 3.0",
+        "credit": "The Graduate Center, CUNY · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Professor_Talal_Asad_01_(cropped).jpg",
+        "sourceFile": "File:Professor Talal Asad 01 (cropped).jpg",
+        "license": "CC BY 3.0",
+        "creator": "The Graduate Center, CUNY",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "te-whiti-o-rongomai",
+      "slug": "te-whiti-o-rongomai",
+      "media": {
+        "fullSrc": "/media/thinkers/full/te-whiti-o-rongomai.webp",
+        "thumbSrc": "/media/thinkers/thumb/te-whiti-o-rongomai.webp",
+        "alt": "蒂·怀蒂·奥·龙戈迈的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "G. Sherriff · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Whiti.jpg",
+        "sourceFile": "File:Whiti.jpg",
+        "license": "Public domain",
+        "creator": "G. Sherriff",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "thales",
+      "slug": "thales",
+      "media": {
+        "fullSrc": "/media/thinkers/full/thales.webp",
+        "thumbSrc": "/media/thinkers/thumb/thales.webp",
+        "alt": "泰勒斯的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Wilhelm Meyer · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Illustrerad_Verldshistoria_band_I_Ill_107.jpg",
+        "sourceFile": "File:Illustrerad Verldshistoria band I Ill 107.jpg",
+        "license": "Public domain",
+        "creator": "Wilhelm Meyer",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "thomas-kuhn",
+      "slug": "thomas-kuhn",
+      "media": {
+        "fullSrc": "/media/thinkers/full/thomas-kuhn.webp",
+        "thumbSrc": "/media/thinkers/thumb/thomas-kuhn.webp",
+        "alt": "库恩的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Bob Bielk · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Kuhn_(1977)_(cropped).jpg",
+        "sourceFile": "File:Thomas Kuhn (1977) (cropped).jpg",
+        "license": "Public domain",
+        "creator": "Bob Bielk",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "vasubandhu",
+      "slug": "vasubandhu",
+      "media": {
+        "fullSrc": "/media/thinkers/full/vasubandhu.webp",
+        "thumbSrc": "/media/thinkers/thumb/vasubandhu.webp",
+        "alt": "世亲的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Shouyi 首一 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vasubandhu.png",
+        "sourceFile": "File:Vasubandhu.png",
+        "license": "Public domain",
+        "creator": "Shouyi 首一",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "vine-deloria-jr",
+      "slug": "vine-deloria-jr",
+      "media": {
+        "fullSrc": "/media/thinkers/full/vine-deloria-jr.webp",
+        "thumbSrc": "/media/thinkers/thumb/vine-deloria-jr.webp",
+        "alt": "瓦因·德洛里亚的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "w-v-o-quine",
+      "slug": "w-v-o-quine",
+      "media": {
+        "fullSrc": "/media/thinkers/full/w-v-o-quine.webp",
+        "thumbSrc": "/media/thinkers/thumb/w-v-o-quine.webp",
+        "alt": "蒯因的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "CC BY 4.0",
+        "credit": "Maryclaire Quine · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Willard_Van_Orman_Quine_on_Bluenose_II_in_Halifax_NS_harbor_1980.jpg",
+        "sourceFile": "File:Willard Van Orman Quine on Bluenose II in Halifax NS harbor 1980.jpg",
+        "license": "CC BY 4.0",
+        "creator": "Maryclaire Quine",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "wang-fuzhi",
+      "slug": "wang-fuzhi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/wang-fuzhi.webp",
+        "thumbSrc": "/media/thinkers/thumb/wang-fuzhi.webp",
+        "alt": "王夫之的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "叶公绰辑，杨鹏秋摹绘。 · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E5%A4%AB%E4%B9%8B.jpg",
+        "sourceFile": "File:王夫之.jpg",
+        "license": "Public domain",
+        "creator": "叶公绰辑，杨鹏秋摹绘。",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "wang-yangming",
+      "slug": "wang-yangming",
+      "media": {
+        "fullSrc": "/media/thinkers/full/wang-yangming.webp",
+        "thumbSrc": "/media/thinkers/thumb/wang-yangming.webp",
+        "alt": "王阳明的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Shen Junhui (沈俊繪) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%8E%8B%E5%AE%88%E4%BB%81.jpg",
+        "sourceFile": "File:王守仁.jpg",
+        "license": "Public domain",
+        "creator": "Shen Junhui (沈俊繪)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "watsuji-tetsuro",
+      "slug": "watsuji-tetsuro",
+      "media": {
+        "fullSrc": "/media/thinkers/full/watsuji-tetsuro.webp",
+        "thumbSrc": "/media/thinkers/thumb/watsuji-tetsuro.webp",
+        "alt": "和辻哲郎的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tetsuro_Watsuji_01.jpg",
+        "sourceFile": "File:Tetsuro Watsuji 01.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "william-james",
+      "slug": "william-james",
+      "media": {
+        "fullSrc": "/media/thinkers/full/william-james.webp",
+        "thumbSrc": "/media/thinkers/thumb/william-james.webp",
+        "alt": "威廉·詹姆斯的历史照片",
+        "objectPosition": "50% 50%",
+        "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+        "presentationType": "photographic",
+        "authenticity": "documented",
+        "rightsStatus": "Public domain",
+        "credit": "Notman Studios (photographer) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:William_James_b1842c.jpg",
+        "sourceFile": "File:William James b1842c.jpg",
+        "license": "Public domain",
+        "creator": "Notman Studios (photographer)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "william-ockham",
+      "slug": "william-ockham",
+      "media": {
+        "fullSrc": "/media/thinkers/full/william-ockham.webp",
+        "thumbSrc": "/media/thinkers/thumb/william-ockham.webp",
+        "alt": "奥卡姆的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 3.0",
+        "credit": "self-created (Moscarlop) · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:William_of_Ockham.png",
+        "sourceFile": "File:William of Ockham.png",
+        "license": "CC BY-SA 3.0",
+        "creator": "self-created (Moscarlop)",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "wittgenstein",
+      "slug": "wittgenstein",
+      "media": {
+        "fullSrc": "/media/thinkers/full/wittgenstein.webp",
+        "thumbSrc": "/media/thinkers/thumb/wittgenstein.webp",
+        "alt": "维特根斯坦的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史照片进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "wollstonecraft",
+      "slug": "wollstonecraft",
+      "media": {
+        "fullSrc": "/media/thinkers/full/wollstonecraft.webp",
+        "thumbSrc": "/media/thinkers/thumb/wollstonecraft.webp",
+        "alt": "沃斯通克拉夫特的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "xunzi",
+      "slug": "xunzi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/xunzi.webp",
+        "thumbSrc": "/media/thinkers/thumb/xunzi.webp",
+        "alt": "荀子的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "yi-hwang",
+      "slug": "yi-hwang",
+      "media": {
+        "fullSrc": "/media/thinkers/full/yi-hwang.webp",
+        "thumbSrc": "/media/thinkers/thumb/yi-hwang.webp",
+        "alt": "李滉的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 2.0 kr",
+        "credit": "Integral · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Yi_Hwang.jpg",
+        "sourceFile": "File:Statue of Yi Hwang.jpg",
+        "license": "CC BY-SA 2.0 kr",
+        "creator": "Integral",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "zeno-citium",
+      "slug": "zeno-citium",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zeno-citium.webp",
+        "thumbSrc": "/media/thinkers/thumb/zeno-citium.webp",
+        "alt": "芝诺的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "CC BY-SA 4.0",
+        "credit": "Paolo Monti · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Napoli,_1969)_-_BEIC_6353768.jpg",
+        "sourceFile": "File:Paolo Monti - Servizio fotografico (Napoli, 1969) - BEIC 6353768.jpg",
+        "license": "CC BY-SA 4.0",
+        "creator": "Paolo Monti",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "zera-yacob",
+      "slug": "zera-yacob",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zera-yacob.webp",
+        "thumbSrc": "/media/thinkers/thumb/zera-yacob.webp",
+        "alt": "扎拉·雅各布的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    },
+    {
+      "personId": "zhiyi",
+      "slug": "zhiyi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zhiyi.webp",
+        "thumbSrc": "/media/thinkers/thumb/zhiyi.webp",
+        "alt": "智顗的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sramana_Zhiyi.jpeg",
+        "sourceFile": "File:Sramana Zhiyi.jpeg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "zhu-xi",
+      "slug": "zhu-xi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zhu-xi.webp",
+        "thumbSrc": "/media/thinkers/thumb/zhu-xi.webp",
+        "alt": "朱熹的后世或传统人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+        "presentationType": "historical",
+        "authenticity": "traditional",
+        "rightsStatus": "Public domain",
+        "credit": "Unknown author Unknown author · Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhu_xi.jpg",
+        "sourceFile": "File:Zhu xi.jpg",
+        "license": "Public domain",
+        "creator": "Unknown author Unknown author",
+        "retrievedAt": "2026-07-19"
+      }
+    },
+    {
+      "personId": "zhuangzi",
+      "slug": "zhuangzi",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zhuangzi.webp",
+        "thumbSrc": "/media/thinkers/thumb/zhuangzi.webp",
+        "alt": "庄子的艺术化人物形象",
+        "objectPosition": "50% 22%",
+        "depictionNote": "艺术化人物形象，并非可考的历史肖像。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "zoroaster",
+      "slug": "zoroaster",
+      "media": {
+        "fullSrc": "/media/thinkers/full/zoroaster.webp",
+        "thumbSrc": "/media/thinkers/thumb/zoroaster.webp",
+        "alt": "琐罗亚斯德的艺术化人物形象",
+        "objectPosition": "50% 50%",
+        "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI 辅助艺术化人物形象"
+      }
+    }
+  ]
+}

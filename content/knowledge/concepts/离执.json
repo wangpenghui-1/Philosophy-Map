@@ -1,0 +1,48 @@
+{
+  "id": "concept-离执",
+  "slug": "离执",
+  "entityType": "concept",
+  "name": "离执",
+  "originalTerms": [],
+  "summary": "“离执”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-中世纪神秘哲学",
+      "label": "离执",
+      "explanation": "在艾克哈特及中世纪神秘哲学语境中，“离执”用于说明：离执不是消极空无，而是放下自我意志，使灵魂深处与神性根基的生成相遇。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Meister Eckhart / 艾克哈特”",
+          "claim": "支持艾克哈特语境中的“离执”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "meister-eckhart"
+  ],
+  "workIds": [
+    "german-sermons-eckhart"
+  ],
+  "traditionIds": [
+    "tradition-中世纪神秘哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Meister Eckhart / 艾克哈特”",
+      "claim": "支持“离执”作为艾克哈特思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

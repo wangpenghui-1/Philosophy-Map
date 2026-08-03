@@ -1,0 +1,109 @@
+{
+  "id": "bhartrhari",
+  "slug": "bhartrhari",
+  "entityType": "person",
+  "names": {
+    "display": "伐致呵利",
+    "english": "Bhartrhari",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约450–510",
+    "startYear": 450,
+    "endYear": 510,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-语言哲学"
+  ],
+  "conceptIds": [
+    "concept-语句整体"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "语言意义来自孤立词项还是不可分割的整体理解？",
+  "thesis": "言语活动以整体闪现的方式呈现意义，语言与意识及世界秩序紧密关联。",
+  "summary": "伐致呵利是南亚语言哲学的重要思想人物，主要追问“语言意义来自孤立词项还是不可分割的整体理解？”。其思想以“语句整体”为入口，主张言语活动以整体闪现的方式呈现意义，语言与意识及世界秩序紧密关联。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "vakyapadiya"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "ujjain",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Bhartrhari / 伐致呵利”",
+      "claim": "支持伐致呵利的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "伐致呵利是南亚语言哲学的重要思想人物，主要追问“语言意义来自孤立词项还是不可分割的整体理解？”。其思想以“语句整体”为入口，主张言语活动以整体闪现的方式呈现意义，语言与意识及世界秩序紧密关联。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Bhartrhari / 伐致呵利”",
+              "claim": "支持伐致呵利的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：语言意义来自孤立词项还是不可分割的整体理解？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Bhartrhari / 伐致呵利”",
+              "claim": "支持对伐致呵利核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：言语活动以整体闪现的方式呈现意义，语言与意识及世界秩序紧密关联。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Bhartrhari / 伐致呵利”",
+              "claim": "支持对伐致呵利核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/bhartrhari.webp",
+    "thumbSrc": "/media/thinkers/thumb/bhartrhari.webp",
+    "alt": "伐致呵利的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "src-plato-apology-primary",
+  "entityType": "source",
+  "title": "Apology",
+  "authors": [
+    "Plato"
+  ],
+  "sourceType": "archival-source",
+  "publication": "The Internet Classics Archive, MIT",
+  "url": "https://classics.mit.edu/Plato/apology.html",
+  "defaultLocator": "38a; translated by Benjamin Jowett",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

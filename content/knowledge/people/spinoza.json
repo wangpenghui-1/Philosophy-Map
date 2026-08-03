@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-spinoza"
+    "src-spinoza",
+    "src-spinoza-ethics-elwes"
   ],
   "citations": [
     {
@@ -109,5 +110,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "Men think themselves free inasmuch as they are conscious of their volitions and desires, and never even dream, in their ignorance, of the causes which have disposed them so to wish and desire.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "la",
+    "chineseTranslation": "人们自以为自由，因为他们意识到自己的意愿和欲望，却由于无知从未想到那些使他们如此意愿和欲求的原因。",
+    "annotation": "这句话揭示自由意志感背后的因果无知；对斯宾诺莎而言，更真实的自由来自理解必然性。",
+    "workId": "ethics-spinoza",
+    "sourceTitle": "The Ethics",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-spinoza-ethics-elwes",
+    "locator": "Part I, Appendix",
+    "translator": "R. H. M. Elwes",
+    "translationNote": "原作以拉丁文写成；此处展示 R. H. M. Elwes 的英文译文。"
+  }
 }

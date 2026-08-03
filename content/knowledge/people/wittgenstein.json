@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-wittgenstein"
+    "src-wittgenstein",
+    "src-wittgenstein-investigations-anscombe"
   ],
   "citations": [
     {
@@ -109,5 +110,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "For a large class of cases—though not for all—in which we employ the word ‘meaning’ it can be defined thus: the meaning of a word is its use in the language.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "在我们使用“意义”一词的一大类情形中——虽非全部——可以这样界定：一个词的意义就是它在语言中的使用。",
+    "annotation": "这句话把意义从隐藏对象转向实际语言活动，为维特根斯坦以语言游戏化解哲学困惑提供核心线索。",
+    "workId": "philosophical-investigations",
+    "sourceTitle": "Philosophical Investigations",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-wittgenstein-investigations-anscombe",
+    "locator": "§43",
+    "translator": "G. E. M. Anscombe",
+    "translationNote": "原作以德文写成；此处展示 G. E. M. Anscombe 的英文译文。"
+  }
 }

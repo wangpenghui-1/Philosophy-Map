@@ -1,0 +1,48 @@
+{
+  "id": "concept-吠陀自证",
+  "slug": "吠陀自证",
+  "entityType": "concept",
+  "name": "吠陀自证",
+  "originalTerms": [],
+  "summary": "“吠陀自证”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-弥曼差",
+      "label": "吠陀自证",
+      "explanation": "在鸠摩梨罗及弥曼差语境中，“吠陀自证”用于说明：吠陀不依赖个人作者而具有权威，认知在无反证时具有初始可信性。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Kumarila Bhatta / 鸠摩梨罗”",
+          "claim": "支持鸠摩梨罗语境中的“吠陀自证”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "kumarila-bhatta"
+  ],
+  "workIds": [
+    "sloka-varttika"
+  ],
+  "traditionIds": [
+    "tradition-弥曼差"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Kumarila Bhatta / 鸠摩梨罗”",
+      "claim": "支持“吠陀自证”作为鸠摩梨罗思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

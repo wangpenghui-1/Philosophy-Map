@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-rousseau"
+    "src-rousseau",
+    "src-rousseau-social-contract-cole"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "The general will alone can direct the forces of the State according to the object of those forces, which is the common good.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "fr",
+    "chineseTranslation": "只有普遍意志才能依照国家力量的目标，也就是共同善，来引导这些力量。",
+    "annotation": "卢梭在这里把政治正当性归于公民共同形成的普遍意志，而不是统治者的私人意志。",
+    "workId": "social-contract",
+    "sourceTitle": "The Social Contract",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-rousseau-social-contract-cole",
+    "locator": "Book II, chapter I",
+    "translator": "G. D. H. Cole",
+    "translationNote": "原作以法文写成；此处展示 G. D. H. Cole 的英文译文。"
+  }
 }

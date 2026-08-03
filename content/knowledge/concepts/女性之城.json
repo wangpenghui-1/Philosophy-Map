@@ -1,0 +1,48 @@
+{
+  "id": "concept-女性之城",
+  "slug": "女性之城",
+  "entityType": "concept",
+  "name": "女性之城",
+  "originalTerms": [],
+  "summary": "“女性之城”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-中世纪政治思想",
+      "label": "女性之城",
+      "explanation": "在克里斯蒂娜·德·皮桑及中世纪政治思想语境中，“女性之城”用于说明：以寓言之城汇聚女性的德性、能力和贡献，揭示厌女论述的偏见与教育成因。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+          "claim": "支持克里斯蒂娜·德·皮桑语境中的“女性之城”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "christine-de-pizan"
+  ],
+  "workIds": [
+    "book-city-ladies"
+  ],
+  "traditionIds": [
+    "tradition-中世纪政治思想"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Christine de Pizan / 克里斯蒂娜·德·皮桑”",
+      "claim": "支持“女性之城”作为克里斯蒂娜·德·皮桑思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

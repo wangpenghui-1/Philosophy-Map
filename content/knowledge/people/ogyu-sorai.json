@@ -1,0 +1,113 @@
+{
+  "id": "ogyu-sorai",
+  "slug": "ogyu-sorai",
+  "entityType": "person",
+  "names": {
+    "display": "荻生徂徕",
+    "english": "Ogyu Sorai",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1666–1728",
+    "startYear": 1666,
+    "endYear": 1728,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-日本古学"
+  ],
+  "conceptIds": [
+    "concept-古文辞"
+  ],
+  "questionIds": [
+    "society",
+    "good-life"
+  ],
+  "guidingQuestion": "政治秩序应依据内在道德直觉还是历史制度？",
+  "thesis": "回到古代语言和礼乐制度理解先王之道，反对把政治简化为内在心性修养。",
+  "summary": "荻生徂徕是东亚日本古学的重要思想人物，主要追问“政治秩序应依据内在道德直觉还是历史制度？”。其思想以“古文辞”为入口，主张回到古代语言和礼乐制度理解先王之道，反对把政治简化为内在心性修养。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "bendo"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "edo",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-japanese-philosophy-sourcebook"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+      "claim": "支持荻生徂徕的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "荻生徂徕是东亚日本古学的重要思想人物，主要追问“政治秩序应依据内在道德直觉还是历史制度？”。其思想以“古文辞”为入口，主张回到古代语言和礼乐制度理解先王之道，反对把政治简化为内在心性修养。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+              "claim": "支持荻生徂徕的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：政治秩序应依据内在道德直觉还是历史制度？",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+              "claim": "支持对荻生徂徕核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：回到古代语言和礼乐制度理解先王之道，反对把政治简化为内在心性修养。",
+          "citations": [
+            {
+              "sourceId": "src-japanese-philosophy-sourcebook",
+              "locator": "对应人物、学派与选文导言：“Ogyu Sorai / 荻生徂徕”",
+              "claim": "支持对荻生徂徕核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ogyu-sorai.webp",
+    "thumbSrc": "/media/thinkers/thumb/ogyu-sorai.webp",
+    "alt": "荻生徂徕的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "有朋堂書店 · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ogyuh_Sorai.jpg",
+    "sourceFile": "File:Ogyuh Sorai.jpg",
+    "license": "Public domain",
+    "creator": "有朋堂書店",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

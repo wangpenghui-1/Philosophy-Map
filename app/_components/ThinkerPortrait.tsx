@@ -13,7 +13,7 @@ interface ThinkerPortraitProps {
 export default function ThinkerPortrait({ thinker, variant, showNote = false, className = "" }: ThinkerPortraitProps) {
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const source = variant === "full" ? thinker.media.fullSrc : thinker.media.thumbSrc;
-  const failed = failedSource === source;
+  const failed = !source || source === "/globe.svg" || failedSource === source;
 
   return (
     <figure
@@ -26,17 +26,31 @@ export default function ThinkerPortrait({ thinker, variant, showNote = false, cl
           <span>{thinker.englishName}</span>
         </div>
       ) : (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={source}
-          alt={thinker.media.alt}
-          width={variant === "full" ? 900 : 320}
-          height={variant === "full" ? 1200 : 420}
-          loading="lazy"
-          decoding="async"
-          style={{ objectPosition: thinker.media.objectPosition }}
-          onError={() => setFailedSource(source)}
-        />
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="thinker-portrait__backdrop"
+            src={source}
+            alt=""
+            aria-hidden="true"
+            width={variant === "full" ? 900 : 320}
+            height={variant === "full" ? 1200 : 420}
+            loading="lazy"
+            decoding="async"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="thinker-portrait__image"
+            src={source}
+            alt={thinker.media.alt}
+            width={variant === "full" ? 900 : 320}
+            height={variant === "full" ? 1200 : 420}
+            loading="lazy"
+            decoding="async"
+            style={{ objectPosition: thinker.media.objectPosition }}
+            onError={() => setFailedSource(source)}
+          />
+        </>
       )}
       {showNote ? <figcaption>{thinker.media.depictionNote}</figcaption> : null}
     </figure>

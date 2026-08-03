@@ -27,6 +27,29 @@ const sectionSchema = z.object({
   paragraphs: z.array(paragraphSchema).min(1),
 });
 
+const representativeQuoteSchema = z.object({
+  text: z.string().min(5),
+  displayLanguage: z.enum(["zh-classical", "zh-modern", "en"]),
+  textStatus: z.enum(["original", "translation"]),
+  originalLanguage: z.string().min(2),
+  chineseTranslation: z.string().min(1).optional(),
+  annotation: z.string().min(20).max(180),
+  workId: z.string().min(1).optional(),
+  sourceTitle: z.string().min(1),
+  sourceType: z.enum(["primary-text", "archival-source"]),
+  verificationStatus: z.enum([
+    "primary-verified",
+    "source-attributed",
+    "traditional-attribution",
+    "disputed",
+  ]),
+  attributionNote: z.string().min(1).optional(),
+  sourceId: z.string().min(1),
+  locator: z.string().min(1),
+  translator: z.string().min(1).optional(),
+  translationNote: z.string().min(1).optional(),
+});
+
 export const personSchema = z.object({
   id: z.string().min(1),
   slug: z.string().min(1),
@@ -51,6 +74,7 @@ export const personSchema = z.object({
   questionIds: z.array(z.enum(["good-life", "knowledge", "self", "reality", "society", "freedom"])).min(1),
   guidingQuestion: z.string().min(1),
   thesis: z.string().min(1),
+  representativeQuote: representativeQuoteSchema.optional(),
   summary: z.string().min(80).max(180),
   workIds: z.array(z.string()),
   placeLinks: z.array(z.object({ placeId: z.string(), role: z.string() })).min(1),
@@ -67,6 +91,11 @@ export const personSchema = z.object({
     authenticity: z.enum(["documented", "traditional", "interpretive", "unavailable"]),
     rightsStatus: z.string().min(1),
     credit: z.string().min(1),
+    sourceUrl: z.string().url().optional(),
+    sourceFile: z.string().min(1).optional(),
+    license: z.string().min(1).optional(),
+    creator: z.string().min(1).optional(),
+    retrievedAt: z.string().date().optional(),
   }),
   uncertainty: z.string().optional(),
   color: z.string().regex(/^#[0-9a-f]{6}$/i),

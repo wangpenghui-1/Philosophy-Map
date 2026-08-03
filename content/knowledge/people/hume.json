@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-hume"
+    "src-hume",
+    "src-hume-enquiry-1748"
   ],
   "citations": [
     {
@@ -109,5 +110,20 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "All inferences from experience, therefore, are effects of custom, not of reasoning.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "因此，一切从经验作出的推论都是习惯的结果，而不是推理的结果。",
+    "annotation": "休谟把因果预期追溯到反复经验形成的习惯，否认理性能独立证明未来必然重复过去。",
+    "workId": "enquiry-understanding",
+    "sourceTitle": "An Enquiry Concerning Human Understanding",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-hume-enquiry-1748",
+    "locator": "Section V, Part I"
+  }
 }

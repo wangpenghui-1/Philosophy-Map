@@ -1,0 +1,20 @@
+{
+  "id": "src-rousseau-social-contract-cole",
+  "entityType": "source",
+  "title": "The Social Contract",
+  "authors": [
+    "Jean-Jacques Rousseau",
+    "G. D. H. Cole (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "J. M. Dent and Sons",
+  "year": 1913,
+  "defaultLocator": "Book II, chapter I",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

@@ -1,0 +1,114 @@
+{
+  "id": "han-fei",
+  "slug": "han-fei",
+  "entityType": "person",
+  "names": {
+    "display": "韩非",
+    "english": "Han Fei",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前280–233",
+    "startYear": -280,
+    "endYear": -233,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-法家"
+  ],
+  "conceptIds": [
+    "concept-法术势"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "政治秩序如何在不依赖统治者德性的条件下维持？",
+  "thesis": "公开的法、行政之术与职位之势共同约束官僚和政治行为。",
+  "summary": "韩非是东亚法家的重要思想人物，主要追问“政治秩序如何在不依赖统治者德性的条件下维持？”。其思想以“法术势”为入口，主张公开的法、行政之术与职位之势共同约束官僚和政治行为。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "han-feizi"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "handan",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+      "claim": "支持韩非的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "韩非是东亚法家的重要思想人物，主要追问“政治秩序如何在不依赖统治者德性的条件下维持？”。其思想以“法术势”为入口，主张公开的法、行政之术与职位之势共同约束官僚和政治行为。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+              "claim": "支持韩非的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：政治秩序如何在不依赖统治者德性的条件下维持？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+              "claim": "支持对韩非核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：公开的法、行政之术与职位之势共同约束官僚和政治行为。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Han Fei / 韩非”",
+              "claim": "支持对韩非核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/han-fei.webp",
+    "thumbSrc": "/media/thinkers/thumb/han-fei.webp",
+    "alt": "韩非的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Sabinowitz · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_Of_Han_Fei.png",
+    "sourceFile": "File:Statue Of Han Fei.png",
+    "license": "CC BY-SA 4.0",
+    "creator": "Sabinowitz",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

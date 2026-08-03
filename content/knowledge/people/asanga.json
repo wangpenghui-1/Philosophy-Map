@@ -1,0 +1,114 @@
+{
+  "id": "asanga",
+  "slug": "asanga",
+  "entityType": "person",
+  "names": {
+    "display": "无著",
+    "english": "Asanga",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约310–390",
+    "startYear": 310,
+    "endYear": 390,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-瑜伽行派"
+  ],
+  "conceptIds": [
+    "concept-阿赖耶识"
+  ],
+  "questionIds": [
+    "self"
+  ],
+  "guidingQuestion": "经验连续性与业力如何在无常心识中得到说明？",
+  "thesis": "阿赖耶识保存潜能并支持经验相续，修行通过转依改变认识结构。",
+  "summary": "无著是南亚瑜伽行派的重要思想人物，主要追问“经验连续性与业力如何在无常心识中得到说明？”。其思想以“阿赖耶识”为入口，主张阿赖耶识保存潜能并支持经验相续，修行通过转依改变认识结构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "mahayana-samgraha"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "gandhara",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Asanga / 无著”",
+      "claim": "支持无著的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "无著是南亚瑜伽行派的重要思想人物，主要追问“经验连续性与业力如何在无常心识中得到说明？”。其思想以“阿赖耶识”为入口，主张阿赖耶识保存潜能并支持经验相续，修行通过转依改变认识结构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Asanga / 无著”",
+              "claim": "支持无著的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：经验连续性与业力如何在无常心识中得到说明？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Asanga / 无著”",
+              "claim": "支持对无著核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：阿赖耶识保存潜能并支持经验相续，修行通过转依改变认识结构。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Asanga / 无著”",
+              "claim": "支持对无著核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/asanga.webp",
+    "thumbSrc": "/media/thinkers/thumb/asanga.webp",
+    "alt": "无著的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Wikimedia Commons contributors · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asanga.JPG",
+    "sourceFile": "File:Asanga.JPG",
+    "license": "Public domain",
+    "creator": "Wikimedia Commons contributors",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "african-origin-civilization",
+  "slug": "african-origin-civilization",
+  "entityType": "work",
+  "title": "《文明的非洲起源》",
+  "originalTitle": "The African Origin of Civilization",
+  "authorRefs": [
+    {
+      "personId": "cheikh-anta-diop",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1974年英译本",
+  "languages": [
+    "fr"
+  ],
+  "summary": "《文明的非洲起源》是进入谢赫·安塔·迪奥普思想语境的代表文本入口。条目以“历史连续性”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-历史连续性"
+  ],
+  "traditionIds": [
+    "tradition-非洲历史思想"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Cheikh Anta Diop / 谢赫·安塔·迪奥普”",
+      "claim": "支持《文明的非洲起源》与谢赫·安塔·迪奥普的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

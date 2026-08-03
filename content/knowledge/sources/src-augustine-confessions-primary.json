@@ -1,0 +1,19 @@
+{
+  "id": "src-augustine-confessions-primary",
+  "entityType": "source",
+  "title": "The Confessions of Saint Augustine",
+  "authors": [
+    "Augustine of Hippo"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Project Gutenberg, eBook 3296",
+  "url": "https://www.gutenberg.org/files/3296/3296-h/3296-h.htm",
+  "defaultLocator": "Book I, Chapter I; translated by E. B. Pusey",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

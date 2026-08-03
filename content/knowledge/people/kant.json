@@ -31,6 +31,22 @@
   ],
   "guidingQuestion": "人的认识能够达到哪里，自由又如何可能？",
   "thesis": "经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。",
+  "representativeQuote": {
+    "text": "Act only on that maxim whereby thou canst at the same time will that it should become a universal law.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "只按照这样一条准则行动：你同时能够意愿它成为一条普遍法则。",
+    "annotation": "这句话要求人在行动前追问：自己的准则能否对所有理性主体都成立，而不是只为自己破例。",
+    "workId": "groundwork",
+    "sourceTitle": "《道德形而上学奠基》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-kant-groundwork-primary",
+    "locator": "第二节·定言命令的普遍法则公式",
+    "translator": "Thomas Kingsmill Abbott",
+    "translationNote": "康德以德文写作；此处展示经核对的英文译文。"
+  },
   "summary": "康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。 本站以批判、先验、自主为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "pure-reason",
@@ -43,7 +59,8 @@
     }
   ],
   "sourceIds": [
-    "src-kant"
+    "src-kant",
+    "src-kant-groundwork-primary"
   ],
   "citations": [
     {

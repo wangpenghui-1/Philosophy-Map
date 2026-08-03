@@ -1,0 +1,37 @@
+{
+  "id": "tradition-瑜伽哲学",
+  "slug": "瑜伽哲学",
+  "entityType": "tradition",
+  "name": "瑜伽哲学",
+  "originalNames": [],
+  "summary": "瑜伽哲学是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "公元前500年至公元500年",
+  "regionLabels": [
+    "南亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "patanjali"
+  ],
+  "conceptIds": [
+    "concept-心识止息"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Patanjali / 钵颠阇利”",
+      "claim": "支持瑜伽哲学与钵颠阇利的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

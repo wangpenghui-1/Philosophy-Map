@@ -1,0 +1,42 @@
+{
+  "id": "formations-secular",
+  "slug": "formations-secular",
+  "entityType": "work",
+  "title": "《世俗的形成》",
+  "originalTitle": "Formations of the Secular",
+  "authorRefs": [
+    {
+      "personId": "talal-asad",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "2003年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《世俗的形成》是进入塔拉勒·阿萨德思想语境的代表文本入口。条目以“世俗的谱系”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-世俗的谱系"
+  ],
+  "traditionIds": [
+    "tradition-宗教与世俗批判"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Talal Asad / 塔拉勒·阿萨德”",
+      "claim": "支持《世俗的形成》与塔拉勒·阿萨德的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "liang-qichao",
+  "slug": "liang-qichao",
+  "entityType": "person",
+  "names": {
+    "display": "梁启超",
+    "english": "Liang Qichao",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1873–1929",
+    "startYear": 1873,
+    "endYear": 1929,
+    "certainty": "established"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-近代政治思想"
+  ],
+  "conceptIds": [
+    "concept-新民"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "现代国家的公民主体如何由教育和公共讨论塑造？",
+  "thesis": "政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。",
+  "summary": "梁启超是东亚近代政治思想的重要思想人物，主要追问“现代国家的公民主体如何由教育和公共讨论塑造？”。其思想以“新民”为入口，主张政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "xinmin-shuo"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "shanghai",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Liang Qichao / 梁启超”",
+      "claim": "支持梁启超的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "梁启超是东亚近代政治思想的重要思想人物，主要追问“现代国家的公民主体如何由教育和公共讨论塑造？”。其思想以“新民”为入口，主张政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Qichao / 梁启超”",
+              "claim": "支持梁启超的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：现代国家的公民主体如何由教育和公共讨论塑造？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Qichao / 梁启超”",
+              "claim": "支持对梁启超核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Liang Qichao / 梁启超”",
+              "claim": "支持对梁启超核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/liang-qichao.webp",
+    "thumbSrc": "/media/thinkers/thumb/liang-qichao.webp",
+    "alt": "梁启超的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liang_Qichao_portrait.jpg",
+    "sourceFile": "File:Liang Qichao portrait.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

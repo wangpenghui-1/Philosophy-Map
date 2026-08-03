@@ -1,0 +1,42 @@
+{
+  "id": "hatata-zera-yacob",
+  "slug": "hatata-zera-yacob",
+  "entityType": "work",
+  "title": "《探究》",
+  "originalTitle": "Hatäta",
+  "authorRefs": [
+    {
+      "personId": "zera-yacob",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1667年",
+  "languages": [
+    "gez"
+  ],
+  "summary": "《探究》是进入扎拉·雅各布思想语境的代表文本入口。条目以“理性审查”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-理性审查"
+  ],
+  "traditionIds": [
+    "tradition-埃塞俄比亚哲学"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Zera Yacob / 扎拉·雅各布”",
+      "claim": "支持《探究》与扎拉·雅各布的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

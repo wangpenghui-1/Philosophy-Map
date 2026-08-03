@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-foucault"
+    "src-foucault",
+    "src-foucault-discipline-sheridan"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "Discipline ‘makes’ individuals; it is the specific technique of a power that regards individuals both as objects and as instruments of its exercise.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "fr",
+    "chineseTranslation": "规训“制造”个人；它是一种特殊的权力技术，既把个人看作对象，也把个人当作权力运作的工具。",
+    "annotation": "这句话说明权力不只从中心压下，还通过训练、观察和分类在日常层面生产特定主体。",
+    "workId": "discipline-punish",
+    "sourceTitle": "Discipline and Punish: The Birth of the Prison",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-foucault-discipline-sheridan",
+    "locator": "Part Three, chapter 3, “Panopticism”, p. 170",
+    "translator": "Alan Sheridan",
+    "translationNote": "原作以法文写成；此处展示 Alan Sheridan 的英文译文。"
+  }
 }

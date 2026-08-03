@@ -1,0 +1,48 @@
+{
+  "id": "concept-语言框架",
+  "slug": "语言框架",
+  "entityType": "concept",
+  "name": "语言框架",
+  "originalTerms": [],
+  "summary": "“语言框架”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-逻辑经验主义",
+      "label": "语言框架",
+      "explanation": "在卡尔纳普及逻辑经验主义语境中，“语言框架”用于说明：许多形上争论源于语言混乱，选择框架应依据清晰性和实践效用。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+          "claim": "支持卡尔纳普语境中的“语言框架”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "rudolf-carnap"
+  ],
+  "workIds": [
+    "empiricism-semantics-ontology"
+  ],
+  "traditionIds": [
+    "tradition-逻辑经验主义"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+      "claim": "支持“语言框架”作为卡尔纳普思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

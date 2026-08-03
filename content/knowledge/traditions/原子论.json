@@ -1,0 +1,37 @@
+{
+  "id": "tradition-原子论",
+  "slug": "原子论",
+  "entityType": "tradition",
+  "name": "原子论",
+  "originalNames": [],
+  "summary": "原子论是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "公元前500年以前",
+  "regionLabels": [
+    "欧洲与地中海"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "democritus"
+  ],
+  "conceptIds": [
+    "concept-原子与虚空"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Democritus / 德谟克利特”",
+      "claim": "支持原子论与德谟克利特的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

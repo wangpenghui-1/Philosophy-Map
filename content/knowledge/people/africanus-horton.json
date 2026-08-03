@@ -1,0 +1,113 @@
+{
+  "id": "africanus-horton",
+  "slug": "africanus-horton",
+  "entityType": "person",
+  "names": {
+    "display": "詹姆斯·霍顿",
+    "english": "Africanus Horton",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1835–1883",
+    "startYear": 1835,
+    "endYear": 1883,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-西非政治思想"
+  ],
+  "conceptIds": [
+    "concept-西非自治"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "种族主义伪科学如何由经验和政治论证反驳？",
+  "thesis": "非洲人的能力不由种族决定，教育、自治与现代制度可支撑西非国家发展。",
+  "summary": "詹姆斯·霍顿是非洲西非政治思想的重要思想人物，主要追问“种族主义伪科学如何由经验和政治论证反驳？”。其思想以“西非自治”为入口，主张非洲人的能力不由种族决定，教育、自治与现代制度可支撑西非国家发展。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "west-african-countries-peoples"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "freetown",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Africanus Horton / 詹姆斯·霍顿”",
+      "claim": "支持詹姆斯·霍顿的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "詹姆斯·霍顿是非洲西非政治思想的重要思想人物，主要追问“种族主义伪科学如何由经验和政治论证反驳？”。其思想以“西非自治”为入口，主张非洲人的能力不由种族决定，教育、自治与现代制度可支撑西非国家发展。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Africanus Horton / 詹姆斯·霍顿”",
+              "claim": "支持詹姆斯·霍顿的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：种族主义伪科学如何由经验和政治论证反驳？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Africanus Horton / 詹姆斯·霍顿”",
+              "claim": "支持对詹姆斯·霍顿核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：非洲人的能力不由种族决定，教育、自治与现代制度可支撑西非国家发展。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Africanus Horton / 詹姆斯·霍顿”",
+              "claim": "支持对詹姆斯·霍顿核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/africanus-horton.webp",
+    "thumbSrc": "/media/thinkers/thumb/africanus-horton.webp",
+    "alt": "詹姆斯·霍顿的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Army Medical Department, England · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Africanus_Horton.jpg",
+    "sourceFile": "File:Africanus Horton.jpg",
+    "license": "Public domain",
+    "creator": "Army Medical Department, England",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

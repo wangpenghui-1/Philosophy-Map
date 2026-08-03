@@ -1,0 +1,112 @@
+{
+  "id": "aime-cesaire",
+  "slug": "aime-cesaire",
+  "entityType": "person",
+  "names": {
+    "display": "艾梅·塞泽尔",
+    "english": "Aime Cesaire",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1913–2008",
+    "startYear": 1913,
+    "endYear": 2008,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-反殖民思想"
+  ],
+  "conceptIds": [
+    "concept-殖民物化"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "殖民主义如何同时损害被殖民者和殖民社会？",
+  "thesis": "殖民统治把人化约为物并使欧洲文明野蛮化，去殖民必须恢复主体与历史。",
+  "summary": "艾梅·塞泽尔是美洲与加勒比反殖民思想的重要思想人物，主要追问“殖民主义如何同时损害被殖民者和殖民社会？”。其思想以“殖民物化”为入口，主张殖民统治把人化约为物并使欧洲文明野蛮化，去殖民必须恢复主体与历史。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "discourse-colonialism"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "martinique",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Aime Cesaire / 艾梅·塞泽尔”",
+      "claim": "支持艾梅·塞泽尔的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "艾梅·塞泽尔是美洲与加勒比反殖民思想的重要思想人物，主要追问“殖民主义如何同时损害被殖民者和殖民社会？”。其思想以“殖民物化”为入口，主张殖民统治把人化约为物并使欧洲文明野蛮化，去殖民必须恢复主体与历史。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Aime Cesaire / 艾梅·塞泽尔”",
+              "claim": "支持艾梅·塞泽尔的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民主义如何同时损害被殖民者和殖民社会？",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Aime Cesaire / 艾梅·塞泽尔”",
+              "claim": "支持对艾梅·塞泽尔核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：殖民统治把人化约为物并使欧洲文明野蛮化，去殖民必须恢复主体与历史。",
+          "citations": [
+            {
+              "sourceId": "src-companion-latin-american-philosophy",
+              "locator": "对应人物、国家传统与论题专章：“Aime Cesaire / 艾梅·塞泽尔”",
+              "claim": "支持对艾梅·塞泽尔核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/aime-cesaire.webp",
+    "thumbSrc": "/media/thinkers/thumb/aime-cesaire.webp",
+    "alt": "艾梅·塞泽尔的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Jean Baptiste Devaux · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aime_Cesaire_2003.jpg",
+    "sourceFile": "File:Aime Cesaire 2003.jpg",
+    "license": "CC BY-SA 4.0",
+    "creator": "Jean Baptiste Devaux",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

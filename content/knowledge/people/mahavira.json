@@ -1,0 +1,114 @@
+{
+  "id": "mahavira",
+  "slug": "mahavira",
+  "entityType": "person",
+  "names": {
+    "display": "筏驮摩那",
+    "english": "Mahavira",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前599–527",
+    "startYear": -599,
+    "endYear": -527,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-耆那教"
+  ],
+  "conceptIds": [
+    "concept-不害"
+  ],
+  "questionIds": [
+    "good-life"
+  ],
+  "guidingQuestion": "生命如何通过严格伦理实践摆脱业的束缚？",
+  "thesis": "不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。",
+  "summary": "筏驮摩那是南亚耆那教的重要思想人物，主要追问“生命如何通过严格伦理实践摆脱业的束缚？”。其思想以“不害”为入口，主张不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "agamas-jain"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "vaishali",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Mahavira / 筏驮摩那”",
+      "claim": "支持筏驮摩那的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "筏驮摩那是南亚耆那教的重要思想人物，主要追问“生命如何通过严格伦理实践摆脱业的束缚？”。其思想以“不害”为入口，主张不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Mahavira / 筏驮摩那”",
+              "claim": "支持筏驮摩那的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：生命如何通过严格伦理实践摆脱业的束缚？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Mahavira / 筏驮摩那”",
+              "claim": "支持对筏驮摩那核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Mahavira / 筏驮摩那”",
+              "claim": "支持对筏驮摩那核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/mahavira.webp",
+    "thumbSrc": "/media/thinkers/thumb/mahavira.webp",
+    "alt": "筏驮摩那的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY-SA 4.0",
+    "credit": "Unknown 11th century sculptor · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahavira_sculpture.jpg",
+    "sourceFile": "File:Mahavira sculpture.jpg",
+    "license": "CC BY-SA 4.0",
+    "creator": "Unknown 11th century sculptor",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

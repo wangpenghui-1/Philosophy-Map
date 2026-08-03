@@ -1,0 +1,115 @@
+{
+  "id": "boethius",
+  "slug": "boethius",
+  "entityType": "person",
+  "names": {
+    "display": "波爱修斯",
+    "english": "Boethius",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约477–524",
+    "startYear": 477,
+    "endYear": 524,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-晚期古代与中世纪哲学"
+  ],
+  "conceptIds": [
+    "concept-永恒与预知"
+  ],
+  "questionIds": [
+    "reality",
+    "freedom"
+  ],
+  "guidingQuestion": "神的预知是否会取消人的自由选择？",
+  "thesis": "永恒并非无限时间而是对生命整体的同时把握，因此预知不必成为事件的强制原因。",
+  "summary": "波爱修斯是欧洲与地中海晚期古代与中世纪哲学的重要思想人物，主要追问“神的预知是否会取消人的自由选择？”。其思想以“永恒与预知”为入口，主张永恒并非无限时间而是对生命整体的同时把握，因此预知不必成为事件的强制原因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "consolation-philosophy"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "ravenna",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Boethius / 波爱修斯”",
+      "claim": "支持波爱修斯的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "波爱修斯是欧洲与地中海晚期古代与中世纪哲学的重要思想人物，主要追问“神的预知是否会取消人的自由选择？”。其思想以“永恒与预知”为入口，主张永恒并非无限时间而是对生命整体的同时把握，因此预知不必成为事件的强制原因。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Boethius / 波爱修斯”",
+              "claim": "支持波爱修斯的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：神的预知是否会取消人的自由选择？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Boethius / 波爱修斯”",
+              "claim": "支持对波爱修斯核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：永恒并非无限时间而是对生命整体的同时把握，因此预知不必成为事件的强制原因。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Boethius / 波爱修斯”",
+              "claim": "支持对波爱修斯核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/boethius.webp",
+    "thumbSrc": "/media/thinkers/thumb/boethius.webp",
+    "alt": "波爱修斯的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boethius.jpeg",
+    "sourceFile": "File:Boethius.jpeg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

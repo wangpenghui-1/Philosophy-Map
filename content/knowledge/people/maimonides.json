@@ -1,0 +1,113 @@
+{
+  "id": "maimonides",
+  "slug": "maimonides",
+  "entityType": "person",
+  "names": {
+    "display": "迈蒙尼德",
+    "english": "Maimonides",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1138–1204",
+    "startYear": 1138,
+    "endYear": 1204,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-犹太哲学"
+  ],
+  "conceptIds": [
+    "concept-否定神学"
+  ],
+  "questionIds": [
+    "knowledge",
+    "reality"
+  ],
+  "guidingQuestion": "有限语言如何谈论超越属性的神？",
+  "thesis": "关于神的肯定属性易导致拟人化，否定性表达更能维护神圣统一。",
+  "summary": "迈蒙尼德是西亚、中亚及伊斯兰思想世界犹太哲学的重要思想人物，主要追问“有限语言如何谈论超越属性的神？”。其思想以“否定神学”为入口，主张关于神的肯定属性易导致拟人化，否定性表达更能维护神圣统一。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "guide-perplexed"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "cairo",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-jewish-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章：“Maimonides / 迈蒙尼德”",
+      "claim": "支持迈蒙尼德的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "迈蒙尼德是西亚、中亚及伊斯兰思想世界犹太哲学的重要思想人物，主要追问“有限语言如何谈论超越属性的神？”。其思想以“否定神学”为入口，主张关于神的肯定属性易导致拟人化，否定性表达更能维护神圣统一。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Maimonides / 迈蒙尼德”",
+              "claim": "支持迈蒙尼德的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：有限语言如何谈论超越属性的神？",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Maimonides / 迈蒙尼德”",
+              "claim": "支持对迈蒙尼德核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：关于神的肯定属性易导致拟人化，否定性表达更能维护神圣统一。",
+          "citations": [
+            {
+              "sourceId": "src-history-jewish-philosophy",
+              "locator": "对应人物与时期专章：“Maimonides / 迈蒙尼德”",
+              "claim": "支持对迈蒙尼德核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/maimonides.webp",
+    "thumbSrc": "/media/thinkers/thumb/maimonides.webp",
+    "alt": "迈蒙尼德的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "Public domain",
+    "credit": "Blaisio Ugolino · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Moses_Maimonides_in_Thesaurus_antiquitatum_sacrarum.tif",
+    "sourceFile": "File:Portrait of Moses Maimonides in Thesaurus antiquitatum sacrarum.tif",
+    "license": "Public domain",
+    "creator": "Blaisio Ugolino",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

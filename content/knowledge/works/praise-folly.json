@@ -1,0 +1,42 @@
+{
+  "id": "praise-folly",
+  "slug": "praise-folly",
+  "entityType": "work",
+  "title": "《愚人颂》",
+  "originalTitle": "Moriae encomium",
+  "authorRefs": [
+    {
+      "personId": "erasmus",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1511年",
+  "languages": [
+    "la"
+  ],
+  "summary": "《愚人颂》是进入伊拉斯谟思想语境的代表文本入口。条目以“基督教人文主义”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-基督教人文主义"
+  ],
+  "traditionIds": [
+    "tradition-文艺复兴人文主义"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Erasmus / 伊拉斯谟”",
+      "claim": "支持《愚人颂》与伊拉斯谟的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

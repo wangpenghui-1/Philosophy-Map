@@ -1,0 +1,48 @@
+{
+  "id": "concept-无为",
+  "slug": "无为",
+  "entityType": "concept",
+  "name": "无为",
+  "originalTerms": [],
+  "summary": "“无为”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-道家",
+      "label": "无为",
+      "explanation": "在老子及道家语境中，“无为”用于说明：道的运作不依赖强制，人应以无为和朴素回应万物的自生变化。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目：“Laozi / 老子”",
+          "claim": "支持老子语境中的“无为”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "laozi"
+  ],
+  "workIds": [
+    "daodejing"
+  ],
+  "traditionIds": [
+    "tradition-道家"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Laozi / 老子”",
+      "claim": "支持“无为”作为老子思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

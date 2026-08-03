@@ -1,0 +1,114 @@
+{
+  "id": "rabindranath-tagore",
+  "slug": "rabindranath-tagore",
+  "entityType": "person",
+  "names": {
+    "display": "泰戈尔",
+    "english": "Rabindranath Tagore",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1861–1941",
+    "startYear": 1861,
+    "endYear": 1941,
+    "certainty": "established"
+  },
+  "primaryRegion": "南亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现代印度人文思想"
+  ],
+  "conceptIds": [
+    "concept-关系人文主义"
+  ],
+  "questionIds": [
+    "society",
+    "reality",
+    "freedom"
+  ],
+  "guidingQuestion": "自由教育如何连接个人创造、自然与世界文化？",
+  "thesis": "人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。",
+  "summary": "泰戈尔是南亚现代印度人文思想的重要思想人物，主要追问“自由教育如何连接个人创造、自然与世界文化？”。其思想以“关系人文主义”为入口，主张人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "religion-man"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "shantiniketan",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Rabindranath Tagore / 泰戈尔”",
+      "claim": "支持泰戈尔的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "泰戈尔是南亚现代印度人文思想的重要思想人物，主要追问“自由教育如何连接个人创造、自然与世界文化？”。其思想以“关系人文主义”为入口，主张人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Rabindranath Tagore / 泰戈尔”",
+              "claim": "支持泰戈尔的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：自由教育如何连接个人创造、自然与世界文化？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Rabindranath Tagore / 泰戈尔”",
+              "claim": "支持对泰戈尔核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "相关卷中的人物、学派与文本条目：“Rabindranath Tagore / 泰戈尔”",
+              "claim": "支持对泰戈尔核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/rabindranath-tagore.webp",
+    "thumbSrc": "/media/thinkers/thumb/rabindranath-tagore.webp",
+    "alt": "泰戈尔的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "CC BY 4.0",
+    "credit": "Georges Chevalier · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1926_Rabindrath_Tagore.jpg",
+    "sourceFile": "File:1926 Rabindrath Tagore.jpg",
+    "license": "CC BY 4.0",
+    "creator": "Georges Chevalier",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#d6a765",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

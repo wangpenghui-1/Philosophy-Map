@@ -1,0 +1,48 @@
+{
+  "id": "concept-双重运动",
+  "slug": "双重运动",
+  "entityType": "concept",
+  "name": "双重运动",
+  "originalTerms": [],
+  "summary": "“双重运动”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-现代伊斯兰思想",
+      "label": "双重运动",
+      "explanation": "在法兹鲁尔·拉赫曼及现代伊斯兰思想语境中，“双重运动”用于说明：解释应从具体经文回到其历史道德原则，再由原则返回当代情境形成规范判断。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Fazlur Rahman / 法兹鲁尔·拉赫曼”",
+          "claim": "支持法兹鲁尔·拉赫曼语境中的“双重运动”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "fazlur-rahman"
+  ],
+  "workIds": [
+    "islam-modernity"
+  ],
+  "traditionIds": [
+    "tradition-现代伊斯兰思想"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Fazlur Rahman / 法兹鲁尔·拉赫曼”",
+      "claim": "支持“双重运动”作为法兹鲁尔·拉赫曼思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

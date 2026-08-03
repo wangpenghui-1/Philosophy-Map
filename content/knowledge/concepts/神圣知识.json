@@ -1,0 +1,48 @@
+{
+  "id": "concept-神圣知识",
+  "slug": "神圣知识",
+  "entityType": "concept",
+  "name": "神圣知识",
+  "originalTerms": [],
+  "summary": "“神圣知识”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-当代伊斯兰哲学",
+      "label": "神圣知识",
+      "explanation": "在赛义德·侯赛因·纳斯尔及当代伊斯兰哲学语境中，“神圣知识”用于说明：传统形上学把自然理解为神圣秩序，知识应恢复宇宙、伦理和精神的关联。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Seyyed Hossein Nasr / 赛义德·侯赛因·纳斯尔”",
+          "claim": "支持赛义德·侯赛因·纳斯尔语境中的“神圣知识”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "seyyed-hossein-nasr"
+  ],
+  "workIds": [
+    "knowledge-sacred"
+  ],
+  "traditionIds": [
+    "tradition-当代伊斯兰哲学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Seyyed Hossein Nasr / 赛义德·侯赛因·纳斯尔”",
+      "claim": "支持“神圣知识”作为赛义德·侯赛因·纳斯尔思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

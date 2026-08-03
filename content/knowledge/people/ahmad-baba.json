@@ -1,0 +1,107 @@
+{
+  "id": "ahmad-baba",
+  "slug": "ahmad-baba",
+  "entityType": "person",
+  "names": {
+    "display": "艾哈迈德·巴巴",
+    "english": "Ahmad Baba",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1556–1627",
+    "startYear": 1556,
+    "endYear": 1627,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-廷巴克图学术传统"
+  ],
+  "conceptIds": [
+    "concept-合法权威"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "学术与法律判断如何面对政治强制和奴役实践？",
+  "thesis": "以马立克法学论证学者责任、正当统治与自由身份，反对把肤色直接作为奴役依据。",
+  "summary": "艾哈迈德·巴巴是非洲廷巴克图学术传统的重要思想人物，主要追问“学术与法律判断如何面对政治强制和奴役实践？”。其思想以“合法权威”为入口，主张以马立克法学论证学者责任、正当统治与自由身份，反对把肤色直接作为奴役依据。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "ahmad-baba-mi-raj"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "timbuktu",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Ahmad Baba / 艾哈迈德·巴巴”",
+      "claim": "支持艾哈迈德·巴巴的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "艾哈迈德·巴巴是非洲廷巴克图学术传统的重要思想人物，主要追问“学术与法律判断如何面对政治强制和奴役实践？”。其思想以“合法权威”为入口，主张以马立克法学论证学者责任、正当统治与自由身份，反对把肤色直接作为奴役依据。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ahmad Baba / 艾哈迈德·巴巴”",
+              "claim": "支持艾哈迈德·巴巴的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：学术与法律判断如何面对政治强制和奴役实践？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ahmad Baba / 艾哈迈德·巴巴”",
+              "claim": "支持对艾哈迈德·巴巴核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以马立克法学论证学者责任、正当统治与自由身份，反对把肤色直接作为奴役依据。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ahmad Baba / 艾哈迈德·巴巴”",
+              "claim": "支持对艾哈迈德·巴巴核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ahmad-baba.webp",
+    "thumbSrc": "/media/thinkers/thumb/ahmad-baba.webp",
+    "alt": "艾哈迈德·巴巴的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

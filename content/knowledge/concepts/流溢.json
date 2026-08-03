@@ -1,0 +1,48 @@
+{
+  "id": "concept-流溢",
+  "slug": "流溢",
+  "entityType": "concept",
+  "name": "流溢",
+  "originalTerms": [],
+  "summary": "“流溢”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-新柏拉图主义",
+      "label": "流溢",
+      "explanation": "在普罗提诺及新柏拉图主义语境中，“流溢”用于说明：万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+          "claim": "支持普罗提诺语境中的“流溢”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "plotinus"
+  ],
+  "workIds": [
+    "enneads"
+  ],
+  "traditionIds": [
+    "tradition-新柏拉图主义"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Plotinus / 普罗提诺”",
+      "claim": "支持“流溢”作为普罗提诺思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tradition-批判理论与废除主义",
+  "slug": "批判理论与废除主义",
+  "entityType": "tradition",
+  "name": "批判理论与废除主义",
+  "originalNames": [],
+  "summary": "批判理论与废除主义是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "1945年至今",
+  "regionLabels": [
+    "美洲与加勒比"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "angela-davis"
+  ],
+  "conceptIds": [
+    "concept-废除主义"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Angela Davis / 安吉拉·戴维斯”",
+      "claim": "支持批判理论与废除主义与安吉拉·戴维斯的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "concept-意向伦理",
+  "slug": "意向伦理",
+  "entityType": "concept",
+  "name": "意向伦理",
+  "originalTerms": [],
+  "summary": "“意向伦理”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-经院哲学",
+      "label": "意向伦理",
+      "explanation": "在阿伯拉尔及经院哲学语境中，“意向伦理”用于说明：罪责在于意志对所理解义务的同意，外在行为本身不足以判断伦理。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“Peter Abelard / 阿伯拉尔”",
+          "claim": "支持阿伯拉尔语境中的“意向伦理”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "peter-abelard"
+  ],
+  "workIds": [
+    "ethics-abelard"
+  ],
+  "traditionIds": [
+    "tradition-经院哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Peter Abelard / 阿伯拉尔”",
+      "claim": "支持“意向伦理”作为阿伯拉尔思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

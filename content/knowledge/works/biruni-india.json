@@ -1,0 +1,42 @@
+{
+  "id": "biruni-india",
+  "slug": "biruni-india",
+  "entityType": "work",
+  "title": "《印度志》",
+  "originalTitle": "Taḥqīq mā li-l-Hind",
+  "authorRefs": [
+    {
+      "personId": "al-biruni",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约1030年",
+  "languages": [
+    "ar"
+  ],
+  "summary": "《印度志》是进入比鲁尼思想语境的代表文本入口。条目以“比较方法”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-比较方法"
+  ],
+  "traditionIds": [
+    "tradition-比较思想与科学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Al-Biruni / 比鲁尼”",
+      "claim": "支持《印度志》与比鲁尼的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

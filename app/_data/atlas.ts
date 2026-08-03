@@ -1,5 +1,5 @@
 import atlasRaw from "../_generated/atlas.json";
-import type { ContentTier } from "../_generated/knowledge-types";
+import type { ContentTier, RepresentativeQuote } from "../_generated/knowledge-types";
 
 export type QuestionId = "good-life" | "knowledge" | "self" | "reality" | "society" | "freedom";
 export type RelationType = "direct-influence" | "text-transmission" | "critique" | "lineage" | "thematic-resonance";
@@ -49,6 +49,7 @@ export interface Thinker {
   questionIds: QuestionId[];
   question: string;
   thesis: string;
+  representativeQuote?: RepresentativeQuote;
   keywords: string[];
   workIds: string[];
   anchors: GeoAnchor[];

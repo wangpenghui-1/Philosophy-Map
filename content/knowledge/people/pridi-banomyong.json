@@ -1,0 +1,112 @@
+{
+  "id": "pridi-banomyong",
+  "slug": "pridi-banomyong",
+  "entityType": "person",
+  "names": {
+    "display": "比里·帕侬荣",
+    "english": "Pridi Banomyong",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1900–1983",
+    "startYear": 1900,
+    "endYear": 1983,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-泰国政治思想"
+  ],
+  "conceptIds": [
+    "concept-宪政民生"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "宪政改革如何与经济正义和国家独立相结合？",
+  "thesis": "以民权、法治和社会保障推动立宪秩序，并在帝国压力下维护政治自主。",
+  "summary": "比里·帕侬荣是东南亚与大洋洲泰国政治思想的重要思想人物，主要追问“宪政改革如何与经济正义和国家独立相结合？”。其思想以“宪政民生”为入口，主张以民权、法治和社会保障推动立宪秩序，并在帝国压力下维护政治自主。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "pridi-economic-plan"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "bangkok",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+      "claim": "支持比里·帕侬荣的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "比里·帕侬荣是东南亚与大洋洲泰国政治思想的重要思想人物，主要追问“宪政改革如何与经济正义和国家独立相结合？”。其思想以“宪政民生”为入口，主张以民权、法治和社会保障推动立宪秩序，并在帝国压力下维护政治自主。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+              "claim": "支持比里·帕侬荣的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：宪政改革如何与经济正义和国家独立相结合？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+              "claim": "支持对比里·帕侬荣核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：以民权、法治和社会保障推动立宪秩序，并在帝国压力下维护政治自主。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+              "claim": "支持对比里·帕侬荣核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/pridi-banomyong.webp",
+    "thumbSrc": "/media/thinkers/thumb/pridi-banomyong.webp",
+    "alt": "比里·帕侬荣的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Thai government (รัฐบาลไทย) · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pridi_Banomyong_in_Uniform_Photo_1946.png",
+    "sourceFile": "File:Pridi Banomyong in Uniform Photo 1946.png",
+    "license": "Public domain",
+    "creator": "Thai government (รัฐบาลไทย)",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

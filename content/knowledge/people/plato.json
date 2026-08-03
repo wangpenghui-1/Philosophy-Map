@@ -45,7 +45,8 @@
     }
   ],
   "sourceIds": [
-    "src-plato"
+    "src-plato",
+    "src-plato-republic-jowett"
   ],
   "citations": [
     {
@@ -112,5 +113,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "The idea of good appears last of all, and is seen only with an effort; and, when seen, is also inferred to be the universal author of all things beautiful and right.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "grc",
+    "chineseTranslation": "善的理念最后才显现，而且要经过努力才能看见；一旦看见，就会明白它是一切美好与正当事物的普遍根源。",
+    "annotation": "洞穴寓言在这里抵达“善”的理念，说明哲学教育为何要使灵魂从表象转向可理解的秩序。",
+    "workId": "republic",
+    "sourceTitle": "The Republic of Plato",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-plato-republic-jowett",
+    "locator": "Book VII, 517b–c",
+    "translator": "Benjamin Jowett",
+    "translationNote": "原作以古希腊文写成；此处展示 Benjamin Jowett 的英文译文。"
+  }
 }

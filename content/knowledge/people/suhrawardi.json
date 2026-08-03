@@ -1,0 +1,107 @@
+{
+  "id": "suhrawardi",
+  "slug": "suhrawardi",
+  "entityType": "person",
+  "names": {
+    "display": "苏哈拉瓦迪",
+    "english": "Suhrawardi",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1154–1191",
+    "startYear": 1154,
+    "endYear": 1191,
+    "certainty": "established"
+  },
+  "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-照明哲学"
+  ],
+  "conceptIds": [
+    "concept-光的形上学"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "知识能否通过直接临在而不只依赖概念表象？",
+  "thesis": "照明哲学以光的等级解释存在，并以临在知识连接论证与精神体验。",
+  "summary": "苏哈拉瓦迪是西亚、中亚及伊斯兰思想世界照明哲学的重要思想人物，主要追问“知识能否通过直接临在而不只依赖概念表象？”。其思想以“光的形上学”为入口，主张照明哲学以光的等级解释存在，并以临在知识连接论证与精神体验。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "philosophy-illumination"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "aleppo",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+      "claim": "支持苏哈拉瓦迪的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "苏哈拉瓦迪是西亚、中亚及伊斯兰思想世界照明哲学的重要思想人物，主要追问“知识能否通过直接临在而不只依赖概念表象？”。其思想以“光的形上学”为入口，主张照明哲学以光的等级解释存在，并以临在知识连接论证与精神体验。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+              "claim": "支持苏哈拉瓦迪的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：知识能否通过直接临在而不只依赖概念表象？",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+              "claim": "支持对苏哈拉瓦迪核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：照明哲学以光的等级解释存在，并以临在知识连接论证与精神体验。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+              "claim": "支持对苏哈拉瓦迪核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/suhrawardi.webp",
+    "thumbSrc": "/media/thinkers/thumb/suhrawardi.webp",
+    "alt": "苏哈拉瓦迪的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#b99ad9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "concept-不坏者",
+  "slug": "不坏者",
+  "entityType": "concept",
+  "name": "不坏者",
+  "originalTerms": [],
+  "summary": "“不坏者”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-奥义书传统",
+      "label": "不坏者",
+      "explanation": "在迦尔吉及奥义书传统语境中，“不坏者”用于说明：通过公开辩论追问万物所依，最终把讨论引向不可毁坏且超越对象化描述的根据。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Gargi Vachaknavi / 迦尔吉”",
+          "claim": "支持迦尔吉语境中的“不坏者”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "gargi-vachaknavi"
+  ],
+  "workIds": [
+    "brihadaranyaka"
+  ],
+  "traditionIds": [
+    "tradition-奥义书传统"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Gargi Vachaknavi / 迦尔吉”",
+      "claim": "支持“不坏者”作为迦尔吉思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

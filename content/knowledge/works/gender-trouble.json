@@ -1,0 +1,42 @@
+{
+  "id": "gender-trouble",
+  "slug": "gender-trouble",
+  "entityType": "work",
+  "title": "《性别麻烦》",
+  "originalTitle": "Gender Trouble",
+  "authorRefs": [
+    {
+      "personId": "judith-butler",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1990年",
+  "languages": [
+    "en"
+  ],
+  "summary": "《性别麻烦》是进入朱迪斯·巴特勒思想语境的代表文本入口。条目以“性别操演”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-性别操演"
+  ],
+  "traditionIds": [
+    "tradition-性别与政治哲学"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章：“Judith Butler / 朱迪斯·巴特勒”",
+      "claim": "支持《性别麻烦》与朱迪斯·巴特勒的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

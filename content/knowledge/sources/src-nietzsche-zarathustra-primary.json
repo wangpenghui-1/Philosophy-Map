@@ -1,0 +1,19 @@
+{
+  "id": "src-nietzsche-zarathustra-primary",
+  "entityType": "source",
+  "title": "Thus Spake Zarathustra",
+  "authors": [
+    "Friedrich Nietzsche"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Project Gutenberg, eBook 1998",
+  "url": "https://www.gutenberg.org/files/1998/1998-h/1998-h.htm",
+  "defaultLocator": "Part I, Zarathustra's Prologue, section 5; translated by Thomas Common",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

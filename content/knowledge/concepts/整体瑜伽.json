@@ -1,0 +1,48 @@
+{
+  "id": "concept-整体瑜伽",
+  "slug": "整体瑜伽",
+  "entityType": "concept",
+  "name": "整体瑜伽",
+  "originalTerms": [],
+  "summary": "“整体瑜伽”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-现代印度哲学",
+      "label": "整体瑜伽",
+      "explanation": "在奥罗宾多及现代印度哲学语境中，“整体瑜伽”用于说明：现实是意识逐步显现的演化，整体瑜伽旨在转化个体与集体生命而非逃离世界。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+          "claim": "支持奥罗宾多语境中的“整体瑜伽”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "sri-aurobindo"
+  ],
+  "workIds": [
+    "life-divine"
+  ],
+  "traditionIds": [
+    "tradition-现代印度哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+      "claim": "支持“整体瑜伽”作为奥罗宾多思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

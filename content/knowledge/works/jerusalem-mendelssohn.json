@@ -1,0 +1,42 @@
+{
+  "id": "jerusalem-mendelssohn",
+  "slug": "jerusalem-mendelssohn",
+  "entityType": "work",
+  "title": "《耶路撒冷》",
+  "originalTitle": "Jerusalem oder über religiöse Macht und Judentum",
+  "authorRefs": [
+    {
+      "personId": "moses-mendelssohn",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1783年",
+  "languages": [
+    "de"
+  ],
+  "summary": "《耶路撒冷》是进入摩西·门德尔松思想语境的代表文本入口。条目以“宗教宽容”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-宗教宽容"
+  ],
+  "traditionIds": [
+    "tradition-犹太启蒙思想"
+  ],
+  "sourceIds": [
+    "src-history-jewish-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章：“Moses Mendelssohn / 摩西·门德尔松”",
+      "claim": "支持《耶路撒冷》与摩西·门德尔松的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

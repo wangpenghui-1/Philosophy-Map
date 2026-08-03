@@ -1,0 +1,116 @@
+{
+  "id": "dong-zhongshu",
+  "slug": "dong-zhongshu",
+  "entityType": "person",
+  "names": {
+    "display": "董仲舒",
+    "english": "Dong Zhongshu",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前179–104",
+    "startYear": -179,
+    "endYear": -104,
+    "certainty": "approximate",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "东亚",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-汉代儒学"
+  ],
+  "conceptIds": [
+    "concept-天人感应"
+  ],
+  "questionIds": [
+    "society",
+    "reality",
+    "good-life"
+  ],
+  "guidingQuestion": "政治伦理如何与宇宙秩序建立规范联系？",
+  "thesis": "君主政治应以仁义回应天道，灾异论述可成为约束权力的批评语言。",
+  "summary": "董仲舒是东亚汉代儒学的重要思想人物，主要追问“政治伦理如何与宇宙秩序建立规范联系？”。其思想以“天人感应”为入口，主张君主政治应以仁义回应天道，灾异论述可成为约束权力的批评语言。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "chunqiu-fanlu"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "changan",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Dong Zhongshu / 董仲舒”",
+      "claim": "支持董仲舒的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "董仲舒是东亚汉代儒学的重要思想人物，主要追问“政治伦理如何与宇宙秩序建立规范联系？”。其思想以“天人感应”为入口，主张君主政治应以仁义回应天道，灾异论述可成为约束权力的批评语言。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Dong Zhongshu / 董仲舒”",
+              "claim": "支持董仲舒的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：政治伦理如何与宇宙秩序建立规范联系？",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Dong Zhongshu / 董仲舒”",
+              "claim": "支持对董仲舒核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：君主政治应以仁义回应天道，灾异论述可成为约束权力的批评语言。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "对应人物与学派条目：“Dong Zhongshu / 董仲舒”",
+              "claim": "支持对董仲舒核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/dong-zhongshu.webp",
+    "thumbSrc": "/media/thinkers/thumb/dong-zhongshu.webp",
+    "alt": "董仲舒的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY 4.0",
+    "credit": "歷代聖賢半身像 冊 董仲舒 . 故宮典藏資料檢索. National Palace Museum. · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%AD%B7%E4%BB%A3%E8%81%96%E8%B3%A2%E5%8D%8A%E8%BA%AB%E5%83%8F_%E5%86%8A_%E8%91%A3%E4%BB%B2%E8%88%92_(Dong_Zhongshu).png",
+    "sourceFile": "File:歷代聖賢半身像 冊 董仲舒 (Dong Zhongshu).png",
+    "license": "CC BY 4.0",
+    "creator": "歷代聖賢半身像 冊 董仲舒 . 故宮典藏資料檢索. National Palace Museum.",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#86b79b",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

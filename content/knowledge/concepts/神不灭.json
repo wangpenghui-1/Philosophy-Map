@@ -1,0 +1,48 @@
+{
+  "id": "concept-神不灭",
+  "slug": "神不灭",
+  "entityType": "concept",
+  "name": "神不灭",
+  "originalTerms": [],
+  "summary": "“神不灭”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-中国佛教",
+      "label": "神不灭",
+      "explanation": "在慧远及中国佛教语境中，“神不灭”用于说明：僧团以超越世俗礼制的修行目标保持相对自主，并借因果报应说明伦理连续性。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目：“Huiyuan / 慧远”",
+          "claim": "支持慧远语境中的“神不灭”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "huiyuan"
+  ],
+  "workIds": [
+    "monk-not-bow"
+  ],
+  "traditionIds": [
+    "tradition-中国佛教"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Huiyuan / 慧远”",
+      "claim": "支持“神不灭”作为慧远思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

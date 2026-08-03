@@ -1,0 +1,42 @@
+{
+  "id": "chunqiu-fanlu",
+  "slug": "chunqiu-fanlu",
+  "entityType": "work",
+  "title": "《春秋繁露》",
+  "originalTitle": "春秋繁露",
+  "authorRefs": [
+    {
+      "personId": "dong-zhongshu",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "汉代编成、归属复杂",
+  "languages": [
+    "zh"
+  ],
+  "summary": "《春秋繁露》是进入董仲舒思想语境的代表文本入口。条目以“天人感应”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-天人感应"
+  ],
+  "traditionIds": [
+    "tradition-汉代儒学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Dong Zhongshu / 董仲舒”",
+      "claim": "支持《春秋繁露》与董仲舒的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

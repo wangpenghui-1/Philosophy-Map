@@ -1,0 +1,48 @@
+{
+  "id": "concept-性别话语",
+  "slug": "性别话语",
+  "entityType": "concept",
+  "name": "性别话语",
+  "originalTerms": [],
+  "summary": "“性别话语”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-伊斯兰女性主义",
+      "label": "性别话语",
+      "explanation": "在莱拉·艾哈迈德及伊斯兰女性主义语境中，“性别话语”用于说明：性别观念须在制度与殖民史中分析，不能把面纱或伊斯兰传统处理成单一不变的符号。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Leila Ahmed / 莱拉·艾哈迈德”",
+          "claim": "支持莱拉·艾哈迈德语境中的“性别话语”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "leila-ahmed"
+  ],
+  "workIds": [
+    "women-gender-islam"
+  ],
+  "traditionIds": [
+    "tradition-伊斯兰女性主义"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Leila Ahmed / 莱拉·艾哈迈德”",
+      "claim": "支持“性别话语”作为莱拉·艾哈迈德思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

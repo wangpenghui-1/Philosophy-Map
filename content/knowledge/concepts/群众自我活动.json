@@ -1,0 +1,48 @@
+{
+  "id": "concept-群众自我活动",
+  "slug": "群众自我活动",
+  "entityType": "concept",
+  "name": "群众自我活动",
+  "originalTerms": [],
+  "summary": "“群众自我活动”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-加勒比马克思主义",
+      "label": "群众自我活动",
+      "explanation": "在C. L. R. 詹姆斯及加勒比马克思主义语境中，“群众自我活动”用于说明：被殖民者不是精英领导的被动对象，劳动、文化和群众组织具有自主创造力。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+          "claim": "支持C. L. R. 詹姆斯语境中的“群众自我活动”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "c-l-r-james"
+  ],
+  "workIds": [
+    "black-jacobins"
+  ],
+  "traditionIds": [
+    "tradition-加勒比马克思主义"
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“C. L. R. James / C. L. R. 詹姆斯”",
+      "claim": "支持“群众自我活动”作为C. L. R. 詹姆斯思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

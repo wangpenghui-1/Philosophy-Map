@@ -1,0 +1,48 @@
+{
+  "id": "concept-刹那因果",
+  "slug": "刹那因果",
+  "entityType": "concept",
+  "name": "刹那因果",
+  "originalTerms": [],
+  "summary": "“刹那因果”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-佛教认识论",
+      "label": "刹那因果",
+      "explanation": "在法称及佛教认识论语境中，“刹那因果”用于说明：真实对象具有因果效力且刹那生灭，推论通过排除与必然联系形成。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Dharmakirti / 法称”",
+          "claim": "支持法称语境中的“刹那因果”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "dharmakirti"
+  ],
+  "workIds": [
+    "pramanavarttika"
+  ],
+  "traditionIds": [
+    "tradition-佛教认识论"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Dharmakirti / 法称”",
+      "claim": "支持“刹那因果”作为法称思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

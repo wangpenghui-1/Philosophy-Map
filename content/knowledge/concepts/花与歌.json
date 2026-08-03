@@ -1,0 +1,48 @@
+{
+  "id": "concept-花与歌",
+  "slug": "花与歌",
+  "entityType": "concept",
+  "name": "花与歌",
+  "originalTerms": [],
+  "summary": "“花与歌”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-纳瓦思想传统",
+      "label": "花与歌",
+      "explanation": "在内萨瓦尔科约特尔及纳瓦思想传统语境中，“花与歌”用于说明：诗性传统以花与歌探索无常、友谊和真实，但现存文本的具体作者归属仍需谨慎。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+          "claim": "支持内萨瓦尔科约特尔语境中的“花与歌”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "nezahualcoyotl"
+  ],
+  "workIds": [
+    "cantares-mexicanos"
+  ],
+  "traditionIds": [
+    "tradition-纳瓦思想传统"
+  ],
+  "sourceIds": [
+    "src-companion-latin-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章：“Nezahualcoyotl / 内萨瓦尔科约特尔”",
+      "claim": "支持“花与歌”作为内萨瓦尔科约特尔思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

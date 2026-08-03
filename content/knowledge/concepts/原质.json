@@ -1,0 +1,48 @@
+{
+  "id": "concept-原质",
+  "slug": "原质",
+  "entityType": "concept",
+  "name": "原质",
+  "originalTerms": [],
+  "summary": "“原质”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-数论",
+      "label": "原质",
+      "explanation": "在迦毗罗及数论语境中，“原质”用于说明：数论传统以原质的演化解释经验世界，并以辨别神我与原质通向解脱。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+          "claim": "支持迦毗罗语境中的“原质”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "kapila"
+  ],
+  "workIds": [
+    "samkhya-tradition"
+  ],
+  "traditionIds": [
+    "tradition-数论"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Kapila / 迦毗罗”",
+      "claim": "支持“原质”作为迦毗罗思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

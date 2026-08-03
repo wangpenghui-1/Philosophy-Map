@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "workflowVersion": "index-candidate/v1",
+  "batchId": "batch-03",
+  "candidateId": "candidate-094",
+  "proposedPersonId": "amina-wadud",
+  "identity": {
+    "displayName": "阿米娜·瓦杜德",
+    "englishName": "Amina Wadud",
+    "originalName": null,
+    "aliases": []
+  },
+  "coverage": {
+    "primaryRegion": "西亚、中亚及伊斯兰思想世界",
+    "era": "1945年至今",
+    "tradition": "伊斯兰女性主义",
+    "selectionReason": "补充西亚、中亚及伊斯兰思想世界与伊斯兰女性主义在世界思想史中的代表性、争论或传播路径。",
+    "gapTags": [
+      "西亚、中亚及伊斯兰思想世界",
+      "1945年至今",
+      "伊斯兰女性主义"
+    ]
+  },
+  "target": {
+    "contentTier": "index",
+    "editorialStatus": "candidate",
+    "publicVisibility": false
+  },
+  "workflow": {
+    "status": "research-planned",
+    "revision": 1,
+    "jobs": [
+      {
+        "id": "identity-and-chronology",
+        "status": "pending",
+        "dependsOn": [],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "source-discovery",
+        "status": "pending",
+        "dependsOn": [],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "source-verification",
+        "status": "pending",
+        "dependsOn": [
+          "source-discovery"
+        ],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "index-draft",
+        "status": "pending",
+        "dependsOn": [
+          "identity-and-chronology",
+          "source-verification"
+        ],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "citation-location",
+        "status": "pending",
+        "dependsOn": [
+          "index-draft"
+        ],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "bias-and-counterevidence",
+        "status": "pending",
+        "dependsOn": [
+          "citation-location"
+        ],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      },
+      {
+        "id": "editorial-assembly",
+        "status": "pending",
+        "dependsOn": [
+          "bias-and-counterevidence"
+        ],
+        "attempts": 0,
+        "maxAttempts": 3,
+        "lastResultId": null,
+        "lastError": null
+      }
+    ]
+  },
+  "research": {
+    "discoveryQueries": [
+      "Amina Wadud philosophy scholarly encyclopedia",
+      "Amina Wadud primary texts bibliography",
+      "Amina Wadud peer reviewed philosophy",
+      "阿米娜·瓦杜德 哲学 学术研究 原典"
+    ],
+    "sourceRequirements": {
+      "minimumVerifiedSources": 1,
+      "minimumIndependentScholarlySources": 1,
+      "primaryTextPreferred": true,
+      "referenceDatasetMayStandAlone": false
+    },
+    "sourceLeads": [],
+    "claimTasks": [
+      {
+        "id": "identity",
+        "claimType": "identity",
+        "prompt": "核验阿米娜·瓦杜德的姓名形式、别名与身份归属。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "chronology",
+        "claimType": "chronology",
+        "prompt": "核验阿米娜·瓦杜德的生卒或活动年代，并记录不确定性。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "context",
+        "claimType": "context",
+        "prompt": "说明阿米娜·瓦杜德所处的历史语境与“伊斯兰女性主义”的关系。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "core-thesis",
+        "claimType": "thesis",
+        "prompt": "用可核查来源概括阿米娜·瓦杜德最具代表性的哲学主张。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "core-concept",
+        "claimType": "concept",
+        "prompt": "确定至少一个不能被跨传统相似术语直接替代的核心概念。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "representative-work",
+        "claimType": "work",
+        "prompt": "核验代表著作、文本归属或无可归属作品的原因。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      },
+      {
+        "id": "primary-place",
+        "claimType": "place",
+        "prompt": "核验主要活动地点及历史名称与现代参照。",
+        "status": "pending",
+        "claim": null,
+        "sourceLeadId": null,
+        "locator": null
+      }
+    ]
+  },
+  "draft": {
+    "chronology": null,
+    "guidingQuestion": null,
+    "thesis": null,
+    "summary": null,
+    "proposedConcepts": [],
+    "proposedWorks": [],
+    "proposedPlaces": []
+  },
+  "review": {
+    "crossCulturalBias": {
+      "status": "pending",
+      "questions": [
+        "条目是否使用该传统自身的概念语境，而非直接套用欧洲哲学分类？",
+        "中文译名与原文术语是否明确区分同名异义？"
+      ],
+      "notes": []
+    },
+    "counterEvidence": {
+      "status": "pending",
+      "questions": [
+        "是否检索了对核心归属、年代或主张的反例和学术争议？",
+        "摘要是否把有争议的解释误写成定论？"
+      ],
+      "notes": []
+    },
+    "attributionAndUncertainty": {
+      "status": "pending",
+      "questions": [
+        "年代、作品归属、地点和形象真实性是否分别记录确定性？",
+        "是否避免把后世传说或生成形象描述为历史事实？"
+      ],
+      "notes": []
+    }
+  }
+}

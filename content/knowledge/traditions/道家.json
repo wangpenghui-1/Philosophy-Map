@@ -12,15 +12,18 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "zhuangzi"
+    "zhuangzi",
+    "laozi"
   ],
   "conceptIds": [
     "concept-道",
     "concept-逍遥",
-    "concept-齐物"
+    "concept-齐物",
+    "concept-无为"
   ],
   "sourceIds": [
-    "src-zhuangzi"
+    "src-zhuangzi",
+    "src-encyclopedia-chinese-philosophy"
   ],
   "citations": [
     {

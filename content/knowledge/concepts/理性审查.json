@@ -1,0 +1,48 @@
+{
+  "id": "concept-理性审查",
+  "slug": "理性审查",
+  "entityType": "concept",
+  "name": "理性审查",
+  "originalTerms": [],
+  "summary": "“理性审查”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-埃塞俄比亚哲学",
+      "label": "理性审查",
+      "explanation": "在扎拉·雅各布及埃塞俄比亚哲学语境中，“理性审查”用于说明：以人人共有的理性审查启示解释，凡违背受造者平等与善的教说都应被质疑。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章：“Zera Yacob / 扎拉·雅各布”",
+          "claim": "支持扎拉·雅各布语境中的“理性审查”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "zera-yacob"
+  ],
+  "workIds": [
+    "hatata-zera-yacob"
+  ],
+  "traditionIds": [
+    "tradition-埃塞俄比亚哲学"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Zera Yacob / 扎拉·雅各布”",
+      "claim": "支持“理性审查”作为扎拉·雅各布思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

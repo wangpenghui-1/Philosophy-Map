@@ -1,0 +1,42 @@
+{
+  "id": "necropolitics",
+  "slug": "necropolitics",
+  "entityType": "work",
+  "title": "《死政治》",
+  "originalTitle": "Necropolitics",
+  "authorRefs": [
+    {
+      "personId": "achille-mbembe",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "2019年",
+  "languages": [
+    "fr"
+  ],
+  "summary": "《死政治》是进入阿希尔·姆本贝思想语境的代表文本入口。条目以“死政治”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-死政治"
+  ],
+  "traditionIds": [
+    "tradition-后殖民思想"
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Achille Mbembe / 阿希尔·姆本贝”",
+      "claim": "支持《死政治》与阿希尔·姆本贝的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -73,6 +73,20 @@ for (const person of all.people) {
   validateCitations(person);
   person.sections.forEach((section) => section.paragraphs.forEach((paragraph) => validateCitationList(person.id, paragraph.citations)));
 
+  if (person.representativeQuote) {
+    const quote = person.representativeQuote;
+    if (quote.workId) requireRecord("works", quote.workId, `${person.id}.representativeQuote`);
+    requireRecord("sources", quote.sourceId, `${person.id}.representativeQuote`);
+    if (quote.workId && !person.workIds.includes(quote.workId)) throw new Error(`${person.id}: representative quote work must be listed in workIds when workId is provided.`);
+    if (!person.sourceIds.includes(quote.sourceId)) throw new Error(`${person.id}: representative quote source must be listed in sourceIds.`);
+    if (byId.sources.get(quote.sourceId).sourceType !== quote.sourceType) throw new Error(`${person.id}: representative quote sourceType must match its source record.`);
+    if (quote.displayLanguage === "en" && !quote.chineseTranslation) throw new Error(`${person.id}: English representative quote requires a Chinese translation.`);
+    if (quote.textStatus === "translation" && !quote.translator) throw new Error(`${person.id}: translated representative quote requires translator metadata.`);
+    if (quote.textStatus === "original" && quote.displayLanguage !== quote.originalLanguage) throw new Error(`${person.id}: original quote display language must match originalLanguage.`);
+    if (quote.verificationStatus !== "primary-verified" && !quote.attributionNote) throw new Error(`${person.id}: non-primary verification status requires an attribution note.`);
+    if (quote.verificationStatus === "primary-verified" && quote.sourceType !== "primary-text") throw new Error(`${person.id}: primary-verified quote must cite a primary-text source.`);
+  }
+
   if (isPublished(person)) {
     const textLength = person.sections.flatMap((section) => section.paragraphs).reduce((sum, paragraph) => sum + paragraph.text.length, 0);
     if (person.contentTier === "standard" && (textLength < 600 || person.sourceIds.length < 2 || person.conceptIds.length < 3)) {
@@ -186,6 +200,7 @@ const atlasThinkers = published.people.map((person) => ({
   questionIds: person.questionIds,
   question: person.guidingQuestion,
   thesis: person.thesis,
+  representativeQuote: person.representativeQuote,
   keywords: person.conceptIds.map((id) => conceptById.get(id)?.name ?? id),
   workIds: person.workIds,
   anchors: person.placeLinks.map(({ placeId }) => placeById.get(placeId)).filter(Boolean).map((place) => ({
@@ -201,7 +216,7 @@ const atlasThinkers = published.people.map((person) => ({
   color: person.color,
   media: {
     fullSrc: person.media.fullSrc ?? "",
-    thumbSrc: person.media.thumbSrc ?? "",
+    thumbSrc: person.media.thumbSrc ?? "/globe.svg",
     alt: person.media.alt,
     objectPosition: person.media.objectPosition ?? "50% 50%",
     depictionNote: person.media.depictionNote,
@@ -237,7 +252,21 @@ const indexItems = [
     period: person.chronology.label,
     startYear: person.chronology.startYear,
     traditionIds: person.traditionIds,
-    searchText: [person.names.display, person.names.english, person.names.original, ...person.names.aliases, person.summary].filter(Boolean).join(" ").toLowerCase(),
+    media: {
+      thumbSrc: person.media.thumbSrc,
+      alt: person.media.alt,
+      objectPosition: person.media.objectPosition ?? "50% 50%",
+    },
+    searchText: [
+      person.names.display,
+      person.names.english,
+      person.names.original,
+      ...person.names.aliases,
+      person.summary,
+      person.representativeQuote?.text,
+      person.representativeQuote?.chineseTranslation,
+      person.representativeQuote?.annotation,
+    ].filter(Boolean).join(" ").toLowerCase(),
     href: `/thinker/${person.slug}`,
   })),
   ...published.concepts.map((concept) => ({
@@ -291,9 +320,11 @@ let scaleSimulation = null;
 if (coveragePlan) {
   const candidates = coveragePlan.candidates ?? [];
   if (coveragePlan.publishedBaseline !== published.people.length) throw new Error("Coverage baseline does not match the published people count.");
-  if (candidates.length !== 210 || coveragePlan.publishedBaseline + candidates.length !== 240) throw new Error("Coverage plan must contain 30 published people and 210 candidates.");
-  if (Object.values(coveragePlan.regionTargets).reduce((sum, value) => sum + value, 0) !== 240) throw new Error("Region targets must total 240.");
-  if (Object.values(coveragePlan.eraTargets).reduce((sum, value) => sum + value, 0) !== 240) throw new Error("Era targets must total 240.");
+  if (candidates.length !== coveragePlan.candidateCount || coveragePlan.publishedBaseline + candidates.length !== coveragePlan.targetTotal) {
+    throw new Error("Coverage plan counts do not match its published baseline and target total.");
+  }
+  if (Object.values(coveragePlan.regionTargets).reduce((sum, value) => sum + value, 0) !== coveragePlan.targetTotal) throw new Error("Region targets must match the coverage target total.");
+  if (Object.values(coveragePlan.eraTargets).reduce((sum, value) => sum + value, 0) !== coveragePlan.targetTotal) throw new Error("Era targets must match the coverage target total.");
   assertUnique("coverage candidate ids", candidates.map((candidate) => candidate.id));
   assertUnique("coverage candidate English names", candidates.map((candidate) => candidate.englishName));
   for (let batch = 1; batch <= coveragePlan.batchRules.batchCount; batch += 1) {

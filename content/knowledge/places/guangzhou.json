@@ -1,0 +1,24 @@
+{
+  "id": "guangzhou",
+  "slug": "guangzhou",
+  "entityType": "place",
+  "historicalName": "广州",
+  "historicalRegion": "晚清中国",
+  "modernReferenceName": "广州",
+  "coordinates": {
+    "lat": 23.13,
+    "lon": 113.26
+  },
+  "certainty": "established",
+  "note": "坐标用于世界思想地图的现代参考定位，不等同于对全部生平活动范围的断言。",
+  "relatedPersonIds": [
+    "kang-youwei"
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

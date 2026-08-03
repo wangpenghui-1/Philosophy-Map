@@ -1,0 +1,48 @@
+{
+  "id": "concept-宪政民生",
+  "slug": "宪政民生",
+  "entityType": "concept",
+  "name": "宪政民生",
+  "originalTerms": [],
+  "summary": "“宪政民生”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-泰国政治思想",
+      "label": "宪政民生",
+      "explanation": "在比里·帕侬荣及泰国政治思想语境中，“宪政民生”用于说明：以民权、法治和社会保障推动立宪秩序，并在帝国压力下维护政治自主。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+          "claim": "支持比里·帕侬荣语境中的“宪政民生”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "pridi-banomyong"
+  ],
+  "workIds": [
+    "pridi-economic-plan"
+  ],
+  "traditionIds": [
+    "tradition-泰国政治思想"
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Pridi Banomyong / 比里·帕侬荣”",
+      "claim": "支持“宪政民生”作为比里·帕侬荣思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

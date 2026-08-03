@@ -1,0 +1,37 @@
+{
+  "id": "tradition-朝鲜性理学",
+  "slug": "朝鲜性理学",
+  "entityType": "tradition",
+  "name": "朝鲜性理学",
+  "originalNames": [],
+  "summary": "朝鲜性理学是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "1500–1800年",
+  "regionLabels": [
+    "东亚"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "yi-hwang"
+  ],
+  "conceptIds": [
+    "concept-四端七情"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目：“Yi Hwang / 李滉”",
+      "claim": "支持朝鲜性理学与李滉的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

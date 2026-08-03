@@ -1,0 +1,48 @@
+{
+  "id": "concept-光的形上学",
+  "slug": "光的形上学",
+  "entityType": "concept",
+  "name": "光的形上学",
+  "originalTerms": [],
+  "summary": "“光的形上学”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-照明哲学",
+      "label": "光的形上学",
+      "explanation": "在苏哈拉瓦迪及照明哲学语境中，“光的形上学”用于说明：照明哲学以光的等级解释存在，并以临在知识连接论证与精神体验。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+          "claim": "支持苏哈拉瓦迪语境中的“光的形上学”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "suhrawardi"
+  ],
+  "workIds": [
+    "philosophy-illumination"
+  ],
+  "traditionIds": [
+    "tradition-照明哲学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Suhrawardi / 苏哈拉瓦迪”",
+      "claim": "支持“光的形上学”作为苏哈拉瓦迪思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

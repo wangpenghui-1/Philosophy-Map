@@ -1,0 +1,114 @@
+{
+  "id": "ptahhotep",
+  "slug": "ptahhotep",
+  "entityType": "person",
+  "names": {
+    "display": "普塔霍特普",
+    "english": "Ptahhotep",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "约公元前2400–2350",
+    "startYear": -2400,
+    "endYear": -2350,
+    "certainty": "disputed",
+    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-古埃及智慧传统"
+  ],
+  "conceptIds": [
+    "concept-玛阿特言行"
+  ],
+  "questionIds": [
+    "society"
+  ],
+  "guidingQuestion": "良好治理和日常交往如何体现正义秩序？",
+  "thesis": "克制言语、倾听和公正行政使个人行为与玛阿特的社会宇宙秩序协调。",
+  "summary": "普塔霍特普是非洲古埃及智慧传统的重要思想人物，主要追问“良好治理和日常交往如何体现正义秩序？”。其思想以“玛阿特言行”为入口，主张克制言语、倾听和公正行政使个人行为与玛阿特的社会宇宙秩序协调。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "maxims-ptahhotep"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "memphis-egypt",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Ptahhotep / 普塔霍特普”",
+      "claim": "支持普塔霍特普的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "普塔霍特普是非洲古埃及智慧传统的重要思想人物，主要追问“良好治理和日常交往如何体现正义秩序？”。其思想以“玛阿特言行”为入口，主张克制言语、倾听和公正行政使个人行为与玛阿特的社会宇宙秩序协调。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ptahhotep / 普塔霍特普”",
+              "claim": "支持普塔霍特普的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：良好治理和日常交往如何体现正义秩序？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ptahhotep / 普塔霍特普”",
+              "claim": "支持对普塔霍特普核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：克制言语、倾听和公正行政使个人行为与玛阿特的社会宇宙秩序协调。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Ptahhotep / 普塔霍特普”",
+              "claim": "支持对普塔霍特普核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ptahhotep.webp",
+    "thumbSrc": "/media/thinkers/thumb/ptahhotep.webp",
+    "alt": "普塔霍特普的后世或传统人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "后世流传、纪念性或传统人物形象，并非可考的当时写生肖像；本站按开放许可转载并作构图裁切。",
+    "presentationType": "historical",
+    "authenticity": "traditional",
+    "rightsStatus": "CC BY-SA 3.0",
+    "credit": "Kurohito · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statuevizir095.jpg",
+    "sourceFile": "File:Statuevizir095.jpg",
+    "license": "CC BY-SA 3.0",
+    "creator": "Kurohito",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

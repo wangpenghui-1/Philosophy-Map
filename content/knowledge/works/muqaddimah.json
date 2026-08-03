@@ -1,0 +1,42 @@
+{
+  "id": "muqaddimah",
+  "slug": "muqaddimah",
+  "entityType": "work",
+  "title": "《历史绪论》",
+  "originalTitle": "al-Muqaddima",
+  "authorRefs": [
+    {
+      "personId": "ibn-khaldun",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1377年",
+  "languages": [
+    "ar"
+  ],
+  "summary": "《历史绪论》是进入伊本·赫勒敦思想语境的代表文本入口。条目以“群体团结”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-群体团结"
+  ],
+  "traditionIds": [
+    "tradition-历史与社会思想"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Ibn Khaldun / 伊本·赫勒敦”",
+      "claim": "支持《历史绪论》与伊本·赫勒敦的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

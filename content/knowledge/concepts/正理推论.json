@@ -1,0 +1,48 @@
+{
+  "id": "concept-正理推论",
+  "slug": "正理推论",
+  "entityType": "concept",
+  "name": "正理推论",
+  "originalTerms": [],
+  "summary": "“正理推论”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-正理派",
+      "label": "正理推论",
+      "explanation": "在乔达摩及正理派语境中，“正理推论”用于说明：正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
+          "claim": "支持乔达摩语境中的“正理推论”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "akshapada-gautama"
+  ],
+  "workIds": [
+    "nyaya-sutra"
+  ],
+  "traditionIds": [
+    "tradition-正理派"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
+      "claim": "支持“正理推论”作为乔达摩思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

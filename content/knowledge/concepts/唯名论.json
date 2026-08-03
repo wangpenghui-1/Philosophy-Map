@@ -1,0 +1,48 @@
+{
+  "id": "concept-唯名论",
+  "slug": "唯名论",
+  "entityType": "concept",
+  "name": "唯名论",
+  "originalTerms": [],
+  "summary": "“唯名论”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-经院哲学",
+      "label": "唯名论",
+      "explanation": "在奥卡姆及经院哲学语境中，“唯名论”用于说明：个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+          "claim": "支持奥卡姆语境中的“唯名论”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "william-ockham"
+  ],
+  "workIds": [
+    "summa-logicae"
+  ],
+  "traditionIds": [
+    "tradition-经院哲学"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“William of Ockham / 奥卡姆”",
+      "claim": "支持“唯名论”作为奥卡姆思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

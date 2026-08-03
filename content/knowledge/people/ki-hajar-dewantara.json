@@ -1,0 +1,113 @@
+{
+  "id": "ki-hajar-dewantara",
+  "slug": "ki-hajar-dewantara",
+  "entityType": "person",
+  "names": {
+    "display": "基·哈查尔·德万托罗",
+    "english": "Ki Hajar Dewantara",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1889–1959",
+    "startYear": 1889,
+    "endYear": 1959,
+    "certainty": "established"
+  },
+  "primaryRegion": "东南亚与大洋洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-印度尼西亚教育思想"
+  ],
+  "conceptIds": [
+    "concept-教育自主"
+  ],
+  "questionIds": [
+    "society",
+    "freedom"
+  ],
+  "guidingQuestion": "殖民教育如何转化为民族自主和人格成长？",
+  "thesis": "教育者应在前引导、中间共创、后方支持，使学生在文化环境中自由成长。",
+  "summary": "基·哈查尔·德万托罗是东南亚与大洋洲印度尼西亚教育思想的重要思想人物，主要追问“殖民教育如何转化为民族自主和人格成长？”。其思想以“教育自主”为入口，主张教育者应在前引导、中间共创、后方支持，使学生在文化环境中自由成长。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "taman-siswa-principles"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "yogyakarta",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-southeast-asian-thinkers"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章：“Ki Hajar Dewantara / 基·哈查尔·德万托罗”",
+      "claim": "支持基·哈查尔·德万托罗的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "基·哈查尔·德万托罗是东南亚与大洋洲印度尼西亚教育思想的重要思想人物，主要追问“殖民教育如何转化为民族自主和人格成长？”。其思想以“教育自主”为入口，主张教育者应在前引导、中间共创、后方支持，使学生在文化环境中自由成长。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Ki Hajar Dewantara / 基·哈查尔·德万托罗”",
+              "claim": "支持基·哈查尔·德万托罗的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：殖民教育如何转化为民族自主和人格成长？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Ki Hajar Dewantara / 基·哈查尔·德万托罗”",
+              "claim": "支持对基·哈查尔·德万托罗核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：教育者应在前引导、中间共创、后方支持，使学生在文化环境中自由成长。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-southeast-asian-thinkers",
+              "locator": "相关国家、思想运动与人物专章：“Ki Hajar Dewantara / 基·哈查尔·德万托罗”",
+              "claim": "支持对基·哈查尔·德万托罗核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/ki-hajar-dewantara.webp",
+    "thumbSrc": "/media/thinkers/thumb/ki-hajar-dewantara.webp",
+    "alt": "基·哈查尔·德万托罗的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Djawa Sjinboen Sja · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ki_Hadjar_Dewantara,_Djawa_Baroe_(1943),_p5.jpg",
+    "sourceFile": "File:Ki Hadjar Dewantara, Djawa Baroe (1943), p5.jpg",
+    "license": "Public domain",
+    "creator": "Djawa Sjinboen Sja",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#65b8b2",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

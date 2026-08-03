@@ -1,0 +1,113 @@
+{
+  "id": "cheikh-anta-diop",
+  "slug": "cheikh-anta-diop",
+  "entityType": "person",
+  "names": {
+    "display": "谢赫·安塔·迪奥普",
+    "english": "Cheikh Anta Diop",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1923–1986",
+    "startYear": 1923,
+    "endYear": 1986,
+    "certainty": "established"
+  },
+  "primaryRegion": "非洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-非洲历史思想"
+  ],
+  "conceptIds": [
+    "concept-历史连续性"
+  ],
+  "questionIds": [
+    "society",
+    "knowledge"
+  ],
+  "guidingQuestion": "非洲历史如何摆脱殖民知识体系的断裂叙述？",
+  "thesis": "综合语言学、历史学和科学证据论证非洲文明连续性，并推动自主的历史研究框架。",
+  "summary": "谢赫·安塔·迪奥普是非洲非洲历史思想的重要思想人物，主要追问“非洲历史如何摆脱殖民知识体系的断裂叙述？”。其思想以“历史连续性”为入口，主张综合语言学、历史学和科学证据论证非洲文明连续性，并推动自主的历史研究框架。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "african-origin-civilization"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "dakar",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-companion-african-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章：“Cheikh Anta Diop / 谢赫·安塔·迪奥普”",
+      "claim": "支持谢赫·安塔·迪奥普的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "谢赫·安塔·迪奥普是非洲非洲历史思想的重要思想人物，主要追问“非洲历史如何摆脱殖民知识体系的断裂叙述？”。其思想以“历史连续性”为入口，主张综合语言学、历史学和科学证据论证非洲文明连续性，并推动自主的历史研究框架。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Cheikh Anta Diop / 谢赫·安塔·迪奥普”",
+              "claim": "支持谢赫·安塔·迪奥普的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：非洲历史如何摆脱殖民知识体系的断裂叙述？",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Cheikh Anta Diop / 谢赫·安塔·迪奥普”",
+              "claim": "支持对谢赫·安塔·迪奥普核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：综合语言学、历史学和科学证据论证非洲文明连续性，并推动自主的历史研究框架。",
+          "citations": [
+            {
+              "sourceId": "src-companion-african-philosophy",
+              "locator": "对应人物、地区传统与论题专章：“Cheikh Anta Diop / 谢赫·安塔·迪奥普”",
+              "claim": "支持对谢赫·安塔·迪奥普核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/cheikh-anta-diop.webp",
+    "thumbSrc": "/media/thinkers/thumb/cheikh-anta-diop.webp",
+    "alt": "谢赫·安塔·迪奥普的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Unknown author Unknown author · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheikh_Anta_Diop,_late_1940s.jpg",
+    "sourceFile": "File:Cheikh Anta Diop, late 1940s.jpg",
+    "license": "Public domain",
+    "creator": "Unknown author Unknown author",
+    "retrievedAt": "2026-07-19"
+  },
+  "color": "#df8b68",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

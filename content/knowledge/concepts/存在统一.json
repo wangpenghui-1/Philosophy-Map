@@ -1,0 +1,48 @@
+{
+  "id": "concept-存在统一",
+  "slug": "存在统一",
+  "entityType": "concept",
+  "name": "存在统一",
+  "originalTerms": [],
+  "summary": "“存在统一”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "senses": [
+    {
+      "traditionId": "tradition-苏菲形而上学",
+      "label": "存在统一",
+      "explanation": "在伊本·阿拉比及苏菲形而上学语境中，“存在统一”用于说明：万物是神圣名号的不同显现，完人以想象和认识综合存在的多重层次。该义项不默认等同于其他传统中的相似译名。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章：“Ibn Arabi / 伊本·阿拉比”",
+          "claim": "支持伊本·阿拉比语境中的“存在统一”义项。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "ibn-arabi"
+  ],
+  "workIds": [
+    "bezels-wisdom"
+  ],
+  "traditionIds": [
+    "tradition-苏菲形而上学"
+  ],
+  "sourceIds": [
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章：“Ibn Arabi / 伊本·阿拉比”",
+      "claim": "支持“存在统一”作为伊本·阿拉比思想入口的概括。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "life-divine",
+  "slug": "life-divine",
+  "entityType": "work",
+  "title": "《神圣人生论》",
+  "originalTitle": "The Life Divine",
+  "authorRefs": [
+    {
+      "personId": "sri-aurobindo",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1939至1940年定本",
+  "languages": [
+    "en"
+  ],
+  "summary": "《神圣人生论》是进入奥罗宾多思想语境的代表文本入口。条目以“整体瑜伽”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-整体瑜伽"
+  ],
+  "traditionIds": [
+    "tradition-现代印度哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Sri Aurobindo / 奥罗宾多”",
+      "claim": "支持《神圣人生论》与奥罗宾多的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

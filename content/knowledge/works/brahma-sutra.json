@@ -1,0 +1,42 @@
+{
+  "id": "brahma-sutra",
+  "slug": "brahma-sutra",
+  "entityType": "work",
+  "title": "《梵经》",
+  "originalTitle": "Brahmasūtra",
+  "authorRefs": [
+    {
+      "personId": "badarayana",
+      "role": "author",
+      "certainty": "supported"
+    }
+  ],
+  "dateLabel": "约公元前后数世纪",
+  "languages": [
+    "sa"
+  ],
+  "summary": "《梵经》是进入跋陀罗衍那思想语境的代表文本入口。条目以“梵经诠释”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-梵经诠释"
+  ],
+  "traditionIds": [
+    "tradition-吠檀多"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目：“Badarayana / 跋陀罗衍那”",
+      "claim": "支持《梵经》与跋陀罗衍那的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

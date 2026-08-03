@@ -1,0 +1,123 @@
+{
+  "id": "rudolf-carnap",
+  "slug": "rudolf-carnap",
+  "entityType": "person",
+  "names": {
+    "display": "卡尔纳普",
+    "english": "Rudolf Carnap",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1891–1970",
+    "startYear": 1891,
+    "endYear": 1970,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲与地中海",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-逻辑经验主义"
+  ],
+  "conceptIds": [
+    "concept-语言框架"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "哲学争论如何通过语言框架与逻辑分析获得澄清？",
+  "thesis": "许多形上争论源于语言混乱，选择框架应依据清晰性和实践效用。",
+  "summary": "卡尔纳普是欧洲与地中海逻辑经验主义的重要思想人物，主要追问“哲学争论如何通过语言框架与逻辑分析获得澄清？”。其思想以“语言框架”为入口，主张许多形上争论源于语言混乱，选择框架应依据清晰性和实践效用。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "workIds": [
+    "empiricism-semantics-ontology"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "chicago",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy",
+    "src-carnap-eso-1950"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+      "claim": "支持卡尔纳普的身份、思想主张与历史语境概述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "思想概览",
+      "paragraphs": [
+        {
+          "text": "卡尔纳普是欧洲与地中海逻辑经验主义的重要思想人物，主要追问“哲学争论如何通过语言框架与逻辑分析获得澄清？”。其思想以“语言框架”为入口，主张许多形上争论源于语言混乱，选择框架应依据清晰性和实践效用。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+              "claim": "支持卡尔纳普的身份、思想主张与历史语境概述。"
+            }
+          ]
+        },
+        {
+          "text": "核心问题：哲学争论如何通过语言框架与逻辑分析获得澄清？",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+              "claim": "支持对卡尔纳普核心问题的概括。"
+            }
+          ]
+        },
+        {
+          "text": "核心主张：许多形上争论源于语言混乱，选择框架应依据清晰性和实践效用。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "同名人物条目及条目内参考书目：“Rudolf Carnap / 卡尔纳普”",
+              "claim": "支持对卡尔纳普核心主张的概括。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/rudolf-carnap.webp",
+    "thumbSrc": "/media/thinkers/thumb/rudolf-carnap.webp",
+    "alt": "卡尔纳普的艺术化人物形象",
+    "objectPosition": "50% 50%",
+    "depictionNote": "AI辅助生成的艺术化人物形象，用于提供视觉入口；不是历史照片，也不应作为其真实相貌证据。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图 AI 辅助艺术化人物形象"
+  },
+  "color": "#7da7d9",
+  "mapVisible": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The acceptance of a linguistic framework must not be regarded as implying a metaphysical doctrine concerning the reality of the entities in question.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "接受一种语言框架，不应被看作暗含了关于其中所谈实体是否实在的形而上学学说。",
+    "annotation": "卡尔纳普把本体论问题转化为语言框架的选择，主张依据清晰性和使用效果评价框架。",
+    "workId": "empiricism-semantics-ontology",
+    "sourceTitle": "Empiricism, Semantics, and Ontology",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-carnap-eso-1950",
+    "locator": "Conclusion, p. 40"
+  }
+}

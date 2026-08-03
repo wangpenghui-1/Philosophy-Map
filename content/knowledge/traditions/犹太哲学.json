@@ -1,0 +1,41 @@
+{
+  "id": "tradition-犹太哲学",
+  "slug": "犹太哲学",
+  "entityType": "tradition",
+  "name": "犹太哲学",
+  "originalNames": [],
+  "summary": "犹太哲学是本知识库用于组织人物、文本和概念的思想传统索引。条目保留传统内部差异、历史变化与跨区域传播，不把它处理为封闭或同质的体系。",
+  "periodLabel": "500–1500年",
+  "regionLabels": [
+    "西亚、中亚及伊斯兰思想世界"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [],
+  "personIds": [
+    "gersonides",
+    "saadia-gaon",
+    "maimonides"
+  ],
+  "conceptIds": [
+    "concept-能动理智",
+    "concept-理性与启示",
+    "concept-否定神学"
+  ],
+  "sourceIds": [
+    "src-history-jewish-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章：“Gersonides / 格尔松尼德”",
+      "claim": "支持犹太哲学与格尔松尼德的历史关联。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-18",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

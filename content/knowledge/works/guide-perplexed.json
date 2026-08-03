@@ -1,0 +1,42 @@
+{
+  "id": "guide-perplexed",
+  "slug": "guide-perplexed",
+  "entityType": "work",
+  "title": "《迷途指津》",
+  "originalTitle": "Dalālat al-ḥāʾirīn",
+  "authorRefs": [
+    {
+      "personId": "maimonides",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "约1190年",
+  "languages": [
+    "ja"
+  ],
+  "summary": "《迷途指津》是进入迈蒙尼德思想语境的代表文本入口。条目以“否定神学”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "conceptIds": [
+    "concept-否定神学"
+  ],
+  "traditionIds": [
+    "tradition-犹太哲学"
+  ],
+  "sourceIds": [
+    "src-history-jewish-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章：“Maimonides / 迈蒙尼德”",
+      "claim": "支持《迷途指津》与迈蒙尼德的文本关联及归属说明。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "automated-editorial-review/v2",
+  "lastReviewedAt": "2026-07-19",
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+}

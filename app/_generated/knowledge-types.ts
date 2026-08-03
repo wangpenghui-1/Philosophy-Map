@@ -18,6 +18,24 @@ export interface EditorialMetadata {
   notes?: string;
 }
 
+export interface RepresentativeQuote {
+  text: string;
+  displayLanguage: "zh-classical" | "zh-modern" | "en";
+  textStatus: "original" | "translation";
+  originalLanguage: string;
+  chineseTranslation?: string;
+  annotation: string;
+  workId?: string;
+  sourceTitle: string;
+  sourceType: "primary-text" | "archival-source";
+  verificationStatus: "primary-verified" | "source-attributed" | "traditional-attribution" | "disputed";
+  attributionNote?: string;
+  sourceId: string;
+  locator: string;
+  translator?: string;
+  translationNote?: string;
+}
+
 export interface KnowledgeSource extends EditorialMetadata {
   id: string;
   entityType: "source";
@@ -46,6 +64,7 @@ export interface KnowledgePerson extends EditorialMetadata {
   questionIds: string[];
   guidingQuestion: string;
   thesis: string;
+  representativeQuote?: RepresentativeQuote;
   summary: string;
   workIds: string[];
   placeLinks: Array<{ placeId: string; role: string }>;

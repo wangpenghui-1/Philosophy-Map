@@ -31,6 +31,21 @@
   ],
   "guidingQuestion": "公共自由如何在人们共同言说和行动时出现？",
   "thesis": "政治不只是治理技术，而是不同的人在共享世界中行动、承诺和开始新事物。",
+  "representativeQuote": {
+    "text": "Man cannot be free if he does not know that he is subject to necessity, because his freedom is always won in his never wholly successful attempts to liberate himself from necessity.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "如果人不知道自己受制于必然性，他就不可能自由；自由总是在那些从未完全成功的、摆脱必然性的努力中赢得的。",
+    "annotation": "阿伦特并未把自由理解为毫无条件，而是把它放在人不断回应必然性、开辟行动空间的过程中。",
+    "workId": "human-condition",
+    "sourceTitle": "The Human Condition",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 1958 年版第三部分第十六章定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-arendt-human-condition-1958",
+    "locator": "Part III, Chapter 16"
+  },
   "summary": "阿伦特是1906–1975活跃于欧洲—北美的现代政治思想思想人物，主要追问“公共自由如何在人们共同言说和行动时出现？”。其核心主张可概括为：政治不只是治理技术，而是不同的人在共享世界中行动、承诺和开始新事物。 本站以行动、多元、公共世界为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "origins-totalitarianism",
@@ -43,7 +58,8 @@
     }
   ],
   "sourceIds": [
-    "src-arendt"
+    "src-arendt",
+    "src-arendt-human-condition-1958"
   ],
   "citations": [
     {

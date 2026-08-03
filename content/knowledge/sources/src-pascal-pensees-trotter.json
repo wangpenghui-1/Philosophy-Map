@@ -1,0 +1,20 @@
+{
+  "id": "src-pascal-pensees-trotter",
+  "entityType": "source",
+  "title": "Pascal's Pensées",
+  "authors": [
+    "Blaise Pascal",
+    "W. F. Trotter (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "E. P. Dutton",
+  "year": 1908,
+  "defaultLocator": "Pensées, fragment 277 (Brunschvicg); 423 (Lafuma)",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

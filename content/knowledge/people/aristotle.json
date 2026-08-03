@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-aristotle"
+    "src-aristotle",
+    "src-aristotle-ethics-ross"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "For the things we have to learn before we can do them, we learn by doing them.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "grc",
+    "chineseTranslation": "凡是必须先学会才能做的事情，我们都是在实际去做的过程中学会的。",
+    "annotation": "这句话说明德性不是只靠讲授获得，而是在反复行动中养成，直接对应亚里士多德的实践伦理学。",
+    "workId": "nicomachean-ethics",
+    "sourceTitle": "The Nicomachean Ethics",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-aristotle-ethics-ross",
+    "locator": "Book II, chapter 1, 1103a32–b2",
+    "translator": "W. D. Ross",
+    "translationNote": "原作以古希腊文写成；此处展示 W. D. Ross 的英文译文。"
+  }
 }

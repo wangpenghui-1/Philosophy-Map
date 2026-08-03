@@ -37,7 +37,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-carnap-eso-1950"
   ],
   "citations": [
     {
@@ -103,5 +104,20 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The acceptance of a linguistic framework must not be regarded as implying a metaphysical doctrine concerning the reality of the entities in question.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "接受一种语言框架，不应被看作暗含了关于其中所谈实体是否实在的形而上学学说。",
+    "annotation": "卡尔纳普把本体论问题转化为语言框架的选择，主张依据清晰性和使用效果评价框架。",
+    "workId": "empiricism-semantics-ontology",
+    "sourceTitle": "Empiricism, Semantics, and Ontology",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-carnap-eso-1950",
+    "locator": "Conclusion, p. 40"
+  }
 }

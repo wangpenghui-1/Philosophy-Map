@@ -1,0 +1,20 @@
+{
+  "id": "src-quine-two-dogmas-1951",
+  "entityType": "source",
+  "title": "Two Dogmas of Empiricism",
+  "authors": [
+    "W. V. O. Quine"
+  ],
+  "sourceType": "primary-text",
+  "publication": "The Philosophical Review 60(1), 20–43",
+  "year": 1951,
+  "doi": "10.2307/2181906",
+  "defaultLocator": "Section 5, p. 42",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

@@ -26,6 +26,21 @@
   ],
   "guidingQuestion": "性别身份如何由重复规范产生又可能被改变？",
   "thesis": "性别不是内在本质，而由受规训的重复行动构成，重复也为偏移和抵抗留下空间。",
+  "representativeQuote": {
+    "text": "There is no gender identity behind the expressions of gender; that identity is performatively constituted by the very \"expressions\" that are said to be its results.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "性别表达背后并不存在一个预先完成的性别认同；恰恰是那些被说成结果的“表达”，以表演性的方式构成了认同。",
+    "annotation": "巴特勒拒绝把性别视为表达背后的固定本质，强调认同由可重复、也可能被偏移的行动构成。",
+    "workId": "gender-trouble",
+    "sourceTitle": "Gender Trouble",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已定位到 1990 年版相关段落，仍待补充精确页码并逐字复核。",
+    "sourceId": "src-butler-gender-trouble-1990",
+    "locator": "Chapter 1"
+  },
   "summary": "朱迪斯·巴特勒是美洲与加勒比性别与政治哲学的重要思想人物，主要追问“性别身份如何由重复规范产生又可能被改变？”。其思想以“性别操演”为入口，主张性别不是内在本质，而由受规训的重复行动构成，重复也为偏移和抵抗留下空间。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "gender-trouble"
@@ -37,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-butler-gender-trouble-1990"
   ],
   "citations": [
     {

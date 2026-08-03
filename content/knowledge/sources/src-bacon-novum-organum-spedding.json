@@ -1,0 +1,20 @@
+{
+  "id": "src-bacon-novum-organum-spedding",
+  "entityType": "source",
+  "title": "Novum Organum",
+  "authors": [
+    "Francis Bacon",
+    "James Spedding, Robert Leslie Ellis, and Douglas Denon Heath (translators)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "The Works of Francis Bacon, Volume IV, Longman",
+  "year": 1858,
+  "defaultLocator": "Book I, Aphorism I",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

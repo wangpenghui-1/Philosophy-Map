@@ -37,7 +37,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-schopenhauer-world-haldane-kemp"
   ],
   "citations": [
     {
@@ -108,5 +109,22 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The world is my idea.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "世界是我的表象。",
+    "annotation": "《作为意志和表象的世界》由此开篇：我们经验到的世界总已由主体的认识形式组织。",
+    "workId": "world-will-representation",
+    "sourceTitle": "The World as Will and Idea, Volume I",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-schopenhauer-world-haldane-kemp",
+    "locator": "Volume I, Book I, §1",
+    "translator": "R. B. Haldane and J. Kemp",
+    "translationNote": "原作以德文写成；此处展示 R. B. Haldane and J. Kemp 的英文译文。"
+  }
 }

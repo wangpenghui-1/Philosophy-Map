@@ -1,0 +1,21 @@
+{
+  "id": "src-marx-manifesto-moore",
+  "entityType": "source",
+  "title": "Manifesto of the Communist Party",
+  "authors": [
+    "Karl Marx",
+    "Friedrich Engels",
+    "Samuel Moore (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "William Reeves, authorized English translation edited by Friedrich Engels",
+  "year": 1888,
+  "defaultLocator": "Section I, opening sentence",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

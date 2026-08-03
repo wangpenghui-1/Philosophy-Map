@@ -1,0 +1,19 @@
+{
+  "id": "src-kant-groundwork-primary",
+  "entityType": "source",
+  "title": "Fundamental Principles of the Metaphysic of Morals",
+  "authors": [
+    "Immanuel Kant"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Project Gutenberg, eBook 5682",
+  "url": "https://www.gutenberg.org/files/5682/5682-h/5682-h.htm",
+  "defaultLocator": "Second Section; translated by Thomas Kingsmill Abbott",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

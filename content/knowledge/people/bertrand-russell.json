@@ -37,7 +37,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-russell-on-denoting-1905"
   ],
   "citations": [
     {
@@ -108,5 +109,20 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "A logical theory may be tested by its capacity for dealing with puzzles, and it is a wholesome plan, in thinking about logic, to stock the mind with as many puzzles as possible.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "一种逻辑理论可以用它处理难题的能力来检验；思考逻辑时，让头脑储备尽可能多的难题，是一种有益的方法。",
+    "annotation": "罗素把指称难题当作逻辑分析的试金石，借此揭示语法表面背后的命题结构。",
+    "workId": "on-denoting",
+    "sourceTitle": "On Denoting",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-russell-on-denoting-1905",
+    "locator": "Mind 14, no. 56, p. 484"
+  }
 }

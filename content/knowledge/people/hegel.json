@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-hegel"
+    "src-hegel",
+    "src-hegel-philosophy-right-dyde"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "What is reasonable is real; that which is real is reasonable.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "合乎理性的就是现实的；现实的就是合乎理性的。",
+    "annotation": "这句话要求哲学在现实制度中辨认理性的实现过程，并不等于为一切既成事实无条件辩护。",
+    "workId": "philosophy-right",
+    "sourceTitle": "Philosophy of Right",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-hegel-philosophy-right-dyde",
+    "locator": "Preface, pp. xxvii–xxviii",
+    "translator": "S. W. Dyde",
+    "translationNote": "原作以德文写成；此处展示 S. W. Dyde 的英文译文。"
+  }
 }

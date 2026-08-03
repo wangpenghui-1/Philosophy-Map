@@ -38,7 +38,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-bacon-novum-organum-spedding"
   ],
   "citations": [
     {
@@ -109,5 +110,22 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "Man, being the servant and interpreter of Nature, can do and understand so much and so much only as he has observed in fact or in thought of the course of nature.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "la",
+    "chineseTranslation": "人作为自然的仆人和解释者，只能在观察到自然过程的事实或思想范围内有所作为和理解。",
+    "annotation": "这条开篇格言把知识建立在对自然过程的观察之上，概括培根反对仓促演绎的经验方法。",
+    "workId": "novum-organum",
+    "sourceTitle": "Novum Organum",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-bacon-novum-organum-spedding",
+    "locator": "Book I, Aphorism I",
+    "translator": "James Spedding, Robert Leslie Ellis, and Douglas Denon Heath",
+    "translationNote": "原作以拉丁文写成；此处展示 James Spedding, Robert Leslie Ellis, and Douglas Denon Heath 的英文译文。"
+  }
 }

@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-aquinas"
+    "src-aquinas",
+    "src-aquinas-summa-dominican"
   ],
   "citations": [
     {
@@ -111,5 +112,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "Good is to be done and pursued, and evil is to be avoided.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "la",
+    "chineseTranslation": "善应当被实行和追求，恶应当被避免。",
+    "annotation": "阿奎那把这条原则视为实践理性的首要命令，由此展开自然法与具体善行的层级。",
+    "workId": "summa-theologiae",
+    "sourceTitle": "The Summa Theologica of St. Thomas Aquinas",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-aquinas-summa-dominican",
+    "locator": "Summa Theologiae, I–II, question 94, article 2, respondeo",
+    "translator": "Fathers of the English Dominican Province",
+    "translationNote": "原作以拉丁文写成；此处展示 Fathers of the English Dominican Province 的英文译文。"
+  }
 }

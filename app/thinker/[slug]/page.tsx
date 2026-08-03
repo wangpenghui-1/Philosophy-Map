@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CitationList, KnowledgePage, KnowledgeTierBadge, RelatedLinks } from "../../_components/knowledge/KnowledgeChrome";
 import KnowledgeReadingProgress from "../../_components/knowledge/KnowledgeReadingProgress";
+import RepresentativeQuote from "../../_components/RepresentativeQuote";
 import {
   getKnowledgePerson,
   knowledgeBase,
@@ -10,6 +11,7 @@ import {
   knowledgePersonById,
   knowledgeTraditionById,
   knowledgeWorkById,
+  knowledgeSourceById,
 } from "../../_data/knowledge";
 
 export function generateStaticParams() {
@@ -32,6 +34,9 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
   const thinkerIndex = knowledgeBase.people.findIndex((person) => person.id === thinker.id);
   const previousThinker = thinkerIndex > 0 ? knowledgeBase.people[thinkerIndex - 1] : null;
   const nextThinker = thinkerIndex < knowledgeBase.people.length - 1 ? knowledgeBase.people[thinkerIndex + 1] : null;
+  const representativeQuote = thinker.representativeQuote;
+  const quoteWork = representativeQuote?.workId ? knowledgeWorkById.get(representativeQuote.workId) : null;
+  const quoteSource = representativeQuote ? knowledgeSourceById.get(representativeQuote.sourceId) : null;
 
   return (
     <KnowledgePage>
@@ -54,6 +59,13 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
             <p>{thinker.primaryRegion} · {thinker.chronology.label}</p>
             <h1>{thinker.names.display}</h1>
             <h2>{thinker.names.english}{thinker.names.original ? ` · ${thinker.names.original}` : ""}</h2>
+            {representativeQuote ? (
+              <RepresentativeQuote
+                quote={representativeQuote}
+                sourceLabel={`${quoteWork?.title ?? representativeQuote.sourceTitle} · ${representativeQuote.locator}`}
+                sourceHref={quoteSource?.url}
+              />
+            ) : null}
             <p className="knowledge-article__lead">{thinker.summary}</p>
             <div className="knowledge-article__actions"><Link href={`/explore?thinker=${thinker.slug}`}>在3D地球中定位</Link><Link href={`/knowledge?q=${encodeURIComponent(thinker.names.display)}`}>查看相关条目</Link></div>
           </div>

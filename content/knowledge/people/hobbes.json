@@ -42,7 +42,8 @@
     }
   ],
   "sourceIds": [
-    "src-hobbes"
+    "src-hobbes",
+    "src-hobbes-leviathan-1651"
   ],
   "citations": [
     {
@@ -108,5 +109,20 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "Covenants, without the sword, are but words, and of no strength to secure a man at all.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "没有强制力量保障的契约不过是言辞，根本不足以确保任何人的安全。",
+    "annotation": "霍布斯以此说明契约必须由共同权力保障，和平不能只依赖彼此不稳定的善意。",
+    "workId": "leviathan",
+    "sourceTitle": "Leviathan",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-hobbes-leviathan-1651",
+    "locator": "Part II, chapter XVII"
+  }
 }

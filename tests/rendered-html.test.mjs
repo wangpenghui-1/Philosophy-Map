@@ -94,7 +94,7 @@ test("publishes the 210-person release while preserving the legacy corpus and re
   const release = JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8"));
   assert.equal(people.length, 210);
   assert.equal(relations.length, 27);
-  assert.equal(sources.length, 44);
+  assert.equal(sources.length, 94);
   assert.equal(new Set(people.map((person) => person.slug)).size, 210);
   assert.equal(release.members.length, 180);
   assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));

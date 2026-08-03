@@ -32,6 +32,22 @@
   ],
   "guidingQuestion": "意志为何会与自身冲突，时间又如何存在于心灵之中？",
   "thesis": "内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。",
+  "representativeQuote": {
+    "text": "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "la",
+    "chineseTranslation": "你为了你自己而创造了我们；我们的心在安息于你之前总是不安。",
+    "annotation": "《忏悔录》从人的内在不安出发，把欲望、自我认识与对上帝的追寻联系在一起。",
+    "workId": "confessions",
+    "sourceTitle": "《忏悔录》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-augustine-confessions-primary",
+    "locator": "第一卷第一章",
+    "translator": "E. B. Pusey",
+    "translationNote": "奥古斯丁以拉丁文写作；此处展示经核对的英文译文。"
+  },
   "summary": "奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。 本站以意志、时间、内在性为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "confessions",
@@ -44,7 +60,8 @@
     }
   ],
   "sourceIds": [
-    "src-augustine"
+    "src-augustine",
+    "src-augustine-confessions-primary"
   ],
   "citations": [
     {

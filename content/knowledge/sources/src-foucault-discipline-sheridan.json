@@ -1,0 +1,20 @@
+{
+  "id": "src-foucault-discipline-sheridan",
+  "entityType": "source",
+  "title": "Discipline and Punish: The Birth of the Prison",
+  "authors": [
+    "Michel Foucault",
+    "Alan Sheridan (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Pantheon Books",
+  "year": 1977,
+  "defaultLocator": "Part Three, chapter 3, “Panopticism”, p. 170",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

@@ -38,7 +38,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-heraclitus-kahn-b50"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "Listening not to me but to the Logos it is wise to agree that all things are one.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "grc",
+    "chineseTranslation": "不要听从我，而要听从逻各斯；明智之举是承认万物为一。",
+    "annotation": "这条残篇把变化中的对立统一归于共同的逻各斯，集中体现赫拉克利特对秩序与生成的理解。",
+    "workId": "heraclitus-fragments",
+    "sourceTitle": "The Art and Thought of Heraclitus",
+    "sourceType": "archival-source",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "赫拉克利特著作仅以残篇流传；此处依 Kahn 的残篇编排、英译和 Diels–Kranz 编号归引。",
+    "sourceId": "src-heraclitus-kahn-b50",
+    "locator": "Fragment L (Diels–Kranz B50), p. 45",
+    "translator": "Charles H. Kahn",
+    "translationNote": "原作以古希腊文写成；此处展示 Charles H. Kahn 的英文译文。"
+  }
 }

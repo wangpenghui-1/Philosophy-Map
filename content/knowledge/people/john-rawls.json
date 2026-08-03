@@ -27,6 +27,21 @@
   ],
   "guidingQuestion": "公平的社会基本制度应依据何种不偏私的原则选择？",
   "thesis": "思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。",
+  "representativeQuote": {
+    "text": "The principles of justice are chosen behind a veil of ignorance.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "正义原则是在无知之幕之后被选择的。",
+    "annotation": "无知之幕遮蔽阶级、天赋和身份等偶然优势，使参与者从更公平的位置选择社会基本原则。",
+    "workId": "theory-justice",
+    "sourceTitle": "A Theory of Justice",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按第一章第三节第 12 页定位，仍待与所用版本逐字复核。",
+    "sourceId": "src-rawls-theory-justice-1971",
+    "locator": "Chapter I, §3, p. 12"
+  },
   "summary": "罗尔斯是美洲与加勒比政治自由主义的重要思想人物，主要追问“公平的社会基本制度应依据何种不偏私的原则选择？”。其思想以“原初状态”为入口，主张思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "theory-justice"
@@ -38,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-rawls-theory-justice-1971"
   ],
   "citations": [
     {

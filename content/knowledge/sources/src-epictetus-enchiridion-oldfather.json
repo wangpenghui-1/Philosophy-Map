@@ -1,0 +1,20 @@
+{
+  "id": "src-epictetus-enchiridion-oldfather",
+  "entityType": "source",
+  "title": "Epictetus: Discourses, Books III–IV, Fragments, Encheiridion",
+  "authors": [
+    "Epictetus",
+    "W. A. Oldfather (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Loeb Classical Library 218, Harvard University Press",
+  "year": 1928,
+  "defaultLocator": "Enchiridion, §1.1",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

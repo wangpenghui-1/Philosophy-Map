@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-wollstonecraft"
+    "src-wollstonecraft",
+    "src-wollstonecraft-vindication-1792"
   ],
   "citations": [
     {
@@ -109,5 +110,20 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "The neglected education of my fellow-creatures is the grand source of the misery I deplore.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "我所痛惜的苦难，其最大的根源正是我的女性同胞所受到的教育忽视。",
+    "annotation": "沃斯通克拉夫特把女性的依附与软弱追溯到差异化教育，而不是把它们解释成自然本性。",
+    "workId": "vindication-woman",
+    "sourceTitle": "A Vindication of the Rights of Woman",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-wollstonecraft-vindication-1792",
+    "locator": "Introduction"
+  }
 }

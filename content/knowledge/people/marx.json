@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-marx"
+    "src-marx",
+    "src-marx-manifesto-moore"
   ],
   "citations": [
     {
@@ -109,5 +110,21 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "The history of all hitherto existing society is the history of class struggles.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "迄今一切社会的历史都是阶级斗争的历史。",
+    "annotation": "这句话以阶级冲突解释社会结构的历史变化，集中呈现马克思把观念放回物质关系和集体实践中的方法。",
+    "sourceTitle": "Manifesto of the Communist Party",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-marx-manifesto-moore",
+    "locator": "Section I, opening sentence",
+    "translator": "Samuel Moore",
+    "translationNote": "原作以德文写成；此处展示 Samuel Moore 的英文译文。"
+  }
 }

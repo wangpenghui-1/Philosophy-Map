@@ -38,7 +38,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-bentham-principles-1789"
   ],
   "citations": [
     {
@@ -109,5 +110,20 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "Nature has placed mankind under the governance of two sovereign masters, pain and pleasure.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "自然把人类置于两位至高主宰的统治之下：痛苦与快乐。",
+    "annotation": "边沁由痛苦与快乐出发衡量行动和制度，为功利主义的后果计算确立了基本尺度。",
+    "workId": "principles-morals-legislation",
+    "sourceTitle": "An Introduction to the Principles of Morals and Legislation",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-bentham-principles-1789",
+    "locator": "Chapter I, §1"
+  }
 }

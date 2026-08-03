@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "概念的意义如何通过可设想的实践效果澄清？",
   "thesis": "以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。",
+  "representativeQuote": {
+    "text": "I define a Sign as anything which is so determined by something else, called its Object, and so determines an effect upon a person, which effect I call its Interpretant, that the latter is thereby mediately determined by the former.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "我把符号定义为这样一种东西：它由另一事物——即对象——所决定，并在人那里产生一种我称为解释项的效果，而这个解释项又由对象间接决定。",
+    "annotation": "这一定义把符号、对象与解释项连接成过程，说明意义不是孤立标签，而是在解释活动中形成。",
+    "sourceTitle": "Letter to Victoria, Lady Welby",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 1908 年书信及 SS 80–81 定位，仍待与所引版本逐字复核。",
+    "sourceId": "src-peirce-welby-letter-1908",
+    "locator": "SS 80–81"
+  },
   "summary": "皮尔士是欧洲与地中海实用主义与符号学的重要思想人物，主要追问“概念的意义如何通过可设想的实践效果澄清？”。其思想以“实用主义准则”为入口，主张以实用主义准则和共同探究说明意义与信念，并用符号过程解释思维与世界的联系。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "peirce-papers"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-peirce-welby-letter-1908"
   ],
   "citations": [
     {

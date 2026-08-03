@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-kierkegaard"
+    "src-kierkegaard",
+    "src-kierkegaard-sickness-lowrie"
   ],
   "citations": [
     {
@@ -109,5 +110,21 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "The self is a relation which relates itself to its own self, or it is that in the relation which relates itself to its own self.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "da",
+    "chineseTranslation": "自我是一个与自身发生关系的关系，或者说，是这个关系中与自身发生关系的那一项。",
+    "annotation": "克尔凯郭尔把自我理解为必须主动承担的关系，而非现成实体；绝望正暴露这种关系的失调。",
+    "sourceTitle": "The Sickness Unto Death",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-kierkegaard-sickness-lowrie",
+    "locator": "Part I, A",
+    "translator": "Walter Lowrie",
+    "translationNote": "原作以丹麦文写成；此处展示 Walter Lowrie 的英文译文。"
+  }
 }

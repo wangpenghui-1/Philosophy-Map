@@ -26,6 +26,21 @@
   ],
   "guidingQuestion": "科学知识是否只通过连续积累而发展？",
   "thesis": "常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。",
+  "representativeQuote": {
+    "text": "Scientific revolutions are inaugurated by a growing sense... that an existing paradigm has ceased to function adequately in the exploration of an aspect of nature to which that paradigm itself had previously led the way.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "科学革命始于一种日益增强的感觉……现有范式在探索自然的某个方面时已经无法充分运作，而恰恰是这个范式先前把研究引向了那里。",
+    "annotation": "库恩把革命的起点放在范式内部积累的失效感：旧框架曾开辟问题，却逐渐无法处理自己带来的难题。",
+    "workId": "structure-scientific-revolutions",
+    "sourceTitle": "The Structure of Scientific Revolutions",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 2012 年版第 91 页定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-kuhn-structure-1962",
+    "locator": "p. 91 (2012 edition)"
+  },
   "summary": "库恩是美洲与加勒比科学哲学的重要思想人物，主要追问“科学知识是否只通过连续积累而发展？”。其思想以“范式转换”为入口，主张常规科学在范式内解决难题，危机与革命则改变问题、标准和世界图景。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "structure-scientific-revolutions"
@@ -37,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-kuhn-structure-1962"
   ],
   "citations": [
     {

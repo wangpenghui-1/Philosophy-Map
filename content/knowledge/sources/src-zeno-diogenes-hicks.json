@@ -1,0 +1,20 @@
+{
+  "id": "src-zeno-diogenes-hicks",
+  "entityType": "source",
+  "title": "Lives of Eminent Philosophers, Volume II",
+  "authors": [
+    "Diogenes Laertius",
+    "R. D. Hicks (translator)"
+  ],
+  "sourceType": "archival-source",
+  "publication": "Loeb Classical Library 185, Harvard University Press",
+  "year": 1925,
+  "defaultLocator": "Book VII, §87 (SVF I.179)",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

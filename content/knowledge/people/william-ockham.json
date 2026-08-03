@@ -38,7 +38,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-ockham-summa-loux"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "Every universal is an intention of the soul, which, according to one probable opinion, does not differ from an act of understanding.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "la",
+    "chineseTranslation": "每一个普遍项都是心灵的意向；依一种很可能的观点，它与一次理解活动并无区别。",
+    "annotation": "这句话把普遍项安置在心灵和符号活动中，而不是当作心外独立实体，体现奥卡姆的唯名论。",
+    "workId": "summa-logicae",
+    "sourceTitle": "Ockham's Theory of Terms: Part I of the Summa Logicae",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-ockham-summa-loux",
+    "locator": "Summa Logicae, Part I, chapter 14",
+    "translator": "Michael J. Loux",
+    "translationNote": "原作以拉丁文写成；此处展示 Michael J. Loux 的英文译文。"
+  }
 }

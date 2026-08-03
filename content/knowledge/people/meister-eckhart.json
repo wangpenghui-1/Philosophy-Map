@@ -28,6 +28,22 @@
   ],
   "guidingQuestion": "心灵如何通过放下占有而向神圣根基敞开？",
   "thesis": "离执不是消极空无，而是放下自我意志，使灵魂深处与神性根基的生成相遇。",
+  "representativeQuote": {
+    "text": "Truth is something so noble that if God could turn aside from it, I could keep the truth and let God go.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "真理如此高贵：即使上帝能够偏离真理，我也会坚守真理而放下上帝。",
+    "annotation": "这句悖论把真理置于人对“上帝”概念的执著之上，逼迫信仰越过占有式想象而面向神性根基。",
+    "sourceTitle": "Meister Eckhart: A Modern Translation",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 Blakney 1941 年英译本第 240 页定位，仍待追溯具体德文讲道篇目。",
+    "sourceId": "src-eckhart-blakney-1941",
+    "locator": "p. 240",
+    "translator": "Raymond Bernard Blakney",
+    "translationNote": "艾克哈特以中古高地德语和拉丁语讲述或写作；此处展示 Blakney 的英文译文。"
+  },
   "summary": "艾克哈特是欧洲与地中海中世纪神秘哲学的重要思想人物，主要追问“心灵如何通过放下占有而向神圣根基敞开？”。其思想以“离执”为入口，主张离执不是消极空无，而是放下自我意志，使灵魂深处与神性根基的生成相遇。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "german-sermons-eckhart"
@@ -39,7 +55,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-eckhart-blakney-1941"
   ],
   "citations": [
     {

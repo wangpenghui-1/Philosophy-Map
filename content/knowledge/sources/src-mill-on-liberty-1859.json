@@ -1,0 +1,19 @@
+{
+  "id": "src-mill-on-liberty-1859",
+  "entityType": "source",
+  "title": "On Liberty",
+  "authors": [
+    "John Stuart Mill"
+  ],
+  "sourceType": "primary-text",
+  "publication": "John W. Parker and Son, London",
+  "year": 1859,
+  "defaultLocator": "Chapter I, paragraph 9",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

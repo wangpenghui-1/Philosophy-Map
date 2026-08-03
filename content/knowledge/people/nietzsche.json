@@ -32,6 +32,22 @@
   ],
   "guidingQuestion": "价值从何而来，谁从既有的善恶判断中获益？",
   "thesis": "价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。",
+  "representativeQuote": {
+    "text": "One must still have chaos in one, to give birth to a dancing star.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "一个人内心仍须拥有混沌，才能诞生一颗舞动的星。",
+    "annotation": "尼采用“混沌”与“星”描写自我超越和价值创造：新的可能往往从尚未被整齐秩序驯服的生命力量中产生。",
+    "workId": "zarathustra",
+    "sourceTitle": "《查拉图斯特拉如是说》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-nietzsche-zarathustra-primary",
+    "locator": "第一部·查拉图斯特拉的序言·第5节",
+    "translator": "Thomas Common",
+    "translationNote": "尼采以德文写作；此处展示经核对的英文译文。"
+  },
   "summary": "尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。 本站以谱系、价值、视角为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "genealogy-morality",
@@ -44,7 +60,8 @@
     }
   ],
   "sourceIds": [
-    "src-nietzsche"
+    "src-nietzsche",
+    "src-nietzsche-zarathustra-primary"
   ],
   "citations": [
     {

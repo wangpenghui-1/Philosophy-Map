@@ -39,7 +39,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-zeno-diogenes-hicks"
   ],
   "citations": [
     {
@@ -111,5 +112,22 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The end may be defined as life in accordance with nature, or, in other words, in accordance with our own human nature as well as that of the universe.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "grc",
+    "chineseTranslation": "人生目的可以界定为顺应自然地生活，也就是同时顺应我们自身的人性与宇宙的自然。",
+    "annotation": "这段古代证言把个人理性与宇宙秩序相连，概括了芝诺所奠定的斯多葛生活目标。",
+    "workId": "stoic-testimonia-zeno",
+    "sourceTitle": "Lives of Eminent Philosophers, Volume II",
+    "sourceType": "archival-source",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "芝诺著作大多散佚；此句由第欧根尼·拉尔修保存，依 Hicks 英译和标准证言编号归引。",
+    "sourceId": "src-zeno-diogenes-hicks",
+    "locator": "Book VII, §87 (SVF I.179)",
+    "translator": "R. D. Hicks",
+    "translationNote": "原作以古希腊文写成；此处展示 R. D. Hicks 的英文译文。"
+  }
 }

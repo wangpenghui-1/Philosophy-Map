@@ -37,7 +37,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-quine-two-dogmas-1951"
   ],
   "citations": [
     {
@@ -108,5 +109,20 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The unit of empirical significance is the whole of science.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "具有经验意义的单位，是整个科学体系。",
+    "annotation": "蒯因以知识整体承受经验检验，挑战每个命题都能孤立对应经验以及分析与综合绝对分离的看法。",
+    "workId": "two-dogmas",
+    "sourceTitle": "Two Dogmas of Empiricism",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-quine-two-dogmas-1951",
+    "locator": "Section 5, p. 42"
+  }
 }

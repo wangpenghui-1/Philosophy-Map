@@ -1,0 +1,20 @@
+{
+  "id": "src-heraclitus-kahn-b50",
+  "entityType": "source",
+  "title": "The Art and Thought of Heraclitus",
+  "authors": [
+    "Heraclitus",
+    "Charles H. Kahn (editor and translator)"
+  ],
+  "sourceType": "archival-source",
+  "publication": "Cambridge University Press",
+  "year": 1979,
+  "defaultLocator": "Fragment L (Diels–Kranz B50), p. 45",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

@@ -44,7 +44,8 @@
     }
   ],
   "sourceIds": [
-    "src-beauvoir"
+    "src-beauvoir",
+    "src-beauvoir-second-sex-parshley"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "One is not born, but rather becomes, a woman.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "fr",
+    "chineseTranslation": "女人不是天生的，而是后天形成的。",
+    "annotation": "波伏娃以此否定把性别当作固定自然本质，指出制度、教育和他者目光共同塑造女性处境。",
+    "workId": "second-sex",
+    "sourceTitle": "The Second Sex",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-beauvoir-second-sex-parshley",
+    "locator": "Volume II, Part One, chapter 1, p. 267",
+    "translator": "H. M. Parshley",
+    "translationNote": "原作以法文写成；此处展示 H. M. Parshley 的英文译文。"
+  }
 }

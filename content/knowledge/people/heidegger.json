@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-heidegger"
+    "src-heidegger",
+    "src-heidegger-being-time-macquarrie"
   ],
   "citations": [
     {
@@ -110,5 +111,22 @@
   "editedBy": "思想星图编辑组",
   "reviewedBy": "automated-migration-review/v1",
   "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "representativeQuote": {
+    "text": "Dasein is an entity which, in its very Being, comports itself understandingly towards that Being.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "de",
+    "chineseTranslation": "此在是一种存在者，它在自身的存在中总以理解的方式与这个存在发生关系。",
+    "annotation": "海德格尔借“此在”指出，人不是旁观世界的孤立主体，而总已在生活关系中理解自身的存在。",
+    "workId": "being-time",
+    "sourceTitle": "Being and Time",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-heidegger-being-time-macquarrie",
+    "locator": "§4, H.12",
+    "translator": "John Macquarrie and Edward Robinson",
+    "translationNote": "原作以德文写成；此处展示 John Macquarrie and Edward Robinson 的英文译文。"
+  }
 }

@@ -24,6 +24,7 @@ import {
 import { useAtlasStore, type AtlasMode } from "../_state/atlas-store";
 import type { EarthLightingMode } from "./GlobeCanvas";
 import ThinkerPortrait from "./ThinkerPortrait";
+import RepresentativeQuote from "./RepresentativeQuote";
 import { DisplaySettings, FocusDepthControl } from "./AtlasVisualControls";
 import {
   ATLAS_VISUAL_STORAGE_KEY,
@@ -188,6 +189,9 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
   if (!thinker) return null;
   const thinkerWorks = thinker.workIds.map((id) => workById.get(id)).filter(Boolean);
   const thinkerRelations = relations.filter((relation) => relation.from === thinker.id || relation.to === thinker.id);
+  const representativeQuote = thinker.representativeQuote;
+  const quoteWork = representativeQuote?.workId ? workById.get(representativeQuote.workId) : null;
+  const quoteSource = representativeQuote ? sourceById.get(representativeQuote.sourceId) : null;
 
   return (
     <motion.article
@@ -210,6 +214,14 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
         <span>{thinker.anchors.map((anchor) => anchor.label).join(" · ")}</span>
       </div>
       <ThinkerPortrait thinker={thinker} variant="full" showNote />
+      {representativeQuote ? (
+        <RepresentativeQuote
+          quote={representativeQuote}
+          sourceLabel={`${quoteWork?.title ?? representativeQuote.sourceTitle} · ${representativeQuote.locator}`}
+          sourceHref={quoteSource?.url === "#" ? undefined : quoteSource?.url}
+          compact
+        />
+      ) : null}
       <section className="detail-card__statement">
         <small>他／她试图回答</small>
         <h3>{thinker.question}</h3>

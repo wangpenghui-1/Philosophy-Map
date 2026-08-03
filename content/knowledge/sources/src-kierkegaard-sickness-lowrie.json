@@ -1,0 +1,20 @@
+{
+  "id": "src-kierkegaard-sickness-lowrie",
+  "entityType": "source",
+  "title": "The Sickness Unto Death",
+  "authors": [
+    "Søren Kierkegaard",
+    "Walter Lowrie (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Princeton University Press",
+  "year": 1941,
+  "defaultLocator": "Part I, A",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

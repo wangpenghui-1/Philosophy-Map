@@ -32,6 +32,23 @@
   ],
   "guidingQuestion": "未经反省的生活为何不值得过？",
   "thesis": "承认无知并持续追问，是照料灵魂和检验公共意见的起点。",
+  "representativeQuote": {
+    "text": "The life which is unexamined is not worth living.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "el",
+    "chineseTranslation": "未经审视的人生不值得过。",
+    "annotation": "苏格拉底把持续追问自己的信念与行为视为人的重要责任；这句话由柏拉图在《申辩》中记录。",
+    "workId": "apology",
+    "sourceTitle": "柏拉图《申辩》",
+    "sourceType": "archival-source",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "苏格拉底没有留下著作；此句由柏拉图在《申辩》中记载。",
+    "sourceId": "src-plato-apology-primary",
+    "locator": "38a",
+    "translator": "Benjamin Jowett",
+    "translationNote": "苏格拉底没有留下著作；此处为柏拉图文本的英文译文。"
+  },
   "summary": "苏格拉底是约公元前470–399活跃于地中海的古希腊哲学思想人物，主要追问“未经反省的生活为何不值得过？”。其核心主张可概括为：承认无知并持续追问，是照料灵魂和检验公共意见的起点。 本站以诘问、无知、德性为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "apology"
@@ -43,7 +60,8 @@
     }
   ],
   "sourceIds": [
-    "src-socrates"
+    "src-socrates",
+    "src-plato-apology-primary"
   ],
   "citations": [
     {

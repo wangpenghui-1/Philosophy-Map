@@ -1,0 +1,19 @@
+{
+  "id": "src-hobbes-leviathan-1651",
+  "entityType": "source",
+  "title": "Leviathan",
+  "authors": [
+    "Thomas Hobbes"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Andrew Crooke, London",
+  "year": 1651,
+  "defaultLocator": "Part II, chapter XVII",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

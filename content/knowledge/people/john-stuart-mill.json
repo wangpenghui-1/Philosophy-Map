@@ -38,7 +38,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-mill-on-liberty-1859"
   ],
   "citations": [
     {
@@ -109,5 +110,20 @@
   "editedBy": "思想星图自动编辑流水线",
   "reviewedBy": "automated-editorial-review/v2",
   "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "representativeQuote": {
+    "text": "The only purpose for which power can be rightfully exercised over any member of a civilized community, against his will, is to prevent harm to others.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "违背一个文明共同体成员的意愿而正当地对他行使权力，唯一目的只能是防止他伤害他人。",
+    "annotation": "这就是密尔的伤害原则：社会强制须以防止对他人造成伤害为边界，同时保护个性发展。",
+    "workId": "on-liberty",
+    "sourceTitle": "On Liberty",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-mill-on-liberty-1859",
+    "locator": "Chapter I, paragraph 9"
+  }
 }

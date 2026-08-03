@@ -1,0 +1,20 @@
+{
+  "id": "src-aristotle-ethics-ross",
+  "entityType": "source",
+  "title": "The Nicomachean Ethics",
+  "authors": [
+    "Aristotle",
+    "W. D. Ross (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Oxford University Press",
+  "year": 1925,
+  "defaultLocator": "Book II, chapter 1, 1103a32–b2",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "western-core-quote-source-review/v1",
+  "lastReviewedAt": "2026-08-03"
+}

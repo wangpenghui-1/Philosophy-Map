@@ -2,7 +2,9 @@
   "id": "src-rawls-theory-justice-1971",
   "entityType": "source",
   "title": "A Theory of Justice",
-  "authors": ["John Rawls"],
+  "authors": [
+    "John Rawls"
+  ],
   "sourceType": "primary-text",
   "publication": "Harvard University Press",
   "year": 1971,

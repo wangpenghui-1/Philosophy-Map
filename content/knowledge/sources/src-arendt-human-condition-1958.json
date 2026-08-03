@@ -2,7 +2,9 @@
   "id": "src-arendt-human-condition-1958",
   "entityType": "source",
   "title": "The Human Condition",
-  "authors": ["Hannah Arendt"],
+  "authors": [
+    "Hannah Arendt"
+  ],
   "sourceType": "primary-text",
   "publication": "University of Chicago Press",
   "year": 1958,

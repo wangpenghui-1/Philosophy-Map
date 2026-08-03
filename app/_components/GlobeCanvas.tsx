@@ -1509,7 +1509,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           gl.toneMappingExposure = props.earthMode === "night" ? 1.02 : 0.94;
           gl.domElement.addEventListener("webglcontextlost", (event) => {
             event.preventDefault();
-            cachedWebgl2Availability = false;
+            // React Three Fiber intentionally loses the current context while
+            // disposing an unmounted canvas. That does not mean the browser
+            // lacks WebGL2, so force the next mount to probe a fresh canvas.
+            cachedWebgl2Availability = null;
             setWebgl2Available(false);
           }, { once: true });
         }}

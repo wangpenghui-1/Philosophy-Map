@@ -2,7 +2,10 @@
   "id": "src-eckhart-blakney-1941",
   "entityType": "source",
   "title": "Meister Eckhart: A Modern Translation",
-  "authors": ["Meister Eckhart", "Raymond Bernard Blakney (translator)"],
+  "authors": [
+    "Meister Eckhart",
+    "Raymond Bernard Blakney (translator)"
+  ],
   "sourceType": "primary-text",
   "publication": "Harper & Brothers",
   "year": 1941,

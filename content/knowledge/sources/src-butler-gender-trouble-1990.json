@@ -2,7 +2,9 @@
   "id": "src-butler-gender-trouble-1990",
   "entityType": "source",
   "title": "Gender Trouble",
-  "authors": ["Judith Butler"],
+  "authors": [
+    "Judith Butler"
+  ],
   "sourceType": "primary-text",
   "publication": "Routledge",
   "year": 1990,

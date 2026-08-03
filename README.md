@@ -49,12 +49,14 @@
 
 ## 技术基线
 
-- React 19、TypeScript、Vite/Vinext静态部署结构
+- React 19、Next.js 16 App Router、TypeScript
 - Three.js r184、React Three Fiber 9、WebGL2
 - GSAP负责3D镜头，Motion负责DOM微交互
 - Zustand共享故事与探索状态
 - world-atlas与TopoJSON生成球面历史空间轮廓
-- Cloudflare Sites静态托管
+- Vercel原生Next.js构建，GitHub PR自动生成Preview，`main`负责Production
+
+部署、环境变量、持续集成与回滚约定见 `docs/DEPLOYMENT.md`。
 
 ## 本地验证
 

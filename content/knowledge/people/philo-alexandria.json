@@ -27,6 +27,23 @@
   ],
   "guidingQuestion": "经典叙事如何与希腊哲学的理性概念协调？",
   "thesis": "寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。",
+  "representativeQuote": {
+    "text": "Time is a thing posterior to the world. Therefore it would be correctly said that the world was not created in time, but that time had its existence in consequence of the world.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "grc",
+    "chineseTranslation": "时间晚于世界。因此更准确的说法是：世界并非在时间中被创造，而是时间因世界而获得存在。",
+    "annotation": "斐洛借寓意解释超越按日计时的创世想象，把时间理解为随宇宙秩序而出现的结果。",
+    "workId": "philo-works",
+    "sourceTitle": "Allegories of the Sacred Laws",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 Yonge 英译本第一卷第二节定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-philo-yonge-allegories",
+    "locator": "Book I, §2, pp. 52–53",
+    "translator": "C. D. Yonge",
+    "translationNote": "斐洛以古希腊文写作；此处展示 C. D. Yonge 的英文译文。"
+  },
   "summary": "斐洛是西亚、中亚及伊斯兰思想世界希腊化犹太哲学的重要思想人物，主要追问“经典叙事如何与希腊哲学的理性概念协调？”。其思想以“寓意解释”为入口，主张寓意解释揭示律法的哲学层次，逻各斯连接超越的神与可理解世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "philo-works"
@@ -38,7 +55,8 @@
     }
   ],
   "sourceIds": [
-    "src-history-jewish-philosophy"
+    "src-history-jewish-philosophy",
+    "src-philo-yonge-allegories"
   ],
   "citations": [
     {

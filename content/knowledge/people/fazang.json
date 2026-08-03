@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "每一事物如何同时保持差异又与整体互相涵摄？",
   "thesis": "法界缘起以事事无碍说明现象彼此依存并相互映现的结构。",
+  "representativeQuote": {
+    "text": "金無自性，隨工巧匠緣，遂有師子相起。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "金本身没有固定不变的形态，随着工匠制作的条件，才显现出狮子的形相。",
+    "annotation": "金与狮子之喻说明事物没有孤立自性，具体形态由条件共同成就，却又不离其所依的整体。",
+    "workId": "essay-golden-lion",
+    "sourceTitle": "《华严金师子章》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-fazang-golden-lion-primary",
+    "locator": "第一·明缘起"
+  },
   "summary": "法藏是东亚华严宗的重要思想人物，主要追问“每一事物如何同时保持差异又与整体互相涵摄？”。其思想以“法界缘起”为入口，主张法界缘起以事事无碍说明现象彼此依存并相互映现的结构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "essay-golden-lion"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-fazang-golden-lion-primary"
   ],
   "citations": [
     {

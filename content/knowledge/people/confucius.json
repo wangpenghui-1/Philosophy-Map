@@ -32,6 +32,20 @@
   ],
   "guidingQuestion": "一个人如何在关系与共同生活中成为更好的人？",
   "thesis": "以礼与仁的日常实践，塑造能够承担关系责任的人。",
+  "representativeQuote": {
+    "text": "己所不欲，勿施於人。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "自己不愿承受的事情，也不要施加给别人。",
+    "annotation": "这句话以“恕”说明关系伦理：判断自己的行为时，要把他人的感受与处境纳入考虑。",
+    "workId": "analects",
+    "sourceTitle": "《论语》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-analects-primary",
+    "locator": "《卫灵公》第24章"
+  },
   "summary": "孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。 本站以仁、礼、修身为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "analects"
@@ -43,7 +57,8 @@
     }
   ],
   "sourceIds": [
-    "src-confucius"
+    "src-confucius",
+    "src-analects-primary"
   ],
   "citations": [
     {

@@ -27,6 +27,21 @@
   ],
   "guidingQuestion": "知识、宗教与政治责任如何扎根于具体土地关系？",
   "thesis": "原住民思想以地方、亲属和条约关系纠正抽象普遍主义，并批判殖民知识制度。",
+  "representativeQuote": {
+    "text": "The breakup of Christianity during the Reformation into national churches and the proliferation of denominations today would seem to indicate that a religious universality cannot be successfully maintained across racial and ethnic lines. ... Ethnicity will almost always triumph.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "宗教改革后基督教分裂为各民族教会，以及今日教派不断增多，似乎表明宗教的普遍性无法跨越种族与族群界线而稳定维持……族群关系几乎总会占上风。",
+    "annotation": "德洛里亚以历史经验质疑脱离地方和族群关系的抽象普遍主义，强调思想必须面对具体共同体。",
+    "workId": "god-is-red",
+    "sourceTitle": "God Is Red",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 1973 年版第 209 页定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-deloria-god-is-red-1973",
+    "locator": "p. 209"
+  },
   "summary": "瓦因·德洛里亚是美洲与加勒比北美原住民思想的重要思想人物，主要追问“知识、宗教与政治责任如何扎根于具体土地关系？”。其思想以“关系性土地”为入口，主张原住民思想以地方、亲属和条约关系纠正抽象普遍主义，并批判殖民知识制度。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "god-is-red"
@@ -38,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-indigenous-philosophy"
+    "src-routledge-indigenous-philosophy",
+    "src-deloria-god-is-red-1973"
   ],
   "citations": [
     {

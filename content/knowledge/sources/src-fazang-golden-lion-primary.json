@@ -1,0 +1,19 @@
+{
+  "id": "src-fazang-golden-lion-primary",
+  "entityType": "source",
+  "title": "《华严金师子章》",
+  "authors": [
+    "法藏"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/華嚴金師子章",
+  "defaultLocator": "第一·明缘起",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

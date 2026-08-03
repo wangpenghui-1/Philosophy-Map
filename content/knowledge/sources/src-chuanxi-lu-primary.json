@@ -1,0 +1,19 @@
+{
+  "id": "src-chuanxi-lu-primary",
+  "entityType": "source",
+  "title": "《传习录》卷上",
+  "authors": [
+    "王守仁"
+  ],
+  "sourceType": "primary-text",
+  "publication": "维基文库",
+  "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%8A",
+  "defaultLocator": "卷上·徐爱录·知行合一问答",
+  "language": "zh",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

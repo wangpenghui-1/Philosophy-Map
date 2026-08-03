@@ -1,0 +1,19 @@
+{
+  "id": "src-zhuangzi-primary",
+  "entityType": "source",
+  "title": "《庄子·齐物论》",
+  "authors": [
+    "庄周及其后学（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中国哲学书电子化计划",
+  "url": "https://ctext.org/zhuangzi/adjustment-of-controversies/zh",
+  "defaultLocator": "内篇《齐物论》第9节",
+  "language": "zh",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

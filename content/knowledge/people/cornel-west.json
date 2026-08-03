@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "民主批判如何结合历史苦难、宗教希望和公共行动？",
   "thesis": "先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。",
+  "representativeQuote": {
+    "text": "To be an intellectual really means to speak a truth that allows suffering to speak.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "成为知识分子，真正意味着说出一种能让苦难发声的真理。",
+    "annotation": "韦斯特以受苦者能否被听见检验公共言说，把知识分子的批判责任与民主关怀连在一起。",
+    "sourceTitle": "“Chekhov, Coltrane, and Democracy”",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按《The Cornel West Reader》第 551 页定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-west-chekhov-coltrane-democracy",
+    "locator": "p. 551"
+  },
   "summary": "科内尔·韦斯特是美洲与加勒比实用主义与种族思想的重要思想人物，主要追问“民主批判如何结合历史苦难、宗教希望和公共行动？”。其思想以“先知实用主义”为入口，主张先知实用主义以受压迫者经验检验民主承诺，并把批判、同情与集体行动结合。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "race-matters"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-west-chekhov-coltrane-democracy"
   ],
   "citations": [
     {

@@ -28,6 +28,21 @@
   ],
   "guidingQuestion": "人的道德秩序如何通过学习和制度形成？",
   "thesis": "人的自然倾向需要由礼义、师法和有意识的实践加以转化。",
+  "representativeQuote": {
+    "text": "人之性惡，其善者偽也。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "人的天生性情若任其发展会造成争夺；其中的善，是后天有意识实践和教化的成果。",
+    "annotation": "“伪”在这里指人为努力而非虚假；荀子借此强调礼义、学习和习惯对人的转化作用。",
+    "workId": "xunzi-text",
+    "sourceTitle": "《荀子·性恶》",
+    "sourceType": "primary-text",
+    "verificationStatus": "traditional-attribution",
+    "attributionNote": "《荀子》为荀子著述与后学编纂形成的文集，按荀子传统归属展示。",
+    "sourceId": "src-xunzi-xinge-primary",
+    "locator": "《性恶》篇首"
+  },
   "summary": "荀子是东亚儒家的重要思想人物，主要追问“人的道德秩序如何通过学习和制度形成？”。其思想以“性恶”为入口，主张人的自然倾向需要由礼义、师法和有意识的实践加以转化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "xunzi-text"
@@ -39,7 +54,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-xunzi-xinge-primary"
   ],
   "citations": [
     {

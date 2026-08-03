@@ -1,0 +1,19 @@
+{
+  "id": "src-dai-zhen-mengzi-meaning-primary",
+  "entityType": "source",
+  "title": "《孟子字义疏证》",
+  "authors": [
+    "戴震"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/孟子字義疏證",
+  "defaultLocator": "卷上·理",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

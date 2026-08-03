@@ -1,0 +1,19 @@
+{
+  "id": "src-mozi-jianai-primary",
+  "entityType": "source",
+  "title": "《墨子·兼爱中》",
+  "authors": [
+    "墨子及墨家后学（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/墨子/兼愛中",
+  "defaultLocator": "《兼爱中》",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

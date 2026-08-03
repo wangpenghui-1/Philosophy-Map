@@ -1,0 +1,19 @@
+{
+  "id": "src-deloria-god-is-red-1973",
+  "entityType": "source",
+  "title": "God Is Red",
+  "authors": [
+    "Vine Deloria Jr."
+  ],
+  "sourceType": "primary-text",
+  "publication": "Grosset & Dunlap",
+  "year": 1973,
+  "defaultLocator": "p. 209",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-attribution-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

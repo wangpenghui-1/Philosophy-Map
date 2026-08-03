@@ -1,0 +1,20 @@
+{
+  "id": "src-zhiyi-mohe-zhiguan-archival",
+  "entityType": "source",
+  "title": "《摩诃止观》",
+  "authors": [
+    "智顗讲述",
+    "灌顶记录"
+  ],
+  "sourceType": "archival-source",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/摩訶止觀/卷005",
+  "defaultLocator": "卷五上·观不思议境",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

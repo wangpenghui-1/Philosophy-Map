@@ -1,0 +1,19 @@
+{
+  "id": "src-analects-primary",
+  "entityType": "source",
+  "title": "《论语·卫灵公》",
+  "authors": [
+    "孔子弟子及再传弟子（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中国哲学书电子化计划",
+  "url": "https://ctext.org/analects/wei-ling-gong/zh",
+  "defaultLocator": "《卫灵公》第24章",
+  "language": "zh",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "Codex 原典核对/2026-08-02",
+  "lastReviewedAt": "2026-08-02"
+}

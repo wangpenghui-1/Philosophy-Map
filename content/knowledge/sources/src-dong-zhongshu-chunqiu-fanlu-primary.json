@@ -1,0 +1,19 @@
+{
+  "id": "src-dong-zhongshu-chunqiu-fanlu-primary",
+  "entityType": "source",
+  "title": "《春秋繁露》",
+  "authors": [
+    "董仲舒（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/春秋繁露/卷10",
+  "defaultLocator": "卷十·深察名号",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

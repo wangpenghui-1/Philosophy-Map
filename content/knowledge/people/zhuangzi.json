@@ -32,6 +32,21 @@
   ],
   "guidingQuestion": "当语言和立场不断变化，我们如何保存行动与生命的自由？",
   "thesis": "松动固执的区分，从多重视角理解变化中的世界。",
+  "representativeQuote": {
+    "text": "天地與我並生，而萬物與我為一。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "天地与我一同存在，万物与我原本处在同一个整体之中。",
+    "annotation": "这句话松动人与万物之间的绝对界限，呈现《齐物论》超越固定尺度、从整体观看差异的思想。",
+    "workId": "zhuangzi-text",
+    "sourceTitle": "《庄子》",
+    "sourceType": "primary-text",
+    "verificationStatus": "traditional-attribution",
+    "attributionNote": "《庄子》为多层次编纂文本；此句见内篇《齐物论》，按庄子传统归属展示。",
+    "sourceId": "src-zhuangzi-primary",
+    "locator": "内篇《齐物论》第9节"
+  },
   "summary": "庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。 本站以道、逍遥、齐物为入口，连接其代表文本、思想关系与学术来源。",
   "workIds": [
     "zhuangzi-text"
@@ -43,7 +58,8 @@
     }
   ],
   "sourceIds": [
-    "src-zhuangzi"
+    "src-zhuangzi",
+    "src-zhuangzi-primary"
   ],
   "citations": [
     {

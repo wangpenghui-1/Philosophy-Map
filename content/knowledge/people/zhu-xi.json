@@ -27,6 +27,19 @@
   ],
   "guidingQuestion": "道德知识如何通过理解事物之理逐步形成？",
   "thesis": "格物、读书和涵养相互配合，使心对理的认识落实为日常伦理实践。",
+  "representativeQuote": {
+    "text": "所謂致知在格物者，言欲致吾之知，在即物而窮其理也。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "所谓通过格物达到知识，就是说要扩充自己的认识，必须接触具体事物并穷究其中的道理。",
+    "annotation": "朱熹把认识过程落实到对具体事物的持续探究中，使格物、读书与道德修养形成连续实践。",
+    "sourceTitle": "《大学章句》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-zhu-xi-daxue-zhangju-primary",
+    "locator": "第五章·补格物传"
+  },
   "summary": "朱熹是东亚理学的重要思想人物，主要追问“道德知识如何通过理解事物之理逐步形成？”。其思想以“格物致知”为入口，主张格物、读书和涵养相互配合，使心对理的认识落实为日常伦理实践。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "reflections-things-hand"
@@ -38,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-zhu-xi-daxue-zhangju-primary"
   ],
   "citations": [
     {

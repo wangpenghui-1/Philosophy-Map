@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "现代国家的公民主体如何由教育和公共讨论塑造？",
   "thesis": "政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。",
+  "representativeQuote": {
+    "text": "吾今欲極言新民為當務之急，其立論之根柢有二：一曰關於內治者，一曰關於外交者。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "我现在要极力说明，培养新民是最紧迫的任务；这一判断有两个根据：一是国内治理，一是对外关系。",
+    "annotation": "梁启超把国家更新的起点放在国民自身，使政治制度、公共责任与世界处境成为彼此关联的问题。",
+    "workId": "xinmin-shuo",
+    "sourceTitle": "《新民说》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-liang-qichao-xinmin-primary",
+    "locator": "第二节·论新民为今日中国第一急务"
+  },
   "summary": "梁启超是东亚近代政治思想的重要思想人物，主要追问“现代国家的公民主体如何由教育和公共讨论塑造？”。其思想以“新民”为入口，主张政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "xinmin-shuo"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-liang-qichao-xinmin-primary"
   ],
   "citations": [
     {

@@ -1,6 +1,23 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 19.2727C22 20.779 20.779 22 19.2727 22H14.7273C13.221 22 12 20.779 12 19.2727V12H19.2727C20.779 12 22 13.221 22 14.7273V19.2727Z" fill="#68C4FF"/>
-<path d="M20 2C21.1046 2 22 2.89543 22 4V7C22 8.10457 21.1046 9 20 9H17C15.8954 9 15 8.10457 15 7V4C15 2.89543 15.8954 2 17 2H20Z" fill="#0C79D8"/>
-<path d="M7 15C8.10457 15 9 15.8954 9 17V20C9 21.1046 8.10457 22 7 22H4C2.89543 22 2 21.1046 2 20V17C2 15.8954 2.89543 15 4 15H7Z" fill="#0C79D8"/>
-<path d="M12 12H4.72727C3.22104 12 2 10.779 2 9.27273V4.72727C2 3.22104 3.22104 2 4.72727 2H9.27273C10.779 2 12 3.22104 12 4.72727V12Z" fill="#2E9EFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">思想星图星轨印章</title>
+  <desc id="description">深黑底色、做旧黄铜星轨与象牙色字母 I 组成的圆形印章</desc>
+  <defs>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e1bd77"/>
+      <stop offset=".5" stop-color="#9b6f31"/>
+      <stop offset="1" stop-color="#d1a35c"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff7e6"/>
+      <stop offset="1" stop-color="#d9c9aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#080908"/>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="url(#bronze)" stroke-width="9"/>
+  <circle cx="256" cy="256" r="165" fill="none" stroke="url(#bronze)" stroke-width="7" stroke-dasharray="295 28 306 28 327 53" transform="rotate(-22 256 256)"/>
+  <circle cx="374" cy="141" r="11" fill="url(#bronze)"/>
+  <circle cx="91" cy="256" r="11" fill="url(#bronze)"/>
+  <circle cx="371" cy="374" r="11" fill="url(#bronze)"/>
+  <path fill="url(#ivory)" d="M174 146h164v38h-43v144h43v38H174v-38h43V184h-43z"/>
+  <path fill="url(#bronze)" d="M242 184h28v144h-28z"/>
 </svg>

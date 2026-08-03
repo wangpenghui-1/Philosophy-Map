@@ -8,6 +8,7 @@ import {
   initialAutoQuality,
   parsePersistedVisualState,
   percentile,
+  shouldDirectGlobeCamera,
   timelineDensity,
 } from "../app/_components/atlas-visual-policy.ts";
 import { createElevatedArcPoints, GLOBE_RADIUS } from "../app/_components/globe-visual-geometry.ts";
@@ -31,6 +32,13 @@ test("visual policy helpers remain deterministic", () => {
   assert.equal(detailSheetSnapFromProgress(0.5), "half");
   assert.equal(detailSheetSnapFromProgress(0.9), "full");
   assert.deepEqual(timelineDensity([-600, 0, 1000, 2026], -600, 2026, 4), [1, 0, 0.5, 0.5]);
+});
+
+test("exploration camera only directs toward an explicit selection", () => {
+  assert.equal(shouldDirectGlobeCamera("explore", null, null), false);
+  assert.equal(shouldDirectGlobeCamera("explore", "confucius", null), true);
+  assert.equal(shouldDirectGlobeCamera("explore", null, "confucius-laozi"), true);
+  assert.equal(shouldDirectGlobeCamera("story", null, null), true);
 });
 
 test("focus depth includes the selected thinker and deterministic graph hops", () => {

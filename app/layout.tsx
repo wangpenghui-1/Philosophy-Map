@@ -16,9 +16,17 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: "在一个可进入的3D地球与210人物知识库中，沿着问题、文本与有来源的关系探索世界哲学。",
     keywords: ["哲学", "思想史", "3D地球", "互动叙事", "Atlas of Ideas"],
+    manifest: "/site.webmanifest",
     icons: {
-      icon: "/globe.svg",
-      shortcut: "/globe.svg",
+      icon: [
+        { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      ],
+      shortcut: "/favicon.ico",
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+      other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#b78e50" }],
     },
     openGraph: {
       title: "思想星图 · Atlas of Ideas",

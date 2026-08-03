@@ -933,6 +933,16 @@ export default function AtlasApp({
     setCameraSnapshot(snapshot);
   }, []);
 
+  const handleWebglRuntimeFallback = useCallback(() => {
+    autoQualityRef.current = {
+      quality: "low",
+      aboveBudgetSince: null,
+      belowBudgetSince: null,
+      lastChangeAt: performance.now(),
+    };
+    setQuality("low");
+  }, [setQuality]);
+
   const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);
 
   const handleSelectThinker = useCallback((id: string | null) => {
@@ -1045,6 +1055,7 @@ export default function AtlasApp({
                 onSelectThinker={handleSelectThinker}
                 onSelectRelation={handleSelectRelation}
                 onFallback={openSemanticExplorer}
+                onRuntimeFallback={handleWebglRuntimeFallback}
                 onCameraSnapshotChange={handleCameraSnapshotChange}
                 onPerformanceSample={handlePerformanceSample}
               />

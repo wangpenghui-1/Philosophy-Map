@@ -165,7 +165,7 @@ test("text explorer portraits keep their vertical frames without cropping", asyn
   }
 });
 
-test("WebGL2 failure automatically opens the complete text fallback", async ({ page }) => {
+test("WebGL2 failure stays on the globe fallback until text exploration is requested", async ({ page }) => {
   await page.addInitScript(() => {
     const original = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, type: string, ...args: unknown[]) {
@@ -174,10 +174,30 @@ test("WebGL2 failure automatically opens the complete text fallback", async ({ p
     } as typeof HTMLCanvasElement.prototype.getContext;
   });
   await openHydrated(page, "/explore");
-  await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
-  await page.getByRole("button", { name: "返回地球" }).click();
+  await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
   await expect(page.getByText("3D渲染不可用")).toBeVisible();
-  await expect(page.getByRole("button", { name: "重新尝试3D" })).toBeVisible();
+  await page.getByRole("button", { name: "重新尝试3D" }).click();
+  await expect(page.getByText("本次恢复未成功，请稍后再试。")).toBeVisible();
+  await page.locator(".globe-fallback").getByRole("button", { name: "打开文字探索" }).click();
+  await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
+});
+
+test("runtime WebGL loss remains in place and retry remounts the canvas", async ({ page }) => {
+  await openHydrated(page, "/explore");
+  const canvas = page.locator("canvas");
+  await expect(canvas).toBeVisible();
+  await expect(canvas).toHaveAttribute("data-webgl-lifecycle", "ready");
+  await canvas.evaluate((element) => { element.dataset.contextProbe = "before-retry"; });
+  await canvas.evaluate((element) => {
+    element.dispatchEvent(new Event("webglcontextlost", { cancelable: true }));
+  });
+
+  await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
+  await expect(page.getByText("3D渲染暂时中断")).toBeVisible();
+  await page.getByRole("button", { name: "重新尝试3D" }).click();
+  await expect(page.getByText("3D渲染暂时中断")).toBeHidden();
+  await expect(page.locator("canvas")).toBeVisible();
+  await expect(page.locator('canvas[data-context-probe="before-retry"]')).toHaveCount(0);
 });
 
 test("full detail portraits retain their source frames without cropping heads", async ({ page }) => {

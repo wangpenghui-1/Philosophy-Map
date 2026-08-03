@@ -1,0 +1,19 @@
+{
+  "id": "src-wang-fuzhi-zhouyi-waizhuan-primary",
+  "entityType": "source",
+  "title": "《周易外传》",
+  "authors": [
+    "王夫之"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/船山遺書/周易外傳卷五",
+  "defaultLocator": "卷五·系辞上传第二章",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

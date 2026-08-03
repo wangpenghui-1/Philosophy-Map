@@ -27,6 +27,20 @@
   ],
   "guidingQuestion": "道德知识为何必须在具体行动中得到验证？",
   "thesis": "良知是人人可自觉的道德判断能力，知与行只有在实践中才构成统一。",
+  "representativeQuote": {
+    "text": "知是行之始，行是知之成。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "知道是行动的开始，行动则使所知真正完成。",
+    "annotation": "王阳明并非把知道和行动排成两个阶段，而是强调真实的知识必然在实践中得到完成。",
+    "workId": "chuanxi-lu",
+    "sourceTitle": "《传习录》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-chuanxi-lu-primary",
+    "locator": "卷上·徐爱录·知行合一问答"
+  },
   "summary": "王阳明是东亚心学的重要思想人物，主要追问“道德知识为何必须在具体行动中得到验证？”。其思想以“致良知”为入口，主张良知是人人可自觉的道德判断能力，知与行只有在实践中才构成统一。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "chuanxi-lu"
@@ -38,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-chuanxi-lu-primary"
   ],
   "citations": [
     {

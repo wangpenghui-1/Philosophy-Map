@@ -1,0 +1,19 @@
+{
+  "id": "src-li-zhi-tongxin-primary",
+  "entityType": "source",
+  "title": "《焚书·童心说》",
+  "authors": [
+    "李贽"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/焚書/卷3",
+  "defaultLocator": "卷三·童心说",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

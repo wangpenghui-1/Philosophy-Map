@@ -27,6 +27,21 @@
   ],
   "guidingQuestion": "西方性别范畴能否直接解释非洲社会组织？",
   "thesis": "殖民前制度中的身份与权力并不总按二元生理性别排列，殖民治理重塑了性别结构。",
+  "representativeQuote": {
+    "text": "… a flexible gender system … meant … certain women could occupy roles and positions usually monopolized by men, and thereby exercise considerable power and authority over both men and women.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "……一种灵活的性别制度……意味着某些女性可以进入通常由男性垄断的角色和位置，从而对男性和女性都行使相当的权力与权威。",
+    "annotation": "阿马迪乌梅以制度材料说明社会角色并非总由二元生理性别决定，从而挑战殖民式的固定分类。",
+    "workId": "male-daughters-female-husbands",
+    "sourceTitle": "Male Daughters, Female Husbands",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 1987 年版第 40 页定位，仍待与该版正文逐字复核。",
+    "sourceId": "src-amadiume-male-daughters-1987",
+    "locator": "p. 40"
+  },
   "summary": "伊菲·阿马迪乌梅是非洲非洲女性主义的重要思想人物，主要追问“西方性别范畴能否直接解释非洲社会组织？”。其思想以“性别制度历史性”为入口，主张殖民前制度中的身份与权力并不总按二元生理性别排列，殖民治理重塑了性别结构。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "male-daughters-female-husbands"
@@ -38,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-african-philosophy"
+    "src-companion-african-philosophy",
+    "src-amadiume-male-daughters-1987"
   ],
   "citations": [
     {

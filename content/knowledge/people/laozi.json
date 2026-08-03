@@ -27,6 +27,21 @@
   ],
   "guidingQuestion": "秩序能否在减少强制和欲望中形成？",
   "thesis": "道的运作不依赖强制，人应以无为和朴素回应万物的自生变化。",
+  "representativeQuote": {
+    "text": "道常無為而無不為。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "道总是不以强制和造作行事，却没有什么不能自然成就。",
+    "annotation": "这句话以看似矛盾的方式说明“无为”：不是消极不动，而是不以人为强制阻断万物自身的生成。",
+    "workId": "daodejing",
+    "sourceTitle": "《道德经》",
+    "sourceType": "primary-text",
+    "verificationStatus": "traditional-attribution",
+    "attributionNote": "《道德经》经历长期传抄与版本演变，按老子传统归属展示。",
+    "sourceId": "src-laozi-daodejing-primary",
+    "locator": "第三十七章"
+  },
   "summary": "老子是东亚道家的重要思想人物，主要追问“秩序能否在减少强制和欲望中形成？”。其思想以“无为”为入口，主张道的运作不依赖强制，人应以无为和朴素回应万物的自生变化。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "daodejing"
@@ -38,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-laozi-daodejing-primary"
   ],
   "citations": [
     {

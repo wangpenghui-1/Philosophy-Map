@@ -28,6 +28,20 @@
   ],
   "guidingQuestion": "自由教育如何连接个人创造、自然与世界文化？",
   "thesis": "人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。",
+  "representativeQuote": {
+    "text": "The idea of the Nation is one of the most powerful anaesthetics that Man has invented.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "“民族国家”观念，是人类发明的最强效麻醉剂之一。",
+    "annotation": "泰戈尔警告民族主义会麻痹道德判断，使集体以国家名义合理化自利和暴力，压倒更普遍的人性。",
+    "sourceTitle": "“Nationalism in the West”",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已定位到 1917 年英文演讲文本，仍待与所用版本逐字复核。",
+    "sourceId": "src-tagore-nationalism-west-1917",
+    "locator": "lecture text"
+  },
   "summary": "泰戈尔是南亚现代印度人文思想的重要思想人物，主要追问“自由教育如何连接个人创造、自然与世界文化？”。其思想以“关系人文主义”为入口，主张人的实现来自与自然和他者的创造性关系，民族主义不能压倒普遍人性。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "religion-man"
@@ -39,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-encyclopedia-indian-philosophies",
+    "src-tagore-nationalism-west-1917"
   ],
   "citations": [
     {

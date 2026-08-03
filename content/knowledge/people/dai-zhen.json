@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "抽象道德原则为何可能压制人的真实情感与需要？",
   "thesis": "理存在于具体情欲和关系的恰当分寸中，不应成为权威压人的空洞名目。",
+  "representativeQuote": {
+    "text": "理也者，情之不爽失也；未有情不得而理得者也。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "所谓理，就是人的情感不偏差、不失当；不存在情感无法安顿而理反倒成立的情况。",
+    "annotation": "戴震把“理”放回真实情感与人际衡量之中，反对用脱离人情的抽象名目压制具体生命。",
+    "workId": "mengzi-zishu-zheng",
+    "sourceTitle": "《孟子字义疏证》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-dai-zhen-mengzi-meaning-primary",
+    "locator": "卷上·理"
+  },
   "summary": "戴震是东亚清代考据与哲学的重要思想人物，主要追问“抽象道德原则为何可能压制人的真实情感与需要？”。其思想以“理欲之辨”为入口，主张理存在于具体情欲和关系的恰当分寸中，不应成为权威压人的空洞名目。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "mengzi-zishu-zheng"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-dai-zhen-mengzi-meaning-primary"
   ],
   "citations": [
     {

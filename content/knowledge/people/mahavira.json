@@ -27,6 +27,23 @@
   ],
   "guidingQuestion": "生命如何通过严格伦理实践摆脱业的束缚？",
   "thesis": "不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。",
+  "representativeQuote": {
+    "text": "All breathing, existing, living, sentient creatures should not be slain, nor treated with violence, nor abused, nor tormented, nor driven away.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "prk",
+    "chineseTranslation": "一切呼吸着、存在着、有生命和有知觉的众生，都不应被杀害、遭受暴力、虐待、折磨或驱赶。",
+    "annotation": "这段戒律把不害扩展到一切有情生命，使非暴力成为修行、判断和日常行动的共同约束。",
+    "workId": "agamas-jain",
+    "sourceTitle": "Ācārāṅga Sūtra",
+    "sourceType": "archival-source",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "此句来自耆那教经典传统，并非筏驮摩那亲笔著作；按教团传承归属展示。",
+    "sourceId": "src-mahavira-acharanga-jacobi",
+    "locator": "Book I, Lecture 4, Lesson 1",
+    "translator": "Hermann Jacobi",
+    "translationNote": "原典为古代俗语传统；此处展示 Hermann Jacobi 的英文译文。"
+  },
   "summary": "筏驮摩那是南亚耆那教的重要思想人物，主要追问“生命如何通过严格伦理实践摆脱业的束缚？”。其思想以“不害”为入口，主张不害、非占有与多面真理观共同约束行动和判断，使灵魂趋向解脱。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "agamas-jain"
@@ -38,7 +55,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-encyclopedia-indian-philosophies",
+    "src-mahavira-acharanga-jacobi"
   ],
   "citations": [
     {

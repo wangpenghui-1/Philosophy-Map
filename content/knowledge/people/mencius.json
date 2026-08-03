@@ -28,6 +28,21 @@
   ],
   "guidingQuestion": "人的道德能力如何在政治与日常实践中生长？",
   "thesis": "人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。",
+  "representativeQuote": {
+    "text": "民為貴，社稷次之，君為輕。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "人民最为重要，国家政权其次，君主的地位最轻。",
+    "annotation": "这句话把政治秩序的价值次序落到人民福祉上，体现孟子以仁政约束君权的立场。",
+    "workId": "mencius-text",
+    "sourceTitle": "《孟子·尽心下》",
+    "sourceType": "primary-text",
+    "verificationStatus": "traditional-attribution",
+    "attributionNote": "《孟子》由孟子言论及后学编纂形成，按孟子传统归属展示。",
+    "sourceId": "src-mencius-jinxin-primary",
+    "locator": "第十四章"
+  },
   "summary": "孟子是东亚儒家的重要思想人物，主要追问“人的道德能力如何在政治与日常实践中生长？”。其思想以“性善”为入口，主张人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "mencius-text"
@@ -39,7 +54,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-mencius-jinxin-primary"
   ],
   "citations": [
     {

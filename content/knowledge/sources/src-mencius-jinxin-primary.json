@@ -1,0 +1,19 @@
+{
+  "id": "src-mencius-jinxin-primary",
+  "entityType": "source",
+  "title": "《孟子·尽心下》",
+  "authors": [
+    "孟子及后学（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/孟子/盡心下",
+  "defaultLocator": "第十四章",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

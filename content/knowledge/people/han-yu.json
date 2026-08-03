@@ -27,6 +27,20 @@
   ],
   "guidingQuestion": "儒家伦理如何面对佛道思想和帝国制度的挑战？",
   "thesis": "以仁义和道统重建儒学的公共正当性，并强调师道与古文的教化作用。",
+  "representativeQuote": {
+    "text": "博愛之謂仁，行而宜之之謂義，由是而之焉之謂道，足乎己、無待於外之謂德。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "广泛爱人叫作仁，行动合宜叫作义，由仁义而行叫作道，充足于自身而不依赖外在叫作德。",
+    "annotation": "韩愈以仁义重新界定道与德，为其重建儒家道统和公共教化秩序提供核心纲领。",
+    "workId": "yuan-dao",
+    "sourceTitle": "《原道》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-han-yu-yuandao-primary",
+    "locator": "首段"
+  },
   "summary": "韩愈是东亚儒学复兴的重要思想人物，主要追问“儒家伦理如何面对佛道思想和帝国制度的挑战？”。其思想以“道统”为入口，主张以仁义和道统重建儒学的公共正当性，并强调师道与古文的教化作用。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "yuan-dao"
@@ -38,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-han-yu-yuandao-primary"
   ],
   "citations": [
     {

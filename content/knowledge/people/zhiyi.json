@@ -26,6 +26,21 @@
   ],
   "guidingQuestion": "不同佛教教说如何在修行中形成可实践的整体？",
   "thesis": "以止观和教相判释统摄多样教法，说明一念之中具足相互依存的世界。",
+  "representativeQuote": {
+    "text": "夫一心具十法界。一法界又具十法界百法界。一界具三十種世間。百法界即具三千種世間。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "一念心具足十法界，每一法界又具足十法界而成百法界；每一界有三十种世间，因此百法界具足三千种世间。",
+    "annotation": "这段文字以层层互具说明“一念三千”：个别一念并非孤立，而与完整世界的关系结构相互包含。",
+    "workId": "mohe-zhiguan",
+    "sourceTitle": "《摩诃止观》",
+    "sourceType": "archival-source",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "《摩诃止观》由智顗讲述、弟子灌顶记录整理，此处按讲述者归属。",
+    "sourceId": "src-zhiyi-mohe-zhiguan-archival",
+    "locator": "卷五上·观不思议境"
+  },
   "summary": "智顗是东亚天台宗的重要思想人物，主要追问“不同佛教教说如何在修行中形成可实践的整体？”。其思想以“一念三千”为入口，主张以止观和教相判释统摄多样教法，说明一念之中具足相互依存的世界。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "mohe-zhiguan"
@@ -37,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-zhiyi-mohe-zhiguan-archival"
   ],
   "citations": [
     {

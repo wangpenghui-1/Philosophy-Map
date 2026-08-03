@@ -150,12 +150,50 @@ test("publishes the 210-person release while preserving the legacy corpus and re
   const release = JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8"));
   assert.equal(people.length, 210);
   assert.equal(relations.length, 27);
-  assert.equal(sources.length, 94);
+  assert.equal(sources.length, 123);
   assert.equal(new Set(people.map((person) => person.slug)).size, 210);
   assert.equal(release.members.length, 180);
   assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));
   assert.ok(release.members.every((member) => people.some((person) => person.id === member.personId)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
+});
+
+test("keeps representative quotations traceable to explicit source tiers", async () => {
+  const [people, works, sources] = await Promise.all([
+    readEntities("people"),
+    readEntities("works"),
+    readEntities("sources"),
+  ]);
+  const workIds = new Set(works.map((work) => work.id));
+  const sourceById = new Map(sources.map((source) => [source.id, source]));
+  const quotedPeople = people.filter((person) => person.representativeQuote);
+
+  assert.equal(quotedPeople.length, 79);
+  const quotedPersonIds = new Set(quotedPeople.map((person) => person.id));
+  assert.ok(
+    [
+      "achille-mbembe", "angela-davis", "arendt", "augustine", "charles-sanders-peirce", "confucius",
+      "cornel-west", "dai-zhen", "dong-zhongshu", "fazang", "frederick-douglass", "han-fei", "han-yu",
+      "ifi-amadiume", "jiddu-krishnamurti", "john-mbiti", "john-rawls", "judith-butler", "kant", "laozi",
+      "li-zhi", "liang-qichao", "locke", "mahavira", "maimonides", "meister-eckhart", "mencius", "mozi",
+      "nietzsche", "philo-alexandria", "rabindranath-tagore", "socrates", "thomas-kuhn", "vine-deloria-jr",
+      "wang-fuzhi", "wang-yangming", "xunzi", "zhiyi", "zhu-xi", "zhuangzi",
+    ].every((id) => quotedPersonIds.has(id)),
+  );
+  for (const person of quotedPeople) {
+    const quote = person.representativeQuote;
+    if (quote.workId) assert.ok(workIds.has(quote.workId));
+    assert.equal(sourceById.get(quote.sourceId)?.sourceType, quote.sourceType);
+    assert.ok(quote.sourceTitle.length > 0);
+    assert.ok(["primary-verified", "source-attributed", "traditional-attribution", "disputed"].includes(quote.verificationStatus));
+    if (quote.verificationStatus !== "primary-verified") assert.ok(quote.attributionNote.length > 0);
+    assert.ok(person.sourceIds.includes(quote.sourceId));
+    if (quote.displayLanguage === "en") {
+      assert.ok(quote.chineseTranslation.length > 0);
+      if (quote.textStatus === "translation") assert.ok(quote.translator.length > 0);
+      else assert.equal(quote.originalLanguage, "en");
+    }
+  }
 });
 
 test("keeps relation evidence and resonance semantics explicit in entity data", async () => {

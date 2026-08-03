@@ -26,6 +26,20 @@
   ],
   "guidingQuestion": "个体真诚如何抵抗以经典权威为名的伪饰？",
   "thesis": "童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。",
+  "representativeQuote": {
+    "text": "夫童心者，真心也。若以童心為不可，是以真心為不可也。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "所谓童心就是真心；如果认为童心不可以保留，也就是认为真心不可以保留。",
+    "annotation": "李贽以童心对抗被名教和成见遮蔽的虚假判断，要求思想重新面对人的真实感受。",
+    "workId": "book-to-burn",
+    "sourceTitle": "《焚书·童心说》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-li-zhi-tongxin-primary",
+    "locator": "卷三·童心说"
+  },
   "summary": "李贽是东亚明代批判思想的重要思想人物，主要追问“个体真诚如何抵抗以经典权威为名的伪饰？”。其思想以“童心”为入口，主张童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "book-to-burn"
@@ -37,7 +51,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-li-zhi-tongxin-primary"
   ],
   "citations": [
     {

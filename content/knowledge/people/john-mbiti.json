@@ -26,6 +26,21 @@
   ],
   "guidingQuestion": "非洲宗教观如何理解人格、时间和共同体？",
   "thesis": "人格在亲属、祖先和共同体关系中形成，时间经验与仪式实践紧密相连。",
+  "representativeQuote": {
+    "text": "I am because we are; and since we are, therefore I am.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "因为有我们，所以有我；也因为我们共同存在，我才得以存在。",
+    "annotation": "这句话以共同体关系说明人格：个体并非先于关系而完成，而是在亲属、仪式和共享生活中形成。",
+    "workId": "african-religions-philosophy",
+    "sourceTitle": "African Religions and Philosophy",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "该表述广泛归于本书的共同体人格论，仍待与指定版本及页码逐字复核。",
+    "sourceId": "src-mbiti-african-religions-1990",
+    "locator": "discussion of communal personhood"
+  },
   "summary": "约翰·姆比蒂是非洲非洲宗教哲学的重要思想人物，主要追问“非洲宗教观如何理解人格、时间和共同体？”。其思想以“共同体时间”为入口，主张人格在亲属、祖先和共同体关系中形成，时间经验与仪式实践紧密相连。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "african-religions-philosophy"
@@ -37,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-african-philosophy"
+    "src-companion-african-philosophy",
+    "src-mbiti-african-religions-1990"
   ],
   "citations": [
     {

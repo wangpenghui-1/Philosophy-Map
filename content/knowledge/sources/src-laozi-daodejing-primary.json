@@ -1,0 +1,19 @@
+{
+  "id": "src-laozi-daodejing-primary",
+  "entityType": "source",
+  "title": "《道德经》",
+  "authors": [
+    "老子（传统归属）"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Chinese Text Project 原典页面",
+  "url": "https://ctext.org/dao-de-jing/zh",
+  "defaultLocator": "第三十七章",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

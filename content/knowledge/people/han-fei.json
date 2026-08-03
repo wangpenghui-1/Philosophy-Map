@@ -27,6 +27,21 @@
   ],
   "guidingQuestion": "政治秩序如何在不依赖统治者德性的条件下维持？",
   "thesis": "公开的法、行政之术与职位之势共同约束官僚和政治行为。",
+  "representativeQuote": {
+    "text": "法不阿貴，繩不撓曲。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "法律不偏袒权贵，就像墨线不会迁就弯曲的木材。",
+    "annotation": "这句话用工匠的准绳比喻公开而统一的规范，突出法不应因身份和权势改变尺度。",
+    "workId": "han-feizi",
+    "sourceTitle": "《韩非子·有度》",
+    "sourceType": "primary-text",
+    "verificationStatus": "traditional-attribution",
+    "attributionNote": "《韩非子》为先秦至汉初编纂形成的文集，篇章传统上归于韩非。",
+    "sourceId": "src-han-feizi-youdu-primary",
+    "locator": "《有度》"
+  },
   "summary": "韩非是东亚法家的重要思想人物，主要追问“政治秩序如何在不依赖统治者德性的条件下维持？”。其思想以“法术势”为入口，主张公开的法、行政之术与职位之势共同约束官僚和政治行为。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "han-feizi"
@@ -38,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-han-feizi-youdu-primary"
   ],
   "citations": [
     {

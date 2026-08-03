@@ -26,6 +26,23 @@
   ],
   "guidingQuestion": "主权如何通过决定谁可生存、谁被置于死亡风险中运作？",
   "thesis": "死政治揭示殖民、种族化和战争空间中权力对生命暴露程度的差异化分配。",
+  "representativeQuote": {
+    "text": "The ultimate expression of sovereignty resides, to a large degree, in the power and the capacity to dictate who may live and who must die.",
+    "displayLanguage": "en",
+    "textStatus": "translation",
+    "originalLanguage": "fr",
+    "chineseTranslation": "主权的最终表现，在很大程度上就在于决定谁可以活、谁必须死的权力与能力。",
+    "annotation": "这句话直接点明“死政治”的核心：主权通过不平等地分配生存与死亡，塑造殖民和战争空间。",
+    "workId": "necropolitics",
+    "sourceTitle": "“Necropolitics”",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已定位到《Public Culture》英译版，仍待与该版正文逐字复核。",
+    "sourceId": "src-mbembe-necropolitics-public-culture",
+    "locator": "p. 11",
+    "translator": "Libby Meintjes",
+    "translationNote": "姆本贝以法语写作；此处展示 Libby Meintjes 的英文译文。"
+  },
   "summary": "阿希尔·姆本贝是非洲后殖民思想的重要思想人物，主要追问“主权如何通过决定谁可生存、谁被置于死亡风险中运作？”。其思想以“死政治”为入口，主张死政治揭示殖民、种族化和战争空间中权力对生命暴露程度的差异化分配。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "necropolitics"
@@ -37,7 +54,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-african-philosophy"
+    "src-companion-african-philosophy",
+    "src-mbembe-necropolitics-public-culture"
   ],
   "citations": [
     {

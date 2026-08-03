@@ -28,6 +28,20 @@
   ],
   "guidingQuestion": "奴役制度如何通过知识控制摧毁人格与自由？",
   "thesis": "识字、叙事和集体抗争揭露奴役的暴力，使被奴役者成为自由的政治主体。",
+  "representativeQuote": {
+    "text": "The destiny of the colored American … is the destiny of America.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "美国有色人种的命运……就是美国的命运。",
+    "annotation": "道格拉斯把黑人解放与国家整体的自由绑定起来，使反奴役斗争成为美国政治是否兑现自身原则的检验。",
+    "sourceTitle": "Speech at the Emancipation League",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已定位到 1862 年 2 月 12 日波士顿演说，仍待与演说全文逐字复核。",
+    "sourceId": "src-douglass-emancipation-league-1862",
+    "locator": "12 February 1862"
+  },
   "summary": "弗雷德里克·道格拉斯是美洲与加勒比废奴与自由思想的重要思想人物，主要追问“奴役制度如何通过知识控制摧毁人格与自由？”。其思想以“自我解放”为入口，主张识字、叙事和集体抗争揭露奴役的暴力，使被奴役者成为自由的政治主体。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "narrative-douglass"
@@ -39,7 +53,8 @@
     }
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-douglass-emancipation-league-1862"
   ],
   "citations": [
     {

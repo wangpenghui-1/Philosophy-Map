@@ -1,0 +1,19 @@
+{
+  "id": "src-zhu-xi-daxue-zhangju-primary",
+  "entityType": "source",
+  "title": "《大学章句》",
+  "authors": [
+    "朱熹"
+  ],
+  "sourceType": "primary-text",
+  "publication": "中文 Wikisource 原典页面",
+  "url": "https://zh.wikisource.org/wiki/大學章句",
+  "defaultLocator": "第五章·补格物传",
+  "language": "zh-classical",
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "quote-source-review/v1",
+  "lastReviewedAt": "2026-08-02"
+}

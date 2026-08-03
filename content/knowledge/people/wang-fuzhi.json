@@ -27,6 +27,20 @@
   ],
   "guidingQuestion": "持续变化的世界如何可能具有秩序和伦理方向？",
   "thesis": "理不离气而存在，历史与人伦秩序都在具体气化过程和人的实践中展开。",
+  "representativeQuote": {
+    "text": "天下惟器而已矣。道者器之道，器者不可謂之道之器也。",
+    "displayLanguage": "zh-classical",
+    "textStatus": "original",
+    "originalLanguage": "zh-classical",
+    "chineseTranslation": "天下只有具体存在的事物；道是事物自身的道，不能反过来说事物只是道的器具。",
+    "annotation": "王夫之拒绝把抽象的道放在具体事物之前，强调规律只能存在于现实器物和历史实践之中。",
+    "workId": "chuanshan-yishu",
+    "sourceTitle": "《周易外传》",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-wang-fuzhi-zhouyi-waizhuan-primary",
+    "locator": "卷五·系辞上传第二章"
+  },
   "summary": "王夫之是东亚明清之际思想的重要思想人物，主要追问“持续变化的世界如何可能具有秩序和伦理方向？”。其思想以“气化”为入口，主张理不离气而存在，历史与人伦秩序都在具体气化过程和人的实践中展开。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
   "workIds": [
     "chuanshan-yishu"
@@ -38,7 +52,8 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-chinese-philosophy"
+    "src-encyclopedia-chinese-philosophy",
+    "src-wang-fuzhi-zhouyi-waizhuan-primary"
   ],
   "citations": [
     {

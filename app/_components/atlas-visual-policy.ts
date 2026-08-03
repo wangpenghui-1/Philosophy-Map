@@ -103,6 +103,14 @@ export function percentile(values: number[], percentileValue: number) {
   return sorted[index];
 }
 
+export function shouldDirectGlobeCamera(
+  mode: AtlasMode,
+  selectedThinkerId: string | null,
+  selectedRelationId: string | null,
+) {
+  return mode === "story" || Boolean(selectedThinkerId || selectedRelationId);
+}
+
 export function parsePersistedVisualState(
   raw: string | null,
   validators: PersistedStateValidators,

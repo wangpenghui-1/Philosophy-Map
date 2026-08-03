@@ -29,6 +29,7 @@ import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
   getFocusedThinkerIds,
   percentile,
+  shouldDirectGlobeCamera,
   type FocusDepth,
   type GlobeCameraSnapshot,
 } from "./atlas-visual-policy";
@@ -55,6 +56,8 @@ const EARTH_TEXTURE_URLS = [
 let cachedWebgl2Availability: boolean | null = null;
 const AtlasPostprocessing = lazy(() => import("./AtlasPostprocessing"));
 
+type WebglRuntimeStatus = "checking" | "ready" | "lost" | "retrying" | "unavailable" | "unsupported";
+
 export type EarthLightingMode = "day" | "night";
 
 interface GlobeCanvasProps {
@@ -75,6 +78,7 @@ interface GlobeCanvasProps {
   onSelectThinker: (id: string) => void;
   onSelectRelation: (id: string) => void;
   onFallback: () => void;
+  onRuntimeFallback: () => void;
   onCameraSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
   onPerformanceSample: (p75FrameMs: number) => void;
 }
@@ -251,7 +255,11 @@ function getWebgl2Availability() {
   if (cachedWebgl2Availability !== null) return cachedWebgl2Availability;
   try {
     const canvas = document.createElement("canvas");
-    cachedWebgl2Availability = Boolean(canvas.getContext("webgl2"));
+    const context = canvas.getContext("webgl2");
+    cachedWebgl2Availability = Boolean(context);
+    context?.getExtension("WEBGL_lose_context")?.loseContext();
+    canvas.width = 1;
+    canvas.height = 1;
   } catch {
     cachedWebgl2Availability = false;
   }
@@ -932,6 +940,7 @@ function CameraDirector({
 
     const thinker = selectedThinkerId ? thinkerById.get(selectedThinkerId) : undefined;
     const relation = selectedRelationId ? relations.find((item) => item.id === selectedRelationId) : undefined;
+    if (!shouldDirectGlobeCamera(mode, selectedThinkerId, selectedRelationId)) return;
     const relationFrom = relation ? thinkerById.get(relation.from) : undefined;
     const relationTo = relation ? thinkerById.get(relation.to) : undefined;
     const relationDirection = relationFrom && relationTo
@@ -1053,6 +1062,35 @@ function FramePerformanceReporter({ onSample }: { onSample: (p75FrameMs: number)
     samplesRef.current = [];
     elapsedRef.current = 0;
   });
+  return null;
+}
+
+function WebglContextLifecycle({
+  onLost,
+  onRestored,
+}: {
+  onLost: () => void;
+  onRestored: () => void;
+}) {
+  const { gl } = useThree();
+
+  useEffect(() => {
+    const canvas = gl.domElement;
+    const handleLost = (event: Event) => {
+      event.preventDefault();
+      onLost();
+    };
+    const handleRestored = () => onRestored();
+    canvas.dataset.webglLifecycle = "ready";
+    canvas.addEventListener("webglcontextlost", handleLost);
+    canvas.addEventListener("webglcontextrestored", handleRestored);
+    return () => {
+      delete canvas.dataset.webglLifecycle;
+      canvas.removeEventListener("webglcontextlost", handleLost);
+      canvas.removeEventListener("webglcontextrestored", handleRestored);
+    };
+  }, [gl, onLost, onRestored]);
+
   return null;
 }
 
@@ -1419,35 +1457,66 @@ function MarkerLeader({ item }: { item: GlobeMarkerLayoutItem }) {
 }
 
 export default function GlobeCanvas(props: GlobeCanvasProps) {
-  const [webgl2Available, setWebgl2Available] = useState<boolean | null>(() =>
-    typeof document === "undefined" ? null : getWebgl2Availability(),
+  const [webglStatus, setWebglStatus] = useState<WebglRuntimeStatus>(() =>
+    typeof document === "undefined"
+      ? "checking"
+      : getWebgl2Availability() ? "ready" : "unsupported",
   );
   const [attempt, setAttempt] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
   const [anchorBudget, setAnchorBudget] = useState(0);
   const [hoveredRelationId, setHoveredRelationId] = useState<string | null>(null);
-  const { onFallback } = props;
+  const retryFrameRef = useRef<number | null>(null);
+  const { onRuntimeFallback } = props;
 
   useEffect(() => {
-    if (webgl2Available === false) onFallback();
-  }, [onFallback, webgl2Available]);
+    if (webglStatus !== "checking") return;
+    const frame = window.requestAnimationFrame(() => {
+      setWebglStatus(getWebgl2Availability() ? "ready" : "unsupported");
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [webglStatus]);
 
-  const retry = () => {
+  useEffect(() => () => {
+    if (retryFrameRef.current !== null) window.cancelAnimationFrame(retryFrameRef.current);
+  }, []);
+
+  const handleContextLost = useCallback(() => {
     cachedWebgl2Availability = null;
-    setWebgl2Available(getWebgl2Availability());
-    setAttempt((value) => value + 1);
-  };
+    onRuntimeFallback();
+    setWebglStatus("lost");
+  }, [onRuntimeFallback]);
+
+  const handleContextRestored = useCallback(() => {
+    setWebglStatus("ready");
+  }, []);
+
+  const retry = useCallback(() => {
+    if (webglStatus === "retrying") return;
+    cachedWebgl2Availability = null;
+    onRuntimeFallback();
+    setWebglStatus("retrying");
+    retryFrameRef.current = window.requestAnimationFrame(() => {
+      retryFrameRef.current = null;
+      if (!getWebgl2Availability()) {
+        setWebglStatus("unavailable");
+        return;
+      }
+      setAttempt((value) => value + 1);
+      setWebglStatus("ready");
+    });
+  }, [onRuntimeFallback, webglStatus]);
 
   const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[], nextAnchorBudget: number) => {
     setMarkerLayout(layout);
     setAnchorBudget(nextAnchorBudget);
   }, []);
 
-  if (webgl2Available === false) {
+  if (webglStatus === "unsupported" || webglStatus === "unavailable") {
     return (
-      <div className="globe-fallback" role="status">
+      <div className="globe-fallback" role="status" aria-live="polite">
         <span>3D渲染不可用</span>
-        <strong>内容仍然完整。</strong>
+        <strong>{webglStatus === "unavailable" ? "本次恢复未成功，请稍后再试。" : "当前浏览器没有建立 WebGL2。"}</strong>
         <div className="globe-fallback__actions">
           <button type="button" onClick={props.onFallback}>打开文字探索</button>
           <button type="button" onClick={retry}>重新尝试3D</button>
@@ -1456,7 +1525,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     );
   }
 
-  if (webgl2Available === null) {
+  if (webglStatus === "checking") {
     return (
       <div className="globe-loading" role="status" aria-live="polite">
         <span className="globe-loading__orbit" />
@@ -1466,8 +1535,9 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     );
   }
 
+  const renderQuality: QualityTier = props.quality;
   const dpr: [number, number] =
-    props.quality === "high" ? [1, 1.65] : props.quality === "medium" ? [0.85, 1.3] : [0.7, 1];
+    renderQuality === "high" ? [1, 1.65] : renderQuality === "medium" ? [0.85, 1.3] : [0.7, 1];
   const markerById = new Map(markerLayout.map((item) => [item.id, item]));
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1498,7 +1568,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
         frameloop="demand"
         gl={{
-          antialias: props.quality !== "low",
+          antialias: renderQuality !== "low",
           alpha: false,
           stencil: false,
           powerPreference: "high-performance",
@@ -1507,19 +1577,13 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           gl.outputColorSpace = THREE.SRGBColorSpace;
           gl.toneMapping = THREE.ACESFilmicToneMapping;
           gl.toneMappingExposure = props.earthMode === "night" ? 1.02 : 0.94;
-          gl.domElement.addEventListener("webglcontextlost", (event) => {
-            event.preventDefault();
-            // React Three Fiber intentionally loses the current context while
-            // disposing an unmounted canvas. That does not mean the browser
-            // lacks WebGL2, so force the next mount to probe a fresh canvas.
-            cachedWebgl2Availability = null;
-            setWebgl2Available(false);
-          }, { once: true });
         }}
         aria-label="可旋转缩放的3D思想地球。人物肖像锚定在主要活动区域，发光关系线跨越球面。"
       >
+        <WebglContextLifecycle onLost={handleContextLost} onRestored={handleContextRestored} />
         <GlobeScene
           {...props}
+          quality={renderQuality}
           anchorBudget={anchorBudget}
           markerLayout={markerLayout}
           hoveredRelationId={hoveredRelationId}
@@ -1584,6 +1648,18 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
         <div className="relation-hover-card" role="status">
           <small>{relationTypeLabels[hoveredRelation.type]} · {evidenceLabels[hoveredRelation.evidence]}</small>
           <strong>{hoveredRelation.title}</strong>
+        </div>
+      ) : null}
+      {webglStatus === "lost" || webglStatus === "retrying" ? (
+        <div className="globe-fallback globe-fallback--overlay" role="status" aria-live="polite">
+          <span>{webglStatus === "retrying" ? "正在重新建立3D地球" : "3D渲染暂时中断"}</span>
+          <strong>{webglStatus === "retrying" ? "正在使用轻量模式重新连接显卡。" : "当前位置已经保留，可以尝试恢复。"}</strong>
+          <div className="globe-fallback__actions">
+            <button type="button" onClick={props.onFallback}>打开文字探索</button>
+            <button type="button" onClick={retry} disabled={webglStatus === "retrying"}>
+              {webglStatus === "retrying" ? "正在恢复…" : "重新尝试3D"}
+            </button>
+          </div>
         </div>
       ) : null}
     </div>

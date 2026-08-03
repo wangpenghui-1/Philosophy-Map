@@ -162,8 +162,11 @@ for (const seed of RELEASE_PEOPLE) {
   const summary = buildSummary(candidate, seed);
   const chronology = chronologyLabel(seed.startYear, seed.endYear, seed.certainty);
   const mainCitation = citation(source.id, locator, `支持${candidate.name}的身份、思想主张与历史语境概述。`);
+  const existingPerson = await loadRecord("people", personId);
+  const representativeQuote = existingPerson?.representativeQuote;
 
   queueRecord("people", personId, {
+    ...(existingPerson ?? {}),
     id: personId,
     slug: seed.slug,
     entityType: "person",
@@ -182,10 +185,11 @@ for (const seed of RELEASE_PEOPLE) {
     questionIds: questionIds(seed.question, seed.concept),
     guidingQuestion: seed.question,
     thesis: `${cleanSentence(seed.thesis)}。`,
+    ...(representativeQuote ? { representativeQuote } : {}),
     summary,
     workIds: [seed.work.id],
     placeLinks: [{ placeId: seed.place.id, role: "activity-or-reception" }],
-    sourceIds: [source.id],
+    sourceIds: [...new Set([source.id, ...(representativeQuote ? [representativeQuote.sourceId] : [])])],
     citations: [mainCitation],
     sections: [{
       id: "overview",

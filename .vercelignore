@@ -1,0 +1,13 @@
+.git
+.next
+.tmp
+.vinext
+.wrangler
+artifacts
+coverage
+dist
+node_modules
+outputs
+playwright-report
+test-results
+work

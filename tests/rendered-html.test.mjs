@@ -1,8 +1,16 @@
 import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { once } from "node:events";
 import { access, readFile, readdir } from "node:fs/promises";
+import { createServer } from "node:net";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 const knowledgeRoot = new URL("../content/knowledge/", import.meta.url);
+const projectRoot = fileURLToPath(new URL("..", import.meta.url));
+let appServer;
+let appOrigin;
+let serverOutput = "";
 
 async function readEntities(directory) {
   const directoryUrl = new URL(`${directory}/`, knowledgeRoot);
@@ -10,16 +18,64 @@ async function readEntities(directory) {
   return Promise.all(files.map(async (file) => JSON.parse(await readFile(new URL(file, directoryUrl), "utf8"))));
 }
 
-async function render(pathname = "/") {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
-  const { default: worker } = await import(workerUrl.href);
+async function reservePort() {
+  const server = createServer();
+  server.listen(0, "127.0.0.1");
+  await once(server, "listening");
+  const address = server.address();
+  const port = typeof address === "object" && address ? address.port : null;
+  server.close();
+  await once(server, "close");
+  if (!port) throw new Error("Unable to reserve a local test port.");
+  return port;
+}
 
-  return worker.fetch(
-    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
+async function waitForServer(origin) {
+  const deadline = Date.now() + 60_000;
+  while (Date.now() < deadline) {
+    if (appServer?.exitCode !== null) {
+      throw new Error(`Next.js server exited before becoming ready.\n${serverOutput}`);
+    }
+    try {
+      const response = await fetch(origin, { signal: AbortSignal.timeout(2_000) });
+      if (response.status < 500) return;
+    } catch {
+      // The server may still be compiling its first route.
+    }
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  throw new Error(`Next.js server did not become ready.\n${serverOutput}`);
+}
+
+test.before(async () => {
+  const port = await reservePort();
+  appOrigin = `http://127.0.0.1:${port}`;
+  appServer = spawn(
+    process.execPath,
+    ["node_modules/next/dist/bin/next", "start", "--hostname", "127.0.0.1", "--port", String(port)],
+    {
+      cwd: projectRoot,
+      env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },
+      stdio: ["ignore", "pipe", "pipe"],
+    },
   );
+  appServer.stdout.on("data", (chunk) => { serverOutput += chunk; });
+  appServer.stderr.on("data", (chunk) => { serverOutput += chunk; });
+  await waitForServer(appOrigin);
+});
+
+test.after(async () => {
+  if (!appServer || appServer.exitCode !== null) return;
+  appServer.kill("SIGTERM");
+  await Promise.race([
+    once(appServer, "exit"),
+    new Promise((resolve) => setTimeout(resolve, 5_000)),
+  ]);
+  if (appServer.exitCode === null) appServer.kill("SIGKILL");
+});
+
+async function render(pathname = "/") {
+  return fetch(`${appOrigin}${pathname}`, { headers: { accept: "text/html" } });
 }
 
 test("server-renders the Atlas product shell", async () => {

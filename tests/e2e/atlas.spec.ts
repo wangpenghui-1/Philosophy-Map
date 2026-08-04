@@ -287,12 +287,12 @@ test("WebGL2 failure stays on the globe fallback until text exploration is reque
   await expect(page.getByText("3D渲染不可用")).toBeVisible();
   await page.getByRole("button", { name: "重新尝试3D" }).click();
   await expect(page.getByText("正在释放旧画布，并以稳定画质恢复当前位置。")).toBeVisible();
-  await expect(page.getByText("本次恢复未成功，请稍后再试。")).toBeVisible();
+  await expect(page.getByText("显卡仍在恢复，请稍后再次检测。")).toBeVisible();
   await page.locator(".globe-fallback").getByRole("button", { name: "打开文字探索" }).click();
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
 });
 
-test("runtime WebGL loss remains in place and retry remounts the canvas", async ({ page }) => {
+test("runtime WebGL loss waits for native recovery before remounting the canvas", async ({ page }) => {
   await openHydrated(page, "/explore");
   const canvas = page.locator("canvas");
   await expect(canvas).toBeVisible();
@@ -309,11 +309,10 @@ test("runtime WebGL loss remains in place and retry remounts the canvas", async 
 
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
   await expect(page.getByText("3D渲染暂时中断")).toBeVisible();
-  await page.getByRole("button", { name: "重新尝试3D" }).click();
-  await expect(page.getByText("正在释放旧画布，并以稳定画质恢复当前位置。")).toBeVisible();
-  await expect(page.locator("canvas")).toHaveCount(0);
-  await expect(page.getByText("3D渲染暂时中断")).toBeHidden();
-  await expect(page.locator("canvas")).toBeVisible();
+  await expect(page.getByRole("button", { name: "等待显卡恢复…" })).toBeDisabled();
+  await expect(page.getByText("正在释放旧画布，并以稳定画质恢复当前位置。")).toBeVisible({ timeout: 6_000 });
+  await expect(page.getByText("3D渲染暂时中断")).toBeHidden({ timeout: 6_000 });
+  await expect(page.locator("canvas")).toBeVisible({ timeout: 8_000 });
   await expect(page.locator('canvas[data-context-probe="before-retry"]')).toHaveCount(0);
   await expect(page.locator("canvas")).toHaveCount(1);
   await expect.poll(async () => {
@@ -327,6 +326,54 @@ test("runtime WebGL loss remains in place and retry remounts the canvas", async 
       ...cameraBeforeLoss.target.map((value, index) => Math.abs(value - cameraAfterRecovery.target[index])),
     );
   }).toBeLessThan(0.05);
+});
+
+test("native WebGL restoration keeps the existing canvas and camera", async ({ page }) => {
+  await openHydrated(page, "/explore");
+  const canvas = page.locator("canvas");
+  await expect(canvas).toHaveAttribute("data-webgl-lifecycle", "ready");
+  await canvas.evaluate((element) => { element.dataset.nativeRestoreProbe = "stable"; });
+  await canvas.evaluate((element) => {
+    element.dispatchEvent(new Event("webglcontextlost", { cancelable: true }));
+  });
+  await expect(page.getByText("3D渲染暂时中断")).toBeVisible();
+  await canvas.evaluate((element) => {
+    element.dispatchEvent(new Event("webglcontextrestored"));
+  });
+  await expect(page.getByText("3D渲染暂时中断")).toBeHidden();
+  await expect(page.locator('canvas[data-native-restore-probe="stable"]')).toBeVisible();
+  await expect(page.locator("canvas")).toHaveCount(1);
+});
+
+test("Windows Edge uses the stable-high GPU profile after an unclean renderer exit", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window.navigator, "userAgent", {
+      configurable: true,
+      get: () => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0 Safari/537.36 Edg/140.0",
+    });
+    window.sessionStorage.setItem("atlas-edge-gpu-session:v1", "active");
+    const original = HTMLCanvasElement.prototype.getContext;
+    const preferences: string[] = [];
+    HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, type: string, options?: unknown) {
+      if (type === "webgl2" && options && typeof options === "object" && "powerPreference" in options) {
+        preferences.push(String((options as { powerPreference?: unknown }).powerPreference));
+      }
+      return original.call(this, type, options as never) as RenderingContext | null;
+    } as typeof HTMLCanvasElement.prototype.getContext;
+    Object.defineProperty(window, "__atlasPowerPreferences", { get: () => preferences });
+  });
+
+  await openHydrated(page, "/explore");
+  await expect(page.getByText("正在点亮思想星图")).toBeVisible();
+  const runtime = page.locator(".globe-runtime");
+  await expect(runtime).toHaveAttribute("data-gpu-profile", "edge-stable", { timeout: 6_000 });
+  await page.getByLabel("打开显示设置").click();
+  await page.getByRole("button", { name: /典藏/ }).click();
+  await expect(runtime).toHaveAttribute("data-render-effects", "smaa", { timeout: 5_000 });
+  await expect.poll(async () => Number(await runtime.getAttribute("data-render-dpr"))).toBeLessThanOrEqual(1.25);
+  await expect.poll(() => page.evaluate(() => (
+    window as typeof window & { __atlasPowerPreferences: string[] }
+  ).__atlasPowerPreferences.every((value) => value === "default"))).toBe(true);
 });
 
 test("WebGL capability detection never deliberately loses a healthy context", async ({ page }) => {

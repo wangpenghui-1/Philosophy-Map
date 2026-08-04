@@ -58,13 +58,22 @@ const RENDER_DPR_CAP: Record<EffectiveQuality, number> = {
 };
 
 export const GLOBE_HIGH_QUALITY_WARMUP_MS = 3_500;
-export const GLOBE_WEBGL_RETRY_DELAY_MS = 650;
+export const GLOBE_NATIVE_CONTEXT_RESTORE_MS = 4_000;
 
 const QUALITY_ORDER: EffectiveQuality[] = ["low", "medium", "high"];
 const DETAIL_SHEET_ORDER: DetailSheetSnap[] = ["peek", "half", "full"];
 
 export function initialAutoQuality(width: number, coarsePointer: boolean): EffectiveQuality {
   return width <= 820 || coarsePointer ? "low" : "medium";
+}
+
+export function isWindowsEdgeUserAgent(userAgent: string) {
+  return /Windows/i.test(userAgent) && /Edg\//i.test(userAgent);
+}
+
+export function getWebglRetryDelayMs(retryCount: number, windowsEdge: boolean) {
+  const delays = windowsEdge ? [1_500, 3_000, 6_000] : [800, 1_500, 3_000];
+  return delays[Math.min(Math.max(0, retryCount - 1), delays.length - 1)];
 }
 
 /**
@@ -78,18 +87,23 @@ export function getRenderPixelRatio(
   devicePixelRatio: number,
   quality: EffectiveQuality,
   warmingUp = false,
+  conservativeGpu = false,
 ) {
   const safeWidth = Math.max(1, width);
   const safeHeight = Math.max(1, height);
   const nativeDpr = Number.isFinite(devicePixelRatio) && devicePixelRatio > 0
     ? devicePixelRatio
     : 1;
-  const budget = warmingUp
+  let budget = warmingUp
     ? Math.min(RENDER_PIXEL_BUDGET[quality], RENDER_PIXEL_BUDGET.medium)
     : RENDER_PIXEL_BUDGET[quality];
-  const cap = warmingUp
+  let cap = warmingUp
     ? Math.min(RENDER_DPR_CAP[quality], 1.15)
     : RENDER_DPR_CAP[quality];
+  if (conservativeGpu) {
+    budget = Math.min(budget, 2_800_000);
+    cap = Math.min(cap, 1.25);
+  }
   const budgetDpr = Math.sqrt(budget / (safeWidth * safeHeight));
   const dpr = Math.min(nativeDpr, cap, Math.max(0.65, budgetDpr));
   return Math.round(dpr * 100) / 100;

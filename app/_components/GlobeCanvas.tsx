@@ -28,9 +28,11 @@ import {
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
   GLOBE_HIGH_QUALITY_WARMUP_MS,
-  GLOBE_WEBGL_RETRY_DELAY_MS,
+  GLOBE_NATIVE_CONTEXT_RESTORE_MS,
   getFocusedThinkerIds,
   getRenderPixelRatio,
+  getWebglRetryDelayMs,
+  isWindowsEdgeUserAgent,
   percentile,
   shouldDirectGlobeCamera,
   type FocusDepth,
@@ -56,7 +58,10 @@ const EARTH_TEXTURE_URLS = [
   "/media/globe/earth-clouds.png",
 ] as const;
 
-let cachedWebgl2Availability: boolean | null = null;
+type GlobePowerPreference = "default" | "high-performance";
+
+const cachedWebgl2Availability = new Map<GlobePowerPreference, boolean>();
+const EDGE_GPU_SESSION_KEY = "atlas-edge-gpu-session:v1";
 const AtlasPostprocessing = lazy(() => import("./AtlasPostprocessing"));
 
 type WebglRuntimeStatus = "checking" | "ready" | "lost" | "retrying" | "unavailable" | "unsupported";
@@ -271,18 +276,40 @@ const ATMOSPHERE_FRAGMENT_SHADER = `
   }
 `;
 
-function getWebgl2Availability() {
-  if (cachedWebgl2Availability !== null) return cachedWebgl2Availability;
+function getWebgl2Availability(powerPreference: GlobePowerPreference) {
+  const cached = cachedWebgl2Availability.get(powerPreference);
+  if (cached !== undefined) return cached;
   try {
     const canvas = document.createElement("canvas");
-    const context = canvas.getContext("webgl2");
-    cachedWebgl2Availability = Boolean(context);
+    const context = canvas.getContext("webgl2", {
+      alpha: false,
+      antialias: false,
+      powerPreference,
+      stencil: false,
+    });
+    cachedWebgl2Availability.set(powerPreference, Boolean(context));
     canvas.width = 1;
     canvas.height = 1;
   } catch {
-    cachedWebgl2Availability = false;
+    cachedWebgl2Availability.set(powerPreference, false);
   }
-  return cachedWebgl2Availability;
+  return cachedWebgl2Availability.get(powerPreference) ?? false;
+}
+
+function getInitialGpuProfile() {
+  if (typeof window === "undefined") {
+    return { windowsEdge: false, suspectedRendererCrash: false };
+  }
+  const windowsEdge = isWindowsEdgeUserAgent(window.navigator.userAgent);
+  let suspectedRendererCrash = false;
+  if (windowsEdge) {
+    try {
+      suspectedRendererCrash = window.sessionStorage.getItem(EDGE_GPU_SESSION_KEY) === "active";
+    } catch {
+      // Storage can be unavailable in hardened browser profiles.
+    }
+  }
+  return { windowsEdge, suspectedRendererCrash };
 }
 
 function latLonToVector3(lat: number, lon: number, radius = GLOBE_RADIUS) {
@@ -449,11 +476,13 @@ function EarthSystem({
   quality,
   reduceMotion,
   shared,
+  stableGpuProfile,
 }: {
   globeRef: RefObject<THREE.Mesh | null>;
   quality: QualityTier;
   reduceMotion: boolean;
   shared: SharedEarthUniforms;
+  stableGpuProfile: boolean;
 }) {
   const { gl, invalidate } = useThree();
   const textureUrls = useMemo(
@@ -473,7 +502,9 @@ function EarthSystem({
     if (loadedSpecularMap) loadedSpecularMap.colorSpace = THREE.NoColorSpace;
     if (loadedCloudMap) loadedCloudMap.colorSpace = THREE.NoColorSpace;
     const anisotropy = Math.min(
-      quality === "high" ? 8 : quality === "medium" ? 4 : 2,
+      stableGpuProfile
+        ? quality === "low" ? 2 : 4
+        : quality === "high" ? 8 : quality === "medium" ? 4 : 2,
       gl.capabilities.getMaxAnisotropy(),
     );
     for (const texture of loadedTextures) {
@@ -482,16 +513,16 @@ function EarthSystem({
       texture.anisotropy = anisotropy;
       texture.needsUpdate = true;
     }
-  }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality]);
+  }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality, stableGpuProfile]);
 
   useEffect(() => {
     if (reduceMotion || quality === "low") return;
     const interval = window.setInterval(
       () => invalidate(),
-      quality === "high" ? 1000 / 24 : 1000 / 18,
+      quality === "high" && !stableGpuProfile ? 1000 / 24 : 1000 / 18,
     );
     return () => window.clearInterval(interval);
-  }, [invalidate, quality, reduceMotion]);
+  }, [invalidate, quality, reduceMotion, stableGpuProfile]);
 
   const surfaceUniforms = useMemo(() => ({
     uDayMap: { value: dayMap },
@@ -1328,6 +1359,7 @@ function GlobeScene({
   anchorBudget,
   hoveredRelationId,
   bloomEnabled,
+  stableGpuProfile,
   onHoverRelation,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
@@ -1337,6 +1369,7 @@ function GlobeScene({
   hoveredRelationId: string | null;
   onHoverRelation: (id: string | null) => void;
   bloomEnabled: boolean;
+  stableGpuProfile: boolean;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
@@ -1422,6 +1455,7 @@ function GlobeScene({
             quality={props.quality}
             reduceMotion={props.reduceMotion}
             shared={shared}
+            stableGpuProfile={stableGpuProfile}
           />
         </Suspense>
         <CountryBorders quality={props.quality} />
@@ -1587,12 +1621,17 @@ function MarkerLeader({ item }: { item: GlobeMarkerLayoutItem }) {
 }
 
 export default function GlobeCanvas(props: GlobeCanvasProps) {
+  const [gpuProfile] = useState(getInitialGpuProfile);
+  const powerPreference: GlobePowerPreference = gpuProfile.windowsEdge ? "default" : "high-performance";
   const [webglStatus, setWebglStatus] = useState<WebglRuntimeStatus>(() =>
     typeof document === "undefined"
       ? "checking"
-      : getWebgl2Availability() ? "ready" : "unsupported",
+      : gpuProfile.suspectedRendererCrash
+        ? "checking"
+        : getWebgl2Availability(powerPreference) ? "ready" : "unsupported",
   );
   const [attempt, setAttempt] = useState(0);
+  const [retryCount, setRetryCount] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
   const [anchorBudget, setAnchorBudget] = useState(0);
   const [hoveredRelationId, setHoveredRelationId] = useState<string | null>(null);
@@ -1609,11 +1648,31 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
 
   useEffect(() => {
     if (webglStatus !== "checking") return;
-    const frame = window.requestAnimationFrame(() => {
-      setWebglStatus(getWebgl2Availability() ? "ready" : "unsupported");
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, [webglStatus]);
+    const delay = gpuProfile.suspectedRendererCrash && retryCount === 0 ? 2_500 : 0;
+    const timer = window.setTimeout(() => {
+      cachedWebgl2Availability.delete(powerPreference);
+      setWebglStatus(getWebgl2Availability(powerPreference) ? "ready" : "unsupported");
+    }, delay);
+    return () => window.clearTimeout(timer);
+  }, [gpuProfile.suspectedRendererCrash, powerPreference, retryCount, webglStatus]);
+
+  useEffect(() => {
+    if (!gpuProfile.windowsEdge) return;
+    try {
+      window.sessionStorage.setItem(EDGE_GPU_SESSION_KEY, "active");
+    } catch {
+      return;
+    }
+    const markCleanExit = () => {
+      try {
+        window.sessionStorage.setItem(EDGE_GPU_SESSION_KEY, "clean");
+      } catch {
+        // Storage can disappear when the browser is shutting down.
+      }
+    };
+    window.addEventListener("pagehide", markCleanExit);
+    return () => window.removeEventListener("pagehide", markCleanExit);
+  }, [gpuProfile.windowsEdge]);
 
   useEffect(() => () => {
     if (retryTimerRef.current !== null) window.clearTimeout(retryTimerRef.current);
@@ -1653,26 +1712,35 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
 
   const handleContextRestored = useCallback(() => {
     runtimeRecoveryRef.current = false;
+    setRetryCount(0);
     setWebglStatus("ready");
   }, []);
 
   const retry = useCallback(() => {
     if (webglStatus === "retrying") return;
     const recoveringRuntime = webglStatus === "lost" || runtimeRecoveryRef.current;
-    if (!recoveringRuntime) cachedWebgl2Availability = null;
+    const nextRetryCount = retryCount + 1;
+    if (!recoveringRuntime) cachedWebgl2Availability.delete(powerPreference);
     onRuntimeFallback();
+    setRetryCount(nextRetryCount);
     setWebglStatus("retrying");
     retryTimerRef.current = window.setTimeout(() => {
       retryTimerRef.current = null;
-      if (!recoveringRuntime && !getWebgl2Availability()) {
+      if (!recoveringRuntime && !getWebgl2Availability(powerPreference)) {
         setWebglStatus("unavailable");
         return;
       }
       runtimeRecoveryRef.current = false;
       setAttempt((value) => value + 1);
       setWebglStatus("ready");
-    }, GLOBE_WEBGL_RETRY_DELAY_MS);
-  }, [onRuntimeFallback, webglStatus]);
+    }, getWebglRetryDelayMs(nextRetryCount, gpuProfile.windowsEdge));
+  }, [gpuProfile.windowsEdge, onRuntimeFallback, powerPreference, retryCount, webglStatus]);
+
+  useEffect(() => {
+    if (webglStatus !== "lost") return;
+    const timer = window.setTimeout(retry, GLOBE_NATIVE_CONTEXT_RESTORE_MS);
+    return () => window.clearTimeout(timer);
+  }, [retry, webglStatus]);
 
   const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[], nextAnchorBudget: number) => {
     setMarkerLayout(layout);
@@ -1680,10 +1748,16 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   }, []);
 
   if (webglStatus === "unsupported" || webglStatus === "unavailable") {
+    const edgeNeedsRestart = gpuProfile.windowsEdge && retryCount >= 2;
     return (
       <div className="globe-fallback" role="status" aria-live="polite">
         <span>3D渲染不可用</span>
-        <strong>{webglStatus === "unavailable" ? "本次恢复未成功，请稍后再试。" : "当前浏览器没有建立 WebGL2。"}</strong>
+        <strong>{edgeNeedsRestart
+          ? "Edge 的显卡进程没有恢复，请完全退出浏览器后重新打开。"
+          : webglStatus === "unavailable"
+            ? "显卡仍在恢复，请稍后再次检测。"
+            : "当前浏览器没有建立 WebGL2。"}</strong>
+        {gpuProfile.windowsEdge ? <small>请确认 Edge 的“使用硬件加速”已开启。</small> : null}
         <div className="globe-fallback__actions">
           <button type="button" onClick={props.onFallback}>打开文字探索</button>
           <button type="button" onClick={retry}>重新尝试3D</button>
@@ -1707,15 +1781,23 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
 
   const renderQuality: QualityTier = props.quality;
   const highQualityReady = warmedQualityKey === `${attempt}:${contextLossCount}`;
-  const warmingUp = renderQuality === "high" && (!highQualityReady || contextLossCount >= 2);
+  const warmingUp = renderQuality === "high" && (
+    !highQualityReady
+    || contextLossCount >= 2
+    || gpuProfile.suspectedRendererCrash
+  );
   const dpr = getRenderPixelRatio(
     renderSize.width,
     renderSize.height,
     typeof window === "undefined" ? 1 : window.devicePixelRatio,
     renderQuality,
     warmingUp,
+    gpuProfile.windowsEdge,
   );
-  const bloomEnabled = renderQuality === "high" && highQualityReady && contextLossCount < 2;
+  const bloomEnabled = renderQuality === "high"
+    && highQualityReady
+    && contextLossCount < 2
+    && !gpuProfile.windowsEdge;
   const markerById = new Map(markerLayout.map((item) => [item.id, item]));
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1744,6 +1826,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
       className={"globe-runtime globe-runtime--" + props.earthMode}
       data-render-dpr={dpr.toFixed(2)}
       data-render-effects={bloomEnabled ? "bloom-smaa" : renderQuality === "low" ? "none" : "smaa"}
+      data-gpu-profile={gpuProfile.windowsEdge ? "edge-stable" : "standard"}
     >
       <Canvas
         key={attempt}
@@ -1754,7 +1837,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           antialias: false,
           alpha: false,
           stencil: false,
-          powerPreference: "high-performance",
+          powerPreference,
         }}
         onCreated={({ gl }) => {
           gl.outputColorSpace = THREE.SRGBColorSpace;
@@ -1773,6 +1856,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           onHoverRelation={setHoveredRelationId}
           onMarkerLayout={handleMarkerLayout}
           bloomEnabled={bloomEnabled}
+          stableGpuProfile={gpuProfile.windowsEdge}
         />
       </Canvas>
       <div className="globe-marker-layer" aria-label="地图人物">
@@ -1837,10 +1921,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
       {webglStatus === "lost" ? (
         <div className="globe-fallback globe-fallback--overlay" role="status" aria-live="polite">
           <span>3D渲染暂时中断</span>
-          <strong>当前位置已经保留，可以尝试恢复。</strong>
+          <strong>正在等待显卡自行恢复；若未恢复，将自动重建3D地球。</strong>
           <div className="globe-fallback__actions">
             <button type="button" onClick={props.onFallback}>打开文字探索</button>
-            <button type="button" onClick={retry}>重新尝试3D</button>
+            <button type="button" disabled>等待显卡恢复…</button>
           </div>
         </div>
       ) : null}

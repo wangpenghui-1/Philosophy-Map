@@ -1,0 +1,21 @@
+{
+  "id": "concept-知觉场",
+  "slug": "知觉场",
+  "entityType": "concept",
+  "name": "知觉场",
+  "originalTerms": ["champ perceptif"],
+  "summary": "知觉不是感觉碎片的机械相加，而是对象与背景、身体能力和情境共同形成的结构化场域。",
+  "senses": [{
+    "traditionId": "tradition-现象学",
+    "label": "知觉场",
+    "explanation": "梅洛-庞蒂把知觉理解为身体与环境的整体关系；对象总在背景、距离和可行动性中向我们显现。",
+    "citations": [{"sourceId": "src-merleau-ponty-sep", "locator": "Sections on perception and embodiment", "claim": "支持知觉作为结构化场域而非感觉原子的集合。"}]
+  }],
+  "personIds": ["merleau-ponty"],
+  "workIds": ["phenomenology-of-perception"],
+  "traditionIds": ["tradition-现象学"],
+  "sourceIds": ["src-merleau-ponty-sep"],
+  "citations": [{"sourceId": "src-merleau-ponty-sep", "locator": "Sections on perception and embodiment", "claim": "支持知觉场的概念摘要。"}],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

@@ -1,4 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
+import { readFileSync } from "node:fs";
+
+const atlasData = JSON.parse(readFileSync(new URL("../../app/_generated/atlas.json", import.meta.url), "utf8"));
 
 async function openHydrated(page: Page, pathname: string) {
   await page.goto(pathname);
@@ -9,25 +12,128 @@ async function waitForHydration(page: Page) {
   await expect(page.locator('[data-hydrated="true"]')).toBeVisible();
 }
 
-test("story controls pause and advance the guided narrative", async ({ page }) => {
+test("epistemology journey pauses and advances without losing its place", async ({ page }) => {
   await openHydrated(page, "/");
-  await expect(page.getByRole("heading", { name: "世界同时开始提问" })).toBeVisible();
-  const pause = page.getByRole("button", { name: "暂停故事" });
+  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
+  const journeyCards = page.locator(".journey-deck-card");
+  await expect(journeyCards).toHaveCount(8);
+  const activeJourneyCard = page.locator(".journey-deck-card.is-active");
+  await expect(activeJourneyCard).toContainText("认识论");
+  await activeJourneyCard.click();
+  await expect(page.getByRole("heading", { name: "眼前所见，可能只是表象" })).toBeVisible();
+  await expect(page.getByText("认识论之旅 · 1/7")).toBeVisible();
+  const pause = page.getByRole("button", { name: "暂停旅程" });
   await pause.click();
-  await expect(page.getByRole("button", { name: "继续故事" })).toBeVisible();
-  await page.getByRole("button", { name: "下一章" }).click();
-  await expect(page.getByRole("heading", { name: "怎样才算过好一生？" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
+  await page.getByRole("button", { name: "下一站" }).click();
+  await expect(page.getByRole("heading", { name: "把“知道”拆成不同渠道" })).toBeVisible();
+  await expect(page.getByText("平行回答", { exact: true })).toBeVisible();
 });
 
-test("first visit starts the story and returning visitors resume exploration", async ({ page }) => {
+test("journey deck cycles with wheel, focuses side cards, and exposes sound control", async ({ page }) => {
   await openHydrated(page, "/");
-  await expect(page.getByRole("heading", { name: "世界同时开始提问" })).toBeVisible();
-  await page.getByRole("button", { name: "暂停并接管地球" }).click();
-  await expect(page).toHaveURL(/\/explore\?from=story/);
+  const deck = page.locator(".journey-deck");
+  const activeCard = page.locator(".journey-deck-card.is-active");
+  await expect(activeCard).toContainText("认识论");
+  await expect(page.getByRole("button", { name: "关闭卡片切换音效" })).toHaveAttribute("aria-pressed", "true");
+
+  await deck.hover();
+  await page.mouse.wheel(0, 120);
+  await expect(activeCard).toContainText("本体论");
+
+  const nextSideCard = page.locator('.journey-deck-card[data-offset="1"]');
+  await expect(nextSideCard).toHaveCount(1);
+  await nextSideCard.click();
+  await expect(activeCard).toContainText("存在主义");
+  await expect(page).toHaveURL(/\/$/);
+
+  const deckBox = await deck.boundingBox();
+  if (!deckBox) throw new Error("Missing journey deck bounds");
+  await page.mouse.move(deckBox.x + deckBox.width * 0.56, deckBox.y + deckBox.height * 0.55);
+  await page.mouse.down();
+  await page.mouse.move(deckBox.x + deckBox.width * 0.34, deckBox.y + deckBox.height * 0.55, { steps: 5 });
+  await page.mouse.up();
+  await expect(activeCard).toContainText("现象学");
+
+  await page.getByRole("button", { name: "关闭卡片切换音效" }).click();
+  await expect(page.getByRole("button", { name: "开启卡片切换音效" })).toHaveAttribute("aria-pressed", "false");
+});
+
+test("all visitors see the new entry once and returning visitors resume exploration", async ({ page }) => {
+  await page.goto("/explore");
+  await page.evaluate(() => localStorage.setItem("atlas-visual-state:v1", JSON.stringify({
+    version: 1,
+    entrySeen: true,
+    mode: "explore",
+    timelineYear: 1000,
+    questionId: null,
+    thinkerSlug: null,
+    relationId: null,
+    earthMode: "night",
+    qualityPreference: "auto",
+    camera: null,
+  })));
+  await openHydrated(page, "/");
+  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
+  await page.getByRole("button", { name: "跳过，进入地图" }).click();
+  await expect.poll(() => page.evaluate(() => localStorage.getItem("atlas-journey-intro:v2"))).toBe("seen");
+  await expect(page).toHaveURL(/\/explore\?from=journey-skip/);
   await page.goto("/");
   await waitForHydration(page);
   await expect(page.getByRole("button", { name: "探索", exact: true })).toHaveClass(/is-active/);
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeHidden();
+});
+
+test("all eight journey routes open the shared player", async ({ page }) => {
+  const journeys = [
+    ["free-will", "自由意志"],
+    ["knowledge-world", "认识世界"],
+    ["happiness", "幸福"],
+    ["justice", "正义"],
+    ["epistemology", "认识论"],
+    ["ontology", "本体论"],
+    ["existentialism", "存在主义"],
+    ["phenomenology", "现象学"],
+  ];
+  for (const [id, title] of journeys) {
+    await openHydrated(page, `/journey/${id}`);
+    await expect(page.getByText(new RegExp(`${title}之旅 · 1/`))).toBeVisible();
+  }
+});
+
+test("a completed journey offers the related journey and free exploration", async ({ page }) => {
+  await openHydrated(page, "/journey/existentialism");
+  await page.getByRole("button", { name: "暂停旅程" }).click();
+  for (let index = 0; index < 5; index += 1) await page.getByRole("button", { name: "下一站" }).click();
+  await page.getByRole("button", { name: "完成旅程" }).click();
+  await expect(page.getByRole("button", { name: "继续：自由意志" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "进入自由探索" })).toBeVisible();
+});
+
+test("touching the globe pauses the journey and details stay paused until resumed", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop-chromium", "Pointer interruption is covered once on the reference desktop project.");
+  await openHydrated(page, "/");
+  await page.locator(".journey-deck-card.is-active").click();
+  const canvas = page.locator("canvas");
+  await expect(canvas).toBeVisible();
+  const box = await canvas.boundingBox();
+  if (!box) throw new Error("Missing globe canvas bounds");
+  await page.mouse.move(box.x + box.width * 0.72, box.y + box.height * 0.5);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width * 0.66, box.y + box.height * 0.52, { steps: 4 });
+  await page.mouse.up();
+  await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
+
+  await page.getByRole("button", { name: "继续旅程" }).click();
+  await expect(page.getByRole("button", { name: "暂停旅程" })).toBeVisible();
+  const visibleMarker = page.locator('.globe-marker[data-visible="true"]').first();
+  await expect(visibleMarker).toBeVisible();
+  await visibleMarker.click();
+  await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "关闭人物详情" })).toBeVisible();
+  await page.getByRole("button", { name: "关闭人物详情" }).click();
+  await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
 });
 
 test("display settings preserve the canvas while changing light and quality", async ({ page }) => {
@@ -145,7 +251,7 @@ test("text explorer portraits keep their vertical frames without cropping", asyn
   await openHydrated(page, "/explore");
   await page.getByRole("button", { name: "打开文字探索" }).click();
   const portraits = page.locator(".semantic-panel__grid .thinker-portrait");
-  await expect(portraits).toHaveCount(210);
+  await expect(portraits).toHaveCount(atlasData.thinkers.length);
 
   const framings = await portraits.evaluateAll((elements) => elements.map((element) => {
     const image = element.querySelector(".thinker-portrait__image");
@@ -249,9 +355,10 @@ test("globe keeps its visible portrait markers within budget while selected peop
 test("reduced-motion mode keeps story controls usable", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await openHydrated(page, "/");
-  await page.getByRole("button", { name: "暂停故事" }).click();
-  await page.getByRole("button", { name: "下一章" }).click();
-  await expect(page.getByRole("heading", { name: "怎样才算过好一生？" })).toBeVisible();
+  await page.locator(".journey-deck-card.is-active").click();
+  await page.getByRole("button", { name: "暂停旅程" }).click();
+  await page.getByRole("button", { name: "下一站" }).click();
+  await expect(page.getByRole("heading", { name: "把“知道”拆成不同渠道" })).toBeVisible();
 });
 
 test("supported responsive widths have no horizontal overflow or hidden header controls", async ({ page }, testInfo) => {
@@ -296,6 +403,21 @@ test("mobile details use the three-stage archive sheet", async ({ page }, testIn
   await expect(detail).toHaveAttribute("data-snap", "half");
   await page.getByRole("button", { name: "调整详情面板高度" }).click();
   await expect(detail).toHaveAttribute("data-snap", "full");
+});
+
+test("homepage journey entry matches desktop and mobile visual snapshots", async ({ page }, testInfo) => {
+  test.skip(Boolean(process.env.CI), "Journey-entry snapshots are reviewed on the reference machine.");
+  const isMobile = testInfo.project.name === "mobile-chromium";
+  await page.setViewportSize(isMobile ? { width: 390, height: 844 } : { width: 1440, height: 900 });
+  await page.goto("/");
+  await page.evaluate(() => localStorage.clear());
+  await openHydrated(page, "/");
+  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
+  await page.waitForTimeout(1800);
+  await expect(page).toHaveScreenshot(isMobile ? "mobile-journey-entry-390x844.png" : "desktop-journey-entry-1440x900.png", {
+    animations: "disabled",
+    maxDiffPixelRatio: 0.1,
+  });
 });
 
 test("critical interface layers match approved visual snapshots", async ({ page }, testInfo) => {
@@ -350,9 +472,7 @@ test("cinematic museum views match the release-candidate visual set", async ({ p
   }
 
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto("/");
-  await page.evaluate(() => localStorage.clear());
-  await openHydrated(page, "/");
+  await openHydrated(page, "/story/world-asks");
   await page.getByRole("button", { name: "暂停故事" }).click();
   await page.waitForTimeout(1800);
   await expect(page).toHaveScreenshot("desktop-story-night-1440x900.png", {

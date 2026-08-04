@@ -1,0 +1,36 @@
+{
+  "id": "heidegger-sartre",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "heidegger"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "sartre"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "存在之问转向人的自由",
+  "explanation": "萨特借助海德格尔关于在世存在、事实性与可能性的分析，建立以意识、自由和责任为中心的存在主义；两者的哲学目标并不相同。",
+  "citations": [
+    {
+      "sourceId": "src-heidegger",
+      "locator": "Sections on being-in-the-world, thrownness and possibility",
+      "claim": "支持萨特所回应的在世存在、被抛与可能性问题背景。"
+    },
+    {
+      "sourceId": "src-sartre-sep",
+      "locator": "Sections on Heidegger, ontology, facticity and freedom",
+      "claim": "支持萨特吸收海德格尔分析，同时将其重构为自由与责任问题的说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

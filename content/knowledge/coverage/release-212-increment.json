@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "releaseId": "public-212-increment",
+  "status": "release-candidate",
+  "baselineReleaseId": "public-210",
+  "baselinePeople": 210,
+  "addedPeople": 2,
+  "publicPeople": 212,
+  "reviewedAt": "2026-08-04",
+  "members": [
+    {
+      "personId": "sartre",
+      "slug": "sartre",
+      "editorialStatus": "published",
+      "sourceIds": [
+        "src-sartre-sep",
+        "src-sartre-existentialism-humanism-fr"
+      ],
+      "reason": "存在主义与自由意志旅程所需的标准人物条目。"
+    },
+    {
+      "personId": "merleau-ponty",
+      "slug": "merleau-ponty",
+      "editorialStatus": "published",
+      "sourceIds": [
+        "src-merleau-ponty-sep",
+        "src-merleau-ponty-phenomenology-perception-fr"
+      ],
+      "reason": "现象学与身体知觉旅程所需的标准人物条目。"
+    }
+  ]
+}

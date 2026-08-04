@@ -1,0 +1,21 @@
+{
+  "id": "concept-自在与自为",
+  "slug": "自在与自为",
+  "entityType": "concept",
+  "name": "自在与自为",
+  "originalTerms": ["être-en-soi", "être-pour-soi"],
+  "summary": "萨特以自在与自为区分事物的自足存在和意识不断超出既定状态、面向可能性的存在方式。",
+  "senses": [{
+    "traditionId": "tradition-存在主义",
+    "label": "自在与自为",
+    "explanation": "自在指事物如其所是的存在，自为指意识不能完全等同于任何既定身份，并持续面向尚未实现的可能。",
+    "citations": [{"sourceId": "src-sartre-sep", "locator": "Sections on ontology and consciousness", "claim": "支持自在与自为的基本区分。"}]
+  }],
+  "personIds": ["sartre"],
+  "workIds": ["being-and-nothingness"],
+  "traditionIds": ["tradition-存在主义"],
+  "sourceIds": ["src-sartre-sep"],
+  "citations": [{"sourceId": "src-sartre-sep", "locator": "Sections on ontology and consciousness", "claim": "支持自在与自为的概念摘要。"}],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

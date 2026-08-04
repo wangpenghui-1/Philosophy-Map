@@ -60,12 +60,28 @@ type WebglRuntimeStatus = "checking" | "ready" | "lost" | "retrying" | "unavaila
 
 export type EarthLightingMode = "day" | "night";
 
+export interface GlobeThematicTransition {
+  from: string;
+  to: string;
+  label: string;
+}
+
+export interface GlobeStoryFocus {
+  key: string;
+  camera: StoryChapter["camera"];
+  focusThinkerId?: string;
+  thinkerIds: string[];
+  relationIds: string[];
+  thematicTransitions: GlobeThematicTransition[];
+}
+
 interface GlobeCanvasProps {
   mode: AtlasMode;
   earthMode: EarthLightingMode;
   detailOpen: boolean;
   isPlaying: boolean;
   chapterIndex: number;
+  storyFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   activeQuestionId: QuestionId | null;
@@ -81,6 +97,7 @@ interface GlobeCanvasProps {
   onRuntimeFallback: () => void;
   onCameraSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
   onPerformanceSample: (p75FrameMs: number) => void;
+  onStoryInterruption: () => void;
 }
 
 interface SharedEarthUniforms {
@@ -838,6 +855,82 @@ function RelationArc({
   );
 }
 
+function ThematicJourneyArc({
+  transition,
+  quality,
+  reduceMotion,
+}: {
+  transition: GlobeThematicTransition;
+  quality: QualityTier;
+  reduceMotion: boolean;
+}) {
+  const pulseRef = useRef<Line2 | null>(null);
+  const { invalidate } = useThree();
+  const points = useMemo(() => {
+    const from = thinkerById.get(transition.from);
+    const to = thinkerById.get(transition.to);
+    if (!from || !to) return [];
+    const start = latLonToVector3(from.anchors[0].lat, from.anchors[0].lon, GLOBE_RADIUS + 0.04);
+    const end = latLonToVector3(to.anchors[0].lat, to.anchors[0].lon, GLOBE_RADIUS + 0.04);
+    return createElevatedArcPoints(start, end, quality === "low" ? 28 : quality === "medium" ? 46 : 64);
+  }, [quality, transition.from, transition.to]);
+
+  useEffect(() => {
+    if (reduceMotion || !pulseRef.current) return;
+    const material = pulseRef.current.material as LineMaterial;
+    const travel = { offset: material.dashOffset };
+    const tween = gsap.to(travel, {
+      offset: travel.offset - 1.8,
+      duration: 3.2,
+      ease: "none",
+      repeat: -1,
+      onUpdate: () => {
+        material.dashOffset = travel.offset;
+        invalidate();
+      },
+    });
+    return () => {
+      tween.kill();
+    };
+  }, [invalidate, reduceMotion, transition.from, transition.to]);
+
+  if (!points.length) return null;
+  return (
+    <group>
+      {quality !== "low" ? (
+        <Line
+          points={points}
+          color="#9fb9d8"
+          lineWidth={5.5}
+          transparent
+          opacity={0.07}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+          depthTest
+          toneMapped={false}
+          renderOrder={4}
+        />
+      ) : null}
+      <Line
+        ref={pulseRef}
+        points={points}
+        color="#9fb9d8"
+        lineWidth={1.35}
+        dashed
+        dashSize={0.055}
+        gapSize={0.1}
+        dashScale={1}
+        transparent
+        opacity={reduceMotion ? 0.46 : 0.68}
+        depthWrite={false}
+        depthTest
+        toneMapped={false}
+        renderOrder={5}
+      />
+    </group>
+  );
+}
+
 function ThinkerAnchor({
   thinker,
   emphasized,
@@ -911,6 +1004,7 @@ function CameraDirector({
   abortRef,
   mode,
   chapterIndex,
+  storyFocus,
   selectedThinkerId,
   selectedRelationId,
   reduceMotion,
@@ -921,6 +1015,7 @@ function CameraDirector({
   abortRef: RefObject<(() => void) | null>;
   mode: AtlasMode;
   chapterIndex: number;
+  storyFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   reduceMotion: boolean;
@@ -929,6 +1024,7 @@ function CameraDirector({
 }) {
   const { camera, invalidate, size } = useThree();
   const suppressInitialRef = useRef(suppressInitialDirection);
+  const lastStoryFocusKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (suppressInitialRef.current) {
@@ -941,6 +1037,10 @@ function CameraDirector({
     const thinker = selectedThinkerId ? thinkerById.get(selectedThinkerId) : undefined;
     const relation = selectedRelationId ? relations.find((item) => item.id === selectedRelationId) : undefined;
     if (!shouldDirectGlobeCamera(mode, selectedThinkerId, selectedRelationId)) return;
+    if (mode === "story" && !thinker && !relation && storyFocus) {
+      if (lastStoryFocusKeyRef.current === storyFocus.key) return;
+      lastStoryFocusKeyRef.current = storyFocus.key;
+    }
     const relationFrom = relation ? thinkerById.get(relation.from) : undefined;
     const relationTo = relation ? thinkerById.get(relation.to) : undefined;
     const relationDirection = relationFrom && relationTo
@@ -950,16 +1050,21 @@ function CameraDirector({
           return midpoint.lengthSq() < 0.01 ? fromDirection : midpoint.normalize();
         })()
       : null;
+    const storyThinker = storyFocus?.focusThinkerId ? thinkerById.get(storyFocus.focusThinkerId) : undefined;
     const destination = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 3.72)
       : relationDirection
         ? relationDirection.clone().multiplyScalar(4.25)
-        : cameraPositionFromPreset(storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
+        : storyThinker
+          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, storyFocus?.camera.distance ?? 4)
+          : cameraPositionFromPreset(storyFocus?.camera ?? storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
     const target = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 0.42)
       : relationDirection
         ? relationDirection.clone().multiplyScalar(0.34)
-        : new THREE.Vector3(0, 0, 0);
+        : storyThinker
+          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, 0.42)
+          : new THREE.Vector3(0, 0, 0);
     const duration = reduceMotion ? 0.01 : thinker || relation ? (size.width <= 820 ? 0.65 : 0.9) : mode === "story" ? 1.45 : 0.9;
 
     const cameraTween = gsap.to(camera.position, {
@@ -1002,7 +1107,7 @@ function CameraDirector({
       abort();
       if (abortRef.current === abort) abortRef.current = null;
     };
-  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width]);
+  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
 
   return null;
 }
@@ -1234,13 +1339,20 @@ function GlobeScene({
   const directorAbortRef = useRef<(() => void) | null>(null);
   const bloomGroupRef = useRef<THREE.Group | null>(null);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
+  const activeStoryFocus = props.storyFocus ?? {
+    key: currentChapter.id,
+    camera: currentChapter.camera,
+    thinkerIds: currentChapter.thinkerIds,
+    relationIds: currentChapter.relationIds,
+    thematicTransitions: [],
+  };
   const storyThinkerIds = useMemo(
-    () => new Set(currentChapter.thinkerIds),
-    [currentChapter.thinkerIds],
+    () => new Set(activeStoryFocus.thinkerIds),
+    [activeStoryFocus.thinkerIds],
   );
   const storyRelationIds = useMemo(
-    () => new Set(currentChapter.relationIds),
-    [currentChapter.relationIds],
+    () => new Set(activeStoryFocus.relationIds),
+    [activeStoryFocus.relationIds],
   );
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1276,6 +1388,7 @@ function GlobeScene({
     () => new Set(
       thinkers
         .filter((thinker) => {
+          if (props.mode === "story" && props.storyFocus) return storyThinkerIds.has(thinker.id);
           if (props.mode === "story") return true;
           const questionMatch = !props.activeQuestionId
             || thinker.questionIds.includes(props.activeQuestionId);
@@ -1283,7 +1396,7 @@ function GlobeScene({
         })
         .map((thinker) => thinker.id),
     ),
-    [props.activeQuestionId, props.mode, props.timelineYear],
+    [props.activeQuestionId, props.mode, props.storyFocus, props.timelineYear, storyThinkerIds],
   );
   const shared = useMemo<SharedEarthUniforms>(() => ({
     uSunDirection: { value: new THREE.Vector3(4, 2.5, 5).normalize() },
@@ -1347,6 +1460,14 @@ function GlobeScene({
             />
           );
           })}
+          {props.mode === "story" ? activeStoryFocus.thematicTransitions.map((transition) => (
+            <ThematicJourneyArc
+              key={`${transition.from}-${transition.to}`}
+              transition={transition}
+              quality={props.quality}
+              reduceMotion={props.reduceMotion}
+            />
+          )) : null}
           {thinkers
           .filter((thinker) => mountedAnchorIds.has(thinker.id))
           .map((thinker) => (
@@ -1356,6 +1477,7 @@ function GlobeScene({
               emphasized={
                 props.selectedThinkerId === thinker.id
                 || selectedRelationEndpoints.has(thinker.id)
+                || (props.mode === "story" && storyThinkerIds.has(thinker.id))
               }
               selected={props.selectedThinkerId === thinker.id}
               hovered={hoveredRelationEndpoints.has(thinker.id)}
@@ -1368,14 +1490,17 @@ function GlobeScene({
       </group>
       <OrbitControls
         ref={controlsRef}
-        enabled={props.mode === "explore" || !props.isPlaying}
+        enabled
         enablePan={false}
         enableDamping={!props.reduceMotion}
         dampingFactor={0.072}
         rotateSpeed={0.42}
         zoomSpeed={0.58}
         zoomToCursor
-        onStart={() => directorAbortRef.current?.()}
+        onStart={() => {
+          directorAbortRef.current?.();
+          if (props.mode === "story" && props.isPlaying) props.onStoryInterruption();
+        }}
         onChange={() => {
           const controls = controlsRef.current;
           if (controls && controls.target.length() > 0.58) controls.target.setLength(0.58);
@@ -1390,6 +1515,7 @@ function GlobeScene({
         abortRef={directorAbortRef}
         mode={props.mode}
         chapterIndex={props.chapterIndex}
+        storyFocus={activeStoryFocus}
         selectedThinkerId={props.selectedThinkerId}
         selectedRelationId={props.selectedRelationId}
         reduceMotion={props.reduceMotion}

@@ -1,0 +1,9 @@
+{
+  "id": "paris-merleau-ponty", "slug": "paris-merleau-ponty", "entityType": "place",
+  "historicalName": "巴黎", "historicalRegion": "20世纪法国", "modernReferenceName": "巴黎",
+  "coordinates": {"lat": 48.864, "lon": 2.349}, "certainty": "established",
+  "note": "梅洛-庞蒂的学习、教学、编辑与主要哲学活动长期位于巴黎学术网络。",
+  "relatedPersonIds": ["merleau-ponty"],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

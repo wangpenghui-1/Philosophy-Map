@@ -1,0 +1,13 @@
+{
+  "id": "being-and-nothingness", "slug": "being-and-nothingness", "entityType": "work",
+  "title": "《存在与虚无》", "originalTitle": "L’Être et le Néant",
+  "authorRefs": [{"personId": "sartre", "role": "author", "certainty": "established"}],
+  "dateLabel": "1943", "languages": ["fr"],
+  "summary": "萨特在《存在与虚无》中分析意识、事实性、超越、自欺和他人目光，建立其存在主义现象学的核心结构。",
+  "conceptIds": ["concept-自欺", "concept-自在与自为"],
+  "traditionIds": ["tradition-存在主义"],
+  "sourceIds": ["src-sartre-sep"],
+  "citations": [{"sourceId": "src-sartre-sep", "locator": "Sections on ontology, consciousness and bad faith", "claim": "支持作品的核心论题与思想史位置。"}],
+  "contentTier": "standard", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

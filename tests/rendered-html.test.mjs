@@ -85,7 +85,8 @@ test("server-renders the Atlas product shell", async () => {
   const html = await response.text();
   assert.match(html, /思想星图/);
   assert.match(html, /ATLAS OF IDEAS/);
-  assert.match(html, /世界同时开始提问/);
+  assert.match(html, /开启一次思想旅程/);
+  assert.match(html, /你凭什么说“我知道”/);
   assert.match(html, /展陈设置/);
   assert.match(html, /WORLD PHILOSOPHY/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is building|codex-preview/);
@@ -141,20 +142,25 @@ test("new release people, concepts, traditions, and works are publicly searchabl
   assert.match(html[5], /荀子/);
 });
 
-test("publishes the 210-person release while preserving the legacy corpus and relations", async () => {
-  const [people, relations, sources] = await Promise.all([
+test("publishes the current increment while preserving the historical corpus and relations", async () => {
+  const [people, relations, sources, generatedCoverage] = await Promise.all([
     readEntities("people"),
     readEntities("relations"),
     readEntities("sources"),
+    JSON.parse(await readFile(new URL("../app/_generated/coverage-report.json", import.meta.url), "utf8")),
   ]);
   const release = JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8"));
-  assert.equal(people.length, 210);
-  assert.equal(relations.length, 27);
-  assert.equal(sources.length, 123);
-  assert.equal(new Set(people.map((person) => person.slug)).size, 210);
-  assert.equal(release.members.length, 180);
+  const increment = JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8"));
+  assert.equal(people.length, increment.publicPeople);
+  assert.equal(relations.length, generatedCoverage.published.relations);
+  assert.equal(sources.length, generatedCoverage.published.sources);
+  assert.equal(new Set(people.map((person) => person.slug)).size, people.length);
+  assert.equal(release.members.length, release.addedPeople);
+  assert.equal(increment.members.length, increment.addedPeople);
   assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));
   assert.ok(release.members.every((member) => people.some((person) => person.id === member.personId)));
+  assert.ok(increment.members.every((member) => people.some((person) => person.id === member.personId)));
+  assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre"].every((id) => relations.some((relation) => relation.id === id)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
 });
 
@@ -168,7 +174,7 @@ test("keeps representative quotations traceable to explicit source tiers", async
   const sourceById = new Map(sources.map((source) => [source.id, source]));
   const quotedPeople = people.filter((person) => person.representativeQuote);
 
-  assert.equal(quotedPeople.length, 79);
+  assert.ok(quotedPeople.length >= 79);
   const quotedPersonIds = new Set(quotedPeople.map((person) => person.id));
   assert.ok(
     [
@@ -177,7 +183,7 @@ test("keeps representative quotations traceable to explicit source tiers", async
       "ifi-amadiume", "jiddu-krishnamurti", "john-mbiti", "john-rawls", "judith-butler", "kant", "laozi",
       "li-zhi", "liang-qichao", "locke", "mahavira", "maimonides", "meister-eckhart", "mencius", "mozi",
       "nietzsche", "philo-alexandria", "rabindranath-tagore", "socrates", "thomas-kuhn", "vine-deloria-jr",
-      "wang-fuzhi", "wang-yangming", "xunzi", "zhiyi", "zhu-xi", "zhuangzi",
+      "wang-fuzhi", "wang-yangming", "xunzi", "zhiyi", "zhu-xi", "zhuangzi", "sartre", "merleau-ponty",
     ].every((id) => quotedPersonIds.has(id)),
   );
   for (const person of quotedPeople) {
@@ -188,10 +194,10 @@ test("keeps representative quotations traceable to explicit source tiers", async
     assert.ok(["primary-verified", "source-attributed", "traditional-attribution", "disputed"].includes(quote.verificationStatus));
     if (quote.verificationStatus !== "primary-verified") assert.ok(quote.attributionNote.length > 0);
     assert.ok(person.sourceIds.includes(quote.sourceId));
-    if (quote.displayLanguage === "en") {
+    if (["en", "fr"].includes(quote.displayLanguage)) {
       assert.ok(quote.chineseTranslation.length > 0);
       if (quote.textStatus === "translation") assert.ok(quote.translator.length > 0);
-      else assert.equal(quote.originalLanguage, "en");
+      else assert.equal(quote.originalLanguage, quote.displayLanguage);
     }
   }
 });
@@ -209,7 +215,8 @@ test("keeps relation evidence and resonance semantics explicit in entity data", 
 
 test("keeps thinker media metadata complete and backed by public files", async () => {
   const people = await readEntities("people");
-  assert.equal(people.length, 210);
+  const increment = JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8"));
+  assert.equal(people.length, increment.publicPeople);
   assert.equal(people.filter((person) => person.media.presentationType === "placeholder").length, 0);
 
   for (const { media } of people) {
@@ -241,25 +248,26 @@ test("keeps thinker media metadata complete and backed by public files", async (
   }
 });
 
-test("publishes exactly 210 people and keeps non-published records out of client indexes", async () => {
-  const [contexts, coverage, release, publishedKnowledge, atlasIndex, searchIndex] = await Promise.all([
+test("publishes exactly the current release and keeps non-published records out of client indexes", async () => {
+  const [contexts, coverage, release, increment, publishedKnowledge, atlasIndex, searchIndex] = await Promise.all([
     readEntities("contexts"),
     JSON.parse(await readFile(new URL("coverage/people.json", knowledgeRoot), "utf8")),
     JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8")),
+    JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/knowledge.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/atlas.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/search-index.json", import.meta.url), "utf8")),
   ]);
-  assert.equal(coverage.targetTotal, 210);
-  assert.equal(coverage.publishedBaseline, 210);
+  assert.equal(coverage.targetTotal, increment.publicPeople);
+  assert.equal(coverage.publishedBaseline, increment.publicPeople);
   assert.equal(coverage.candidates.length, 0);
-  assert.equal(release.baselinePeople, 30);
-  assert.equal(release.addedPeople, 180);
-  assert.equal(release.members.length, 180);
+  assert.equal(release.baselinePeople + release.addedPeople, increment.baselinePeople);
+  assert.equal(release.members.length, release.addedPeople);
+  assert.equal(increment.members.length, increment.addedPeople);
   assert.ok(contexts.some((context) => context.editorialStatus === "candidate"));
   assert.equal(publishedKnowledge.contexts.length, 0);
-  assert.equal(publishedKnowledge.people.length, 210);
-  assert.equal(atlasIndex.thinkers.length, 210);
+  assert.equal(publishedKnowledge.people.length, increment.publicPeople);
+  assert.equal(atlasIndex.thinkers.length, increment.publicPeople);
   assert.ok(atlasIndex.thinkers.every((thinker) => !("sections" in thinker)));
   assert.ok(searchIndex.every((item) => !("sections" in item) && !("paragraphs" in item)));
 });

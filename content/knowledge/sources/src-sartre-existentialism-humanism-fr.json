@@ -1,0 +1,17 @@
+{
+  "id": "src-sartre-existentialism-humanism-fr",
+  "entityType": "source",
+  "title": "L’existentialisme est un humanisme",
+  "authors": ["Sartre, Jean-Paul"],
+  "sourceType": "primary-text",
+  "publication": "Éditions Nagel",
+  "year": 1946,
+  "defaultLocator": "Exposé: « l’existence précède l’essence »",
+  "language": "fr",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

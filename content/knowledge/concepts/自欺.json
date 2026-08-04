@@ -1,0 +1,21 @@
+{
+  "id": "concept-自欺",
+  "slug": "自欺",
+  "entityType": "concept",
+  "name": "自欺",
+  "originalTerms": ["mauvaise foi"],
+  "summary": "自欺是人把自己假装成固定角色或纯粹自由，以逃避事实处境、可能性和选择责任的矛盾实践。",
+  "senses": [{
+    "traditionId": "tradition-存在主义",
+    "label": "自欺",
+    "explanation": "在萨特那里，自欺不是简单说谎，而是意识试图遮蔽自己既受处境限制又仍须选择的双重结构。",
+    "citations": [{"sourceId": "src-sartre-sep", "locator": "Section on bad faith", "claim": "支持自欺作为逃避自由与事实性的意识结构。"}]
+  }],
+  "personIds": ["sartre"],
+  "workIds": ["being-and-nothingness"],
+  "traditionIds": ["tradition-存在主义"],
+  "sourceIds": ["src-sartre-sep"],
+  "citations": [{"sourceId": "src-sartre-sep", "locator": "Section on bad faith", "claim": "支持自欺的概念摘要。"}],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

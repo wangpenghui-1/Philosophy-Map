@@ -1,0 +1,21 @@
+{
+  "id": "concept-存在先于本质",
+  "slug": "存在先于本质",
+  "entityType": "concept",
+  "name": "存在先于本质",
+  "originalTerms": ["l’existence précède l’essence"],
+  "summary": "人在行动之前没有一份预先完成的固定本质；选择在具体处境中逐渐形成一个人是谁，并使行动者承担相应责任。",
+  "senses": [{
+    "traditionId": "tradition-存在主义",
+    "label": "存在先于本质",
+    "explanation": "萨特用这一命题强调人的生活先于任何固定定义，选择因而伴随责任；它不意味着人能够无视事实处境。",
+    "citations": [{"sourceId": "src-sartre-existentialism-humanism-fr", "locator": "Exposé: « l’existence précède l’essence »", "claim": "支持萨特对存在与本质次序的明确表述。"}]
+  }],
+  "personIds": ["sartre"],
+  "workIds": ["existentialism-humanism"],
+  "traditionIds": ["tradition-存在主义"],
+  "sourceIds": ["src-sartre-existentialism-humanism-fr"],
+  "citations": [{"sourceId": "src-sartre-existentialism-humanism-fr", "locator": "Exposé: « l’existence précède l’essence »", "claim": "支持存在先于本质的概念摘要。"}],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

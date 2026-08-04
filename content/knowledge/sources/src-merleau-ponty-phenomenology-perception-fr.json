@@ -1,0 +1,17 @@
+{
+  "id": "src-merleau-ponty-phenomenology-perception-fr",
+  "entityType": "source",
+  "title": "Phénoménologie de la perception",
+  "authors": ["Merleau-Ponty, Maurice"],
+  "sourceType": "primary-text",
+  "publication": "Éditions Gallimard",
+  "year": 1945,
+  "defaultLocator": "Première partie: Le corps; formulation « le corps est notre moyen général d’avoir un monde »",
+  "language": "fr",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

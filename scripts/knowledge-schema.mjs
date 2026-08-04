@@ -29,7 +29,7 @@ const sectionSchema = z.object({
 
 const representativeQuoteSchema = z.object({
   text: z.string().min(5),
-  displayLanguage: z.enum(["zh-classical", "zh-modern", "en"]),
+  displayLanguage: z.enum(["zh-classical", "zh-modern", "en", "fr"]),
   textStatus: z.enum(["original", "translation"]),
   originalLanguage: z.string().min(2),
   chineseTranslation: z.string().min(1).optional(),

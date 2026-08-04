@@ -1,0 +1,13 @@
+{
+  "id": "visible-and-invisible", "slug": "visible-and-invisible", "entityType": "work",
+  "title": "《可见的与不可见的》", "originalTitle": "Le Visible et l’Invisible",
+  "authorRefs": [{"personId": "merleau-ponty", "role": "author", "certainty": "established"}],
+  "dateLabel": "1964（身后出版）", "languages": ["fr"],
+  "summary": "这部未完成、身后出版的著作以肉身、交错和可逆性推进梅洛-庞蒂晚期对感知者与世界关系的探索。",
+  "conceptIds": ["concept-肉身"],
+  "traditionIds": ["tradition-现象学"],
+  "sourceIds": ["src-merleau-ponty-sep"],
+  "citations": [{"sourceId": "src-merleau-ponty-sep", "locator": "Section on ontology and the flesh", "claim": "支持作品的身后出版状态及晚期本体论主题。"}],
+  "contentTier": "standard", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

@@ -20,7 +20,7 @@ export interface EditorialMetadata {
 
 export interface RepresentativeQuote {
   text: string;
-  displayLanguage: "zh-classical" | "zh-modern" | "en";
+  displayLanguage: "zh-classical" | "zh-modern" | "en" | "fr";
   textStatus: "original" | "translation";
   originalLanguage: string;
   chineseTranslation?: string;

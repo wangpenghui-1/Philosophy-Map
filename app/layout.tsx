@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
+import { knowledgeBase } from "./_data/knowledge";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
       default: "思想星图 · Atlas of Ideas",
       template: "%s · 思想星图",
     },
-    description: "在一个可进入的3D地球与210人物知识库中，沿着问题、文本与有来源的关系探索世界哲学。",
+    description: `在一个可进入的3D地球与${knowledgeBase.people.length}人物知识库中，沿着问题、文本与有来源的关系探索世界哲学。`,
     keywords: ["哲学", "思想史", "3D地球", "互动叙事", "Atlas of Ideas"],
     manifest: "/site.webmanifest",
     icons: {

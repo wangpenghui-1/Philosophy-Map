@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "publishedBaseline": 210,
+  "publishedBaseline": 212,
   "candidateCount": 0,
-  "targetTotal": 210,
+  "targetTotal": 212,
   "status": "release-candidate",
   "regionTargets": {
     "北非—地中海": 1,
@@ -14,7 +14,7 @@
     "跨区域与离散思想传统": 8,
     "美洲与加勒比": 25,
     "南亚": 30,
-    "欧洲": 19,
+    "欧洲": 21,
     "欧洲—北美": 1,
     "欧洲与地中海": 36,
     "西亚、中亚及伊斯兰思想世界": 26,
@@ -22,7 +22,7 @@
   },
   "eraTargets": {
     "1500–1800年": 30,
-    "1800–1945年": 80,
+    "1800–1945年": 82,
     "1945年至今": 13,
     "500–1500年": 38,
     "公元前500年以前": 13,
@@ -34,7 +34,7 @@
     "minimumRegionsPerBatch": 4,
     "minimumErasPerBatch": 3,
     "maximumSingleRegionShare": 0.4,
-    "publicationRule": "210人版本已完成自动编辑与结构审核；外部同行评审不在自动审核声明范围内。"
+    "publicationRule": "212人版本由不可改写的210人历史基线与两人增量组成；已完成自动编辑与结构审核，外部同行评审不在自动审核声明范围内。"
   },
   "candidates": [],
   "releaseCandidates": [
@@ -3100,17 +3100,13 @@
     }
   ],
   "release": {
-    "releaseId": "public-210",
-    "baselinePeople": 30,
-    "addedPeople": 180,
-    "publicPeople": 210,
-    "sourceBatches": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
+    "releaseId": "public-212",
+    "baselinePeople": 210,
+    "addedPeople": 2,
+    "publicPeople": 212,
+    "sourceReleaseIds": [
+      "public-210",
+      "public-212-increment"
     ]
   },
   "archivedRoadmap": {

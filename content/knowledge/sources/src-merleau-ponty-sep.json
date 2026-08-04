@@ -1,0 +1,17 @@
+{
+  "id": "src-merleau-ponty-sep",
+  "entityType": "source",
+  "title": "Maurice Merleau-Ponty",
+  "authors": ["Toadvine, Ted"],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/entries/merleau-ponty/",
+  "defaultLocator": "Sections on perception, embodiment, expression and ontology",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "paris-sartre", "slug": "paris-sartre", "entityType": "place",
+  "historicalName": "巴黎", "historicalRegion": "20世纪法国", "modernReferenceName": "巴黎",
+  "coordinates": {"lat": 48.8566, "lon": 2.3522}, "certainty": "established",
+  "note": "萨特的学习、写作、公共活动与法国战后思想网络长期以巴黎为中心。",
+  "relatedPersonIds": ["sartre"],
+  "contentTier": "index", "editorialStatus": "published", "version": 1,
+  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+}

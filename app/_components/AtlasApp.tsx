@@ -1189,13 +1189,16 @@ export default function AtlasApp({
   }, []);
 
   const handleWebglRuntimeFallback = useCallback(() => {
+    const currentState = useAtlasStore.getState();
+    if (currentState.qualityPreference !== "auto") return;
+    const safeQuality = currentState.quality === "high" ? "medium" : currentState.quality;
     autoQualityRef.current = {
-      quality: "low",
+      quality: safeQuality,
       aboveBudgetSince: null,
       belowBudgetSince: null,
       lastChangeAt: performance.now(),
     };
-    setQuality("low");
+    setQuality(safeQuality);
   }, [setQuality]);
 
   const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);

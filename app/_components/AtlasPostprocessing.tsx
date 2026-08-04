@@ -6,9 +6,19 @@ import type { Object3D } from "three";
 
 export default function AtlasPostprocessing({
   selection,
+  bloomEnabled,
 }: {
   selection: RefObject<Object3D | null>;
+  bloomEnabled: boolean;
 }) {
+  if (!bloomEnabled) {
+    return (
+      <EffectComposer multisampling={0} enableNormalPass={false}>
+        <SMAA />
+      </EffectComposer>
+    );
+  }
+
   return (
     <EffectComposer multisampling={0} enableNormalPass={false}>
       <SelectiveBloom
@@ -16,6 +26,7 @@ export default function AtlasPostprocessing({
         intensity={0.72}
         luminanceThreshold={0.28}
         luminanceSmoothing={0.72}
+        resolutionScale={0.5}
         mipmapBlur
         ignoreBackground
       />

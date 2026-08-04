@@ -27,7 +27,10 @@ import {
 } from "../_data/atlas";
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
+  GLOBE_HIGH_QUALITY_WARMUP_MS,
+  GLOBE_WEBGL_RETRY_DELAY_MS,
   getFocusedThinkerIds,
+  getRenderPixelRatio,
   percentile,
   shouldDirectGlobeCamera,
   type FocusDepth,
@@ -274,7 +277,6 @@ function getWebgl2Availability() {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("webgl2");
     cachedWebgl2Availability = Boolean(context);
-    context?.getExtension("WEBGL_lose_context")?.loseContext();
     canvas.width = 1;
     canvas.height = 1;
   } catch {
@@ -1325,6 +1327,7 @@ function GlobeScene({
   markerLayout,
   anchorBudget,
   hoveredRelationId,
+  bloomEnabled,
   onHoverRelation,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
@@ -1333,6 +1336,7 @@ function GlobeScene({
   anchorBudget: number;
   hoveredRelationId: string | null;
   onHoverRelation: (id: string | null) => void;
+  bloomEnabled: boolean;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
@@ -1542,9 +1546,9 @@ function GlobeScene({
         onLayout={onMarkerLayout}
       />
       <FramePerformanceReporter onSample={props.onPerformanceSample} />
-      {props.quality === "high" ? (
+      {props.quality !== "low" ? (
         <Suspense fallback={null}>
-          <AtlasPostprocessing selection={bloomGroupRef} />
+          <AtlasPostprocessing selection={bloomGroupRef} bloomEnabled={bloomEnabled} />
         </Suspense>
       ) : null}
     </>
@@ -1592,7 +1596,15 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
   const [anchorBudget, setAnchorBudget] = useState(0);
   const [hoveredRelationId, setHoveredRelationId] = useState<string | null>(null);
-  const retryFrameRef = useRef<number | null>(null);
+  const [renderSize, setRenderSize] = useState(() => ({
+    width: typeof window === "undefined" ? 1440 : window.innerWidth,
+    height: typeof window === "undefined" ? 900 : window.innerHeight,
+  }));
+  const [warmedQualityKey, setWarmedQualityKey] = useState<string | null>(null);
+  const [contextLossCount, setContextLossCount] = useState(0);
+  const runtimeRef = useRef<HTMLDivElement | null>(null);
+  const retryTimerRef = useRef<number | null>(null);
+  const runtimeRecoveryRef = useRef(false);
   const { onRuntimeFallback } = props;
 
   useEffect(() => {
@@ -1604,33 +1616,62 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   }, [webglStatus]);
 
   useEffect(() => () => {
-    if (retryFrameRef.current !== null) window.cancelAnimationFrame(retryFrameRef.current);
+    if (retryTimerRef.current !== null) window.clearTimeout(retryTimerRef.current);
   }, []);
 
+  useEffect(() => {
+    if (webglStatus !== "ready" || props.quality !== "high") return;
+    const qualityKey = `${attempt}:${contextLossCount}`;
+    if (warmedQualityKey === qualityKey) return;
+    const timer = window.setTimeout(
+      () => setWarmedQualityKey(qualityKey),
+      GLOBE_HIGH_QUALITY_WARMUP_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [attempt, contextLossCount, props.quality, warmedQualityKey, webglStatus]);
+
+  useEffect(() => {
+    const element = runtimeRef.current;
+    if (!element || typeof ResizeObserver === "undefined") return;
+    const updateSize = () => {
+      const bounds = element.getBoundingClientRect();
+      if (bounds.width <= 0 || bounds.height <= 0) return;
+      setRenderSize({ width: bounds.width, height: bounds.height });
+    };
+    updateSize();
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [attempt, webglStatus]);
+
   const handleContextLost = useCallback(() => {
-    cachedWebgl2Availability = null;
+    runtimeRecoveryRef.current = true;
+    setContextLossCount((value) => value + 1);
     onRuntimeFallback();
     setWebglStatus("lost");
   }, [onRuntimeFallback]);
 
   const handleContextRestored = useCallback(() => {
+    runtimeRecoveryRef.current = false;
     setWebglStatus("ready");
   }, []);
 
   const retry = useCallback(() => {
     if (webglStatus === "retrying") return;
-    cachedWebgl2Availability = null;
+    const recoveringRuntime = webglStatus === "lost" || runtimeRecoveryRef.current;
+    if (!recoveringRuntime) cachedWebgl2Availability = null;
     onRuntimeFallback();
     setWebglStatus("retrying");
-    retryFrameRef.current = window.requestAnimationFrame(() => {
-      retryFrameRef.current = null;
-      if (!getWebgl2Availability()) {
+    retryTimerRef.current = window.setTimeout(() => {
+      retryTimerRef.current = null;
+      if (!recoveringRuntime && !getWebgl2Availability()) {
         setWebglStatus("unavailable");
         return;
       }
+      runtimeRecoveryRef.current = false;
       setAttempt((value) => value + 1);
       setWebglStatus("ready");
-    });
+    }, GLOBE_WEBGL_RETRY_DELAY_MS);
   }, [onRuntimeFallback, webglStatus]);
 
   const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[], nextAnchorBudget: number) => {
@@ -1651,19 +1692,30 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     );
   }
 
-  if (webglStatus === "checking") {
+  if (webglStatus === "checking" || webglStatus === "retrying") {
     return (
       <div className="globe-loading" role="status" aria-live="polite">
         <span className="globe-loading__orbit" />
-        <strong>正在点亮思想星图</strong>
-        <small>内容已经可用，3D地球正在进入现场。</small>
+        <strong>{webglStatus === "retrying" ? "正在重新建立3D地球" : "正在点亮思想星图"}</strong>
+        <small>{webglStatus === "retrying" ? "正在释放旧画布，并以稳定画质恢复当前位置。" : "内容已经可用，3D地球正在进入现场。"}</small>
+        {webglStatus === "retrying" ? (
+          <button type="button" className="globe-loading__text-action" onClick={props.onFallback}>打开文字探索</button>
+        ) : null}
       </div>
     );
   }
 
   const renderQuality: QualityTier = props.quality;
-  const dpr: [number, number] =
-    renderQuality === "high" ? [1, 1.65] : renderQuality === "medium" ? [0.85, 1.3] : [0.7, 1];
+  const highQualityReady = warmedQualityKey === `${attempt}:${contextLossCount}`;
+  const warmingUp = renderQuality === "high" && (!highQualityReady || contextLossCount >= 2);
+  const dpr = getRenderPixelRatio(
+    renderSize.width,
+    renderSize.height,
+    typeof window === "undefined" ? 1 : window.devicePixelRatio,
+    renderQuality,
+    warmingUp,
+  );
+  const bloomEnabled = renderQuality === "high" && highQualityReady && contextLossCount < 2;
   const markerById = new Map(markerLayout.map((item) => [item.id, item]));
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1687,14 +1739,19 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   const mountedThinkers = thinkers.filter((thinker) => mountedMarkerIds.has(thinker.id));
 
   return (
-    <div className={"globe-runtime globe-runtime--" + props.earthMode}>
+    <div
+      ref={runtimeRef}
+      className={"globe-runtime globe-runtime--" + props.earthMode}
+      data-render-dpr={dpr.toFixed(2)}
+      data-render-effects={bloomEnabled ? "bloom-smaa" : renderQuality === "low" ? "none" : "smaa"}
+    >
       <Canvas
         key={attempt}
         dpr={dpr}
         camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
         frameloop="demand"
         gl={{
-          antialias: renderQuality !== "low",
+          antialias: false,
           alpha: false,
           stencil: false,
           powerPreference: "high-performance",
@@ -1715,6 +1772,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           hoveredRelationId={hoveredRelationId}
           onHoverRelation={setHoveredRelationId}
           onMarkerLayout={handleMarkerLayout}
+          bloomEnabled={bloomEnabled}
         />
       </Canvas>
       <div className="globe-marker-layer" aria-label="地图人物">
@@ -1776,15 +1834,13 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           <strong>{hoveredRelation.title}</strong>
         </div>
       ) : null}
-      {webglStatus === "lost" || webglStatus === "retrying" ? (
+      {webglStatus === "lost" ? (
         <div className="globe-fallback globe-fallback--overlay" role="status" aria-live="polite">
-          <span>{webglStatus === "retrying" ? "正在重新建立3D地球" : "3D渲染暂时中断"}</span>
-          <strong>{webglStatus === "retrying" ? "正在使用轻量模式重新连接显卡。" : "当前位置已经保留，可以尝试恢复。"}</strong>
+          <span>3D渲染暂时中断</span>
+          <strong>当前位置已经保留，可以尝试恢复。</strong>
           <div className="globe-fallback__actions">
             <button type="button" onClick={props.onFallback}>打开文字探索</button>
-            <button type="button" onClick={retry} disabled={webglStatus === "retrying"}>
-              {webglStatus === "retrying" ? "正在恢复…" : "重新尝试3D"}
-            </button>
+            <button type="button" onClick={retry}>重新尝试3D</button>
           </div>
         </div>
       ) : null}

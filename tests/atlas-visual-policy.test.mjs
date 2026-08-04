@@ -5,6 +5,7 @@ import {
   advanceAutoQuality,
   detailSheetSnapFromProgress,
   getFocusedThinkerIds,
+  getRenderPixelRatio,
   initialAutoQuality,
   parsePersistedVisualState,
   percentile,
@@ -24,6 +25,14 @@ test("auto quality starts conservatively and changes only after sustained eviden
   state = advanceAutoQuality(state, 12, 12_200);
   state = advanceAutoQuality(state, 12, 18_300);
   assert.equal(state.quality, "medium");
+});
+
+test("render DPR stays inside a pixel budget while preserving high-detail assets", () => {
+  assert.equal(getRenderPixelRatio(1440, 900, 2, "high"), 1.5);
+  assert.equal(getRenderPixelRatio(1920, 1080, 2, "high"), 1.39);
+  assert.equal(getRenderPixelRatio(3840, 2160, 2, "high"), 0.69);
+  assert.equal(getRenderPixelRatio(1440, 900, 2, "high", true), 1.15);
+  assert.equal(getRenderPixelRatio(1440, 900, 1, "high"), 1);
 });
 
 test("visual policy helpers remain deterministic", () => {

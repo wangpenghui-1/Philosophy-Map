@@ -45,11 +45,54 @@ export const AUTO_QUALITY_COOLDOWN_MS = 10_000;
 export const AUTO_QUALITY_DOWNGRADE_MS = 2_000;
 export const AUTO_QUALITY_UPGRADE_MS = 6_000;
 
+const RENDER_PIXEL_BUDGET: Record<EffectiveQuality, number> = {
+  low: 1_500_000,
+  medium: 2_600_000,
+  high: 4_000_000,
+};
+
+const RENDER_DPR_CAP: Record<EffectiveQuality, number> = {
+  low: 1,
+  medium: 1.2,
+  high: 1.5,
+};
+
+export const GLOBE_HIGH_QUALITY_WARMUP_MS = 3_500;
+export const GLOBE_WEBGL_RETRY_DELAY_MS = 650;
+
 const QUALITY_ORDER: EffectiveQuality[] = ["low", "medium", "high"];
 const DETAIL_SHEET_ORDER: DetailSheetSnap[] = ["peek", "half", "full"];
 
 export function initialAutoQuality(width: number, coarsePointer: boolean): EffectiveQuality {
   return width <= 820 || coarsePointer ? "low" : "medium";
+}
+
+/**
+ * Keeps the render target inside a predictable GPU pixel budget. Large and
+ * high-DPI Windows displays retain the 2K earth assets and geometry detail,
+ * while avoiding an oversized framebuffer that can exhaust ANGLE/D3D memory.
+ */
+export function getRenderPixelRatio(
+  width: number,
+  height: number,
+  devicePixelRatio: number,
+  quality: EffectiveQuality,
+  warmingUp = false,
+) {
+  const safeWidth = Math.max(1, width);
+  const safeHeight = Math.max(1, height);
+  const nativeDpr = Number.isFinite(devicePixelRatio) && devicePixelRatio > 0
+    ? devicePixelRatio
+    : 1;
+  const budget = warmingUp
+    ? Math.min(RENDER_PIXEL_BUDGET[quality], RENDER_PIXEL_BUDGET.medium)
+    : RENDER_PIXEL_BUDGET[quality];
+  const cap = warmingUp
+    ? Math.min(RENDER_DPR_CAP[quality], 1.15)
+    : RENDER_DPR_CAP[quality];
+  const budgetDpr = Math.sqrt(budget / (safeWidth * safeHeight));
+  const dpr = Math.min(nativeDpr, cap, Math.max(0.65, budgetDpr));
+  return Math.round(dpr * 100) / 100;
 }
 
 function moveQuality(quality: EffectiveQuality, direction: -1 | 1) {

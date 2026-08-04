@@ -145,6 +145,9 @@ test("display settings preserve the canvas while changing light and quality", as
   await page.getByRole("button", { name: "白昼" }).click();
   await page.getByRole("button", { name: /典藏/ }).click();
   await expect(page.locator('canvas[data-visual-probe="stable"]')).toBeVisible();
+  await expect(page.locator(".globe-runtime")).toHaveAttribute("data-render-effects", "smaa");
+  await expect(page.locator(".globe-runtime")).toHaveAttribute("data-render-effects", "bloom-smaa", { timeout: 5_000 });
+  await expect.poll(() => page.locator(".globe-runtime").getAttribute("data-render-dpr")).not.toBeNull();
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").qualityPreference)).toBe("high");
 });
 
@@ -283,6 +286,7 @@ test("WebGL2 failure stays on the globe fallback until text exploration is reque
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
   await expect(page.getByText("3D渲染不可用")).toBeVisible();
   await page.getByRole("button", { name: "重新尝试3D" }).click();
+  await expect(page.getByText("正在释放旧画布，并以稳定画质恢复当前位置。")).toBeVisible();
   await expect(page.getByText("本次恢复未成功，请稍后再试。")).toBeVisible();
   await page.locator(".globe-fallback").getByRole("button", { name: "打开文字探索" }).click();
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
@@ -293,6 +297,11 @@ test("runtime WebGL loss remains in place and retry remounts the canvas", async 
   const canvas = page.locator("canvas");
   await expect(canvas).toBeVisible();
   await expect(canvas).toHaveAttribute("data-webgl-lifecycle", "ready");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera ?? null)).not.toBeNull();
+  const cameraBeforeLoss = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera as {
+    position: number[];
+    target: number[];
+  });
   await canvas.evaluate((element) => { element.dataset.contextProbe = "before-retry"; });
   await canvas.evaluate((element) => {
     element.dispatchEvent(new Event("webglcontextlost", { cancelable: true }));
@@ -301,9 +310,53 @@ test("runtime WebGL loss remains in place and retry remounts the canvas", async 
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeHidden();
   await expect(page.getByText("3D渲染暂时中断")).toBeVisible();
   await page.getByRole("button", { name: "重新尝试3D" }).click();
+  await expect(page.getByText("正在释放旧画布，并以稳定画质恢复当前位置。")).toBeVisible();
+  await expect(page.locator("canvas")).toHaveCount(0);
   await expect(page.getByText("3D渲染暂时中断")).toBeHidden();
   await expect(page.locator("canvas")).toBeVisible();
   await expect(page.locator('canvas[data-context-probe="before-retry"]')).toHaveCount(0);
+  await expect(page.locator("canvas")).toHaveCount(1);
+  await expect.poll(async () => {
+    const cameraAfterRecovery = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera as {
+      position: number[];
+      target: number[];
+    } | null);
+    if (!cameraAfterRecovery) return Number.POSITIVE_INFINITY;
+    return Math.max(
+      ...cameraBeforeLoss.position.map((value, index) => Math.abs(value - cameraAfterRecovery.position[index])),
+      ...cameraBeforeLoss.target.map((value, index) => Math.abs(value - cameraAfterRecovery.target[index])),
+    );
+  }).toBeLessThan(0.05);
+});
+
+test("WebGL capability detection never deliberately loses a healthy context", async ({ page }) => {
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.getContext;
+    let deliberateLosses = 0;
+    HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, type: string, ...args: unknown[]) {
+      const context = original.call(this, type, ...args as []) as RenderingContext | null;
+      if (type === "webgl2" && context && "getExtension" in context) {
+        const originalGetExtension = context.getExtension.bind(context);
+        context.getExtension = ((name: string) => {
+          const extension = originalGetExtension(name);
+          if (name === "WEBGL_lose_context" && extension) {
+            return {
+              ...extension,
+              loseContext: () => { deliberateLosses += 1; },
+            };
+          }
+          return extension;
+        }) as typeof context.getExtension;
+      }
+      return context;
+    } as typeof HTMLCanvasElement.prototype.getContext;
+    Object.defineProperty(window, "__atlasDeliberateWebglLosses", {
+      get: () => deliberateLosses,
+    });
+  });
+  await openHydrated(page, "/explore");
+  await expect(page.locator("canvas")).toHaveCount(1);
+  await expect.poll(() => page.evaluate(() => (window as typeof window & { __atlasDeliberateWebglLosses: number }).__atlasDeliberateWebglLosses)).toBe(0);
 });
 
 test("full detail portraits retain their source frames without cropping heads", async ({ page }) => {

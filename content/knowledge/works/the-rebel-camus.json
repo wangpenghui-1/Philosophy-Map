@@ -1,0 +1,49 @@
+{
+  "id": "the-rebel-camus",
+  "slug": "the-rebel-camus",
+  "entityType": "work",
+  "title": "《反抗者》",
+  "originalTitle": "L'Homme révolté",
+  "authorRefs": [
+    {
+      "personId": "camus",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1951",
+  "languages": [
+    "fr"
+  ],
+  "summary": "加缪把个人面对荒诞的清醒推进为共同反抗，考察形而上反抗与现代革命如何可能越过自身限度，并批判以未来解放为名把现实杀戮合理化的历史逻辑。",
+  "conceptIds": [
+    "concept-反抗",
+    "concept-限度",
+    "concept-荒诞"
+  ],
+  "traditionIds": [
+    "tradition-荒诞哲学"
+  ],
+  "sourceIds": [
+    "src-camus-rebel-fr",
+    "src-camus-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-rebel-fr",
+      "locator": "Introduction; La révolte métaphysique; La pensée de midi",
+      "claim": "支持反抗、共同价值与限度的核心论述。"
+    },
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Section 4: Camus and the World of Violence",
+      "claim": "支持本书关于革命、暴力与政治争论的思想史背景。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

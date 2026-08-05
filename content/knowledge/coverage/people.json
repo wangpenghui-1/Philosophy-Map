@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "publishedBaseline": 212,
+  "publishedBaseline": 213,
   "candidateCount": 0,
-  "targetTotal": 212,
+  "targetTotal": 213,
   "status": "release-candidate",
   "regionTargets": {
-    "北非—地中海": 1,
+    "北非—地中海": 2,
     "地中海": 3,
     "东南亚与大洋洲": 9,
     "东亚": 31,
@@ -22,7 +22,7 @@
   },
   "eraTargets": {
     "1500–1800年": 30,
-    "1800–1945年": 82,
+    "1800–1945年": 83,
     "1945年至今": 13,
     "500–1500年": 38,
     "公元前500年以前": 13,
@@ -34,7 +34,7 @@
     "minimumRegionsPerBatch": 4,
     "minimumErasPerBatch": 3,
     "maximumSingleRegionShare": 0.4,
-    "publicationRule": "212人版本由不可改写的210人历史基线与两人增量组成；已完成自动编辑与结构审核，外部同行评审不在自动审核声明范围内。"
+    "publicationRule": "213人版本由不可改写的210人历史基线与三人增量组成；已完成自动编辑与结构审核，外部同行评审不在自动审核声明范围内。"
   },
   "candidates": [],
   "releaseCandidates": [
@@ -3100,13 +3100,13 @@
     }
   ],
   "release": {
-    "releaseId": "public-212",
+    "releaseId": "public-213",
     "baselinePeople": 210,
-    "addedPeople": 2,
-    "publicPeople": 212,
+    "addedPeople": 3,
+    "publicPeople": 213,
     "sourceReleaseIds": [
       "public-210",
-      "public-212-increment"
+      "public-213-increment"
     ]
   },
   "archivedRoadmap": {

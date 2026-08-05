@@ -1,0 +1,19 @@
+{
+  "id": "src-camus-sep",
+  "entityType": "source",
+  "title": "Albert Camus",
+  "authors": [
+    "Aronson, Ronald"
+  ],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/entries/camus/",
+  "defaultLocator": "Sections 1–6: absurdity, suicide, revolt, violence and Camus's relation to existentialism",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

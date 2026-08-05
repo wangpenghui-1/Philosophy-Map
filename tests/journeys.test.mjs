@@ -44,7 +44,7 @@ test("all eight journeys are available, valid, and form one recommendation loop"
     justice: 70_000,
     epistemology: 69_000,
     ontology: 61_000,
-    existentialism: 62_000,
+    existentialism: 73_000,
     phenomenology: 70_000,
   });
 

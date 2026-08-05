@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "releaseId": "public-213-increment",
+  "status": "release-candidate",
+  "baselineReleaseId": "public-210",
+  "baselinePeople": 210,
+  "addedPeople": 3,
+  "publicPeople": 213,
+  "reviewedAt": "2026-08-05",
+  "members": [
+    {
+      "personId": "sartre",
+      "slug": "sartre",
+      "editorialStatus": "published",
+      "sourceIds": ["src-sartre-sep", "src-sartre-existentialism-humanism-fr"],
+      "reason": "存在主义与自由意志旅程所需的标准人物条目。"
+    },
+    {
+      "personId": "merleau-ponty",
+      "slug": "merleau-ponty",
+      "editorialStatus": "published",
+      "sourceIds": ["src-merleau-ponty-sep", "src-merleau-ponty-phenomenology-perception-fr"],
+      "reason": "现象学与身体知觉旅程所需的标准人物条目。"
+    },
+    {
+      "personId": "camus",
+      "slug": "camus",
+      "editorialStatus": "published",
+      "sourceIds": ["src-camus-sep", "src-camus-myth-sisyphus-fr", "src-camus-rebel-fr"],
+      "reason": "补充荒诞、反抗与政治限度，并进入存在主义思想旅程的同期论争。"
+    }
+  ]
+}

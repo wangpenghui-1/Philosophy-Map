@@ -1,0 +1,19 @@
+{
+  "id": "src-camus-rebel-fr",
+  "entityType": "source",
+  "title": "L'Homme révolté",
+  "authors": [
+    "Camus, Albert"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Éditions Gallimard",
+  "year": 1951,
+  "defaultLocator": "Introduction; La révolte métaphysique; La pensée de midi",
+  "language": "fr",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

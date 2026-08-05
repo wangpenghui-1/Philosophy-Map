@@ -97,7 +97,7 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
 
   const coverage = JSON.parse(await readFile(path.join(contentRoot, "coverage", "people.json"), "utf8"));
   const release = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-210.json"), "utf8"));
-  const releaseIncrement = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-212-increment.json"), "utf8"));
+  const releaseIncrement = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-213-increment.json"), "utf8"));
   const releasedPeople = new Map(all.people.map((person) => [person.id, person]));
   const releaseFailures = [];
   const expectedPublicPeople = releaseIncrement.baselinePeople + releaseIncrement.addedPeople;

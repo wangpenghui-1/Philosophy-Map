@@ -25,7 +25,7 @@ test("knowledge review audit reports no deterministic blockers", async () => {
   const [generatedCoverage, historicalRelease, increment] = await Promise.all([
     JSON.parse(await readFile(path.join(projectRoot, "app", "_generated", "coverage-report.json"), "utf8")),
     JSON.parse(await readFile(path.join(projectRoot, "content", "knowledge", "coverage", "release-210.json"), "utf8")),
-    JSON.parse(await readFile(path.join(projectRoot, "content", "knowledge", "coverage", "release-212-increment.json"), "utf8")),
+    JSON.parse(await readFile(path.join(projectRoot, "content", "knowledge", "coverage", "release-213-increment.json"), "utf8")),
   ]);
   const result = await auditKnowledgeBase({
     contentRoot: path.join(projectRoot, "content", "knowledge"),

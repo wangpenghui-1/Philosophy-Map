@@ -56,6 +56,7 @@ const cameraByThinker: Record<string, JourneyCamera> = {
   avicenna: { lat: 39.77, lon: 64.46, distance: 4.0 },
   beauvoir: { lat: 48.86, lon: 2.34, distance: 3.95 },
   buddha: { lat: 24.7, lon: 84.99, distance: 4.0 },
+  camus: { lat: 36.75, lon: 3.06, distance: 4.0 },
   "charles-w-mills": { lat: 40.71, lon: -74.0, distance: 4.0 },
   confucius: { lat: 35.6, lon: 116.99, distance: 4.0 },
   descartes: { lat: 52.37, lon: 4.9, distance: 4.0 },
@@ -281,7 +282,8 @@ const existentialismNodes: JourneyNode[] = [
   journeyNode("heidegger-being-in-world", "heidegger", "第三站 · 弗赖堡", "人首先是在世存在", "人不是先封闭在心里再观察世界；我们一开始就在工具、关系、关切和时间中生活。", "被抛处境不是自己选择的，但人仍要承接有限可能。本真不是自恋地与众不同，而是不再逃避自己的有限性。", "如果没有固定人性替我们决定行动，每一次选择是否都在定义我们是谁？", 11_000, thematic("nietzsche", "heidegger", "概念重构")),
   journeyNode("sartre-existence-precedes", "sartre", "第四站 · 巴黎", "存在先于本质", "人不是先拥有一份固定本质再去行动；我们先存在，并在选择中逐渐成为自己。", "萨特所谓自由不是“什么都做得到”。处境会限制行动，但我们仍要为如何理解和回应处境负责，不能把自己缩成固定角色。", "强调选择会不会高估个人，忽略性别、制度与他人的自由怎样限制可能？", 10_000, evidence("heidegger-sartre", "从在世存在到自由责任")),
   journeyNode("beauvoir-ambiguity", "beauvoir", "第五站 · 巴黎", "自由必须承认模糊处境", "我们既是能够超越现状的主体，也是受身体、历史和他人限制的存在；自由永远带着这种模糊性。", "波伏娃把存在主义从孤立选择推进到处境伦理。压迫会系统性缩小某些人的可能，自己的自由也需要他人的自由得到实现。", "如果殖民权力进入身体经验和自我形象，成为自己还需要怎样的解放？", 11_000, thematic("sartre", "beauvoir", "批判推进")),
-  journeyNode("fanon-colonial-self", "fanon", "第六站 · 法兰西堡", "有些自我由压迫强行制造", "殖民与种族化不仅从外部限制人，还通过他人的目光、语言和制度塑造身体经验与自我关系。", "法农把存在问题推入殖民现实。摆脱被规定的身份不能只靠内心选择，还需要改变制造这种身份的物质与政治世界。", "成为自己包含选择，也包含识别哪些身份被强加、哪些可能需要共同争取。", 11_000, thematic("beauvoir", "fanon", "问题转向")),
+  journeyNode("camus-absurd-revolt", "camus", "第六站 · 阿尔及尔—巴黎", "在荒诞中选择反抗", "世界不给终极答案，并不自动推出虚无；人仍能以清醒、反抗和共同限度回应生活。", "加缪拒绝用自杀或超越性信仰消除荒诞，也反对用未来正义替无限暴力开脱。他本人拒绝“存在主义者”标签，却直接参与了同期关于自由与责任的争论。", "如果殖民统治直接塑造身体和可能性，仅仅诉诸共同限度是否已经足够？", 11_000, thematic("beauvoir", "camus", "问题转向")),
+  journeyNode("fanon-colonial-self", "fanon", "第七站 · 法兰西堡", "有些自我由压迫强行制造", "殖民与种族化不仅从外部限制人，还通过他人的目光、语言和制度塑造身体经验与自我关系。", "法农把存在问题推入殖民现实。摆脱被规定的身份不能只靠内心选择，还需要改变制造这种身份的物质与政治世界。", "成为自己包含选择，也包含识别哪些身份被强加、哪些可能需要共同争取。", 11_000, thematic("camus", "fanon", "批判推进")),
 ];
 
 const phenomenologyNodes: JourneyNode[] = [

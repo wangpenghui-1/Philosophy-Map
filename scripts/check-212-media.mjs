@@ -17,7 +17,7 @@ async function readPeople() {
 const [people, baseline, increment] = await Promise.all([
   readPeople(),
   readJson(path.join(contentRoot, "coverage", "media-210.json")),
-  readJson(path.join(contentRoot, "coverage", "media-212-increment.json")),
+  readJson(path.join(contentRoot, "coverage", "media-213-increment.json")),
 ]);
 
 const failures = [];
@@ -43,5 +43,5 @@ for (const person of people) {
   }
 }
 
-if (failures.length) throw new Error(`212-person media check failed (${failures.length}): ${failures.slice(0, 20).join("; ")}`);
+if (failures.length) throw new Error(`Current media check failed (${failures.length}): ${failures.slice(0, 20).join("; ")}`);
 console.log(`Media check passed: ${expectedPublicPeople} people have optimized assets and matching baseline or incremental provenance records.`);

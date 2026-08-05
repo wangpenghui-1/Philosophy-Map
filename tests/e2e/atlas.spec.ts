@@ -105,7 +105,10 @@ test("all eight journey routes open the shared player", async ({ page }) => {
 test("a completed journey offers the related journey and free exploration", async ({ page }) => {
   await openHydrated(page, "/journey/existentialism");
   await page.getByRole("button", { name: "暂停旅程" }).click();
-  for (let index = 0; index < 5; index += 1) await page.getByRole("button", { name: "下一站" }).click();
+  const progress = await page.getByText(/存在主义之旅 · 1\/\d+/).textContent();
+  const stopCount = Number(progress?.match(/1\/(\d+)/)?.[1]);
+  expect(stopCount).toBeGreaterThan(1);
+  for (let index = 1; index < stopCount; index += 1) await page.getByRole("button", { name: "下一站" }).click();
   await page.getByRole("button", { name: "完成旅程" }).click();
   await expect(page.getByRole("button", { name: "继续：自由意志" })).toBeVisible();
   await expect(page.getByRole("button", { name: "进入自由探索" })).toBeVisible();
@@ -229,15 +232,16 @@ test("two selected thinkers produce and restore a shareable comparison", async (
 });
 
 test("knowledge filters and search survive a URL reload", async ({ page }) => {
-  await page.goto("/knowledge?q=Kant&type=person&tier=index");
+  await page.goto("/knowledge?q=Kant&type=person&tier=standard");
   await expect(page.getByRole("heading", { name: "从人物出发，沿着概念与文本阅读思想史" })).toBeVisible();
   await expect(page.locator('input[name="q"]')).toHaveValue("Kant");
   await expect(page.locator('select[name="type"]')).toHaveValue("person");
-  await expect(page.locator('select[name="tier"]')).toHaveValue("index");
+  await expect(page.locator('select[name="tier"]')).toHaveValue("standard");
   await expect(page.getByRole("link", { name: "康德" })).toBeVisible();
   await page.reload();
   await expect(page.locator('input[name="q"]')).toHaveValue("Kant");
-  await expect(page.getByText("索引条目").first()).toBeVisible();
+  await expect(page.locator('select[name="tier"]')).toHaveValue("standard");
+  await expect(page.getByRole("link", { name: "康德" })).toBeVisible();
 });
 
 test("the complete text explorer remains keyboard accessible", async ({ page }) => {

@@ -142,6 +142,25 @@ test("new release people, concepts, traditions, and works are publicly searchabl
   assert.match(html[5], /荀子/);
 });
 
+test("publishes Camus as a complete, searchable journey thinker", async () => {
+  const routes = [
+    "/knowledge?q=Camus&type=person",
+    "/thinker/camus",
+    `/concept/${encodeURIComponent("荒诞")}`,
+    `/tradition/${encodeURIComponent("荒诞哲学")}`,
+    "/work/myth-of-sisyphus",
+  ];
+  const responses = await Promise.all(routes.map(render));
+  for (const response of responses) assert.equal(response.status, 200);
+  const html = await Promise.all(responses.map((response) => response.text()));
+  assert.match(html[0], /加缪|Albert Camus/);
+  assert.match(html[1], /荒诞不是虚无的结论|从个人清醒到共同反抗|拒绝标签与政治限度/);
+  assert.match(html[1], /不确定性说明|拒绝“存在主义者”标签/);
+  assert.match(html[2], /人的追问与世界的沉默/);
+  assert.match(html[3], /不把荒诞当作虚无主义结论/);
+  assert.match(html[4], /自杀问题|哲学自杀/);
+});
+
 test("publishes the current increment while preserving the historical corpus and relations", async () => {
   const [people, relations, sources, generatedCoverage] = await Promise.all([
     readEntities("people"),
@@ -150,7 +169,7 @@ test("publishes the current increment while preserving the historical corpus and
     JSON.parse(await readFile(new URL("../app/_generated/coverage-report.json", import.meta.url), "utf8")),
   ]);
   const release = JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8"));
-  const increment = JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8"));
+  const increment = JSON.parse(await readFile(new URL("coverage/release-213-increment.json", knowledgeRoot), "utf8"));
   assert.equal(people.length, increment.publicPeople);
   assert.equal(relations.length, generatedCoverage.published.relations);
   assert.equal(sources.length, generatedCoverage.published.sources);
@@ -160,7 +179,7 @@ test("publishes the current increment while preserving the historical corpus and
   assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));
   assert.ok(release.members.every((member) => people.some((person) => person.id === member.personId)));
   assert.ok(increment.members.every((member) => people.some((person) => person.id === member.personId)));
-  assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre"].every((id) => relations.some((relation) => relation.id === id)));
+  assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre", "nietzsche-camus", "sartre-camus"].every((id) => relations.some((relation) => relation.id === id)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
   const editorialDisclaimer = "条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。";
   assert.ok(people.every((person) => !person.summary.includes(editorialDisclaimer)));
@@ -186,7 +205,7 @@ test("keeps representative quotations traceable to explicit source tiers", async
       "ifi-amadiume", "jiddu-krishnamurti", "john-mbiti", "john-rawls", "judith-butler", "kant", "laozi",
       "li-zhi", "liang-qichao", "locke", "mahavira", "maimonides", "meister-eckhart", "mencius", "mozi",
       "nietzsche", "philo-alexandria", "rabindranath-tagore", "socrates", "thomas-kuhn", "vine-deloria-jr",
-      "wang-fuzhi", "wang-yangming", "xunzi", "zhiyi", "zhu-xi", "zhuangzi", "sartre", "merleau-ponty",
+      "wang-fuzhi", "wang-yangming", "xunzi", "zhiyi", "zhu-xi", "zhuangzi", "sartre", "merleau-ponty", "camus",
     ].every((id) => quotedPersonIds.has(id)),
   );
   for (const person of quotedPeople) {
@@ -238,6 +257,27 @@ test("keeps the eight enriched thinker pilots substantial, sourced, and connecte
   assert.match(html, /href="#source-\d+"/);
 });
 
+test("keeps Camus substantial, sourced, connected, and explicit about classification", async () => {
+  const [people, works, relations] = await Promise.all([
+    readEntities("people"),
+    readEntities("works"),
+    readEntities("relations"),
+  ]);
+  const person = people.find((candidate) => candidate.id === "camus");
+  const workById = new Map(works.map((work) => [work.id, work]));
+  const sectionText = person.sections.flatMap((section) => section.paragraphs).map((paragraph) => paragraph.text).join("");
+  const personRelations = relations.filter((relation) => relation.from.id === "camus" || relation.to.id === "camus");
+  assert.equal(person.contentTier, "standard");
+  assert.ok(person.sections.length >= 3);
+  assert.ok(sectionText.length >= 600);
+  assert.ok(person.conceptIds.length >= 3);
+  assert.ok(person.sourceIds.length >= 3);
+  assert.ok(personRelations.length >= 2);
+  assert.ok(person.sections.every((section) => section.paragraphs.every((paragraph) => paragraph.citations.length > 0)));
+  assert.ok(person.workIds.every((workId) => !/后续将补充|文本入口/.test(workById.get(workId)?.summary ?? "")));
+  assert.match(person.uncertainty, /拒绝“存在主义者”标签/);
+});
+
 test("keeps relation evidence and resonance semantics explicit in entity data", async () => {
   const relations = await readEntities("relations");
   const influence = relations.find((relation) => relation.id === "aristotle-avicenna");
@@ -251,7 +291,7 @@ test("keeps relation evidence and resonance semantics explicit in entity data", 
 
 test("keeps thinker media metadata complete and backed by public files", async () => {
   const people = await readEntities("people");
-  const increment = JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8"));
+  const increment = JSON.parse(await readFile(new URL("coverage/release-213-increment.json", knowledgeRoot), "utf8"));
   assert.equal(people.length, increment.publicPeople);
   assert.equal(people.filter((person) => person.media.presentationType === "placeholder").length, 0);
 
@@ -289,7 +329,7 @@ test("publishes exactly the current release and keeps non-published records out 
     readEntities("contexts"),
     JSON.parse(await readFile(new URL("coverage/people.json", knowledgeRoot), "utf8")),
     JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8")),
-    JSON.parse(await readFile(new URL("coverage/release-212-increment.json", knowledgeRoot), "utf8")),
+    JSON.parse(await readFile(new URL("coverage/release-213-increment.json", knowledgeRoot), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/knowledge.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/atlas.json", import.meta.url), "utf8")),
     JSON.parse(await readFile(new URL("../app/_generated/search-index.json", import.meta.url), "utf8")),

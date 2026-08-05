@@ -1,0 +1,52 @@
+{
+  "id": "concept-限度",
+  "slug": "限度",
+  "entityType": "concept",
+  "name": "限度",
+  "originalTerms": [
+    "la mesure",
+    "la limite"
+  ],
+  "summary": "限度要求反抗约束自己的手段：任何以未来正义为名把现实中的人变成可牺牲材料的行动，都会背叛反抗最初维护的共同尊严。",
+  "senses": [
+    {
+      "traditionId": "tradition-荒诞哲学",
+      "label": "反抗对自身的约束",
+      "explanation": "加缪以限度反对把历史目标绝对化；政治行动无法保证纯洁无罪，却仍需区分必要风险与将杀戮合理化的总体理论。",
+      "citations": [
+        {
+          "sourceId": "src-camus-rebel-fr",
+          "locator": "La pensée de midi",
+          "claim": "支持限度、节制以及反抗不能无限扩张的主张。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "camus"
+  ],
+  "workIds": [
+    "myth-of-sisyphus",
+    "the-rebel-camus"
+  ],
+  "traditionIds": [
+    "tradition-荒诞哲学"
+  ],
+  "sourceIds": [
+    "src-camus-rebel-fr",
+    "src-camus-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 4.2–4.3 on revolution, violence and limits",
+      "claim": "支持限度在加缪政治伦理中的位置及其争议。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

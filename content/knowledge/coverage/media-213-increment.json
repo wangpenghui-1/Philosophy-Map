@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "releaseId": "media-public-213-increment",
+  "status": "release-candidate",
+  "baselineReleaseId": "media-public-210",
+  "baselinePeople": 210,
+  "addedPeople": 3,
+  "publicPeople": 213,
+  "generatedAt": "2026-08-05",
+  "policy": {
+    "generatedImagesPresentedAsHistorical": false,
+    "stylizedDepictionsExplicitlyLabeled": true,
+    "fullImage": {"width": 800, "height": 1000, "format": "webp"},
+    "thumbnail": {"width": 200, "height": 250, "format": "webp"}
+  },
+  "members": [
+    {
+      "personId": "sartre",
+      "slug": "sartre",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sartre.webp",
+        "thumbSrc": "/media/thinkers/thumb/sartre.webp",
+        "alt": "萨特的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "项目委托式艺术化人物形象，参考萨特成年时期的公开历史照片特征进行非写实重构。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "merleau-ponty",
+      "slug": "merleau-ponty",
+      "media": {
+        "fullSrc": "/media/thinkers/full/merleau-ponty.webp",
+        "thumbSrc": "/media/thinkers/thumb/merleau-ponty.webp",
+        "alt": "梅洛-庞蒂的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "项目委托式艺术化人物形象，参考梅洛-庞蒂成年时期的公开历史照片特征进行非写实重构。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "camus",
+      "slug": "camus",
+      "media": {
+        "fullSrc": "/media/thinkers/full/camus.webp",
+        "thumbSrc": "/media/thinkers/thumb/camus.webp",
+        "alt": "加缪的艺术化人物形象",
+        "objectPosition": "50% 20%",
+        "depictionNote": "AI辅助生成的项目委托式艺术化人物形象，参考加缪成年时期的一般公开形象特征进行非写实重构；不是历史照片，也不作为真实相貌证据。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图 AI辅助艺术化人物形象"
+      }
+    }
+  ]
+}

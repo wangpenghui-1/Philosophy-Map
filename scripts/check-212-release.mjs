@@ -19,7 +19,7 @@ const [people, coverage, legacyRelease, legacyMedia, increment] = await Promise.
   readJson(path.join(contentRoot, "coverage", "people.json")),
   readJson(path.join(contentRoot, "coverage", "release-210.json")),
   readJson(path.join(contentRoot, "coverage", "media-210.json")),
-  readJson(path.join(contentRoot, "coverage", "release-212-increment.json")),
+  readJson(path.join(contentRoot, "coverage", "release-213-increment.json")),
 ]);
 
 const failures = [];
@@ -43,5 +43,5 @@ if (coverage.publishedBaseline !== expectedPublicPeople || coverage.targetTotal 
 if (Object.values(coverage.regionTargets).reduce((sum, value) => sum + value, 0) !== expectedPublicPeople) failures.push("coverage region totals are inconsistent");
 if (Object.values(coverage.eraTargets).reduce((sum, value) => sum + value, 0) !== expectedPublicPeople) failures.push("coverage era totals are inconsistent");
 
-if (failures.length) throw new Error(`212-person release check failed: ${failures.join("; ")}`);
+if (failures.length) throw new Error(`Current release check failed: ${failures.join("; ")}`);
 console.log(`Release check passed: ${increment.baselinePeople}-person historical baseline + ${increment.addedPeople}-person increment = ${expectedPublicPeople} published people.`);

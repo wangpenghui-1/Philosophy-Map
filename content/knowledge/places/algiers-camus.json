@@ -1,0 +1,23 @@
+{
+  "id": "algiers-camus",
+  "slug": "algiers-camus",
+  "entityType": "place",
+  "historicalName": "阿尔及尔",
+  "historicalRegion": "法属阿尔及利亚",
+  "modernReferenceName": "阿尔及尔",
+  "coordinates": {
+    "lat": 36.7538,
+    "lon": 3.0588
+  },
+  "certainty": "established",
+  "note": "加缪在阿尔及利亚成长、求学并开始新闻与戏剧活动；这一殖民处境持续进入他的文学、政治判断及其争议。",
+  "relatedPersonIds": [
+    "camus"
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

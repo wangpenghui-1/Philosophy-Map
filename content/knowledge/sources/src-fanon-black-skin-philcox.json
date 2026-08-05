@@ -1,0 +1,21 @@
+{
+  "id": "src-fanon-black-skin-philcox",
+  "entityType": "source",
+  "title": "Black Skin, White Masks",
+  "authors": [
+    "Frantz Fanon",
+    "Richard Philcox"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Grove Press",
+  "year": 2008,
+  "defaultLocator": "Introduction; Chapters 5–7",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "Philcox 英译本，用于定位法农关于语言、种族化身体、承认与解放的论述。"
+}

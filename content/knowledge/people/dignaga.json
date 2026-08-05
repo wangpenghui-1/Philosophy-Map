@@ -20,14 +20,17 @@
     "tradition-佛教逻辑学"
   ],
   "conceptIds": [
-    "concept-因明"
+    "concept-因明",
+    "concept-现量",
+    "concept-比量",
+    "concept-排除论"
   ],
   "questionIds": [
     "knowledge"
   ],
   "guidingQuestion": "知觉和推论如何分别提供可靠认识？",
   "thesis": "以现量和比量为两类知识来源，并用遍充关系与排除理论分析概念。",
-  "summary": "陈那是南亚佛教逻辑学的重要思想人物，主要追问“知觉和推论如何分别提供可靠认识？”。其思想以“因明”为入口，主张以现量和比量为两类知识来源，并用遍充关系与排除理论分析概念。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "summary": "陈那把佛教论辩重组为一套认识论：直接知觉面对不可重复的具体对象，推论与语言则依靠概念区分运作。他由此提出二量论、因理和排除论，奠定印度佛教逻辑认识论的基本框架。",
   "workIds": [
     "pramana-samuccaya"
   ],
@@ -38,47 +41,95 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-encyclopedia-indian-philosophies",
+    "src-dignaga-hattori"
   ],
   "citations": [
     {
       "sourceId": "src-encyclopedia-indian-philosophies",
-      "locator": "相关卷中的人物、学派与文本条目：“Dignaga / 陈那”",
-      "claim": "支持陈那的身份、思想主张与历史语境概述。"
+      "locator": "Dignāga: biography, works, perception, inference and apoha",
+      "claim": "支持陈那的思想背景、二量论、推论理论与排除论概览。"
+    },
+    {
+      "sourceId": "src-dignaga-hattori",
+      "locator": "Pramāṇasamuccaya and Vṛtti, Chapter 1",
+      "claim": "支持现量离分别、自相以及概念构造的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "two-pramanas",
+      "heading": "为什么只承认现量与比量",
       "paragraphs": [
         {
-          "text": "陈那是南亚佛教逻辑学的重要思想人物，主要追问“知觉和推论如何分别提供可靠认识？”。其思想以“因明”为入口，主张以现量和比量为两类知识来源，并用遍充关系与排除理论分析概念。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "陈那面对的问题不是“人有没有知识”这么宽泛，而是：一种认识凭什么算作可靠的知识来源。此前印度哲学列举知觉、推论、类比、证言等多种量，陈那把它们收束为现量和比量两类。证言与类比之所以能够产生知识，是因为它们最终要依靠语言组织的推论关系；不必各自成为独立的量。",
           "citations": [
             {
               "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Dignaga / 陈那”",
-              "claim": "支持陈那的身份、思想主张与历史语境概述。"
+              "locator": "Dignāga on the two instruments of knowledge",
+              "claim": "支持陈那把知识来源收束为现量与比量的理论。"
             }
           ]
         },
         {
-          "text": "核心问题：知觉和推论如何分别提供可靠认识？",
+          "text": "现量面对的是当下具体的“自相”，并且离开名称、种类和判断的概念分别。看到一块特定颜色与形状的显现，与判断“这是一只蓝色杯子”不是同一层活动。后一个判断已经把经验放进可重复的类别。陈那不是否认概念有用，而是用这一区分解释直接显现与可陈述知识为何遵循不同条件。",
+          "citations": [
+            {
+              "sourceId": "src-dignaga-hattori",
+              "locator": "Pramāṇasamuccaya and Vṛtti I.2–4",
+              "claim": "支持现量离分别、以自相为对象以及分别构造名称种类的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inference",
+      "heading": "推论、理由与论证",
+      "paragraphs": [
+        {
+          "text": "比量处理无法直接呈现、需要由理由建立的知识。看见山上有烟而推知有火，关键不是曾经偶然同时看到烟和火，而是理由必须与所证性质形成受约束的关系。陈那用“因轮”等分析检验一个理由在同类与异类情形中的分布，排除看似相关却无法保证结论的理由。",
           "citations": [
             {
               "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Dignaga / 陈那”",
-              "claim": "支持对陈那核心问题的概括。"
+              "locator": "Dignāga on inference and the wheel of reasons",
+              "claim": "支持有效理由、同类异类检验和因轮分析的概括。"
             }
           ]
         },
         {
-          "text": "核心主张：以现量和比量为两类知识来源，并用遍充关系与排除理论分析概念。",
+          "text": "陈那还区分“为自己”的推理和“为他人”的论证。前者说明认识者如何从已知理由形成结论，后者说明如何把理由公开表达，使对方能够检查。这个区分把心理上的得知与公共论辩联系起来：论证不是堆砌权威，而要让理由、例证和待证命题之间的结构可以被他人检验。",
           "citations": [
             {
               "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Dignaga / 陈那”",
-              "claim": "支持对陈那核心主张的概括。"
+              "locator": "Dignāga: inference for oneself and inference for others",
+              "claim": "支持两类推论及其认识与论辩功能的区分。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "language-legacy",
+      "heading": "概念如何可能：排除论及其影响",
+      "paragraphs": [
+        {
+          "text": "如果直接知觉只面对不可重复的具体对象，词语为什么还能指称“牛”“树”或“人”这类一般对象？陈那不诉诸独立存在的普遍实体，而用“排除”解释概念：一个词通过排除不属于此类的对象形成可操作的边界。“牛”的意义不是抓住一个永恒牛性，而是在区别非牛的实践中形成。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "Dignāga on apoha, exclusion and universals",
+              "claim": "支持排除论以排除差异解释一般概念的方案。"
+            }
+          ]
+        },
+        {
+          "text": "二量论、因理和排除论被法称继承并重构，随后进入印度教、耆那教与藏传佛教的论辩网络。陈那的重要性不只是“发明逻辑规则”，而是把认识对象、概念意义和公开论证放进同一框架：我们如何从具体经验走向可共享的判断，同时不把语言类别误当成世界中永恒不变的实体。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-indian-philosophies",
+              "locator": "Dignāga–Dharmakīrti school and later reception",
+              "claim": "支持陈那对后续印度与藏传认识论、逻辑学传统的奠基影响。"
             }
           ]
         }
@@ -101,14 +152,14 @@
     "creator": "రహ్మానుద్దీన్",
     "retrievedAt": "2026-07-19"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "《集量论》梵文原本没有完整保存，研究需综合残存梵文、藏译、汉译及注释传统。不同现代重构对个别术语和论证次序存在分歧，页面不把译名差异伪装成无争议定论。",
   "color": "#d6a765",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成二量论、推论结构与排除论的分段扩写，待站主发布前终审。"
 }

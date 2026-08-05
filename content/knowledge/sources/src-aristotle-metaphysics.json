@@ -1,0 +1,20 @@
+{
+  "id": "src-aristotle-metaphysics",
+  "entityType": "source",
+  "title": "Aristotle’s Metaphysics",
+  "authors": [
+    "S. Marc Cohen",
+    "C. D. C. Reeve"
+  ],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/entries/aristotle-metaphysics/",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于《形而上学》的文本结构、实体、原因与潜能现实等主题定位。"
+}

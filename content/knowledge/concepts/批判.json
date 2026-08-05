@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "批判",
   "originalTerms": [],
-  "summary": "“批判”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "在康德哲学中，批判是审查认识或实践能力的合法范围：既说明经验知识和道德判断何以可能，也阻止理性把超出其条件的主张冒充知识。",
   "senses": [
     {
       "traditionId": "tradition-批判哲学",
@@ -39,7 +39,7 @@
       "claim": "支持批判的摘要主张：“批判”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

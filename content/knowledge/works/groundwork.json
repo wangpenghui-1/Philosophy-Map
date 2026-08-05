@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "kant",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1785",
   "languages": [],
-  "summary": "《道德形而上学奠基》是康德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "这部短著从日常道德判断推进到定言命令，提出普遍法则、目的自身与自主等公式，试图说明道德义务为何不依赖个人欲望和行动结果。",
   "conceptIds": [
     "concept-批判",
     "concept-先验",
@@ -23,16 +23,17 @@
     "tradition-批判哲学"
   ],
   "sourceIds": [
-    "src-kant"
+    "src-kant",
+    "src-kant-groundwork-primary"
   ],
   "citations": [
     {
-      "sourceId": "src-kant",
-      "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-      "claim": "支持《道德形而上学奠基》的摘要主张：《道德形而上学奠基》是康德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "sourceId": "src-kant-groundwork-primary",
+      "locator": "Sections I–III",
+      "claim": "支持定言命令、目的自身、自主与自由的原典结构。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

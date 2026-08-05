@@ -19,7 +19,9 @@
     "tradition-政治自由主义"
   ],
   "conceptIds": [
-    "concept-原初状态"
+    "concept-原初状态",
+    "concept-无知之幕",
+    "concept-差别原则"
   ],
   "questionIds": [
     "society",
@@ -42,7 +44,7 @@
     "sourceId": "src-rawls-theory-justice-1971",
     "locator": "Chapter I, §3, p. 12"
   },
-  "summary": "罗尔斯是美洲与加勒比政治自由主义的重要思想人物，主要追问“公平的社会基本制度应依据何种不偏私的原则选择？”。其思想以“原初状态”为入口，主张思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "summary": "罗尔斯把正义的主要对象放在社会基本制度上：规则如何分配自由、机会、收入与权力？他以原初状态和无知之幕模拟公平选择，并用平等自由、公平机会和差别原则检验公共制度。",
   "workIds": [
     "theory-justice"
   ],
@@ -59,42 +61,89 @@
   "citations": [
     {
       "sourceId": "src-companion-american-philosophy",
-      "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
-      "claim": "支持罗尔斯的身份、思想主张与历史语境概述。"
+      "locator": "Chapter on John Rawls: justice as fairness and political liberalism",
+      "claim": "支持罗尔斯思想发展、正义即公平及其在当代政治哲学中的位置。"
+    },
+    {
+      "sourceId": "src-rawls-theory-justice-1971",
+      "locator": "§§1–4, 11–17, 24, 40 and 46",
+      "claim": "支持社会基本结构、原初状态、无知之幕、两项原则及康德式解释。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "basic-structure",
+      "heading": "正义首先检验社会基本结构",
       "paragraphs": [
         {
-          "text": "罗尔斯是美洲与加勒比政治自由主义的重要思想人物，主要追问“公平的社会基本制度应依据何种不偏私的原则选择？”。其思想以“原初状态”为入口，主张思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "罗尔斯不先问某个个人是否善良，而先问决定人们一生前景的主要制度是否公平。宪法、法律、财产规则、教育和劳动力市场共同构成社会基本结构。它们不仅在事情发生后分配利益，还从一开始影响谁拥有机会、谈判能力和政治声音。因此，个别善举不能替代对制度规则的判断。",
           "citations": [
             {
-              "sourceId": "src-companion-american-philosophy",
-              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
-              "claim": "支持罗尔斯的身份、思想主张与历史语境概述。"
+              "sourceId": "src-rawls-theory-justice-1971",
+              "locator": "§2: The Subject of Justice",
+              "claim": "支持社会基本结构是正义首要对象的论述。"
             }
           ]
         },
         {
-          "text": "核心问题：公平的社会基本制度应依据何种不偏私的原则选择？",
+          "text": "“正义即公平”并不是说所有结果都必须相同，而是要求制度原则不能按既得位置量身定制。一个富有、健康、属于多数群体的人可能觉得某套规则合理；问题是，当他不知道自己将处于什么位置时，是否仍愿意接受这些规则。公平由此不是一种主观好心，而是一套排除偏袒的选择条件。",
           "citations": [
             {
-              "sourceId": "src-companion-american-philosophy",
-              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
-              "claim": "支持对罗尔斯核心问题的概括。"
+              "sourceId": "src-rawls-theory-justice-1971",
+              "locator": "§§3–4: the main idea of the theory and the original position",
+              "claim": "支持以公平选择条件说明正义原则的基本构想。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original-position",
+      "heading": "原初状态与无知之幕",
+      "paragraphs": [
+        {
+          "text": "原初状态是一种思想实验，不是关于人类曾经签订契约的历史假说。参与者知道一般的社会科学和人的基本需要，却不知道自己的阶级、天赋、性别、族群、宗教和人生计划。无知之幕限制可用于讨价还价的信息，使任何人都不能赌自己一定属于优势群体。",
+          "citations": [
+            {
+              "sourceId": "src-rawls-theory-justice-1971",
+              "locator": "§24: The Veil of Ignorance",
+              "claim": "支持原初状态中允许与被遮蔽信息的区分。"
             }
           ]
         },
         {
-          "text": "核心主张：思想实验中的原初状态遮蔽偶然优势，使平等自由和差别原则获得公平选择。",
+          "text": "这个装置也不是要现实中的人忘记身份。它检验的是公共制度能否向不同位置的人说明理由。罗尔斯设想选择者会保护一组平等基本自由，并确保社会经济安排不会牺牲最不利者来换取总体繁荣，因为幕后的每个人都可能成为那个被牺牲的人。",
+          "citations": [
+            {
+              "sourceId": "src-rawls-theory-justice-1971",
+              "locator": "§§26–29: reasoning leading to the two principles",
+              "claim": "支持原初状态选择两项正义原则的论证结构。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principles-method",
+      "heading": "两项原则、反思平衡与批评",
+      "paragraphs": [
+        {
+          "text": "第一项原则保障一套对所有人平等的基本自由，包括良心、表达、结社和政治自由。第二项原则要求职位机会在公平条件下开放，并只在改善最不利者处境时允许社会经济不平等。它们有优先次序：不能用经济增长购买对基本自由的压缩，差别原则也不能代替公平机会。",
+          "citations": [
+            {
+              "sourceId": "src-rawls-theory-justice-1971",
+              "locator": "§11 and §46: the two principles and their final statement",
+              "claim": "支持平等基本自由、公平机会、差别原则及其优先次序。"
+            }
+          ]
+        },
+        {
+          "text": "罗尔斯并不认为一次思想实验就能机械地产生答案。他提出“反思平衡”：在具体判断、一般原则和背景理论之间来回修正。后期政治自由主义又追问，在价值观长期多元的社会中，公民如何围绕政治正义形成重叠共识。批评者则指出，理想化模型可能遮蔽种族、性别、残障和殖民历史；这些争论推动正义理论进入非理想制度分析。",
           "citations": [
             {
               "sourceId": "src-companion-american-philosophy",
-              "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
-              "claim": "支持对罗尔斯核心主张的概括。"
+              "locator": "Chapter on John Rawls and debates over ideal theory",
+              "claim": "支持反思平衡、政治自由主义以及围绕理想理论的主要争论。"
             }
           ]
         }
@@ -119,11 +168,11 @@
   },
   "color": "#d87f9d",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成基本结构、原初状态、两项原则与方法争论的分段扩写，待站主发布前终审。"
 }

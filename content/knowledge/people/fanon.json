@@ -31,7 +31,7 @@
   ],
   "guidingQuestion": "殖民权力如何进入身体、自我与被承认的可能？",
   "thesis": "殖民不仅控制土地，也制造被种族化的主体与心理结构。",
-  "summary": "法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主体与心理结构。 本站以殖民、异化、解放为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "法农分析殖民主义如何进入语言、身体感受和被承认的可能，使被殖民者在他人的种族化目光中经验自己。他把心理治疗与政治解放联系起来，追问去殖民如何重建主体、制度和共同世界。",
   "workIds": [
     "black-skin",
     "wretched"
@@ -47,47 +47,95 @@
     }
   ],
   "sourceIds": [
-    "src-fanon"
+    "src-fanon",
+    "src-fanon-black-skin-philcox"
   ],
   "citations": [
     {
       "sourceId": "src-fanon",
-      "locator": "Introduction and sections on colonial subjectivity and liberation",
-      "claim": "支持法农的摘要主张：法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主…"
+      "locator": "Sections 1–6: blackness, Algeria, decolonization, case studies and legacy",
+      "claim": "支持法农关于种族化经验、殖民精神病理、去殖民与思想影响的整体框架。"
+    },
+    {
+      "sourceId": "src-fanon-black-skin-philcox",
+      "locator": "Introduction and Chapters 5–7",
+      "claim": "支持语言、身体图式、白人目光、承认与解放的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "lived-blackness",
+      "heading": "殖民主义如何进入身体经验",
       "paragraphs": [
         {
-          "text": "法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主体与心理结构。 本站以殖民、异化、解放为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《黑皮肤，白面具》不是把种族主义只当成错误偏见。法农描述殖民语言和社会目光怎样改变一个人经验自身的方式：说“正确”的殖民者语言可能被当作接近文明和白人的通行证，肤色则在公共空间中先于个人行动被读取。被种族化的人不仅遭遇外部歧视，还被迫从支配者的分类中回看自己。",
           "citations": [
             {
-              "sourceId": "src-fanon",
-              "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本段主张：法农是1925–1961活跃于加勒比—北非的反殖民思想思想人物，主要追问“殖民权力如何进入身体、自我与被承认的可能？”。其核心主张可概括为：殖民不仅控制土地，也制造被种族化的主…"
+              "sourceId": "src-fanon-black-skin-philcox",
+              "locator": "Introduction and Chapter 1: The Black Man and Language",
+              "claim": "支持殖民语言、文明标准与主体自我关系之间的分析。"
             }
           ]
         },
         {
-          "text": "核心问题：殖民权力如何进入身体、自我与被承认的可能？",
+          "text": "法农用“身体图式”被“种族—表皮图式”打断来说明这种经验。一个人原本通过身体直接朝向世界行动，却在白人目光、恐惧和刻板印象中突然被固定成类型。这里的异化不是抽象地“不了解真正自我”，而是社会世界持续把行动者变成他人叙事中的对象。承认问题因此从两个人的相遇扩展为由殖民制度预先塑形的不平等场景。",
+          "citations": [
+            {
+              "sourceId": "src-fanon-black-skin-philcox",
+              "locator": "Chapter 5: The Fact of Blackness; Chapter 7: The Black Man and Hegel",
+              "claim": "支持身体经验被种族化目光打断，以及法农对承认关系的改写。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clinic-colony",
+      "heading": "诊所与殖民社会不是两个世界",
+      "paragraphs": [
+        {
+          "text": "法农既是思想家也是精神科医生。他反对把患者症状隔离为纯粹个人问题，因为恐惧、羞耻、暴力和身份撕裂往往来自殖民战争及日常制度。他在阿尔及利亚的临床实践尝试改变封闭式医院关系，并记录殖民暴力如何同时伤害被统治者、施暴者和家庭网络。治疗不能代替政治改变，政治口号也不能自动治愈心理创伤。",
           "citations": [
             {
               "sourceId": "src-fanon",
-              "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本段主张：核心问题：殖民权力如何进入身体、自我与被承认的可能？"
+              "locator": "Sections 2 and 5: Algeria and the case studies",
+              "claim": "支持法农在阿尔及利亚的精神医学实践及殖民暴力案例分析。"
             }
           ]
         },
         {
-          "text": "核心主张：殖民不仅控制土地，也制造被种族化的主体与心理结构。",
+          "text": "这种联系解释了法农为何批判只要求个人适应殖民秩序的心理学。若环境本身不断制造去人格化，把人训练成服从、恐惧或施暴的主体，恢复健康便包含改变共同生活条件。法农没有把精神疾病全部化约为政治结果；他是在强调，临床工作必须看见患者所处的历史和制度世界。",
           "citations": [
             {
               "sourceId": "src-fanon",
-              "locator": "Introduction and sections on colonial subjectivity and liberation",
-              "claim": "支持本段主张：核心主张：殖民不仅控制土地，也制造被种族化的主体与心理结构。"
+              "locator": "Sections 2 and 5: psychiatric practice and colonial social conditions",
+              "claim": "支持临床诊断与殖民社会条件不可分割的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decolonization",
+      "heading": "去殖民、暴力与解放之后",
+      "paragraphs": [
+        {
+          "text": "《全世界受苦的人》把去殖民描述为重新组织土地、权力和人的过程。殖民秩序本身由军事、空间隔离和种族等级维持，因此其瓦解不可能只是礼貌说服。法农讨论反殖民暴力如何打破无力感并形成集体主体，但这不等于把所有暴力都宣布为正当；他的分析同时展示创伤、报复循环和新权力集中的危险。",
+          "citations": [
+            {
+              "sourceId": "src-fanon",
+              "locator": "Section 4: The Wretched of the Earth",
+              "claim": "支持法农对去殖民、殖民暴力与主体重建的分析。"
+            }
+          ]
+        },
+        {
+          "text": "法农尤其警惕独立后的民族资产阶级把殖民国家机器接管为少数人的利益工具。真正解放不能只更换旗帜和统治者，还要建立新的政治参与、经济结构与人际关系。他对民族文化、泛非团结和“新人”的语言影响了后殖民理论、黑人思想与解放运动，也持续引发争论：如何继承其结构诊断，同时避免浪漫化牺牲和男性化的革命主体。",
+          "citations": [
+            {
+              "sourceId": "src-fanon",
+              "locator": "Sections 3, 4 and 6: Black Africa, decolonization and legacy",
+              "claim": "支持民族意识、独立后精英风险及法农思想影响与争议。"
             }
           ]
         }
@@ -105,13 +153,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
+  "uncertainty": "法农关于去殖民暴力的文字存在重要解释争议。页面区分他对殖民秩序暴力结构的诊断、对反抗主体形成的分析和对具体暴力行动的规范性评价，不把三者简化为一句“赞成暴力”。",
   "color": "#b45c4e",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成种族化经验、殖民精神病理与去殖民政治的分段扩写，待站主发布前终审。"
 }

@@ -13,7 +13,7 @@
   ],
   "dateLabel": "战国至汉初成书",
   "languages": [],
-  "summary": "《庄子》是庄子的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "现存《庄子》由内篇、外篇和杂篇构成，以寓言、对话和悖论讨论语言、视角、技艺、生死与逍遥。文本层累复杂，郭象整理的三十三篇本塑造了主要传承形态。",
   "conceptIds": [
     "concept-道",
     "concept-逍遥",
@@ -23,16 +23,22 @@
     "tradition-道家"
   ],
   "sourceIds": [
-    "src-zhuangzi"
+    "src-zhuangzi",
+    "src-zhuangzi-primary"
   ],
   "citations": [
     {
       "sourceId": "src-zhuangzi",
-      "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-      "claim": "支持《庄子》的摘要主张：《庄子》是庄子的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 1–4: text formation and philosophical approaches",
+      "claim": "支持《庄子》的篇章层次、传承与主要思想方法。"
+    },
+    {
+      "sourceId": "src-zhuangzi-primary",
+      "locator": "《齐物论》",
+      "claim": "提供视角、是非与语言问题的原典文本。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

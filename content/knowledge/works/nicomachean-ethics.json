@@ -13,7 +13,7 @@
   ],
   "dateLabel": "公元前4世纪",
   "languages": [],
-  "summary": "《尼各马可伦理学》是亚里士多德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "本书从幸福作为最高善出发，讨论伦理德性如何通过习惯形成、实践智慧如何判断具体行动，并以友爱、快乐和沉思检验完整人生的构成。",
   "conceptIds": [
     "concept-德性",
     "concept-实践智慧",
@@ -23,16 +23,17 @@
     "tradition-古希腊哲学"
   ],
   "sourceIds": [
-    "src-aristotle"
+    "src-aristotle",
+    "src-aristotle-ethics-ross"
   ],
   "citations": [
     {
-      "sourceId": "src-aristotle",
-      "locator": "Introduction and Section 2: the human good",
-      "claim": "支持《尼各马可伦理学》的摘要主张：《尼各马可伦理学》是亚里士多德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "sourceId": "src-aristotle-ethics-ross",
+      "locator": "Books I–II, VI, VIII–X",
+      "claim": "支持幸福、德性、实践智慧、友爱与沉思生活的原典结构。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

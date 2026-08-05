@@ -47,7 +47,7 @@
     "sourceId": "src-zhuangzi-primary",
     "locator": "内篇《齐物论》第9节"
   },
-  "summary": "庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。 本站以道、逍遥、齐物为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "庄子借寓言、悖论和视角转换追问：当语言、身份和价值判断都可能把人困住时，怎样与变化共处？他的逍遥不是随心所欲，而是松动固执立场，在具体处境中保持回应世界的余地。",
   "workIds": [
     "zhuangzi-text"
   ],
@@ -64,42 +64,89 @@
   "citations": [
     {
       "sourceId": "src-zhuangzi",
-      "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-      "claim": "支持庄子的摘要主张：庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。…"
+      "locator": "Sections 2–4.8: text formation, language, skepticism and perspectives",
+      "claim": "支持《庄子》的文本层次、语言观、视角主义与怀疑方法。"
+    },
+    {
+      "sourceId": "src-zhuangzi-primary",
+      "locator": "《齐物论》全篇，重点为“彼亦一是非，此亦一是非”与“道通为一”段",
+      "claim": "支持齐物、视角差异以及语言判断局限的原典依据。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "text-question",
+      "heading": "一部用故事思考的复合文本",
       "paragraphs": [
         {
-          "text": "庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。 本站以道、逍遥、齐物为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《庄子》不像一部从定义开始、逐条推出结论的教科书。大鹏、井蛙、庖丁、梦蝶和辩者轮番出现，常常让一个看似稳固的判断在另一种尺度下失效。寓言不是给抽象观点配插图，而是思想方法本身：读者先被带入某个立场，再突然发现这个立场只覆盖了世界的一角。",
           "citations": [
             {
               "sourceId": "src-zhuangzi",
-              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本段主张：庄子是约公元前4世纪活跃于东亚的道家思想人物，主要追问“当语言和立场不断变化，我们如何保存行动与生命的自由？”。其核心主张可概括为：松动固执的区分，从多重视角理解变化中的世界。…"
+              "locator": "Sections 3–4.3: interpretive narratives and Zhuangzi's distinctive approach",
+              "claim": "支持寓言、视角转换和反教条式写作在《庄子》思想中的作用。"
             }
           ]
         },
         {
-          "text": "核心问题：当语言和立场不断变化，我们如何保存行动与生命的自由？",
+          "text": "现存三十三篇并非都能直接归于一位历史人物，通常还要区分内篇、外篇与杂篇，并考虑郭象整理和注释对传世文本的影响。因此，“庄子认为”有时指内篇中较稳定的思想线索，有时指围绕庄子形成的文本传统。丰富人物页必须保留这种层次，不能把整部书压缩成作者一生中一次完成的单一学说。",
           "citations": [
             {
               "sourceId": "src-zhuangzi",
-              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本段主张：核心问题：当语言和立场不断变化，我们如何保存行动与生命的自由？"
+              "locator": "Sections 1–2: life and evolving text theory",
+              "claim": "支持庄子生平资料有限以及《庄子》文本层累形成的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "language-perspective",
+      "heading": "语言、是非与视角",
+      "paragraphs": [
+        {
+          "text": "《齐物论》并不是简单宣布“所有意见都一样正确”。它更像是在追问：判断从什么位置发出，又把哪些差异当成理所当然。人、动物、不同学派和不同生活方式各有偏好；当某一方把自己的尺度冒充为世界唯一尺度，争论便会失去对自身条件的反省。齐物首先是一种松动绝对化立场的练习。",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi-primary",
+              "locator": "《齐物论》：“彼亦一是非，此亦一是非”及相关段落",
+              "claim": "支持从彼此视角反省是非判断的原典线索。"
             }
           ]
         },
         {
-          "text": "核心主张：松动固执的区分，从多重视角理解变化中的世界。",
+          "text": "庄子并未因此放弃语言。他自己正不断讲故事、辩论和造词。问题在于把临时有用的名称误当成固定现实，把可调整的区分变成不可逾越的边界。语言可以帮助行动，也会反过来支配行动；明智的使用者既会说，又知道语言何时开始遮蔽变化中的对象。",
           "citations": [
             {
               "sourceId": "src-zhuangzi",
-              "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
-              "claim": "支持本段主张：核心主张：松动固执的区分，从多重视角理解变化中的世界。"
+              "locator": "Sections 4.5–4.8: relativism, language, skepticism and perspectives",
+              "claim": "支持《庄子》对语言功能、局限及视角反省的复杂立场。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "freedom-skill",
+      "heading": "逍遥、技艺与生命处境",
+      "paragraphs": [
+        {
+          "text": "逍遥常被误读成摆脱一切关系的个人自由。《逍遥游》不断比较不同生命的尺度，提醒人不要用有限经验规定所有可能；但大鹏仍需凭借风，行动从来发生在条件之中。逍遥更接近不被一种身份、功名标准或认知框架完全锁死，从而能够随处境变化调整自己。",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi",
+              "locator": "Sections 4.3–4.4: distinctive approach and intuitionism",
+              "claim": "支持逍遥与对固定规范、有限视角的松动。"
+            }
+          ]
+        },
+        {
+          "text": "庖丁解牛一类技艺故事进一步展示了这种自由。高手不是用蛮力征服对象，而是在长期实践中辨认事物的纹理，让动作避开阻滞。这里没有一套适用于所有情境的机械规则，也不是拒绝训练；恰恰因为身体、注意力和对象长期磨合，行动才从僵硬控制转为灵活回应。庄子的自由因此同时包含认识上的谦逊与实践中的熟练。",
+          "citations": [
+            {
+              "sourceId": "src-zhuangzi",
+              "locator": "Section 4.4 and discussions of skill stories",
+              "claim": "支持技艺故事所体现的熟练行动、情境回应与非僵化规范。"
             }
           ]
         }
@@ -117,14 +164,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
-  "uncertainty": "《庄子》由不同时期材料构成，不能将全书观点都直接归于庄周本人。",
+  "uncertainty": "现存《庄子》是层累形成的文本。页面区分历史人物庄周、内篇较早思想层与后世庄子学派材料；除有明确证据外，不把全书每句话都直接归于庄周本人。",
   "color": "#71a59b",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成文本层次、语言视角与逍遥实践的分段扩写，待站主发布前终审。"
 }

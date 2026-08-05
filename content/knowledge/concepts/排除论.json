@@ -1,0 +1,50 @@
+{
+  "id": "concept-排除论",
+  "slug": "排除论",
+  "entityType": "concept",
+  "name": "排除论",
+  "originalTerms": [
+    "apoha"
+  ],
+  "summary": "排除论用“排除非此类”解释词语和概念如何获得意义：概念不必对应一个独立存在的普遍实体，也能在区分实践中发挥作用。",
+  "senses": [
+    {
+      "traditionId": "tradition-佛教逻辑学",
+      "label": "以排除差异解释概念意义",
+      "explanation": "陈那以排除论协调两个立场：直接认识面对具体对象，语言却以可重复的类别运作。词义因排除不相符对象而形成，而不是抓住一个永恒共相。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "Dignāga: apoha and philosophy of language",
+          "claim": "支持排除论对概念与语言意义的说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "dignaga"
+  ],
+  "workIds": [
+    "pramana-samuccaya"
+  ],
+  "traditionIds": [
+    "tradition-佛教逻辑学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "Dignāga: exclusion theory (apoha)",
+      "claim": "支持排除论作为陈那语言哲学核心方案的概括。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增概念。"
+}

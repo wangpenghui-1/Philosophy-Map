@@ -1,0 +1,21 @@
+{
+  "id": "src-avicenna-healing-metaphysics-marmura",
+  "entityType": "source",
+  "title": "The Metaphysics of The Healing",
+  "authors": [
+    "Avicenna",
+    "Michael E. Marmura"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Brigham Young University Press",
+  "year": 2005,
+  "defaultLocator": "Books I, V, VIII–IX",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "Marmura 英译本，用于定位《治愈之书·形而上学》中的存在、本质、必然者与因果论证。"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "hegel-fanon",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "hegel"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "fanon"
+  },
+  "directed": true,
+  "relationType": "critique",
+  "evidenceStatus": "established",
+  "title": "承认问题进入殖民种族秩序",
+  "explanation": "法农借助黑格尔的承认问题，却指出殖民种族秩序预先把被殖民者固定为身体类型，使承认从一开始就不对等。",
+  "citations": [
+    {
+      "sourceId": "src-fanon-black-skin-philcox",
+      "locator": "Chapter 7: The Black Man and Hegel",
+      "claim": "支持法农对黑格尔承认关系的明确讨论与殖民语境改写。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

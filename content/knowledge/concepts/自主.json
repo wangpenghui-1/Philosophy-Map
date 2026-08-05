@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "自主",
   "originalTerms": [],
-  "summary": "“自主”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "自主不是随心所欲，而是理性主体不受偶然欲望支配，能够把自己视为普遍法则的共同制定者，并承认其他人格同样具有目的地位。",
   "senses": [
     {
       "traditionId": "tradition-批判哲学",
@@ -39,7 +39,7 @@
       "claim": "支持自主的摘要主张：“自主”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

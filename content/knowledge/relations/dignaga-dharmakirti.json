@@ -1,0 +1,32 @@
+{
+  "id": "dignaga-dharmakirti",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "dignaga"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "dharmakirti"
+  },
+  "directed": true,
+  "relationType": "lineage",
+  "evidenceStatus": "established",
+  "title": "佛教认识论的奠基与再建",
+  "explanation": "法称以陈那的二量论、因理与排除论为基础，发展知识可靠性和因果效力理论，形成佛教认识论核心谱系。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "Dignāga–Dharmakīrti school of Buddhist epistemology",
+      "claim": "支持陈那奠基、法称继承并改造佛教认识论的关系。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

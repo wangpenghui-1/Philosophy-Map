@@ -15,7 +15,7 @@
   "languages": [
     "en"
   ],
-  "summary": "《正义论》是进入罗尔斯思想语境的代表文本入口。条目以“原初状态”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "summary": "罗尔斯以原初状态和无知之幕重构社会契约，提出平等基本自由、公平机会和差别原则，并讨论这些原则如何适用于宪法、分配制度和公民义务。",
   "conceptIds": [
     "concept-原初状态"
   ],
@@ -23,16 +23,17 @@
     "tradition-政治自由主义"
   ],
   "sourceIds": [
-    "src-companion-american-philosophy"
+    "src-companion-american-philosophy",
+    "src-rawls-theory-justice-1971"
   ],
   "citations": [
     {
-      "sourceId": "src-companion-american-philosophy",
-      "locator": "对应人物与思想运动专章：“John Rawls / 罗尔斯”",
-      "claim": "支持《正义论》与罗尔斯的文本关联及归属说明。"
+      "sourceId": "src-rawls-theory-justice-1971",
+      "locator": "§§1–4, 11–17 and 24",
+      "claim": "支持原初状态、无知之幕和两项正义原则的原典结构。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",

@@ -1,0 +1,32 @@
+{
+  "id": "kant-rawls",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "kant"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "john-rawls"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "把自我立法转化为公平制度的选择",
+  "explanation": "罗尔斯以原初状态把康德式自我立法转化为公平制度选择，同时强调这是一种政治建构，而非完整的康德形而上学。",
+  "citations": [
+    {
+      "sourceId": "src-rawls-theory-justice-1971",
+      "locator": "§40: The Kantian Interpretation of Justice as Fairness",
+      "claim": "支持罗尔斯对正义即公平的康德式解释及其制度化改造。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

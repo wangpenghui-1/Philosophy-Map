@@ -1,0 +1,51 @@
+{
+  "id": "concept-比量",
+  "slug": "比量",
+  "entityType": "concept",
+  "name": "比量",
+  "originalTerms": [
+    "anumāna"
+  ],
+  "summary": "比量是依据理由与稳定关联获得的推论认识。陈那分别讨论“为自己”的推理和向他人陈述的论证，由此重塑印度逻辑传统。",
+  "senses": [
+    {
+      "traditionId": "tradition-佛教逻辑学",
+      "label": "从理由到所证对象的推论",
+      "explanation": "有效理由必须与所要证明的性质形成受约束的关联，不能只凭偶然同现。比量处理的是由概念和一般关系组织的知识。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "Dignāga: inference for oneself and inference for others",
+          "claim": "支持陈那关于两类推论及有效理由的概括。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "dignaga"
+  ],
+  "workIds": [
+    "pramana-samuccaya"
+  ],
+  "traditionIds": [
+    "tradition-佛教逻辑学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-indian-philosophies",
+    "src-dignaga-hattori"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "Dignāga chapters on inference and the logical reason",
+      "claim": "支持比量在陈那逻辑与认识论中的位置。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增概念。"
+}

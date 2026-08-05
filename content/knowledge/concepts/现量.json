@@ -1,0 +1,51 @@
+{
+  "id": "concept-现量",
+  "slug": "现量",
+  "entityType": "concept",
+  "name": "现量",
+  "originalTerms": [
+    "pratyakṣa"
+  ],
+  "summary": "在陈那的认识论中，现量是直接面对具体对象的非概念性认识；一旦以名称、种类和判断组织经验，认识已经进入概念构造。",
+  "senses": [
+    {
+      "traditionId": "tradition-佛教逻辑学",
+      "label": "离分别的直接认识",
+      "explanation": "现量把握不可重复的具体相状，即“自相”。它不是未经反思便必然正确的直觉，而是陈那用来区分直接显现与概念判断的认识类型。",
+      "citations": [
+        {
+          "sourceId": "src-dignaga-hattori",
+          "locator": "Pramāṇasamuccaya and Vṛtti I.2–4",
+          "claim": "支持现量离分别并以自相为对象的定义。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "dignaga"
+  ],
+  "workIds": [
+    "pramana-samuccaya"
+  ],
+  "traditionIds": [
+    "tradition-佛教逻辑学"
+  ],
+  "sourceIds": [
+    "src-dignaga-hattori",
+    "src-encyclopedia-indian-philosophies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-dignaga-hattori",
+      "locator": "Pramāṇasamuccaya and Vṛtti, Chapter 1",
+      "claim": "支持陈那对现量、分别与自相的区分。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增概念。"
+}

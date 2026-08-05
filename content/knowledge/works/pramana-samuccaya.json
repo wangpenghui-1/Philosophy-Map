@@ -15,7 +15,7 @@
   "languages": [
     "sa"
   ],
-  "summary": "《集量论》是进入陈那思想语境的代表文本入口。条目以“因明”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "summary": "《集量论》系统讨论现量、比量、为他比量、例证、排除论和反驳，将知识来源、语言意义与公共论证组织成佛教逻辑认识论的统一框架。",
   "conceptIds": [
     "concept-因明"
   ],
@@ -23,16 +23,22 @@
     "tradition-佛教逻辑学"
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-encyclopedia-indian-philosophies",
+    "src-dignaga-hattori"
   ],
   "citations": [
     {
+      "sourceId": "src-dignaga-hattori",
+      "locator": "Pramāṇasamuccaya and Vṛtti, Chapter 1",
+      "claim": "支持现量、自相与概念分别的原典定位。"
+    },
+    {
       "sourceId": "src-encyclopedia-indian-philosophies",
-      "locator": "相关卷中的人物、学派与文本条目：“Dignaga / 陈那”",
-      "claim": "支持《集量论》与陈那的文本关联及归属说明。"
+      "locator": "Dignāga: structure of the Pramāṇasamuccaya",
+      "claim": "支持全书关于推论、语言和论辩各章的结构说明。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",

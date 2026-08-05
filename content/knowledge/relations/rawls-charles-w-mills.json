@@ -1,0 +1,32 @@
+{
+  "id": "rawls-charles-w-mills",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "john-rawls"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "charles-w-mills"
+  },
+  "directed": true,
+  "relationType": "critique",
+  "evidenceStatus": "established",
+  "title": "理想理论是否遮蔽了现实种族支配",
+  "explanation": "米尔斯批判理想化契约论忽略殖民主义与白人优势如何塑造制度，迫使罗尔斯式正义理论回应非理想条件。",
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "Chapters on John Rawls and Charles W. Mills",
+      "claim": "支持米尔斯对自由主义契约论、理想理论和种族支配盲点的批评。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

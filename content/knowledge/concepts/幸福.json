@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "幸福",
   "originalTerms": [],
-  "summary": "“幸福”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "亚里士多德的幸福指完整人生中依德性进行的活动，不是短暂愉悦。友爱、共同体和一定外在条件也参与构成一个能够持续实践得好的生活。",
   "senses": [
     {
       "traditionId": "tradition-古希腊哲学",
@@ -39,7 +39,7 @@
       "claim": "支持幸福的摘要主张：“幸福”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

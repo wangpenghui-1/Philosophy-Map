@@ -162,6 +162,9 @@ test("publishes the current increment while preserving the historical corpus and
   assert.ok(increment.members.every((member) => people.some((person) => person.id === member.personId)));
   assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre"].every((id) => relations.some((relation) => relation.id === id)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
+  const editorialDisclaimer = "条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。";
+  assert.ok(people.every((person) => !person.summary.includes(editorialDisclaimer)));
+  assert.ok(people.every((person) => person.sections.every((section) => section.paragraphs.every((paragraph) => !paragraph.text.includes(editorialDisclaimer)))));
 });
 
 test("keeps representative quotations traceable to explicit source tiers", async () => {
@@ -200,6 +203,39 @@ test("keeps representative quotations traceable to explicit source tiers", async
       else assert.equal(quote.originalLanguage, quote.displayLanguage);
     }
   }
+});
+
+test("keeps the eight enriched thinker pilots substantial, sourced, and connected", async () => {
+  const [people, works, relations] = await Promise.all([
+    readEntities("people"),
+    readEntities("works"),
+    readEntities("relations"),
+  ]);
+  const pilotIds = ["kant", "zhuangzi", "dignaga", "aristotle", "john-rawls", "avicenna", "fanon", "husserl"];
+  const personById = new Map(people.map((person) => [person.id, person]));
+  const workById = new Map(works.map((work) => [work.id, work]));
+
+  for (const id of pilotIds) {
+    const person = personById.get(id);
+    assert.ok(person, `${id}: pilot person is missing`);
+    const sectionText = person.sections.flatMap((section) => section.paragraphs).map((paragraph) => paragraph.text).join("");
+    const personRelations = relations.filter((relation) => relation.from.id === id || relation.to.id === id);
+    assert.equal(person.contentTier, "standard", `${id}: pilot should be standard tier`);
+    assert.ok(person.sections.length >= 3, `${id}: pilot needs at least three sections`);
+    assert.ok(sectionText.length >= 600, `${id}: pilot prose is too short`);
+    assert.ok(person.conceptIds.length >= 3, `${id}: pilot needs at least three concepts`);
+    assert.ok(person.sourceIds.length >= 2, `${id}: pilot needs at least two sources`);
+    assert.ok(personRelations.length >= 2, `${id}: pilot needs at least two thinker relations`);
+    assert.ok(person.sections.every((section) => section.paragraphs.every((paragraph) => paragraph.citations.length > 0)), `${id}: every paragraph needs a citation`);
+    assert.ok(person.workIds.every((workId) => !/后续将补充|文本入口/.test(workById.get(workId)?.summary ?? "")), `${id}: work summaries must be substantive`);
+  }
+
+  const response = await render("/thinker/kant");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /核心概念|代表著作|与其他哲学家的关联/);
+  assert.match(html, /直接影响|证据明确/);
+  assert.match(html, /href="#source-\d+"/);
 });
 
 test("keeps relation evidence and resonance semantics explicit in entity data", async () => {

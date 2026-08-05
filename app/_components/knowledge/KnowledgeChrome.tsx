@@ -3,6 +3,14 @@ import type { ReactNode } from "react";
 import { contentTierLabels, knowledgeSourceById } from "../../_data/knowledge";
 import type { CitationRef, ContentTier } from "../../_generated/knowledge-types";
 
+function citationKey(citation: CitationRef) {
+  return `${citation.sourceId}:${citation.locator}`;
+}
+
+function uniqueCitations(citations: CitationRef[]) {
+  return [...new Map(citations.map((citation) => [citationKey(citation), citation])).values()];
+}
+
 export function KnowledgeHeader() {
   return (
     <header className="knowledge-header">
@@ -37,12 +45,12 @@ export function KnowledgePage({ children }: { children: ReactNode }) {
 }
 
 export function CitationList({ citations, heading = "来源与定位" }: { citations: CitationRef[]; heading?: string }) {
-  const unique = [...new Map(citations.map((citation) => [`${citation.sourceId}:${citation.locator}`, citation])).values()];
+  const unique = uniqueCitations(citations);
   return (
     <section className="knowledge-citations">
       <h2>{heading}</h2>
       <ol>
-        {unique.map((citation) => {
+        {unique.map((citation, index) => {
           const source = knowledgeSourceById.get(citation.sourceId);
           if (!source) return null;
           const content = (
@@ -53,10 +61,23 @@ export function CitationList({ citations, heading = "来源与定位" }: { citat
               <p>{citation.claim}</p>
             </>
           );
-          return <li key={`${citation.sourceId}:${citation.locator}`}>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{content}</a> : content}</li>;
+          return <li id={`source-${index + 1}`} key={citationKey(citation)}>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{content}</a> : content}</li>;
         })}
       </ol>
     </section>
+  );
+}
+
+export function CitationMarkers({ citations, allCitations }: { citations: CitationRef[]; allCitations: CitationRef[] }) {
+  const unique = uniqueCitations(allCitations);
+  const numbers = [...new Set(citations
+    .map((citation) => unique.findIndex((item) => citationKey(item) === citationKey(citation)) + 1)
+    .filter(Boolean))];
+  if (!numbers.length) return null;
+  return (
+    <sup className="knowledge-citation-markers" aria-label="本段来源">
+      {numbers.map((number) => <a href={`#source-${number}`} key={number} aria-label={`查看来源 ${number}`}>[{number}]</a>)}
+    </sup>
   );
 }
 

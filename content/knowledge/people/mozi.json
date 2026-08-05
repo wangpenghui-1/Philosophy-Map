@@ -20,7 +20,9 @@
     "tradition-墨家"
   ],
   "conceptIds": [
-    "concept-兼爱"
+    "concept-兼爱",
+    "concept-正义",
+    "concept-实践智慧"
   ],
   "questionIds": [
     "society",
@@ -43,7 +45,7 @@
     "sourceId": "src-mozi-jianai-primary",
     "locator": "《兼爱中》"
   },
-  "summary": "墨子是东亚墨家的重要思想人物，主要追问“政治与伦理应以何种可检验标准减少天下之害？”。其思想以“兼爱”为入口，主张以兼爱、非攻和尚贤衡量制度，使行动增进普遍利益而非宗族偏私。",
+  "summary": "墨子以战国时期的战争、贫富和任人唯亲为背景，追问公共行动怎样真正使人受益。他反对把亲族偏爱和侵略当作合理秩序，提出兼爱、非攻、尚贤与节用，并要求主张能在经验、古例和实际后果中接受检验。",
   "workIds": [
     "mozi-text"
   ],
@@ -66,36 +68,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "impartial-care",
+      "heading": "兼爱不是要求取消所有亲疏",
       "paragraphs": [
         {
-          "text": "墨子是东亚墨家的重要思想人物，主要追问“政治与伦理应以何种可检验标准减少天下之害？”。其思想以“兼爱”为入口，主张以兼爱、非攻和尚贤衡量制度，使行动增进普遍利益而非宗族偏私。",
+          "text": "兼爱首先反对把他人的生命、财产和国家只当作可供本方掠夺的对象。墨子主张在行动判断中把陌生人的利益也算进去，因此反对侵略与任人唯亲。它并不必然要求人对所有人具有相同情感强度，而是要求制度和行动不能把偏爱变成普遍伤害。",
           "citations": [
             {
-              "sourceId": "src-encyclopedia-chinese-philosophy",
-              "locator": "对应人物与学派条目：“Mozi / 墨子”",
-              "claim": "支持墨子的身份、思想主张与历史语境概述。"
+              "sourceId": "src-mozi-jianai-primary",
+              "locator": "《墨子·兼爱》上、中、下",
+              "claim": "支持兼爱、互利与反偏害的原典定位。"
             }
           ]
         },
         {
-          "text": "核心问题：政治与伦理应以何种可检验标准减少天下之害？",
+          "text": "非攻是兼爱的政治检验。侵略常以荣耀、土地或报复为名，却把死亡、流离和贫困转嫁给无辜者；若真的把他人的利益纳入判断，这些理由便难以成立。墨子因此把反战与日常互利置于同一伦理逻辑中。",
+          "citations": [
+            {
+              "sourceId": "src-mozi-jianai-primary",
+              "locator": "《墨子·非攻》上、中、下",
+              "claim": "支持非攻与兼爱的政治推论。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "benefit",
+      "heading": "正义要经受后果检验",
+      "paragraphs": [
+        {
+          "text": "墨子常以“兴天下之利，除天下之害”衡量政治和伦理主张。这里的利并非狭义金钱，而包括安全、富足、人口、生计和可共同生活的秩序。尚贤、节用、节葬和非乐等主张都与此标准相连，但不同篇章的论证重点并不完全一致。",
           "citations": [
             {
               "sourceId": "src-encyclopedia-chinese-philosophy",
-              "locator": "对应人物与学派条目：“Mozi / 墨子”",
-              "claim": "支持对墨子核心问题的概括。"
+              "locator": "Mozi and Mohism entries",
+              "claim": "支持墨家功利、尚贤、节用与后果判断的概述。"
             }
           ]
         },
         {
-          "text": "核心主张：以兼爱、非攻和尚贤衡量制度，使行动增进普遍利益而非宗族偏私。",
+          "text": "尚贤同样不是单纯技术治理。墨家反对因宗族、财富或名位授官，强调能力、功绩与公共责任应成为用人的理由。这使其政治思想既关心结果，也关心谁有机会参与并承担治理；具体制度如何运作仍需要历史语境说明。",
           "citations": [
             {
               "sourceId": "src-encyclopedia-chinese-philosophy",
-              "locator": "对应人物与学派条目：“Mozi / 墨子”",
-              "claim": "支持对墨子核心主张的概括。"
+              "locator": "Mozi and Mohism entries",
+              "claim": "支持尚贤、任用与公共治理。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "standards",
+      "heading": "三表法把主张拉回可检验的依据",
+      "paragraphs": [
+        {
+          "text": "所谓三表法要求考察一个主张是否有古代圣王的先例、是否合乎民众可见可闻的事实、是否能带来实际利益。它不是现代实验科学的方法，却显示墨家不满足于身份权威或漂亮辞令。战国文本的篇章归属和学派内部发展复杂，不能把每一篇都无差别地算作墨子本人的声音。",
+          "citations": [
+            {
+              "sourceId": "src-mozi-jianai-primary",
+              "locator": "《墨子·非命》上相关三表论证",
+              "claim": "支持三表法与文本归属的讨论线索。"
+            }
+          ]
+        },
+        {
+          "text": "墨家重视节用，并非反对一切艺术或生活享受，而是质疑资源被奢侈仪式和权贵消费占据时，普通人的生计如何保障。对《非乐》等篇的理解历来分歧很大，不能把它简化为“墨家讨厌快乐”。这种分歧也提醒我们把篇章放回论证语境。",
+          "citations": [
+            {
+              "sourceId": "src-encyclopedia-chinese-philosophy",
+              "locator": "Mohist ethics and political thought",
+              "claim": "支持节用、非乐与解释争议。"
             }
           ]
         }
@@ -113,14 +157,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图 AI 辅助艺术化人物形象"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "《墨子》由多层材料组成，部分篇章可能反映后期墨者而非墨子本人。兼爱不是“人人感情完全相同”的口号，墨家的利害判断也不能直接等同于现代功利主义。",
   "color": "#86b79b",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v3",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十六位；补充兼爱、非攻、公共后果与三表法。"
 }

@@ -32,7 +32,7 @@
   ],
   "guidingQuestion": "当教育制造依赖时，平等与理性如何真正属于所有人？",
   "thesis": "女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。",
-  "summary": "沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。 本站以平等、教育、独立为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "沃斯通克拉夫特从女性被塑造成依赖、柔弱和取悦他人的现实出发，批评把这种结果说成天性。她要求女性获得能发展理性、德性和独立判断的教育，也因此把家庭、情感、劳动与公民资格共同纳入平等问题。",
   "workIds": [
     "vindication-woman"
   ],
@@ -55,36 +55,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "education",
+      "heading": "教育制造的依赖不能被叫作天性",
       "paragraphs": [
         {
-          "text": "沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。 本站以平等、教育、独立为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《女权辩护》反对一种流行说法：女性天生更感性、更适合服从。沃斯通克拉夫特认为，差异化教育把女性训练成以美貌、顺从和被认可为目标，随后再把这种依赖误认作自然。教育应让女性发展判断、劳动能力和品格，而不只是学会讨人喜欢。",
           "citations": [
             {
-              "sourceId": "src-wollstonecraft",
-              "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本段主张：沃斯通克拉夫特是1759–1797活跃于欧洲的启蒙女性主义思想人物，主要追问“当教育制造依赖时，平等与理性如何真正属于所有人？”。其核心主张可概括为：女性被视为软弱并非自然事实…"
+              "sourceId": "src-wollstonecraft-vindication-1792",
+              "locator": "Chapters 2–5",
+              "claim": "支持对女性教育、理性和依赖的批评。"
             }
           ]
         },
         {
-          "text": "核心问题：当教育制造依赖时，平等与理性如何真正属于所有人？",
+          "text": "她的论证不仅涉及私人家庭。没有受教育和谋生机会的女性很难真正同意婚姻、参与公共讨论或抵抗暴力；将依赖包装成女性美德，会让这种不平等持续再生产。教育改革因此是权利与公民资格的条件，而不是附属福利。",
           "citations": [
             {
               "sourceId": "src-wollstonecraft",
-              "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本段主张：核心问题：当教育制造依赖时，平等与理性如何真正属于所有人？"
+              "locator": "Sections on education, rights and citizenship",
+              "claim": "支持教育、经济依赖与公民资格。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virtue",
+      "heading": "平等不是把所有人变成同一种人",
+      "paragraphs": [
+        {
+          "text": "她把理性同德性和独立联系起来，并不表示否认身体、情感或亲密关系。她批评的是一种把女性限制在虚荣、软弱与私人依附中的制度，使她们缺乏作为道德行动者参与判断的机会。家庭改革、教育改革和公共平等因而彼此相关。",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft",
+              "locator": "Sections on rights, virtue, education and Rousseau",
+              "claim": "支持理性、德性、独立和制度批评。"
             }
           ]
         },
         {
-          "text": "核心主张：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。",
+          "text": "沃斯通克拉夫特也批评男性被鼓励的虚荣、军功和支配欲。她所说的德性不是女性必须模仿男性气质，而是任何人都应能练习的诚实、判断和自立。这个立场将性别平等同更广泛的道德改革联系起来。",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft-vindication-1792",
+              "locator": "Chapters 3–4",
+              "claim": "支持对男性虚荣与共同德性的批评。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rousseau",
+      "heading": "她把卢梭的教育理想转向女性",
+      "paragraphs": [
+        {
+          "text": "沃斯通克拉夫特尤其反驳卢梭在《爱弥儿》中为苏菲设计的教育：若男性需要独立理性来成为公民，女性为何应被训练成服务男性欲望的伴侣？这不是简单拒绝卢梭，而是以他的教育与自由语言揭出其性别排除。她的政治地位与革命时代文本也有不同读法。",
+          "citations": [
+            {
+              "sourceId": "src-wollstonecraft-vindication-1792",
+              "locator": "Chapters 5 and 12–13",
+              "claim": "支持对卢梭、苏菲教育与女性公民资格的批评。"
+            }
+          ]
+        },
+        {
+          "text": "她的语言常带有革命时代的普遍主义抱负，却也受到自身阶级位置限制。今天阅读她，既可看到女性教育与权利论证的开创性，也需要追问哪些劳动女性、殖民处境与非欧洲经验没有被充分纳入。这种追问也使其平等理想继续接受修正与扩展。",
           "citations": [
             {
               "sourceId": "src-wollstonecraft",
-              "locator": "Sections on education, rights and her critique of Rousseau",
-              "claim": "支持本段主张：核心主张：女性被视为软弱并非自然事实，而是差异化教育与制度依赖的结果。"
+              "locator": "Sections on reception and feminist interpretation",
+              "claim": "支持接受史与批评性阅读。"
             }
           ]
         }
@@ -104,13 +146,13 @@
   },
   "color": "#aa718f",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v3",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十八位；补充教育、德性、独立及对卢梭的具体批评。",
   "representativeQuote": {
     "text": "The neglected education of my fellow-creatures is the grand source of the misery I deplore.",
     "displayLanguage": "en",
@@ -125,5 +167,6 @@
     "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
     "sourceId": "src-wollstonecraft-vindication-1792",
     "locator": "Introduction"
-  }
+  },
+  "uncertainty": "沃斯通克拉夫特的“理性”“德性”和“独立”带有18世纪政治语言的语境，不能直接等同于当代性别理论。她对阶级、殖民与家庭的处理也仍是批评性阅读的重要问题。"
 }

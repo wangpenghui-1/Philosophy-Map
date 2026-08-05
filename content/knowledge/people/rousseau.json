@@ -32,7 +32,7 @@
   ],
   "guidingQuestion": "人如何在共同体中服从法律却仍保持自由？",
   "thesis": "政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。",
-  "summary": "卢梭是1712–1778活跃于欧洲的启蒙政治哲学思想人物，主要追问“人如何在共同体中服从法律却仍保持自由？”。其核心主张可概括为：政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。 本站以普遍意志、不平等、教育为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "卢梭把现代社会的自由问题放在不平等、依赖和公民共同立法的张力中。他既批评人们在比较与竞争中失去独立，也在《社会契约论》中追问：服从法律为何仍可能是自由，而教育又怎样让儿童不被虚荣与支配塑造。",
   "workIds": [
     "social-contract",
     "emile"
@@ -56,36 +56,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "inequality",
+      "heading": "不平等不只是财富差距",
       "paragraphs": [
         {
-          "text": "卢梭是1712–1778活跃于欧洲的启蒙政治哲学思想人物，主要追问“人如何在共同体中服从法律却仍保持自由？”。其核心主张可概括为：政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。 本站以普遍意志、不平等、教育为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "卢梭区分自然差异与政治、社会造成的不平等。后者随着私有、比较、承认和依赖而加深：人开始靠他人的眼光确认自身价值，于是虚荣和竞争把自由变成相互支配。这个叙事不是精确的史前历史报告，而是用来诊断现代社会关系的哲学假设。",
           "citations": [
             {
               "sourceId": "src-rousseau",
-              "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本段主张：卢梭是1712–1778活跃于欧洲的启蒙政治哲学思想人物，主要追问“人如何在共同体中服从法律却仍保持自由？”。其核心主张可概括为：政治自由要求公民共同形成普遍意志，而社会制度也…"
+              "locator": "Sections on inequality, amour-propre and the state of nature",
+              "claim": "支持自然状态、不平等与虚荣的解释。"
             }
           ]
         },
         {
-          "text": "核心问题：人如何在共同体中服从法律却仍保持自由？",
+          "text": "这份诊断并不是要人回到一个真实存在的原始时代。卢梭用自然状态揭示：许多被当作天经地义的竞争、占有和依赖其实有历史条件。批评现代社会，不等于否认社会性，而是问怎样的社会关系让人不必靠贬低他人确认自身。",
           "citations": [
             {
               "sourceId": "src-rousseau",
-              "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本段主张：核心问题：人如何在共同体中服从法律却仍保持自由？"
+              "locator": "Sections on state of nature and civil society",
+              "claim": "支持自然状态的批判性用途。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-will",
+      "heading": "普遍意志不是多数人的任意命令",
+      "paragraphs": [
+        {
+          "text": "《社会契约论》中的普遍意志指公民作为共同体成员面向公共利益的立法意志，而非每个人当下私利的简单相加。卢梭据此解释：当法律确实由平等公民共同形成并指向共同自由时，服从法律可以不是服从陌生主人。这个条件极严，也因此产生如何识别公共利益的难题。",
+          "citations": [
+            {
+              "sourceId": "src-rousseau-social-contract-cole",
+              "locator": "Book I–II",
+              "claim": "支持契约、主权、普遍意志和共同自由。"
             }
           ]
         },
         {
-          "text": "核心主张：政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。",
+          "text": "因此，普遍意志需要平等、公民参与与可理解的共同事务作条件。若少数人垄断财富和表达，所谓共同决定很容易退化成强者意志。卢梭的方案也由此面临尖锐问题：谁来判断何为公共利益，又怎样保护不同意见不被压制。",
+          "citations": [
+            {
+              "sourceId": "src-rousseau-social-contract-cole",
+              "locator": "Book II, chapters 1–4",
+              "claim": "支持主权、平等条件与公共利益问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "heading": "教育要延缓被比较社会塑形",
+      "paragraphs": [
+        {
+          "text": "《爱弥儿》让儿童在具体事物、劳动和后果中学习，而不是过早沉入名声、竞争和抽象说教。卢梭希望教育保存独立判断，却在性别角色和家庭安排上留下明显限制；不能只把他当作自由教育的倡导者而忽略这些矛盾。",
           "citations": [
             {
               "sourceId": "src-rousseau",
-              "locator": "Sections on inequality, freedom, education and the general will",
-              "claim": "支持本段主张：核心主张：政治自由要求公民共同形成普遍意志，而社会制度也必须正视不平等如何被制造。"
+              "locator": "Sections on Emile, education and gender",
+              "claim": "支持《爱弥儿》、独立与性别争议。"
+            }
+          ]
+        },
+        {
+          "text": "《爱弥儿》的教育实验把儿童与社会隔开得很远，因而很难直接用作现实学校方案。但它留下一个持续问题：教育若只奖励比较、排名与服从，是否会使人难以形成独立判断？沃斯通克拉夫特对其性别安排的批评正从这里展开。",
+          "citations": [
+            {
+              "sourceId": "src-rousseau",
+              "locator": "Sections on Emile and reception",
+              "claim": "支持教育实验与接受史。"
             }
           ]
         }
@@ -105,13 +147,13 @@
   },
   "color": "#7ca08b",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v3",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十七位；补充不平等、普遍意志、教育及性别争议。",
   "representativeQuote": {
     "text": "The general will alone can direct the forces of the State according to the object of those forces, which is the common good.",
     "displayLanguage": "en",
@@ -128,5 +170,6 @@
     "locator": "Book II, chapter I",
     "translator": "G. D. H. Cole",
     "translationNote": "原作以法文写成；此处展示 G. D. H. Cole 的英文译文。"
-  }
+  },
+  "uncertainty": "自然状态在卢梭那里主要是批判性的思想实验，不是可直接核验的历史叙述。普遍意志也不等于现实多数决定，其民主与排除问题在政治理论中持续受到争论。"
 }

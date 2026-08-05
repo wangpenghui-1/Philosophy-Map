@@ -32,7 +32,7 @@
   ],
   "guidingQuestion": "痛苦从何而来，又如何可能止息？",
   "thesis": "苦有其成因，也可以通过训练、洞见与实践止息。",
-  "summary": "佛陀是约公元前5世纪活跃于南亚的早期佛教思想人物，主要追问“痛苦从何而来，又如何可能止息？”。其核心主张可概括为：苦有其成因，也可以通过训练、洞见与实践止息。 本站以苦、无我、解脱为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "佛陀的教导从苦的经验出发：人为何会被欲求、厌恶与无明反复牵动，又怎样能松开这种循环。四圣谛与八正道不是一条单纯的信条清单，而是把诊断、原因、可能的止息和具体训练连在一起的实践路径。",
   "workIds": [
     "nikayas"
   ],
@@ -43,7 +43,8 @@
     }
   ],
   "sourceIds": [
-    "src-buddha"
+    "src-buddha",
+    "src-encyclopedia-indian-philosophies"
   ],
   "citations": [
     {
@@ -54,36 +55,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "four-truths",
+      "heading": "先诊断苦，而不是承诺永远快乐",
       "paragraphs": [
         {
-          "text": "佛陀是约公元前5世纪活跃于南亚的早期佛教思想人物，主要追问“痛苦从何而来，又如何可能止息？”。其核心主张可概括为：苦有其成因，也可以通过训练、洞见与实践止息。 本站以苦、无我、解脱为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "佛陀以“苦”描述生命中不满足、变化、失去和执取带来的不安。四圣谛的次序很重要：先承认苦的现实，再考察它怎样与渴爱、执取和无明相连，随后才提出止息的可能与修行道路。它不是说一切感受皆苦，而是反对把短暂经验误当成可以永久占有的依靠。",
           "citations": [
             {
-              "sourceId": "src-buddha",
-              "locator": "Section 2: Core Teachings",
-              "claim": "支持本段主张：佛陀是约公元前5世纪活跃于南亚的早期佛教思想人物，主要追问“痛苦从何而来，又如何可能止息？”。其核心主张可概括为：苦有其成因，也可以通过训练、洞见与实践止息。 本站以苦、无我、…"
+              "sourceId": "src-nikayas-primary-record",
+              "locator": "Sutta Piṭaka: Four Noble Truths discourses",
+              "claim": "支持四圣谛、渴爱与苦的基本结构。"
             }
           ]
         },
         {
-          "text": "核心问题：痛苦从何而来，又如何可能止息？",
+          "text": "苦并不是要求人把所有快乐都视为错误。佛教分析的重点是：愉快感受本身会变化，若把它抓成“我必须永远拥有”，它就会转为焦虑。诊断由此把注意力从消灭感受转向观察执取怎样发生。",
           "citations": [
             {
               "sourceId": "src-buddha",
-              "locator": "Section 2: Core Teachings",
-              "claim": "支持本段主张：核心问题：痛苦从何而来，又如何可能止息？"
+              "locator": "Sections on suffering, craving and cessation",
+              "claim": "支持苦、感受与执取的区分。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no-self",
+      "heading": "无我不是说“我不存在”",
+      "paragraphs": [
+        {
+          "text": "无我分析并非简单宣称没有人或没有责任，而是检视身体、感受、表象、意志活动和意识时，找不到一个永恒、不变、完全由自己主宰的核心。把任何一项当成固定自我，便容易把变化体验为威胁。无我因此服务于减轻执取，而不是抹去人与人的差异和关怀。",
+          "citations": [
+            {
+              "sourceId": "src-buddha",
+              "locator": "Sections on the aggregates, no-self and dependent arising",
+              "claim": "支持五蕴、无我与缘起的解释。"
             }
           ]
         },
         {
-          "text": "核心主张：苦有其成因，也可以通过训练、洞见与实践止息。",
+          "text": "缘起进一步说明，经验不是由一个固定自我单独制造，也不是毫无条件地随机出现。行为、习惯、身体、环境与注意方式彼此作用；正因为条件能够改变，修行和关怀才不是徒劳。这使无我同时具有实践与伦理含义。",
           "citations": [
             {
               "sourceId": "src-buddha",
-              "locator": "Section 2: Core Teachings",
-              "claim": "支持本段主张：核心主张：苦有其成因，也可以通过训练、洞见与实践止息。"
+              "locator": "Sections on dependent arising and ethics",
+              "claim": "支持缘起、条件性与修行可能。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path",
+      "heading": "解脱需要伦理、专注与洞见共同训练",
+      "paragraphs": [
+        {
+          "text": "八正道把见解、言行、生计、努力、念与定放在同一路径上：只改变观念却不改变行动与习惯，苦的条件仍会被重建；只追求宁静也不足以处理贪嗔痴。不同佛教传统对术语和修行次第发展出多种解释，入门时不宜把后世体系直接当作最早层材料。",
+          "citations": [
+            {
+              "sourceId": "src-nikayas-primary-record",
+              "locator": "Sutta Piṭaka: Noble Eightfold Path discourses",
+              "claim": "支持八正道及其伦理、禅修与洞见的结合。"
+            }
+          ]
+        },
+        {
+          "text": "戒、定、慧的结合也防止把解脱理解为逃离他人。避免伤害、培育注意、学习看见变化，都会改变人与他人的相处方式。不同传统对这些训练的重点各异，但都提醒我们：洞见不是只在头脑中完成的结论。",
+          "citations": [
+            {
+              "sourceId": "src-buddha",
+              "locator": "Sections on ethics, meditation and liberation",
+              "claim": "支持伦理、禅修与洞见的结合。"
             }
           ]
         }
@@ -101,14 +144,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
-  "uncertainty": "现代研究对其确切生卒年代仍有不同估计。",
+  "uncertainty": "“佛陀”早期教导主要经口传和不同部派文本保存；材料的年代、层次与相互关系仍有研究争议。无我不等于虚无主义，四圣谛也不等于把一切人生经验概括为悲观主义。",
   "color": "#c18b5f",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v3",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十五位；补充四圣谛、无我、八正道与早期材料边界。"
 }

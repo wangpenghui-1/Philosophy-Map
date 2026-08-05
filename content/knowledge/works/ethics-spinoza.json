@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1677",
-  "languages": [],
-  "summary": "《伦理学》是斯宾诺莎的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "la"
+  ],
+  "summary": "斯宾诺莎以定义、公理和命题的几何式结构论证神或自然、心身关系、知识与情感，并把自由重新解释为理解必然性、形成充分观念和增加行动能力。",
   "conceptIds": [
     "concept-实体",
     "concept-必然",
@@ -23,20 +25,21 @@
     "tradition-近代理性主义"
   ],
   "sourceIds": [
-    "src-spinoza"
+    "src-spinoza",
+    "src-spinoza-ethics-elwes"
   ],
   "citations": [
     {
       "sourceId": "src-spinoza",
-      "locator": "Sections on substance, affects, freedom and politics",
-      "claim": "支持《伦理学》的摘要主张：《伦理学》是斯宾诺莎的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2.1–2.5 on Ethics",
+      "claim": "支持实体、心身、知识、情感和自由的作品结构概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充几何式结构与情感自由论。"
 }

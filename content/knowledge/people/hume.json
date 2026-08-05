@@ -1,40 +1,218 @@
 {
-  "id": "hume", "slug": "hume", "entityType": "person",
-  "names": {"display": "休谟", "english": "David Hume", "original": "David Hume", "aliases": []},
-  "chronology": {"label": "1711–1776", "startYear": 1711, "endYear": 1776, "certainty": "established"},
-  "primaryRegion": "欧洲", "secondaryRegions": [],
-  "traditionIds": ["tradition-苏格兰启蒙运动"],
-  "conceptIds": ["concept-习惯", "concept-因果", "concept-情感"],
-  "questionIds": ["knowledge", "self", "good-life"],
+  "id": "hume",
+  "slug": "hume",
+  "entityType": "person",
+  "names": {
+    "display": "休谟",
+    "english": "David Hume",
+    "original": "David Hume",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1711–1776",
+    "startYear": 1711,
+    "endYear": 1776,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-苏格兰启蒙运动"
+  ],
+  "conceptIds": [
+    "concept-习惯",
+    "concept-因果",
+    "concept-情感"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "good-life"
+  ],
   "guidingQuestion": "我们凭什么相信经验会继续有效，又凭什么把一连串感受称作同一个“我”？",
   "thesis": "经验让我们期待因果秩序，却不能以理性证明未来必定像过去；人的信念、行动和道德判断因而始终嵌在习惯、情感与有限的证据之中。",
   "summary": "休谟把哲学从抽象实体的追问拉回经验中的心灵活动：观念怎样出现，因果预期怎样形成，自我与道德判断又依靠什么。它的怀疑不是要人放弃日常生活，而是要求我们把确定性的口气降到证据真正允许的程度。",
-  "workIds": ["treatise-human-nature", "enquiry-understanding"],
-  "placeLinks": [{"placeId": "edinburgh", "role": "activity"}],
-  "sourceIds": ["src-hume", "src-hume-treatise-1739", "src-hume-enquiry-1748"],
+  "workIds": [
+    "treatise-human-nature",
+    "enquiry-understanding"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "edinburgh",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-hume",
+    "src-hume-treatise-1739",
+    "src-hume-enquiry-1748"
+  ],
   "citations": [
-    {"sourceId": "src-hume", "locator": "Sections 2.1–2.3, 3–4 and 6", "claim": "支持休谟的心灵理论、因果与归纳、自我、情感、道德和怀疑论的总体概述。"},
-    {"sourceId": "src-hume-treatise-1739", "locator": "Book I, Parts I, III–IV; Book II, Part III; Book III, Part I", "claim": "支持印象与观念、因果、自我、理性与激情及道德情感的原典定位。"},
-    {"sourceId": "src-hume-enquiry-1748", "locator": "Sections II, IV–V and XII", "claim": "支持观念来源、归纳推论、习惯和缓和怀疑论的原典定位。"}
+    {
+      "sourceId": "src-hume",
+      "locator": "Sections 2.1–2.3, 3–4 and 6",
+      "claim": "支持休谟的心灵理论、因果与归纳、自我、情感、道德和怀疑论的总体概述。"
+    },
+    {
+      "sourceId": "src-hume-treatise-1739",
+      "locator": "Book I, Parts I, III–IV; Book II, Part III; Book III, Part I",
+      "claim": "支持印象与观念、因果、自我、理性与激情及道德情感的原典定位。"
+    },
+    {
+      "sourceId": "src-hume-enquiry-1748",
+      "locator": "Sections II, IV–V and XII",
+      "claim": "支持观念来源、归纳推论、习惯和缓和怀疑论的原典定位。"
+    }
   ],
   "sections": [
-    {"id": "impressions-ideas", "heading": "从印象出发，先问观念有没有经验来处", "paragraphs": [
-      {"text": "休谟把心灵中的内容统称为“知觉”，再区分为印象和观念。印象是当下感到的疼痛、颜色、欲望或愤怒，来得更强烈；观念则是记忆、想象和思考中较为微弱的内容。这个区分不是心理学的词汇游戏。他借它追问：当哲学使用“实体”“必然性”或“自我”时，我们能否指出相应的经验材料？若不能，就要警惕这些词是否只是语言把握住了一个其实没有被经验到的对象。", "citations": [{"sourceId": "src-hume-treatise-1739", "locator": "Book I, Part I, §§1–2", "claim": "支持知觉、印象与观念的区分，以及简单观念通常复制简单印象的论证。"}, {"sourceId": "src-hume", "locator": "Section 2.1: philosophy of mind", "claim": "支持把印象—观念区分理解为休谟经验主义方法的说明。"}]},
-      {"text": "他说简单观念通常是简单印象的“副本”，并不等于人不能想象新事物。人可以把已有材料重新组合，想象金山或飞马；但组合所用的颜色、形状和感受仍来自经验。休谟也自己提出“缺失的蓝色阴影”这一棘手例外：一个人或许能在一串渐变色中补出从未见过的那一格。它提醒我们，副本原则是解释心灵材料的强有力规则，不是一条毫无例外、无需再讨论的口号。", "citations": [{"sourceId": "src-hume-enquiry-1748", "locator": "Section II, §§5–8", "claim": "支持简单观念复制简单印象及“缺失的蓝色阴影”例外。"}, {"sourceId": "src-hume", "locator": "Section 2.1: the Copy Principle", "claim": "支持副本原则的两层含义及其例外所引起的解释问题。"}]}
-    ]},
-    {"id": "causation-custom", "heading": "因果预期靠习惯形成，不能由理性预先担保", "paragraphs": [
-      {"text": "看到火后感到热、反复按下开关后电灯亮起，我们会自然说前者“导致”后者。休谟承认这种经验极其稳定，却指出我们实际观察到的是事件一再相继出现，即“恒常联结”；所谓必然联系本身并没有作为一个可感知的东西出现。因果观念因此不来自看见某种隐藏的力量，而来自心灵在反复经验后由一个对象自然转向另一个对象的倾向。它解释了为什么因果信念如此牢靠，也改变了我们对其根据的描述。", "citations": [{"sourceId": "src-hume-treatise-1739", "locator": "Book I, Part III, §§2, 6 and 14", "claim": "支持因果观念、恒常联结与必然联系的分析。"}, {"sourceId": "src-hume", "locator": "Sections 2.2–2.3: causation and epistemology", "claim": "支持从恒常联结到因果信念的解释。"}]},
-      {"text": "这使归纳问题变得尖锐：过去太阳每天升起，并不能用演绎逻辑证明明天一定如此；若用过去经验来证明未来会像过去，又已经预设了正要证明的原则。休谟的答案不是让人停止预测，而是说明预测的心理根源是习惯或惯例，而非一项纯理性证明。科学和日常行动仍可比较证据、修正判断、形成更可靠的期待；只是“可靠”不应被偷换成关于自然必然性的绝对保证。", "citations": [{"sourceId": "src-hume-enquiry-1748", "locator": "Sections IV–V, especially Part I", "claim": "支持经验推论无法由理性奠基，以及习惯形成期待的论证。"}, {"sourceId": "src-hume", "locator": "Section 2.3: epistemology", "claim": "支持归纳论证的不同解释及其不应被简化为反科学立场的说明。"}]}
-    ]},
-    {"id": "self-passions-scepticism", "heading": "自我、行动与怀疑：哲学需要知道何时收手", "paragraphs": [
-      {"text": "当休谟向内寻找一个始终不变的自我时，发现的只是不断更替的知觉：疼痛、记忆、期待、情绪和感觉。他因此把人格理解为由联想串联起来的一束或一连串知觉，而不是经验中直接给出的恒常实体。这一主张并非说人没有生活史或责任关系，而是拒绝把这些关系立刻解释成一个可被内省抓住的简单灵魂。休谟在《人性论》附录里也承认自己的表述留下困难，后来的研究对这一“束理论”如何自洽仍无定论。", "citations": [{"sourceId": "src-hume-treatise-1739", "locator": "Book I, Part IV, §6; Appendix", "claim": "支持自我作为知觉束、人格同一性问题及附录中的自我保留。"}, {"sourceId": "src-hume", "locator": "Section 2.1: personal identity", "claim": "支持束理论和附录难题仍有争议的说明。"}]},
-      {"text": "在行动与道德上，休谟同样反对把理性写成唯一发动机。理性可以告诉我们事实、计算手段，却不能仅凭自身产生欲求；激情、同情和对有益或可亲近品质的感受，参与了人的选择与赞许。与此同时，他的“缓和怀疑论”也拒绝把怀疑推到无法生活的地步：我们无法彻底摆脱自然形成的信念，却能降低武断的确信，避开超出经验和论证能力的玄想。康德正是从因果必然性受到的挑战出发，试图说明经验知识何以可能。", "citations": [{"sourceId": "src-hume-treatise-1739", "locator": "Book II, Part III, §3; Book III, Part I, §§1–2", "claim": "支持理性与激情、道德赞许和情感的关系。"}, {"sourceId": "src-hume-enquiry-1748", "locator": "Section XII", "claim": "支持对极端怀疑论的批评及缓和或学院派怀疑论。"}, {"sourceId": "src-hume", "locator": "Sections 3–4 and 6", "claim": "支持休谟的情感理论、伦理学与怀疑论的整体定位。"}]}
-    ]}
+    {
+      "id": "impressions-ideas",
+      "heading": "从印象出发，先问观念有没有经验来处",
+      "paragraphs": [
+        {
+          "text": "休谟把心灵中的内容统称为“知觉”，再区分为印象和观念。印象是当下感到的疼痛、颜色、欲望或愤怒，来得更强烈；观念则是记忆、想象和思考中较为微弱的内容。这个区分不是心理学的词汇游戏。他借它追问：当哲学使用“实体”“必然性”或“自我”时，我们能否指出相应的经验材料？若不能，就要警惕这些词是否只是语言把握住了一个其实没有被经验到的对象。",
+          "citations": [
+            {
+              "sourceId": "src-hume-treatise-1739",
+              "locator": "Book I, Part I, §§1–2",
+              "claim": "支持知觉、印象与观念的区分，以及简单观念通常复制简单印象的论证。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Section 2.1: philosophy of mind",
+              "claim": "支持把印象—观念区分理解为休谟经验主义方法的说明。"
+            }
+          ]
+        },
+        {
+          "text": "他说简单观念通常是简单印象的“副本”，并不等于人不能想象新事物。人可以把已有材料重新组合，想象金山或飞马；但组合所用的颜色、形状和感受仍来自经验。休谟也自己提出“缺失的蓝色阴影”这一棘手例外：一个人或许能在一串渐变色中补出从未见过的那一格。它提醒我们，副本原则是解释心灵材料的强有力规则，不是一条毫无例外、无需再讨论的口号。",
+          "citations": [
+            {
+              "sourceId": "src-hume-enquiry-1748",
+              "locator": "Section II, §§5–8",
+              "claim": "支持简单观念复制简单印象及“缺失的蓝色阴影”例外。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Section 2.1: the Copy Principle",
+              "claim": "支持副本原则的两层含义及其例外所引起的解释问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causation-custom",
+      "heading": "因果预期靠习惯形成，不能由理性预先担保",
+      "paragraphs": [
+        {
+          "text": "看到火后感到热、反复按下开关后电灯亮起，我们会自然说前者“导致”后者。休谟承认这种经验极其稳定，却指出我们实际观察到的是事件一再相继出现，即“恒常联结”；所谓必然联系本身并没有作为一个可感知的东西出现。因果观念因此不来自看见某种隐藏的力量，而来自心灵在反复经验后由一个对象自然转向另一个对象的倾向。它解释了为什么因果信念如此牢靠，也改变了我们对其根据的描述。",
+          "citations": [
+            {
+              "sourceId": "src-hume-treatise-1739",
+              "locator": "Book I, Part III, §§2, 6 and 14",
+              "claim": "支持因果观念、恒常联结与必然联系的分析。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections 2.2–2.3: causation and epistemology",
+              "claim": "支持从恒常联结到因果信念的解释。"
+            }
+          ]
+        },
+        {
+          "text": "这使归纳问题变得尖锐：过去太阳每天升起，并不能用演绎逻辑证明明天一定如此；若用过去经验来证明未来会像过去，又已经预设了正要证明的原则。休谟的答案不是让人停止预测，而是说明预测的心理根源是习惯或惯例，而非一项纯理性证明。科学和日常行动仍可比较证据、修正判断、形成更可靠的期待；只是“可靠”不应被偷换成关于自然必然性的绝对保证。",
+          "citations": [
+            {
+              "sourceId": "src-hume-enquiry-1748",
+              "locator": "Sections IV–V, especially Part I",
+              "claim": "支持经验推论无法由理性奠基，以及习惯形成期待的论证。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Section 2.3: epistemology",
+              "claim": "支持归纳论证的不同解释及其不应被简化为反科学立场的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self-passions-scepticism",
+      "heading": "自我、行动与怀疑：哲学需要知道何时收手",
+      "paragraphs": [
+        {
+          "text": "当休谟向内寻找一个始终不变的自我时，发现的只是不断更替的知觉：疼痛、记忆、期待、情绪和感觉。他因此把人格理解为由联想串联起来的一束或一连串知觉，而不是经验中直接给出的恒常实体。这一主张并非说人没有生活史或责任关系，而是拒绝把这些关系立刻解释成一个可被内省抓住的简单灵魂。休谟在《人性论》附录里也承认自己的表述留下困难，后来的研究对这一“束理论”如何自洽仍无定论。",
+          "citations": [
+            {
+              "sourceId": "src-hume-treatise-1739",
+              "locator": "Book I, Part IV, §6; Appendix",
+              "claim": "支持自我作为知觉束、人格同一性问题及附录中的自我保留。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Section 2.1: personal identity",
+              "claim": "支持束理论和附录难题仍有争议的说明。"
+            }
+          ]
+        },
+        {
+          "text": "在行动与道德上，休谟同样反对把理性写成唯一发动机。理性可以告诉我们事实、计算手段，却不能仅凭自身产生欲求；激情、同情和对有益或可亲近品质的感受，参与了人的选择与赞许。与此同时，他的“缓和怀疑论”也拒绝把怀疑推到无法生活的地步：我们无法彻底摆脱自然形成的信念，却能降低武断的确信，避开超出经验和论证能力的玄想。康德正是从因果必然性受到的挑战出发，试图说明经验知识何以可能。",
+          "citations": [
+            {
+              "sourceId": "src-hume-treatise-1739",
+              "locator": "Book II, Part III, §3; Book III, Part I, §§1–2",
+              "claim": "支持理性与激情、道德赞许和情感的关系。"
+            },
+            {
+              "sourceId": "src-hume-enquiry-1748",
+              "locator": "Section XII",
+              "claim": "支持对极端怀疑论的批评及缓和或学院派怀疑论。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections 3–4 and 6",
+              "claim": "支持休谟的情感理论、伦理学与怀疑论的整体定位。"
+            }
+          ]
+        }
+      ]
+    }
   ],
-  "media": {"fullSrc": "/media/thinkers/full/hume.webp", "thumbSrc": "/media/thinkers/thumb/hume.webp", "alt": "休谟的艺术化人物形象", "objectPosition": "50% 18%", "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。", "presentationType": "stylized", "authenticity": "interpretive", "rightsStatus": "project-commissioned", "credit": "思想星图艺术化人物形象"},
+  "media": {
+    "fullSrc": "/media/thinkers/full/hume.webp",
+    "thumbSrc": "/media/thinkers/thumb/hume.webp",
+    "alt": "休谟的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "艺术化人物形象，参考历史肖像进行风格化处理。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
   "uncertainty": "《人性论》与后来的《人类理解研究》在观点上究竟只是重写，还是有实质变化，学界仍有争论；“因果怀疑”究竟否定所有理性正当化，还是主要说明心灵如何形成期待，也有不同读法。条目把休谟明确提出的论证与这些后来的解释争点分开。",
-  "color": "#bc9162", "mapVisible": true, "contentTier": "standard", "editorialStatus": "published", "version": 2,
-  "editedBy": "思想星图编辑组", "reviewedBy": "source-structure-review/journey-batch-v1", "lastReviewedAt": "2026-08-05",
+  "color": "#bc9162",
+  "mapVisible": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
   "notes": "思想旅程人物逐人重写第五位；补充经验材料、因果与归纳、自我、情感、道德和缓和怀疑论，并区分原典主张与解释争议。",
-  "representativeQuote": {"text": "All inferences from experience, therefore, are effects of custom, not of reasoning.", "displayLanguage": "en", "textStatus": "original", "originalLanguage": "en", "chineseTranslation": "因此，一切从经验作出的推论都是习惯的结果，而不是推理的结果。", "annotation": "休谟把因果预期追溯到反复经验形成的习惯，否认理性能独立证明未来必然重复过去。", "workId": "enquiry-understanding", "sourceTitle": "An Enquiry Concerning Human Understanding", "sourceType": "primary-text", "verificationStatus": "source-attributed", "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。", "sourceId": "src-hume-enquiry-1748", "locator": "Section V, Part I"}
+  "representativeQuote": {
+    "text": "All inferences from experience, therefore, are effects of custom, not of reasoning.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "因此，一切从经验作出的推论都是习惯的结果，而不是推理的结果。",
+    "annotation": "休谟把因果预期追溯到反复经验形成的习惯，否认理性能独立证明未来必然重复过去。",
+    "workId": "enquiry-understanding",
+    "sourceTitle": "An Enquiry Concerning Human Understanding",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
+    "sourceId": "src-hume-enquiry-1748",
+    "locator": "Section V, Part I"
+  }
 }

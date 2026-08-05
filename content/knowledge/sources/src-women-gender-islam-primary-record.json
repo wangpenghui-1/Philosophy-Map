@@ -1,0 +1,19 @@
+{
+  "id": "src-women-gender-islam-primary-record",
+  "entityType": "source",
+  "title": "Women and Gender in Islam",
+  "authors": [
+    "Leila Ahmed"
+  ],
+  "sourceType": "primary-text",
+  "publication": "原典／文本传统记录",
+  "defaultLocator": "《伊斯兰中的女性与性别》全书；具体版本、篇章与译文需结合人物页中的逐条引文定位",
+  "language": "en",
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；只有题名级原典入口，缺少版本与精确定位，已隔离且不进入公开知识库。"
+}

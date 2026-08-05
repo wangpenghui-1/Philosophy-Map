@@ -1,28 +1,216 @@
 {
-  "id":"thomas-kuhn","slug":"thomas-kuhn","entityType":"person",
-  "names":{"display":"库恩","english":"Thomas Kuhn","original":"Thomas Samuel Kuhn","aliases":[]},
-  "chronology":{"label":"1922–1996","startYear":1922,"endYear":1996,"certainty":"established"},
-  "primaryRegion":"美洲与加勒比","secondaryRegions":[],"traditionIds":["tradition-科学哲学"],
-  "conceptIds":["concept-范式转换","concept-常规科学","concept-不可通约性"],"questionIds":["knowledge"],
-  "guidingQuestion":"科学进步是不断累积事实，还是也会改变问题、标准和可见的世界？",
-  "thesis":"科学共同体通常在共享的范式中解题；当异常使这种共同承诺失去效力，竞争性框架会重组问题、证据和评价标准。革命不是任意更换观点，却也不能化约为一条中立规则的机械结论。",
-  "summary":"库恩以科学史检验科学哲学的自我形象。他强调训练、共同范例和未解难题怎样组织日常研究，也说明危机和革命为何会改变研究者能够提出什么问题、认可什么答案，并要求科学哲学把共同体实践与证据标准一并纳入解释。",
-  "workIds":["structure-scientific-revolutions","copernican-revolution"],"placeLinks":[{"placeId":"princeton","role":"activity-or-reception"}],
-  "sourceIds":["src-kuhn","src-kuhn-structure-1962","src-kuhn-copernican-1957"],
-  "citations":[{"sourceId":"src-kuhn","locator":"Sections 1–4 and 7","claim":"支持库恩生平、常规科学、范式、不可通约性及其争议的整体说明。"},{"sourceId":"src-kuhn-structure-1962","locator":"Chapters II–XII; Postscript 1969","claim":"支持范式、常规科学、异常、危机、革命和不可通约性的原典定位。"},{"sourceId":"src-kuhn-copernican-1957","locator":"Preface and Chapters 1–8","claim":"支持库恩早期以天文学史研究科学变迁的代表文本。"}],
-  "sections":[
-    {"id":"history-and-normal-science","heading":"科学史不是装饰材料，它会改变我们对科学的看法","paragraphs":[
-      {"text":"库恩原本受物理学训练，后来在阅读亚里士多德的科学文本时意识到：用现代科学的概念去衡量过去，很容易把它直接判成荒谬。这个经验使他转向科学史，并把历史案例当成哲学论证的材料。科学并非只是一组脱离时间的正确命题；它也是研究共同体在特定训练、仪器、范例和问题中工作的过程。", "citations":[{"sourceId":"src-kuhn","locator":"Section 1: life and career","claim":"支持库恩从物理学转向科学史，以及重读亚里士多德带来的方法论转折。"},{"sourceId":"src-kuhn-copernican-1957","locator":"Preface","claim":"支持以天文学史考察哥白尼革命的早期研究取向。"}]},
-      {"text":"库恩所说的“常规科学”不是平庸或盲从。科学家在共享的理论、仪器、价值和成功范例之内处理“谜题”：问题通常被认为可解，成果则被共同体已有的典范衡量。这种相对保守的承诺让研究能够积累精密的解答。范式因而不只是流行观点，更包括怎样提出问题、使用哪些工具、什么算作好解答的实践性学习。", "citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters II–IV","claim":"支持从前范式状态、常规科学到谜题解决的论述。"},{"sourceId":"src-kuhn","locator":"Sections 2–3: development of science and paradigm","claim":"支持范式包含共同承诺和范例，而不只是抽象理论的解释。"}]}]},
-    {"id":"crisis-revolution","heading":"异常会积累，但革命不是一次自动触发的按钮","paragraphs":[
-      {"text":"常规研究并不会消灭所有反常结果。研究者往往先调整测量、补充辅助假设或把困难留给后续工作；这不是不理性，而是因为单个异常不足以立即推翻一整套富有成效的研究传统。只有当关键异常持续妨碍解题、削弱共同体的信心，同时又出现能处理重要难题的替代框架时，危机才可能发展为科学革命。", "citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters VI–VIII","claim":"支持异常、危机和对竞争框架的回应。"},{"sourceId":"src-kuhn","locator":"Section 2: crisis and revolution","claim":"支持异常并非单独自动否证范式、危机涉及共同体信心的说明。"}]},
-      {"text":"因此，库恩并没有把科学变化写成简单的“旧理论错了、新理论对了”。新范式必须在解决棘手谜题上显示更强能力，也通常保留旧框架的大部分定量解题能力；但有些旧问题、解释或标准也可能丢失，这被称作“库恩损失”。他承认科学会进步，却谨慎拒绝把这种进步直接等同于一步步逼近一个预先给定的最终真理。", "citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters IX–XII","claim":"支持革命、范式选择、进步与库恩损失的讨论。"},{"sourceId":"src-kuhn","locator":"Section 2: progress and Kuhn-loss","claim":"支持进步以解题能力衡量、并非简单累积或真理接近论的说明。"}]}]},
-    {"id":"incommensurability-and-limits","heading":"“不可通约”不是说任何理论都一样好","paragraphs":[
-      {"text":"库恩的“不可通约性”最容易被误解成“没有任何比较，因此全凭喜好”。他的要点更窄：不同范式中的关键术语、问题和评价标准可能一起改变，因此不存在一把完全中立、无需解释的共同尺子。研究者仍能讨论证据、预测、简洁性和解题能力，但这些判断会嵌在不同的概念和研究实践里，不能假装只要套一条算法便能强迫所有人接受同一结论。", "citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters X–XII; Postscript 1969","claim":"支持竞争范式、世界变化与不可通约性的原典论述。"},{"sourceId":"src-kuhn","locator":"Section 4: incommensurability and world-change","claim":"支持不可通约性涉及比较条件的困难，而非相对主义口号的说明。"}]},
-      {"text":"这也解释了库恩为何引发争论。批评者担心他削弱科学理性，或把科学结论交给社会力量；库恩则反对把革命结果说成总由政治或任意偏好决定。他要求哲学同时看到证据、共同体训练和历史语境。后来他修订了“范式”和不可通约性的表述，说明《科学革命的结构》并非可以用一句“范式转换”替代的万能公式。", "citations":[{"sourceId":"src-kuhn","locator":"Sections 1, 4 and 7","claim":"支持对相对主义批评、库恩的回应及概念后续修订的说明。"},{"sourceId":"src-kuhn-structure-1962","locator":"Postscript 1969","claim":"支持库恩对“范式”用法和共同体概念的澄清。"}]}]}
+  "id": "thomas-kuhn",
+  "slug": "thomas-kuhn",
+  "entityType": "person",
+  "names": {
+    "display": "库恩",
+    "english": "Thomas Kuhn",
+    "original": "Thomas Samuel Kuhn",
+    "aliases": []
+  },
+  "chronology": {
+    "label": "1922–1996",
+    "startYear": 1922,
+    "endYear": 1996,
+    "certainty": "established"
+  },
+  "primaryRegion": "美洲与加勒比",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-科学哲学"
   ],
-  "media":{"fullSrc":"/media/thinkers/full/thomas-kuhn.webp","thumbSrc":"/media/thinkers/thumb/thomas-kuhn.webp","alt":"库恩的历史照片","objectPosition":"50% 50%","depictionNote":"经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。","presentationType":"photographic","authenticity":"documented","rightsStatus":"Public domain","credit":"Bob Bielk · Wikimedia Commons","sourceUrl":"https://commons.wikimedia.org/wiki/File:Thomas_Kuhn_(1977)_(cropped).jpg","sourceFile":"File:Thomas Kuhn (1977) (cropped).jpg","license":"Public domain","creator":"Bob Bielk","retrievedAt":"2026-07-19"},
-  "uncertainty":"“范式”在库恩不同文本中有多种用法，1969 年后他更强调作为解题典范的 exemplar；不可通约性也从早期的比较困难发展出更细的语义说明。条目不把这些争论压缩成“科学全然相对”的结论。",
-  "color":"#d87f9d","mapVisible":true,"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"思想旅程人物逐人重写第六位；补充科学史路径、常规科学、危机与革命、不可通约性和主要解释边界。",
-  "representativeQuote":{"text":"Scientific revolutions are inaugurated by a growing sense... that an existing paradigm has ceased to function adequately in the exploration of an aspect of nature to which that paradigm itself had previously led the way.","displayLanguage":"en","textStatus":"original","originalLanguage":"en","chineseTranslation":"科学革命始于一种日益增强的感觉……现有范式在探索自然的某个方面时已经无法充分运作，而恰恰是这个范式先前把研究引向了那里。","annotation":"库恩把革命的起点放在范式内部积累的失效感：旧框架曾开辟问题，却逐渐无法处理自己带来的难题。","workId":"structure-scientific-revolutions","sourceTitle":"The Structure of Scientific Revolutions","sourceType":"primary-text","verificationStatus":"source-attributed","attributionNote":"已按 2012 年版第 91 页定位，仍待与所用版本逐字复核。","sourceId":"src-kuhn-structure-1962","locator":"p. 91 (2012 edition)"}
+  "conceptIds": [
+    "concept-范式转换",
+    "concept-常规科学",
+    "concept-不可通约性"
+  ],
+  "questionIds": [
+    "knowledge"
+  ],
+  "guidingQuestion": "科学进步是不断累积事实，还是也会改变问题、标准和可见的世界？",
+  "thesis": "科学共同体通常在共享的范式中解题；当异常使这种共同承诺失去效力，竞争性框架会重组问题、证据和评价标准。革命不是任意更换观点，却也不能化约为一条中立规则的机械结论。",
+  "summary": "库恩以科学史检验科学哲学的自我形象。他强调训练、共同范例和未解难题怎样组织日常研究，也说明危机和革命为何会改变研究者能够提出什么问题、认可什么答案，并要求科学哲学把共同体实践与证据标准一并纳入解释。",
+  "workIds": [
+    "structure-scientific-revolutions",
+    "copernican-revolution"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "princeton",
+      "role": "activity-or-reception"
+    }
+  ],
+  "sourceIds": [
+    "src-kuhn",
+    "src-kuhn-structure-1962",
+    "src-kuhn-copernican-1957"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kuhn",
+      "locator": "Sections 1–4 and 7",
+      "claim": "支持库恩生平、常规科学、范式、不可通约性及其争议的整体说明。"
+    },
+    {
+      "sourceId": "src-kuhn-structure-1962",
+      "locator": "Chapters II–XII; Postscript 1969",
+      "claim": "支持范式、常规科学、异常、危机、革命和不可通约性的原典定位。"
+    },
+    {
+      "sourceId": "src-kuhn-copernican-1957",
+      "locator": "Preface and Chapters 1–8",
+      "claim": "支持库恩早期以天文学史研究科学变迁的代表文本。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "history-and-normal-science",
+      "heading": "科学史不是装饰材料，它会改变我们对科学的看法",
+      "paragraphs": [
+        {
+          "text": "库恩原本受物理学训练，后来在阅读亚里士多德的科学文本时意识到：用现代科学的概念去衡量过去，很容易把它直接判成荒谬。这个经验使他转向科学史，并把历史案例当成哲学论证的材料。科学并非只是一组脱离时间的正确命题；它也是研究共同体在特定训练、仪器、范例和问题中工作的过程。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Section 1: life and career",
+              "claim": "支持库恩从物理学转向科学史，以及重读亚里士多德带来的方法论转折。"
+            },
+            {
+              "sourceId": "src-kuhn-copernican-1957",
+              "locator": "Preface",
+              "claim": "支持以天文学史考察哥白尼革命的早期研究取向。"
+            }
+          ]
+        },
+        {
+          "text": "库恩所说的“常规科学”不是平庸或盲从。科学家在共享的理论、仪器、价值和成功范例之内处理“谜题”：问题通常被认为可解，成果则被共同体已有的典范衡量。这种相对保守的承诺让研究能够积累精密的解答。范式因而不只是流行观点，更包括怎样提出问题、使用哪些工具、什么算作好解答的实践性学习。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn-structure-1962",
+              "locator": "Chapters II–IV",
+              "claim": "支持从前范式状态、常规科学到谜题解决的论述。"
+            },
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Sections 2–3: development of science and paradigm",
+              "claim": "支持范式包含共同承诺和范例，而不只是抽象理论的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crisis-revolution",
+      "heading": "异常会积累，但革命不是一次自动触发的按钮",
+      "paragraphs": [
+        {
+          "text": "常规研究并不会消灭所有反常结果。研究者往往先调整测量、补充辅助假设或把困难留给后续工作；这不是不理性，而是因为单个异常不足以立即推翻一整套富有成效的研究传统。只有当关键异常持续妨碍解题、削弱共同体的信心，同时又出现能处理重要难题的替代框架时，危机才可能发展为科学革命。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn-structure-1962",
+              "locator": "Chapters VI–VIII",
+              "claim": "支持异常、危机和对竞争框架的回应。"
+            },
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Section 2: crisis and revolution",
+              "claim": "支持异常并非单独自动否证范式、危机涉及共同体信心的说明。"
+            }
+          ]
+        },
+        {
+          "text": "因此，库恩并没有把科学变化写成简单的“旧理论错了、新理论对了”。新范式必须在解决棘手谜题上显示更强能力，也通常保留旧框架的大部分定量解题能力；但有些旧问题、解释或标准也可能丢失，这被称作“库恩损失”。他承认科学会进步，却谨慎拒绝把这种进步直接等同于一步步逼近一个预先给定的最终真理。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn-structure-1962",
+              "locator": "Chapters IX–XII",
+              "claim": "支持革命、范式选择、进步与库恩损失的讨论。"
+            },
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Section 2: progress and Kuhn-loss",
+              "claim": "支持进步以解题能力衡量、并非简单累积或真理接近论的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incommensurability-and-limits",
+      "heading": "“不可通约”不是说任何理论都一样好",
+      "paragraphs": [
+        {
+          "text": "库恩的“不可通约性”最容易被误解成“没有任何比较，因此全凭喜好”。他的要点更窄：不同范式中的关键术语、问题和评价标准可能一起改变，因此不存在一把完全中立、无需解释的共同尺子。研究者仍能讨论证据、预测、简洁性和解题能力，但这些判断会嵌在不同的概念和研究实践里，不能假装只要套一条算法便能强迫所有人接受同一结论。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn-structure-1962",
+              "locator": "Chapters X–XII; Postscript 1969",
+              "claim": "支持竞争范式、世界变化与不可通约性的原典论述。"
+            },
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Section 4: incommensurability and world-change",
+              "claim": "支持不可通约性涉及比较条件的困难，而非相对主义口号的说明。"
+            }
+          ]
+        },
+        {
+          "text": "这也解释了库恩为何引发争论。批评者担心他削弱科学理性，或把科学结论交给社会力量；库恩则反对把革命结果说成总由政治或任意偏好决定。他要求哲学同时看到证据、共同体训练和历史语境。后来他修订了“范式”和不可通约性的表述，说明《科学革命的结构》并非可以用一句“范式转换”替代的万能公式。",
+          "citations": [
+            {
+              "sourceId": "src-kuhn",
+              "locator": "Sections 1, 4 and 7",
+              "claim": "支持对相对主义批评、库恩的回应及概念后续修订的说明。"
+            },
+            {
+              "sourceId": "src-kuhn-structure-1962",
+              "locator": "Postscript 1969",
+              "claim": "支持库恩对“范式”用法和共同体概念的澄清。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/thomas-kuhn.webp",
+    "thumbSrc": "/media/thinkers/thumb/thomas-kuhn.webp",
+    "alt": "库恩的历史照片",
+    "objectPosition": "50% 50%",
+    "depictionNote": "经开放许可来源核验的人物照片；本站仅作构图裁切、尺寸调整与 WebP 压缩。",
+    "presentationType": "photographic",
+    "authenticity": "documented",
+    "rightsStatus": "Public domain",
+    "credit": "Bob Bielk · Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Kuhn_(1977)_(cropped).jpg",
+    "sourceFile": "File:Thomas Kuhn (1977) (cropped).jpg",
+    "license": "Public domain",
+    "creator": "Bob Bielk",
+    "retrievedAt": "2026-07-19"
+  },
+  "uncertainty": "“范式”在库恩不同文本中有多种用法，1969 年后他更强调作为解题典范的 exemplar；不可通约性也从早期的比较困难发展出更细的语义说明。条目不把这些争论压缩成“科学全然相对”的结论。",
+  "color": "#d87f9d",
+  "mapVisible": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第六位；补充科学史路径、常规科学、危机与革命、不可通约性和主要解释边界。",
+  "representativeQuote": {
+    "text": "Scientific revolutions are inaugurated by a growing sense... that an existing paradigm has ceased to function adequately in the exploration of an aspect of nature to which that paradigm itself had previously led the way.",
+    "displayLanguage": "en",
+    "textStatus": "original",
+    "originalLanguage": "en",
+    "chineseTranslation": "科学革命始于一种日益增强的感觉……现有范式在探索自然的某个方面时已经无法充分运作，而恰恰是这个范式先前把研究引向了那里。",
+    "annotation": "库恩把革命的起点放在范式内部积累的失效感：旧框架曾开辟问题，却逐渐无法处理自己带来的难题。",
+    "workId": "structure-scientific-revolutions",
+    "sourceTitle": "The Structure of Scientific Revolutions",
+    "sourceType": "primary-text",
+    "verificationStatus": "source-attributed",
+    "attributionNote": "已按 2012 年版第 91 页定位，仍待与所用版本逐字复核。",
+    "sourceId": "src-kuhn-structure-1962",
+    "locator": "p. 91 (2012 edition)"
+  }
 }

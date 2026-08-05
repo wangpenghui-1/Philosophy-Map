@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1947",
-  "languages": [],
-  "summary": "《模棱两可的伦理学》是波伏娃的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "fr"
+  ],
+  "summary": "波伏娃从人既自由又有限的“模糊性”出发，批判逃避自由的生活姿态，并论证个人自由只有在愿意并帮助他人获得自由时才能形成伦理意义。",
   "conceptIds": [
     "concept-处境",
     "concept-他者",
@@ -23,20 +25,21 @@
     "tradition-存在主义女性主义"
   ],
   "sourceIds": [
-    "src-beauvoir"
+    "src-beauvoir",
+    "src-beauvoir-ethics-ambiguity-frechtman"
   ],
   "citations": [
     {
       "sourceId": "src-beauvoir",
-      "locator": "Sections on ambiguity, situated freedom and becoming woman",
-      "claim": "支持《模棱两可的伦理学》的摘要主张：《模棱两可的伦理学》是波伏娃的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 5 on The Ethics of Ambiguity",
+      "claim": "支持模糊性、处境自由和相互自由的作品概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充模糊性与相互自由的伦理结构。"
 }

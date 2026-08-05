@@ -1,1 +1,33 @@
-{"id":"thomas-kuhn-wittgenstein","entityType":"relation","from":{"entityType":"person","id":"thomas-kuhn"},"to":{"entityType":"person","id":"wittgenstein"},"directed":false,"relationType":"thematic-resonance","evidenceStatus":"supported","title":"范例、规则与理解的主题对读","explanation":"库恩在伯克利时期经斯坦利·卡维尔接触维特根斯坦的著作。二者都使后来的读者重新思考规则、训练与实践如何塑造理解；但这里呈现的是有阅读线索的主题对读，不把库恩的范式理论归结为维特根斯坦的直接结论。","note":"主题共鸣兼具阅读史线索；不主张维特根斯坦直接提出了库恩的科学革命理论。","citations":[{"sourceId":"src-kuhn","locator":"Section 1: life and career","claim":"支持卡维尔向库恩介绍维特根斯坦著作的阅读史线索。"}],"atlasVisibility":true,"contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"明确保留关系的非直接影响性质。"}
+{
+  "id": "thomas-kuhn-wittgenstein",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "thomas-kuhn"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "wittgenstein"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "范例、规则与理解的主题对读",
+  "explanation": "库恩在伯克利时期经斯坦利·卡维尔接触维特根斯坦的著作。二者都使后来的读者重新思考规则、训练与实践如何塑造理解；但这里呈现的是有阅读线索的主题对读，不把库恩的范式理论归结为维特根斯坦的直接结论。",
+  "note": "主题共鸣兼具阅读史线索；不主张维特根斯坦直接提出了库恩的科学革命理论。",
+  "citations": [
+    {
+      "sourceId": "src-kuhn",
+      "locator": "Section 1: life and career",
+      "claim": "支持卡维尔向库恩介绍维特根斯坦著作的阅读史线索。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "明确保留关系的非直接影响性质。"
+}

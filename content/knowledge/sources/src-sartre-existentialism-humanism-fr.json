@@ -2,7 +2,9 @@
   "id": "src-sartre-existentialism-humanism-fr",
   "entityType": "source",
   "title": "L’existentialisme est un humanisme",
-  "authors": ["Sartre, Jean-Paul"],
+  "authors": [
+    "Sartre, Jean-Paul"
+  ],
   "sourceType": "primary-text",
   "publication": "Éditions Nagel",
   "year": 1946,

@@ -1,0 +1,63 @@
+{
+  "id": "concept-证言",
+  "slug": "证言",
+  "entityType": "concept",
+  "name": "证言",
+  "originalTerms": [
+    "śabda",
+    "āptopadeśa"
+  ],
+  "summary": "证言（śabda）是听者通过可靠陈述获得知识的过程。正理派不把它还原成听者自己的推论；说话者须知道所说之事并愿意如实传达，听者则须理解语言且没有击败信任的反证。",
+  "senses": [
+    {
+      "traditionId": "tradition-正理派",
+      "label": "可信者的陈述（āptopadeśa）",
+      "explanation": "《正理经》1.1.7用“可信者的陈述”界定证言。可信资格随具体问题而定，不等于某种身份天然正确；欺骗、无知、误解或相反证据会使一次陈述失去产生知识的资格。",
+      "citations": [
+        {
+          "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+          "locator": "Nyāya-sūtra 1.1.7; Vātsyāyana's commentary",
+          "claim": "支持证言定义及可信说话者的解释。"
+        },
+        {
+          "sourceId": "src-epistemology-india-sep",
+          "locator": "Section 6: Testimony",
+          "claim": "支持证言独立于推论、知识传递和可信条件的说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "akshapada-gautama"
+  ],
+  "workIds": [
+    "nyaya-sutra"
+  ],
+  "traditionIds": [
+    "tradition-正理派"
+  ],
+  "sourceIds": [
+    "src-gautama-nyaya-sutra-gangopadhyaya",
+    "src-nyaya-iep",
+    "src-epistemology-india-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+      "locator": "Nyāya-sūtra 1.1.7",
+      "claim": "支持证言作为可信者陈述的原典定义。"
+    },
+    {
+      "sourceId": "src-nyaya-iep",
+      "locator": "Section 1.d: Testimony",
+      "claim": "支持证言的传递条件、日常作用与可能失败方式。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "为乔达摩人物页新增，避免把正理派证言误写为未经检验地服从权威。"
+}

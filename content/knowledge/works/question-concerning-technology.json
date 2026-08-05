@@ -1,0 +1,44 @@
+{
+  "id": "question-concerning-technology",
+  "slug": "question-concerning-technology",
+  "entityType": "work",
+  "title": "《技术的追问》",
+  "originalTitle": "Die Frage nach der Technik",
+  "authorRefs": [
+    {
+      "personId": "heidegger",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1954",
+  "languages": [
+    "de"
+  ],
+  "summary": "海德格尔在这篇讲演稿基础上形成的论文中区分技术器具与技术的本质，并以“座架”说明现代技术怎样把自然和人揭示为可储存、计算与调用的资源。",
+  "conceptIds": [
+    "concept-存在",
+    "concept-在世",
+    "concept-时间性"
+  ],
+  "traditionIds": [
+    "tradition-存在论与现象学"
+  ],
+  "sourceIds": [
+    "src-heidegger",
+    "src-heidegger-technology-lovitt"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-heidegger-technology-lovitt",
+      "locator": "The Question Concerning Technology, pp. 3–35",
+      "claim": "支持技术本质、揭示、持存物与座架等核心论述。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05"
+}

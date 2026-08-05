@@ -30,8 +30,8 @@
     "society",
     "freedom"
   ],
-  "guidingQuestion": "经验如何形成观念，政治权力又从何处获得正当性？",
-  "thesis": "心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。",
+  "guidingQuestion": "人的理解力能走多远，政治权力又凭什么取得正当性？",
+  "thesis": "观念的材料来自感觉与反思，知识应承认自身限度；政府则是受人民同意约束、以保护生命自由和财产为目的的信托。",
   "representativeQuote": {
     "text": "No man's knowledge here can go beyond his experience.",
     "displayLanguage": "en",
@@ -47,7 +47,7 @@
     "sourceId": "src-locke-essay-1689",
     "locator": "Book II, Chapter 1, §19"
   },
-  "summary": "洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。 本站以经验、人格同一、权利为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "洛克从人的理解力实际怎样工作出发，考察观念的来源、知识的边界和人格连续性；在政治上，他把政府写成受人民同意约束的公共信托，并以保护生命、自由和财产检验统治的正当性。",
   "workIds": [
     "essay-understanding",
     "two-treatises"
@@ -60,47 +60,131 @@
   ],
   "sourceIds": [
     "src-locke",
-    "src-locke-essay-1689"
+    "src-locke-essay-1689",
+    "src-locke-two-treatises-laslett",
+    "src-hume"
   ],
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持洛克的摘要主张：洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、…"
+      "locator": "Sections 2 and 4: human understanding and government",
+      "claim": "支持洛克认识论、人格同一性与政治思想的整体概述。"
+    },
+    {
+      "sourceId": "src-locke-essay-1689",
+      "locator": "Books I–II and IV",
+      "claim": "支持反天赋论、感觉与反思、观念形成和知识限度的原典定位。"
+    },
+    {
+      "sourceId": "src-locke-two-treatises-laslett",
+      "locator": "Second Treatise, §§4–15, 87–94, 123–149, 222–243",
+      "claim": "支持自然状态、权利、同意、政府信托和抵抗权的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "ideas-knowledge",
+      "heading": "观念从经验而来，心灵却不是被动仓库",
       "paragraphs": [
         {
-          "text": "洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。 本站以经验、人格同一、权利为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《人类理解论》第一卷反对天赋原则：若某些真理生来就印在所有心灵中，就很难解释儿童和缺乏相关概念的人为何并不知道它们。洛克随后把观念材料追溯到两条经验渠道。感觉使人获得颜色、坚硬、运动等外部对象的观念；反思让人注意自己正在知觉、怀疑、意愿或思考。这里的“白板”不表示心灵毫无能力，而是说它没有预先写好的观念内容。心灵仍会比较、组合、抽象，并用简单观念形成复杂观念。",
           "citations": [
             {
+              "sourceId": "src-locke-essay-1689",
+              "locator": "Book I; Book II, Chapters 1–2 and 11–12",
+              "claim": "支持反天赋论、感觉与反思两种来源及心灵加工观念的能力。"
+            },
+            {
               "sourceId": "src-locke",
-              "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本段主张：洛克是1632–1704活跃于欧洲的英国经验主义思想人物，主要追问“经验如何形成观念，政治权力又从何处获得正当性？”。其核心主张可概括为：心灵通过经验形成观念；合法政府以同意、…"
+              "locator": "Sections 2.1–2.2: Books I and II",
+              "claim": "支持白板比喻的限定及简单观念、复杂观念的解释。"
             }
           ]
         },
         {
-          "text": "核心问题：经验如何形成观念，政治权力又从何处获得正当性？",
+          "text": "洛克没有说经验能让人知道一切。他把知识理解为心灵看见观念之间的一致或不一致，并区分直觉知识、证明知识和对外物存在的感性知识。我们对自身存在有直觉把握，对上帝存在依靠证明，对眼前事物则依靠感官；一旦离开这些范围，往往只能获得不同程度的概然判断。哲学的任务因此也包括画出理解力的边界：在证据只够支持概率时，承认“很可能”比冒充确定知识更合理。",
           "citations": [
             {
+              "sourceId": "src-locke-essay-1689",
+              "locator": "Book IV, Chapters 1–4 and 11–16",
+              "claim": "支持知识定义、三种知识及知识与概率的区分。"
+            },
+            {
               "sourceId": "src-locke",
-              "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本段主张：核心问题：经验如何形成观念，政治权力又从何处获得正当性？"
+              "locator": "Sections 2.4–2.6: Book IV, knowledge, probability and reason",
+              "claim": "支持洛克限制知识范围并给概率判断保留位置的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identity-person",
+      "heading": "同一个人不只等于同一副身体",
+      "paragraphs": [
+        {
+          "text": "讨论同一性时，洛克先区分物质、生命体和人格。一个物质块以相同粒子延续，一棵树或一个动物则能在物质不断更换时保持同一生命组织；“人格”指能够把自己视为跨越时间的同一个思考者。人格同一性随意识能够向过去延伸的范围而延伸，记忆因而成为重要线索。同一个灵魂或同一副身体并不足以自动保证同一个人格，因为责任关心的是行动能否被当事人的意识认领。",
+          "citations": [
+            {
+              "sourceId": "src-locke-essay-1689",
+              "locator": "Book II, Chapter 27, §§1–10 and 17–26",
+              "claim": "支持物质、生命体与人格同一性的区分，以及意识与责任的关系。"
+            },
+            {
+              "sourceId": "src-locke",
+              "locator": "Section 2.2, discussion of personal identity",
+              "claim": "支持人格作为法庭用语及记忆解释所引发问题的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。",
+          "text": "把人格连续性系于意识会产生困难：人忘记童年行为时，是否就不再是当年的那个人？如果后来的记忆彼此断裂，同一性是否失去传递性？这些反例说明“洛克的记忆理论”不能只写成记得什么就是什么人。洛克更关心意识、归责和奖惩怎样相连，记忆是意识延伸到过去的主要方式，却可能因遗忘、错误记忆和心理中断而使理论承受压力。后来的休谟会进一步质疑，我们是否经验到一个独立于知觉流的持久自我。",
           "citations": [
             {
+              "sourceId": "src-locke-essay-1689",
+              "locator": "Book II, Chapter 27, §§13–26",
+              "claim": "支持记忆中断、意识范围与人格归责的讨论。"
+            },
+            {
+              "sourceId": "src-hume",
+              "locator": "Sections on self and personal identity",
+              "claim": "支持休谟把经验论推进到束理论并质疑持久自我的关系说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rights-government",
+      "heading": "政府是保护权利的信托，不是主人的私产",
+      "paragraphs": [
+        {
+          "text": "《政府论》第二篇从自然状态中的自由和平等出发。自然法禁止人任意损害他人的生命、健康、自由和财产，但人人自行解释和执行自然法容易造成偏私与冲突。人们通过同意组成政治共同体，把裁判和执行权交给公共机构，以获得稳定法律、公正裁判者和共同力量。政治权力由此不是父权或征服者天然拥有的财产，而是一项有目的、有边界的公共委托。",
+          "citations": [
+            {
+              "sourceId": "src-locke-two-treatises-laslett",
+              "locator": "Second Treatise, §§4–15, 87–94 and 123–131",
+              "claim": "支持自然状态、自然法、同意及进入政治社会的三项缺失条件。"
+            },
+            {
               "sourceId": "src-locke",
-              "locator": "Sections on ideas, personal identity and political authority",
-              "claim": "支持本段主张：核心主张：心灵通过经验形成观念；合法政府以同意、权利与可撤回的信托为基础。"
+              "locator": "Sections 4.1–4.6: Second Treatise, rights and civil government",
+              "claim": "支持政治权力从同意和公共目的获得正当性的说明。"
+            }
+          ]
+        },
+        {
+          "text": "财产权在这套理论中来自劳动把个人活动同共有资源结合，但洛克同时提出“不浪费”和“给他人留下足够且同样好资源”等限制；货币同意又改变了积累规模。政府若不再保护共同体，反而任意夺取生命、自由和财产，就违背信托并把自己置于与人民对立的状态，人民可以更换政府。这里也有必须保留的历史阴影：洛克与殖民治理、卡罗来纳宪制和奴隶制世界存在实际联系，普遍权利语言与其时代实践之间并不一致。",
+          "citations": [
+            {
+              "sourceId": "src-locke-two-treatises-laslett",
+              "locator": "Second Treatise, §§25–51, 134–149 and 222–243",
+              "claim": "支持劳动财产论、货币、立法权边界、信托破裂和抵抗权。"
+            },
+            {
+              "sourceId": "src-locke",
+              "locator": "Sections 1.2 and 4.4–4.7: colonial context, property and rebellion",
+              "claim": "支持洛克殖民政治经历、财产理论和抵抗权的历史与解释边界。"
             }
           ]
         }
@@ -118,13 +202,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
+  "uncertainty": "洛克关于观念是否遮断对外物的直接认识、人格同一性究竟依赖记忆还是更广的意识连续性、劳动财产论的限制是否能约束不平等，以及他的普遍权利论与殖民和奴隶制语境如何并置，均有持续争论。条目把原典主张、后来的记忆理论标签和历史批评分开处理。",
   "color": "#7d91b0",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第四位；补充观念来源、知识限度、人格同一、权利、财产、政府信托及殖民历史边界。"
 }

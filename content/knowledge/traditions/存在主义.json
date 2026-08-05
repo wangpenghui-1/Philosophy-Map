@@ -3,18 +3,44 @@
   "slug": "存在主义",
   "entityType": "tradition",
   "name": "存在主义",
-  "originalNames": ["existentialisme", "existentialism"],
+  "originalNames": [
+    "existentialisme",
+    "existentialism"
+  ],
   "summary": "存在主义关注没有预定本质保证的具体个人如何在有限处境中选择、承担责任并与他人共同生活；它内部包含显著分歧。",
   "periodLabel": "19世纪至20世纪",
-  "regionLabels": ["欧洲"],
+  "regionLabels": [
+    "欧洲"
+  ],
   "parentIds": [],
-  "relatedTraditionIds": ["tradition-存在哲学", "tradition-存在论与现象学", "tradition-存在主义女性主义"],
-  "personIds": ["sartre"],
-  "conceptIds": ["concept-存在先于本质", "concept-自欺", "concept-自在与自为"],
-  "sourceIds": ["src-sartre-sep", "src-sartre-existentialism-humanism-fr"],
+  "relatedTraditionIds": [
+    "tradition-存在哲学",
+    "tradition-存在论与现象学",
+    "tradition-存在主义女性主义"
+  ],
+  "personIds": [
+    "sartre"
+  ],
+  "conceptIds": [
+    "concept-存在先于本质",
+    "concept-自欺",
+    "concept-自在与自为"
+  ],
+  "sourceIds": [
+    "src-sartre-sep",
+    "src-sartre-existentialism-humanism-fr"
+  ],
   "citations": [
-    {"sourceId": "src-sartre-sep", "locator": "Sections on freedom, bad faith and existentialism", "claim": "支持存在主义关于自由、责任与处境的传统摘要。"},
-    {"sourceId": "src-sartre-existentialism-humanism-fr", "locator": "Exposé", "claim": "支持萨特对存在主义及存在先于本质的公开说明。"}
+    {
+      "sourceId": "src-sartre-sep",
+      "locator": "Sections on freedom, bad faith and existentialism",
+      "claim": "支持存在主义关于自由、责任与处境的传统摘要。"
+    },
+    {
+      "sourceId": "src-sartre-existentialism-humanism-fr",
+      "locator": "Exposé",
+      "claim": "支持萨特对存在主义及存在先于本质的公开说明。"
+    }
   ],
   "contentTier": "standard",
   "editorialStatus": "published",

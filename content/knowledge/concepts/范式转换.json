@@ -1,1 +1,54 @@
-{"id":"concept-范式转换","slug":"范式转换","entityType":"concept","name":"范式转换","originalTerms":["paradigm shift","paradigm","exemplar"],"summary":"在库恩的科学哲学中，范式转换指共同体的成功范例、问题、工具和评价标准发生重组的革命性变化。它不是任何领域的时髦变化，也不表示旧知识被一笔抹去。","senses":[{"traditionId":"tradition-科学哲学","label":"范式转换","explanation":"范式为常规科学提供可解的谜题和解题范例；危机中竞争框架可能重组研究标准。库恩后期特别强调 exemplar，即训练中可模仿的成功解题。","citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters II–IV, IX; Postscript 1969","claim":"支持范式、革命与 exemplar 的原典定位。"}]}],"personIds":["thomas-kuhn"],"workIds":["structure-scientific-revolutions","copernican-revolution"],"traditionIds":["tradition-科学哲学"],"sourceIds":["src-kuhn","src-kuhn-structure-1962"],"citations":[{"sourceId":"src-kuhn","locator":"Section 3: the concept of a paradigm","claim":"支持范式的共同体、典范和争议性用法。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"限定为库恩语境，不把中文流行语“范式转换”当作同义词。"}
+{
+  "id": "concept-范式转换",
+  "slug": "范式转换",
+  "entityType": "concept",
+  "name": "范式转换",
+  "originalTerms": [
+    "paradigm shift",
+    "paradigm",
+    "exemplar"
+  ],
+  "summary": "在库恩的科学哲学中，范式转换指共同体的成功范例、问题、工具和评价标准发生重组的革命性变化。它不是任何领域的时髦变化，也不表示旧知识被一笔抹去。",
+  "senses": [
+    {
+      "traditionId": "tradition-科学哲学",
+      "label": "范式转换",
+      "explanation": "范式为常规科学提供可解的谜题和解题范例；危机中竞争框架可能重组研究标准。库恩后期特别强调 exemplar，即训练中可模仿的成功解题。",
+      "citations": [
+        {
+          "sourceId": "src-kuhn-structure-1962",
+          "locator": "Chapters II–IV, IX; Postscript 1969",
+          "claim": "支持范式、革命与 exemplar 的原典定位。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "thomas-kuhn"
+  ],
+  "workIds": [
+    "structure-scientific-revolutions",
+    "copernican-revolution"
+  ],
+  "traditionIds": [
+    "tradition-科学哲学"
+  ],
+  "sourceIds": [
+    "src-kuhn",
+    "src-kuhn-structure-1962"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kuhn",
+      "locator": "Section 3: the concept of a paradigm",
+      "claim": "支持范式的共同体、典范和争议性用法。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "限定为库恩语境，不把中文流行语“范式转换”当作同义词。"
+}

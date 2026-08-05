@@ -1,0 +1,917 @@
+{
+  "id": "concept-知识",
+  "slug": "知识",
+  "entityType": "concept",
+  "name": "知识",
+  "originalTerms": [],
+  "summary": "“知识”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-科学哲学",
+      "label": "知识",
+      "explanation": "在库恩所属的思想语境中，“知识”是进入“科学知识是否只通过连续积累而发展？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持库恩条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-正理派",
+      "label": "知识",
+      "explanation": "在乔达摩所属的思想语境中，“知识”是进入“可靠知识的来源和有效推论应如何辨别？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持乔达摩条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-科学技术与女性主义",
+      "label": "知识",
+      "explanation": "在唐娜·哈拉维所属的思想语境中，“知识”是进入“科学客观性如何承认观察者位置而不滑向任意相对主义？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-handbook-science-technology-studies",
+          "locator": "行动者网络、女性主义科学研究与相关作者专章",
+          "claim": "支持唐娜·哈拉维条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-道家",
+      "label": "知识",
+      "explanation": "在老子所属的思想语境中，“知识”是进入“秩序能否在减少强制和欲望中形成？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持老子条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-玄学",
+      "label": "知识",
+      "explanation": "在郭象所属的思想语境中，“知识”是进入“万物如何在没有外在造物者的情况下各自生成？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持郭象条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-华严宗",
+      "label": "知识",
+      "explanation": "在法藏所属的思想语境中，“知识”是进入“每一事物如何同时保持差异又与整体互相涵摄？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持法藏条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-日本密教",
+      "label": "知识",
+      "explanation": "在空海所属的思想语境中，“知识”是进入“语言、身体和仪式如何成为觉悟的现实媒介？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言",
+          "claim": "支持空海条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-理学",
+      "label": "知识",
+      "explanation": "在朱熹所属的思想语境中，“知识”是进入“道德知识如何通过理解事物之理逐步形成？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持朱熹条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-心学",
+      "label": "知识",
+      "explanation": "在王阳明所属的思想语境中，“知识”是进入“道德知识为何必须在具体行动中得到验证？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持王阳明条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-京都学派",
+      "label": "知识",
+      "explanation": "在西田几多郎所属的思想语境中，“知识”是进入“主客区分之前的经验如何成为哲学出发点？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言",
+          "claim": "支持西田几多郎条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-中国实用主义",
+      "label": "知识",
+      "explanation": "在胡适所属的思想语境中，“知识”是进入“传统与现代的思想主张应如何接受公开检验？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持胡适条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代新儒家",
+      "label": "知识",
+      "explanation": "在牟宗三所属的思想语境中，“知识”是进入“儒家道德主体如何回应现代哲学关于知识与自由的问题？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持牟宗三条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-奥义书传统",
+      "label": "知识",
+      "explanation": "在弥勒依所属的思想语境中，“知识”是进入“财富与亲密关系能否给予人真正的不朽？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持弥勒依条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-胜论",
+      "label": "知识",
+      "explanation": "在迦那陀所属的思想语境中，“知识”是进入“经验世界能否由基本实体和属性范畴系统解释？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持迦那陀条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-吠檀多",
+      "label": "知识",
+      "explanation": "在跋陀罗衍那所属的思想语境中，“知识”是进入“奥义书中多样的终极实在论述如何获得系统解释？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持跋陀罗衍那条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-瑜伽行派",
+      "label": "知识",
+      "explanation": "在世亲所属的思想语境中，“知识”是进入“经验对象与认识结构之间是什么关系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持世亲条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-语言哲学",
+      "label": "知识",
+      "explanation": "在伐致呵利所属的思想语境中，“知识”是进入“语言意义来自孤立词项还是不可分割的整体理解？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持伐致呵利条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-佛教认识论",
+      "label": "知识",
+      "explanation": "在法称所属的思想语境中，“知识”是进入“认识的可靠性如何由因果效力加以说明？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持法称条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-弥曼差",
+      "label": "知识",
+      "explanation": "在鸠摩梨罗所属的思想语境中，“知识”是进入“经典证言为何能够成为独立的知识来源？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持鸠摩梨罗条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-克什米尔湿婆教",
+      "label": "知识",
+      "explanation": "在阿毗那婆笈多所属的思想语境中，“知识”是进入“意识如何在多样经验中重新认识自身的自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持阿毗那婆笈多条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-新正理派",
+      "label": "知识",
+      "explanation": "在恒伽沙所属的思想语境中，“知识”是进入“一个认知何以被判定为有效知识？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持恒伽沙条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-希腊化犹太哲学",
+      "label": "知识",
+      "explanation": "在斐洛所属的思想语境中，“知识”是进入“经典叙事如何与希腊哲学的理性概念协调？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-jewish-philosophy",
+          "locator": "对应人物与时期专章",
+          "claim": "支持斐洛条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-摩尼教",
+      "label": "知识",
+      "explanation": "在摩尼所属的思想语境中，“知识”是进入“世界中的恶与痛苦如何由宇宙性冲突解释？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持摩尼条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-阿拉伯语哲学",
+      "label": "知识",
+      "explanation": "在肯迪所属的思想语境中，“知识”是进入“希腊哲学知识如何进入阿拉伯语思想语境？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持肯迪条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊斯兰世界自然哲学",
+      "label": "知识",
+      "explanation": "在拉齐所属的思想语境中，“知识”是进入“理性探究能否独立承担认识自然与改善生活的任务？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持拉齐条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-犹太哲学",
+      "label": "知识",
+      "explanation": "在萨阿迪亚·高昂所属的思想语境中，“知识”是进入“理性论证与宗教传统如何相互支持？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-jewish-philosophy",
+          "locator": "对应人物与时期专章",
+          "claim": "支持萨阿迪亚·高昂条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-比较思想与科学",
+      "label": "知识",
+      "explanation": "在比鲁尼所属的思想语境中，“知识”是进入“如何在不把他者传统化约为己方分类的前提下理解它？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持比鲁尼条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊斯兰神学与哲学",
+      "label": "知识",
+      "explanation": "在安萨里所属的思想语境中，“知识”是进入“哲学证明、宗教启示和灵性体验各有何种认知边界？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持安萨里条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-安达卢斯哲学",
+      "label": "知识",
+      "explanation": "在伊本·鲁世德所属的思想语境中，“知识”是进入“哲学论证与宗教律法能否面向不同读者而保持一致？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持伊本·鲁世德条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-照明哲学",
+      "label": "知识",
+      "explanation": "在苏哈拉瓦迪所属的思想语境中，“知识”是进入“知识能否通过直接临在而不只依赖概念表象？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持苏哈拉瓦迪条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-宗教与世俗批判",
+      "label": "知识",
+      "explanation": "在塔拉勒·阿萨德所属的思想语境中，“知识”是进入“宗教与世俗是否真是普遍且中立的分类？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持塔拉勒·阿萨德条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-当代伊斯兰哲学",
+      "label": "知识",
+      "explanation": "在赛义德·侯赛因·纳斯尔所属的思想语境中，“知识”是进入“现代科学为何会造成自然世界的意义危机？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持赛义德·侯赛因·纳斯尔条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-当代伊斯兰思想",
+      "label": "知识",
+      "explanation": "在阿卜杜勒卡里姆·索鲁什所属的思想语境中，“知识”是进入“神圣启示与人类对宗教的历史理解应如何区分？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持阿卜杜勒卡里姆·索鲁什条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊斯兰女性主义",
+      "label": "知识",
+      "explanation": "在阿米娜·瓦杜德所属的思想语境中，“知识”是进入“经典诠释如何识别并纠正父权阅读带来的性别不平等？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持阿米娜·瓦杜德条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-原子论",
+      "label": "知识",
+      "explanation": "在德谟克利特所属的思想语境中，“知识”是进入“复杂世界能否由不可分割的微粒和运动解释？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持德谟克利特条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-斯多亚学派",
+      "label": "知识",
+      "explanation": "在克律西波所属的思想语境中，“知识”是进入“必然因果与人的责任如何能够同时成立？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持克律西波条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-经院哲学",
+      "label": "知识",
+      "explanation": "在安瑟伦所属的思想语境中，“知识”是进入“信仰内容能否通过理性反思获得更清楚的理解？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持安瑟伦条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-中世纪思想",
+      "label": "知识",
+      "explanation": "在宾根的希尔德加德所属的思想语境中，“知识”是进入“自然、身体、音乐与神学想象如何构成统一的知识图景？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持宾根的希尔德加德条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-近代知识论",
+      "label": "知识",
+      "explanation": "在弗朗西斯·培根所属的思想语境中，“知识”是进入“知识方法如何克服心智偏见并产生可靠发现？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持弗朗西斯·培根条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-近代宗教哲学",
+      "label": "知识",
+      "explanation": "在帕斯卡所属的思想语境中，“知识”是进入“理性证明的边界如何影响信仰与人生选择？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持帕斯卡条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-实用主义与符号学",
+      "label": "知识",
+      "explanation": "在皮尔士所属的思想语境中，“知识”是进入“概念的意义如何通过可设想的实践效果澄清？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持皮尔士条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-实用主义",
+      "label": "知识",
+      "explanation": "在威廉·詹姆斯所属的思想语境中，“知识”是进入“观念的真理如何在经验和行动中显现？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持威廉·詹姆斯条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-逻辑与语言哲学",
+      "label": "知识",
+      "explanation": "在弗雷格所属的思想语境中，“知识”是进入“语言表达式的意义如何超出其所指对象？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持弗雷格条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-分析哲学",
+      "label": "知识",
+      "explanation": "在罗素所属的思想语境中，“知识”是进入“语言的逻辑形式如何帮助化解哲学困惑？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持罗素条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-逻辑经验主义",
+      "label": "知识",
+      "explanation": "在卡尔纳普所属的思想语境中，“知识”是进入“哲学争论如何通过语言框架与逻辑分析获得澄清？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持卡尔纳普条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-埃塞俄比亚哲学",
+      "label": "知识",
+      "explanation": "在扎拉·雅各布所属的思想语境中，“知识”是进入“宗教传统的命令应如何接受理性和善的检验？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持扎拉·雅各布条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-约鲁巴哲学",
+      "label": "知识",
+      "explanation": "在索菲·奥卢沃莱所属的思想语境中，“知识”是进入“约鲁巴思想中的二元关系是否必然意味着相互排斥？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持索菲·奥卢沃莱条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-贤哲哲学",
+      "label": "知识",
+      "explanation": "在亨利·奥德拉·奥鲁卡所属的思想语境中，“知识”是进入“口述传统中的个人批判反思如何被识别为哲学？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持亨利·奥德拉·奥鲁卡条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲与伊斯兰哲学",
+      "label": "知识",
+      "explanation": "在苏莱曼·巴希尔·迪亚涅所属的思想语境中，“知识”是进入“不同哲学语言如何通过翻译形成开放的普遍性？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持苏莱曼·巴希尔·迪亚涅条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-拉丁美洲哲学",
+      "label": "知识",
+      "explanation": "在莱奥波尔多·塞亚所属的思想语境中，“知识”是进入“拉丁美洲哲学如何在具体历史处境中形成普遍意义？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持莱奥波尔多·塞亚条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-加勒比思想与人之批判",
+      "label": "知识",
+      "explanation": "在西尔维娅·温特所属的思想语境中，“知识”是进入“西方现代性如何把特定的人类模型冒充为全体人类？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持西尔维娅·温特条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-解放哲学",
+      "label": "知识",
+      "explanation": "在恩里克·杜塞尔所属的思想语境中，“知识”是进入“哲学如何从被现代体系排除者的立场开始？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持恩里克·杜塞尔条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-马来伊斯兰思想",
+      "label": "知识",
+      "explanation": "在赛义德·穆罕默德·纳吉布·阿塔斯所属的思想语境中，“知识”是进入“教育与知识分类如何体现关于人和世界的伦理秩序？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持赛义德·穆罕默德·纳吉布·阿塔斯条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-后殖民思想",
+      "label": "知识",
+      "explanation": "在爱德华·萨义德所属的思想语境中，“知识”是进入“知识表述如何参与帝国对他者的治理？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-cultural-studies-reader",
+          "locator": "对应作者选文及编者导言",
+          "claim": "支持爱德华·萨义德条目中“知识”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "thomas-kuhn",
+    "akshapada-gautama",
+    "donna-haraway",
+    "laozi",
+    "guo-xiang",
+    "fazang",
+    "kukai",
+    "zhu-xi",
+    "wang-yangming",
+    "nishida-kitaro",
+    "hu-shih",
+    "mou-zongsan",
+    "maitreyi",
+    "kanada",
+    "badarayana",
+    "vasubandhu",
+    "bhartrhari",
+    "dharmakirti",
+    "kumarila-bhatta",
+    "abhinavagupta",
+    "gangesha",
+    "philo-alexandria",
+    "mani",
+    "al-kindi",
+    "abu-bakr-al-razi",
+    "saadia-gaon",
+    "al-biruni",
+    "al-ghazali",
+    "ibn-rushd",
+    "maimonides",
+    "suhrawardi",
+    "gersonides",
+    "talal-asad",
+    "seyyed-hossein-nasr",
+    "abdolkarim-soroush",
+    "amina-wadud",
+    "democritus",
+    "chrysippus",
+    "anselm-canterbury",
+    "hildegard-bingen",
+    "francis-bacon",
+    "blaise-pascal",
+    "charles-sanders-peirce",
+    "william-james",
+    "gottlob-frege",
+    "bertrand-russell",
+    "rudolf-carnap",
+    "zera-yacob",
+    "sophie-oluwole",
+    "henry-odera-oruka",
+    "souleymane-bachir-diagne",
+    "w-v-o-quine",
+    "leopoldo-zea",
+    "sylvia-wynter",
+    "enrique-dussel",
+    "syed-muhammad-naquib-al-attas",
+    "edward-said",
+    "gayatri-chakravorty-spivak"
+  ],
+  "workIds": [
+    "structure-scientific-revolutions",
+    "nyaya-sutra",
+    "simians-cyborgs-women",
+    "daodejing",
+    "zhuangzi-guo-commentary",
+    "essay-golden-lion",
+    "ten-luminous-stages",
+    "reflections-things-hand",
+    "chuanxi-lu",
+    "inquiry-good",
+    "outline-chinese-philosophy",
+    "phenomenon-thing-itself",
+    "brihadaranyaka-maitreyi",
+    "vaisesika-sutra",
+    "brahma-sutra",
+    "trimsika",
+    "vakyapadiya",
+    "pramanavarttika",
+    "sloka-varttika",
+    "tantraloka",
+    "tattvacintamani",
+    "philo-works",
+    "shabuhragan",
+    "on-first-philosophy",
+    "spiritual-physick",
+    "beliefs-opinions",
+    "biruni-india",
+    "incoherence-philosophers",
+    "decisive-treatise",
+    "guide-perplexed",
+    "philosophy-illumination",
+    "wars-lord",
+    "formations-secular",
+    "knowledge-sacred",
+    "contraction-expansion",
+    "quran-woman",
+    "democritus-fragments",
+    "stoic-testimonia-chrysippus",
+    "proslogion",
+    "scivias",
+    "novum-organum",
+    "pensees",
+    "peirce-papers",
+    "pragmatism-james",
+    "sense-reference",
+    "on-denoting",
+    "empiricism-semantics-ontology",
+    "hatata-zera-yacob",
+    "socrates-orunmila",
+    "sage-philosophy",
+    "open-to-reason",
+    "two-dogmas",
+    "american-philosophy-zea",
+    "unsettling-coloniality",
+    "philosophy-liberation",
+    "islam-secularism",
+    "orientalism",
+    "can-subaltern-speak"
+  ],
+  "traditionIds": [
+    "tradition-科学哲学",
+    "tradition-正理派",
+    "tradition-科学技术与女性主义",
+    "tradition-道家",
+    "tradition-玄学",
+    "tradition-华严宗",
+    "tradition-日本密教",
+    "tradition-理学",
+    "tradition-心学",
+    "tradition-京都学派",
+    "tradition-中国实用主义",
+    "tradition-现代新儒家",
+    "tradition-奥义书传统",
+    "tradition-胜论",
+    "tradition-吠檀多",
+    "tradition-瑜伽行派",
+    "tradition-语言哲学",
+    "tradition-佛教认识论",
+    "tradition-弥曼差",
+    "tradition-克什米尔湿婆教",
+    "tradition-新正理派",
+    "tradition-希腊化犹太哲学",
+    "tradition-摩尼教",
+    "tradition-阿拉伯语哲学",
+    "tradition-伊斯兰世界自然哲学",
+    "tradition-犹太哲学",
+    "tradition-比较思想与科学",
+    "tradition-伊斯兰神学与哲学",
+    "tradition-安达卢斯哲学",
+    "tradition-照明哲学",
+    "tradition-宗教与世俗批判",
+    "tradition-当代伊斯兰哲学",
+    "tradition-当代伊斯兰思想",
+    "tradition-伊斯兰女性主义",
+    "tradition-原子论",
+    "tradition-斯多亚学派",
+    "tradition-经院哲学",
+    "tradition-中世纪思想",
+    "tradition-近代知识论",
+    "tradition-近代宗教哲学",
+    "tradition-实用主义与符号学",
+    "tradition-实用主义",
+    "tradition-逻辑与语言哲学",
+    "tradition-分析哲学",
+    "tradition-逻辑经验主义",
+    "tradition-埃塞俄比亚哲学",
+    "tradition-约鲁巴哲学",
+    "tradition-贤哲哲学",
+    "tradition-非洲与伊斯兰哲学",
+    "tradition-拉丁美洲哲学",
+    "tradition-加勒比思想与人之批判",
+    "tradition-解放哲学",
+    "tradition-马来伊斯兰思想",
+    "tradition-后殖民思想"
+  ],
+  "sourceIds": [
+    "src-companion-american-philosophy",
+    "src-encyclopedia-indian-philosophies",
+    "src-handbook-science-technology-studies",
+    "src-encyclopedia-chinese-philosophy",
+    "src-japanese-philosophy-sourcebook",
+    "src-history-jewish-philosophy",
+    "src-history-islamic-philosophy",
+    "src-routledge-encyclopedia-philosophy",
+    "src-companion-african-philosophy",
+    "src-companion-latin-american-philosophy",
+    "src-routledge-southeast-asian-thinkers",
+    "src-cultural-studies-reader"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章",
+      "claim": "支持库恩条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持乔达摩条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-handbook-science-technology-studies",
+      "locator": "行动者网络、女性主义科学研究与相关作者专章",
+      "claim": "支持唐娜·哈拉维条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持老子条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言",
+      "claim": "支持空海条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章",
+      "claim": "支持斐洛条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持摩尼条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持德谟克利特条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持扎拉·雅各布条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章",
+      "claim": "支持莱奥波尔多·塞亚条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章",
+      "claim": "支持赛义德·穆罕默德·纳吉布·阿塔斯条目中“知识”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-cultural-studies-reader",
+      "locator": "对应作者选文及编者导言",
+      "claim": "支持爱德华·萨义德条目中“知识”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

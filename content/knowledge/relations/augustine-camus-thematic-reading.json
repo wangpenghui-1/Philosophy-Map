@@ -1,0 +1,38 @@
+{
+  "id": "augustine-camus-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "augustine"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "camus"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“人如何成为自己”的两种回答",
+  "explanation": "奥古斯丁与加缪都触及“人如何成为自己”，但各自的问题语境和论证目标不同：前者强调内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。；后者强调荒诞应以清醒而非逃避来承受；反抗由此肯定共同尊严，同时必须拒绝把无限暴力包装成未来正义。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-augustine",
+      "locator": "Sections on Platonism, will, time and the two cities",
+      "claim": "支持奥古斯丁一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 1–6: absurdity, suicide, revolt, violence and Camus's relation to existentialism",
+      "claim": "支持加缪一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

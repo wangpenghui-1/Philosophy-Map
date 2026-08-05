@@ -2,7 +2,9 @@
   "id": "src-merleau-ponty-sep",
   "entityType": "source",
   "title": "Maurice Merleau-Ponty",
-  "authors": ["Toadvine, Ted"],
+  "authors": [
+    "Toadvine, Ted"
+  ],
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/merleau-ponty/",

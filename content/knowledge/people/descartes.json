@@ -30,8 +30,8 @@
     "reality"
   ],
   "guidingQuestion": "当一切都可以怀疑时，知识从何处重新开始？",
-  "thesis": "方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。",
-  "summary": "笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。 本站以怀疑、我思、心物二元为入口，连接其代表文本、思想关系与学术来源。",
+  "thesis": "方法怀疑在思考活动中找到不可否认的起点，再借清楚分明的观念、上帝非欺骗性与心物区分重建知识。",
+  "summary": "笛卡尔把怀疑变成一种有步骤的检验：感官、梦境乃至数学都暂时接受挑战，而正在思考的“我”无法同时被取消。他由此尝试重建关于上帝、物质与外部世界的知识，也留下心灵如何与身体结合的难题。",
   "workIds": [
     "meditations",
     "discourse-method"
@@ -44,47 +44,127 @@
   ],
   "sourceIds": [
     "src-descartes",
-    "src-descartes-discourse-veitch"
+    "src-descartes-meditations-haldane-ross",
+    "src-descartes-discourse-veitch",
+    "src-spinoza",
+    "src-locke"
   ],
   "citations": [
     {
       "sourceId": "src-descartes",
-      "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持笛卡尔的摘要主张：笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明…"
+      "locator": "Sections 3.1–3.4 and 4.1–4.2: method, cogito, clear and distinct perception, mind and body",
+      "claim": "支持方法怀疑、我思、知识重建与心身关系的整体解释。"
+    },
+    {
+      "sourceId": "src-descartes-meditations-haldane-ross",
+      "locator": "Meditations I–II, III–IV and VI",
+      "claim": "支持梦境与恶魔假设、我思、清楚分明观念、错误理论和心物区分的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "doubt-cogito",
+      "heading": "怀疑怎样找到一个不能再怀疑的起点",
       "paragraphs": [
         {
-          "text": "笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。 本站以怀疑、我思、心物二元为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《第一哲学沉思集》先暂停接受一切可能出错的信念。感官有时会欺骗；梦境又提示我们，逼真的经验未必来自眼前世界；“恶魔”假设更把挑战推进到数学判断，设想一个强大欺骗者不断使人算错。笛卡尔不是要人永久不信任何事，而是用这些层层加深的设想测试知识基础：只要一个信念仍有可理解的出错可能，就先不拿它承担重建知识的重量。",
           "citations": [
             {
+              "sourceId": "src-descartes-meditations-haldane-ross",
+              "locator": "Meditation I",
+              "claim": "支持感官欺骗、梦境和恶魔假设所构成的怀疑进程。"
+            },
+            {
               "sourceId": "src-descartes",
-              "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本段主张：笛卡尔是1596–1650活跃于欧洲的近代理性主义思想人物，主要追问“当一切都可以怀疑时，知识从何处重新开始？”。其核心主张可概括为：方法怀疑首先确认思考着的主体，再以清楚分明…"
+              "locator": "Section 3.1: How our minds are known",
+              "claim": "支持怀疑作为沉思进程中的认知工具而非永久结论的解释。"
             }
           ]
         },
         {
-          "text": "核心问题：当一切都可以怀疑时，知识从何处重新开始？",
+          "text": "怀疑推进到极端时，仍有一件事正在发生：我在思考。即使欺骗者使我在所有对象上出错，他也必须欺骗某个正在被欺骗者。《沉思集》因此写道，只要我思考，“我是、我存在”就必然为真。“我思”不是从“凡思考者都存在”推导出的普通三段论；它的确定性来自当下活动，人在实际怀疑或判断时直接把握自身存在。这里首先确定的是“思考之物”，还没有证明外部世界或完整身体。",
           "citations": [
             {
+              "sourceId": "src-descartes-meditations-haldane-ross",
+              "locator": "Meditation II",
+              "claim": "支持“我是、我存在”在每次被思考时为真，以及自我首先被把握为思考之物。"
+            },
+            {
               "sourceId": "src-descartes",
-              "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本段主张：核心问题：当一切都可以怀疑时，知识从何处重新开始？"
+              "locator": "Section 3.1; cogito discussion",
+              "claim": "支持我思的直接确定性及其不宜简化为普通三段论的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rebuilding-knowledge",
+      "heading": "从我思到外部世界，中间还有哪些论证",
+      "paragraphs": [
+        {
+          "text": "我思只给出起点，不能独自保证眼前桌子、数学真理或记忆都可靠。笛卡尔接着考察“清楚分明”的观念，并论证一个完满而非欺骗性的上帝存在，以排除系统性受骗的可能。这个步骤形成著名争议：我们似乎凭清楚分明的观念证明上帝，又凭上帝保证这些观念可靠，容易被批评为“笛卡尔循环”。无论是否接受他的回答，知识重建并不是一句“我思故我在”就完成，而是一串需要逐环检验的论证。",
+          "citations": [
+            {
+              "sourceId": "src-descartes-meditations-haldane-ross",
+              "locator": "Meditations III–IV",
+              "claim": "支持从我思转向上帝存在、非欺骗性与清楚分明知觉可靠性的论证。"
+            },
+            {
+              "sourceId": "src-descartes",
+              "locator": "Sections 3.2–3.4: clear and distinct perception and avoiding error",
+              "claim": "支持清楚分明标准、笛卡尔循环争议和错误理论的解释。"
             }
           ]
         },
         {
-          "text": "核心主张：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。",
+          "text": "笛卡尔并未把感官永远赶出知识。第六沉思恢复对物质世界的信任，但降低了感官的任务：感官主要告诉一个有身体的人什么有利、什么危险，不会自动揭示物体的本性。蜡块可以改变颜色、气味和形状，我们仍认出它是同一块蜡；这让笛卡尔把物质的本质放在可度量的广延，而不是不断变化的感官性质上。近代自然科学中的数学化倾向由此与他的认识论相互连接。",
           "citations": [
             {
+              "sourceId": "src-descartes-meditations-haldane-ross",
+              "locator": "Meditation II, wax passage; Meditation VI",
+              "claim": "支持蜡块分析、物体作为广延之物及感官在身体现实中的作用。"
+            },
+            {
               "sourceId": "src-descartes",
-              "locator": "Sections on methodic doubt, mind and knowledge",
-              "claim": "支持本段主张：核心主张：方法怀疑首先确认思考着的主体，再以清楚分明的观念重建知识。"
+              "locator": "Sections 3.3, 4.1 and 5.1: senses, matter and mathematical physics",
+              "claim": "支持感官知识的限度、物质广延和自然哲学关系的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mind-body-legacy",
+      "heading": "心与身体既可区分，又为何能共同生活",
+      "paragraphs": [
+        {
+          "text": "笛卡尔把心灵界定为思考的实体，把物体界定为广延的实体。一个人可以清楚设想自己作为思考者而不诉诸身体，因此第六沉思主张二者实在可分。这一结论保护了心灵不等同于机械身体，却立刻产生相互作用难题：没有广延的心怎样使手臂移动，身体受伤又怎样带来疼痛？波希米亚的伊丽莎白公主在通信中正面追问这一点。笛卡尔强调人不是住在机器里的驾驶员，而是心身紧密结合的整体，但没有消除全部困难。",
+          "citations": [
+            {
+              "sourceId": "src-descartes-meditations-haldane-ross",
+              "locator": "Meditation VI",
+              "claim": "支持心灵与身体的实在区分，以及人在感觉中经验到的心身结合。"
+            },
+            {
+              "sourceId": "src-descartes",
+              "locator": "Sections 4.1–4.2: mind-body distinction, union and interaction",
+              "claim": "支持伊丽莎白的相互作用质疑及笛卡尔以心身结合回应的说明。"
+            }
+          ]
+        },
+        {
+          "text": "后来的哲学家同时继承和拆解这套框架。斯宾诺莎使用实体、属性和样态等笛卡尔词汇，却拒绝两个有限实体彼此作用的结构，把心与物理解为唯一实体的不同属性。洛克则从观念如何由经验产生入手，反对天赋观念，并把认识的范围限制在经验与反思能够支持之处。这些关系不是简单的“理性主义对经验主义”标签：两人都认真处理笛卡尔提出的问题，只是在实体、观念来源和确定性标准上另给答案。",
+          "citations": [
+            {
+              "sourceId": "src-spinoza",
+              "locator": "Sections 2.1–2.2: substance, attributes and modes",
+              "claim": "支持斯宾诺莎继承笛卡尔术语并拒绝心物二元实体结构的说明。"
+            },
+            {
+              "sourceId": "src-locke",
+              "locator": "Sections 2.1–2.3: the limits of human understanding and ideas",
+              "claim": "支持洛克以经验中的观念来源和认识限度回应天赋观念传统的说明。"
             }
           ]
         }
@@ -102,15 +182,16 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
+  "uncertainty": "研究者对方法怀疑究竟是笛卡尔本人的最终立场还是引导读者的练习、我思属于推论还是直接把握、清楚分明标准是否陷入循环，以及心身结合能否回应相互作用问题，仍有不同解释。条目按《谈谈方法》和《沉思集》的具体论证顺序呈现，不把“我思故我在”当作整套哲学的充分总结。",
   "color": "#6f8eac",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第三位；补充怀疑进程、我思、知识重建、感官复位、心身区分及洛克和斯宾诺莎的回应。",
   "representativeQuote": {
     "text": "I think, therefore I am.",
     "displayLanguage": "en",

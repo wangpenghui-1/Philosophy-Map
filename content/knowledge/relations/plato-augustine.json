@@ -19,20 +19,20 @@
     {
       "sourceId": "src-plato",
       "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-      "claim": "支持经由新柏拉图主义的转译的摘要主张：奥古斯丁通过拉丁语新柏拉图主义文本吸收柏拉图传统；这不是两人之间的直接阅读关系，而是一条经由晚期古代思想网络的传播线。"
+      "claim": "支持柏拉图思想经晚期古代柏拉图主义继续传播的历史背景。"
     },
     {
       "sourceId": "src-augustine",
       "locator": "Sections on Platonism, will, time and the two cities",
-      "claim": "支持经由新柏拉图主义的转译的摘要主张：奥古斯丁通过拉丁语新柏拉图主义文本吸收柏拉图传统；这不是两人之间的直接阅读关系，而是一条经由晚期古代思想网络的传播线。"
+      "claim": "支持奥古斯丁通过拉丁语所谓“柏拉图主义者的书”接触新柏拉图主义的说明。"
     }
   ],
   "atlasVisibility": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "保留间接传播限定，不把奥古斯丁写成直接阅读柏拉图希腊原典。"
 }

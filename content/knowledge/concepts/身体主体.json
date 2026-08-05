@@ -3,19 +3,48 @@
   "slug": "身体主体",
   "entityType": "concept",
   "name": "身体主体",
-  "originalTerms": ["corps propre", "corps-sujet"],
+  "originalTerms": [
+    "corps propre",
+    "corps-sujet"
+  ],
   "summary": "身体不是意识拥有的一件外部物品，而是知觉、行动并拥有一个世界的第一人称能力结构。",
-  "senses": [{
-    "traditionId": "tradition-现象学",
-    "label": "身体主体",
-    "explanation": "梅洛-庞蒂以身体主体说明知觉先于主客二分：身体通过姿势、习惯和行动可能直接组织环境。",
-    "citations": [{"sourceId": "src-merleau-ponty-phenomenology-perception-fr", "locator": "Première partie: Le corps", "claim": "支持身体作为拥有世界的基本方式。"}]
-  }],
-  "personIds": ["merleau-ponty"],
-  "workIds": ["phenomenology-of-perception"],
-  "traditionIds": ["tradition-现象学"],
-  "sourceIds": ["src-merleau-ponty-phenomenology-perception-fr"],
-  "citations": [{"sourceId": "src-merleau-ponty-phenomenology-perception-fr", "locator": "Première partie: Le corps", "claim": "支持身体主体的概念摘要。"}],
-  "contentTier": "index", "editorialStatus": "published", "version": 1,
-  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+  "senses": [
+    {
+      "traditionId": "tradition-现象学",
+      "label": "身体主体",
+      "explanation": "梅洛-庞蒂以身体主体说明知觉先于主客二分：身体通过姿势、习惯和行动可能直接组织环境。",
+      "citations": [
+        {
+          "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+          "locator": "Première partie: Le corps",
+          "claim": "支持身体作为拥有世界的基本方式。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "merleau-ponty"
+  ],
+  "workIds": [
+    "phenomenology-of-perception"
+  ],
+  "traditionIds": [
+    "tradition-现象学"
+  ],
+  "sourceIds": [
+    "src-merleau-ponty-phenomenology-perception-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+      "locator": "Première partie: Le corps",
+      "claim": "支持身体主体的概念摘要。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
 }

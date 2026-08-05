@@ -1,0 +1,1264 @@
+{
+  "id": "concept-社会秩序",
+  "slug": "社会秩序",
+  "entityType": "concept",
+  "name": "社会秩序",
+  "originalTerms": [],
+  "summary": "“社会秩序”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-墨家",
+      "label": "社会秩序",
+      "explanation": "在墨子所属的思想语境中，“社会秩序”是进入“政治与伦理应以何种可检验标准减少天下之害？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持墨子条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-智者学派",
+      "label": "社会秩序",
+      "explanation": "在普罗泰戈拉所属的思想语境中，“社会秩序”是进入“真理与政治判断在意见分歧中如何可能？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持普罗泰戈拉条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-功利主义",
+      "label": "社会秩序",
+      "explanation": "在边沁所属的思想语境中，“社会秩序”是进入“法律与制度应以何种公共标准评价？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持边沁条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-种族契约论",
+      "label": "社会秩序",
+      "explanation": "在查尔斯·米尔斯所属的思想语境中，“社会秩序”是进入“自由主义社会契约为何长期排除非白人群体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持查尔斯·米尔斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伦理与能力进路",
+      "label": "社会秩序",
+      "explanation": "在玛莎·努斯鲍姆所属的思想语境中，“社会秩序”是进入“正义制度应保障每个人具备哪些真实生活机会？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持玛莎·努斯鲍姆条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-儒家",
+      "label": "社会秩序",
+      "explanation": "在孟子所属的思想语境中，“社会秩序”是进入“人的道德能力如何在政治与日常实践中生长？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持孟子条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-法家",
+      "label": "社会秩序",
+      "explanation": "在韩非所属的思想语境中，“社会秩序”是进入“政治秩序如何在不依赖统治者德性的条件下维持？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持韩非条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-汉代儒学",
+      "label": "社会秩序",
+      "explanation": "在董仲舒所属的思想语境中，“社会秩序”是进入“政治伦理如何与宇宙秩序建立规范联系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持董仲舒条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-中国佛教",
+      "label": "社会秩序",
+      "explanation": "在慧远所属的思想语境中，“社会秩序”是进入“出家修行者与世俗政治权力应保持怎样的关系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持慧远条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-儒学复兴",
+      "label": "社会秩序",
+      "explanation": "在韩愈所属的思想语境中，“社会秩序”是进入“儒家伦理如何面对佛道思想和帝国制度的挑战？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持韩愈条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-日本古学",
+      "label": "社会秩序",
+      "explanation": "在荻生徂徕所属的思想语境中，“社会秩序”是进入“政治秩序应依据内在道德直觉还是历史制度？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言",
+          "claim": "支持荻生徂徕条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-朝鲜实学",
+      "label": "社会秩序",
+      "explanation": "在丁若镛所属的思想语境中，“社会秩序”是进入“经典伦理如何转化为改善民生和行政的具体制度？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持丁若镛条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-近代经学与改革",
+      "label": "社会秩序",
+      "explanation": "在康有为所属的思想语境中，“社会秩序”是进入“经典解释如何为制度改革和世界共同体提供方向？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持康有为条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-近代政治思想",
+      "label": "社会秩序",
+      "explanation": "在梁启超所属的思想语境中，“社会秩序”是进入“现代国家的公民主体如何由教育和公共讨论塑造？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持梁启超条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-日本伦理学",
+      "label": "社会秩序",
+      "explanation": "在和辻哲郎所属的思想语境中，“社会秩序”是进入“个人与共同体如何共同构成伦理主体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言",
+          "claim": "支持和辻哲郎条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代新儒家",
+      "label": "社会秩序",
+      "explanation": "在梁漱溟所属的思想语境中，“社会秩序”是进入“不同文明的生活取向如何回应现代性的共同困境？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持梁漱溟条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-正理派",
+      "label": "社会秩序",
+      "explanation": "在阇衍多所属的思想语境中，“社会秩序”是进入“哲学论辩如何在多传统社会中判断证据与权威？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持阇衍多条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-锡克思想",
+      "label": "社会秩序",
+      "explanation": "在古鲁那纳克所属的思想语境中，“社会秩序”是进入“平等的共同生活如何从对唯一神圣实在的体认中建立？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持古鲁那纳克条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-近代印度改革思想",
+      "label": "社会秩序",
+      "explanation": "在罗姆摩罕·罗伊所属的思想语境中，“社会秩序”是进入“宗教传统如何在理性批判与社会改革中更新？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持罗姆摩罕·罗伊条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代印度人文思想",
+      "label": "社会秩序",
+      "explanation": "在泰戈尔所属的思想语境中，“社会秩序”是进入“自由教育如何连接个人创造、自然与世界文化？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持泰戈尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代吠檀多",
+      "label": "社会秩序",
+      "explanation": "在维韦卡南达所属的思想语境中，“社会秩序”是进入“精神解脱如何与服务社会和人类团结相结合？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持维韦卡南达条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-反种姓与宪政思想",
+      "label": "社会秩序",
+      "explanation": "在安贝德卡尔所属的思想语境中，“社会秩序”是进入“形式平等如何转化为反对种姓压迫的社会民主？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持安贝德卡尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-历史与社会思想",
+      "label": "社会秩序",
+      "explanation": "在伊本·赫勒敦所属的思想语境中，“社会秩序”是进入“王朝、城市和知识制度为何呈现可解释的兴衰模式？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持伊本·赫勒敦条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-犹太启蒙思想",
+      "label": "社会秩序",
+      "explanation": "在摩西·门德尔松所属的思想语境中，“社会秩序”是进入“国家权力能否强制信念与宗教判断？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-jewish-philosophy",
+          "locator": "对应人物与时期专章",
+          "claim": "支持摩西·门德尔松条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-巴哈伊思想",
+      "label": "社会秩序",
+      "explanation": "在巴哈欧拉所属的思想语境中，“社会秩序”是进入“多样宗教与民族如何被理解为共同历史中的统一人类？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持巴哈欧拉条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代伊斯兰思想",
+      "label": "社会秩序",
+      "explanation": "在法兹鲁尔·拉赫曼所属的思想语境中，“社会秩序”是进入“经典启示如何在现代社会产生负责任的新判断？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持法兹鲁尔·拉赫曼条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代伊朗政治思想",
+      "label": "社会秩序",
+      "explanation": "在阿里·沙里亚蒂所属的思想语境中，“社会秩序”是进入“宗教传统如何转化为反压迫和社会变革的语言？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持阿里·沙里亚蒂条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊斯兰女性主义",
+      "label": "社会秩序",
+      "explanation": "在莱拉·艾哈迈德所属的思想语境中，“社会秩序”是进入“殖民权力与本土父权如何共同塑造关于穆斯林女性的叙述？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持莱拉·艾哈迈德条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-前苏格拉底哲学",
+      "label": "社会秩序",
+      "explanation": "在泰勒斯所属的思想语境中，“社会秩序”是进入“自然现象能否由世界内部的共同原理解释？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持泰勒斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-罗马哲学",
+      "label": "社会秩序",
+      "explanation": "在西塞罗所属的思想语境中，“社会秩序”是进入“哲学德性如何服务法律、友谊和共和国？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持西塞罗条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-斯多亚学派",
+      "label": "社会秩序",
+      "explanation": "在塞涅卡所属的思想语境中，“社会秩序”是进入“人在权力、财富和死亡面前如何保持内在自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持塞涅卡条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-晚期古代哲学",
+      "label": "社会秩序",
+      "explanation": "在希帕提娅所属的思想语境中，“社会秩序”是进入“数学、天文学与哲学教育如何共同训练理性？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持希帕提娅条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-中世纪政治思想",
+      "label": "社会秩序",
+      "explanation": "在克里斯蒂娜·德·皮桑所属的思想语境中，“社会秩序”是进入“贬抑女性的知识传统如何由历史反例和理性论证加以反驳？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持克里斯蒂娜·德·皮桑条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-文艺复兴人文主义",
+      "label": "社会秩序",
+      "explanation": "在伊拉斯谟所属的思想语境中，“社会秩序”是进入“文本校勘与教育如何推动宗教和社会改革？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持伊拉斯谟条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-自由主义与功利主义",
+      "label": "社会秩序",
+      "explanation": "在约翰·斯图亚特·密尔所属的思想语境中，“社会秩序”是进入“社会何时可以正当地限制个人自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持约翰·斯图亚特·密尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-古埃及智慧传统",
+      "label": "社会秩序",
+      "explanation": "在普塔霍特普所属的思想语境中，“社会秩序”是进入“良好治理和日常交往如何体现正义秩序？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持普塔霍特普条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-廷巴克图学术传统",
+      "label": "社会秩序",
+      "explanation": "在艾哈迈德·巴巴所属的思想语境中，“社会秩序”是进入“学术与法律判断如何面对政治强制和奴役实践？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持艾哈迈德·巴巴条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-泛非思想",
+      "label": "社会秩序",
+      "explanation": "在爱德华·布莱登所属的思想语境中，“社会秩序”是进入“殖民教育如何影响非洲人的文化主体性？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持爱德华·布莱登条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-西非政治思想",
+      "label": "社会秩序",
+      "explanation": "在詹姆斯·霍顿所属的思想语境中，“社会秩序”是进入“种族主义伪科学如何由经验和政治论证反驳？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持詹姆斯·霍顿条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-黑人性与人文主义",
+      "label": "社会秩序",
+      "explanation": "在利奥波德·桑戈尔所属的思想语境中，“社会秩序”是进入“被殖民者如何肯定自身文化而不封闭于本质主义？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持利奥波德·桑戈尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-泛非主义",
+      "label": "社会秩序",
+      "explanation": "在夸梅·恩克鲁玛所属的思想语境中，“社会秩序”是进入“非洲社会如何综合多重传统并完成去殖民化？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持夸梅·恩克鲁玛条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲历史思想",
+      "label": "社会秩序",
+      "explanation": "在谢赫·安塔·迪奥普所属的思想语境中，“社会秩序”是进入“非洲历史如何摆脱殖民知识体系的断裂叙述？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持谢赫·安塔·迪奥普条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-反殖民政治思想",
+      "label": "社会秩序",
+      "explanation": "在阿米尔卡·卡布拉尔所属的思想语境中，“社会秩序”是进入“反殖民解放如何同时改变经济结构和文化主体性？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持阿米尔卡·卡布拉尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲宗教哲学",
+      "label": "社会秩序",
+      "explanation": "在约翰·姆比蒂所属的思想语境中，“社会秩序”是进入“非洲宗教观如何理解人格、时间和共同体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持约翰·姆比蒂条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-当代非洲哲学",
+      "label": "社会秩序",
+      "explanation": "在夸西·维雷杜所属的思想语境中，“社会秩序”是进入“哲学概念如何摆脱殖民语言带来的误导？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持夸西·维雷杜条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲女性主义",
+      "label": "社会秩序",
+      "explanation": "在伊菲·阿马迪乌梅所属的思想语境中，“社会秩序”是进入“西方性别范畴能否直接解释非洲社会组织？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持伊菲·阿马迪乌梅条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-后殖民思想",
+      "label": "社会秩序",
+      "explanation": "在阿希尔·姆本贝所属的思想语境中，“社会秩序”是进入“主权如何通过决定谁可生存、谁被置于死亡风险中运作？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持阿希尔·姆本贝条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲性别思想",
+      "label": "社会秩序",
+      "explanation": "在奥耶龙克·奥耶乌米所属的思想语境中，“社会秩序”是进入“身体性别为何不应被视为所有社会的首要分类？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持奥耶龙克·奥耶乌米条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-纳瓦思想传统",
+      "label": "社会秩序",
+      "explanation": "在内萨瓦尔科约特尔所属的思想语境中，“社会秩序”是进入“短暂生命中何种言说能够接近真实并留下共同记忆？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持内萨瓦尔科约特尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-安第斯殖民批判",
+      "label": "社会秩序",
+      "explanation": "在瓜曼·波马所属的思想语境中，“社会秩序”是进入“殖民统治如何从被征服者的历史与伦理视角接受审判？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持瓜曼·波马条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-新西班牙思想",
+      "label": "社会秩序",
+      "explanation": "在胡安娜修女所属的思想语境中，“社会秩序”是进入“女性为何有权接受教育并参与知识共同体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持胡安娜修女条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-超验主义",
+      "label": "社会秩序",
+      "explanation": "在爱默生所属的思想语境中，“社会秩序”是进入“个体如何在传统与社会从众压力中形成独立判断？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持爱默生条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-超验主义与公民不服从",
+      "label": "社会秩序",
+      "explanation": "在梭罗所属的思想语境中，“社会秩序”是进入“个人良知何时应拒绝服从不正义国家？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持梭罗条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-废奴与自由思想",
+      "label": "社会秩序",
+      "explanation": "在弗雷德里克·道格拉斯所属的思想语境中，“社会秩序”是进入“奴役制度如何通过知识控制摧毁人格与自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持弗雷德里克·道格拉斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-实用主义",
+      "label": "社会秩序",
+      "explanation": "在杜威所属的思想语境中，“社会秩序”是进入“民主为何不仅是制度，也是一种共同生活方式？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持杜威条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-哈莱姆文艺复兴思想",
+      "label": "社会秩序",
+      "explanation": "在阿兰·洛克所属的思想语境中，“社会秩序”是进入“群体文化如何在民主社会中获得承认而不被固定化？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持阿兰·洛克条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-拉丁美洲马克思主义",
+      "label": "社会秩序",
+      "explanation": "在何塞·卡洛斯·马里亚特吉所属的思想语境中，“社会秩序”是进入“社会主义理论如何回应安第斯土地与原住民现实？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持何塞·卡洛斯·马里亚特吉条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-加勒比马克思主义",
+      "label": "社会秩序",
+      "explanation": "在C. L. R. 詹姆斯所属的思想语境中，“社会秩序”是进入“殖民革命如何由普通人的集体行动推动？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持C. L. R. 詹姆斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-反殖民思想",
+      "label": "社会秩序",
+      "explanation": "在艾梅·塞泽尔所属的思想语境中，“社会秩序”是进入“殖民主义如何同时损害被殖民者和殖民社会？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持艾梅·塞泽尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-加勒比关系哲学",
+      "label": "社会秩序",
+      "explanation": "在爱德华·格利桑所属的思想语境中，“社会秩序”是进入“文化身份如何在迁徙、混杂和不可透明性中形成？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持爱德华·格利桑条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-殖民性理论",
+      "label": "社会秩序",
+      "explanation": "在阿尼巴尔·基哈诺所属的思想语境中，“社会秩序”是进入“殖民统治结束后，种族与知识等级为何仍持续？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持阿尼巴尔·基哈诺条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-北美原住民思想",
+      "label": "社会秩序",
+      "explanation": "在瓦因·德洛里亚所属的思想语境中，“社会秩序”是进入“知识、宗教与政治责任如何扎根于具体土地关系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-indigenous-philosophy",
+          "locator": "相关传统、人物与政治哲学专章",
+          "claim": "支持瓦因·德洛里亚条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-批判理论与废除主义",
+      "label": "社会秩序",
+      "explanation": "在安吉拉·戴维斯所属的思想语境中，“社会秩序”是进入“如何超越监禁制度而处理暴力、责任与社会安全？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持安吉拉·戴维斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-去殖民女性主义",
+      "label": "社会秩序",
+      "explanation": "在玛丽亚·卢戈内斯所属的思想语境中，“社会秩序”是进入“殖民权力如何重塑性别、种族和劳动关系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-latin-american-philosophy",
+          "locator": "对应人物、国家传统与论题专章",
+          "claim": "支持玛丽亚·卢戈内斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-实用主义与种族思想",
+      "label": "社会秩序",
+      "explanation": "在科内尔·韦斯特所属的思想语境中，“社会秩序”是进入“民主批判如何结合历史苦难、宗教希望和公共行动？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持科内尔·韦斯特条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-毛利非暴力政治思想",
+      "label": "社会秩序",
+      "explanation": "在蒂·怀蒂·奥·龙戈迈所属的思想语境中，“社会秩序”是进入“面对殖民夺地，政治共同体如何以非暴力维护土地关系？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-indigenous-philosophy",
+          "locator": "相关传统、人物与政治哲学专章",
+          "claim": "支持蒂·怀蒂·奥·龙戈迈条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-菲律宾反殖民思想",
+      "label": "社会秩序",
+      "explanation": "在黎刹所属的思想语境中，“社会秩序”是进入“殖民压迫如何通过教育、小说和历史批判被揭露？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持黎刹条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-菲律宾政治思想",
+      "label": "社会秩序",
+      "explanation": "在马比尼所属的思想语境中，“社会秩序”是进入“民族独立如何转化为负责任的共和制度？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持马比尼条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-印度尼西亚教育思想",
+      "label": "社会秩序",
+      "explanation": "在基·哈查尔·德万托罗所属的思想语境中，“社会秩序”是进入“殖民教育如何转化为民族自主和人格成长？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持基·哈查尔·德万托罗条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-泰国政治思想",
+      "label": "社会秩序",
+      "explanation": "在比里·帕侬荣所属的思想语境中，“社会秩序”是进入“宪政改革如何与经济正义和国家独立相结合？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持比里·帕侬荣条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-泰国佛教现代主义",
+      "label": "社会秩序",
+      "explanation": "在佛使比丘所属的思想语境中，“社会秩序”是进入“佛教解脱如何转化为面向现代社会的日常实践？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持佛使比丘条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-政治思想与流亡经验",
+      "label": "社会秩序",
+      "explanation": "在朱迪思·施克拉所属的思想语境中，“社会秩序”是进入“政治制度首先应避免哪一种可预见的恶？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持朱迪思·施克拉条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-殖民知识批判",
+      "label": "社会秩序",
+      "explanation": "在赛义德·侯赛因·阿拉塔斯所属的思想语境中，“社会秩序”是进入“殖民知识如何把支配秩序伪装成关于被殖民者的事实？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-southeast-asian-thinkers",
+          "locator": "相关国家、思想运动与人物专章",
+          "claim": "支持赛义德·侯赛因·阿拉塔斯条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-文化研究",
+      "label": "社会秩序",
+      "explanation": "在斯图亚特·霍尔所属的思想语境中，“社会秩序”是进入“文化身份与政治联盟如何在历史条件中被暂时连接？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-cultural-studies-reader",
+          "locator": "对应作者选文及编者导言",
+          "claim": "支持斯图亚特·霍尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-太平洋思想",
+      "label": "社会秩序",
+      "explanation": "在埃佩利·豪奥法所属的思想语境中，“社会秩序”是进入“太平洋岛屿为何不应被想象成孤立而微小？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-indigenous-philosophy",
+          "locator": "相关传统、人物与政治哲学专章",
+          "claim": "支持埃佩利·豪奥法条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-科学技术研究",
+      "label": "社会秩序",
+      "explanation": "在布鲁诺·拉图尔所属的思想语境中，“社会秩序”是进入“科学事实如何在人员、仪器、文本与制度的网络中稳定？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-handbook-science-technology-studies",
+          "locator": "行动者网络、女性主义科学研究与相关作者专章",
+          "claim": "支持布鲁诺·拉图尔条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-世界主义与身份哲学",
+      "label": "社会秩序",
+      "explanation": "在夸梅·安东尼·阿皮亚所属的思想语境中，“社会秩序”是进入“全球责任如何与地方身份和文化差异共存？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持夸梅·安东尼·阿皮亚条目中“社会秩序”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "mozi",
+    "protagoras",
+    "jeremy-bentham",
+    "charles-w-mills",
+    "martha-nussbaum",
+    "mencius",
+    "xunzi",
+    "han-fei",
+    "dong-zhongshu",
+    "huiyuan",
+    "han-yu",
+    "ogyu-sorai",
+    "jeong-yak-yong",
+    "kang-youwei",
+    "liang-qichao",
+    "watsuji-tetsuro",
+    "liang-shuming",
+    "jayanta-bhatta",
+    "guru-nanak",
+    "rammohan-roy",
+    "rabindranath-tagore",
+    "swami-vivekananda",
+    "b-r-ambedkar",
+    "ibn-khaldun",
+    "moses-mendelssohn",
+    "bahaullah",
+    "fazlur-rahman",
+    "ali-shariati",
+    "leila-ahmed",
+    "thales",
+    "heraclitus",
+    "cicero",
+    "seneca",
+    "hypatia",
+    "christine-de-pizan",
+    "erasmus",
+    "john-stuart-mill",
+    "ptahhotep",
+    "ahmad-baba",
+    "edward-wilmot-blyden",
+    "africanus-horton",
+    "leopold-sedar-senghor",
+    "kwame-nkrumah",
+    "cheikh-anta-diop",
+    "amilcar-cabral",
+    "john-mbiti",
+    "kwasi-wiredu",
+    "ifi-amadiume",
+    "achille-mbembe",
+    "oyeronke-oyewumi",
+    "nezahualcoyotl",
+    "felipe-guaman-poma",
+    "sor-juana-ines-de-la-cruz",
+    "ralph-waldo-emerson",
+    "henry-david-thoreau",
+    "frederick-douglass",
+    "john-dewey",
+    "alain-locke",
+    "jose-carlos-mariategui",
+    "c-l-r-james",
+    "aime-cesaire",
+    "edouard-glissant",
+    "anibal-quijano",
+    "vine-deloria-jr",
+    "angela-davis",
+    "maria-lugones",
+    "cornel-west",
+    "te-whiti-o-rongomai",
+    "jose-rizal",
+    "apolinario-mabini",
+    "ki-hajar-dewantara",
+    "pridi-banomyong",
+    "buddhadasa-bhikkhu",
+    "judith-shklar",
+    "syed-hussein-alatas",
+    "stuart-hall",
+    "epeli-hauofa",
+    "bruno-latour",
+    "kwame-anthony-appiah"
+  ],
+  "workIds": [
+    "mozi-text",
+    "protagoras-testimonia",
+    "principles-morals-legislation",
+    "racial-contract",
+    "frontiers-justice",
+    "mencius-text",
+    "xunzi-text",
+    "han-feizi",
+    "chunqiu-fanlu",
+    "monk-not-bow",
+    "yuan-dao",
+    "bendo",
+    "mongmin-simseo",
+    "datong-shu",
+    "xinmin-shuo",
+    "ethics-watsuji",
+    "eastern-western-cultures",
+    "nyaya-manjari",
+    "guru-granth-nanak",
+    "precepts-jesus-roy",
+    "religion-man",
+    "jnana-yoga",
+    "annihilation-caste",
+    "muqaddimah",
+    "jerusalem-mendelssohn",
+    "kitab-i-iqan",
+    "islam-modernity",
+    "red-shiism",
+    "women-gender-islam",
+    "thales-testimonia",
+    "heraclitus-fragments",
+    "on-duties",
+    "letters-lucilius",
+    "hypatia-testimonia",
+    "book-city-ladies",
+    "praise-folly",
+    "on-liberty",
+    "maxims-ptahhotep",
+    "ahmad-baba-mi-raj",
+    "christianity-islam-negro-race",
+    "west-african-countries-peoples",
+    "liberte-senghor",
+    "consciencism",
+    "african-origin-civilization",
+    "return-source-cabral",
+    "african-religions-philosophy",
+    "cultural-universals-particulars",
+    "male-daughters-female-husbands",
+    "necropolitics",
+    "invention-women",
+    "cantares-mexicanos",
+    "new-chronicle-good-government",
+    "reply-sor-filotea",
+    "essays-emerson",
+    "civil-disobedience",
+    "narrative-douglass",
+    "public-problems",
+    "new-negro",
+    "seven-essays-peru",
+    "black-jacobins",
+    "discourse-colonialism",
+    "poetics-relation",
+    "coloniality-power",
+    "god-is-red",
+    "are-prisons-obsolete",
+    "colonial-modern-gender",
+    "race-matters",
+    "parihaka-records",
+    "noli-me-tangere",
+    "true-decalogue",
+    "taman-siswa-principles",
+    "pridi-economic-plan",
+    "handbook-mankind",
+    "liberalism-fear",
+    "myth-lazy-native",
+    "representation-hall",
+    "our-sea-islands",
+    "we-have-never-modern",
+    "cosmopolitanism-appiah"
+  ],
+  "traditionIds": [
+    "tradition-墨家",
+    "tradition-智者学派",
+    "tradition-功利主义",
+    "tradition-种族契约论",
+    "tradition-伦理与能力进路",
+    "tradition-儒家",
+    "tradition-法家",
+    "tradition-汉代儒学",
+    "tradition-中国佛教",
+    "tradition-儒学复兴",
+    "tradition-日本古学",
+    "tradition-朝鲜实学",
+    "tradition-近代经学与改革",
+    "tradition-近代政治思想",
+    "tradition-日本伦理学",
+    "tradition-现代新儒家",
+    "tradition-正理派",
+    "tradition-锡克思想",
+    "tradition-近代印度改革思想",
+    "tradition-现代印度人文思想",
+    "tradition-现代吠檀多",
+    "tradition-反种姓与宪政思想",
+    "tradition-历史与社会思想",
+    "tradition-犹太启蒙思想",
+    "tradition-巴哈伊思想",
+    "tradition-现代伊斯兰思想",
+    "tradition-现代伊朗政治思想",
+    "tradition-伊斯兰女性主义",
+    "tradition-前苏格拉底哲学",
+    "tradition-罗马哲学",
+    "tradition-斯多亚学派",
+    "tradition-晚期古代哲学",
+    "tradition-中世纪政治思想",
+    "tradition-文艺复兴人文主义",
+    "tradition-自由主义与功利主义",
+    "tradition-古埃及智慧传统",
+    "tradition-廷巴克图学术传统",
+    "tradition-泛非思想",
+    "tradition-西非政治思想",
+    "tradition-黑人性与人文主义",
+    "tradition-泛非主义",
+    "tradition-非洲历史思想",
+    "tradition-反殖民政治思想",
+    "tradition-非洲宗教哲学",
+    "tradition-当代非洲哲学",
+    "tradition-非洲女性主义",
+    "tradition-后殖民思想",
+    "tradition-非洲性别思想",
+    "tradition-纳瓦思想传统",
+    "tradition-安第斯殖民批判",
+    "tradition-新西班牙思想",
+    "tradition-超验主义",
+    "tradition-超验主义与公民不服从",
+    "tradition-废奴与自由思想",
+    "tradition-实用主义",
+    "tradition-哈莱姆文艺复兴思想",
+    "tradition-拉丁美洲马克思主义",
+    "tradition-加勒比马克思主义",
+    "tradition-反殖民思想",
+    "tradition-加勒比关系哲学",
+    "tradition-殖民性理论",
+    "tradition-北美原住民思想",
+    "tradition-批判理论与废除主义",
+    "tradition-去殖民女性主义",
+    "tradition-实用主义与种族思想",
+    "tradition-毛利非暴力政治思想",
+    "tradition-菲律宾反殖民思想",
+    "tradition-菲律宾政治思想",
+    "tradition-印度尼西亚教育思想",
+    "tradition-泰国政治思想",
+    "tradition-泰国佛教现代主义",
+    "tradition-政治思想与流亡经验",
+    "tradition-殖民知识批判",
+    "tradition-文化研究",
+    "tradition-太平洋思想",
+    "tradition-科学技术研究",
+    "tradition-世界主义与身份哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy",
+    "src-routledge-encyclopedia-philosophy",
+    "src-companion-american-philosophy",
+    "src-japanese-philosophy-sourcebook",
+    "src-encyclopedia-indian-philosophies",
+    "src-history-islamic-philosophy",
+    "src-history-jewish-philosophy",
+    "src-companion-african-philosophy",
+    "src-companion-latin-american-philosophy",
+    "src-routledge-indigenous-philosophy",
+    "src-routledge-southeast-asian-thinkers",
+    "src-cultural-studies-reader",
+    "src-handbook-science-technology-studies"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持墨子条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持普罗泰戈拉条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章",
+      "claim": "支持查尔斯·米尔斯条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言",
+      "claim": "支持荻生徂徕条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持阇衍多条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持伊本·赫勒敦条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章",
+      "claim": "支持摩西·门德尔松条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持普塔霍特普条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-latin-american-philosophy",
+      "locator": "对应人物、国家传统与论题专章",
+      "claim": "支持内萨瓦尔科约特尔条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-indigenous-philosophy",
+      "locator": "相关传统、人物与政治哲学专章",
+      "claim": "支持瓦因·德洛里亚条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章",
+      "claim": "支持黎刹条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-cultural-studies-reader",
+      "locator": "对应作者选文及编者导言",
+      "claim": "支持斯图亚特·霍尔条目中“社会秩序”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-handbook-science-technology-studies",
+      "locator": "行动者网络、女性主义科学研究与相关作者专章",
+      "claim": "支持布鲁诺·拉图尔条目中“社会秩序”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

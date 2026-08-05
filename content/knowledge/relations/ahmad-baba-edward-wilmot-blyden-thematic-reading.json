@@ -1,0 +1,38 @@
+{
+  "id": "ahmad-baba-edward-wilmot-blyden-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "ahmad-baba"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "edward-wilmot-blyden"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "艾哈迈德·巴巴与爱德华·布莱登都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调以马立克法学论证学者责任、正当统治与自由身份，反对把肤色直接作为奴役依据。；后者强调非洲社会应以自身历史、宗教和制度资源抵抗欧洲中心主义并建立自主教育。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持艾哈迈德·巴巴一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持爱德华·布莱登一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

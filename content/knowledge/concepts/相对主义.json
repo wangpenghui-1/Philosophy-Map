@@ -1,1 +1,51 @@
-{"id":"concept-相对主义","slug":"相对主义","entityType":"concept","name":"相对主义","originalTerms":["relativism"],"summary":"在普罗泰戈拉的讨论中，相对主义首先关心判断怎样随判断者的处境而显现，并不自动推出所有主张同样好、同样可信。教育、后果和公共论辩仍会引入比较。","senses":[{"traditionId":"tradition-智者学派","label":"相对主义","explanation":"“人是尺度”使判断与人的经验相连。柏拉图的批评迫使这一立场说明：在没有完全超越判断者的尺度时，何以还能区分较好、较坏和较有益的意见。","citations":[{"sourceId":"src-protagoras-testimonia","locator":"DK 80B1; Plato, Theaetetus 166d–167d","claim":"支持尺度命题和较好/较坏意见的转述。"}]}],"personIds":["protagoras"],"workIds":["protagoras-testimonia"],"traditionIds":["tradition-智者学派"],"sourceIds":["src-routledge-encyclopedia-philosophy","src-protagoras-testimonia"],"citations":[{"sourceId":"src-routledge-encyclopedia-philosophy","locator":"Protagoras entry: relativism","claim":"支持对相对主义的解释边界。"}],"contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"不把该词写成“什么都可以”的口号。"}
+{
+  "id": "concept-相对主义",
+  "slug": "相对主义",
+  "entityType": "concept",
+  "name": "相对主义",
+  "originalTerms": [
+    "relativism"
+  ],
+  "summary": "在普罗泰戈拉的讨论中，相对主义首先关心判断怎样随判断者的处境而显现，并不自动推出所有主张同样好、同样可信。教育、后果和公共论辩仍会引入比较。",
+  "senses": [
+    {
+      "traditionId": "tradition-智者学派",
+      "label": "相对主义",
+      "explanation": "“人是尺度”使判断与人的经验相连。柏拉图的批评迫使这一立场说明：在没有完全超越判断者的尺度时，何以还能区分较好、较坏和较有益的意见。",
+      "citations": [
+        {
+          "sourceId": "src-protagoras-testimonia",
+          "locator": "DK 80B1; Plato, Theaetetus 166d–167d",
+          "claim": "支持尺度命题和较好/较坏意见的转述。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "protagoras"
+  ],
+  "workIds": [
+    "protagoras-testimonia"
+  ],
+  "traditionIds": [
+    "tradition-智者学派"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy",
+    "src-protagoras-testimonia"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "Protagoras entry: relativism",
+      "claim": "支持对相对主义的解释边界。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "不把该词写成“什么都可以”的口号。"
+}

@@ -1,1 +1,52 @@
-{"id":"concept-语言游戏","slug":"语言游戏","entityType":"concept","name":"语言游戏","originalTerms":["Sprachspiel","language-game"],"summary":"语言游戏是维特根斯坦用来观察语言多样用途的概念：命名、请求、计数、玩笑、祈祷等活动各有规则和训练。词的意义要在这些使用中看，而不先假定一种共同本质。","senses":[{"traditionId":"tradition-分析哲学","label":"语言游戏","explanation":"语言游戏把说话同具体行动连在一起。它不是任意游戏，也不表示语言没有标准；规则、回应和训练构成理解某种说法的条件。","citations":[{"sourceId":"src-wittgenstein-investigations-anscombe","locator":"§§7, 19, 23, 43","claim":"支持语言游戏与意义即使用的原典定位。"}]}],"personIds":["wittgenstein"],"workIds":["philosophical-investigations"],"traditionIds":["tradition-分析哲学"],"sourceIds":["src-wittgenstein","src-wittgenstein-investigations-anscombe"],"citations":[{"sourceId":"src-wittgenstein","locator":"Sections 3.2–3.4","claim":"支持语言游戏、使用和家族相似的解释。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"不把语言游戏解释为语言完全任意。"}
+{
+  "id": "concept-语言游戏",
+  "slug": "语言游戏",
+  "entityType": "concept",
+  "name": "语言游戏",
+  "originalTerms": [
+    "Sprachspiel",
+    "language-game"
+  ],
+  "summary": "语言游戏是维特根斯坦用来观察语言多样用途的概念：命名、请求、计数、玩笑、祈祷等活动各有规则和训练。词的意义要在这些使用中看，而不先假定一种共同本质。",
+  "senses": [
+    {
+      "traditionId": "tradition-分析哲学",
+      "label": "语言游戏",
+      "explanation": "语言游戏把说话同具体行动连在一起。它不是任意游戏，也不表示语言没有标准；规则、回应和训练构成理解某种说法的条件。",
+      "citations": [
+        {
+          "sourceId": "src-wittgenstein-investigations-anscombe",
+          "locator": "§§7, 19, 23, 43",
+          "claim": "支持语言游戏与意义即使用的原典定位。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "wittgenstein"
+  ],
+  "workIds": [
+    "philosophical-investigations"
+  ],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "sourceIds": [
+    "src-wittgenstein",
+    "src-wittgenstein-investigations-anscombe"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Sections 3.2–3.4",
+      "claim": "支持语言游戏、使用和家族相似的解释。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "不把语言游戏解释为语言完全任意。"
+}

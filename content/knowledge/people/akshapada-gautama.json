@@ -5,14 +5,18 @@
   "names": {
     "display": "乔达摩",
     "english": "Akshapada Gautama",
-    "aliases": []
+    "original": "अक्षपाद गौतम",
+    "aliases": [
+      "Akṣapāda Gautama",
+      "Gautama"
+    ]
   },
   "chronology": {
     "label": "约公元前200–公元200",
     "startYear": -200,
     "endYear": 200,
     "certainty": "disputed",
-    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+    "note": "这里的乔达摩是《正理经》的传统归属作者，不等同于佛陀乔达摩；人物年代和经文编定时间都无法精确确定。"
   },
   "primaryRegion": "南亚",
   "secondaryRegions": [],
@@ -20,14 +24,17 @@
     "tradition-正理派"
   ],
   "conceptIds": [
-    "concept-正理推论"
+    "concept-知识手段",
+    "concept-正理推论",
+    "concept-证言"
   ],
   "questionIds": [
-    "knowledge"
+    "knowledge",
+    "good-life"
   ],
-  "guidingQuestion": "可靠知识的来源和有效推论应如何辨别？",
-  "thesis": "正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。",
-  "summary": "乔达摩是南亚正理派的重要思想人物，主要追问“可靠知识的来源和有效推论应如何辨别？”。其思想以“正理推论”为入口，主张正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。",
+  "guidingQuestion": "可靠知识从哪里来，怀疑出现以后又该怎样检验？",
+  "thesis": "知识要追溯到知觉、推论、类比或证言等可靠过程；怀疑要求继续考察，却不必把所有认识一概推翻。",
+  "summary": "传统把《正理经》归于乔达摩。这部经把知觉、推论、类比和证言列为四种知识手段，并讨论怀疑、论证与论辩怎样帮助人分辨真知、错误和似是而非的理由，最终把认识的成功与摆脱痛苦联系起来。",
   "workIds": [
     "nyaya-sutra"
   ],
@@ -38,47 +45,131 @@
     }
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-gautama-nyaya-sutra-gangopadhyaya",
+    "src-nyaya-iep",
+    "src-epistemology-india-sep"
   ],
   "citations": [
     {
-      "sourceId": "src-encyclopedia-indian-philosophies",
-      "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-      "claim": "支持乔达摩的身份、思想主张与历史语境概述。"
+      "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+      "locator": "Nyāya-sūtra 1.1.1–1.1.8; 1.1.32–1.1.40; 2.1.7",
+      "claim": "支持十六论题、四种知识手段、论证结构和怀疑后继续考察等原典定位。"
+    },
+    {
+      "sourceId": "src-nyaya-iep",
+      "locator": "Introduction; Sections 1.a–1.e",
+      "claim": "支持《正理经》的传统归属、早期正理派认识论及其后续注释传统概述。"
+    },
+    {
+      "sourceId": "src-epistemology-india-sep",
+      "locator": "Sections 3–6: knowledge sources, perception, inference and testimony",
+      "claim": "支持正理派关于知觉、推论、怀疑与证言的解释及主要学术争论。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "knowledge-sources",
+      "heading": "知道一件事，要追问它从哪里来",
       "paragraphs": [
         {
-          "text": "乔达摩是南亚正理派的重要思想人物，主要追问“可靠知识的来源和有效推论应如何辨别？”。其思想以“正理推论”为入口，主张正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。",
+          "text": "《正理经》开篇列出十六项论题，第一项就是知识手段。这个次序表明，正理派并不满足于问一个命题是否听起来可信，还要追查认知是怎样产生的。经文承认四种基本来源：知觉让对象直接进入经验，推论使人从已知迹象把握未直接看见的事，类比帮助人借相似关系认识新对象，证言则让可靠说话者的知识传给听者。四者不是四种意见，而是能够在适当条件下产生真知的过程。",
           "citations": [
             {
-              "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-              "claim": "支持乔达摩的身份、思想主张与历史语境概述。"
+              "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+              "locator": "Nyāya-sūtra 1.1.1–1.1.3",
+              "claim": "支持十六论题以知识手段开篇，以及四种知识手段的列举。"
+            },
+            {
+              "sourceId": "src-nyaya-iep",
+              "locator": "Section 1: Epistemology, opening paragraphs",
+              "claim": "支持知识手段既产生可靠认识，也在哲学争论中承担检验作用的说明。"
             }
           ]
         },
         {
-          "text": "核心问题：可靠知识的来源和有效推论应如何辨别？",
+          "text": "知觉并不等于眼前出现任何印象。《正理经》1.1.4把它联系到感官与对象的接触，并要求认知不偏离对象、能够确定对象。把贝壳误看成银子，或在黄昏中拿不准远处是人还是树桩，都不能算已经获得真知。这种分析把错误和怀疑留在认识活动内部：人确实会看错、会迟疑，但可以比较认知过程、对象条件和后来出现的反证，判断某次经验是否真由可靠知觉产生。",
           "citations": [
             {
-              "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-              "claim": "支持对乔达摩核心问题的概括。"
+              "sourceId": "src-nyaya-iep",
+              "locator": "Section 1.a.i; Nyāya-sūtra 1.1.4",
+              "claim": "支持知觉的感官—对象条件，以及用贝壳似银和远处人影区分错误、怀疑与确定认识的解释。"
+            },
+            {
+              "sourceId": "src-epistemology-india-sep",
+              "locator": "Section 4; Nyāya-sūtra 4.2.26–36",
+              "claim": "支持早期正理派对知觉内容及其与错误、概念活动关系的讨论。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inference-testimony",
+      "heading": "推论和证言为何也能带来知识",
+      "paragraphs": [
+        {
+          "text": "正理推论常用“山上有烟，所以那里有火”说明。一个面向他人的完整论证依次提出主张、理由、双方接受的例子、把普遍联系应用到当前对象，最后重申结论。五个环节的作用不是把每次思考都套进格式，而是把隐藏的前提摊开，让听者检查烟与火是否真的稳定相随、例子是否适用、理由有没有被反例击破。正理派也因此把谬因、曲解和只求击败对方的争辩列为需要辨认的对象。",
+          "citations": [
+            {
+              "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+              "locator": "Nyāya-sūtra 1.1.5; 1.1.32–1.1.39",
+              "claim": "支持推论定义及面向他人的五支论证结构。"
+            },
+            {
+              "sourceId": "src-nyaya-iep",
+              "locator": "Section 1.b: Inference; discussion of the five-step argument",
+              "claim": "支持烟火例证、遍充关系、共同实例及谬因在正理推论中的作用。"
             }
           ]
         },
         {
-          "text": "核心主张：正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。",
+          "text": "证言被单列为知识手段，是因为听懂一句可靠陈述，不必先在心里另做一次完整推论。《正理经》1.1.7把证言界定为可信者的陈述；后来的注释进一步要求说话者知道所说之事，并愿意如实传达。这里的可信不是身份带来的永久特权。说话者可能只在某件事上有资格作证，听者也要理解语言；一旦出现欺骗、无知或其他反证，原有信任就需要重新审查。正理派由此说明了人为什么能够知道自己没有亲眼见过的大量事实。",
           "citations": [
             {
-              "sourceId": "src-encyclopedia-indian-philosophies",
-              "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-              "claim": "支持对乔达摩核心主张的概括。"
+              "sourceId": "src-epistemology-india-sep",
+              "locator": "Section 6; Nyāya-sūtra 1.1.7 and Vātsyāyana's commentary",
+              "claim": "支持证言作为独立知识来源、可信说话者及如实传达条件的说明。"
+            },
+            {
+              "sourceId": "src-nyaya-iep",
+              "locator": "Section 1.d: Testimony",
+              "claim": "支持证言不同于推论，以及说话者、听者和反证条件的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doubt-tradition",
+      "heading": "怀疑启动考察，而不是取消一切知识",
+      "paragraphs": [
+        {
+          "text": "正理派给怀疑留下明确位置，却不把全面怀疑当作哲学起点。《正理经》2.1.7说，有怀疑之处就应继续考察。日常认知在没有冲突迹象时可以先行工作；当同伴反对、证据不合或行动失败时，人再回头检查知觉条件、推论关系与证言来源。这不是盲目信任，因为反证会撤销原有资格；也不是要求每个信念先证明自身绝对无误，因为那会让任何调查都无法开始。知识检验因此与具体疑点相连。",
+          "citations": [
+            {
+              "sourceId": "src-nyaya-iep",
+              "locator": "Section 1.e.iv: Response to Skepticism; Nyāya-sūtra 2.1.7",
+              "claim": "支持怀疑触发复核、默认信任和反证撤销资格之间的关系。"
+            },
+            {
+              "sourceId": "src-epistemology-india-sep",
+              "locator": "Section 3: knowledge-source certification and doubt",
+              "claim": "支持认知受到挑战后需要辨认其来源并重新认证的说明。"
+            }
+          ]
+        },
+        {
+          "text": "《正理经》后来成为一个延续千年的讨论起点。阇衍多在《正理花簇》中扩展并捍卫旧正理的论证，恒伽沙则以《真理如意宝》开启新正理更精细的概念分析；佛教思想家陈那等人也迫使正理派重新说明知觉是否包含概念、推论怎样成立。这里说的是文本和学派的继承与争论，不是乔达摩同这些后世人物直接交往。经文由多层材料编成的可能性，也使我们不能把后世正理派的每一项理论都倒推为某一位历史作者的原意。",
+          "citations": [
+            {
+              "sourceId": "src-nyaya-iep",
+              "locator": "Introduction; Sections 1.a.i and 4.b",
+              "claim": "支持《正理经》的注释传统、阇衍多和恒伽沙在正理派发展中的位置，以及与佛教认识论的争论。"
+            },
+            {
+              "sourceId": "src-epistemology-india-sep",
+              "locator": "Sections 4–6: Nyāya, Buddhist perception, inference and testimony debates",
+              "claim": "支持正理派与佛教认识论围绕知觉、推论和证言展开长期争论的说明。"
             }
           ]
         }
@@ -96,14 +187,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图 AI 辅助艺术化人物形象"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "“阿克沙帕达·乔达摩”主要是《正理经》的传统作者名。文本大致形成于公元前后数世纪，确切年代、单一作者身份和编订层次都存在争论；条目只把经文中可定位的主张归入这一传统核心，不把后世注释家的发展全部算作乔达摩本人观点。",
   "color": "#d6a765",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第二位；补充知识手段、知觉、推论、证言、怀疑与正理派思想谱系，并明确传统归属和文本编订边界。"
 }

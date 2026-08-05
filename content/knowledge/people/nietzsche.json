@@ -48,7 +48,7 @@
     "translator": "Thomas Common",
     "translationNote": "尼采以德文写作；此处展示经核对的英文译文。"
   },
-  "summary": "尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。 本站以谱系、价值、视角为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "尼采不把善恶当作无历史的事实，而用谱系追问价值由哪些身体、情感和权力关系生成。他批判否定生命的道德与虚无主义，同时以视角主义、自我塑造和价值创造探索人在旧尺度失效后如何生活。",
   "workIds": [
     "genealogy-morality",
     "zarathustra"
@@ -61,47 +61,95 @@
   ],
   "sourceIds": [
     "src-nietzsche",
+    "src-nietzsche-genealogy-diethe",
     "src-nietzsche-zarathustra-primary"
   ],
   "citations": [
     {
       "sourceId": "src-nietzsche",
-      "locator": "Sections on genealogy, values, perspectivism and agency",
-      "claim": "支持尼采的摘要主张：尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道…"
+      "locator": "Sections 2–6 on morality, value creation, self-fashioning and key doctrines",
+      "claim": "支持谱系批判、价值创造、视角主义与自我塑造的总体思想结构。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "genealogy",
+      "heading": "价值也有历史",
       "paragraphs": [
         {
-          "text": "尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。 本站以谱系、价值、视角为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "尼采的谱系学不先问某条道德规则是否符合一个永恒标准，而是追问：谁在何种生活条件下提出它，它表达了怎样的情感与力量关系，又塑造出何种人。《论道德的谱系》通过“善与恶”“罪责”和苦行理想的历史，说明看似自然的价值其实经历了冲突、反转和重新命名。",
           "citations": [
             {
-              "sourceId": "src-nietzsche",
-              "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本段主张：尼采是1844–1900活跃于欧洲的生命哲学与谱系学思想人物，主要追问“价值从何而来，谁从既有的善恶判断中获益？”。其核心主张可概括为：价值具有历史和心理的生成过程；谱系追问道…"
+              "sourceId": "src-nietzsche-genealogy-diethe",
+              "locator": "Preface sections 3 and 6; First Essay sections 2–10; Second Essay sections 1–6",
+              "claim": "支持尼采追问道德价值的生成条件，以及从善恶、怨恨和罪责分析价值反转的说明。"
             }
           ]
         },
         {
-          "text": "核心问题：价值从何而来，谁从既有的善恶判断中获益？",
+          "text": "怨恨是这一分析中的关键机制：当行动能力长期受压抑，人可能把不能直接表达的敌意转化为道德优越感，把强者重新描述为邪恶，把自身无力描述为善。尼采不是简单赞美暴力或强者，而是在检验某种道德是否以否定、报复和压低生命可能性为动力。",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche-genealogy-diethe",
+              "locator": "First Essay sections 7–11",
+              "claim": "支持怨恨作为价值反转机制的原典依据；对其规范含义的限定结合学术研究判断。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perspectivism",
+      "heading": "视角不等于随便怎样都对",
+      "paragraphs": [
+        {
+          "text": "视角主义指出，认识总从特定身体、兴趣、语言和问题出发；不存在一个完全脱离位置的“上帝视角”。但这不意味着所有解释同样可靠。一个解释能否容纳更多证据、揭示被遮蔽的关系、经受反驳，并让我们从多个角度看见对象，仍然可以比较。承认视角，是提高解释责任而不是取消判断。",
           "citations": [
             {
               "sourceId": "src-nietzsche",
-              "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本段主张：核心问题：价值从何而来，谁从既有的善恶判断中获益？"
+              "locator": "Section 6.2 on perspectivism and Section 5 on philosophical writing",
+              "claim": "支持认识具有视角条件，同时不推出所有解释等价的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。",
+          "text": "尼采因此采用格言、寓言、谱系叙事和人物声音，而不是把哲学写成一个封闭体系。这些写法迫使读者辨认说话位置，也造成真实的解释困难：作品中戏剧性人物的发言、试探性假说和尼采自己的承诺不能自动画等号。阅读他需要同时比较文本时期、体裁与语境。",
           "citations": [
             {
               "sourceId": "src-nietzsche",
-              "locator": "Sections on genealogy, values, perspectivism and agency",
-              "claim": "支持本段主张：核心主张：价值具有历史和心理的生成过程；谱系追问道德判断背后的力量关系。"
+              "locator": "Section 5 on the difficulties of Nietzsche's philosophical writing",
+              "claim": "支持尼采多种写作体裁及其造成的解释边界。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nihilism-creation",
+      "heading": "旧价值失效以后怎样生活",
+      "paragraphs": [
+        {
+          "text": "“上帝死了”描述的不是一个生物学事件，而是传统最高价值在现代知识和文化中失去无条件约束力。危险在于虚无主义：人仍沿用旧道德的评价习惯，却不再相信其根据，最终把一切目标都看作任意。尼采的价值重估不是凭空发明口号，而是检验哪些价值能够肯定现实生命、容纳痛苦并促进更有力量的自我塑造。",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche",
+              "locator": "Sections 3–4 on value creation, Nietzschean values and self-fashioning",
+              "claim": "支持虚无主义、价值重估与自我塑造之间关系的说明。"
+            }
+          ]
+        },
+        {
+          "text": "《查拉图斯特拉如是说》用自我超越、永恒轮回和创造者等形象试验这种肯定：如果必须一再生活同样的人生，你能否仍对它说“是”？这不是经验证明的宇宙学结论，而可被读作检验生活态度的思想实验。尼采对等级、性别和民主的许多判断也具有强烈争议，不能用“价值创造”替它们免责。",
+          "citations": [
+            {
+              "sourceId": "src-nietzsche-zarathustra-primary",
+              "locator": "Part I, Zarathustra's Prologue, section 5, and related self-overcoming passages",
+              "claim": "支持《查拉图斯特拉如是说》以自我超越和创造性形象表达生命肯定的文本背景。"
+            },
+            {
+              "sourceId": "src-nietzsche",
+              "locator": "Sections 3.2, 4 and 6.3 on values, self-fashioning and eternal recurrence",
+              "claim": "支持永恒轮回作为生命检验及其解释争议的说明。"
             }
           ]
         }
@@ -121,11 +169,11 @@
   },
   "color": "#b8784f",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物第二批扩展；明确区分视角主义、相对主义与作品人物发言。"
 }

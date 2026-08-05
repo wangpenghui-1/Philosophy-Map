@@ -1,0 +1,21 @@
+{
+  "id": "src-heidegger-technology-lovitt",
+  "entityType": "source",
+  "title": "The Question Concerning Technology and Other Essays",
+  "authors": [
+    "Martin Heidegger",
+    "William Lovitt (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Harper & Row",
+  "year": 1977,
+  "defaultLocator": "The Question Concerning Technology, pp. 3–35",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "原作以德文写成；本记录用于定位 William Lovitt 英译本。"
+}

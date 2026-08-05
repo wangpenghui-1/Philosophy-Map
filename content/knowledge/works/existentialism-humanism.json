@@ -1,13 +1,41 @@
 {
-  "id": "existentialism-humanism", "slug": "existentialism-humanism", "entityType": "work",
-  "title": "《存在主义是一种人道主义》", "originalTitle": "L’existentialisme est un humanisme",
-  "authorRefs": [{"personId": "sartre", "role": "author", "certainty": "established"}],
-  "dateLabel": "1946", "languages": ["fr"],
+  "id": "existentialism-humanism",
+  "slug": "existentialism-humanism",
+  "entityType": "work",
+  "title": "《存在主义是一种人道主义》",
+  "originalTitle": "L’existentialisme est un humanisme",
+  "authorRefs": [
+    {
+      "personId": "sartre",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1946",
+  "languages": [
+    "fr"
+  ],
   "summary": "这篇公开演讲文本以较通俗方式说明存在先于本质、选择、责任与人道主义，也需要与萨特更复杂的哲学著作结合阅读。",
-  "conceptIds": ["concept-存在先于本质"],
-  "traditionIds": ["tradition-存在主义"],
-  "sourceIds": ["src-sartre-existentialism-humanism-fr"],
-  "citations": [{"sourceId": "src-sartre-existentialism-humanism-fr", "locator": "Exposé", "claim": "支持作品内容及存在先于本质的表述。"}],
-  "contentTier": "standard", "editorialStatus": "published", "version": 1,
-  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+  "conceptIds": [
+    "concept-存在先于本质"
+  ],
+  "traditionIds": [
+    "tradition-存在主义"
+  ],
+  "sourceIds": [
+    "src-sartre-existentialism-humanism-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-sartre-existentialism-humanism-fr",
+      "locator": "Exposé",
+      "claim": "支持作品内容及存在先于本质的表述。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
 }

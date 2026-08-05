@@ -3,19 +3,47 @@
   "slug": "肉身",
   "entityType": "concept",
   "name": "肉身",
-  "originalTerms": ["chair"],
+  "originalTerms": [
+    "chair"
+  ],
   "summary": "肉身描述感知者与可感世界彼此交织的共同质地，超出把主体和对象看成两个封闭实体的模型。",
-  "senses": [{
-    "traditionId": "tradition-现象学",
-    "label": "肉身",
-    "explanation": "梅洛-庞蒂晚期以肉身说明看与被看、触与被触之间的可逆关系，探索主体与世界如何彼此卷入。",
-    "citations": [{"sourceId": "src-merleau-ponty-sep", "locator": "Section on ontology and the flesh", "claim": "支持肉身作为感知者与世界交织结构的说明。"}]
-  }],
-  "personIds": ["merleau-ponty"],
-  "workIds": ["visible-and-invisible"],
-  "traditionIds": ["tradition-现象学"],
-  "sourceIds": ["src-merleau-ponty-sep"],
-  "citations": [{"sourceId": "src-merleau-ponty-sep", "locator": "Section on ontology and the flesh", "claim": "支持肉身的概念摘要。"}],
-  "contentTier": "index", "editorialStatus": "published", "version": 1,
-  "editedBy": "思想星图编辑组", "reviewedBy": "editorial-review/journeys-v2", "lastReviewedAt": "2026-08-04"
+  "senses": [
+    {
+      "traditionId": "tradition-现象学",
+      "label": "肉身",
+      "explanation": "梅洛-庞蒂晚期以肉身说明看与被看、触与被触之间的可逆关系，探索主体与世界如何彼此卷入。",
+      "citations": [
+        {
+          "sourceId": "src-merleau-ponty-sep",
+          "locator": "Section on ontology and the flesh",
+          "claim": "支持肉身作为感知者与世界交织结构的说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "merleau-ponty"
+  ],
+  "workIds": [
+    "visible-and-invisible"
+  ],
+  "traditionIds": [
+    "tradition-现象学"
+  ],
+  "sourceIds": [
+    "src-merleau-ponty-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-merleau-ponty-sep",
+      "locator": "Section on ontology and the flesh",
+      "claim": "支持肉身的概念摘要。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
 }

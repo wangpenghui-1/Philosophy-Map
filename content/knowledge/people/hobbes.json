@@ -31,7 +31,7 @@
   ],
   "guidingQuestion": "彼此脆弱而相互戒惧的人为何需要共同权威？",
   "thesis": "和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。",
-  "summary": "霍布斯是1588–1679活跃于欧洲的近代政治哲学思想人物，主要追问“彼此脆弱而相互戒惧的人为何需要共同权威？”。其核心主张可概括为：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。 本站以契约、主权、自然状态为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "霍布斯从恐惧、脆弱和相互不信任出发解释政治秩序：若没有能执行共同规则的权威，承诺容易失效，安全也难以稳定。他的社会契约论不是歌颂专制，而是在追问和平的最低条件；但为了安全交出多少判断权，始终是其理论最尖锐的难题。",
   "workIds": [
     "leviathan"
   ],
@@ -54,36 +54,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "state",
+      "heading": "自然状态为何不是单纯的历史故事",
       "paragraphs": [
         {
-          "text": "霍布斯是1588–1679活跃于欧洲的近代政治哲学思想人物，主要追问“彼此脆弱而相互戒惧的人为何需要共同权威？”。其核心主张可概括为：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。 本站以契约、主权、自然状态为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "霍布斯的自然状态不是说所有社会都曾真实陷入人人互杀，而是分析当没有共同权威可执行规则时会发生什么。即使多数人愿意合作，也会担心他人先行伤害或背约；在不确定中，防备与先发制人变得理性，安全因而无法持续。",
           "citations": [
             {
               "sourceId": "src-hobbes",
-              "locator": "Sections on human nature, authority and the social contract",
-              "claim": "支持本段主张：霍布斯是1588–1679活跃于欧洲的近代政治哲学思想人物，主要追问“彼此脆弱而相互戒惧的人为何需要共同权威？”。其核心主张可概括为：和平需要人们以契约授权公共权力，把不稳定的…"
+              "locator": "Sections on human nature, the state of nature and authority",
+              "claim": "支持自然状态、恐惧与不信任。"
             }
           ]
         },
         {
-          "text": "核心问题：彼此脆弱而相互戒惧的人为何需要共同权威？",
+          "text": "“战争”在这里包括一种随时可能爆发冲突的准备状态，而不只是持续战斗。霍布斯由此把正义与稳定制度联系起来：没有可靠执行，契约只是言词。这个诊断仍可用于理解安全困境，但其人性假设也长期受到批评。",
           "citations": [
             {
-              "sourceId": "src-hobbes",
-              "locator": "Sections on human nature, authority and the social contract",
-              "claim": "支持本段主张：核心问题：彼此脆弱而相互戒惧的人为何需要共同权威？"
+              "sourceId": "src-hobbes-leviathan-1651",
+              "locator": "Leviathan, chapters 13–15",
+              "claim": "支持战争状态、自然法与契约。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contract",
+      "heading": "授权共同权威以获得和平",
+      "paragraphs": [
+        {
+          "text": "人们为脱离自然状态而互相约定：授权一个主权者代表共同意志、制定并执行规则。契约严格说发生在彼此之间，而非人民与主权者之间；主权者的权力因此需要足够强，才能制止私人报复与派系冲突。",
+          "citations": [
+            {
+              "sourceId": "src-hobbes-leviathan-1651",
+              "locator": "Leviathan, chapters 17–18",
+              "claim": "支持授权、代表与主权。"
             }
           ]
         },
         {
-          "text": "核心主张：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。",
+          "text": "这不意味着主权者可以要求一切。霍布斯保留自我保存的权利，也承认无力保护生命时服从的基础会动摇。但他对反抗权和权力分立的限制远强于后来的自由主义，因此常被视为安全优先的极端案例。",
           "citations": [
             {
               "sourceId": "src-hobbes",
-              "locator": "Sections on human nature, authority and the social contract",
-              "claim": "支持本段主张：核心主张：和平需要人们以契约授权公共权力，把不稳定的私人判断转化为共同规则。"
+              "locator": "Sections on obligation, liberty and resistance",
+              "claim": "支持服从、自保与反抗边界。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "freedom",
+      "heading": "自由与安全如何同时存在",
+      "paragraphs": [
+        {
+          "text": "霍布斯把自由首先理解为没有外在阻碍，而不是不受法律约束。法律限制行动，却也使人能预期他人行为、拥有财产和免于恐惧；没有公共秩序的“完全自由”反而会消灭可实际享有的安全。",
+          "citations": [
+            {
+              "sourceId": "src-hobbes-leviathan-1651",
+              "locator": "Leviathan, chapter 21",
+              "claim": "支持自由、法律与臣民权利。"
+            }
+          ]
+        },
+        {
+          "text": "当权威以安全名义压制批评、制造恐惧时，是否仍实现了霍布斯的目标？卢梭、洛克及现代民主理论从不同方向回应这一点。霍布斯的持久价值在于迫使政治哲学承认，正义不能脱离执行与安全条件；而安全的制度也必须说明它何时越过了保护而变成支配。读他时，应同时看见秩序的必要性与对权力失控的警惕，并追问可被公众检验的界限。",
+          "citations": [
+            {
+              "sourceId": "src-hobbes",
+              "locator": "Sections on reception and criticism",
+              "claim": "支持自由、安全与后续批评。"
             }
           ]
         }
@@ -103,13 +145,13 @@
   },
   "color": "#976e63",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v4",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第二十二位；补充自然状态、授权、主权、安全与自由争论。",
   "representativeQuote": {
     "text": "Covenants, without the sword, are but words, and of no strength to secure a man at all.",
     "displayLanguage": "en",
@@ -124,5 +166,6 @@
     "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
     "sourceId": "src-hobbes-leviathan-1651",
     "locator": "Part II, chapter XVII"
-  }
+  },
+  "uncertainty": "自然状态是哲学模型而非直接历史叙述；霍布斯的主权范围、宗教立场和反抗边界有不同解释。不能把他简单等同于后来任何一种专制国家理论。"
 }

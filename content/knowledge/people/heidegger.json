@@ -32,9 +32,10 @@
   ],
   "guidingQuestion": "在追问具体事物之前，我们是否已经遗忘了存在问题？",
   "thesis": "人的存在总已在世界之中，通过关切、时间性与有限性理解自身。",
-  "summary": "海德格尔是1889–1976活跃于欧洲的存在论与现象学思想人物，主要追问“在追问具体事物之前，我们是否已经遗忘了存在问题？”。其核心主张可概括为：人的存在总已在世界之中，通过关切、时间性与有限性理解自身。 本站以存在、在世、时间性为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "海德格尔把哲学从列举存在者重新带回“存在意味着什么”。他以此在的在世存在、关切和时间性说明理解如何发生，晚期又借技术问题追问现代世界怎样把万物变成可计算资源；其纳粹经历是不可省略的解释边界。",
   "workIds": [
-    "being-time"
+    "being-time",
+    "question-concerning-technology"
   ],
   "placeLinks": [
     {
@@ -44,47 +45,95 @@
   ],
   "sourceIds": [
     "src-heidegger",
-    "src-heidegger-being-time-macquarrie"
+    "src-heidegger-being-time-macquarrie",
+    "src-heidegger-technology-lovitt"
   ],
   "citations": [
     {
       "sourceId": "src-heidegger",
-      "locator": "Sections on being-in-the-world, temporality and technology",
-      "claim": "支持海德格尔的摘要主张：海德格尔是1889–1976活跃于欧洲的存在论与现象学思想人物，主要追问“在追问具体事物之前，我们是否已经遗忘了存在问题？”。其核心主张可概括为：人的存在总已在世界之中，通过关…"
+      "locator": "Sections 2–5 on Being and Time, the Nazi era, the turn and technology",
+      "claim": "支持从存在问题、此在分析到晚期技术思想的总体脉络，并说明其政治经历对思想解释的限制。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "being-in-world",
+      "heading": "存在不是最大的一个东西",
       "paragraphs": [
         {
-          "text": "海德格尔是1889–1976活跃于欧洲的存在论与现象学思想人物，主要追问“在追问具体事物之前，我们是否已经遗忘了存在问题？”。其核心主张可概括为：人的存在总已在世界之中，通过关切、时间性与有限性理解自身。 本站以存在、在世、时间性为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "海德格尔区分“存在者”与“存在”：桌子、数字、制度和人都是存在者，但列出它们仍没有回答这些事物以何种方式对我们有意义。存在也不是藏在万物背后的最高物体。哲学需要追问，我们在说某物“是”时已经运用了怎样的理解，而这套理解为何长期被当作理所当然。",
           "citations": [
             {
               "sourceId": "src-heidegger",
-              "locator": "Sections on being-in-the-world, temporality and technology",
-              "claim": "支持本段主张：海德格尔是1889–1976活跃于欧洲的存在论与现象学思想人物，主要追问“在追问具体事物之前，我们是否已经遗忘了存在问题？”。其核心主张可概括为：人的存在总已在世界之中，通过关…"
+              "locator": "Sections 2 and 2.1 on the question of Being and kinds of being",
+              "claim": "支持存在与存在者的区分，以及海德格尔重新提出存在问题的理由。"
             }
           ]
         },
         {
-          "text": "核心问题：在追问具体事物之前，我们是否已经遗忘了存在问题？",
+          "text": "《存在与时间》从“此在”进入问题，因为人会在生活中关切自己的存在。此在不是先封闭于心灵再去推测外界，而总已在一个可使用、可交往、可担忧的世界中。锤子通常先作为用来做事的器具出现，坏掉后才突出成被观察的对象；这说明实践关系比孤立观看更早组织我们的世界。",
+          "citations": [
+            {
+              "sourceId": "src-heidegger-being-time-macquarrie",
+              "locator": "§§12–18, H.52–88, on being-in-the-world and equipment",
+              "claim": "支持此在总已在世，以及器具在实践关联中首先显现的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temporality",
+      "heading": "有限性怎样使选择成为自己的",
+      "paragraphs": [
+        {
+          "text": "人发现自己已经置身于一个没有亲自选择的时代、语言、身体和关系之中，海德格尔称之为被抛处境；与此同时，人又总在朝未来可能性筹划自己。过去不是已经消失的仓库，未来也不只是尚未到来的时刻。此在的时间性把已经如此、正在操持和可能成为组织成一个整体。",
           "citations": [
             {
               "sourceId": "src-heidegger",
-              "locator": "Sections on being-in-the-world, temporality and technology",
-              "claim": "支持本段主张：核心问题：在追问具体事物之前，我们是否已经遗忘了存在问题？"
+              "locator": "Sections 2.4–2.5 on authenticity, thrownness and temporality",
+              "claim": "支持被抛、筹划和时间性共同构成此在存在结构的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：人的存在总已在世界之中，通过关切、时间性与有限性理解自身。",
+          "text": "日常生活中，人容易以“大家都这样”的方式理解自己，把选择交给匿名的常人。本真并不等于脱离社会或追求奇特个性，而是承认没有人能替自己承担有限生命。向死而在让死亡不再只是将来发生的事件，而成为揭示自身可能性不可转让的界限；它要求承担选择，不提供一张道德答案表。",
+          "citations": [
+            {
+              "sourceId": "src-heidegger-being-time-macquarrie",
+              "locator": "§§27, 53 and 62, on das Man, being-towards-death and resoluteness",
+              "claim": "支持常人、本真性、向死而在与决意之间关系的概括。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology-politics",
+      "heading": "技术揭示世界，也可能遮蔽世界",
+      "paragraphs": [
+        {
+          "text": "晚期海德格尔不把现代技术只理解成中性的工具集合。他用“座架”描述一种占主导地位的揭示方式：河流首先显现为水力储备，土地成为可开发资源，人也被纳入可调配的人力。问题不在于机器本身邪恶，而在于当可计算和可控制成为唯一尺度时，其他理解事物的方式会被遮蔽。",
+          "citations": [
+            {
+              "sourceId": "src-heidegger-technology-lovitt",
+              "locator": "The Question Concerning Technology, pp. 3–35",
+              "claim": "支持技术的本质不是器具本身，以及座架把万物揭示为持存物的论述。"
+            },
+            {
+              "sourceId": "src-heidegger",
+              "locator": "Sections 4 and 5.2 on the turn and technology",
+              "claim": "支持晚期思想由此在分析转向存在历史与技术问题的背景。"
+            }
+          ]
+        },
+        {
+          "text": "解释这一思想不能绕过海德格尔1933年加入纳粹党、担任弗赖堡大学校长及其后续政治沉默。学界对这些政治选择与存在、历史、共同体等概念之间的关系存在持续争论。本站不把政治经历当作一句传记附注，也不以此代替对文本的分析，而是把它作为检验其哲学盲点和责任的必要边界。",
           "citations": [
             {
               "sourceId": "src-heidegger",
-              "locator": "Sections on being-in-the-world, temporality and technology",
-              "claim": "支持本段主张：核心主张：人的存在总已在世界之中，通过关切、时间性与有限性理解自身。"
+              "locator": "Section 3 on Nazi-era writings and political involvement",
+              "claim": "支持海德格尔加入纳粹党、校长任期及相关解释争议的历史范围。"
             }
           ]
         }
@@ -105,13 +154,13 @@
   "uncertainty": "其哲学遗产的展示必须同时正视他与纳粹主义的政治关系。",
   "color": "#687b72",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物第二批扩展；正文与政治争议说明分层呈现。",
   "representativeQuote": {
     "text": "Dasein is an entity which, in its very Being, comports itself understandingly towards that Being.",
     "displayLanguage": "en",

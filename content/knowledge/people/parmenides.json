@@ -20,14 +20,16 @@
     "tradition-前苏格拉底哲学"
   ],
   "conceptIds": [
-    "concept-存在之路"
+    "concept-存在之路",
+    "concept-实在",
+    "concept-知识"
   ],
   "questionIds": [
     "reality"
   ],
   "guidingQuestion": "思维与言说能否把握非存在？",
   "thesis": "严格探究必须沿存在之路前进，因为非存在既不可被思也不可被有意义地说出。",
-  "summary": "巴门尼德是欧洲与地中海前苏格拉底哲学的重要思想人物，主要追问“思维与言说能否把握非存在？”。其思想以“存在之路”为入口，主张严格探究必须沿存在之路前进，因为非存在既不可被思也不可被有意义地说出。",
+  "summary": "巴门尼德以诗歌中的女神教诲提出一个极端问题：思想和言说能否面对“不存在”？他由此区分真理之路与常人意见之路，主张真正可思、可说的存在不生不灭、不可分割。这一论证深刻改变了希腊哲学关于变化、知识与实在的讨论。",
   "workIds": [
     "parmenides-poem"
   ],
@@ -50,36 +52,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "being",
+      "heading": "为什么“不存在”不能被思想",
       "paragraphs": [
         {
-          "text": "巴门尼德是欧洲与地中海前苏格拉底哲学的重要思想人物，主要追问“思维与言说能否把握非存在？”。其思想以“存在之路”为入口，主张严格探究必须沿存在之路前进，因为非存在既不可被思也不可被有意义地说出。",
+          "text": "巴门尼德的核心推理是：你不能思考或说出完全不存在的东西；若某物从不存在而来，或归于不存在，论证便陷入不可说的对象。因此，存在必须不生不灭、整体而连续。它不是普通经验观察，而是对思与言何以可能的严格挑战。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Parmenides / 巴门尼德”",
-              "claim": "支持巴门尼德的身份、思想主张与历史语境概述。"
+              "sourceId": "src-parmenides-burnet-b3",
+              "locator": "Fragments B2, B3, B8",
+              "claim": "支持存在之路、可思可说与不生不灭。"
             }
           ]
         },
         {
-          "text": "核心问题：思维与言说能否把握非存在？",
+          "text": "这会冲撞日常经验：我们明明看见生成、毁灭与运动。巴门尼德并非没有看到变化，而是认为意见若只依感官表象，无法给出不自相矛盾的说明。他迫使后来的哲学家解释：怎样既尊重变化又不让理性失去对象。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Parmenides / 巴门尼德”",
-              "claim": "支持对巴门尼德核心问题的概括。"
+              "locator": "Parmenides entry: being, thought and change",
+              "claim": "支持变化问题与意见之路。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "truth",
+      "heading": "真理之路与意见之路",
+      "paragraphs": [
+        {
+          "text": "诗中女神区分“确然的真理”与“凡人的意见”。这不必然等于把感官世界斥为纯粹幻觉；学界争论意见部分究竟是错误宇宙论、次等解释，还是对经验秩序的必要说明。保留这种争论比用“他否认世界”概括更准确。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Parmenides entry: doxa and interpretation",
+              "claim": "支持真理、意见及其解释争议。"
             }
           ]
         },
         {
-          "text": "核心主张：严格探究必须沿存在之路前进，因为非存在既不可被思也不可被有意义地说出。",
+          "text": "巴门尼德用六音步诗而非散文写作，也提示论证不能脱离其宗教和文学形式。女神的权威、道路的比喻和宇宙论段落共同构成文本，不能只抽出几条命题就以为已读完他的哲学。",
+          "citations": [
+            {
+              "sourceId": "src-parmenides-burnet-b3",
+              "locator": "Fragments B1–B19",
+              "claim": "支持诗歌结构与残篇阅读边界。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legacy",
+      "heading": "变化哲学为何必须回应他",
+      "paragraphs": [
+        {
+          "text": "恩培多克勒、原子论者、柏拉图和亚里士多德都在不同程度上回应巴门尼德：若真正的存在不能生成或消灭，那么经验中的变化是否应解释为不变元素的组合、分离或运动？他由此成为形而上学与自然哲学的一处转折点。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Parmenides / 巴门尼德”",
-              "claim": "支持对巴门尼德核心主张的概括。"
+              "locator": "Parmenides entry: influence and Presocratic reception",
+              "claim": "支持对后续前苏格拉底与柏拉图传统的影响。"
+            }
+          ]
+        },
+        {
+          "text": "但把他直接称作“最早的一元论者”或“否认感官世界者”都过于简化。现存残篇不全，关键希腊词也有多种译法；可靠入门应先分清文本能明确支持什么，再讨论后世如何扩展其含义。正因如此，他留下的不是一个可背诵的结论，而是一道要求形而上学为变化与可理解性同时负责的问题。这也是阅读残篇时比标签更值得保留的思想张力。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Parmenides entry: textual evidence and scholarly debate",
+              "claim": "支持残篇、术语与解释边界。"
             }
           ]
         }
@@ -102,16 +146,16 @@
     "creator": "Sergio Spolti",
     "retrievedAt": "2026-07-19"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "巴门尼德诗作仅存残篇，意见之路的地位、存在的性质和关键术语译法均有重大争论。不能用一条“世界不变”的口号代替完整论证。",
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v4",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第二十四位；补充存在之路、意见、诗歌形式与后续影响。",
   "representativeQuote": {
     "text": "For it is the same thing that can be thought and that can be.",
     "displayLanguage": "en",

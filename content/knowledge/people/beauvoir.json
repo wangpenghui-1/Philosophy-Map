@@ -32,7 +32,7 @@
   ],
   "guidingQuestion": "一个人如何在既定处境中争取自由，又不把他人变成客体？",
   "thesis": "主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。",
-  "summary": "波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。 本站以处境、他者、成为为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "波伏娃把自由放回身体、制度和他人共同构成的处境中。她既论证人不会被既定身份完全决定，也揭示女性如何被塑造成“他者”；真正的自由因此不能只靠个人意志，还要求改变压缩他人可能性的条件。",
   "workIds": [
     "second-sex",
     "ethics-ambiguity"
@@ -45,47 +45,90 @@
   ],
   "sourceIds": [
     "src-beauvoir",
-    "src-beauvoir-second-sex-parshley"
+    "src-beauvoir-second-sex-parshley",
+    "src-beauvoir-ethics-ambiguity-frechtman"
   ],
   "citations": [
     {
       "sourceId": "src-beauvoir",
-      "locator": "Sections on ambiguity, situated freedom and becoming woman",
-      "claim": "支持波伏娃的摘要主张：波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在…"
+      "locator": "Sections 2, 5, 7 and 13 on ambiguity, freedom, woman as Other and becoming",
+      "claim": "支持波伏娃从处境自由、模糊性到性别成为的总体思想结构。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "ambiguity",
+      "heading": "自由总发生在模糊处境中",
       "paragraphs": [
         {
-          "text": "波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。 本站以处境、他者、成为为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "波伏娃所谓“模糊性”，不是态度含糊，而是人的存在同时具有两面：我们是能够超越现状、投向未来的主体，又是有身体、会衰老、受历史和他人限制的有限存在。伦理不能靠消除其中一面获得纯洁答案；它必须在无法保证无罪的现实行动中承担责任。",
           "citations": [
             {
-              "sourceId": "src-beauvoir",
-              "locator": "Sections on ambiguity, situated freedom and becoming woman",
-              "claim": "支持本段主张：波伏娃是1908–1986活跃于欧洲的存在主义女性主义思想人物，主要追问“一个人如何在既定处境中争取自由，又不把他人变成客体？”。其核心主张可概括为：主体并非天生完成；性别是在…"
+              "sourceId": "src-beauvoir-ethics-ambiguity-frechtman",
+              "locator": "Part I and Part II, on ambiguity and personal freedom",
+              "claim": "支持人既是自由主体又是有限存在，以及伦理必须从这种模糊处境出发的论述。"
             }
           ]
         },
         {
-          "text": "核心问题：一个人如何在既定处境中争取自由，又不把他人变成客体？",
+          "text": "处境并非自由的反义词。资源、身体、法律和社会角色会真实地扩大或缩小行动空间，却不能像石头的重量那样完全决定一个人。自由表现为人如何理解并回应给定条件。但如果制度系统性地剥夺教育、行动或发言机会，仅仅要求受压迫者“选择得更勇敢”，就是把政治问题错误地变成个人品格问题。",
           "citations": [
             {
               "sourceId": "src-beauvoir",
-              "locator": "Sections on ambiguity, situated freedom and becoming woman",
-              "claim": "支持本段主张：核心问题：一个人如何在既定处境中争取自由，又不把他人变成客体？"
+              "locator": "Sections 4–5 on radical freedom, the Other and The Ethics of Ambiguity",
+              "claim": "支持自由必须在具体处境中实现，并会被压迫条件实质性限制的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-becoming",
+      "heading": "女人如何被制造成“他者”",
+      "paragraphs": [
+        {
+          "text": "《第二性》追问的不是“女人天生是什么”，而是某些身体怎样在神话、教育、劳动分工、婚姻和日常期待中被规定成女性。男性常被当作无需说明的普遍主体，女性则被定义为偏离标准的“他者”。这种他者化不是单一偏见，而是一整套把依赖制造出来、再把依赖解释成天性的社会过程。",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir",
+              "locator": "Section 7 on The Second Sex and woman as Other",
+              "claim": "支持男性被设为普遍主体、女性被构造成他者的分析。"
             }
           ]
         },
         {
-          "text": "核心主张：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。",
+          "text": "“女人不是天生的，而是后天形成的”并非否认身体差异，而是否认身体会自动携带固定社会命运。身体总是在文化和制度中被生活、解释和评价。正因性别是成为的过程，它可以被改变；但改变也不会只靠观念觉醒，还需要经济独立、教育、避孕和公共权利等现实条件。",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir-second-sex-parshley",
+              "locator": "Volume II, Part One, chapter 1, p. 267",
+              "claim": "支持性别是社会历史中的成为过程而非固定自然本质的核心表述。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reciprocal-freedom",
+      "heading": "自己的自由需要他人的自由",
+      "paragraphs": [
+        {
+          "text": "波伏娃反对把自由理解为孤立个人随心所欲。一个人的计划需要语言、承认、合作和共同世界才能展开；把他人永远固定成工具，也会使自己的自由停留在支配关系中。因此伦理行动既要肯定自身超越现状的能力，也要扩大他人能够提出计划、反对和重新开始的条件。",
+          "citations": [
+            {
+              "sourceId": "src-beauvoir-ethics-ambiguity-frechtman",
+              "locator": "Part II and Part III, on willing oneself free and willing others free",
+              "claim": "支持个人自由与他人自由相互依存，而非彼此排斥的伦理主张。"
+            }
+          ]
+        },
+        {
+          "text": "这一框架也解释她为何从存在主义伦理进入女性解放、殖民暴力、老年和具体政治行动。但她与萨特的共同思想生活并不意味着两人观点完全相同；波伏娃对身体、性别和相互自由的分析具有独立路线。把她只写成萨特思想的应用者，会再次抹去她所揭示的知识与性别结构。",
           "citations": [
             {
               "sourceId": "src-beauvoir",
-              "locator": "Sections on ambiguity, situated freedom and becoming woman",
-              "claim": "支持本段主张：核心主张：主体并非天生完成；性别是在制度、习惯与他者目光中被塑造并可能被改变。"
+              "locator": "Sections 6–14 on concrete encounters, politics, embodiment and influence",
+              "claim": "支持波伏娃思想从处境伦理扩展到性别、殖民政治与身体问题，并具有独立哲学影响。"
             }
           ]
         }
@@ -105,13 +148,13 @@
   },
   "color": "#a96e88",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物第二批扩展；保留波伏娃相对于萨特的独立哲学路线。",
   "representativeQuote": {
     "text": "One is not born, but rather becomes, a woman.",
     "displayLanguage": "en",

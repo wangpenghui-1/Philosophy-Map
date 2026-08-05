@@ -1,1 +1,50 @@
-{"id":"principles-human-knowledge","slug":"principles-human-knowledge","entityType":"work","title":"《人类知识原理》","originalTitle":"A Treatise Concerning the Principles of Human Knowledge","authorRefs":[{"personId":"george-berkeley","role":"author","certainty":"established"}],"dateLabel":"1710","languages":["en"],"summary":"《人类知识原理》先批评抽象观念，随后论证感觉对象作为观念的存在在于被感知，并以精神和上帝说明经验秩序。它直接攻击不可知物质基底及其表象主义解释，而不是否认日常对象。","conceptIds":["concept-被感知即存在","concept-抽象观念","concept-精神"],"traditionIds":["tradition-经验主义"],"sourceIds":["src-berkeley","src-berkeley-principles-1710"],"citations":[{"sourceId":"src-berkeley-principles-1710","locator":"Introduction; Part I, §§1–53","claim":"支持抽象观念、非物质论和精神/自然秩序的原典结构。"},{"sourceId":"src-berkeley","locator":"Sections 2–3","claim":"支持该书的论证背景与解释争议。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"补充作品结构和反物质论的解释边界。"}
+{
+  "id": "principles-human-knowledge",
+  "slug": "principles-human-knowledge",
+  "entityType": "work",
+  "title": "《人类知识原理》",
+  "originalTitle": "A Treatise Concerning the Principles of Human Knowledge",
+  "authorRefs": [
+    {
+      "personId": "george-berkeley",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1710",
+  "languages": [
+    "en"
+  ],
+  "summary": "《人类知识原理》先批评抽象观念，随后论证感觉对象作为观念的存在在于被感知，并以精神和上帝说明经验秩序。它直接攻击不可知物质基底及其表象主义解释，而不是否认日常对象。",
+  "conceptIds": [
+    "concept-被感知即存在",
+    "concept-抽象观念",
+    "concept-精神"
+  ],
+  "traditionIds": [
+    "tradition-经验主义"
+  ],
+  "sourceIds": [
+    "src-berkeley",
+    "src-berkeley-principles-1710"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-berkeley-principles-1710",
+      "locator": "Introduction; Part I, §§1–53",
+      "claim": "支持抽象观念、非物质论和精神/自然秩序的原典结构。"
+    },
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Sections 2–3",
+      "claim": "支持该书的论证背景与解释争议。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充作品结构和反物质论的解释边界。"
+}

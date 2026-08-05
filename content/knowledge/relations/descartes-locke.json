@@ -11,27 +11,27 @@
   },
   "directed": true,
   "relationType": "critique",
-  "evidenceStatus": "established",
+  "evidenceStatus": "supported",
   "title": "经验主义对天赋观念的挑战",
-  "explanation": "洛克以经验中的观念形成反驳近代理性主义的天赋观念路线，笛卡尔式知识起点成为其明确的争论背景。",
+  "explanation": "洛克在《人类理解论》第一卷反对天赋原则，并从感觉与反思说明观念的来源。这一论证针对笛卡尔主义所在的思想环境，但不应把洛克的每项认识论主张都写成对笛卡尔个人的逐句反驳。",
   "citations": [
     {
       "sourceId": "src-descartes",
-      "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持经验主义对天赋观念的挑战的摘要主张：洛克以经验中的观念形成反驳近代理性主义的天赋观念路线，笛卡尔式知识起点成为其明确的争论背景。"
+      "locator": "Section 7: legacy; discussion of Locke and later epistemology",
+      "claim": "支持笛卡尔认识论成为洛克等后继者重要争论背景的说明。"
     },
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持经验主义对天赋观念的挑战的摘要主张：洛克以经验中的观念形成反驳近代理性主义的天赋观念路线，笛卡尔式知识起点成为其明确的争论背景。"
+      "locator": "Sections 2.1–2.3: the limits of human understanding and ideas",
+      "claim": "支持洛克反对天赋原则并以感觉和反思说明观念来源。"
     }
   ],
   "atlasVisibility": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "将关系限定为有文本背景支持的批判，不声称洛克全部认识论都是对笛卡尔个人的直接回应。"
 }

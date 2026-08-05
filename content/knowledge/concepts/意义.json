@@ -1,1 +1,53 @@
-{"id":"concept-意义","slug":"意义","entityType":"concept","name":"意义","originalTerms":["meaning","Bedeutung"],"summary":"后期维特根斯坦说，在一大类情形中，一个词的意义就是它在语言中的使用。这条限定要求从具体语言活动出发，不把意义设想为词背后隐藏的对象。","senses":[{"traditionId":"tradition-分析哲学","label":"意义","explanation":"意义与使用相连，并不废除定义、指称或解释；问题是这些做法各自在何种语言游戏中起作用。", "citations":[{"sourceId":"src-wittgenstein-investigations-anscombe","locator":"§§1–43","claim":"支持意义即使用及其“在一大类情形中”的限定。"}]}],"personIds":["wittgenstein"],"workIds":["tractatus","philosophical-investigations"],"traditionIds":["tradition-分析哲学"],"sourceIds":["src-wittgenstein","src-wittgenstein-investigations-anscombe"],"citations":[{"sourceId":"src-wittgenstein","locator":"Sections 3.2–3.3","claim":"支持后期意义理论相对于早期图像理论的转变。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"保留“在一大类情形中”的范围限定。"}
+{
+  "id": "concept-意义",
+  "slug": "意义",
+  "entityType": "concept",
+  "name": "意义",
+  "originalTerms": [
+    "meaning",
+    "Bedeutung"
+  ],
+  "summary": "后期维特根斯坦说，在一大类情形中，一个词的意义就是它在语言中的使用。这条限定要求从具体语言活动出发，不把意义设想为词背后隐藏的对象。",
+  "senses": [
+    {
+      "traditionId": "tradition-分析哲学",
+      "label": "意义",
+      "explanation": "意义与使用相连，并不废除定义、指称或解释；问题是这些做法各自在何种语言游戏中起作用。",
+      "citations": [
+        {
+          "sourceId": "src-wittgenstein-investigations-anscombe",
+          "locator": "§§1–43",
+          "claim": "支持意义即使用及其“在一大类情形中”的限定。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "wittgenstein"
+  ],
+  "workIds": [
+    "tractatus",
+    "philosophical-investigations"
+  ],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "sourceIds": [
+    "src-wittgenstein",
+    "src-wittgenstein-investigations-anscombe"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Sections 3.2–3.3",
+      "claim": "支持后期意义理论相对于早期图像理论的转变。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "保留“在一大类情形中”的范围限定。"
+}

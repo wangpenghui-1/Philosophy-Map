@@ -1,0 +1,38 @@
+{
+  "id": "buddhadasa-bhikkhu-epeli-hauofa-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "buddhadasa-bhikkhu"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "epeli-hauofa"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "埃佩利·豪奥法与佛使比丘都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调海洋连接而非分割岛屿，迁徙、亲属和交换构成广阔的区域共同体。；后者强调以缘起和空重释无我，主张在工作与公共生活中减弱执著而非把修行局限于仪式。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-routledge-indigenous-philosophy",
+      "locator": "相关传统、人物与政治哲学专章",
+      "claim": "支持埃佩利·豪奥法一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-routledge-southeast-asian-thinkers",
+      "locator": "相关国家、思想运动与人物专章",
+      "claim": "支持佛使比丘一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

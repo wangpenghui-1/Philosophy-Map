@@ -1,0 +1,21 @@
+{
+  "id": "src-locke-two-treatises-laslett",
+  "entityType": "source",
+  "title": "Two Treatises of Government",
+  "authors": [
+    "John Locke",
+    "Peter Laslett (editor)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Cambridge Texts in the History of Political Thought, Cambridge University Press",
+  "year": 1988,
+  "defaultLocator": "Second Treatise, §§4–15, 25–51, 87–94, 123–149, 222–243",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于定位自然状态、财产、同意、政府目的、信托破裂和抵抗权。"
+}

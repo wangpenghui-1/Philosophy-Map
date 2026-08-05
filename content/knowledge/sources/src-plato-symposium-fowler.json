@@ -1,0 +1,21 @@
+{
+  "id": "src-plato-symposium-fowler",
+  "entityType": "source",
+  "title": "Plato: Symposium",
+  "authors": [
+    "Plato",
+    "Harold North Fowler (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Loeb Classical Library 166, Harvard University Press",
+  "year": 1925,
+  "defaultLocator": "201d–212c",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于定位《会饮篇》中狄奥提玛关于爱欲、生成与美的阶梯的论述；原作语言为古希腊语。"
+}

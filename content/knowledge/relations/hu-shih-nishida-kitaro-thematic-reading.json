@@ -1,0 +1,38 @@
+{
+  "id": "hu-shih-nishida-kitaro-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "hu-shih"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "nishida-kitaro"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“知识”的两种回答",
+  "explanation": "西田几多郎与胡适都触及“知识”，但各自的问题语境和论证目标不同：前者强调纯粹经验在反思分化之前统一认识与实在，并发展为空间性的场所逻辑。；后者强调以大胆假设和小心求证的方法处理思想问题，并用历史研究重估传统。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言",
+      "claim": "支持西田几多郎一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持胡适一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

@@ -32,9 +32,10 @@
   ],
   "guidingQuestion": "如果万物都在因果秩序中，自由还能意味着什么？",
   "thesis": "自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。",
-  "summary": "斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。 本站以实体、必然、情感为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "斯宾诺莎以“神即自然”的单一实体论重画心灵、身体与世界的关系。他否认无原因的自由意志，把自由理解为认识自身欲望的原因、增加行动能力并摆脱被动情感；其政治思想则捍卫思想自由与共同安全。",
   "workIds": [
-    "ethics-spinoza"
+    "ethics-spinoza",
+    "theological-political-treatise"
   ],
   "placeLinks": [
     {
@@ -44,47 +45,90 @@
   ],
   "sourceIds": [
     "src-spinoza",
-    "src-spinoza-ethics-elwes"
+    "src-spinoza-ethics-elwes",
+    "src-spinoza-ttp-shirley"
   ],
   "citations": [
     {
       "sourceId": "src-spinoza",
-      "locator": "Sections on substance, affects, freedom and politics",
-      "claim": "支持斯宾诺莎的摘要主张：斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并…"
+      "locator": "Sections 2–3 on Ethics, affects, freedom, religion and the state",
+      "claim": "支持单一实体、情感转化、自由与政治思想之间的总体结构。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "substance",
+      "heading": "神或自然：只有一个无限实体",
       "paragraphs": [
         {
-          "text": "斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。 本站以实体、必然、情感为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "斯宾诺莎沿用实体、属性和样态等近代理性主义词汇，却拒绝把世界分成独立的心灵实体、物质实体和超越世界的创造者。严格说来，只有神或自然是“在自身内并通过自身被理解”的无限实体；具体的人、树木和观念都是这个实体以特定方式呈现的样态。",
           "citations": [
             {
-              "sourceId": "src-spinoza",
-              "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本段主张：斯宾诺莎是1632–1677活跃于欧洲的近代理性主义思想人物，主要追问“如果万物都在因果秩序中，自由还能意味着什么？”。其核心主张可概括为：自由不是摆脱因果，而是理解必然性，并…"
+              "sourceId": "src-spinoza-ethics-elwes",
+              "locator": "Part I, Definitions 3–6 and Propositions 11–15",
+              "claim": "支持实体、属性、样态及神或自然作为唯一无限实体的论证结构。"
             }
           ]
         },
         {
-          "text": "核心问题：如果万物都在因果秩序中，自由还能意味着什么？",
+          "text": "心灵与身体因此不是两种互相推动的东西，而是同一现实在思维与广延属性下的两种表达。一个身体事件与相应观念并行发生，不需要神秘的跨实体因果桥梁。这种立场取消了人在自然中的例外地位：人的欲望、情绪和判断同样需要在自然因果秩序中解释。",
           "citations": [
             {
               "sourceId": "src-spinoza",
-              "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本段主张：核心问题：如果万物都在因果秩序中，自由还能意味着什么？"
+              "locator": "Sections 2.1–2.2 on God or Nature and the human being",
+              "claim": "支持心身作为同一现实的平行表达，以及人处于自然因果秩序之中的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "affects-freedom",
+      "heading": "自由不是逃出因果链",
+      "paragraphs": [
+        {
+          "text": "每个事物都努力维持并增强自身存在，斯宾诺莎称这种倾向为努力。人的欲望不是理性之外的污点，而是这一努力在有意识生活中的表现。问题在于，我们常被只看见局部原因的观念推动：赞美、恐惧或仇恨看似从自己内部突然发生，其实由我们尚未理解的相遇和依赖关系造成。",
+          "citations": [
+            {
+              "sourceId": "src-spinoza",
+              "locator": "Sections 2.4–2.5 on passion, action, conatus, virtue and happiness",
+              "claim": "支持努力、欲望、被动情感与行动能力之间关系的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。",
+          "text": "斯宾诺莎否认一种完全脱离原因、能够任意开始行动的自由意志。更充分的自由来自形成较为充分的观念：理解情感为何发生、哪些关系增加行动能力，并使行动更多从自身可理解的本性出发。认识必然性不是消极认命，而是把“我怎么会这样”转化为可以分析和重组的因果问题。",
+          "citations": [
+            {
+              "sourceId": "src-spinoza-ethics-elwes",
+              "locator": "Part I, Appendix; Parts III–V on affects, bondage and freedom",
+              "claim": "支持自由意志感源于对原因的无知，以及理解情感能够增加主动性的论述。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religion-politics",
+      "heading": "思想自由为何有利于共同体",
+      "paragraphs": [
+        {
+          "text": "《神学政治论》把同样的解释方法用于宗教和政治。斯宾诺莎区分经文的历史语言与哲学论证，反对让神学权威垄断自然知识。先知文本的目标主要是培养服从与正义生活，而不是教授物理学；解释经文也应考察语言、作者处境和传承过程。",
+          "citations": [
+            {
+              "sourceId": "src-spinoza-ttp-shirley",
+              "locator": "Preface and chapters 7, 13–15",
+              "claim": "支持历史地解释经文、区分神学目标与哲学真理的论述。"
+            }
+          ]
+        },
+        {
+          "text": "国家的目的不是把人变成服从命令的机器，而是减少恐惧，使人能够较安全地运用理性。斯宾诺莎并未主张没有约束的个人主义；共同体仍需法律与公共权力。但压制思想和表达往往制造虚伪、怨恨与冲突，因此在不破坏公共秩序的条件下，思想自由反而有助于国家稳定。",
           "citations": [
             {
               "sourceId": "src-spinoza",
-              "locator": "Sections on substance, affects, freedom and politics",
-              "claim": "支持本段主张：核心主张：自由不是摆脱因果，而是理解必然性，并以更充分的观念转化被动情感。"
+              "locator": "Sections 3.1–3.2 on religion, Scripture and the state",
+              "claim": "支持政治共同体以安全与自由为目的，以及思想自由与国家稳定之间关系的说明。"
             }
           ]
         }
@@ -104,13 +148,13 @@
   },
   "color": "#6f9d8d",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物第二批扩展；补充心身、情感与神学政治论维度。",
   "representativeQuote": {
     "text": "Men think themselves free inasmuch as they are conscious of their volitions and desires, and never even dream, in their ignorance, of the causes which have disposed them so to wish and desire.",
     "displayLanguage": "en",

@@ -1,1 +1,51 @@
-{"id":"concept-不可通约性","slug":"不可通约性","entityType":"concept","name":"不可通约性","originalTerms":["incommensurability"],"summary":"库恩所谓不可通约性，是指竞争范式之间的关键术语、问题与评价标准可能共同变化，因而没有一把完全中立的共同尺子能无须解释地裁决两者。它不等于所有理论一样好。","senses":[{"traditionId":"tradition-科学哲学","label":"不可通约性","explanation":"比较仍可围绕解题能力、证据和预测进行，但比较条件本身需要说明。库恩后来把早期表述发展为更细的语义与概念学习问题。","citations":[{"sourceId":"src-kuhn","locator":"Section 4: incommensurability and world-change","claim":"支持不可通约性的不同层次及其后续修订。"}]}],"personIds":["thomas-kuhn"],"workIds":["structure-scientific-revolutions"],"traditionIds":["tradition-科学哲学"],"sourceIds":["src-kuhn","src-kuhn-structure-1962"],"citations":[{"sourceId":"src-kuhn-structure-1962","locator":"Chapters X–XII; Postscript 1969","claim":"支持竞争范式与不可通约性讨论。"}],"contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"明确排除“任何判断都任意”的相对主义误读。"}
+{
+  "id": "concept-不可通约性",
+  "slug": "不可通约性",
+  "entityType": "concept",
+  "name": "不可通约性",
+  "originalTerms": [
+    "incommensurability"
+  ],
+  "summary": "库恩所谓不可通约性，是指竞争范式之间的关键术语、问题与评价标准可能共同变化，因而没有一把完全中立的共同尺子能无须解释地裁决两者。它不等于所有理论一样好。",
+  "senses": [
+    {
+      "traditionId": "tradition-科学哲学",
+      "label": "不可通约性",
+      "explanation": "比较仍可围绕解题能力、证据和预测进行，但比较条件本身需要说明。库恩后来把早期表述发展为更细的语义与概念学习问题。",
+      "citations": [
+        {
+          "sourceId": "src-kuhn",
+          "locator": "Section 4: incommensurability and world-change",
+          "claim": "支持不可通约性的不同层次及其后续修订。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "thomas-kuhn"
+  ],
+  "workIds": [
+    "structure-scientific-revolutions"
+  ],
+  "traditionIds": [
+    "tradition-科学哲学"
+  ],
+  "sourceIds": [
+    "src-kuhn",
+    "src-kuhn-structure-1962"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kuhn-structure-1962",
+      "locator": "Chapters X–XII; Postscript 1969",
+      "claim": "支持竞争范式与不可通约性讨论。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "明确排除“任何判断都任意”的相对主义误读。"
+}

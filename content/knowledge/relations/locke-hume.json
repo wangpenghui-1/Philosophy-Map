@@ -17,11 +17,13 @@
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections 2.1–2.6: ideas, knowledge and personal identity", "claim": "支持洛克将观念材料追溯到经验、同时划分知识限度的经验主义背景。"
+      "locator": "Sections 2.1–2.6: ideas, knowledge and personal identity",
+      "claim": "支持洛克将观念材料追溯到经验、同时划分知识限度的经验主义背景。"
     },
     {
       "sourceId": "src-hume",
-      "locator": "Sections 2.1–2.3: mind, causation, self and epistemology", "claim": "支持休谟改造观念论并推进对因果和自我的分析。"
+      "locator": "Sections 2.1–2.3: mind, causation, self and epistemology",
+      "claim": "支持休谟改造观念论并推进对因果和自我的分析。"
     }
   ],
   "atlasVisibility": true,
@@ -29,5 +31,7 @@
   "editorialStatus": "published",
   "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "source-structure-review/journey-batch-v1", "lastReviewedAt": "2026-08-05", "notes": "明确继承中的改造，并补充因果与自我问题；不把二人的经验主义写成同一套理论。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "明确继承中的改造，并补充因果与自我问题；不把二人的经验主义写成同一套理论。"
 }

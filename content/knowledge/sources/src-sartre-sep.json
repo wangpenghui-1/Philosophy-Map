@@ -2,7 +2,9 @@
   "id": "src-sartre-sep",
   "entityType": "source",
   "title": "Jean-Paul Sartre",
-  "authors": ["Flynn, Thomas R."],
+  "authors": [
+    "Flynn, Thomas R."
+  ],
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/sartre/",

@@ -7,13 +7,15 @@
   "authorRefs": [
     {
       "personId": "locke",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1689",
-  "languages": [],
-  "summary": "《人类理解论》是洛克的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "en"
+  ],
+  "summary": "《人类理解论》分四卷讨论天赋原则、观念的经验来源、语言和知识限度。第二卷还以意识延伸到过去的范围解释人格同一性；第四卷区分知识与概率，主张理解力应按证据强度调整确信。",
   "conceptIds": [
     "concept-经验",
     "concept-人格同一",
@@ -23,20 +25,26 @@
     "tradition-英国经验主义"
   ],
   "sourceIds": [
-    "src-locke"
+    "src-locke",
+    "src-locke-essay-1689"
   ],
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持《人类理解论》的摘要主张：《人类理解论》是洛克的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2.1–2.6",
+      "claim": "支持四卷结构、观念来源、人格同一和知识限度概述。"
+    },
+    {
+      "sourceId": "src-locke-essay-1689",
+      "locator": "Books I–II and IV",
+      "claim": "支持作品各卷的原典定位。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充四卷结构与核心章节定位。"
 }

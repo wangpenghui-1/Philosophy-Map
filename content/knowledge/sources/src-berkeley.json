@@ -1,1 +1,20 @@
-{"id":"src-berkeley","entityType":"source","title":"George Berkeley","authors":["Downing, Lisa"],"sourceType":"scholarly-encyclopedia","publication":"Stanford Encyclopedia of Philosophy","url":"https://plato.stanford.edu/entries/berkeley/","defaultLocator":"Sections 1–4","language":"en","contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"用于核对贝克莱的生平、反物质论、抽象观念、自然解释及争议。"}
+{
+  "id": "src-berkeley",
+  "entityType": "source",
+  "title": "George Berkeley",
+  "authors": [
+    "Downing, Lisa"
+  ],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/entries/berkeley/",
+  "defaultLocator": "Sections 1–4",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于核对贝克莱的生平、反物质论、抽象观念、自然解释及争议。"
+}

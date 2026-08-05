@@ -1,1 +1,38 @@
-{"id":"george-berkeley-hume","entityType":"relation","from":{"entityType":"person","id":"george-berkeley"},"to":{"entityType":"person","id":"hume"},"directed":false,"relationType":"thematic-resonance","evidenceStatus":"supported","title":"经验主义中的世界与因果问题","explanation":"贝克莱和休谟都拒绝把哲学根据放在不可经验的物质基底上，却走向不同方向：前者用精神和上帝解释自然秩序，后者分析因果信念如何由恒常联结和习惯形成。这里是有明确文本依据的比较阅读，不主张二者存在简单的直接影响链。","note":"主题对读；区分贝克莱的神学非物质论与休谟的因果与怀疑论。","citations":[{"sourceId":"src-berkeley","locator":"Sections 2–3","claim":"支持贝克莱的反物质论和自然解释。"},{"sourceId":"src-hume","locator":"Sections 2.2–2.3 and 6","claim":"支持休谟的因果分析和怀疑论边界。"}],"atlasVisibility":true,"contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"仅作问题比较，不将相似经验主义写成历史上的直接传播。"}
+{
+  "id": "george-berkeley-hume",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "george-berkeley"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "hume"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "经验主义中的世界与因果问题",
+  "explanation": "贝克莱和休谟都拒绝把哲学根据放在不可经验的物质基底上，却走向不同方向：前者用精神和上帝解释自然秩序，后者分析因果信念如何由恒常联结和习惯形成。这里是有明确文本依据的比较阅读，不主张二者存在简单的直接影响链。",
+  "note": "主题对读；区分贝克莱的神学非物质论与休谟的因果与怀疑论。",
+  "citations": [
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Sections 2–3",
+      "claim": "支持贝克莱的反物质论和自然解释。"
+    },
+    {
+      "sourceId": "src-hume",
+      "locator": "Sections 2.2–2.3 and 6",
+      "claim": "支持休谟的因果分析和怀疑论边界。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "仅作问题比较，不将相似经验主义写成历史上的直接传播。"
+}

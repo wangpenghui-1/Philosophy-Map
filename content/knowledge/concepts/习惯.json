@@ -1,10 +1,53 @@
 {
-  "id": "concept-习惯", "slug": "习惯", "entityType": "concept", "name": "习惯", "originalTerms": ["custom", "habit"],
+  "id": "concept-习惯",
+  "slug": "习惯",
+  "entityType": "concept",
+  "name": "习惯",
+  "originalTerms": [
+    "custom",
+    "habit"
+  ],
   "summary": "在休谟那里，习惯是心灵在反复经验后从一个对象自然转向另一个对象的倾向。它解释我们为何期待火会热、明天会像昨天，却不是关于自然必然性的理性证明。",
-  "senses": [{"traditionId": "tradition-苏格兰启蒙运动", "label": "习惯", "explanation": "休谟把习惯（custom 或 habit）用于说明经验推论如何实际发生：反复的恒常联结使心灵形成期待。它是信念的自然机制，不是从过去到未来的演绎论证。", "citations": [{"sourceId": "src-hume", "locator": "Section 2.3: epistemology", "claim": "支持习惯作为经验推论的心理机制而非理性证明。"}]}],
-  "personIds": ["hume"], "workIds": ["treatise-human-nature", "enquiry-understanding"], "traditionIds": ["tradition-苏格兰启蒙运动"], "sourceIds": ["src-hume", "src-hume-enquiry-1748"],
-  "citations": [{"sourceId": "src-hume-enquiry-1748", "locator": "Section V, Part I", "claim": "支持经验推论是习惯而非理性结果的原典表述。"}],
-  "contentTier": "standard", "editorialStatus": "published", "version": 2,
-  "editedBy": "思想星图编辑组", "reviewedBy": "source-structure-review/journey-batch-v1", "lastReviewedAt": "2026-08-05",
+  "senses": [
+    {
+      "traditionId": "tradition-苏格兰启蒙运动",
+      "label": "习惯",
+      "explanation": "休谟把习惯（custom 或 habit）用于说明经验推论如何实际发生：反复的恒常联结使心灵形成期待。它是信念的自然机制，不是从过去到未来的演绎论证。",
+      "citations": [
+        {
+          "sourceId": "src-hume",
+          "locator": "Section 2.3: epistemology",
+          "claim": "支持习惯作为经验推论的心理机制而非理性证明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "hume"
+  ],
+  "workIds": [
+    "treatise-human-nature",
+    "enquiry-understanding"
+  ],
+  "traditionIds": [
+    "tradition-苏格兰启蒙运动"
+  ],
+  "sourceIds": [
+    "src-hume",
+    "src-hume-enquiry-1748"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-hume-enquiry-1748",
+      "locator": "Section V, Part I",
+      "claim": "支持经验推论是习惯而非理性结果的原典表述。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
   "notes": "以休谟的经验推论为本义；不把它与日常习惯的一切用法混同。"
 }

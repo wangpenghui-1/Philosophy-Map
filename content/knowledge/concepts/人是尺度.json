@@ -3,7 +3,9 @@
   "slug": "人是尺度",
   "entityType": "concept",
   "name": "人是尺度",
-  "originalTerms": ["πάντων χρημάτων μέτρον ἄνθρωπος"],
+  "originalTerms": [
+    "πάντων χρημάτων μέτρον ἄνθρωπος"
+  ],
   "summary": "“人是万物的尺度”是普罗泰戈拉最著名的残篇。它将判断置于人的经验中，并引出一个难题：如果显现因人而异，公共讨论如何仍能比较较好和较坏的意见？",
   "senses": [
     {
@@ -29,7 +31,8 @@
     "tradition-智者学派"
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy", "src-protagoras-testimonia"
+    "src-routledge-encyclopedia-philosophy",
+    "src-protagoras-testimonia"
   ],
   "citations": [
     {

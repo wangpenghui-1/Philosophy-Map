@@ -1,1 +1,52 @@
-{"id":"concept-生活形式","slug":"生活形式","entityType":"concept","name":"生活形式","originalTerms":["Lebensform","form of life"],"summary":"生活形式指语言游戏得以被学习、回应和纠正的人类行动背景。它提醒我们，理解语言不仅靠内在表象，也依赖共同训练、反应和实践。","senses":[{"traditionId":"tradition-分析哲学","label":"生活形式","explanation":"生活形式不是一个封闭文化容器，更不自动证明相对主义；它标出规则遵循和语言理解所需的共享做法。","citations":[{"sourceId":"src-wittgenstein-investigations-anscombe","locator":"§§19, 23, 241–242","claim":"支持生活形式与语言游戏的原典段落。"}]}],"personIds":["wittgenstein"],"workIds":["philosophical-investigations"],"traditionIds":["tradition-分析哲学"],"sourceIds":["src-wittgenstein","src-wittgenstein-investigations-anscombe"],"citations":[{"sourceId":"src-wittgenstein","locator":"Section 3.6","claim":"支持生活形式和语法的解释边界。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"不把生活形式写成彼此完全不可沟通的文化相对主义。"}
+{
+  "id": "concept-生活形式",
+  "slug": "生活形式",
+  "entityType": "concept",
+  "name": "生活形式",
+  "originalTerms": [
+    "Lebensform",
+    "form of life"
+  ],
+  "summary": "生活形式指语言游戏得以被学习、回应和纠正的人类行动背景。它提醒我们，理解语言不仅靠内在表象，也依赖共同训练、反应和实践。",
+  "senses": [
+    {
+      "traditionId": "tradition-分析哲学",
+      "label": "生活形式",
+      "explanation": "生活形式不是一个封闭文化容器，更不自动证明相对主义；它标出规则遵循和语言理解所需的共享做法。",
+      "citations": [
+        {
+          "sourceId": "src-wittgenstein-investigations-anscombe",
+          "locator": "§§19, 23, 241–242",
+          "claim": "支持生活形式与语言游戏的原典段落。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "wittgenstein"
+  ],
+  "workIds": [
+    "philosophical-investigations"
+  ],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "sourceIds": [
+    "src-wittgenstein",
+    "src-wittgenstein-investigations-anscombe"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Section 3.6",
+      "claim": "支持生活形式和语法的解释边界。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "不把生活形式写成彼此完全不可沟通的文化相对主义。"
+}

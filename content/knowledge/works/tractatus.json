@@ -1,1 +1,50 @@
-{"id":"tractatus","slug":"tractatus","entityType":"work","title":"《逻辑哲学论》","originalTitle":"Tractatus Logico-Philosophicus","authorRefs":[{"personId":"wittgenstein","role":"author","certainty":"established"}],"dateLabel":"1921（英文版1922）","languages":["de"],"summary":"《逻辑哲学论》以编号命题展开世界、事实、图像、逻辑和语言限度的关系。它试图划分可被有意义地说出的事实与只能显示的东西，并以“沉默”命题结束；其自我取消式的“梯子”是解释争论的中心。","conceptIds":["concept-语言游戏","concept-意义","concept-生活形式"],"traditionIds":["tradition-分析哲学"],"sourceIds":["src-wittgenstein","src-wittgenstein-tractatus-1922"],"citations":[{"sourceId":"src-wittgenstein-tractatus-1922","locator":"Propositions 1–7","claim":"支持作品的编号结构、图像理论和沉默命题。"},{"sourceId":"src-wittgenstein","locator":"Section 2","claim":"支持早期文本的解释争议。"}],"contentTier":"standard","editorialStatus":"published","version":2,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"补充文本结构及其不可化约为单一图像理论的解释边界。"}
+{
+  "id": "tractatus",
+  "slug": "tractatus",
+  "entityType": "work",
+  "title": "《逻辑哲学论》",
+  "originalTitle": "Tractatus Logico-Philosophicus",
+  "authorRefs": [
+    {
+      "personId": "wittgenstein",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1921（英文版1922）",
+  "languages": [
+    "de"
+  ],
+  "summary": "《逻辑哲学论》以编号命题展开世界、事实、图像、逻辑和语言限度的关系。它试图划分可被有意义地说出的事实与只能显示的东西，并以“沉默”命题结束；其自我取消式的“梯子”是解释争论的中心。",
+  "conceptIds": [
+    "concept-语言游戏",
+    "concept-意义",
+    "concept-生活形式"
+  ],
+  "traditionIds": [
+    "tradition-分析哲学"
+  ],
+  "sourceIds": [
+    "src-wittgenstein",
+    "src-wittgenstein-tractatus-1922"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein-tractatus-1922",
+      "locator": "Propositions 1–7",
+      "claim": "支持作品的编号结构、图像理论和沉默命题。"
+    },
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Section 2",
+      "claim": "支持早期文本的解释争议。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充文本结构及其不可化约为单一图像理论的解释边界。"
+}

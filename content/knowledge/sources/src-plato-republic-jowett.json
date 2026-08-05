@@ -11,10 +11,11 @@
   "year": 1892,
   "defaultLocator": "Book VII, 517b–c",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图引文编辑",
-  "reviewedBy": "western-core-quote-source-review/v1",
-  "lastReviewedAt": "2026-08-03"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "除代表引文外，也用于定位《理想国》第四、六、七卷的正义、善、洞穴寓言与辩证法论述。"
 }

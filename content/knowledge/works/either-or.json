@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1843",
-  "languages": [],
-  "summary": "《非此即彼》是克尔凯郭尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "da"
+  ],
+  "summary": "克尔凯郭尔通过编者与多位笔名作者并置审美生活和伦理生活，考察欲望、厌倦、婚姻、承诺与选择；作品结构要求读者判断各声音，而非接受单一教义。",
   "conceptIds": [
     "concept-存在",
     "concept-焦虑",
@@ -28,15 +30,15 @@
   "citations": [
     {
       "sourceId": "src-kierkegaard",
-      "locator": "Sections on existence, anxiety, choice and the critique of system",
-      "claim": "支持《非此即彼》的摘要主张：《非此即彼》是克尔凯郭尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 3.1–3.2 on the aesthetic and ethical spheres",
+      "claim": "支持审美与伦理生活方式、选择和笔名结构的作品概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充审美与伦理阶段及笔名写作边界。"
 }

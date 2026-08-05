@@ -7,13 +7,15 @@
   "authorRefs": [
     {
       "personId": "locke",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1689",
-  "languages": [],
-  "summary": "《政府论》是洛克的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "en"
+  ],
+  "summary": "《政府论》第一篇反驳以亚当父权为君主制依据，第二篇从自然自由和平等出发，讨论劳动财产、同意、政治社会、立法权边界与抵抗权。政府在其中是保护公共利益的信托，而非统治者的私有权。",
   "conceptIds": [
     "concept-经验",
     "concept-人格同一",
@@ -23,20 +25,26 @@
     "tradition-英国经验主义"
   ],
   "sourceIds": [
-    "src-locke"
+    "src-locke",
+    "src-locke-two-treatises-laslett"
   ],
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持《政府论》的摘要主张：《政府论》是洛克的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 4.1–4.7",
+      "claim": "支持第二篇的自然状态、财产、契约、政府与抵抗权结构。"
+    },
+    {
+      "sourceId": "src-locke-two-treatises-laslett",
+      "locator": "First Treatise; Second Treatise, §§4–243",
+      "claim": "支持两篇结构和核心论证的原典定位。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充两篇结构和第二篇主要段落定位。"
 }

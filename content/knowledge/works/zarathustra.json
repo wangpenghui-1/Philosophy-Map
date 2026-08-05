@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1883–1885",
-  "languages": [],
-  "summary": "《查拉图斯特拉如是说》是尼采的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "de"
+  ],
+  "summary": "尼采借先知式人物查拉图斯特拉的演说与遭遇，戏剧化呈现上帝之死、自我超越、价值创造和永恒轮回；人物声音具有文学层次，不能把每句台词直接视为作者定论。",
   "conceptIds": [
     "concept-谱系",
     "concept-价值",
@@ -23,20 +25,21 @@
     "tradition-生命哲学与谱系学"
   ],
   "sourceIds": [
-    "src-nietzsche"
+    "src-nietzsche",
+    "src-nietzsche-zarathustra-primary"
   ],
   "citations": [
     {
       "sourceId": "src-nietzsche",
-      "locator": "Sections on genealogy, values, perspectivism and agency",
-      "claim": "支持《查拉图斯特拉如是说》的摘要主张：《查拉图斯特拉如是说》是尼采的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 3–6 on value creation, self-fashioning and key doctrines",
+      "claim": "支持价值创造、自我超越、永恒轮回及作品体裁的概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充文学体裁与人物声音的解释边界。"
 }

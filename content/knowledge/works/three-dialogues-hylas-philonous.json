@@ -1,1 +1,50 @@
-{"id":"three-dialogues-hylas-philonous","slug":"three-dialogues-hylas-philonous","entityType":"work","title":"《海拉斯与斐洛诺斯的三篇对话》","originalTitle":"Three Dialogues between Hylas and Philonous","authorRefs":[{"personId":"george-berkeley","role":"author","certainty":"established"}],"dateLabel":"1713","languages":["en"],"summary":"三篇对话让代表物质论的海拉斯与捍卫非物质论的斐洛诺斯交锋，集中回应怀疑论、物体持续存在、常识和自然解释。对话形式显示贝克莱并不满足于提出“被感知即存在”，还要回答它为何不使日常世界消失。","conceptIds":["concept-被感知即存在","concept-抽象观念","concept-精神"],"traditionIds":["tradition-经验主义"],"sourceIds":["src-berkeley","src-berkeley-dialogues-1713"],"citations":[{"sourceId":"src-berkeley-dialogues-1713","locator":"First–Third Dialogues","claim":"支持对话结构及关于怀疑论、持续存在、常识的论辩。"},{"sourceId":"src-berkeley","locator":"Sections 2–3.2","claim":"支持该书在贝克莱非物质论中的位置。"}],"contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"补入第二部代表作，突出其回应反驳的对话形式。"}
+{
+  "id": "three-dialogues-hylas-philonous",
+  "slug": "three-dialogues-hylas-philonous",
+  "entityType": "work",
+  "title": "《海拉斯与斐洛诺斯的三篇对话》",
+  "originalTitle": "Three Dialogues between Hylas and Philonous",
+  "authorRefs": [
+    {
+      "personId": "george-berkeley",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1713",
+  "languages": [
+    "en"
+  ],
+  "summary": "三篇对话让代表物质论的海拉斯与捍卫非物质论的斐洛诺斯交锋，集中回应怀疑论、物体持续存在、常识和自然解释。对话形式显示贝克莱并不满足于提出“被感知即存在”，还要回答它为何不使日常世界消失。",
+  "conceptIds": [
+    "concept-被感知即存在",
+    "concept-抽象观念",
+    "concept-精神"
+  ],
+  "traditionIds": [
+    "tradition-经验主义"
+  ],
+  "sourceIds": [
+    "src-berkeley",
+    "src-berkeley-dialogues-1713"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-berkeley-dialogues-1713",
+      "locator": "First–Third Dialogues",
+      "claim": "支持对话结构及关于怀疑论、持续存在、常识的论辩。"
+    },
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Sections 2–3.2",
+      "claim": "支持该书在贝克莱非物质论中的位置。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补入第二部代表作，突出其回应反驳的对话形式。"
+}

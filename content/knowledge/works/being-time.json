@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1927",
-  "languages": [],
-  "summary": "《存在与时间》是海德格尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "de"
+  ],
+  "summary": "海德格尔以此在的在世存在重新提出存在问题，分析器具世界、常人、本真性、向死而在与时间性；1927年出版部分并未完成原计划的全部篇章。",
   "conceptIds": [
     "concept-存在",
     "concept-在世",
@@ -23,20 +25,21 @@
     "tradition-存在论与现象学"
   ],
   "sourceIds": [
-    "src-heidegger"
+    "src-heidegger",
+    "src-heidegger-being-time-macquarrie"
   ],
   "citations": [
     {
       "sourceId": "src-heidegger",
-      "locator": "Sections on being-in-the-world, temporality and technology",
-      "claim": "支持《存在与时间》的摘要主张：《存在与时间》是海德格尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2.1–2.8 on Being and Time",
+      "claim": "支持此在分析、时间性和作品未完成结构的概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充作品结构与未完成状态说明。"
 }

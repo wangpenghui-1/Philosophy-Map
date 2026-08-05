@@ -1,0 +1,38 @@
+{
+  "id": "foucault-machiavelli-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "foucault"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "machiavelli"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“权力”的两种回答",
+  "explanation": "马基雅维利与福柯都触及“权力”，但各自的问题语境和论证目标不同：前者强调政治判断必须面对现实力量、制度冲突与运气，而不能只诉诸私人德性。；后者强调权力并非只从中心压下，也通过分类、训练与自我实践在局部关系中运行。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-machiavelli",
+      "locator": "Sections 2–5: power, liberty and republican conflict",
+      "claim": "支持马基雅维利一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-foucault",
+      "locator": "Sections on archaeology, genealogy, power and subjectivation",
+      "claim": "支持福柯一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

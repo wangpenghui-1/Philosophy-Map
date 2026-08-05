@@ -42,6 +42,12 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   const records = Object.values(all).flat();
   const published = records.filter((record) => record.editorialStatus === "published");
   const candidates = records.filter((record) => record.editorialStatus === "candidate");
+  const publishedByDirectory = Object.fromEntries(
+    Object.entries(all).map(([directory, directoryRecords]) => [
+      directory,
+      directoryRecords.filter((record) => record.editorialStatus === "published"),
+    ]),
+  );
 
   const ids = new Map();
   for (const record of records) {
@@ -134,9 +140,9 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
       records: records.length,
       published: published.length,
       candidates: candidates.length,
-      people: all.people.length,
-      relations: all.relations.length,
-      sources: all.sources.length,
+      people: publishedByDirectory.people.length,
+      relations: publishedByDirectory.relations.length,
+      sources: publishedByDirectory.sources.length,
       coverageCandidates: coverage.candidates.length,
       releasedCandidates: releasedMembers.length,
       production: production.summary,

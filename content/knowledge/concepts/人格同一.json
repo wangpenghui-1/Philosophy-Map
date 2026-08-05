@@ -3,18 +3,21 @@
   "slug": "人格同一",
   "entityType": "concept",
   "name": "人格同一",
-  "originalTerms": [],
-  "summary": "“人格同一”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "originalTerms": [
+    "personal identity",
+    "consciousness"
+  ],
+  "summary": "洛克把人格理解为能把自己视为跨越时间的同一思考者。人格同一随意识延伸到过去的范围延伸，关系到行动归责；它不同于同一物质、同一生命体或未经说明的同一灵魂。",
   "senses": [
     {
       "traditionId": "tradition-英国经验主义",
       "label": "人格同一",
-      "explanation": "在洛克条目中，“人格同一”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "explanation": "记忆是意识把过去行动认作自己的主要方式，但遗忘和错误记忆使理论产生难题。把洛克只概括成“记忆等于人格”会遗漏其对意识、法庭归责和不同同一性标准的区分。",
       "citations": [
         {
           "sourceId": "src-locke",
-          "locator": "Sections on ideas, personal identity and political authority",
-          "claim": "支持“人格同一”义项：在洛克条目中，“人格同一”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
+          "locator": "Section 2.2, personal identity",
+          "claim": "支持意识、记忆、人格和归责的解释。"
         }
       ]
     }
@@ -30,20 +33,26 @@
     "tradition-英国经验主义"
   ],
   "sourceIds": [
-    "src-locke"
+    "src-locke",
+    "src-locke-essay-1689"
   ],
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持人格同一的摘要主张：“人格同一”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "locator": "Section 2.2, personal identity",
+      "claim": "支持洛克人格同一理论及主要争议。"
+    },
+    {
+      "sourceId": "src-locke-essay-1689",
+      "locator": "Book II, Chapter 27",
+      "claim": "支持人格、意识和责任的原典定位。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "区分意识理论、记忆线索和归责问题。"
 }

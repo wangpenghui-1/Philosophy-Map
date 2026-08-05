@@ -1,0 +1,44 @@
+{
+  "id": "theological-political-treatise",
+  "slug": "theological-political-treatise",
+  "entityType": "work",
+  "title": "《神学政治论》",
+  "originalTitle": "Tractatus Theologico-Politicus",
+  "authorRefs": [
+    {
+      "personId": "spinoza",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1670",
+  "languages": [
+    "la"
+  ],
+  "summary": "斯宾诺莎以历史语言方法解释经文，区分神学服从与哲学认识，并论证思想和表达自由在适当法律秩序下并不会破坏国家，反而有助于共同体的安全。",
+  "conceptIds": [
+    "concept-实体",
+    "concept-必然",
+    "concept-情感"
+  ],
+  "traditionIds": [
+    "tradition-近代理性主义"
+  ],
+  "sourceIds": [
+    "src-spinoza",
+    "src-spinoza-ttp-shirley"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-spinoza-ttp-shirley",
+      "locator": "Preface and chapters 7, 13–15, 20",
+      "claim": "支持经文解释方法、神学与哲学的区分以及思想自由的政治论证。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05"
+}

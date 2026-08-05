@@ -2,7 +2,9 @@
   "id": "src-merleau-ponty-phenomenology-perception-fr",
   "entityType": "source",
   "title": "Phénoménologie de la perception",
-  "authors": ["Merleau-Ponty, Maurice"],
+  "authors": [
+    "Merleau-Ponty, Maurice"
+  ],
   "sourceType": "primary-text",
   "publication": "Éditions Gallimard",
   "year": 1945,

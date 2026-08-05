@@ -1,0 +1,62 @@
+{
+  "id": "concept-知识手段",
+  "slug": "知识手段",
+  "entityType": "concept",
+  "name": "知识手段",
+  "originalTerms": [
+    "pramāṇa"
+  ],
+  "summary": "知识手段（pramāṇa）指能够产生真知的可靠过程。早期正理派承认知觉、推论、类比和证言四种；某次经验若由错觉、坏理由或不可信陈述产生，就只是相似的失败过程。",
+  "senses": [
+    {
+      "traditionId": "tradition-正理派",
+      "label": "知识手段（pramāṇa）",
+      "explanation": "正理派从认知的成因判断它是否有资格算知识。四种手段可以在无反证时直接工作；当怀疑出现，认知者才需要追查过程是否正常，并借其他知识手段交叉检验。",
+      "citations": [
+        {
+          "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+          "locator": "Nyāya-sūtra 1.1.1–1.1.4; 2.1.7",
+          "claim": "支持四种知识手段、知觉条件和怀疑后的考察。"
+        },
+        {
+          "sourceId": "src-nyaya-iep",
+          "locator": "Sections 1 and 1.e: Epistemology and Knowledge in General",
+          "claim": "支持知识手段作为真知成因，以及反证出现后重新认证的说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "akshapada-gautama"
+  ],
+  "workIds": [
+    "nyaya-sutra"
+  ],
+  "traditionIds": [
+    "tradition-正理派"
+  ],
+  "sourceIds": [
+    "src-gautama-nyaya-sutra-gangopadhyaya",
+    "src-nyaya-iep",
+    "src-epistemology-india-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+      "locator": "Nyāya-sūtra 1.1.1–1.1.4",
+      "claim": "支持知识手段在十六论题中的位置和四种手段的列举。"
+    },
+    {
+      "sourceId": "src-epistemology-india-sep",
+      "locator": "Section 3: Knowing You Know",
+      "claim": "支持正理派对知识来源、来源辨认与认证的说明。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "为乔达摩人物页新增，明确 pramāṇa 是产生真知的过程而非宽泛的“知识来源”标签。"
+}

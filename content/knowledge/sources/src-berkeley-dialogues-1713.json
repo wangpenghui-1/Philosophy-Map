@@ -1,1 +1,20 @@
-{"id":"src-berkeley-dialogues-1713","entityType":"source","title":"Three Dialogues between Hylas and Philonous","authors":["George Berkeley"],"sourceType":"primary-text","publication":"Henry Clements, London","year":1713,"defaultLocator":"First–Third Dialogues","language":"en","contentTier":"standard","editorialStatus":"published","version":1,"editedBy":"思想星图编辑组","reviewedBy":"source-structure-review/journey-batch-v1","lastReviewedAt":"2026-08-05","notes":"用于定位贝克莱以对话回应怀疑论、物体持续存在和常识的论证。"}
+{
+  "id": "src-berkeley-dialogues-1713",
+  "entityType": "source",
+  "title": "Three Dialogues between Hylas and Philonous",
+  "authors": [
+    "George Berkeley"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Henry Clements, London",
+  "year": 1713,
+  "defaultLocator": "First–Third Dialogues",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于定位贝克莱以对话回应怀疑论、物体持续存在和常识的论证。"
+}

@@ -3,7 +3,9 @@
   "slug": "被感知即存在",
   "entityType": "concept",
   "name": "被感知即存在",
-  "originalTerms": ["esse est percipi"],
+  "originalTerms": [
+    "esse est percipi"
+  ],
   "summary": "“被感知即存在”说的是感觉对象作为观念的存在方式。贝克莱由此否定不可经验的物质基底，但仍以精神和上帝解释自然经验的稳定性。",
   "senses": [
     {
@@ -29,7 +31,8 @@
     "tradition-经验主义"
   ],
   "sourceIds": [
-    "src-berkeley", "src-berkeley-principles-1710"
+    "src-berkeley",
+    "src-berkeley-principles-1710"
   ],
   "citations": [
     {

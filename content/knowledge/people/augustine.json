@@ -48,7 +48,7 @@
     "translator": "E. B. Pusey",
     "translationNote": "奥古斯丁以拉丁文写作；此处展示经核对的英文译文。"
   },
-  "summary": "奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。 本站以意志、时间、内在性为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "奥古斯丁把哲学问题带进记忆、欲望、时间和共同体的内部经验。《忏悔录》并非单纯自传：它借一个不断偏离又重新定向的意志，追问人为何明知较好却仍做较坏的事，以及时间怎样在期待、注意和记忆中被经验。",
   "workIds": [
     "confessions",
     "city-of-god"
@@ -72,36 +72,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "will",
+      "heading": "意志为何会反对自己",
       "paragraphs": [
         {
-          "text": "奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。 本站以意志、时间、内在性为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《忏悔录》描述一种熟悉的困境：人既想改变生活，又被习惯、欲望和虚荣拉回原处。意志不是一声令下就能服从自己的统一主宰；它会分裂成相互竞争的爱与欲望。因此道德失败不只是“不知道正确答案”，也关乎我们实际爱什么。",
           "citations": [
             {
-              "sourceId": "src-augustine",
-              "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本段主张：奥古斯丁是354–430活跃于北非—地中海的晚期古代基督教哲学思想人物，主要追问“意志为何会与自身冲突，时间又如何存在于心灵之中？”。其核心主张可概括为：内在反省揭示记忆、意志…"
+              "sourceId": "src-augustine-confessions-primary",
+              "locator": "Books VIII–IX",
+              "claim": "支持意志分裂、习惯与皈依叙述。"
             }
           ]
         },
         {
-          "text": "核心问题：意志为何会与自身冲突，时间又如何存在于心灵之中？",
+          "text": "他并未因此取消责任。人的行动仍是自己的行动；问题在于，受损的意志难以仅靠一次理性决定治愈自己。恩典不是替人做选择的外力，而是使意志重新被善吸引并能持续行动的条件，这也成为后来自由与恩典争论的源头。",
           "citations": [
             {
               "sourceId": "src-augustine",
-              "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本段主张：核心问题：意志为何会与自身冲突，时间又如何存在于心灵之中？"
+              "locator": "Sections on will, evil and grace",
+              "claim": "支持意志、罪与恩典的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "heading": "时间是心灵的伸展",
+      "paragraphs": [
+        {
+          "text": "奥古斯丁问：过去已经不在、未来尚未来到、现在又不停消逝，我们如何测量时间？他的回答不是否定时间，而是转向经验结构：过去以记忆在场，未来以期待在场，现在以注意在场。时间的“伸展”描述的是心灵同时牵住这些维度的活动。",
+          "citations": [
+            {
+              "sourceId": "src-augustine-confessions-primary",
+              "locator": "Book XI, chapters 14–28",
+              "claim": "支持记忆、期待、注意与时间伸展。"
             }
           ]
         },
         {
-          "text": "核心主张：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。",
+          "text": "这不是现代心理学意义的主观主义。奥古斯丁仍把受造世界和上帝的永恒置于讨论中；人的时间经验之所以重要，正因为它显示有限、变化与不稳定。内省由此既是认识论工作，也是伦理上的自我检验。",
           "citations": [
             {
               "sourceId": "src-augustine",
-              "locator": "Sections on Platonism, will, time and the two cities",
-              "claim": "支持本段主张：核心主张：内在反省揭示记忆、意志与时间经验，而人的自由始终处在欲望、恩典与共同体之间。"
+              "locator": "Sections on time, memory and creation",
+              "claim": "支持时间论、创造论与内省的联系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cities",
+      "heading": "爱也塑造公共共同体",
+      "paragraphs": [
+        {
+          "text": "《上帝之城》并不简单把世俗政治判为毫无价值。奥古斯丁承认和平、秩序和法律的必要性，却拒绝把任何帝国当作终极正义的实现。“两座城”首先由两种爱和终极归属区分，而非两张可以直接对应的地理地图。",
+          "citations": [
+            {
+              "sourceId": "src-augustine",
+              "locator": "Sections on the two cities, politics and history",
+              "claim": "支持两座城、和平与政治秩序的解释。"
+            }
+          ]
+        },
+        {
+          "text": "这种思想既能批判权力把自身神圣化，也可能被用来削弱积极政治行动。理解奥古斯丁时，应把北非主教身份、罗马世界的动荡和漫长的接受史放在一起，而不要把“内在性”误当成逃离社会。它的复杂性也正来自这种不同解释之间持续的拉扯。这也使任何简单的“宗教反政治”判断都失去根据。",
+          "citations": [
+            {
+              "sourceId": "src-augustine",
+              "locator": "Sections on biography, political thought and reception",
+              "claim": "支持历史语境与政治解释争议。"
             }
           ]
         }
@@ -121,11 +163,12 @@
   },
   "color": "#a66f62",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v2",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十一位；补充意志分裂、时间、记忆、两座城与解释边界。",
+  "uncertainty": "《忏悔录》的第一人称叙述兼具祈祷、神学论证和人生回忆，不能当作现代意义的逐日传记。“两座城”也不是国家与教会的一一对应，其政治含义长期存在分歧。"
 }

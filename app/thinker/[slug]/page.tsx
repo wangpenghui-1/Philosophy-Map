@@ -28,7 +28,7 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
   const thinker = getKnowledgePerson((await params).slug);
   if (!thinker) notFound();
   const works = thinker.workIds.map((id) => knowledgeWorkById.get(id)).filter(Boolean);
-  const concepts = thinker.conceptIds.map((id) => knowledgeConceptById.get(id)).filter(Boolean);
+  const concepts = thinker.conceptIds.map((id) => knowledgeConceptById.get(id)).filter((concept) => concept && concept.personIds.includes(thinker.id));
   const traditions = thinker.traditionIds.map((id) => knowledgeTraditionById.get(id)).filter(Boolean);
   const relations = knowledgeBase.relations.filter((relation) => relation.from.id === thinker.id || relation.to.id === thinker.id);
   const thinkerIndex = knowledgeBase.people.findIndex((person) => person.id === thinker.id);
@@ -94,14 +94,14 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
             {concepts.length ? (
               <section id="concepts"><h2>核心概念</h2><div className="knowledge-detail-grid">{concepts.map((concept) => (
                 <Link className="knowledge-detail-card" href={`/concept/${encodeURIComponent(concept!.slug)}`} key={concept!.id}>
-                  <small>CONCEPT</small><h3>{concept!.name}</h3><p>{concept!.summary}</p>
+                  <small>CONCEPT</small><h3>{concept!.name}</h3>{concept!.contentTier !== "index" ? <p>{concept!.summary}</p> : null}
                 </Link>
               ))}</div></section>
             ) : null}
             {works.length ? (
               <section id="works"><h2>代表著作</h2><div className="knowledge-detail-grid">{works.map((work) => (
                 <Link className="knowledge-detail-card" href={`/work/${work!.slug}`} key={work!.id}>
-                  <small>{work!.dateLabel}</small><h3>{work!.title}</h3>{work!.originalTitle ? <span>{work!.originalTitle}</span> : null}<p>{work!.summary}</p>
+                  <small>{work!.dateLabel}</small><h3>{work!.title}</h3>{work!.originalTitle ? <span>{work!.originalTitle}</span> : null}{work!.contentTier !== "index" ? <p>{work!.summary}</p> : null}
                 </Link>
               ))}</div></section>
             ) : null}

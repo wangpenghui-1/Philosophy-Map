@@ -19,14 +19,16 @@
     "tradition-伊壁鸠鲁学派"
   ],
   "conceptIds": [
-    "concept-宁静"
+    "concept-宁静",
+    "concept-幸福",
+    "concept-情感"
   ],
   "questionIds": [
     "reality"
   ],
-  "guidingQuestion": "有限生命如何摆脱对神与死亡的恐惧？",
-  "thesis": "通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
-  "summary": "伊壁鸠鲁是欧洲与地中海伊壁鸠鲁学派的重要思想人物，主要追问“有限生命如何摆脱对神与死亡的恐惧？”。其思想以“宁静”为入口，主张通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
+  "guidingQuestion": "有限生命如何减轻恐惧，并获得稳定而清醒的快乐？",
+  "thesis": "伊壁鸠鲁以原子论解除对神意和死亡的无根据恐惧，再通过欲望辨析、友爱与审慎选择追求身体无痛和心灵安宁。",
+  "summary": "伊壁鸠鲁把哲学看成治疗恐惧的技艺。面对死亡、神灵惩罚和无止境欲望，他并不鼓励放纵，而是要求先理解自然，再区分何种欲望真正必要；稳定的快乐来自少受痛苦、少被虚荣牵引，以及能与朋友共同生活。",
   "workIds": [
     "letter-menoeceus"
   ],
@@ -49,36 +51,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "death",
+      "heading": "死亡为什么不必成为无尽恐惧",
       "paragraphs": [
         {
-          "text": "伊壁鸠鲁是欧洲与地中海伊壁鸠鲁学派的重要思想人物，主要追问“有限生命如何摆脱对神与死亡的恐惧？”。其思想以“宁静”为入口，主张通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
+          "text": "伊壁鸠鲁认为自然由原子和虚空构成，灵魂也不是脱离身体而永存的实体。死亡意味着感受能力终止：当我们存在时，死亡尚未来到；死亡到来时，我们已不再能感受它。这不是轻视临终痛苦或失去亲人的悲伤，而是反对把死后惩罚想象成永恒折磨。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
-              "claim": "支持伊壁鸠鲁的身份、思想主张与历史语境概述。"
+              "sourceId": "src-epicurus-menoeceus-bailey",
+              "locator": "Letter to Menoeceus, §§124–127",
+              "claim": "支持神、死亡与感觉终止的论证。"
             }
           ]
         },
         {
-          "text": "核心问题：有限生命如何摆脱对神与死亡的恐惧？",
+          "text": "自然哲学在这里服务于伦理。若雷电、疾病和死亡都被解释为神意的任意惩罚，人会陷入无法安顿的恐惧；理解自然原因不能消除所有危险，却能减少无根据的想象。哲学因而是让生活更可承受的工具。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
-              "claim": "支持对伊壁鸠鲁核心问题的概括。"
+              "locator": "Epicurus entry: atomism and therapeutic philosophy",
+              "claim": "支持自然解释与治疗恐惧的联系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pleasure",
+      "heading": "快乐不是不断加码的刺激",
+      "paragraphs": [
+        {
+          "text": "伊壁鸠鲁把快乐视为幸福目标，却反对把它理解成奢侈和感官升级。身体无痛、心灵无扰构成较稳定状态；当基本需要已满足，再追逐无边界的财富、名声或享受，往往会制造更多焦虑。快乐的尺度不是拥有越多越好，而是看它是否减少痛苦。",
+          "citations": [
+            {
+              "sourceId": "src-epicurus-menoeceus-bailey",
+              "locator": "Letter to Menoeceus, §§127–132",
+              "claim": "支持快乐、无痛和无扰的表述。"
             }
           ]
         },
         {
-          "text": "核心主张：通过自然哲学、欲望辨析和友爱实践消除无根据的恐惧，以身体无痛和心灵宁静为幸福。",
+          "text": "欲望需要区分：有些自然且必要，如饮食、休息和友爱；有些自然但不必总满足；另一些则由虚荣不断放大。审慎不是禁欲主义，而是在短期快乐与长期后果间判断：有些痛苦值得承受，有些甜美选择反而会伤害生活。",
+          "citations": [
+            {
+              "sourceId": "src-epicurus-menoeceus-bailey",
+              "locator": "Letter to Menoeceus, §§129–130",
+              "claim": "支持欲望分类、审慎与后果比较。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "friendship",
+      "heading": "花园不是独自躲开的隐居生活",
+      "paragraphs": [
+        {
+          "text": "友爱是伊壁鸠鲁伦理中最稳固的快乐来源之一。朋友并非只为互利而聚，但互助、信任和安全确实使快乐能够持续。花园学派以共同学习和简朴生活对抗城邦竞争中的焦虑，说明幸福不只是内在心境，也需要可依赖的关系。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epicurus / 伊壁鸠鲁”",
-              "claim": "支持对伊壁鸠鲁核心主张的概括。"
+              "locator": "Epicurus entry: friendship, community and justice",
+              "claim": "支持友爱、花园共同体与安全。"
+            }
+          ]
+        },
+        {
+          "text": "他常被概括成“逃避政治”，但更准确地说，他怀疑追逐公共名位通常带来的风险与焦虑，并非断言一切公共责任都无意义。大量著作散佚，后世“享乐主义”标签也常遮蔽其节制、友爱和审慎的一面。这些限制使他的伦理始终保留反省的锋芒。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Epicurus entry: politics, reception and misconceptions",
+              "claim": "支持政治态度与享乐主义误读的限定。"
             }
           ]
         }
@@ -103,13 +147,13 @@
   },
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v2",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十四位；补充死亡、自然哲学、欲望、快乐、友爱和材料边界。",
   "representativeQuote": {
     "text": "When we say, then, that pleasure is the end and aim, we do not mean the pleasures of the prodigal or the pleasures of sensuality, but freedom from pain in the body and from trouble in the mind.",
     "displayLanguage": "en",
@@ -126,5 +170,6 @@
     "locator": "Letter to Menoeceus, §131",
     "translator": "Cyril Bailey",
     "translationNote": "原作以古希腊文写成；此处展示 Cyril Bailey 的英文译文。"
-  }
+  },
+  "uncertainty": "伊壁鸠鲁的大量著作已经散佚，现存书信、格言和后世保存材料不能代表全部论证。“快乐”也不能直接译成现代消费主义的享受；它与无痛、无扰、审慎和友爱相连。"
 }

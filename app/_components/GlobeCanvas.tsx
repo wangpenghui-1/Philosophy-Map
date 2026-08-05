@@ -1376,13 +1376,13 @@ function GlobeScene({
   const directorAbortRef = useRef<(() => void) | null>(null);
   const bloomGroupRef = useRef<THREE.Group | null>(null);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
-  const activeStoryFocus = props.storyFocus ?? {
+  const activeStoryFocus = useMemo<GlobeStoryFocus>(() => props.storyFocus ?? ({
     key: currentChapter.id,
     camera: currentChapter.camera,
     thinkerIds: currentChapter.thinkerIds,
     relationIds: currentChapter.relationIds,
     thematicTransitions: [],
-  };
+  }), [currentChapter, props.storyFocus]);
   const storyThinkerIds = useMemo(
     () => new Set(activeStoryFocus.thinkerIds),
     [activeStoryFocus.thinkerIds],

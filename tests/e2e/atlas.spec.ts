@@ -164,7 +164,7 @@ test("selected thinkers expose relationship focus depth", async ({ page }, testI
   }
 });
 
-test("search traps focus and links the globe state to the reading page", async ({ page }) => {
+test("search traps focus and links the globe state to the reading page", async ({ page }, testInfo) => {
   await openHydrated(page, "/explore");
   const trigger = page.getByRole("button", { name: "搜索思想星图" });
   await trigger.focus();
@@ -186,6 +186,9 @@ test("search traps focus and links the globe state to the reading page", async (
   await expect(page).toHaveURL(/\/explore\?thinker=kant/);
   await expect(page.locator("canvas")).toBeVisible();
   await expect(page.getByText("3D渲染不可用")).toBeHidden();
+  if (testInfo.project.name === "desktop-chromium") {
+    await expect(page.locator(".globe-marker--selected")).toHaveAttribute("data-visible", "true");
+  }
 });
 
 test("question and timeline filters are reflected in the exploration URL", async ({ page }) => {

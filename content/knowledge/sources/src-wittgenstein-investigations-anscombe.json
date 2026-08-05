@@ -9,12 +9,13 @@
   "sourceType": "primary-text",
   "publication": "Basil Blackwell",
   "year": 1953,
-  "defaultLocator": "§43",
+  "defaultLocator": "§§1–43, 65–88, 201–242",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图引文编辑",
-  "reviewedBy": "western-core-quote-source-review/v1",
-  "lastReviewedAt": "2026-08-03"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "除代表引文外，也用于定位语言游戏、家族相似、规则遵循与私人语言。"
 }

@@ -1,70 +1,13 @@
 {
-  "id": "concept-情感",
-  "slug": "情感",
-  "entityType": "concept",
-  "name": "情感",
-  "originalTerms": [],
-  "summary": "“情感”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "id": "concept-情感", "slug": "情感", "entityType": "concept", "name": "情感", "originalTerms": ["affect", "passion", "sentiment"],
+  "summary": "“情感”在不同传统中不是同一个理论对象。斯宾诺莎把它置于身体能力的增减中；休谟则把激情和道德情感视为行动与赞许的实际动力，反对把理性当作能独自产生目的的力量。",
   "senses": [
-    {
-      "traditionId": "tradition-近代理性主义",
-      "label": "情感",
-      "explanation": "在斯宾诺莎条目中，“情感”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
-      "citations": [
-        {
-          "sourceId": "src-spinoza",
-          "locator": "Sections on substance, affects, freedom and politics",
-          "claim": "支持“情感”义项：在斯宾诺莎条目中，“情感”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
-        }
-      ]
-    },
-    {
-      "traditionId": "tradition-苏格兰启蒙运动",
-      "label": "情感",
-      "explanation": "在休谟条目中，“情感”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
-      "citations": [
-        {
-          "sourceId": "src-hume",
-          "locator": "Sections on causation, self, morals and skepticism",
-          "claim": "支持“情感”义项：在休谟条目中，“情感”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
-        }
-      ]
-    }
+    {"traditionId": "tradition-近代理性主义", "label": "情感", "explanation": "在斯宾诺莎的用法中，情感（affectus）涉及身体行动能力的增减及其观念；理解情感的因果结构，是获得较主动生活的条件。", "citations": [{"sourceId": "src-spinoza", "locator": "Sections on substance, affects, freedom and politics", "claim": "支持斯宾诺莎关于情感、行动能力与自由的说明。"}]},
+    {"traditionId": "tradition-苏格兰启蒙运动", "label": "情感", "explanation": "在休谟的用法中，激情（passions）包括欲望、恐惧、骄傲、同情等。理性能推理事实和手段，却不能单独给行动设定目的；道德赞许也与情感反应相连。", "citations": [{"sourceId": "src-hume", "locator": "Sections 3–4", "claim": "支持休谟关于激情、动机和道德情感的说明。"}]}
   ],
-  "personIds": [
-    "spinoza",
-    "hume"
-  ],
-  "workIds": [
-    "ethics-spinoza",
-    "treatise-human-nature",
-    "enquiry-understanding"
-  ],
-  "traditionIds": [
-    "tradition-近代理性主义",
-    "tradition-苏格兰启蒙运动"
-  ],
-  "sourceIds": [
-    "src-spinoza",
-    "src-hume"
-  ],
-  "citations": [
-    {
-      "sourceId": "src-spinoza",
-      "locator": "Sections on substance, affects, freedom and politics",
-      "claim": "支持情感的摘要主张：“情感”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
-    },
-    {
-      "sourceId": "src-hume",
-      "locator": "Sections on causation, self, morals and skepticism",
-      "claim": "支持情感的摘要主张：“情感”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
-    }
-  ],
-  "contentTier": "index",
-  "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "personIds": ["spinoza", "hume"], "workIds": ["ethics-spinoza", "treatise-human-nature", "enquiry-understanding"], "traditionIds": ["tradition-近代理性主义", "tradition-苏格兰启蒙运动"], "sourceIds": ["src-spinoza", "src-hume", "src-hume-treatise-1739"],
+  "citations": [{"sourceId": "src-spinoza", "locator": "Sections on substance, affects, freedom and politics", "claim": "支持斯宾诺莎的情感理论定位。"}, {"sourceId": "src-hume-treatise-1739", "locator": "Book II, Part III, §3; Book III, Part I, §2", "claim": "支持理性与激情、道德情感的关系。"}],
+  "contentTier": "standard", "editorialStatus": "published", "version": 2,
+  "editedBy": "思想星图编辑组", "reviewedBy": "source-structure-review/journey-batch-v1", "lastReviewedAt": "2026-08-05",
+  "notes": "区分斯宾诺莎的 affect 与休谟的 passions、sentiment，避免把同一中文词误作同一理论。"
 }

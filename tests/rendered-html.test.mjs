@@ -170,16 +170,18 @@ test("publishes the current increment while preserving the historical corpus and
   ]);
   const release = JSON.parse(await readFile(new URL("coverage/release-210.json", knowledgeRoot), "utf8"));
   const increment = JSON.parse(await readFile(new URL("coverage/release-213-increment.json", knowledgeRoot), "utf8"));
+  const publishedRelations = relations.filter((relation) => relation.editorialStatus === "published");
+  const publishedSources = sources.filter((source) => source.editorialStatus === "published");
   assert.equal(people.length, increment.publicPeople);
-  assert.equal(relations.length, generatedCoverage.published.relations);
-  assert.equal(sources.length, generatedCoverage.published.sources);
+  assert.equal(publishedRelations.length, generatedCoverage.published.relations);
+  assert.equal(publishedSources.length, generatedCoverage.published.sources);
   assert.equal(new Set(people.map((person) => person.slug)).size, people.length);
   assert.equal(release.members.length, release.addedPeople);
   assert.equal(increment.members.length, increment.addedPeople);
   assert.ok(["confucius", "plato", "kant", "foucault"].every((slug) => people.some((person) => person.slug === slug)));
   assert.ok(release.members.every((member) => people.some((person) => person.id === member.personId)));
   assert.ok(increment.members.every((member) => people.some((person) => person.id === member.personId)));
-  assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre", "nietzsche-camus", "sartre-camus"].every((id) => relations.some((relation) => relation.id === id)));
+  assert.ok(["husserl-merleau-ponty", "heidegger-merleau-ponty", "heidegger-sartre", "nietzsche-camus", "sartre-camus"].every((id) => publishedRelations.some((relation) => relation.id === id)));
   assert.ok(people.every((person) => person.editorialStatus === "published"));
   const editorialDisclaimer = "条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。";
   assert.ok(people.every((person) => !person.summary.includes(editorialDisclaimer)));
@@ -276,6 +278,65 @@ test("keeps Camus substantial, sourced, connected, and explicit about classifica
   assert.ok(person.sections.every((section) => section.paragraphs.every((paragraph) => paragraph.citations.length > 0)));
   assert.ok(person.workIds.every((workId) => !/后续将补充|文本入口/.test(workById.get(workId)?.summary ?? "")));
   assert.match(person.uncertainty, /拒绝“存在主义者”标签/);
+});
+
+test("keeps the second journey batch substantial, sourced, and connected", async () => {
+  const [people, works, relations] = await Promise.all([
+    readEntities("people"),
+    readEntities("works"),
+    readEntities("relations"),
+  ]);
+  const batchIds = ["heidegger", "beauvoir", "spinoza", "nietzsche", "kierkegaard"];
+  const personById = new Map(people.map((person) => [person.id, person]));
+  const workById = new Map(works.map((work) => [work.id, work]));
+
+  for (const id of batchIds) {
+    const person = personById.get(id);
+    assert.ok(person, `${id}: batch person is missing`);
+    const sectionText = person.sections.flatMap((section) => section.paragraphs).map((paragraph) => paragraph.text).join("");
+    const personRelations = relations.filter((relation) => relation.from.id === id || relation.to.id === id);
+    assert.equal(person.contentTier, "standard", `${id}: batch person should be standard tier`);
+    assert.ok(person.sections.length >= 3, `${id}: batch person needs at least three sections`);
+    assert.ok(sectionText.length >= 600 && sectionText.length <= 1500, `${id}: batch prose should stay substantial and readable`);
+    assert.ok(person.conceptIds.length >= 3, `${id}: batch person needs at least three concepts`);
+    assert.ok(person.sourceIds.length >= 2, `${id}: batch person needs at least two sources`);
+    assert.ok(person.workIds.length >= 2, `${id}: batch person needs at least two representative works`);
+    assert.ok(personRelations.length >= 2, `${id}: batch person needs at least two thinker relations`);
+    assert.ok(person.sections.every((section) => section.paragraphs.every((paragraph) => paragraph.citations.length > 0)), `${id}: every paragraph needs a citation`);
+    assert.ok(person.workIds.every((workId) => !/后续将补充|文本入口/.test(workById.get(workId)?.summary ?? "")), `${id}: work summaries must be substantive`);
+  }
+});
+
+test("keeps the person-by-person journey rewrites substantive and free of index placeholders", async () => {
+  const [people, works, relations, concepts] = await Promise.all([
+    readEntities("people"),
+    readEntities("works"),
+    readEntities("relations"),
+    readEntities("concepts"),
+  ]);
+  const rewriteIds = ["plato", "akshapada-gautama", "descartes", "locke", "hume", "thomas-kuhn", "protagoras", "george-berkeley", "wittgenstein"];
+  const singleWorkCorpusIds = new Set(["akshapada-gautama", "protagoras"]);
+  const personById = new Map(people.map((person) => [person.id, person]));
+  const workById = new Map(works.map((work) => [work.id, work]));
+  const conceptById = new Map(concepts.map((concept) => [concept.id, concept]));
+
+  for (const id of rewriteIds) {
+    const person = personById.get(id);
+    assert.ok(person, `${id}: rewritten journey thinker is missing`);
+    const sectionText = person.sections.flatMap((section) => section.paragraphs).map((paragraph) => paragraph.text).join("");
+    const personRelations = relations.filter((relation) => relation.editorialStatus === "published" && (relation.from.id === id || relation.to.id === id));
+    assert.equal(person.contentTier, "standard", `${id}: rewritten thinker should be standard tier`);
+    assert.ok(person.sections.length >= 3, `${id}: rewritten thinker needs at least three sections`);
+    assert.ok(sectionText.length >= 600 && sectionText.length <= 1500, `${id}: rewritten prose should stay substantial and readable`);
+    assert.ok(person.conceptIds.length >= 3, `${id}: rewritten thinker needs at least three concepts`);
+    assert.ok(person.sourceIds.length >= 2, `${id}: rewritten thinker needs at least two sources`);
+    const minimumWorks = singleWorkCorpusIds.has(id) ? 1 : 2;
+    assert.ok(person.workIds.length >= minimumWorks, `${id}: rewritten thinker needs enough historically attributable representative works`);
+    assert.ok(personRelations.length >= 2, `${id}: rewritten thinker needs at least two evidenced relations`);
+    assert.ok(person.sections.every((section) => section.paragraphs.every((paragraph) => paragraph.citations.length > 0)), `${id}: every paragraph needs a citation`);
+    assert.ok(person.workIds.every((workId) => !/后续将补充|文本入口|本索引保留/.test(workById.get(workId)?.summary ?? "")), `${id}: work summaries must be substantive`);
+    assert.ok(person.conceptIds.every((conceptId) => !/概念索引|概念入口|具体含义需结合/.test(conceptById.get(conceptId)?.summary ?? "")), `${id}: concept summaries must explain the thinker-specific idea`);
+  }
 });
 
 test("keeps relation evidence and resonance semantics explicit in entity data", async () => {

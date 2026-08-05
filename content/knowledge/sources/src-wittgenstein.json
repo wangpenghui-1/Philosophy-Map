@@ -9,13 +9,13 @@
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/wittgenstein/",
-  "defaultLocator": "Sections on the picture theory, language-games and forms of life",
+  "defaultLocator": "Sections 2–3 and 6",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "采用 Biletzki 与 Matar 的 SEP 条目，核对早晚期文本、语言游戏、规则、生活形式与解释争议。"
 }

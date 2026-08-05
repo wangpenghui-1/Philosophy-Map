@@ -9,13 +9,13 @@
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/hume/",
-  "defaultLocator": "Sections on causation, self, morals and skepticism",
+  "defaultLocator": "Sections 2.1–2.3, 3–4 and 6",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "采用 Qu 与 Radcliffe 的 SEP 条目，核对心灵理论、因果与归纳、自我、情感、伦理及怀疑论，并保留文本解释的争议边界。"
 }

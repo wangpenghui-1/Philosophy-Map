@@ -42,6 +42,12 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   const records = Object.values(all).flat();
   const published = records.filter((record) => record.editorialStatus === "published");
   const candidates = records.filter((record) => record.editorialStatus === "candidate");
+  const publishedByDirectory = Object.fromEntries(
+    Object.entries(all).map(([directory, directoryRecords]) => [
+      directory,
+      directoryRecords.filter((record) => record.editorialStatus === "published"),
+    ]),
+  );
 
   const ids = new Map();
   for (const record of records) {
@@ -97,16 +103,20 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
 
   const coverage = JSON.parse(await readFile(path.join(contentRoot, "coverage", "people.json"), "utf8"));
   const release = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-210.json"), "utf8"));
+  const releaseIncrement = JSON.parse(await readFile(path.join(contentRoot, "coverage", "release-213-increment.json"), "utf8"));
   const releasedPeople = new Map(all.people.map((person) => [person.id, person]));
   const releaseFailures = [];
-  if (coverage.targetTotal !== 210 || coverage.publishedBaseline !== 210 || coverage.candidateCount !== 0 || coverage.candidates.length !== 0) releaseFailures.push("coverage-counts");
-  if (Object.values(coverage.regionTargets).reduce((sum, count) => sum + count, 0) !== 210) releaseFailures.push("region-targets");
-  if (Object.values(coverage.eraTargets).reduce((sum, count) => sum + count, 0) !== 210) releaseFailures.push("era-targets");
-  if (release.baselinePeople !== 30 || release.addedPeople !== 180 || release.publicPeople !== 210 || release.members.length !== 180) releaseFailures.push("release-manifest");
-  if (new Set(release.members.map((member) => member.personId)).size !== 180) releaseFailures.push("release-member-ids");
-  if (release.members.some((member) => releasedPeople.get(member.personId)?.editorialStatus !== "published")) releaseFailures.push("release-member-status");
-  if (all.people.length !== 210) releaseFailures.push("public-people");
-  if (releaseFailures.length) findings.push(finding("blocker", "coverage-release-failure", "210人发布清单、覆盖统计或公开条目不一致。", releaseFailures));
+  const expectedPublicPeople = releaseIncrement.baselinePeople + releaseIncrement.addedPeople;
+  const releasedMembers = [...release.members, ...releaseIncrement.members];
+  if (coverage.targetTotal !== expectedPublicPeople || coverage.publishedBaseline !== expectedPublicPeople || coverage.candidateCount !== coverage.candidates.length) releaseFailures.push("coverage-counts");
+  if (Object.values(coverage.regionTargets).reduce((sum, count) => sum + count, 0) !== expectedPublicPeople) releaseFailures.push("region-targets");
+  if (Object.values(coverage.eraTargets).reduce((sum, count) => sum + count, 0) !== expectedPublicPeople) releaseFailures.push("era-targets");
+  if (release.baselinePeople + release.addedPeople !== release.publicPeople || release.members.length !== release.addedPeople) releaseFailures.push("historical-release-manifest");
+  if (releaseIncrement.baselinePeople !== release.publicPeople || releaseIncrement.members.length !== releaseIncrement.addedPeople || releaseIncrement.publicPeople !== expectedPublicPeople) releaseFailures.push("increment-release-manifest");
+  if (new Set(releasedMembers.map((member) => member.personId)).size !== releasedMembers.length) releaseFailures.push("release-member-ids");
+  if (releasedMembers.some((member) => releasedPeople.get(member.personId)?.editorialStatus !== "published")) releaseFailures.push("release-member-status");
+  if (all.people.length !== expectedPublicPeople) releaseFailures.push("public-people");
+  if (releaseFailures.length) findings.push(finding("blocker", "coverage-release-failure", "历史基线、增量发布、覆盖统计或公开条目不一致。", releaseFailures));
 
   const knowledge = JSON.parse(await readFile(path.join(generatedRoot, "knowledge.json"), "utf8"));
   const publicRecords = Object.values(knowledge).flat();
@@ -130,11 +140,11 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
       records: records.length,
       published: published.length,
       candidates: candidates.length,
-      people: all.people.length,
-      relations: all.relations.length,
-      sources: all.sources.length,
+      people: publishedByDirectory.people.length,
+      relations: publishedByDirectory.relations.length,
+      sources: publishedByDirectory.sources.length,
       coverageCandidates: coverage.candidates.length,
-      releasedCandidates: release.members.length,
+      releasedCandidates: releasedMembers.length,
       production: production.summary,
     },
     findings,

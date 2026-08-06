@@ -1,0 +1,288 @@
+{
+  "id": "concept-自我",
+  "slug": "自我",
+  "entityType": "concept",
+  "name": "自我",
+  "originalTerms": [],
+  "summary": "“自我”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-明代批判思想",
+      "label": "自我",
+      "explanation": "在李贽所属的思想语境中，“自我”是进入“个体真诚如何抵抗以经典权威为名的伪饰？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持李贽条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-数论",
+      "label": "自我",
+      "explanation": "在迦毗罗所属的思想语境中，“自我”是进入“经验世界与纯粹意识为何必须区分？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持迦毗罗条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-瑜伽哲学",
+      "label": "自我",
+      "explanation": "在钵颠阇利所属的思想语境中，“自我”是进入“意识活动如何通过训练而不再支配自我认同？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持钵颠阇利条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-瑜伽行派",
+      "label": "自我",
+      "explanation": "在无著所属的思想语境中，“自我”是进入“经验连续性与业力如何在无常心识中得到说明？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持无著条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-限定不二论",
+      "label": "自我",
+      "explanation": "在罗摩奴阇所属的思想语境中，“自我”是进入“统一的终极实在如何容纳真实的灵魂与世界？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持罗摩奴阇条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-二元论吠檀多",
+      "label": "自我",
+      "explanation": "在摩陀婆所属的思想语境中，“自我”是进入“神、灵魂和世界的差异为何不能被还原？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持摩陀婆条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-虔信运动",
+      "label": "自我",
+      "explanation": "在迦比尔所属的思想语境中，“自我”是进入“宗教身份和仪式能否替代直接的精神觉知？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持迦比尔条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代印度哲学",
+      "label": "自我",
+      "explanation": "在奥罗宾多所属的思想语境中，“自我”是进入“意识与物质的演化能否被理解为同一精神进程？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持奥罗宾多条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代精神哲学",
+      "label": "自我",
+      "explanation": "在克里希那穆提所属的思想语境中，“自我”是进入“心灵能否不依附权威和固定方法而获得自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持克里希那穆提条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代伊斯兰哲学",
+      "label": "自我",
+      "explanation": "在穆罕默德·伊克巴尔所属的思想语境中，“自我”是进入“现代穆斯林主体如何在变化世界中获得创造性自由？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持穆罕默德·伊克巴尔条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-前苏格拉底哲学",
+      "label": "自我",
+      "explanation": "在毕达哥拉斯所属的思想语境中，“自我”是进入“宇宙秩序、音乐比例和灵魂生活如何彼此关联？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持毕达哥拉斯条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-中世纪神秘哲学",
+      "label": "自我",
+      "explanation": "在艾克哈特所属的思想语境中，“自我”是进入“心灵如何通过放下占有而向神圣根基敞开？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持艾克哈特条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-非洲与欧洲启蒙哲学",
+      "label": "自我",
+      "explanation": "在安东·威廉·阿莫所属的思想语境中，“自我”是进入“感觉应归属于心灵还是有机身体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持安东·威廉·阿莫条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-黑人意识思想",
+      "label": "自我",
+      "explanation": "在史蒂夫·比科所属的思想语境中，“自我”是进入“被压迫者如何摆脱内化的种族等级？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-african-philosophy",
+          "locator": "对应人物、地区传统与论题专章",
+          "claim": "支持史蒂夫·比科条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-性别与政治哲学",
+      "label": "自我",
+      "explanation": "在朱迪斯·巴特勒所属的思想语境中，“自我”是进入“性别身份如何由重复规范产生又可能被改变？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-companion-american-philosophy",
+          "locator": "对应人物与思想运动专章",
+          "claim": "支持朱迪斯·巴特勒条目中“自我”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "li-zhi",
+    "kapila",
+    "patanjali",
+    "asanga",
+    "ramanuja",
+    "madhva",
+    "kabir",
+    "sri-aurobindo",
+    "jiddu-krishnamurti",
+    "muhammad-iqbal",
+    "pythagoras",
+    "meister-eckhart",
+    "anton-wilhelm-amo",
+    "steve-biko",
+    "judith-butler"
+  ],
+  "workIds": [
+    "book-to-burn",
+    "samkhya-tradition",
+    "yoga-sutra",
+    "mahayana-samgraha",
+    "sri-bhasya",
+    "anuvyakhyana",
+    "bijak",
+    "life-divine",
+    "first-last-freedom",
+    "reconstruction-religious-thought",
+    "pythagorean-testimonia",
+    "german-sermons-eckhart",
+    "amo-apatheia",
+    "i-write-what-i-like",
+    "gender-trouble"
+  ],
+  "traditionIds": [
+    "tradition-明代批判思想",
+    "tradition-数论",
+    "tradition-瑜伽哲学",
+    "tradition-瑜伽行派",
+    "tradition-限定不二论",
+    "tradition-二元论吠檀多",
+    "tradition-虔信运动",
+    "tradition-现代印度哲学",
+    "tradition-现代精神哲学",
+    "tradition-现代伊斯兰哲学",
+    "tradition-前苏格拉底哲学",
+    "tradition-中世纪神秘哲学",
+    "tradition-非洲与欧洲启蒙哲学",
+    "tradition-黑人意识思想",
+    "tradition-性别与政治哲学"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy",
+    "src-encyclopedia-indian-philosophies",
+    "src-history-islamic-philosophy",
+    "src-routledge-encyclopedia-philosophy",
+    "src-companion-african-philosophy",
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持李贽条目中“自我”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持迦毗罗条目中“自我”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持穆罕默德·伊克巴尔条目中“自我”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持毕达哥拉斯条目中“自我”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持安东·威廉·阿莫条目中“自我”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章",
+      "claim": "支持朱迪斯·巴特勒条目中“自我”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

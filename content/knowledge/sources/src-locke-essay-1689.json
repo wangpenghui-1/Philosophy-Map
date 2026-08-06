@@ -10,10 +10,11 @@
   "year": 1689,
   "defaultLocator": "Book II, Chapter 1, §19",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图引文编辑",
-  "reviewedBy": "quote-source-attribution-review/v1",
-  "lastReviewedAt": "2026-08-02"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "除代表引文外，也用于定位反天赋论、感觉与反思、知识限度和人格同一性。"
 }

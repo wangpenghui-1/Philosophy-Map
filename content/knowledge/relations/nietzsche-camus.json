@@ -1,0 +1,36 @@
+{
+  "id": "nietzsche-camus",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "nietzsche"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "camus"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "在价值危机中拒绝超越性安慰",
+  "explanation": "加缪持续阅读并回应尼采关于上帝之死、虚无主义和价值创造的讨论，但以荒诞、限度与反抗重新约束肯定生命的政治含义。",
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 2–3, including Camus's close reading of Nietzsche",
+      "claim": "支持加缪对尼采的直接阅读、吸收与重新定位。"
+    },
+    {
+      "sourceId": "src-nietzsche",
+      "locator": "Sections on values, nihilism and agency",
+      "claim": "支持加缪所回应的尼采价值危机与能动性问题背景。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

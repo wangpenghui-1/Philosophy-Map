@@ -47,7 +47,7 @@
     "translator": "Thomas Kingsmill Abbott",
     "translationNote": "康德以德文写作；此处展示经核对的英文译文。"
   },
-  "summary": "康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。 本站以批判、先验、自主为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "康德试图回答三个相互牵连的问题：我们能够知道什么、应当做什么、可以希望什么。他以认识的先验条件限制形而上学，又以自主和定言命令说明自由主体如何承担普遍的道德责任。",
   "workIds": [
     "pure-reason",
     "groundwork"
@@ -65,42 +65,89 @@
   "citations": [
     {
       "sourceId": "src-kant",
-      "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-      "claim": "支持康德的摘要主张：康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立…"
+      "locator": "Sections 2–5: critical philosophy, transcendental idealism, morality and freedom",
+      "claim": "支持康德从认识条件、先验唯心论到自主与自由的整体思想框架。"
+    },
+    {
+      "sourceId": "src-kant-groundwork-primary",
+      "locator": "Section II: transition from popular moral philosophy to the metaphysics of morals",
+      "claim": "支持定言命令、自主和目的自身等道德哲学主张。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "knowledge",
+      "heading": "认识为什么需要“批判”",
       "paragraphs": [
         {
-          "text": "康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。 本站以批判、先验、自主为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "康德所说的“批判”不是挑错，而是审查一种能力可以合法做什么。经验主义提醒他：知识不能脱离感官材料；理性主义又提醒他：经验若没有结构便无法成为关于对象的判断。康德因此把问题从“世界本身由什么构成”转向“一个对象能够被我们经验，需要哪些先行条件”。空间、时间以及因果性等范畴，不是从零散印象中简单抄来，而是经验能够成为有秩序经验的条件。",
           "citations": [
             {
               "sourceId": "src-kant",
-              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-              "claim": "支持本段主张：康德是1724–1804活跃于欧洲的批判哲学思想人物，主要追问“人的认识能够达到哪里，自由又如何可能？”。其核心主张可概括为：经验由认识结构组织；自由要求人把自己视为能够自我立…"
+              "locator": "Sections 2.2 and 4: Copernican revolution and transcendental deduction",
+              "claim": "支持康德把哲学问题转向经验可能条件，以及范畴对客观经验的组织作用。"
             }
           ]
         },
         {
-          "text": "核心问题：人的认识能够达到哪里，自由又如何可能？",
+          "text": "这种“哥白尼式转向”同时设下边界。我们认识的是事物在人的感性与知性条件下如何显现，而不是脱离一切认识条件的“物自身”。这并非说外部世界只是幻觉，而是说理论知识不能越过可能经验，去证明灵魂、宇宙整体或上帝像普通对象那样存在。先验唯心论由此既维护经验科学的客观性，也限制传统形而上学的越界断言。",
           "citations": [
             {
               "sourceId": "src-kant",
-              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-              "claim": "支持本段主张：核心问题：人的认识能够达到哪里，自由又如何可能？"
+              "locator": "Sections 3–4: transcendental idealism and objectivity",
+              "claim": "支持现象与物自身的边界，以及先验条件如何与经验客观性相容。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morality",
+      "heading": "从自律到定言命令",
+      "paragraphs": [
+        {
+          "text": "在道德领域，康德同样寻找不依赖个人欲望和偶然结果的条件。如果我只因害怕处罚、追求名誉或期待幸福而行动，行动准则仍由外部目的支配。自主则意味着理性主体把自己理解为法则的共同制定者：行动前要问，我采用的准则能否同时被所有人采用，而不靠为自己保留例外才能成立。",
+          "citations": [
+            {
+              "sourceId": "src-kant-groundwork-primary",
+              "locator": "Section II: formula of universal law and autonomy",
+              "claim": "支持普遍法则检验、自主与他律的区分。"
             }
           ]
         },
         {
-          "text": "核心主张：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。",
+          "text": "定言命令还有“目的自身”的表达：任何人格都不能仅被当作工具。康德并不禁止互相利用能力——雇佣、交易和合作都包含工具关系——而是反对绕过对方的同意，把一个人降为实现他人目的的物件。尊严来自能够参与理由和法则的主体地位，而不是财富、才智或社会功用。",
+          "citations": [
+            {
+              "sourceId": "src-kant-groundwork-primary",
+              "locator": "Section II: formula of humanity as an end in itself",
+              "claim": "支持人格作为目的自身、尊严与工具性使用之间的区别。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "freedom-system",
+      "heading": "自由、自然与哲学体系",
+      "paragraphs": [
+        {
+          "text": "自由看似与自然因果冲突：如果每个事件都有原因，行动如何还能归责于人？康德不把自由当成可以观察到的自然事件，而把它视为实践理性不可回避的立场。当一个人认为自己应当做某事时，也就把自己理解为能够依理由行动。理论理性不能证明自由是一种经验对象，道德实践却要求主体在行动中承担自由。",
           "citations": [
             {
               "sourceId": "src-kant",
-              "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-              "claim": "支持本段主张：核心主张：经验由认识结构组织；自由要求人把自己视为能够自我立法的主体。"
+              "locator": "Sections 5.1–5.4: autonomy, freedom and the categorical imperative",
+              "claim": "支持理论知识对自由的限制及自由作为实践立场的说明。"
+            }
+          ]
+        },
+        {
+          "text": "康德后来的工作继续追问自然与自由如何属于同一个世界。《判断力批判》通过审美判断和自然目的性寻找两者之间的过渡，他的历史、宗教与政治写作则讨论启蒙、公共理性和永久和平。这套体系影响了德国观念论、现象学和现代政治哲学，也不断受到质疑：过度形式化的道德法则能否理解情感、社会依赖与历史不平等？",
+          "citations": [
+            {
+              "sourceId": "src-kant",
+              "locator": "Sections 6–7 and life and works",
+              "claim": "支持康德体系中最高善、目的性以及自然与自由统一问题。"
             }
           ]
         }
@@ -120,11 +167,11 @@
   },
   "color": "#7589b6",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成认识论、道德哲学与自由问题的分段扩写，待站主发布前终审。"
 }

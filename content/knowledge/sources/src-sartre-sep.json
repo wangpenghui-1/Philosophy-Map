@@ -1,0 +1,19 @@
+{
+  "id": "src-sartre-sep",
+  "entityType": "source",
+  "title": "Jean-Paul Sartre",
+  "authors": [
+    "Flynn, Thomas R."
+  ],
+  "sourceType": "scholarly-encyclopedia",
+  "publication": "Stanford Encyclopedia of Philosophy",
+  "url": "https://plato.stanford.edu/entries/sartre/",
+  "defaultLocator": "Sections on consciousness, freedom, bad faith and existentialism",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

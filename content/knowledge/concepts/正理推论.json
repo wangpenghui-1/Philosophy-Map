@@ -3,18 +3,26 @@
   "slug": "正理推论",
   "entityType": "concept",
   "name": "正理推论",
-  "originalTerms": [],
-  "summary": "“正理推论”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "originalTerms": [
+    "anumāna",
+    "nyāya"
+  ],
+  "summary": "正理派把推论视为产生真知的过程。面向他人时，论者要说明主张、理由、共同实例、当前适用条件和结论，让隐藏前提、稳定联系及可能反例都能接受检查。",
   "senses": [
     {
       "traditionId": "tradition-正理派",
-      "label": "正理推论",
-      "explanation": "在乔达摩及正理派语境中，“正理推论”用于说明：正理派以知觉、推论、类比和证言分析知识，并用论辩规则排除谬误。该义项不默认等同于其他传统中的相似译名。",
+      "label": "推论（anumāna）",
+      "explanation": "《正理经》区分个人获得推论知识与向他人展示理由。五支论证不是只检验形式有效性，还要确认理由真实、烟与火一类遍充关系成立、实例为双方接受，并排除谬因。",
       "citations": [
         {
-          "sourceId": "src-encyclopedia-indian-philosophies",
-          "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-          "claim": "支持乔达摩语境中的“正理推论”义项。"
+          "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+          "locator": "Nyāya-sūtra 1.1.5; 1.1.32–1.1.39",
+          "claim": "支持推论定义和五支论证的经文定位。"
+        },
+        {
+          "sourceId": "src-nyaya-iep",
+          "locator": "Section 1.b: Inference",
+          "claim": "支持烟火例证、遍充关系、实例和谬因的解释。"
         }
       ]
     }
@@ -29,20 +37,27 @@
     "tradition-正理派"
   ],
   "sourceIds": [
-    "src-encyclopedia-indian-philosophies"
+    "src-gautama-nyaya-sutra-gangopadhyaya",
+    "src-nyaya-iep",
+    "src-epistemology-india-sep"
   ],
   "citations": [
     {
-      "sourceId": "src-encyclopedia-indian-philosophies",
-      "locator": "相关卷中的人物、学派与文本条目：“Akshapada Gautama / 乔达摩”",
-      "claim": "支持“正理推论”作为乔达摩思想入口的概括。"
+      "sourceId": "src-gautama-nyaya-sutra-gangopadhyaya",
+      "locator": "Nyāya-sūtra 1.1.5; 1.1.32–1.1.39",
+      "claim": "支持正理推论的原典结构。"
+    },
+    {
+      "sourceId": "src-epistemology-india-sep",
+      "locator": "Section 5: Inference",
+      "claim": "支持正理派推论在印度认识论争论中的位置。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "去除概念索引占位语，补充原语、五支论证和证据定位。"
 }

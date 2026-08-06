@@ -10,11 +10,11 @@
   "url": "https://plato.stanford.edu/entries/nietzsche/",
   "defaultLocator": "Sections on genealogy, values, perspectivism and agency",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于本批人物页中谱系、价值、视角主义与自我塑造的二手研究定位。"
 }

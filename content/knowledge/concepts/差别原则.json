@@ -1,0 +1,51 @@
+{
+  "id": "concept-差别原则",
+  "slug": "差别原则",
+  "entityType": "concept",
+  "name": "差别原则",
+  "originalTerms": [
+    "difference principle"
+  ],
+  "summary": "差别原则并不笼统赞成经济差距；它要求制度造成的不平等必须改善最不利者的长期处境，并与公平机会相配合。",
+  "senses": [
+    {
+      "traditionId": "tradition-政治自由主义",
+      "label": "以最不利者检验社会经济不平等",
+      "explanation": "差别原则属于正义第二原则的一部分，适用于社会基本结构。它不能用个别慈善或总体财富增长替代，也不能凌驾于平等基本自由之上。",
+      "citations": [
+        {
+          "sourceId": "src-rawls-theory-justice-1971",
+          "locator": "§§11–17 and §46",
+          "claim": "支持差别原则、词典式次序及最不利者标准。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "john-rawls"
+  ],
+  "workIds": [
+    "theory-justice"
+  ],
+  "traditionIds": [
+    "tradition-政治自由主义"
+  ],
+  "sourceIds": [
+    "src-rawls-theory-justice-1971",
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-rawls-theory-justice-1971",
+      "locator": "§11: Two Principles of Justice; §13: Democratic Equality",
+      "claim": "支持差别原则的内容、适用对象和优先次序。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增概念。"
+}

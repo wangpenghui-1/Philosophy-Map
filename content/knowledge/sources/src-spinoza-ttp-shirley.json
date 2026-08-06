@@ -1,0 +1,21 @@
+{
+  "id": "src-spinoza-ttp-shirley",
+  "entityType": "source",
+  "title": "Theological-Political Treatise",
+  "authors": [
+    "Baruch Spinoza",
+    "Samuel Shirley (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Hackett Publishing Company",
+  "year": 2001,
+  "defaultLocator": "Preface and chapters 7, 13–15, 20",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "原作以拉丁文写成；本记录用于定位 Samuel Shirley 英译本。"
+}

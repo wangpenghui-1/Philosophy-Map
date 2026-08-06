@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "齐物",
   "originalTerms": [],
-  "summary": "“齐物”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "齐物通过比较彼此视角，松动把某一方是非绝对化的冲动。它不等于宣布所有判断同样正确，而是要求判断反省自身尺度与语言边界。",
   "senses": [
     {
       "traditionId": "tradition-道家",
@@ -38,7 +38,7 @@
       "claim": "支持齐物的摘要主张：“齐物”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

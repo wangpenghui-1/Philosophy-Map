@@ -1,0 +1,38 @@
+{
+  "id": "democritus-hildegard-bingen-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "democritus"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "hildegard-bingen"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“知识”的两种回答",
+  "explanation": "德谟克利特与宾根的希尔德加德都触及“知识”，但各自的问题语境和论证目标不同：前者强调原子在虚空中的排列与运动构成可感事物，性质差异不需诉诸目的因。；后者强调生命力贯穿宇宙和身体，视觉、音乐与自然观察共同表达受造秩序。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持德谟克利特一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持宾根的希尔德加德一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

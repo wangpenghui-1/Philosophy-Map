@@ -1,0 +1,36 @@
+{
+  "id": "sartre-camus",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "sartre"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "camus"
+  },
+  "directed": false,
+  "relationType": "critique",
+  "evidenceStatus": "established",
+  "title": "从战后友谊到《反抗者》论战",
+  "explanation": "萨特与加缪曾在法国战后公共思想界并肩活动，随后围绕存在主义、革命暴力、苏联和《反抗者》发生公开分歧；这是一段相互批评关系，不应简化为单向影响。",
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 1 and 4.2 on Sartre, The Rebel and the political-intellectual split",
+      "claim": "支持两人从友谊走向公开政治哲学分歧的历史脉络。"
+    },
+    {
+      "sourceId": "src-sartre-sep",
+      "locator": "Sections on postwar politics and relations with contemporaries",
+      "claim": "支持萨特战后政治介入及相关思想背景。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

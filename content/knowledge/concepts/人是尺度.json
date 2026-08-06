@@ -3,18 +3,20 @@
   "slug": "人是尺度",
   "entityType": "concept",
   "name": "人是尺度",
-  "originalTerms": [],
-  "summary": "“人是尺度”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "originalTerms": [
+    "πάντων χρημάτων μέτρον ἄνθρωπος"
+  ],
+  "summary": "“人是万物的尺度”是普罗泰戈拉最著名的残篇。它将判断置于人的经验中，并引出一个难题：如果显现因人而异，公共讨论如何仍能比较较好和较坏的意见？",
   "senses": [
     {
       "traditionId": "tradition-智者学派",
       "label": "人是尺度",
-      "explanation": "在普罗泰戈拉及智者学派语境中，“人是尺度”用于说明：人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。该义项不默认等同于其他传统中的相似译名。",
+      "explanation": "这句话不必等于“每种意见同样好”。它要求从具体感受和处境出发理解判断，同时给教育、技艺和政治论辩留下比较改善的空间。",
       "citations": [
         {
-          "sourceId": "src-routledge-encyclopedia-philosophy",
-          "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-          "claim": "支持普罗泰戈拉语境中的“人是尺度”义项。"
+          "sourceId": "src-protagoras-testimonia",
+          "locator": "DK 80B1; Plato, Theaetetus 151e–152a",
+          "claim": "支持尺度残篇及其古典转述。"
         }
       ]
     }
@@ -29,20 +31,21 @@
     "tradition-智者学派"
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-protagoras-testimonia"
   ],
   "citations": [
     {
-      "sourceId": "src-routledge-encyclopedia-philosophy",
-      "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-      "claim": "支持“人是尺度”作为普罗泰戈拉思想入口的概括。"
+      "sourceId": "src-protagoras-testimonia",
+      "locator": "DK 80B1",
+      "claim": "支持“人是尺度”残篇。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "限定为残篇与古典转述中的普罗泰戈拉语境。"
 }

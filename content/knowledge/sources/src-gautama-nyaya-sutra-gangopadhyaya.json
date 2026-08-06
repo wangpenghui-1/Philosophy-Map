@@ -1,0 +1,22 @@
+{
+  "id": "src-gautama-nyaya-sutra-gangopadhyaya",
+  "entityType": "source",
+  "title": "Nyāya: Gautama’s Nyāya-sūtra with Vātsyāyana’s Commentary",
+  "authors": [
+    "Gautama",
+    "Vātsyāyana",
+    "Mrinalkanti Gangopadhyaya (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Indian Studies Past & Present, Calcutta",
+  "year": 1982,
+  "defaultLocator": "Nyāya-sūtra 1.1.1–1.1.8",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于核对《正理经》经号、英译和筏蹉衍那注释；人物页只在注明的经号范围内概括。"
+}

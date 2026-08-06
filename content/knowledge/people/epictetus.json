@@ -20,14 +20,16 @@
     "tradition-斯多亚学派"
   ],
   "conceptIds": [
-    "concept-控制二分"
+    "concept-控制二分",
+    "concept-德性",
+    "concept-自由"
   ],
   "questionIds": [
     "freedom"
   ],
-  "guidingQuestion": "自由是否取决于外部处境还是对判断的掌握？",
-  "thesis": "把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。",
-  "summary": "爱比克泰德是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由是否取决于外部处境还是对判断的掌握？”。其思想以“控制二分”为入口，主张把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "guidingQuestion": "当命运、身体和他人的选择不由我决定时，自由还剩下什么？",
+  "thesis": "自由首先属于判断、意向和行动选择；外在遭遇真实重要，却不应被误当成善恶与人格价值的最终尺度。",
+  "summary": "爱比克泰德以斯多亚哲学训练人在不稳定处境中分辨：哪些事情属于自己的判断和选择，哪些属于身体、财产、声誉与他人的行动。他不是要人退出世界，而是练习在不可控的局面中作出能负责的回应。",
   "workIds": [
     "enchiridion"
   ],
@@ -50,36 +52,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "control",
+      "heading": "可由我决定的，并不是世界的结果",
       "paragraphs": [
         {
-          "text": "爱比克泰德是欧洲与地中海斯多亚学派的重要思想人物，主要追问“自由是否取决于外部处境还是对判断的掌握？”。其思想以“控制二分”为入口，主张把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "《手册》开篇把事物分成“取决于我们”和“不取决于我们”两类。前一类主要是判断、意向、趋避和行动选择；后一类包括身体条件、名誉、职位与外在结果。这个区分不是一句“别在乎”的安慰话，而是避免把控制不了的东西当成自己的德性或失败。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
-              "claim": "支持爱比克泰德的身份、思想主张与历史语境概述。"
+              "sourceId": "src-epictetus-enchiridion-oldfather",
+              "locator": "Enchiridion, §§1–2",
+              "claim": "支持可控与不可控的开篇区分及其范围。"
             }
           ]
         },
         {
-          "text": "核心问题：自由是否取决于外部处境还是对判断的掌握？",
+          "text": "因此，他并不说贫困、疾病或政治压迫没有分量；它们会造成真实伤害。他追问的是：在这些条件已经存在时，我们会不会再用“我必须拥有它，否则就完了”的判断，把自己完全交给偶然。自由是不给命运附加第二层奴役。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
-              "claim": "支持对爱比克泰德核心问题的概括。"
+              "locator": "Epictetus entry: freedom and choice",
+              "claim": "支持自由与判断训练的伦理含义。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "heading": "选择能力需要训练",
+      "paragraphs": [
+        {
+          "text": "爱比克泰德以 prohairesis 指审慎选择的能力：面对表象时，先不急着认定“这一定可怕”或“这必定是好事”，而是检验判断本身。训练包括区分欲望与需要、预想可能失去的事物，并在受挫时追问自己还能怎样行动。",
+          "citations": [
+            {
+              "sourceId": "src-epictetus-enchiridion-oldfather",
+              "locator": "Enchiridion, §§5, 18, 29",
+              "claim": "支持表象、判断、欲望与预备训练。"
             }
           ]
         },
         {
-          "text": "核心主张：把可由我们控制的判断与外在事物区分，是德性和内在自由的基础。",
+          "text": "这并不等于个人主义。爱比克泰德以父母、兄弟、邻人与城邦成员的角色说明责任：人既要尽角色义务，又不能把他人的回应或最后成败视为完全由自己支配。控制二分是重新安排责任，不是取消关系。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Epictetus / 爱比克泰德”",
-              "claim": "支持对爱比克泰德核心主张的概括。"
+              "locator": "Epictetus entry: roles and ethics",
+              "claim": "支持角色义务与斯多亚共同体观。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text-limit",
+      "heading": "顺应自然，不是向不正义投降",
+      "paragraphs": [
+        {
+          "text": "“顺应自然”不是喜欢已经发生的一切，而是承认因果和他人意志有其限度，因而把注意力转回正直、勇气与公正。它可帮助人在逆境中不被怨恨吞没，却不能被用来要求受害者接受不正义；道德训练与改变制度条件是不同层次的问题。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Epictetus entry: Stoic providence and freedom",
+              "claim": "支持顺应自然及其解释边界。"
+            }
+          ]
+        },
+        {
+          "text": "爱比克泰德没有亲自留下著作；《语录》和《手册》由学生阿里安整理。我们可以相当明确地把握其训练主题，却不宜把每一种编排和语气都当作完整课堂原话。文本的编订背景也是思想史的一部分。这一层限制也提醒读者，任何自我训练都不能替代对社会处境的描述。",
+          "citations": [
+            {
+              "sourceId": "src-epictetus-enchiridion-oldfather",
+              "locator": "Translator's introduction and Enchiridion",
+              "claim": "支持阿里安整理文本的性质。"
             }
           ]
         }
@@ -102,16 +146,16 @@
     "creator": "\"A.C.\"",
     "retrievedAt": "2026-07-19"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "《手册》由阿里安从爱比克泰德教学中整理，不能直接等同于完整课堂记录。“控制二分”也不应被理解为否认贫困、疾病和压迫的现实伤害；它讨论的是判断与行动责任的范围。",
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v2",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十位；补充控制二分、选择能力、角色义务和文本编订边界。",
   "representativeQuote": {
     "text": "Some things are under our control, while others are not under our control.",
     "displayLanguage": "en",

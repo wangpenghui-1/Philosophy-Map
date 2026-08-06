@@ -1,0 +1,38 @@
+{
+  "id": "jiddu-krishnamurti-muhammad-iqbal-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "jiddu-krishnamurti"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "muhammad-iqbal"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“自我”的两种回答",
+  "explanation": "穆罕默德·伊克巴尔与克里希那穆提都触及“自我”，但各自的问题语境和论证目标不同：前者强调自我不是静止实体，而在行动、爱与责任中增强并参与开放的宇宙进程。；后者强调对思想、恐惧和关系进行无选择觉察，可显露条件化过程并打开心理自由。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持穆罕默德·伊克巴尔一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持克里希那穆提一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

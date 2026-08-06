@@ -7,13 +7,15 @@
   "authorRefs": [
     {
       "personId": "descartes",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1641",
-  "languages": [],
-  "summary": "《第一哲学沉思集》是笛卡尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "la"
+  ],
+  "summary": "《第一哲学沉思集》用六天的沉思次序引导读者暂缓旧信念，从梦境和恶魔假设走向我思，再论证上帝、真理标准、物质本性及心身区分。作品附有同时代反驳与笛卡尔的答辩，因此也保存了这套论证最早受到的系统质疑。",
   "conceptIds": [
     "concept-怀疑",
     "concept-我思",
@@ -23,20 +25,26 @@
     "tradition-近代理性主义"
   ],
   "sourceIds": [
-    "src-descartes"
+    "src-descartes",
+    "src-descartes-meditations-haldane-ross"
   ],
   "citations": [
     {
+      "sourceId": "src-descartes-meditations-haldane-ross",
+      "locator": "Meditations I–VI",
+      "claim": "支持六篇沉思的怀疑、我思、真理标准、物质与心身区分结构。"
+    },
+    {
       "sourceId": "src-descartes",
-      "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持《第一哲学沉思集》的摘要主张：《第一哲学沉思集》是笛卡尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2.2 and 3–4",
+      "claim": "支持作品的发表背景、论证次序和同时代反驳在文本结构中的位置。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充拉丁文原题、六篇论证次序与反驳—答辩结构。"
 }

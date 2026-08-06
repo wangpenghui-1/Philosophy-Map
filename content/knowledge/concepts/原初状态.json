@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "原初状态",
   "originalTerms": [],
-  "summary": "“原初状态”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "summary": "原初状态是罗尔斯设计的公平选择情境：自由而平等的代表在无知之幕后选择社会基本制度的正义原则，而非描述真实历史中的契约。",
   "senses": [
     {
       "traditionId": "tradition-政治自由主义",
@@ -38,7 +38,7 @@
       "claim": "支持“原初状态”作为罗尔斯思想入口的概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",

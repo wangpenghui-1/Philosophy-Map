@@ -1,0 +1,33 @@
+{
+  "id": "vasubandhu-dignaga",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "vasubandhu"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "dignaga"
+  },
+  "directed": true,
+  "relationType": "lineage",
+  "evidenceStatus": "supported",
+  "title": "从佛教论辩传统走向系统认识论",
+  "explanation": "传统资料把陈那置于世亲之后的佛教学术谱系；陈那把知觉与论证问题重组为现量、比量的系统。",
+  "note": "具体师承记载的历史细节并不完全一致，因此标为“有材料支持”。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "Dignāga biography and intellectual background",
+      "claim": "支持陈那与世亲传统的谱系联系及其认识论重构。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

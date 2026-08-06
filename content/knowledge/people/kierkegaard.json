@@ -31,10 +31,11 @@
   ],
   "guidingQuestion": "个体如何在焦虑、不确定与选择中成为自己？",
   "thesis": "存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。",
-  "summary": "克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。 本站以存在、焦虑、选择为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "克尔凯郭尔反对让抽象体系替具体个人生活。他借多重笔名和不同人生阶段讨论选择、焦虑、绝望与信仰：自我不是现成实体，而是在有限条件与可能性之间不断同自身建立关系的任务。",
   "workIds": [
     "either-or",
-    "fear-trembling"
+    "fear-trembling",
+    "sickness-unto-death"
   ],
   "placeLinks": [
     {
@@ -49,42 +50,84 @@
   "citations": [
     {
       "sourceId": "src-kierkegaard",
-      "locator": "Sections on existence, anxiety, choice and the critique of system",
-      "claim": "支持克尔凯郭尔的摘要主张：克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭…"
+      "locator": "Sections 2–4 on despair, anxiety, spheres of existence and scholarship",
+      "claim": "支持具体存在、焦虑、绝望、选择与信仰之间的总体思想结构。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "existence-choice",
+      "heading": "没有体系能够替你存在",
       "paragraphs": [
         {
-          "text": "克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。 本站以存在、焦虑、选择为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "克尔凯郭尔并非反对一切概念和系统性思考，而是反对把完成的理论体系误当成已经活过的人生。一个人可以准确解释伦理、爱情或宗教，却仍没有作出承诺。存在问题之所以特殊，是因为提问者本人就在问题之中：关于“我应怎样生活”的回答必须经由时间、选择和实践成为自己的。",
           "citations": [
             {
               "sourceId": "src-kierkegaard",
-              "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本段主张：克尔凯郭尔是1813–1855活跃于欧洲的存在哲学思想人物，主要追问“个体如何在焦虑、不确定与选择中成为自己？”。其核心主张可概括为：存在不能被抽象体系代替；选择、承诺与绝望揭…"
+              "locator": "Sections 1–3 on works, human existence and spheres of existence",
+              "claim": "支持具体个人不能被抽象知识替代，以及生活立场必须通过选择形成的说明。"
             }
           ]
         },
         {
-          "text": "核心问题：个体如何在焦虑、不确定与选择中成为自己？",
+          "text": "《非此即彼》借不同笔名呈现审美生活与伦理生活。审美者追求新鲜体验，却可能因逃避持续承诺而陷入空虚；伦理者通过选择自己、承担关系和责任获得连续性。两者不是一张简单升级表，笔名作者也不等于克尔凯郭尔本人，作品迫使读者判断每种生活方式能解释什么、又遮蔽什么。",
           "citations": [
             {
               "sourceId": "src-kierkegaard",
-              "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本段主张：核心问题：个体如何在焦虑、不确定与选择中成为自己？"
+              "locator": "Sections 3.1–3.2 on the aesthetic and ethical spheres",
+              "claim": "支持审美与伦理生活方式的差异，以及笔名写作不能直接等同作者立场的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anxiety-despair",
+      "heading": "焦虑揭示可能，绝望暴露自我关系",
+      "paragraphs": [
+        {
+          "text": "焦虑不同于对某个确定对象的恐惧。站在悬崖边，人既害怕跌落，也意识到自己能够跳下去；焦虑由此显露自由的可能性和责任。它不自动教人选什么，却打断“我只能如此”的自我安慰。选择越重要，知识越不能彻底消除风险。",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard",
+              "locator": "Section 2 on anxiety, freedom and human existence",
+              "claim": "支持焦虑不同于对象性恐惧，并揭示可能性与自由责任的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。",
+          "text": "《致死的疾病》把自我理解为一个与自身发生关系的关系。绝望不是普通沮丧，而是这种关系失调：可能是不愿成为自己，也可能是执意只靠自己成为某种想象中的自我。自我既不能被社会角色完全规定，也不能凭意志凭空创造；它必须在有限事实、可能性以及对自身来源的关系中获得平衡。",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard-sickness-lowrie",
+              "locator": "Part I, A–C, on the self and forms of despair",
+              "claim": "支持自我是与自身相关的关系，以及绝望作为自我关系失调的分析。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faith-indirect",
+      "heading": "信仰不能被证明替代",
+      "paragraphs": [
+        {
+          "text": "《恐惧与战栗》通过亚伯拉罕献以撒的故事追问，宗教信仰能否被普遍伦理规则完整翻译。作品中的“信仰骑士”既不能用结果成功为行动辩护，也不能把私人确信变成他人必须服从的公共证明。克尔凯郭尔展示信仰的悖论和孤独，并没有提供一个可供模仿的暴力许可证。",
           "citations": [
             {
               "sourceId": "src-kierkegaard",
-              "locator": "Sections on existence, anxiety, choice and the critique of system",
-              "claim": "支持本段主张：核心主张：存在不能被抽象体系代替；选择、承诺与绝望揭示个体同自身的关系。"
+              "locator": "Section 3.3 on the religious sphere and the life of faith",
+              "claim": "支持《恐惧与战栗》关于信仰、伦理普遍性和个体责任的解释边界。"
+            }
+          ]
+        },
+        {
+          "text": "多重笔名、故事和反讽构成他的“间接传达”：作者不直接交付结论，而让读者在互相冲突的声音中意识到自己的位置。这种方法影响后来存在哲学对个体、焦虑和选择的关注，但克尔凯郭尔的思想始终深植于基督教问题。把他只写成无宗教内容的存在主义先驱，会抹去其核心关切。",
+          "citations": [
+            {
+              "sourceId": "src-kierkegaard",
+              "locator": "Sections 1, 3 and 4 on pseudonymous works, faith and trajectories of scholarship",
+              "claim": "支持间接传达、笔名写作及其宗教背景对后世存在哲学的影响。"
             }
           ]
         }
@@ -104,13 +147,13 @@
   },
   "color": "#6c8da5",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物第二批扩展；明确区分笔名角色、作者立场与宗教语境。",
   "representativeQuote": {
     "text": "The self is a relation which relates itself to its own self, or it is that in the relation which relates itself to its own self.",
     "displayLanguage": "en",

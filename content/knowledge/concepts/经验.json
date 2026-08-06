@@ -3,18 +3,22 @@
   "slug": "经验",
   "entityType": "concept",
   "name": "经验",
-  "originalTerms": [],
-  "summary": "“经验”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "originalTerms": [
+    "experience",
+    "sensation",
+    "reflection"
+  ],
+  "summary": "洛克把观念材料追溯到经验：感觉提供外部对象的观念，反思提供心灵自身活动的观念。心灵没有预先写好的内容，却能比较、组合和抽象这些材料。",
   "senses": [
     {
       "traditionId": "tradition-英国经验主义",
       "label": "经验",
-      "explanation": "在洛克条目中，“经验”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "explanation": "经验不只等于五官刺激，也包括对知觉、意愿和思考的内在反思。它限制观念材料的来源，不取消心灵加工简单观念并形成复杂观念的能力。",
       "citations": [
         {
           "sourceId": "src-locke",
-          "locator": "Sections on ideas, personal identity and political authority",
-          "claim": "支持“经验”义项：在洛克条目中，“经验”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
+          "locator": "Sections 2.1–2.2",
+          "claim": "支持感觉、反思和心灵加工观念的说明。"
         }
       ]
     }
@@ -30,20 +34,26 @@
     "tradition-英国经验主义"
   ],
   "sourceIds": [
-    "src-locke"
+    "src-locke",
+    "src-locke-essay-1689"
   ],
   "citations": [
     {
       "sourceId": "src-locke",
-      "locator": "Sections on ideas, personal identity and political authority",
-      "claim": "支持经验的摘要主张：“经验”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "locator": "Sections 2.1–2.2",
+      "claim": "支持经验作为观念材料来源的解释。"
+    },
+    {
+      "sourceId": "src-locke-essay-1689",
+      "locator": "Book II, Chapters 1–2 and 11–12",
+      "claim": "支持感觉、反思、简单与复杂观念的原典定位。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充感觉与反思两条来源。"
 }

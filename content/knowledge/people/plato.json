@@ -33,7 +33,7 @@
   ],
   "guidingQuestion": "变化世界中的知识如何可能，正义城邦又应如何组织？",
   "thesis": "哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。",
-  "summary": "柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。 本站以理念、辩证法、正义为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "柏拉图以对话而非教科书写作。他从意见与知识的区别出发，追问变化中的事物为何仍可被理解，并把认识、灵魂教育和城邦正义放进同一问题：人怎样转向善，又怎样共同生活。苏格拉底等人物的发言彼此争辩，读者不能把其中任何一句直接当成作者定论。",
   "workIds": [
     "republic",
     "symposium"
@@ -46,47 +46,95 @@
   ],
   "sourceIds": [
     "src-plato",
-    "src-plato-republic-jowett"
+    "src-plato-republic-jowett",
+    "src-plato-symposium-fowler"
   ],
   "citations": [
     {
       "sourceId": "src-plato",
       "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-      "claim": "支持柏拉图的摘要主张：柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形…"
+      "claim": "支持柏拉图以对话处理知识、形式、伦理与政治问题的整体概括。"
+    },
+    {
+      "sourceId": "src-plato-republic-jowett",
+      "locator": "Books IV, VI–VII",
+      "claim": "支持灵魂秩序、善的理念、辩证法和哲学教育之间的联系。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "knowledge-forms",
+      "heading": "知识为何不能停在眼前所见",
       "paragraphs": [
         {
-          "text": "柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。 本站以理念、辩证法、正义为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "柏拉图反复区分意见与知识。人可以凭经验认出一件美的事物，却仍会争论它为什么美；眼前的制度也会变化，但讨论正义时，我们又像是在寻找一种不随眼前利益任意改变的尺度。《理想国》的线段比喻和洞穴寓言把这种差别写成一段认识旅程：从影像和可见事物，转向能够说明事物为何如此的关系与形式。理念因此不是藏在另一个地点的物件，而是柏拉图用来解释知识如何获得稳定对象的思想线索。",
           "citations": [
             {
-              "sourceId": "src-plato",
-              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本段主张：柏拉图是约公元前427–347活跃于地中海的古希腊哲学思想人物，主要追问“变化世界中的知识如何可能，正义城邦又应如何组织？”。其核心主张可概括为：哲学借助辩证探究转向可理解的形…"
+              "sourceId": "src-plato-republic-jowett",
+              "locator": "Book VI, 509d–511e; Book VII, 514a–517c",
+              "claim": "支持可见与可知领域、线段比喻和洞穴寓言所表达的认识层次。"
             }
           ]
         },
         {
-          "text": "核心问题：变化世界中的知识如何可能，正义城邦又应如何组织？",
+          "text": "善的理念在这套结构中占据最高位置，因为它不只说明事物是什么，还关乎知识和行动为何值得追求。洞穴中的教育也不是把知识塞进一双失明的眼睛，而是让已经能够看见的灵魂转向合适的方向。哲学教育于是同时改变理解力和欲望：一个人学会检验自己相信什么，也学会重新安排自己看重什么。柏拉图没有因此把感官经验宣布为毫无价值；感官提供起点，只是不能独自给出事物的理由。",
+          "citations": [
+            {
+              "sourceId": "src-plato-republic-jowett",
+              "locator": "Book VI, 508e–509b; Book VII, 518b–521b",
+              "claim": "支持善的理念与知识的关系，以及教育作为灵魂转向的论述。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue-dialectic",
+      "heading": "对话与辩证法怎样工作",
+      "paragraphs": [
+        {
+          "text": "柏拉图很少让作品直接宣布“作者结论”。苏格拉底不断提问，谈话者提出定义，反例又迫使他们修改或放弃原来的说法；有些对话最后仍停在困惑中。这种写法使哲学成为一种公开检验理由的活动，而不是背诵现成命题。读者也被放进对话：我们既要判断某个论证是否成立，也要留意说话者的处境、性格和欲望怎样影响他愿意接受的答案。",
           "citations": [
             {
               "sourceId": "src-plato",
-              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本段主张：核心问题：变化世界中的知识如何可能，正义城邦又应如何组织？"
+              "locator": "Sections 2.1–2.3: dialogue form, Socrates and Platonic doctrines",
+              "claim": "支持柏拉图对话体、苏格拉底角色及作者立场需要谨慎区分的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。",
+          "text": "《理想国》赋予辩证法更严格的任务。数学从假设出发推导结论，辩证法则继续追问这些假设凭什么成立，并尝试把彼此分散的知识放进一个可以说明的秩序。它不是后来教科书里固定的“正题—反题—合题”，也不只是争论技巧。辩证法要求谈话者愿意交代理由、承受反驳，并在找到原则以后返回具体问题，说明制度、品格和教育为什么应当这样安排。",
           "citations": [
             {
-              "sourceId": "src-plato",
-              "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-              "claim": "支持本段主张：核心主张：哲学借助辩证探究转向可理解的形式，并把灵魂秩序与城邦正义联系起来。"
+              "sourceId": "src-plato-republic-jowett",
+              "locator": "Book VI, 510b–511d; Book VII, 531d–534e",
+              "claim": "支持辩证法检验假设、趋向第一原则并统摄其他学习的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "justice-love",
+      "heading": "正义、欲望与共同生活",
+      "paragraphs": [
+        {
+          "text": "《理想国》借城邦放大灵魂的问题。理性、意气和欲望若彼此争夺统治，人会在内部冲突；城邦中的不同职能若只追逐自身利益，公共秩序同样会瓦解。柏拉图把正义理解为各部分在合适关系中履行自己的工作，由能够把握整体善的人治理。这一回答把政治与品格教育连在一起，也留下持久争议：哲学家统治是否低估了公民平等，城邦的严格分工又会不会把人固定在既定位置。",
+          "citations": [
+            {
+              "sourceId": "src-plato-republic-jowett",
+              "locator": "Book IV, 427d–445e; Book V, 473c–e",
+              "claim": "支持城邦与灵魂的类比、正义作为部分秩序及哲学家统治的主张。"
+            }
+          ]
+        },
+        {
+          "text": "《会饮篇》从另一条路讨论灵魂如何被改变。狄奥提玛的讲述把爱欲描述为对所缺之物的追求：人会从某个美的身体出发，逐渐看见许多身体、制度、知识以及“美本身”的关联。这里的上升并不等于否定具体的人，而是训练欲望不把美占为私有财产。和《理想国》一样，这段论述也是由作品中的人物说出；不同演说彼此竞争，柏拉图本人没有站到台前替读者取消解释的工作。",
+          "citations": [
+            {
+              "sourceId": "src-plato-symposium-fowler",
+              "locator": "201d–212c, especially 210a–212a",
+              "claim": "支持狄奥提玛关于爱欲、生成与由具体美者上升至美本身的论述。"
             }
           ]
         }
@@ -104,16 +152,16 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
-  "uncertainty": "对话作品中的发言者不能简单等同于柏拉图本人。",
+  "uncertainty": "柏拉图以对话写作，作品中的苏格拉底、狄奥提玛等发言者不能直接等同于作者本人；对话的先后次序、早中晚期划分以及理念论是否构成一套始终不变的学说，学界仍有争论。",
   "color": "#9f83b5",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第一位；完成知识、辩证法、正义与爱欲的分段扩写，并补充原典定位与解释边界。",
   "representativeQuote": {
     "text": "The idea of good appears last of all, and is seen only with an effort; and, when seen, is also inferred to be the universal author of all things beautiful and right.",
     "displayLanguage": "en",

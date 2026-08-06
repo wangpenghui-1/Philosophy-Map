@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "存在",
   "originalTerms": [],
-  "summary": "“存在”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "“存在”在不同传统中含义不同。阿维森纳区分事物是什么与它是否存在，并以可能存在者的依赖性论证不由他者获得存在的必然者。",
   "senses": [
     {
       "traditionId": "tradition-阿拉伯语哲学",
@@ -103,7 +103,7 @@
       "claim": "支持存在的摘要主张：“存在”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

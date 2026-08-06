@@ -80,7 +80,7 @@ for (const person of all.people) {
     if (quote.workId && !person.workIds.includes(quote.workId)) throw new Error(`${person.id}: representative quote work must be listed in workIds when workId is provided.`);
     if (!person.sourceIds.includes(quote.sourceId)) throw new Error(`${person.id}: representative quote source must be listed in sourceIds.`);
     if (byId.sources.get(quote.sourceId).sourceType !== quote.sourceType) throw new Error(`${person.id}: representative quote sourceType must match its source record.`);
-    if (quote.displayLanguage === "en" && !quote.chineseTranslation) throw new Error(`${person.id}: English representative quote requires a Chinese translation.`);
+    if (["en", "fr"].includes(quote.displayLanguage) && !quote.chineseTranslation) throw new Error(`${person.id}: Foreign-language representative quote requires a Chinese translation.`);
     if (quote.textStatus === "translation" && !quote.translator) throw new Error(`${person.id}: translated representative quote requires translator metadata.`);
     if (quote.textStatus === "original" && quote.displayLanguage !== quote.originalLanguage) throw new Error(`${person.id}: original quote display language must match originalLanguage.`);
     if (quote.verificationStatus !== "primary-verified" && !quote.attributionNote) throw new Error(`${person.id}: non-primary verification status requires an attribution note.`);
@@ -194,9 +194,6 @@ const atlasThinkers = published.people.map((person) => ({
   endYear: person.chronology.endYear,
   region: person.primaryRegion,
   tradition: traditionById.get(person.traditionIds[0])?.name ?? person.traditionIds[0],
-  traditionIds: person.traditionIds,
-  conceptIds: person.conceptIds,
-  contentTier: person.contentTier,
   questionIds: person.questionIds,
   question: person.guidingQuestion,
   thesis: person.thesis,

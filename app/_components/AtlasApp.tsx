@@ -21,11 +21,23 @@ import {
   works,
   type QuestionId,
 } from "../_data/atlas";
+import {
+  JOURNEY_INTRO_SEEN_VALUE,
+  JOURNEY_INTRO_STORAGE_KEY,
+  emitJourneyEvent,
+  formatJourneyRemaining,
+  journeyById,
+  journeyCatalog,
+  journeyRemainingMs,
+  validateJourneyReferences,
+  type JourneyDefinition,
+} from "../_data/journeys";
 import { useAtlasStore, type AtlasMode } from "../_state/atlas-store";
-import type { EarthLightingMode } from "./GlobeCanvas";
+import type { EarthLightingMode, GlobeStoryFocus } from "./GlobeCanvas";
 import ThinkerPortrait from "./ThinkerPortrait";
 import RepresentativeQuote from "./RepresentativeQuote";
 import { DisplaySettings, FocusDepthControl } from "./AtlasVisualControls";
+import JourneyCarousel from "./JourneyCarousel";
 import {
   ATLAS_VISUAL_STORAGE_KEY,
   advanceAutoQuality,
@@ -37,6 +49,8 @@ import {
   type GlobeCameraSnapshot,
   type QualityPreference,
 } from "./atlas-visual-policy";
+
+validateJourneyReferences(journeyCatalog, new Set(thinkerById.keys()), new Set(relationById.keys()));
 
 const GlobeCanvas = dynamic(() => import("./GlobeCanvas"), {
   ssr: false,
@@ -52,6 +66,7 @@ const GlobeCanvas = dynamic(() => import("./GlobeCanvas"), {
 interface AtlasAppProps {
   initialMode?: AtlasMode;
   initialChapterId?: string;
+  initialJourneyId?: string;
   initialThinkerSlug?: string;
   initialCompareSlugs?: [string, string];
 }
@@ -101,6 +116,111 @@ function StoryOverlay({
             <span key={item.id} className={index <= chapterIndex ? "is-active" : ""} />
           ))}
         </div>
+      </motion.article>
+    </AnimatePresence>
+  );
+}
+
+function JourneyOverlay({
+  journey,
+  nodeIndex,
+  phase,
+  remainingMs,
+  onPrevious,
+  onNext,
+  onPause,
+  onResume,
+  onSkip,
+  onExplore,
+  onRelated,
+}: {
+  journey: JourneyDefinition;
+  nodeIndex: number;
+  phase: "playing" | "paused" | "completed";
+  remainingMs: number;
+  onPrevious: () => void;
+  onNext: () => void;
+  onPause: () => void;
+  onResume: () => void;
+  onSkip: () => void;
+  onExplore: () => void;
+  onRelated: (journeyId: string) => void;
+}) {
+  if (phase === "completed") {
+    const relatedJourney = journey.relatedJourneyId ? journeyById.get(journey.relatedJourneyId) : null;
+    return (
+      <motion.article
+        className="journey-story-card journey-story-card--complete"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        aria-live="polite"
+      >
+        <small>{journey.title}之旅 · 完成</small>
+        <h2>{journey.closingTitle}</h2>
+        <p>{journey.closingBody}</p>
+        <div className="journey-story-card__complete-actions">
+          {relatedJourney ? (
+            <button type="button" onClick={() => onRelated(relatedJourney.id)}>
+              继续：{relatedJourney.title}
+            </button>
+          ) : null}
+          <button type="button" onClick={onExplore}>进入自由探索</button>
+        </div>
+      </motion.article>
+    );
+  }
+
+  const node = journey.nodes[nodeIndex] ?? journey.nodes[0];
+  const thinker = thinkerById.get(node.thinkerId);
+  if (!thinker) return null;
+  return (
+    <AnimatePresence mode="wait">
+      <motion.article
+        className={`journey-story-card${phase === "paused" ? " is-paused" : ""}`}
+        key={node.id}
+        initial={{ opacity: 0, x: -18, y: 10 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, x: 12, y: -8 }}
+        transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
+        aria-live="polite"
+      >
+        <header className="journey-story-card__meta">
+          <span>{journey.title}之旅 · {nodeIndex + 1}/{journey.nodes.length}</span>
+          <span>{formatJourneyRemaining(remainingMs)}</span>
+        </header>
+        {nodeIndex === 0 && journey.openingQuestion ? (
+          <p className="journey-story-card__opening">{journey.openingQuestion}</p>
+        ) : null}
+        <div className="journey-story-card__thinker">
+          <ThinkerPortrait thinker={thinker} variant="thumb" />
+          <div><small>{node.eyebrow}</small><strong>{thinker.name}</strong><span>{thinker.period}</span></div>
+        </div>
+        {node.incomingTransition ? (
+          <span className={`journey-transition-label journey-transition-label--${node.incomingTransition.kind}`}>
+            {node.incomingTransition.label}
+          </span>
+        ) : null}
+        <h2>{node.title}</h2>
+        <p className="journey-story-card__core">{node.coreIdea}</p>
+        <p className="journey-story-card__body">{node.body}</p>
+        <p className="journey-story-card__transition">{node.transitionPrompt}</p>
+        <small className="journey-story-card__editorial">本站策展性摘要，并非人物原话</small>
+        {phase === "paused" ? <p className="journey-story-card__paused">旅程已暂停。你可以继续浏览人物与关系，准备好后再回来。</p> : null}
+        <div className="journey-story-card__progress" aria-label={`第${nodeIndex + 1}站，共${journey.nodes.length}站`}>
+          {journey.nodes.map((item, index) => <i key={item.id} className={index <= nodeIndex ? "is-active" : ""} />)}
+        </div>
+        <footer className="journey-story-card__footer">
+          <div className="journey-story-card__controls">
+            <button type="button" onClick={onPrevious} disabled={nodeIndex === 0} aria-label="上一站">←</button>
+            {phase === "playing" ? (
+              <button className="journey-story-card__primary" type="button" onClick={onPause}>暂停旅程</button>
+            ) : (
+              <button className="journey-story-card__primary" type="button" onClick={onResume}>继续旅程</button>
+            )}
+            <button type="button" onClick={onNext} aria-label={nodeIndex === journey.nodes.length - 1 ? "完成旅程" : "下一站"}>→</button>
+          </div>
+          <button className="journey-story-card__skip" type="button" onClick={onSkip}>退出旅程，自由探索</button>
+        </footer>
       </motion.article>
     </AnimatePresence>
   );
@@ -596,6 +716,7 @@ function SemanticExplorer({ open, onClose, onSelect }: { open: boolean; onClose:
 
 function BottomDock({ mode, onTakeover }: { mode: AtlasMode; onTakeover: () => void }) {
   const isPlaying = useAtlasStore((state) => state.isPlaying);
+  const journeyPhase = useAtlasStore((state) => state.journeyPhase);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
   const timelineYear = useAtlasStore((state) => state.timelineYear);
   const compareIds = useAtlasStore((state) => state.compareIds);
@@ -608,6 +729,8 @@ function BottomDock({ mode, onTakeover }: { mode: AtlasMode; onTakeover: () => v
     () => timelineDensity(thinkers.map((thinker) => thinker.startYear), atlasTimelineStartYear, atlasTimelineEndYear),
     [],
   );
+
+  if (journeyPhase !== "idle" && journeyPhase !== "legacy") return null;
 
   const takeover = () => {
     setPlaying(false);
@@ -668,6 +791,7 @@ function BottomDock({ mode, onTakeover }: { mode: AtlasMode; onTakeover: () => v
 export default function AtlasApp({
   initialMode = "story",
   initialChapterId,
+  initialJourneyId,
   initialThinkerSlug,
   initialCompareSlugs,
 }: AtlasAppProps) {
@@ -676,6 +800,10 @@ export default function AtlasApp({
   const mode = useAtlasStore((state) => state.mode);
   const isPlaying = useAtlasStore((state) => state.isPlaying);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
+  const journeyPhase = useAtlasStore((state) => state.journeyPhase);
+  const activeJourneyId = useAtlasStore((state) => state.activeJourneyId);
+  const journeyNodeIndex = useAtlasStore((state) => state.journeyNodeIndex);
+  const journeyCameraRevision = useAtlasStore((state) => state.journeyCameraRevision);
   const selectedThinkerId = useAtlasStore((state) => state.selectedThinkerId);
   const selectedRelationId = useAtlasStore((state) => state.selectedRelationId);
   const activeQuestionId = useAtlasStore((state) => state.activeQuestionId);
@@ -690,6 +818,13 @@ export default function AtlasApp({
   const setMode = useAtlasStore((state) => state.setMode);
   const setPlaying = useAtlasStore((state) => state.setPlaying);
   const setChapterIndex = useAtlasStore((state) => state.setChapterIndex);
+  const showJourneyEntry = useAtlasStore((state) => state.showJourneyEntry);
+  const startJourney = useAtlasStore((state) => state.startJourney);
+  const pauseJourney = useAtlasStore((state) => state.pauseJourney);
+  const resumeJourney = useAtlasStore((state) => state.resumeJourney);
+  const setJourneyNodeIndex = useAtlasStore((state) => state.setJourneyNodeIndex);
+  const completeJourney = useAtlasStore((state) => state.completeJourney);
+  const leaveJourney = useAtlasStore((state) => state.leaveJourney);
   const selectThinker = useAtlasStore((state) => state.selectThinker);
   const selectRelation = useAtlasStore((state) => state.selectRelation);
   const setQuestion = useAtlasStore((state) => state.setQuestion);
@@ -705,6 +840,9 @@ export default function AtlasApp({
   const [detailSheetSnap, setDetailSheetSnap] = useState<DetailSheetSnap>("half");
   const [isCompact, setIsCompact] = useState(false);
   const [persistenceReady, setPersistenceReady] = useState(false);
+  const [journeyRemaining, setJourneyRemaining] = useState(
+    journeyCatalog.find((journey) => journey.recommended)?.estimatedDurationMs ?? 0,
+  );
   const initializationAppliedRef = useRef(false);
   const entrySeenRef = useRef(false);
   const autoQualityRef = useRef<AutoQualityState>({
@@ -725,7 +863,17 @@ export default function AtlasApp({
   const initialChapterIndex = initialChapterId
     ? Math.max(0, storyChapters.findIndex((chapter) => chapter.id === initialChapterId))
     : 0;
+  const initialJourney = initialJourneyId ? journeyById.get(initialJourneyId) ?? null : null;
   const displayMode = initialized ? mode : initialThinkerId || initialCompareIds.length === 2 ? "explore" : initialMode;
+  const displayJourneyPhase = initialized
+    ? journeyPhase
+    : initialJourney
+      ? "playing"
+      : initialChapterId
+      ? "legacy"
+      : initialMode === "story"
+        ? "entry"
+        : "idle";
   const displayChapterIndex = initialized ? chapterIndex : initialChapterIndex;
   const displaySelectedThinkerId = initialized ? selectedThinkerId : initialThinkerId;
   const displaySelectedRelationId = initialized ? selectedRelationId : null;
@@ -763,9 +911,12 @@ export default function AtlasApp({
     setEarthMode(persisted?.earthMode ?? "night");
 
     const restoredCamera = !explicitRoute && persisted?.entrySeen ? persisted.camera : null;
+    const shouldShowJourneyIntro = window.location.pathname === "/"
+      && !initialJourney
+      && !initialChapterId
+      && window.localStorage.getItem(JOURNEY_INTRO_STORAGE_KEY) !== JOURNEY_INTRO_SEEN_VALUE;
+
     if (!explicitRoute && persisted?.entrySeen) {
-      setMode(persisted.mode);
-      setPlaying(persisted.mode === "story");
       setTimelineYear(persisted.timelineYear);
       setQuestion(persisted.questionId);
       if (persisted.thinkerSlug) {
@@ -774,9 +925,20 @@ export default function AtlasApp({
       } else if (persisted.relationId) {
         selectRelation(persisted.relationId);
       }
+    }
+
+    if (shouldShowJourneyIntro) {
+      window.localStorage.setItem(JOURNEY_INTRO_STORAGE_KEY, JOURNEY_INTRO_SEEN_VALUE);
+      showJourneyEntry();
+    } else if (initialJourney) {
+      startJourney(initialJourney.id);
+      emitJourneyEvent("start", { journeyId: initialJourney.id });
+    } else if (initialChapterId) {
+      setMode("story");
+      setPlaying(true);
+      useAtlasStore.setState({ journeyPhase: "legacy", activeJourneyId: null, journeyNodeIndex: 0 });
     } else {
-      setMode(initialMode);
-      setPlaying(initialMode === "story");
+      leaveJourney();
     }
 
     if (initialChapterId) {
@@ -811,7 +973,7 @@ export default function AtlasApp({
       setPersistenceReady(true);
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [initialChapterId, initialCompareSlugs, initialMode, initialThinkerSlug, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuality, setQualityPreference, setQuestion, setTimelineYear, toggleCompare]);
+  }, [initialChapterId, initialCompareSlugs, initialJourney, initialMode, initialThinkerSlug, leaveJourney, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuality, setQualityPreference, setQuestion, setTimelineYear, showJourneyEntry, startJourney, toggleCompare]);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 820px)");
@@ -822,7 +984,7 @@ export default function AtlasApp({
   }, []);
 
   useEffect(() => {
-    if (!initialized || mode !== "story" || !isPlaying) return;
+    if (!initialized || mode !== "story" || !isPlaying || journeyPhase !== "legacy") return;
     const chapter = storyChapters[chapterIndex] ?? storyChapters[0];
     const timeout = window.setTimeout(() => {
       if (chapterIndex < storyChapters.length - 1) {
@@ -834,7 +996,77 @@ export default function AtlasApp({
       }
     }, reduceMotion ? Math.min(4500, chapter.durationMs) : chapter.durationMs);
     return () => window.clearTimeout(timeout);
-  }, [chapterIndex, initialized, isPlaying, mode, reduceMotion, setChapterIndex, setMode, setPlaying]);
+  }, [chapterIndex, initialized, isPlaying, journeyPhase, mode, reduceMotion, setChapterIndex, setMode, setPlaying]);
+
+  const activeJourney = activeJourneyId ? journeyById.get(activeJourneyId) ?? null : null;
+  const journeyStoryFocus = useMemo<GlobeStoryFocus | null>(() => {
+    if (!activeJourney || displayJourneyPhase === "entry" || displayJourneyPhase === "idle" || displayJourneyPhase === "legacy") return null;
+    const node = activeJourney.nodes[journeyNodeIndex] ?? activeJourney.nodes[0];
+    if (!node) return null;
+    const visited = activeJourney.nodes.slice(0, journeyNodeIndex + 1);
+    return {
+      key: `${node.id}:${journeyCameraRevision}`,
+      camera: node.camera,
+      focusThinkerId: node.thinkerId,
+      thinkerIds: visited.map((item) => item.thinkerId),
+      relationIds: visited.flatMap((item) => item.incomingTransition?.kind === "evidence-relation"
+        ? [item.incomingTransition.relationId]
+        : []),
+      thematicTransitions: visited.flatMap((item) => item.incomingTransition?.kind === "thematic-transition"
+        ? [{
+            from: item.incomingTransition.from,
+            to: item.incomingTransition.to,
+            label: item.incomingTransition.label,
+          }]
+        : []),
+    };
+  }, [activeJourney, displayJourneyPhase, journeyCameraRevision, journeyNodeIndex]);
+
+  useEffect(() => {
+    if (!initialized || !activeJourney || journeyPhase !== "playing" || !isPlaying) return;
+    const node = activeJourney.nodes[journeyNodeIndex];
+    if (!node) return;
+    const settleMs = reduceMotion ? 120 : 1_750;
+    const startedAt = performance.now() + settleMs;
+    const interval = window.setInterval(() => {
+      const elapsed = Math.max(0, performance.now() - startedAt);
+      const later = activeJourney.nodes
+        .slice(journeyNodeIndex + 1)
+        .reduce((total, item) => total + item.durationMs, 0);
+      setJourneyRemaining(Math.max(0, node.durationMs - elapsed) + later);
+    }, 1_000);
+    const timeout = window.setTimeout(() => {
+      if (journeyNodeIndex < activeJourney.nodes.length - 1) {
+        setJourneyRemaining(journeyRemainingMs(activeJourney, journeyNodeIndex + 1));
+        setJourneyNodeIndex(journeyNodeIndex + 1);
+      } else {
+        completeJourney();
+        emitJourneyEvent("complete", { journeyId: activeJourney.id });
+      }
+    }, settleMs + node.durationMs);
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(timeout);
+    };
+  }, [activeJourney, completeJourney, initialized, isPlaying, journeyNodeIndex, journeyPhase, reduceMotion, setJourneyNodeIndex]);
+
+  useEffect(() => {
+    const interrupt = () => {
+      if (useAtlasStore.getState().journeyPhase !== "playing") return;
+      pauseJourney();
+      const journeyId = useAtlasStore.getState().activeJourneyId;
+      if (journeyId) emitJourneyEvent("pause", { journeyId, reason: "window" });
+    };
+    const handleVisibility = () => {
+      if (document.hidden) interrupt();
+    };
+    window.addEventListener("blur", interrupt);
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => {
+      window.removeEventListener("blur", interrupt);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [pauseJourney]);
 
   const persistVisualState = useCallback((nextMode: AtlasMode = mode) => {
     if (nextMode === "explore") entrySeenRef.current = true;
@@ -896,12 +1128,35 @@ export default function AtlasApp({
         setListViewOpen(false);
         if (selectedThinkerId || selectedRelationId || compareIds.length > 0) handleCloseDetail();
       }
-      if (mode === "story" && event.key === "ArrowRight") setChapterIndex(Math.min(storyChapters.length - 1, chapterIndex + 1));
-      if (mode === "story" && event.key === "ArrowLeft") setChapterIndex(Math.max(0, chapterIndex - 1));
+      if (mode === "story" && (journeyPhase === "playing" || journeyPhase === "paused")) {
+        const state = useAtlasStore.getState();
+        const journey = state.activeJourneyId ? journeyById.get(state.activeJourneyId) : null;
+        if (journey && event.key === "ArrowRight") {
+          if (state.journeyNodeIndex >= journey.nodes.length - 1) completeJourney();
+          else {
+            const nextIndex = state.journeyNodeIndex + 1;
+            setJourneyRemaining(journeyRemainingMs(journey, nextIndex));
+            setJourneyNodeIndex(nextIndex);
+          }
+        }
+        if (journey && event.key === "ArrowLeft") {
+          const nextIndex = Math.max(0, state.journeyNodeIndex - 1);
+          setJourneyRemaining(journeyRemainingMs(journey, nextIndex));
+          setJourneyNodeIndex(nextIndex);
+        }
+        if (event.key === " " && !typing) {
+          event.preventDefault();
+          if (state.journeyPhase === "playing") pauseJourney();
+          else resumeJourney();
+        }
+      } else if (mode === "story" && journeyPhase === "legacy") {
+        if (event.key === "ArrowRight") setChapterIndex(Math.min(storyChapters.length - 1, chapterIndex + 1));
+        if (event.key === "ArrowLeft") setChapterIndex(Math.max(0, chapterIndex - 1));
+      }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [chapterIndex, compareIds.length, handleCloseDetail, listViewOpen, mode, searchOpen, selectedRelationId, selectedThinkerId, setChapterIndex, setListViewOpen, setSearchOpen]);
+  }, [chapterIndex, compareIds.length, completeJourney, handleCloseDetail, journeyPhase, listViewOpen, mode, pauseJourney, resumeJourney, searchOpen, selectedRelationId, selectedThinkerId, setChapterIndex, setJourneyNodeIndex, setListViewOpen, setSearchOpen]);
 
   const chooseQualityPreference = useCallback((preference: QualityPreference) => {
     setQualityPreference(preference);
@@ -934,20 +1189,84 @@ export default function AtlasApp({
   }, []);
 
   const handleWebglRuntimeFallback = useCallback(() => {
+    const currentState = useAtlasStore.getState();
+    if (currentState.qualityPreference !== "auto") return;
+    const safeQuality = currentState.quality === "high" ? "medium" : currentState.quality;
     autoQualityRef.current = {
-      quality: "low",
+      quality: safeQuality,
       aboveBudgetSince: null,
       belowBudgetSince: null,
       lastChangeAt: performance.now(),
     };
-    setQuality("low");
+    setQuality(safeQuality);
   }, [setQuality]);
 
   const openSemanticExplorer = useCallback(() => setListViewOpen(true), [setListViewOpen]);
 
+  const interruptJourney = useCallback((reason: string) => {
+    const state = useAtlasStore.getState();
+    if (state.journeyPhase !== "playing" || !state.activeJourneyId) return;
+    const journey = journeyById.get(state.activeJourneyId);
+    if (journey) setJourneyRemaining(journeyRemainingMs(journey, state.journeyNodeIndex));
+    pauseJourney();
+    emitJourneyEvent("pause", { journeyId: state.activeJourneyId, reason });
+  }, [pauseJourney]);
+
+  const handleStartJourney = useCallback((journeyId: string, source = "catalog") => {
+    const journey = journeyById.get(journeyId);
+    if (!journey || journey.availability !== "available") return;
+    startJourney(journeyId);
+    setJourneyRemaining(journey.estimatedDurationMs);
+    window.history.replaceState({}, "", `/journey/${journeyId}`);
+    emitJourneyEvent("start", { journeyId, source });
+  }, [startJourney]);
+
+  const handleLeaveJourney = useCallback((eventName: "skip" | "complete" = "skip") => {
+    const journeyId = useAtlasStore.getState().activeJourneyId;
+    if (journeyId) emitJourneyEvent(eventName, { journeyId });
+    entrySeenRef.current = true;
+    leaveJourney();
+    persistVisualState("explore");
+    window.history.replaceState({}, "", `/explore?from=${eventName === "complete" ? "journey" : "journey-skip"}`);
+  }, [leaveJourney, persistVisualState]);
+
+  const handleResumeJourney = useCallback(() => {
+    const state = useAtlasStore.getState();
+    const journeyId = state.activeJourneyId;
+    const journey = journeyId ? journeyById.get(journeyId) : null;
+    if (journey) setJourneyRemaining(journeyRemainingMs(journey, state.journeyNodeIndex));
+    resumeJourney();
+    setDetailSheetSnap("peek");
+    if (journeyId) emitJourneyEvent("resume", { journeyId });
+  }, [resumeJourney]);
+
+  const handleJourneyPrevious = useCallback(() => {
+    const state = useAtlasStore.getState();
+    const nextIndex = Math.max(0, state.journeyNodeIndex - 1);
+    const journey = state.activeJourneyId ? journeyById.get(state.activeJourneyId) : null;
+    if (journey) setJourneyRemaining(journeyRemainingMs(journey, nextIndex));
+    setJourneyNodeIndex(nextIndex);
+  }, [setJourneyNodeIndex]);
+
+  const handleJourneyNext = useCallback(() => {
+    const state = useAtlasStore.getState();
+    const journey = state.activeJourneyId ? journeyById.get(state.activeJourneyId) : null;
+    if (!journey) return;
+    if (state.journeyNodeIndex >= journey.nodes.length - 1) {
+      completeJourney();
+      emitJourneyEvent("complete", { journeyId: journey.id });
+      return;
+    }
+    const nextIndex = state.journeyNodeIndex + 1;
+    setJourneyRemaining(journeyRemainingMs(journey, nextIndex));
+    setJourneyNodeIndex(nextIndex);
+  }, [completeJourney, setJourneyNodeIndex]);
+
   const handleSelectThinker = useCallback((id: string | null) => {
+    if (id) interruptJourney("thinker");
     selectThinker(id);
     if (id) setDetailSheetSnap("half");
+    if (mode !== "explore") return;
     const url = new URL(window.location.href);
     url.pathname = "/explore";
     if (!id) {
@@ -961,14 +1280,16 @@ export default function AtlasApp({
       url.searchParams.set("year", String(timelineYear));
       window.history.replaceState({}, "", `${url.pathname}${url.search}`);
     }
-  }, [selectThinker, timelineYear]);
+  }, [interruptJourney, mode, selectThinker, timelineYear]);
 
   const handleSelectRelation = useCallback((id: string | null) => {
+    if (id) interruptJourney("relation");
     selectRelation(id);
     if (!id) return;
     setDetailSheetSnap("half");
+    if (mode !== "explore") return;
     window.history.replaceState({}, "", `/explore?relation=${encodeURIComponent(id)}&year=${timelineYear}`);
-  }, [selectRelation, timelineYear]);
+  }, [interruptJourney, mode, selectRelation, timelineYear]);
 
   useEffect(() => {
     if (!initialized || compareIds.length !== 2 || selectedThinkerId || selectedRelationId) return;
@@ -978,13 +1299,12 @@ export default function AtlasApp({
   }, [compareIds, initialized, selectedRelationId, selectedThinkerId]);
 
   const changeMode = (nextMode: AtlasMode) => {
-    setMode(nextMode);
-    setPlaying(nextMode === "story");
     if (nextMode === "story") {
-      setChapterIndex(0);
-      window.history.replaceState({}, "", "/story/world-asks");
+      showJourneyEntry();
+      window.history.replaceState({}, "", "/");
     } else {
       entrySeenRef.current = true;
+      leaveJourney();
       window.history.replaceState({}, "", "/explore");
     }
   };
@@ -1010,7 +1330,7 @@ export default function AtlasApp({
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className={`atlas-shell atlas-shell--${displayMode}`} data-hydrated={initialized ? "true" : "false"}>
+      <div className={`atlas-shell atlas-shell--${displayMode} atlas-shell--journey-${displayJourneyPhase}${detailOpen ? " atlas-shell--detail-open" : ""}`} data-hydrated={initialized ? "true" : "false"}>
         <a className="skip-link" href="#atlas-content">跳到思想内容</a>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="思想星图首页">
@@ -1043,6 +1363,7 @@ export default function AtlasApp({
                 detailOpen={detailOpen}
                 isPlaying={isPlaying}
                 chapterIndex={displayChapterIndex}
+                storyFocus={journeyStoryFocus}
                 selectedThinkerId={displaySelectedThinkerId}
                 selectedRelationId={displaySelectedRelationId}
                 activeQuestionId={activeQuestionId}
@@ -1058,6 +1379,7 @@ export default function AtlasApp({
                 onRuntimeFallback={handleWebglRuntimeFallback}
                 onCameraSnapshotChange={handleCameraSnapshotChange}
                 onPerformanceSample={handlePerformanceSample}
+                onStoryInterruption={() => interruptJourney("globe")}
               />
             </div>
             <div className="globe-vignette" aria-hidden="true" />
@@ -1068,9 +1390,27 @@ export default function AtlasApp({
               onEarthModeChange={chooseEarthMode}
               onQualityPreferenceChange={chooseQualityPreference}
             />
-            {displayMode === "story" ? <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} /> : (
-              <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />
-            )}
+            {displayMode === "story" ? (
+              displayJourneyPhase === "entry" ? (
+                <JourneyCarousel onStart={handleStartJourney} onSkip={() => handleLeaveJourney("skip")} />
+              ) : activeJourney && (displayJourneyPhase === "playing" || displayJourneyPhase === "paused" || displayJourneyPhase === "completed") ? (
+                <JourneyOverlay
+                  journey={activeJourney}
+                  nodeIndex={journeyNodeIndex}
+                  phase={displayJourneyPhase}
+                  remainingMs={journeyRemaining}
+                  onPrevious={handleJourneyPrevious}
+                  onNext={handleJourneyNext}
+                  onPause={() => interruptJourney("control")}
+                  onResume={handleResumeJourney}
+                  onSkip={() => handleLeaveJourney("skip")}
+                  onExplore={() => handleLeaveJourney("complete")}
+                  onRelated={(journeyId) => handleStartJourney(journeyId, "ending")}
+                />
+              ) : (
+                <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} />
+              )
+            ) : <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />}
             {displayMode === "explore" ? <RelationLegend onSelect={handleSelectRelation} /> : null}
             {displayMode === "explore" && displaySelectedThinkerId && !isCompact ? (
               <FocusDepthControl value={focusDepth} onChange={setFocusDepth} />

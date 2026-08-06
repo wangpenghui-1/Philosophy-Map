@@ -1,0 +1,21 @@
+{
+  "id": "src-beauvoir-ethics-ambiguity-frechtman",
+  "entityType": "source",
+  "title": "The Ethics of Ambiguity",
+  "authors": [
+    "Simone de Beauvoir",
+    "Bernard Frechtman (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Citadel Press",
+  "year": 1948,
+  "defaultLocator": "Parts I–III",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "原作以法文写成；本记录用于定位 Bernard Frechtman 英译本。"
+}

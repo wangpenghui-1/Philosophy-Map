@@ -5,6 +5,7 @@
   "names": {
     "display": "普罗泰戈拉",
     "english": "Protagoras",
+    "original": "Πρωταγόρας",
     "aliases": []
   },
   "chronology": {
@@ -12,7 +13,7 @@
     "startYear": -490,
     "endYear": -420,
     "certainty": "approximate",
-    "note": "生卒年代、文本归属或相关传记材料在研究中仍有不确定性。"
+    "note": "生卒年代、作品归属或相关传记材料在研究中仍有不确定性。"
   },
   "primaryRegion": "欧洲与地中海",
   "secondaryRegions": [],
@@ -20,15 +21,17 @@
     "tradition-智者学派"
   ],
   "conceptIds": [
-    "concept-人是尺度"
+    "concept-人是尺度",
+    "concept-相对主义",
+    "concept-论辩术"
   ],
   "questionIds": [
     "society",
     "knowledge"
   ],
-  "guidingQuestion": "真理与政治判断在意见分歧中如何可能？",
-  "thesis": "人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。",
-  "summary": "普罗泰戈拉是欧洲与地中海智者学派的重要思想人物，主要追问“真理与政治判断在意见分歧中如何可能？”。其思想以“人是尺度”为入口，主张人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "guidingQuestion": "在意见彼此冲突的城邦中，判断和教育凭什么仍有意义？",
+  "thesis": "“人是万物的尺度”把判断放回具体经验；这不必取消教育和论辩，反而要求比较哪些意见更有益、更能组织共同生活。",
+  "summary": "普罗泰戈拉以人的经验、公共论辩和教育为中心，挑战把知识想成脱离判断者的固定尺度。由于原著几乎全部散佚，今天的理解必须同时阅读残篇与柏拉图、亚里士多德等人的批评性转述。",
   "workIds": [
     "protagoras-testimonia"
   ],
@@ -39,47 +42,125 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-routledge-encyclopedia-philosophy",
+    "src-protagoras-testimonia"
   ],
   "citations": [
     {
+      "sourceId": "src-protagoras-testimonia",
+      "locator": "DK 80B1, B4 and later testimonia",
+      "claim": "支持“人是尺度”、宗教残篇和文本仅以残篇传世的说明。"
+    },
+    {
       "sourceId": "src-routledge-encyclopedia-philosophy",
-      "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-      "claim": "支持普罗泰戈拉的身份、思想主张与历史语境概述。"
+      "locator": "Protagoras entry",
+      "claim": "支持智者教育、相对主义和柏拉图式转述的学术概述。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "measure",
+      "heading": "“人是尺度”先把判断放回经验现场",
       "paragraphs": [
         {
-          "text": "普罗泰戈拉是欧洲与地中海智者学派的重要思想人物，主要追问“真理与政治判断在意见分歧中如何可能？”。其思想以“人是尺度”为入口，主张人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "普罗泰戈拉最著名的残篇说：“人是万物的尺度。”它首先针对的是判断总能脱离判断者、以同一种方式给出世界的想法。同一阵风对发冷的人是冷的，对发热的人可能是暖的；这里不是在玩文字游戏，而是在提醒人们：显现总是向某个感受、处境和需要中的人显现。",
           "citations": [
             {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "DK 80B1; Plato, Theaetetus 151e–152a",
+              "claim": "支持“人是尺度”残篇及其在《泰阿泰德》中的讨论。"
+            },
+            {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-              "claim": "支持普罗泰戈拉的身份、思想主张与历史语境概述。"
+              "locator": "Protagoras entry: measure doctrine",
+              "claim": "支持该命题与知觉、判断关系的解释背景。"
             }
           ]
         },
         {
-          "text": "核心问题：真理与政治判断在意见分歧中如何可能？",
+          "text": "这句话常被概括为“任何意见都同样真”，但这种概括太快。后世材料，特别是柏拉图的批评性戏剧化转述，把普罗泰戈拉描绘为仍会区分较好和较坏、较有益和较有害的意见。即使没有一个完全脱离人的立场，医生、教师和政治演说者仍可以帮助共同体从较差状态转向较好状态；争议在于这种“较好”究竟依据真理、效用还是城邦实践。",
+          "citations": [
+            {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "Plato, Theaetetus 166d–167d",
+              "claim": "支持柏拉图文本中关于把较坏意见变为较好意见的转述。"
+            },
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Protagoras entry: relativism and education",
+              "claim": "支持不能把尺度命题简化为任意主义的学术限定。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education-debate",
+      "heading": "论辩不是取消真理，而是训练公共判断",
+      "paragraphs": [
+        {
+          "text": "作为智者，普罗泰戈拉收费教授年轻人如何在城邦中说话、判断和行动。与其把论辩只看成赢得辩论的技巧，不如看到它面对的现实：公共事务没有总能直接演算出来的答案，不同利益和经验需要被说清、比较并接受检验。所谓“使较弱的论证显得较强”的说法，也应放回这种竞争性教育与敌对材料中阅读。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-              "claim": "支持对普罗泰戈拉核心问题的概括。"
+              "locator": "Protagoras entry: sophistic education and antilogic",
+              "claim": "支持普罗泰戈拉的教育活动、论辩训练及其争议性描述。"
+            },
+            {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "Aristotle, Rhetoric 1402a23; Diogenes Laertius 9.51",
+              "claim": "支持关于相反论证的后世证言，且不把它当作完整原著。"
             }
           ]
         },
         {
-          "text": "核心主张：人的经验是判断尺度，教育和公共论辩可把较差意见转化为更有利的意见。",
+          "text": "这条路也使他成为苏格拉底—柏拉图传统的重要对手。柏拉图担心：若判断只随显现而变，知识和政治判断会失去可批评的标准。普罗泰戈拉式回应则迫使这个担心更具体：标准是否只能是超越经验的真理，还是也可以来自实践中可说明的后果、技艺和共同体的改进？这一问题至今仍是相对主义讨论的难点。",
           "citations": [
             {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "Plato, Theaetetus 151e–186e; Protagoras 320c–328d",
+              "claim": "支持柏拉图围绕知识、教育和政治德性对普罗泰戈拉的批评性呈现。"
+            },
+            {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Protagoras / 普罗泰戈拉”",
-              "claim": "支持对普罗泰戈拉核心主张的概括。"
+              "locator": "Protagoras entry: Platonic reception",
+              "claim": "支持把柏拉图文本视为批评性转述而非透明记录的限定。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fragments-limits",
+      "heading": "残篇留下思想，也限制我们能断言什么",
+      "paragraphs": [
+        {
+          "text": "另一个著名残篇谈神：“关于神，我不能知道他们存在还是不存在。”它常被视为不可知论的早期表述；但这只是一小段由后人保存下来的文字，不能替代一部完整的宗教哲学。普罗泰戈拉在雅典遭受何种指控、其书是否被焚等传记故事，也混合了不同年代的材料，不能当成毫无疑问的事实。",
+          "citations": [
+            {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "DK 80B4; Diogenes Laertius 9.51–52",
+              "claim": "支持宗教残篇及其后世传记材料的区分。"
+            },
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Protagoras entry: religion and biography",
+              "claim": "支持相关传记与归属存在争论的说明。"
+            }
+          ]
+        },
+        {
+          "text": "因此，理解普罗泰戈拉的稳妥方式不是替他补出一套完整的“相对主义体系”。我们能够相当确定地讨论尺度命题、智者教育和后世围绕它们的争论；至于他怎样系统地连接真理、效用、宗教和政治，则要保留证据的空白。这个边界并不削弱他的意义，反而让我们更准确地看到古典思想是怎样通过文本保存、争论和再解释延续下来的。",
+          "citations": [
+            {
+              "sourceId": "src-protagoras-testimonia",
+              "locator": "Collection scope and testimonia",
+              "claim": "支持普罗泰戈拉文本存留以残篇和证言为主的事实。"
+            },
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Protagoras entry and bibliography",
+              "claim": "支持对可证实主张与后世解释分层处理。"
             }
           ]
         }
@@ -102,14 +183,14 @@
     "creator": "Jusepe de Ribera",
     "retrievedAt": "2026-07-19"
   },
-  "uncertainty": "年代、作品归属或传记细节存在学术争议，条目采用约略标注。",
+  "uncertainty": "普罗泰戈拉的著作几乎全佚；“人是尺度”、相反论证和不可知论主要借残篇与敌对作者传下。柏拉图的对话是最丰富的材料之一，却以哲学论战为目的，不能逐句当作历史实录。",
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第七位；以残篇和批评性证言为边界，补充尺度命题、教育、论辩和不可知论。"
 }

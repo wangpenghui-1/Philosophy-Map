@@ -3,18 +3,26 @@
   "slug": "怀疑",
   "entityType": "concept",
   "name": "怀疑",
-  "originalTerms": [],
-  "summary": "“怀疑”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "originalTerms": [
+    "doute méthodique",
+    "dubitatio"
+  ],
+  "summary": "笛卡尔的方法怀疑是一种临时检验：凡仍有合理出错可能的信念，先暂停接受。感官欺骗、梦境和恶魔假设逐步加压，目的在于寻找足以承担知识重建的确定起点。",
   "senses": [
     {
       "traditionId": "tradition-近代理性主义",
-      "label": "怀疑",
-      "explanation": "在笛卡尔条目中，“怀疑”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "label": "方法怀疑",
+      "explanation": "怀疑在《沉思集》中按强度推进，并不等于最终宣称什么都不可知。它让读者亲自撤回习惯信念，直到发现怀疑活动本身确认了正在思考者的存在。",
       "citations": [
         {
+          "sourceId": "src-descartes-meditations-haldane-ross",
+          "locator": "Meditations I–II",
+          "claim": "支持感官、梦境、恶魔假设与我思之间的怀疑次序。"
+        },
+        {
           "sourceId": "src-descartes",
-          "locator": "Sections on methodic doubt, mind and knowledge",
-          "claim": "支持“怀疑”义项：在笛卡尔条目中，“怀疑”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
+          "locator": "Section 3.1",
+          "claim": "支持把怀疑理解为引导沉思者的认知工具。"
         }
       ]
     }
@@ -30,20 +38,26 @@
     "tradition-近代理性主义"
   ],
   "sourceIds": [
-    "src-descartes"
+    "src-descartes",
+    "src-descartes-meditations-haldane-ross"
   ],
   "citations": [
     {
+      "sourceId": "src-descartes-meditations-haldane-ross",
+      "locator": "Meditation I",
+      "claim": "支持方法怀疑的三层主要设想。"
+    },
+    {
       "sourceId": "src-descartes",
-      "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持怀疑的摘要主张：“怀疑”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "locator": "Section 3.1",
+      "claim": "支持方法怀疑的功能和解释争议。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "去除索引占位语，补充怀疑的步骤、功能和原典定位。"
 }

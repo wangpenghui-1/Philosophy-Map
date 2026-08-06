@@ -76,11 +76,7 @@ function questionIds(question, concept) {
 
 function buildSummary(candidate, seed) {
   const thesis = cleanSentence(seed.thesis);
-  let summary = `${candidate.name}是${candidate.primaryRegion}${candidate.tradition}的重要思想人物，主要追问“${seed.question}”。其思想以“${seed.concept}”为入口，主张${thesis}。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。`;
-  if (summary.length > 180) {
-    summary = `${candidate.name}是${candidate.primaryRegion}${candidate.tradition}的重要思想人物，主要追问“${seed.question}”。其思想以“${seed.concept}”为入口，主张${thesis}。条目结合文本、地点与学术来源呈现其历史语境。`;
-  }
-  if (summary.length < 80) summary += "阅读时应结合具体语言、文本层次与思想史语境。";
+  const summary = `${candidate.name}是${candidate.primaryRegion}${candidate.tradition}的重要思想人物，主要追问“${seed.question}”。其思想以“${seed.concept}”为入口，主张${thesis}。`;
   if (summary.length < 80 || summary.length > 180) throw new Error(`${seed.slug} summary length is ${summary.length}`);
   return summary;
 }

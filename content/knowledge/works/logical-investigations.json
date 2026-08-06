@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "husserl",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1900–1901",
   "languages": [],
-  "summary": "《逻辑研究》是胡塞尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "胡塞尔在两卷本中批判逻辑心理主义，分析意义、表达、意向性和直观充实，奠定描述意识活动与对象关系的早期现象学方法。",
   "conceptIds": [
     "concept-意向性",
     "concept-悬置",
@@ -28,11 +28,11 @@
   "citations": [
     {
       "sourceId": "src-husserl",
-      "locator": "Sections on intentionality, epoché and the lifeworld",
-      "claim": "支持《逻辑研究》的摘要主张：《逻辑研究》是胡塞尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 2: ideality and intentionality in the Logical Investigations",
+      "claim": "支持反心理主义、意义与意向性分析的著作概览。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

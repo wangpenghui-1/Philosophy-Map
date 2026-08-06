@@ -1,0 +1,33 @@
+{
+  "id": "laozi-zhuangzi",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "laozi"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "zhuangzi"
+  },
+  "directed": true,
+  "relationType": "lineage",
+  "evidenceStatus": "supported",
+  "title": "共享“道”的语言，但不等于同一套学说",
+  "explanation": "《庄子》改造战国时期关于“道”、无为与常规的讨论，后世常以“老庄”并称；文本层累使直接师承无法确证。",
+  "note": "本关系表示思想谱系和后世编类，不主张可证明的私人师承。",
+  "citations": [
+    {
+      "sourceId": "src-zhuangzi",
+      "locator": "Sections 1–3: life, evolving text theory, and interpretive narratives",
+      "claim": "支持《庄子》文本层累、道家谱系以及避免简化为直接师承的说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

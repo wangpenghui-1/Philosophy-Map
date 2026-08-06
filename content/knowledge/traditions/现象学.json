@@ -12,21 +12,32 @@
   "parentIds": [],
   "relatedTraditionIds": [],
   "personIds": [
-    "husserl"
+    "husserl",
+    "merleau-ponty"
   ],
   "conceptIds": [
     "concept-意向性",
     "concept-悬置",
-    "concept-生活世界"
+    "concept-生活世界",
+    "concept-身体主体",
+    "concept-知觉场",
+    "concept-肉身"
   ],
   "sourceIds": [
-    "src-husserl"
+    "src-husserl",
+    "src-merleau-ponty-sep",
+    "src-merleau-ponty-phenomenology-perception-fr"
   ],
   "citations": [
     {
       "sourceId": "src-husserl",
       "locator": "Sections on intentionality, epoché and the lifeworld",
       "claim": "支持现象学的摘要主张：现象学是本知识库用于组织人物、文本与概念的一项思想传统索引。它不把传统理解为封闭或同质的体系，而用于呈现内部差异、历史传播与跨传统接触。"
+    },
+    {
+      "sourceId": "src-merleau-ponty-sep",
+      "locator": "Sections on perception, embodiment, expression and ontology",
+      "claim": "支持现象学由意识描述向身体知觉与世界交织的历史展开。"
     }
   ],
   "contentTier": "index",

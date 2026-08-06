@@ -1,0 +1,38 @@
+{
+  "id": "confucius-mencius-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "confucius"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "mencius"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“怎样生活才算值得”的两种回答",
+  "explanation": "孔子与孟子都触及“怎样生活才算值得”，但各自的问题语境和论证目标不同：前者强调以礼与仁的日常实践，塑造能够承担关系责任的人。；后者强调人具有恻隐等道德端绪，仁政与自我修养应保护并扩充这些能力。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-confucius",
+      "locator": "Sections 3–4: ritual psychology, virtues and character formation",
+      "claim": "支持孔子一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持孟子一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

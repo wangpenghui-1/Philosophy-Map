@@ -31,7 +31,7 @@
   ],
   "guidingQuestion": "经验中的对象如何向意识显现？",
   "thesis": "通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。",
-  "summary": "胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。 本站以意向性、悬置、生活世界为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "胡塞尔以现象学追问对象如何在经验中显现。他从意向性出发，通过悬置和还原考察意识、时间、身体与他人的构成，并以生活世界批判现代科学把日常意义基础遗忘为纯粹客观事实。",
   "workIds": [
     "logical-investigations",
     "ideas-husserl"
@@ -49,42 +49,89 @@
   "citations": [
     {
       "sourceId": "src-husserl",
-      "locator": "Sections on intentionality, epoché and the lifeworld",
-      "claim": "支持胡塞尔的摘要主张：胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。…"
+      "locator": "Sections 2–7: intentionality, reduction, time, embodiment, intersubjectivity and lifeworld",
+      "claim": "支持胡塞尔从《逻辑研究》到生活世界问题的思想发展。"
+    },
+    {
+      "sourceId": "src-husserl-ideas-gibson",
+      "locator": "§§27–33 and §§84–86",
+      "claim": "支持自然态度、悬置、还原与意向性结构的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "intentionality",
+      "heading": "意识总是关于某物的意识",
       "paragraphs": [
         {
-          "text": "胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。 本站以意向性、悬置、生活世界为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "胡塞尔早期反对“心理主义”：逻辑规律不能被还原为人类事实上怎样联想或思考，否则真理会随着不同心理结构改变。《逻辑研究》一方面维护逻辑意义的理想有效性，另一方面又要求描述这些意义怎样在具体意识活动中被理解。现象学由此不只是研究主观感受，而是分析主观活动如何朝向可共同判断的对象。",
           "citations": [
             {
               "sourceId": "src-husserl",
-              "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本段主张：胡塞尔是1859–1938活跃于欧洲的现象学思想人物，主要追问“经验中的对象如何向意识显现？”。其核心主张可概括为：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。…"
+              "locator": "Section 2: ideality and intentionality in the Logical Investigations",
+              "claim": "支持反心理主义、意义理想性及其与意识活动关系的说明。"
             }
           ]
         },
         {
-          "text": "核心问题：经验中的对象如何向意识显现？",
+          "text": "“意向性”表示意识不是封闭容器里的影像堆积，而总是看见某物、期待某事、回忆某人或判断某个命题。同一个对象可以从正面、侧面、记忆和他人描述中以不同方式显现，却仍被经验为同一对象。现象学研究这些显现方式、未被直接看见的侧面如何被预期，以及对象同一性如何在经验流中维持。",
           "citations": [
             {
               "sourceId": "src-husserl",
-              "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本段主张：核心问题：经验中的对象如何向意识显现？"
+              "locator": "Section 2: intentionality, content and object",
+              "claim": "支持意识活动的对象指向、不同显现方式与对象同一性分析。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reduction",
+      "heading": "悬置不是否认世界存在",
+      "paragraphs": [
+        {
+          "text": "日常生活处在“自然态度”中：我们直接相信桌子、城市和他人存在，并处理它们。胡塞尔提出悬置，不是宣称世界不存在，而是暂时不使用这项存在承诺来解释经验。研究者转而问：世界作为可信、稳定、可共享的世界，究竟通过哪些经验结构呈现？这像把注意力从电影情节移到画面如何被组织，却不需要断言电影什么都没发生。",
+          "citations": [
+            {
+              "sourceId": "src-husserl-ideas-gibson",
+              "locator": "§§27–32: the natural attitude and its exclusion",
+              "claim": "支持自然态度、悬置及其不等于否认世界的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。",
+          "text": "现象学还原把分析引向先验主体性，即构成意义和有效性的经验条件。这里的“构成”不是心灵凭空创造外部事物，而是说明对象如何获得“持续存在”“可从别处看见”“对他人也有效”等意义。胡塞尔的先验转向因此引发长期争论：它是精确描述经验条件，还是重新落入一种主体中心的唯心论？",
           "citations": [
             {
               "sourceId": "src-husserl",
-              "locator": "Sections on intentionality, epoché and the lifeworld",
-              "claim": "支持本段主张：核心主张：通过悬置未经检验的自然态度，现象学描述意向性结构与生活世界。"
+              "locator": "Section 3: epoché, phenomenological reduction and transcendental idealism",
+              "claim": "支持悬置、还原、构成与先验唯心论争议。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "world-others",
+      "heading": "时间、身体、他人与生活世界",
+      "paragraphs": [
+        {
+          "text": "经验不是一串互不相干的瞬间。听一段旋律时，刚过去的音仍以“保持”方式在场，下一音又被预期；没有这种内在时间结构，我们只会听见孤立声响。身体也不只是被观察的物体，而是行动和定向的“我能”：左右、远近、可触及与不可触及都以身体为零点。对他人的经验则要求说明另一个主体如何既作为身体显现，又不被化约为我的表象。",
+          "citations": [
+            {
+              "sourceId": "src-husserl",
+              "locator": "Sections 4–5: time-consciousness, embodiment, intersubjectivity and objectivity",
+              "claim": "支持时间结构、身体主体与他人经验的现象学分析。"
+            }
+          ]
+        },
+        {
+          "text": "晚期胡塞尔用“生活世界”指出，现代科学的测量和数学模型建立在一个先被生活、操作和共同理解的世界之上。科学并非虚假，却可能忘记自己的意义基础，把抽象模型当成唯一现实。海德格尔、萨特和梅洛-庞蒂都从胡塞尔出发，又批评他对先验主体的处理。现象学传统因此不是一套固定方法，而是一场关于经验、世界和主体如何共同显现的持续争论。",
+          "citations": [
+            {
+              "sourceId": "src-husserl",
+              "locator": "Section 6 and related entries: the lifeworld and later phenomenology",
+              "claim": "支持生活世界对科学客观化的批判及胡塞尔对后续现象学的影响。"
             }
           ]
         }
@@ -104,13 +151,13 @@
   },
   "color": "#758ca4",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成意向性、现象学还原、时间身体与生活世界的分段扩写，待站主发布前终审。",
   "representativeQuote": {
     "text": "We put out of action the general thesis which belongs to the essence of the natural standpoint.",
     "displayLanguage": "en",

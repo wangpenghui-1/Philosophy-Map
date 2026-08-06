@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "异化",
   "originalTerms": [],
-  "summary": "“异化”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "summary": "异化描述人同自身行动、身体或共同世界的关系被支配结构扭曲。马克思侧重劳动与社会关系，法农则分析殖民种族秩序如何让主体从他人目光中经验自己。",
   "senses": [
     {
       "traditionId": "tradition-反殖民思想",
@@ -61,7 +61,7 @@
       "claim": "支持异化的摘要主张：“异化”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

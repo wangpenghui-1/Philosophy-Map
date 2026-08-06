@@ -19,7 +19,9 @@
     "tradition-功利主义"
   ],
   "conceptIds": [
-    "concept-最大幸福"
+    "concept-最大幸福",
+    "concept-正义",
+    "concept-幸福"
   ],
   "questionIds": [
     "society",
@@ -27,7 +29,7 @@
   ],
   "guidingQuestion": "法律与制度应以何种公共标准评价？",
   "thesis": "以受影响者的快乐与痛苦衡量行动和制度，反对缺乏经验依据的自然权利修辞。",
-  "summary": "边沁是欧洲与地中海功利主义的重要思想人物，主要追问“法律与制度应以何种公共标准评价？”。其思想以“最大幸福”为入口，主张以受影响者的快乐与痛苦衡量行动和制度，反对缺乏经验依据的自然权利修辞。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "summary": "边沁要求法律和政策把每个受影响者的快乐与痛苦都算进判断，不再把传统特权当作天然正当。功利原则既是公共改革的尺度，也留下了利益比较、权利与少数保护的难题；它要求决策者公开说明谁承担代价、谁获得好处。",
   "workIds": [
     "principles-morals-legislation"
   ],
@@ -50,36 +52,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "utility",
+      "heading": "快乐与痛苦为何能成为公共尺度",
       "paragraphs": [
         {
-          "text": "边沁是欧洲与地中海功利主义的重要思想人物，主要追问“法律与制度应以何种公共标准评价？”。其思想以“最大幸福”为入口，主张以受影响者的快乐与痛苦衡量行动和制度，反对缺乏经验依据的自然权利修辞。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "边沁以“最大多数人的最大幸福”概括功利原则：行动和制度应看它们是否增加快乐、减少痛苦。其锋芒首先指向刑罚、法律和贵族特权——公共权力不能只服务少数人的习俗或身份，而要说明它给所有受影响者带来什么后果。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Jeremy Bentham / 边沁”",
-              "claim": "支持边沁的身份、思想主张与历史语境概述。"
+              "sourceId": "src-bentham-principles-1789",
+              "locator": "Chapters I–IV",
+              "claim": "支持功利原则、快乐痛苦与法律判断。"
             }
           ]
         },
         {
-          "text": "核心问题：法律与制度应以何种公共标准评价？",
+          "text": "他提出强度、持续时间、确定性等维度来比较快乐与痛苦。这份“快乐计算”不是说每次决策都能真的算出数字，而是要求制度论证公开其后果与受益者。正因为比较极难，它也暴露了把多样生活压成单一总量的风险。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Jeremy Bentham / 边沁”",
-              "claim": "支持对边沁核心问题的概括。"
+              "locator": "Bentham entry: utilitarian calculation and legislation",
+              "claim": "支持快乐计算与其限制。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "heading": "法律改革不是道德说教",
+      "paragraphs": [
+        {
+          "text": "边沁反对以自然权利或古老传统为唯一根据，主张从法律实际造成的安全、财产、自由和痛苦来改革制度。他批评残酷刑罚、秘密程序和难以理解的普通法，希望法律可被公众检验。这使功利主义成为积极的立法改革计划。",
+          "citations": [
+            {
+              "sourceId": "src-bentham-principles-1789",
+              "locator": "Chapters XIII–XVII",
+              "claim": "支持刑罚、立法与后果原则。"
             }
           ]
         },
         {
-          "text": "核心主张：以受影响者的快乐与痛苦衡量行动和制度，反对缺乏经验依据的自然权利修辞。",
+          "text": "但“权利是法律的产物”不等于个人可以任意被牺牲。边沁会问：牺牲某人是否真的在长期破坏安全、信任与普遍幸福；后来的功利主义者也以规则、权利和制度约束回应这一压力。",
           "citations": [
             {
               "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“Jeremy Bentham / 边沁”",
-              "claim": "支持对边沁核心主张的概括。"
+              "locator": "Bentham entry: rights, law and criticism",
+              "claim": "支持权利争论及后续回应。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "heading": "平等计入不等于结果自动公平",
+      "paragraphs": [
+        {
+          "text": "边沁的平等含义是“每个人算一人，没有人算得更多”：身份本身不能决定利益权重。这一原则可用于批评特权，却不自动告诉我们怎样处理贫困、性别、殖民或能力差异。分配正义需要额外说明，不能只凭总量宣布已经公平。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Bentham entry: equality and distribution",
+              "claim": "支持平等计入与分配问题。"
+            }
+          ]
+        },
+        {
+          "text": "因此，边沁既是制度后果论的重要起点，也不是功利主义所有问题的最后答案。把他写成冷冰冰的算术家会忽略其改革热情；把功利原则写成万能公式又会遮蔽比较、权利和少数保护的持续争论。更贴近他的做法，是在具体法律中追问可预见的伤害能否被减少、制度是否把每个人的利益平等纳入理由。",
+          "citations": [
+            {
+              "sourceId": "src-routledge-encyclopedia-philosophy",
+              "locator": "Bentham entry: reception and criticism",
+              "claim": "支持接受史与解释边界。"
             }
           ]
         }
@@ -104,13 +148,13 @@
   },
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v4",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第二十位；补充功利原则、法律改革、平等计入与权利争议。",
   "representativeQuote": {
     "text": "Nature has placed mankind under the governance of two sovereign masters, pain and pleasure.",
     "displayLanguage": "en",
@@ -125,5 +169,6 @@
     "attributionNote": "引文依据所列原典英译本及准确章节定位收录；当前标为可靠来源归引，不宣称已经完成手稿级校勘。",
     "sourceId": "src-bentham-principles-1789",
     "locator": "Chapter I, §1"
-  }
+  },
+  "uncertainty": "“最大幸福”并不提供一套自动计算的政策机器；快乐的可比较性、分配与权利保护始终有争议。边沁的自然权利批评也不等于否认法律应保护个人。"
 }

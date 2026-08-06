@@ -1,0 +1,38 @@
+{
+  "id": "li-zhi-zhuangzi-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "li-zhi"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "zhuangzi"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“人如何成为自己”的两种回答",
+  "explanation": "李贽与庄子都触及“人如何成为自己”，但各自的问题语境和论证目标不同：前者强调童心保存未经虚假名教遮蔽的真实感受，经典判断应回到具体生命经验。；后者强调松动固执的区分，从多重视角理解变化中的世界。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持李贽一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-zhuangzi",
+      "locator": "Sections 4.3–4.8: language, perspectives and skepticism",
+      "claim": "支持庄子一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

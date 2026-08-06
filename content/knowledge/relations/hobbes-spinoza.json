@@ -1,0 +1,37 @@
+{
+  "id": "hobbes-spinoza",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "hobbes"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "spinoza"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "自然权利与国家目的的分歧",
+  "explanation": "斯宾诺莎在自然权利、国家安全与服从问题上回应霍布斯式政治难题，但没有把权利完全交给主权者；他更强调国家应使人能够安全地运用理性，并把思想自由视为政治稳定的条件。",
+  "note": "霍布斯的影响有文本与研究支持；两人对自然权利转让、宗教权威和国家目的的差异需要同时保留。",
+  "citations": [
+    {
+      "sourceId": "src-hobbes",
+      "locator": "Sections on the state of nature, natural right, sovereignty and liberty",
+      "claim": "支持霍布斯关于自然权利、安全与主权的政治问题框架。"
+    },
+    {
+      "sourceId": "src-spinoza",
+      "locator": "Sections on political philosophy, natural right and freedom of thought",
+      "claim": "支持斯宾诺莎吸收并改写相关问题，同时保留个人能力与思想自由的说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05"
+}

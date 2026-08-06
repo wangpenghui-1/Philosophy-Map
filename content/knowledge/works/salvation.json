@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "avicenna",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "11世纪",
   "languages": [],
-  "summary": "《拯救之书》是阿维森纳的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "《拯救之书》以较紧凑形式重述阿维森纳的逻辑、自然哲学、灵魂论、数学和形而上学，便于观察其百科全书体系如何被压缩为一条连续论证路线。",
   "conceptIds": [
     "concept-存在",
     "concept-本质",
@@ -28,11 +28,11 @@
   "citations": [
     {
       "sourceId": "src-avicenna",
-      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-      "claim": "支持《拯救之书》的摘要主张：《拯救之书》是阿维森纳的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 1–5 and bibliography of Avicenna's metaphysical works",
+      "claim": "支持《拯救之书》在阿维森纳体系中的位置及其形而上学主题。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

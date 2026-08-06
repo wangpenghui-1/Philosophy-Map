@@ -1,0 +1,48 @@
+{
+  "id": "myth-of-sisyphus",
+  "slug": "myth-of-sisyphus",
+  "entityType": "work",
+  "title": "《西西弗神话》",
+  "originalTitle": "Le Mythe de Sisyphe",
+  "authorRefs": [
+    {
+      "personId": "camus",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1942",
+  "languages": [
+    "fr"
+  ],
+  "summary": "加缪从自杀问题切入，分析人的意义要求与世界沉默之间的荒诞关系，拒绝以死亡或超越性的“哲学自杀”取消矛盾，并以清醒、自由和持续生活回应荒诞。",
+  "conceptIds": [
+    "concept-荒诞",
+    "concept-限度"
+  ],
+  "traditionIds": [
+    "tradition-荒诞哲学"
+  ],
+  "sourceIds": [
+    "src-camus-myth-sisyphus-fr",
+    "src-camus-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-myth-sisyphus-fr",
+      "locator": "Un raisonnement absurde; Le suicide philosophique; Le mythe de Sisyphe",
+      "claim": "支持本书对荒诞、自杀、哲学跳跃及西西弗形象的论述。"
+    },
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Section 3: Suicide, Absurdity and Happiness",
+      "claim": "支持作品在加缪思想发展中的位置与主要论证概览。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "phenomenology-of-perception",
+  "slug": "phenomenology-of-perception",
+  "entityType": "work",
+  "title": "《知觉现象学》",
+  "originalTitle": "Phénoménologie de la perception",
+  "authorRefs": [
+    {
+      "personId": "merleau-ponty",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1945",
+  "languages": [
+    "fr"
+  ],
+  "summary": "梅洛-庞蒂通过身体、习惯、空间、语言和他人经验，批评经验主义与理智主义对知觉的简化。",
+  "conceptIds": [
+    "concept-身体主体",
+    "concept-知觉场"
+  ],
+  "traditionIds": [
+    "tradition-现象学"
+  ],
+  "sourceIds": [
+    "src-merleau-ponty-sep",
+    "src-merleau-ponty-phenomenology-perception-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+      "locator": "Première partie: Le corps",
+      "claim": "支持作品关于身体主体和知觉的核心论题。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

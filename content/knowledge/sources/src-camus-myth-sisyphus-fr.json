@@ -1,0 +1,19 @@
+{
+  "id": "src-camus-myth-sisyphus-fr",
+  "entityType": "source",
+  "title": "Le Mythe de Sisyphe",
+  "authors": [
+    "Camus, Albert"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Éditions Gallimard",
+  "year": 1942,
+  "defaultLocator": "Un raisonnement absurde, opening paragraphs; Le suicide philosophique; Le mythe de Sisyphe",
+  "language": "fr",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

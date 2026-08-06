@@ -1,0 +1,21 @@
+{
+  "id": "src-dignaga-hattori",
+  "entityType": "source",
+  "title": "Dignāga, On Perception: Being the Pratyakṣapariccheda of Dignāga's Pramāṇasamuccaya",
+  "authors": [
+    "Dignāga",
+    "Masaaki Hattori"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Harvard Oriental Series 47, Harvard University Press",
+  "year": 1968,
+  "defaultLocator": "Pramāṇasamuccaya and Vṛtti, Chapter 1",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "英译与研究本，用于定位陈那关于现量、自相及概念构造的论述。"
+}

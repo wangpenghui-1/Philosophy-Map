@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1887",
-  "languages": [],
-  "summary": "《论道德的谱系》是尼采的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "de"
+  ],
+  "summary": "尼采以三篇论文追踪善恶、罪责和苦行理想的生成，分析怨恨、惩罚和自我规训如何改变价值含义；谱系不是中立年代记，而是对价值生命效果的批判。",
   "conceptIds": [
     "concept-谱系",
     "concept-价值",
@@ -23,20 +25,21 @@
     "tradition-生命哲学与谱系学"
   ],
   "sourceIds": [
-    "src-nietzsche"
+    "src-nietzsche",
+    "src-nietzsche-genealogy-diethe"
   ],
   "citations": [
     {
       "sourceId": "src-nietzsche",
-      "locator": "Sections on genealogy, values, perspectivism and agency",
-      "claim": "支持《论道德的谱系》的摘要主张：《论道德的谱系》是尼采的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 2 on the critique of religion and morality",
+      "claim": "支持善恶、罪责、苦行理想与谱系方法的作品概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充三篇论文的主题结构与谱系方法。"
 }

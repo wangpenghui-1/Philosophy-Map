@@ -1,0 +1,37 @@
+{
+  "id": "fanon-achille-mbembe",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "fanon"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "achille-mbembe"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "从殖民暴力到死政治",
+  "explanation": "姆本贝延续法农对殖民空间和种族化身体的分析，把问题推进到主权如何使某些生命暴露于死亡。",
+  "citations": [
+    {
+      "sourceId": "src-fanon",
+      "locator": "Section 6: Legacy and Influence",
+      "claim": "支持法农对后殖民思想与殖民暴力研究的持续影响。"
+    },
+    {
+      "sourceId": "src-mbembe-necropolitics-public-culture",
+      "locator": "pp. 21–27: colonial occupation, racialized space, and the colony",
+      "claim": "支持姆本贝对殖民空间、主权与死亡暴露的分析。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系；关系标为 supported，避免把理论延续写成简单继承。"
+}

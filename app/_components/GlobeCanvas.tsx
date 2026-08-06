@@ -27,7 +27,12 @@ import {
 } from "../_data/atlas";
 import type { AtlasMode, QualityTier } from "../_state/atlas-store";
 import {
+  GLOBE_HIGH_QUALITY_WARMUP_MS,
+  GLOBE_NATIVE_CONTEXT_RESTORE_MS,
   getFocusedThinkerIds,
+  getRenderPixelRatio,
+  getWebglRetryDelayMs,
+  isWindowsEdgeUserAgent,
   percentile,
   shouldDirectGlobeCamera,
   type FocusDepth,
@@ -53,12 +58,30 @@ const EARTH_TEXTURE_URLS = [
   "/media/globe/earth-clouds.png",
 ] as const;
 
-let cachedWebgl2Availability: boolean | null = null;
+type GlobePowerPreference = "default" | "high-performance";
+
+const cachedWebgl2Availability = new Map<GlobePowerPreference, boolean>();
+const EDGE_GPU_SESSION_KEY = "atlas-edge-gpu-session:v1";
 const AtlasPostprocessing = lazy(() => import("./AtlasPostprocessing"));
 
 type WebglRuntimeStatus = "checking" | "ready" | "lost" | "retrying" | "unavailable" | "unsupported";
 
 export type EarthLightingMode = "day" | "night";
+
+export interface GlobeThematicTransition {
+  from: string;
+  to: string;
+  label: string;
+}
+
+export interface GlobeStoryFocus {
+  key: string;
+  camera: StoryChapter["camera"];
+  focusThinkerId?: string;
+  thinkerIds: string[];
+  relationIds: string[];
+  thematicTransitions: GlobeThematicTransition[];
+}
 
 interface GlobeCanvasProps {
   mode: AtlasMode;
@@ -66,6 +89,7 @@ interface GlobeCanvasProps {
   detailOpen: boolean;
   isPlaying: boolean;
   chapterIndex: number;
+  storyFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   activeQuestionId: QuestionId | null;
@@ -81,6 +105,7 @@ interface GlobeCanvasProps {
   onRuntimeFallback: () => void;
   onCameraSnapshotChange: (snapshot: GlobeCameraSnapshot) => void;
   onPerformanceSample: (p75FrameMs: number) => void;
+  onStoryInterruption: () => void;
 }
 
 interface SharedEarthUniforms {
@@ -251,19 +276,40 @@ const ATMOSPHERE_FRAGMENT_SHADER = `
   }
 `;
 
-function getWebgl2Availability() {
-  if (cachedWebgl2Availability !== null) return cachedWebgl2Availability;
+function getWebgl2Availability(powerPreference: GlobePowerPreference) {
+  const cached = cachedWebgl2Availability.get(powerPreference);
+  if (cached !== undefined) return cached;
   try {
     const canvas = document.createElement("canvas");
-    const context = canvas.getContext("webgl2");
-    cachedWebgl2Availability = Boolean(context);
-    context?.getExtension("WEBGL_lose_context")?.loseContext();
+    const context = canvas.getContext("webgl2", {
+      alpha: false,
+      antialias: false,
+      powerPreference,
+      stencil: false,
+    });
+    cachedWebgl2Availability.set(powerPreference, Boolean(context));
     canvas.width = 1;
     canvas.height = 1;
   } catch {
-    cachedWebgl2Availability = false;
+    cachedWebgl2Availability.set(powerPreference, false);
   }
-  return cachedWebgl2Availability;
+  return cachedWebgl2Availability.get(powerPreference) ?? false;
+}
+
+function getInitialGpuProfile() {
+  if (typeof window === "undefined") {
+    return { windowsEdge: false, suspectedRendererCrash: false };
+  }
+  const windowsEdge = isWindowsEdgeUserAgent(window.navigator.userAgent);
+  let suspectedRendererCrash = false;
+  if (windowsEdge) {
+    try {
+      suspectedRendererCrash = window.sessionStorage.getItem(EDGE_GPU_SESSION_KEY) === "active";
+    } catch {
+      // Storage can be unavailable in hardened browser profiles.
+    }
+  }
+  return { windowsEdge, suspectedRendererCrash };
 }
 
 function latLonToVector3(lat: number, lon: number, radius = GLOBE_RADIUS) {
@@ -430,11 +476,13 @@ function EarthSystem({
   quality,
   reduceMotion,
   shared,
+  stableGpuProfile,
 }: {
   globeRef: RefObject<THREE.Mesh | null>;
   quality: QualityTier;
   reduceMotion: boolean;
   shared: SharedEarthUniforms;
+  stableGpuProfile: boolean;
 }) {
   const { gl, invalidate } = useThree();
   const textureUrls = useMemo(
@@ -454,7 +502,9 @@ function EarthSystem({
     if (loadedSpecularMap) loadedSpecularMap.colorSpace = THREE.NoColorSpace;
     if (loadedCloudMap) loadedCloudMap.colorSpace = THREE.NoColorSpace;
     const anisotropy = Math.min(
-      quality === "high" ? 8 : quality === "medium" ? 4 : 2,
+      stableGpuProfile
+        ? quality === "low" ? 2 : 4
+        : quality === "high" ? 8 : quality === "medium" ? 4 : 2,
       gl.capabilities.getMaxAnisotropy(),
     );
     for (const texture of loadedTextures) {
@@ -463,16 +513,16 @@ function EarthSystem({
       texture.anisotropy = anisotropy;
       texture.needsUpdate = true;
     }
-  }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality]);
+  }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality, stableGpuProfile]);
 
   useEffect(() => {
     if (reduceMotion || quality === "low") return;
     const interval = window.setInterval(
       () => invalidate(),
-      quality === "high" ? 1000 / 24 : 1000 / 18,
+      quality === "high" && !stableGpuProfile ? 1000 / 24 : 1000 / 18,
     );
     return () => window.clearInterval(interval);
-  }, [invalidate, quality, reduceMotion]);
+  }, [invalidate, quality, reduceMotion, stableGpuProfile]);
 
   const surfaceUniforms = useMemo(() => ({
     uDayMap: { value: dayMap },
@@ -838,6 +888,82 @@ function RelationArc({
   );
 }
 
+function ThematicJourneyArc({
+  transition,
+  quality,
+  reduceMotion,
+}: {
+  transition: GlobeThematicTransition;
+  quality: QualityTier;
+  reduceMotion: boolean;
+}) {
+  const pulseRef = useRef<Line2 | null>(null);
+  const { invalidate } = useThree();
+  const points = useMemo(() => {
+    const from = thinkerById.get(transition.from);
+    const to = thinkerById.get(transition.to);
+    if (!from || !to) return [];
+    const start = latLonToVector3(from.anchors[0].lat, from.anchors[0].lon, GLOBE_RADIUS + 0.04);
+    const end = latLonToVector3(to.anchors[0].lat, to.anchors[0].lon, GLOBE_RADIUS + 0.04);
+    return createElevatedArcPoints(start, end, quality === "low" ? 28 : quality === "medium" ? 46 : 64);
+  }, [quality, transition.from, transition.to]);
+
+  useEffect(() => {
+    if (reduceMotion || !pulseRef.current) return;
+    const material = pulseRef.current.material as LineMaterial;
+    const travel = { offset: material.dashOffset };
+    const tween = gsap.to(travel, {
+      offset: travel.offset - 1.8,
+      duration: 3.2,
+      ease: "none",
+      repeat: -1,
+      onUpdate: () => {
+        material.dashOffset = travel.offset;
+        invalidate();
+      },
+    });
+    return () => {
+      tween.kill();
+    };
+  }, [invalidate, reduceMotion, transition.from, transition.to]);
+
+  if (!points.length) return null;
+  return (
+    <group>
+      {quality !== "low" ? (
+        <Line
+          points={points}
+          color="#9fb9d8"
+          lineWidth={5.5}
+          transparent
+          opacity={0.07}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+          depthTest
+          toneMapped={false}
+          renderOrder={4}
+        />
+      ) : null}
+      <Line
+        ref={pulseRef}
+        points={points}
+        color="#9fb9d8"
+        lineWidth={1.35}
+        dashed
+        dashSize={0.055}
+        gapSize={0.1}
+        dashScale={1}
+        transparent
+        opacity={reduceMotion ? 0.46 : 0.68}
+        depthWrite={false}
+        depthTest
+        toneMapped={false}
+        renderOrder={5}
+      />
+    </group>
+  );
+}
+
 function ThinkerAnchor({
   thinker,
   emphasized,
@@ -911,6 +1037,7 @@ function CameraDirector({
   abortRef,
   mode,
   chapterIndex,
+  storyFocus,
   selectedThinkerId,
   selectedRelationId,
   reduceMotion,
@@ -921,6 +1048,7 @@ function CameraDirector({
   abortRef: RefObject<(() => void) | null>;
   mode: AtlasMode;
   chapterIndex: number;
+  storyFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   reduceMotion: boolean;
@@ -929,6 +1057,7 @@ function CameraDirector({
 }) {
   const { camera, invalidate, size } = useThree();
   const suppressInitialRef = useRef(suppressInitialDirection);
+  const lastStoryFocusKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (suppressInitialRef.current) {
@@ -941,6 +1070,10 @@ function CameraDirector({
     const thinker = selectedThinkerId ? thinkerById.get(selectedThinkerId) : undefined;
     const relation = selectedRelationId ? relations.find((item) => item.id === selectedRelationId) : undefined;
     if (!shouldDirectGlobeCamera(mode, selectedThinkerId, selectedRelationId)) return;
+    if (mode === "story" && !thinker && !relation && storyFocus) {
+      if (lastStoryFocusKeyRef.current === storyFocus.key) return;
+      lastStoryFocusKeyRef.current = storyFocus.key;
+    }
     const relationFrom = relation ? thinkerById.get(relation.from) : undefined;
     const relationTo = relation ? thinkerById.get(relation.to) : undefined;
     const relationDirection = relationFrom && relationTo
@@ -950,16 +1083,21 @@ function CameraDirector({
           return midpoint.lengthSq() < 0.01 ? fromDirection : midpoint.normalize();
         })()
       : null;
+    const storyThinker = storyFocus?.focusThinkerId ? thinkerById.get(storyFocus.focusThinkerId) : undefined;
     const destination = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 3.72)
       : relationDirection
         ? relationDirection.clone().multiplyScalar(4.25)
-        : cameraPositionFromPreset(storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
+        : storyThinker
+          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, storyFocus?.camera.distance ?? 4)
+          : cameraPositionFromPreset(storyFocus?.camera ?? storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
     const target = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 0.42)
       : relationDirection
         ? relationDirection.clone().multiplyScalar(0.34)
-        : new THREE.Vector3(0, 0, 0);
+        : storyThinker
+          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, 0.42)
+          : new THREE.Vector3(0, 0, 0);
     const duration = reduceMotion ? 0.01 : thinker || relation ? (size.width <= 820 ? 0.65 : 0.9) : mode === "story" ? 1.45 : 0.9;
 
     const cameraTween = gsap.to(camera.position, {
@@ -1002,7 +1140,7 @@ function CameraDirector({
       abort();
       if (abortRef.current === abort) abortRef.current = null;
     };
-  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width]);
+  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
 
   return null;
 }
@@ -1220,6 +1358,8 @@ function GlobeScene({
   markerLayout,
   anchorBudget,
   hoveredRelationId,
+  bloomEnabled,
+  stableGpuProfile,
   onHoverRelation,
   ...props
 }: Omit<GlobeCanvasProps, "onFallback"> & {
@@ -1228,19 +1368,28 @@ function GlobeScene({
   anchorBudget: number;
   hoveredRelationId: string | null;
   onHoverRelation: (id: string | null) => void;
+  bloomEnabled: boolean;
+  stableGpuProfile: boolean;
 }) {
   const globeRef = useRef<THREE.Mesh | null>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
   const directorAbortRef = useRef<(() => void) | null>(null);
   const bloomGroupRef = useRef<THREE.Group | null>(null);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
+  const activeStoryFocus = useMemo<GlobeStoryFocus>(() => props.storyFocus ?? ({
+    key: currentChapter.id,
+    camera: currentChapter.camera,
+    thinkerIds: currentChapter.thinkerIds,
+    relationIds: currentChapter.relationIds,
+    thematicTransitions: [],
+  }), [currentChapter, props.storyFocus]);
   const storyThinkerIds = useMemo(
-    () => new Set(currentChapter.thinkerIds),
-    [currentChapter.thinkerIds],
+    () => new Set(activeStoryFocus.thinkerIds),
+    [activeStoryFocus.thinkerIds],
   );
   const storyRelationIds = useMemo(
-    () => new Set(currentChapter.relationIds),
-    [currentChapter.relationIds],
+    () => new Set(activeStoryFocus.relationIds),
+    [activeStoryFocus.relationIds],
   );
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1276,6 +1425,7 @@ function GlobeScene({
     () => new Set(
       thinkers
         .filter((thinker) => {
+          if (props.mode === "story" && props.storyFocus) return storyThinkerIds.has(thinker.id);
           if (props.mode === "story") return true;
           const questionMatch = !props.activeQuestionId
             || thinker.questionIds.includes(props.activeQuestionId);
@@ -1283,7 +1433,7 @@ function GlobeScene({
         })
         .map((thinker) => thinker.id),
     ),
-    [props.activeQuestionId, props.mode, props.timelineYear],
+    [props.activeQuestionId, props.mode, props.storyFocus, props.timelineYear, storyThinkerIds],
   );
   const shared = useMemo<SharedEarthUniforms>(() => ({
     uSunDirection: { value: new THREE.Vector3(4, 2.5, 5).normalize() },
@@ -1305,6 +1455,7 @@ function GlobeScene({
             quality={props.quality}
             reduceMotion={props.reduceMotion}
             shared={shared}
+            stableGpuProfile={stableGpuProfile}
           />
         </Suspense>
         <CountryBorders quality={props.quality} />
@@ -1347,6 +1498,14 @@ function GlobeScene({
             />
           );
           })}
+          {props.mode === "story" ? activeStoryFocus.thematicTransitions.map((transition) => (
+            <ThematicJourneyArc
+              key={`${transition.from}-${transition.to}`}
+              transition={transition}
+              quality={props.quality}
+              reduceMotion={props.reduceMotion}
+            />
+          )) : null}
           {thinkers
           .filter((thinker) => mountedAnchorIds.has(thinker.id))
           .map((thinker) => (
@@ -1356,6 +1515,7 @@ function GlobeScene({
               emphasized={
                 props.selectedThinkerId === thinker.id
                 || selectedRelationEndpoints.has(thinker.id)
+                || (props.mode === "story" && storyThinkerIds.has(thinker.id))
               }
               selected={props.selectedThinkerId === thinker.id}
               hovered={hoveredRelationEndpoints.has(thinker.id)}
@@ -1368,14 +1528,17 @@ function GlobeScene({
       </group>
       <OrbitControls
         ref={controlsRef}
-        enabled={props.mode === "explore" || !props.isPlaying}
+        enabled
         enablePan={false}
         enableDamping={!props.reduceMotion}
         dampingFactor={0.072}
         rotateSpeed={0.42}
         zoomSpeed={0.58}
         zoomToCursor
-        onStart={() => directorAbortRef.current?.()}
+        onStart={() => {
+          directorAbortRef.current?.();
+          if (props.mode === "story" && props.isPlaying) props.onStoryInterruption();
+        }}
         onChange={() => {
           const controls = controlsRef.current;
           if (controls && controls.target.length() > 0.58) controls.target.setLength(0.58);
@@ -1390,6 +1553,7 @@ function GlobeScene({
         abortRef={directorAbortRef}
         mode={props.mode}
         chapterIndex={props.chapterIndex}
+        storyFocus={activeStoryFocus}
         selectedThinkerId={props.selectedThinkerId}
         selectedRelationId={props.selectedRelationId}
         reduceMotion={props.reduceMotion}
@@ -1416,9 +1580,9 @@ function GlobeScene({
         onLayout={onMarkerLayout}
       />
       <FramePerformanceReporter onSample={props.onPerformanceSample} />
-      {props.quality === "high" ? (
+      {props.quality !== "low" ? (
         <Suspense fallback={null}>
-          <AtlasPostprocessing selection={bloomGroupRef} />
+          <AtlasPostprocessing selection={bloomGroupRef} bloomEnabled={bloomEnabled} />
         </Suspense>
       ) : null}
     </>
@@ -1457,55 +1621,126 @@ function MarkerLeader({ item }: { item: GlobeMarkerLayoutItem }) {
 }
 
 export default function GlobeCanvas(props: GlobeCanvasProps) {
+  const [gpuProfile] = useState(getInitialGpuProfile);
+  const powerPreference: GlobePowerPreference = gpuProfile.windowsEdge ? "default" : "high-performance";
   const [webglStatus, setWebglStatus] = useState<WebglRuntimeStatus>(() =>
     typeof document === "undefined"
       ? "checking"
-      : getWebgl2Availability() ? "ready" : "unsupported",
+      : gpuProfile.suspectedRendererCrash
+        ? "checking"
+        : getWebgl2Availability(powerPreference) ? "ready" : "unsupported",
   );
   const [attempt, setAttempt] = useState(0);
+  const [retryCount, setRetryCount] = useState(0);
   const [markerLayout, setMarkerLayout] = useState<GlobeMarkerLayoutItem[]>([]);
   const [anchorBudget, setAnchorBudget] = useState(0);
   const [hoveredRelationId, setHoveredRelationId] = useState<string | null>(null);
-  const retryFrameRef = useRef<number | null>(null);
+  const [renderSize, setRenderSize] = useState(() => ({
+    width: typeof window === "undefined" ? 1440 : window.innerWidth,
+    height: typeof window === "undefined" ? 900 : window.innerHeight,
+  }));
+  const [warmedQualityKey, setWarmedQualityKey] = useState<string | null>(null);
+  const [contextLossCount, setContextLossCount] = useState(0);
+  const runtimeRef = useRef<HTMLDivElement | null>(null);
+  const retryTimerRef = useRef<number | null>(null);
+  const runtimeRecoveryRef = useRef(false);
   const { onRuntimeFallback } = props;
 
   useEffect(() => {
     if (webglStatus !== "checking") return;
-    const frame = window.requestAnimationFrame(() => {
-      setWebglStatus(getWebgl2Availability() ? "ready" : "unsupported");
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, [webglStatus]);
+    const delay = gpuProfile.suspectedRendererCrash && retryCount === 0 ? 2_500 : 0;
+    const timer = window.setTimeout(() => {
+      cachedWebgl2Availability.delete(powerPreference);
+      setWebglStatus(getWebgl2Availability(powerPreference) ? "ready" : "unsupported");
+    }, delay);
+    return () => window.clearTimeout(timer);
+  }, [gpuProfile.suspectedRendererCrash, powerPreference, retryCount, webglStatus]);
+
+  useEffect(() => {
+    if (!gpuProfile.windowsEdge) return;
+    try {
+      window.sessionStorage.setItem(EDGE_GPU_SESSION_KEY, "active");
+    } catch {
+      return;
+    }
+    const markCleanExit = () => {
+      try {
+        window.sessionStorage.setItem(EDGE_GPU_SESSION_KEY, "clean");
+      } catch {
+        // Storage can disappear when the browser is shutting down.
+      }
+    };
+    window.addEventListener("pagehide", markCleanExit);
+    return () => window.removeEventListener("pagehide", markCleanExit);
+  }, [gpuProfile.windowsEdge]);
 
   useEffect(() => () => {
-    if (retryFrameRef.current !== null) window.cancelAnimationFrame(retryFrameRef.current);
+    if (retryTimerRef.current !== null) window.clearTimeout(retryTimerRef.current);
   }, []);
 
+  useEffect(() => {
+    if (webglStatus !== "ready" || props.quality !== "high") return;
+    const qualityKey = `${attempt}:${contextLossCount}`;
+    if (warmedQualityKey === qualityKey) return;
+    const timer = window.setTimeout(
+      () => setWarmedQualityKey(qualityKey),
+      GLOBE_HIGH_QUALITY_WARMUP_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [attempt, contextLossCount, props.quality, warmedQualityKey, webglStatus]);
+
+  useEffect(() => {
+    const element = runtimeRef.current;
+    if (!element || typeof ResizeObserver === "undefined") return;
+    const updateSize = () => {
+      const bounds = element.getBoundingClientRect();
+      if (bounds.width <= 0 || bounds.height <= 0) return;
+      setRenderSize({ width: bounds.width, height: bounds.height });
+    };
+    updateSize();
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [attempt, webglStatus]);
+
   const handleContextLost = useCallback(() => {
-    cachedWebgl2Availability = null;
+    runtimeRecoveryRef.current = true;
+    setContextLossCount((value) => value + 1);
     onRuntimeFallback();
     setWebglStatus("lost");
   }, [onRuntimeFallback]);
 
   const handleContextRestored = useCallback(() => {
+    runtimeRecoveryRef.current = false;
+    setRetryCount(0);
     setWebglStatus("ready");
   }, []);
 
   const retry = useCallback(() => {
     if (webglStatus === "retrying") return;
-    cachedWebgl2Availability = null;
+    const recoveringRuntime = webglStatus === "lost" || runtimeRecoveryRef.current;
+    const nextRetryCount = retryCount + 1;
+    if (!recoveringRuntime) cachedWebgl2Availability.delete(powerPreference);
     onRuntimeFallback();
+    setRetryCount(nextRetryCount);
     setWebglStatus("retrying");
-    retryFrameRef.current = window.requestAnimationFrame(() => {
-      retryFrameRef.current = null;
-      if (!getWebgl2Availability()) {
+    retryTimerRef.current = window.setTimeout(() => {
+      retryTimerRef.current = null;
+      if (!recoveringRuntime && !getWebgl2Availability(powerPreference)) {
         setWebglStatus("unavailable");
         return;
       }
+      runtimeRecoveryRef.current = false;
       setAttempt((value) => value + 1);
       setWebglStatus("ready");
-    });
-  }, [onRuntimeFallback, webglStatus]);
+    }, getWebglRetryDelayMs(nextRetryCount, gpuProfile.windowsEdge));
+  }, [gpuProfile.windowsEdge, onRuntimeFallback, powerPreference, retryCount, webglStatus]);
+
+  useEffect(() => {
+    if (webglStatus !== "lost") return;
+    const timer = window.setTimeout(retry, GLOBE_NATIVE_CONTEXT_RESTORE_MS);
+    return () => window.clearTimeout(timer);
+  }, [retry, webglStatus]);
 
   const handleMarkerLayout = useCallback((layout: GlobeMarkerLayoutItem[], nextAnchorBudget: number) => {
     setMarkerLayout(layout);
@@ -1513,10 +1748,16 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   }, []);
 
   if (webglStatus === "unsupported" || webglStatus === "unavailable") {
+    const edgeNeedsRestart = gpuProfile.windowsEdge && retryCount >= 2;
     return (
       <div className="globe-fallback" role="status" aria-live="polite">
         <span>3D渲染不可用</span>
-        <strong>{webglStatus === "unavailable" ? "本次恢复未成功，请稍后再试。" : "当前浏览器没有建立 WebGL2。"}</strong>
+        <strong>{edgeNeedsRestart
+          ? "Edge 的显卡进程没有恢复，请完全退出浏览器后重新打开。"
+          : webglStatus === "unavailable"
+            ? "显卡仍在恢复，请稍后再次检测。"
+            : "当前浏览器没有建立 WebGL2。"}</strong>
+        {gpuProfile.windowsEdge ? <small>请确认 Edge 的“使用硬件加速”已开启。</small> : null}
         <div className="globe-fallback__actions">
           <button type="button" onClick={props.onFallback}>打开文字探索</button>
           <button type="button" onClick={retry}>重新尝试3D</button>
@@ -1525,19 +1766,38 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     );
   }
 
-  if (webglStatus === "checking") {
+  if (webglStatus === "checking" || webglStatus === "retrying") {
     return (
       <div className="globe-loading" role="status" aria-live="polite">
         <span className="globe-loading__orbit" />
-        <strong>正在点亮思想星图</strong>
-        <small>内容已经可用，3D地球正在进入现场。</small>
+        <strong>{webglStatus === "retrying" ? "正在重新建立3D地球" : "正在点亮思想星图"}</strong>
+        <small>{webglStatus === "retrying" ? "正在释放旧画布，并以稳定画质恢复当前位置。" : "内容已经可用，3D地球正在进入现场。"}</small>
+        {webglStatus === "retrying" ? (
+          <button type="button" className="globe-loading__text-action" onClick={props.onFallback}>打开文字探索</button>
+        ) : null}
       </div>
     );
   }
 
   const renderQuality: QualityTier = props.quality;
-  const dpr: [number, number] =
-    renderQuality === "high" ? [1, 1.65] : renderQuality === "medium" ? [0.85, 1.3] : [0.7, 1];
+  const highQualityReady = warmedQualityKey === `${attempt}:${contextLossCount}`;
+  const warmingUp = renderQuality === "high" && (
+    !highQualityReady
+    || contextLossCount >= 2
+    || gpuProfile.suspectedRendererCrash
+  );
+  const dpr = getRenderPixelRatio(
+    renderSize.width,
+    renderSize.height,
+    typeof window === "undefined" ? 1 : window.devicePixelRatio,
+    renderQuality,
+    warmingUp,
+    gpuProfile.windowsEdge,
+  );
+  const bloomEnabled = renderQuality === "high"
+    && highQualityReady
+    && contextLossCount < 2
+    && !gpuProfile.windowsEdge;
   const markerById = new Map(markerLayout.map((item) => [item.id, item]));
   const selectedRelation = props.selectedRelationId
     ? relations.find((relation) => relation.id === props.selectedRelationId)
@@ -1561,17 +1821,23 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
   const mountedThinkers = thinkers.filter((thinker) => mountedMarkerIds.has(thinker.id));
 
   return (
-    <div className={"globe-runtime globe-runtime--" + props.earthMode}>
+    <div
+      ref={runtimeRef}
+      className={"globe-runtime globe-runtime--" + props.earthMode}
+      data-render-dpr={dpr.toFixed(2)}
+      data-render-effects={bloomEnabled ? "bloom-smaa" : renderQuality === "low" ? "none" : "smaa"}
+      data-gpu-profile={gpuProfile.windowsEdge ? "edge-stable" : "standard"}
+    >
       <Canvas
         key={attempt}
         dpr={dpr}
         camera={{ position: [0, 0.4, 6.6], fov: 38, near: 0.1, far: 40 }}
         frameloop="demand"
         gl={{
-          antialias: renderQuality !== "low",
+          antialias: false,
           alpha: false,
           stencil: false,
-          powerPreference: "high-performance",
+          powerPreference,
         }}
         onCreated={({ gl }) => {
           gl.outputColorSpace = THREE.SRGBColorSpace;
@@ -1589,6 +1855,8 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           hoveredRelationId={hoveredRelationId}
           onHoverRelation={setHoveredRelationId}
           onMarkerLayout={handleMarkerLayout}
+          bloomEnabled={bloomEnabled}
+          stableGpuProfile={gpuProfile.windowsEdge}
         />
       </Canvas>
       <div className="globe-marker-layer" aria-label="地图人物">
@@ -1650,15 +1918,13 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           <strong>{hoveredRelation.title}</strong>
         </div>
       ) : null}
-      {webglStatus === "lost" || webglStatus === "retrying" ? (
+      {webglStatus === "lost" ? (
         <div className="globe-fallback globe-fallback--overlay" role="status" aria-live="polite">
-          <span>{webglStatus === "retrying" ? "正在重新建立3D地球" : "3D渲染暂时中断"}</span>
-          <strong>{webglStatus === "retrying" ? "正在使用轻量模式重新连接显卡。" : "当前位置已经保留，可以尝试恢复。"}</strong>
+          <span>3D渲染暂时中断</span>
+          <strong>正在等待显卡自行恢复；若未恢复，将自动重建3D地球。</strong>
           <div className="globe-fallback__actions">
             <button type="button" onClick={props.onFallback}>打开文字探索</button>
-            <button type="button" onClick={retry} disabled={webglStatus === "retrying"}>
-              {webglStatus === "retrying" ? "正在恢复…" : "重新尝试3D"}
-            </button>
+            <button type="button" disabled>等待显卡恢复…</button>
           </div>
         </div>
       ) : null}

@@ -1,0 +1,38 @@
+{
+  "id": "kwame-anthony-appiah-stuart-hall-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "kwame-anthony-appiah"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "stuart-hall"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "斯图亚特·霍尔与夸梅·安东尼·阿皮亚都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调接合理论把身份、媒体意义和权力视为可变连接，拒绝将种族与文化本质化。；后者强调世界主义结合对所有人的义务与对具体生活方式的尊重，身份不是封闭本质。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-cultural-studies-reader",
+      "locator": "对应作者选文及编者导言",
+      "claim": "支持斯图亚特·霍尔一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持夸梅·安东尼·阿皮亚一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

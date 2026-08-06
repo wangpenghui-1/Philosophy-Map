@@ -1,0 +1,22 @@
+{
+  "id": "src-descartes-meditations-haldane-ross",
+  "entityType": "source",
+  "title": "The Philosophical Works of Descartes, Volume I",
+  "authors": [
+    "René Descartes",
+    "Elizabeth S. Haldane (translator)",
+    "G. R. T. Ross (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Cambridge University Press",
+  "year": 1911,
+  "defaultLocator": "Meditations I–VI",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图引文编辑",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于人物页中《第一哲学沉思集》六篇的原典定位；概述同时与 SEP 研究条目交叉核对。"
+}

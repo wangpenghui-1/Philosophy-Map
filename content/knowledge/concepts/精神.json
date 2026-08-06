@@ -1,0 +1,53 @@
+{
+  "id": "concept-精神",
+  "slug": "精神",
+  "entityType": "concept",
+  "name": "精神",
+  "originalTerms": [
+    "spirit",
+    "mind"
+  ],
+  "summary": "在贝克莱的非物质论中，观念是被动的，精神则是能感知、意志和行动的主体。有限精神经验世界，上帝则保证自然观念的稳定秩序。",
+  "senses": [
+    {
+      "traditionId": "tradition-经验主义",
+      "label": "精神",
+      "explanation": "精神不是可被观看的一组观念；它作为主动者被认识为感知和意志的能力。贝克莱用这一点区别主动心灵与被动感觉对象。",
+      "citations": [
+        {
+          "sourceId": "src-berkeley-principles-1710",
+          "locator": "Part I, §§2, 27–33",
+          "claim": "支持观念的被动性、精神的能动性与上帝。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "george-berkeley"
+  ],
+  "workIds": [
+    "principles-human-knowledge",
+    "three-dialogues-hylas-philonous"
+  ],
+  "traditionIds": [
+    "tradition-经验主义"
+  ],
+  "sourceIds": [
+    "src-berkeley",
+    "src-berkeley-principles-1710"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Section 3",
+      "claim": "支持精神、自然规律和持续存在的说明。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "保留贝克莱的神学前提，不译成主观心理主义。"
+}

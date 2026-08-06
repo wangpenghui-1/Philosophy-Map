@@ -1,0 +1,21 @@
+{
+  "id": "src-nietzsche-genealogy-diethe",
+  "entityType": "source",
+  "title": "On the Genealogy of Morality",
+  "authors": [
+    "Friedrich Nietzsche",
+    "Carol Diethe (translator)"
+  ],
+  "sourceType": "primary-text",
+  "publication": "Cambridge University Press",
+  "year": 2006,
+  "defaultLocator": "Preface and Essays I–III",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "原作以德文写成；本记录用于定位 Carol Diethe 英译本。"
+}

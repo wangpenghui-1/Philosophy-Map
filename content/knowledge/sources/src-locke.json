@@ -8,13 +8,13 @@
   "sourceType": "scholarly-encyclopedia",
   "publication": "Stanford Encyclopedia of Philosophy",
   "url": "https://plato.stanford.edu/entries/locke/",
-  "defaultLocator": "Sections on ideas, personal identity and political authority",
+  "defaultLocator": "Sections 2 and 4: human understanding and government",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "采用 2022 年实质修订版；用于核对理解力、人格同一、财产、政府与宗教宽容。"
 }

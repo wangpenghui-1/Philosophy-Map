@@ -33,7 +33,7 @@
   ],
   "guidingQuestion": "理性、自然与信仰能否在同一知识秩序中相容？",
   "thesis": "从存在、因果与目的的层级出发，理性能够探究自然法与人的善。",
-  "summary": "托马斯·阿奎那是约1225–1274活跃于欧洲的经院哲学思想人物，主要追问“理性、自然与信仰能否在同一知识秩序中相容？”。其核心主张可概括为：从存在、因果与目的的层级出发，理性能够探究自然法与人的善。 本站以存在、自然法、目的为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "托马斯·阿奎那试图说明：信仰与理性并非两套互相排斥的真理，人的理性能够从变化、因果和目的探究自然秩序，同时也承认某些神学真理需要启示。其伦理学把自然法、德性、共同善与人的终向放在一个层级化但可讨论的框架中。",
   "workIds": [
     "summa-theologiae"
   ],
@@ -56,36 +56,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "being-causality",
+      "heading": "从变化与因果追问存在的根据",
       "paragraphs": [
         {
-          "text": "托马斯·阿奎那是约1225–1274活跃于欧洲的经院哲学思想人物，主要追问“理性、自然与信仰能否在同一知识秩序中相容？”。其核心主张可概括为：从存在、因果与目的的层级出发，理性能够探究自然法与人的善。 本站以存在、自然法、目的为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "阿奎那借用并改造亚里士多德的概念，区分潜能与实现、原因与结果、偶然存在与必然存在。著名“五路”不是要以一条简单公式证明宗教，而是从运动、因果、偶然、程度和目的等经验特征展开形而上学推理。每一路都依赖复杂前提，不能脱离其论证语境当作口号。",
           "citations": [
             {
-              "sourceId": "src-aquinas",
-              "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本段主张：托马斯·阿奎那是约1225–1274活跃于欧洲的经院哲学思想人物，主要追问“理性、自然与信仰能否在同一知识秩序中相容？”。其核心主张可概括为：从存在、因果与目的的层级出发，理性…"
+              "sourceId": "src-aquinas-summa-dominican",
+              "locator": "Summa Theologiae I, q.2, a.3",
+              "claim": "支持五路及其论证定位。"
             }
           ]
         },
         {
-          "text": "核心问题：理性、自然与信仰能否在同一知识秩序中相容？",
+          "text": "这类论证并不从“世界看起来有设计”直接跳到结论，而是把变化和因果理解为依赖现实实现的过程。现代读者可以质疑其前提，例如关于无限倒退或目的性的看法；理解这些前提比背诵“五路”更能说明阿奎那在做什么。",
           "citations": [
             {
               "sourceId": "src-aquinas",
-              "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本段主张：核心问题：理性、自然与信仰能否在同一知识秩序中相容？"
+              "locator": "Sections on metaphysics and the Five Ways",
+              "claim": "支持五路的前提与现代争议。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "natural-law",
+      "heading": "自然法是理性参与共同善",
+      "paragraphs": [
+        {
+          "text": "自然法并不是一部写在自然界里的现成法典。阿奎那认为，人以理性参与永恒法，能够认识到保存生命、养育后代、寻求真理和共同生活等基本趋向；具体法律仍需在历史情境中审慎制定，并可能因不正义而失去约束力。",
+          "citations": [
+            {
+              "sourceId": "src-aquinas",
+              "locator": "Sections on natural law, politics and ethics",
+              "claim": "支持自然法、理性、共同善与不正义法律。"
             }
           ]
         },
         {
-          "text": "核心主张：从存在、因果与目的的层级出发，理性能够探究自然法与人的善。",
+          "text": "德性论使自然法不只是一套禁令。审慎帮助人在复杂情境中判断怎样实现善，正义、勇敢和节制则训练欲望与行动。法律应服务共同善，但具体法律可能错误；阿奎那也讨论不义法律在何种意义上不是真正的法律。",
+          "citations": [
+            {
+              "sourceId": "src-aquinas-summa-dominican",
+              "locator": "Summa Theologiae I–II, qq.90–97",
+              "claim": "支持法律、德性、审慎与不义法律。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faith-reason",
+      "heading": "信仰与理性各有方法和限度",
+      "paragraphs": [
+        {
+          "text": "阿奎那并不把哲学降为神学附庸，也不认为理性能够穷尽一切。理性可以处理许多关于世界和伦理的问题，启示则涉及理性无法自行发现的救赎真理；二者若看似冲突，应重新检查解释。中世纪大学、拉丁译本与宗教制度构成这一方案的历史条件。",
           "citations": [
             {
               "sourceId": "src-aquinas",
-              "locator": "Sections on being, natural law and Aristotelian philosophy",
-              "claim": "支持本段主张：核心主张：从存在、因果与目的的层级出发，理性能够探究自然法与人的善。"
+              "locator": "Sections on faith, reason and Aristotelian reception",
+              "claim": "支持信仰、理性与亚里士多德接受史。"
+            }
+          ]
+        },
+        {
+          "text": "他大量吸收阿拉伯—拉丁翻译传统和亚里士多德哲学，显示中世纪思想并非封闭于单一文化。与此同时，其体系中关于性别、宗教与社会等级的观点也需放在历史条件中批判地阅读，不能因其逻辑完整便免于检验。",
+          "citations": [
+            {
+              "sourceId": "src-aquinas",
+              "locator": "Sections on intellectual context and reception",
+              "claim": "支持翻译传统、历史语境与接受史。"
             }
           ]
         }
@@ -103,16 +145,16 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
-  "uncertainty": "常见肖像来自其去世后的图像传统。",
+  "uncertainty": "“五路”常被简化为现代意义的设计论或单句神证明，实际论证依赖中世纪形而上学前提。自然法理论也有多种解释，不能直接套用到所有现代法律与政治争论。",
   "color": "#8f7a58",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v3",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十九位；补充五路、自然法、德性与信仰理性的分工。",
   "representativeQuote": {
     "text": "Good is to be done and pursued, and evil is to be avoided.",
     "displayLanguage": "en",

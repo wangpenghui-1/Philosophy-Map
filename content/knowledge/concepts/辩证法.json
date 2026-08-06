@@ -3,18 +3,20 @@
   "slug": "辩证法",
   "entityType": "concept",
   "name": "辩证法",
-  "originalTerms": [],
-  "summary": "“辩证法”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "originalTerms": [
+    "διαλεκτική"
+  ],
+  "summary": "“辩证法”在柏拉图那里首先是一种以问答检验定义、反例和假设的哲学实践，并在《理想国》中承担由假设追向原则的任务。黑格尔后来也使用同一译名，但讨论的是概念在矛盾中展开的运动；两种用法不能直接套成同一公式。",
   "senses": [
     {
       "traditionId": "tradition-古希腊哲学",
       "label": "辩证法",
-      "explanation": "在柏拉图条目中，“辩证法”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "explanation": "柏拉图的对话让主张在提问与反驳中接受检验。《理想国》又把辩证法区别于从既定假设出发的数学推演：它继续追问假设，根据更高原则说明知识之间的关系。",
       "citations": [
         {
-          "sourceId": "src-plato",
-          "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-          "claim": "支持“辩证法”义项：在柏拉图条目中，“辩证法”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
+          "sourceId": "src-plato-republic-jowett",
+          "locator": "Book VI, 510b–511d; Book VII, 531d–534e",
+          "claim": "支持辩证法检验假设、趋向第一原则并组织其他学习的说明。"
         }
       ]
     },
@@ -47,25 +49,31 @@
   ],
   "sourceIds": [
     "src-plato",
+    "src-plato-republic-jowett",
     "src-hegel"
   ],
   "citations": [
     {
       "sourceId": "src-plato",
       "locator": "Sections 2–4: dialogues, forms, ethics and politics",
-      "claim": "支持辩证法的摘要主张：“辩证法”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "claim": "支持柏拉图对话方法和辩证探究的历史语境。"
+    },
+    {
+      "sourceId": "src-plato-republic-jowett",
+      "locator": "Book VI, 510b–511d",
+      "claim": "支持柏拉图辩证法与数学假设推演的区别。"
     },
     {
       "sourceId": "src-hegel",
       "locator": "Sections on recognition, history, freedom and ethical life",
-      "claim": "支持辩证法的摘要主张：“辩证法”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "claim": "支持黑格尔语境中的辩证法不能与柏拉图用法简单等同。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充柏拉图原典定位，并明确与黑格尔同名概念的差异。"
 }

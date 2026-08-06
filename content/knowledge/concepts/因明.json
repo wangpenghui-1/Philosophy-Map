@@ -4,7 +4,7 @@
   "entityType": "concept",
   "name": "因明",
   "originalTerms": [],
-  "summary": "“因明”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "summary": "因明研究知识与论证如何成立。陈那以现量、比量、有效理由和为他论证重组这一传统，使认识论、逻辑和语言分析彼此衔接。",
   "senses": [
     {
       "traditionId": "tradition-佛教逻辑学",
@@ -38,7 +38,7 @@
       "claim": "支持“因明”作为陈那思想入口的概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图自动编辑流水线",

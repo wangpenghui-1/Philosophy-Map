@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "avicenna",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "11世纪",
   "languages": [],
-  "summary": "《治愈之书》是阿维森纳的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "《治愈之书》并非医学著作，而是一套覆盖逻辑、自然学、数学与形而上学的哲学百科全书；其形而上学卷系统论证本质与存在、可能与必然及第一原因。",
   "conceptIds": [
     "concept-存在",
     "concept-本质",
@@ -23,16 +23,17 @@
     "tradition-阿拉伯语哲学"
   ],
   "sourceIds": [
-    "src-avicenna"
+    "src-avicenna",
+    "src-avicenna-healing-metaphysics-marmura"
   ],
   "citations": [
     {
-      "sourceId": "src-avicenna",
-      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-      "claim": "支持《治愈之书》的摘要主张：《治愈之书》是阿维森纳的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "sourceId": "src-avicenna-healing-metaphysics-marmura",
+      "locator": "Books I, V and VIII–IX",
+      "claim": "支持形而上学卷关于存在、本质、模态与第一原则的内容。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

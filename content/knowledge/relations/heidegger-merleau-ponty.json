@@ -1,0 +1,36 @@
+{
+  "id": "heidegger-merleau-ponty",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "heidegger"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "merleau-ponty"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "supported",
+  "title": "在世存在走向身体主体",
+  "explanation": "海德格尔对在世存在的分析帮助梅洛-庞蒂摆脱孤立意识模型；梅洛-庞蒂进一步以身体主体说明人与世界的原初嵌入。",
+  "citations": [
+    {
+      "sourceId": "src-heidegger",
+      "locator": "Sections on being-in-the-world and phenomenology",
+      "claim": "支持在世存在对主体与世界关系的重构。"
+    },
+    {
+      "sourceId": "src-merleau-ponty-sep",
+      "locator": "Sections on Heidegger, embodiment and being-in-the-world",
+      "claim": "支持梅洛-庞蒂吸收在世存在分析并将其推进到身体主体的说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

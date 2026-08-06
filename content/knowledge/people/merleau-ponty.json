@@ -1,0 +1,176 @@
+{
+  "id": "merleau-ponty",
+  "slug": "merleau-ponty",
+  "entityType": "person",
+  "names": {
+    "display": "梅洛-庞蒂",
+    "english": "Maurice Merleau-Ponty",
+    "original": "Maurice Jean Jacques Merleau-Ponty",
+    "aliases": [
+      "莫里斯·梅洛-庞蒂"
+    ]
+  },
+  "chronology": {
+    "label": "1908–1961",
+    "startYear": 1908,
+    "endYear": 1961,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-现象学"
+  ],
+  "conceptIds": [
+    "concept-身体主体",
+    "concept-知觉场",
+    "concept-肉身"
+  ],
+  "questionIds": [
+    "knowledge",
+    "self",
+    "reality"
+  ],
+  "guidingQuestion": "身体如何在反思之前就把世界组织成可感知、可行动的生活场域？",
+  "thesis": "知觉不是意识对感觉材料的推断，而是身体主体与世界彼此嵌入的原初关系。",
+  "summary": "梅洛-庞蒂是法国现象学的重要人物。他把身体、知觉、习惯与表达置于哲学中心，反对把意识和世界理解成两个封闭实体，并在晚期以肉身与交错探索感知者和可感世界的共同结构。",
+  "workIds": [
+    "phenomenology-of-perception",
+    "visible-and-invisible"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris-merleau-ponty",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-merleau-ponty-sep",
+    "src-merleau-ponty-phenomenology-perception-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-merleau-ponty-sep",
+      "locator": "Sections on perception, embodiment, expression and ontology",
+      "claim": "支持梅洛-庞蒂关于身体、知觉与晚期本体论的概览。"
+    },
+    {
+      "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+      "locator": "Première partie: Le corps",
+      "claim": "支持身体作为拥有世界的一般方式。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "perception",
+      "heading": "知觉先于纯粹判断",
+      "paragraphs": [
+        {
+          "text": "梅洛-庞蒂从胡塞尔现象学出发，也吸收海德格尔对在世存在的分析。他反对两种看似相反、实际共享前提的知觉理论：经验主义把知觉拆成感觉刺激的机械组合，理智主义则让判断或意识在事后组织材料。两者都容易错过我们实际经验到的整体场域，例如一个物体总在背景、距离、光线和身体姿势中显现。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-sep",
+              "locator": "Sections on perception and Gestalt",
+              "claim": "支持对经验主义、理智主义及知觉场结构的批评。"
+            }
+          ]
+        },
+        {
+          "text": "知觉并不是科学知识的低级替代品。科学能够测量波长、神经活动和空间坐标，却以一个已经向身体开放的生活世界为前提。现象学的任务不是拒绝科学，而是描述测量之前，颜色、声音、方向和对象怎样在经验中获得最初意义。知觉因而既有稳定结构，也始终保留开放和歧义。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+              "locator": "Avant-propos and Première partie",
+              "claim": "支持知觉经验作为科学反思前提及其开放性的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "heading": "身体主体与习惯",
+      "paragraphs": [
+        {
+          "text": "身体不是心灵用来移动的一件工具，也不只是能够从外部测量的生理对象。伸手取杯、穿过门口或在键盘上打字时，人通常不先计算坐标；身体已经以习惯和动作意向把环境组织成可接近、可避让、可完成任务的空间。身体主体正是这种第一人称的“我能”，它比抽象的“我思”更贴近日常经验。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+              "locator": "Première partie: Le corps",
+              "claim": "支持身体主体、动作意向与习惯空间的分析。"
+            }
+          ]
+        },
+        {
+          "text": "这一观点也解释了身体经验为何既私人又公共。身体从特定位置看世界，却能够学习动作、使用共同工具并理解他人的姿态。主体与客体不是先完全分开再建立联系；身体从一开始就在一个由他人、语言和物件共同构成的世界里行动。梅洛-庞蒂因此为波伏娃、法农等人分析性别化和种族化的身体经验提供了重要资源。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-sep",
+              "locator": "Sections on embodiment, intersubjectivity and expression",
+              "claim": "支持身体、他人和共同世界之间的关系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flesh",
+      "heading": "从身体走向肉身",
+      "paragraphs": [
+        {
+          "text": "梅洛-庞蒂晚期不再只从身体主体描述经验，而以“肉身”探索感知者与可感世界的共同质地。当一只手触摸另一只手，触摸者也可能成为被触者；观看世界的身体本身也处在可见世界中。这种可逆性并不抹平主体与对象的差异，而是说明两者的差异发生在更原初的交织关系内部。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-sep",
+              "locator": "Section on ontology, reversibility and the flesh",
+              "claim": "支持肉身、可逆性和交错的晚期分析。"
+            }
+          ]
+        },
+        {
+          "text": "《可见的与不可见的》未完成便在作者去世后出版，因此晚期方案不能被当成封闭体系。它留下的是研究方向：意义如何从身体、语言和世界的交错中形成，而不是由一个孤立意识单方面投射。梅洛-庞蒂的重要性也正在这里——他把现象学从“意识如何看到对象”推进为“一个有身体的生命如何已经属于它所经验的世界”。",
+          "citations": [
+            {
+              "sourceId": "src-merleau-ponty-sep",
+              "locator": "Sections on the late ontology and unfinished work",
+              "claim": "支持晚期著作的未完成性质及其思想方向。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/merleau-ponty.webp",
+    "thumbSrc": "/media/thinkers/thumb/merleau-ponty.webp",
+    "alt": "梅洛-庞蒂的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "项目委托式艺术化人物形象，参考梅洛-庞蒂成年时期的公开历史照片特征进行非写实重构。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#758b86",
+  "mapVisible": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04",
+  "representativeQuote": {
+    "text": "Le corps est notre moyen général d’avoir un monde.",
+    "displayLanguage": "fr",
+    "textStatus": "original",
+    "originalLanguage": "fr",
+    "chineseTranslation": "身体是我们拥有一个世界的一般方式。",
+    "annotation": "这句话把身体从被观察的物体重新理解为知觉、行动并进入世界的基本能力。",
+    "workId": "phenomenology-of-perception",
+    "sourceTitle": "Phénoménologie de la perception",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-merleau-ponty-phenomenology-perception-fr",
+    "locator": "Première partie: Le corps"
+  }
+}

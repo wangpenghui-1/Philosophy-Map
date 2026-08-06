@@ -1,0 +1,69 @@
+{
+  "id": "concept-责任",
+  "slug": "责任",
+  "entityType": "concept",
+  "name": "责任",
+  "originalTerms": [],
+  "summary": "“责任”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-斯多亚学派",
+      "label": "责任",
+      "explanation": "在爱比克泰德所属的思想语境中，“责任”是进入“自由是否取决于外部处境还是对判断的掌握？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持爱比克泰德条目中“责任”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-祆教思想",
+      "label": "责任",
+      "explanation": "在琐罗亚斯德所属的思想语境中，“责任”是进入“人在善恶冲突中如何承担自由选择的责任？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持琐罗亚斯德条目中“责任”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "epictetus",
+    "zoroaster"
+  ],
+  "workIds": [
+    "enchiridion",
+    "gathas"
+  ],
+  "traditionIds": [
+    "tradition-斯多亚学派",
+    "tradition-祆教思想"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy",
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持爱比克泰德条目中“责任”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持琐罗亚斯德条目中“责任”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

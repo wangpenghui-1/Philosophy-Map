@@ -1,0 +1,52 @@
+{
+  "id": "tradition-荒诞哲学",
+  "slug": "荒诞哲学",
+  "entityType": "tradition",
+  "name": "荒诞哲学",
+  "originalNames": [
+    "philosophie de l'absurde",
+    "absurdism"
+  ],
+  "summary": "荒诞哲学研究人对意义、秩序和清晰性的要求，与世界无法提供终极回答之间的冲突；它不把荒诞当作虚无主义结论，而追问人在没有最终保证时如何生活和行动。",
+  "periodLabel": "20世纪",
+  "regionLabels": [
+    "北非—地中海",
+    "欧洲"
+  ],
+  "parentIds": [],
+  "relatedTraditionIds": [
+    "tradition-存在主义"
+  ],
+  "personIds": [
+    "camus"
+  ],
+  "conceptIds": [
+    "concept-荒诞",
+    "concept-反抗",
+    "concept-限度"
+  ],
+  "sourceIds": [
+    "src-camus-sep",
+    "src-camus-myth-sisyphus-fr",
+    "src-camus-rebel-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 1–4 on absurdity, suicide and revolt",
+      "claim": "支持荒诞哲学的问题结构及其由荒诞走向反抗的发展。"
+    },
+    {
+      "sourceId": "src-camus-myth-sisyphus-fr",
+      "locator": "Un raisonnement absurde",
+      "claim": "支持荒诞作为人的意义要求与世界沉默之间冲突的概括。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "本传统用于组织加缪的荒诞与反抗思想，不将其自动归类为存在主义者。"
+}

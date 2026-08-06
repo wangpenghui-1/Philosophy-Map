@@ -1,0 +1,261 @@
+{
+  "id": "concept-实在",
+  "slug": "实在",
+  "entityType": "concept",
+  "name": "实在",
+  "originalTerms": [],
+  "summary": "“实在”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-经验主义",
+      "label": "实在",
+      "explanation": "在贝克莱所属的思想语境中，“实在”是进入“物质实体是否超出我们能够经验和说明的范围？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持贝克莱条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-前苏格拉底哲学",
+      "label": "实在",
+      "explanation": "在巴门尼德所属的思想语境中，“实在”是进入“思维与言说能否把握非存在？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持巴门尼德条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊壁鸠鲁学派",
+      "label": "实在",
+      "explanation": "在伊壁鸠鲁所属的思想语境中，“实在”是进入“有限生命如何摆脱对神与死亡的恐惧？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持伊壁鸠鲁条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-明清之际思想",
+      "label": "实在",
+      "explanation": "在王夫之所属的思想语境中，“实在”是进入“持续变化的世界如何可能具有秩序和伦理方向？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持王夫之条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-奥义书传统",
+      "label": "实在",
+      "explanation": "在迦尔吉所属的思想语境中，“实在”是进入“世界的终极根据能否由层层追问加以把握？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持迦尔吉条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-苏菲思想",
+      "label": "实在",
+      "explanation": "在拉比娅·阿达维娅所属的思想语境中，“实在”是进入“对神圣者的爱能否超越奖赏与惩罚的计算？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持拉比娅·阿达维娅条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-苏菲形而上学",
+      "label": "实在",
+      "explanation": "在伊本·阿拉比所属的思想语境中，“实在”是进入“无限神圣实在如何在多样世界中显现？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持伊本·阿拉比条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-伊斯兰后古典哲学",
+      "label": "实在",
+      "explanation": "在穆拉·萨德拉所属的思想语境中，“实在”是进入“存在与本质何者更根本，实体如何发生真实变化？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-history-islamic-philosophy",
+          "locator": "对应人物及思想运动专章",
+          "claim": "支持穆拉·萨德拉条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-斯多亚学派",
+      "label": "实在",
+      "explanation": "在芝诺所属的思想语境中，“实在”是进入“自由如何可能于一个因果有序的宇宙之中？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持芝诺条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-新柏拉图主义",
+      "label": "实在",
+      "explanation": "在普罗提诺所属的思想语境中，“实在”是进入“多样存在如何从绝对统一者产生而不损害其统一？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持普罗提诺条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-晚期古代与中世纪哲学",
+      "label": "实在",
+      "explanation": "在波爱修斯所属的思想语境中，“实在”是进入“神的预知是否会取消人的自由选择？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持波爱修斯条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-经院哲学",
+      "label": "实在",
+      "explanation": "在奥卡姆所属的思想语境中，“实在”是进入“普遍概念是否需要对应独立存在的普遍实体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持奥卡姆条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-意志哲学",
+      "label": "实在",
+      "explanation": "在叔本华所属的思想语境中，“实在”是进入“痛苦为何深植于欲求和世界经验之中？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持叔本华条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-青年黑格尔派",
+      "label": "实在",
+      "explanation": "在费尔巴哈所属的思想语境中，“实在”是进入“神学属性是否表达了被异化的人类能力？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持费尔巴哈条目中“实在”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "george-berkeley",
+    "parmenides",
+    "epicurus",
+    "wang-fuzhi",
+    "gargi-vachaknavi",
+    "rabia-al-adawiyya",
+    "ibn-arabi",
+    "mulla-sadra",
+    "zeno-citium",
+    "plotinus",
+    "boethius",
+    "william-ockham",
+    "arthur-schopenhauer",
+    "ludwig-feuerbach"
+  ],
+  "workIds": [
+    "principles-human-knowledge",
+    "parmenides-poem",
+    "letter-menoeceus",
+    "chuanshan-yishu",
+    "brihadaranyaka",
+    "rabia-sayings",
+    "bezels-wisdom",
+    "four-journeys",
+    "stoic-testimonia-zeno",
+    "enneads",
+    "consolation-philosophy",
+    "summa-logicae",
+    "world-will-representation",
+    "essence-christianity"
+  ],
+  "traditionIds": [
+    "tradition-经验主义",
+    "tradition-前苏格拉底哲学",
+    "tradition-伊壁鸠鲁学派",
+    "tradition-明清之际思想",
+    "tradition-奥义书传统",
+    "tradition-苏菲思想",
+    "tradition-苏菲形而上学",
+    "tradition-伊斯兰后古典哲学",
+    "tradition-斯多亚学派",
+    "tradition-新柏拉图主义",
+    "tradition-晚期古代与中世纪哲学",
+    "tradition-经院哲学",
+    "tradition-意志哲学",
+    "tradition-青年黑格尔派"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy",
+    "src-encyclopedia-chinese-philosophy",
+    "src-encyclopedia-indian-philosophies",
+    "src-history-islamic-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持贝克莱条目中“实在”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持王夫之条目中“实在”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持迦尔吉条目中“实在”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持拉比娅·阿达维娅条目中“实在”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

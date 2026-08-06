@@ -1,0 +1,52 @@
+{
+  "id": "concept-论辩术",
+  "slug": "论辩术",
+  "entityType": "concept",
+  "name": "论辩术",
+  "originalTerms": [
+    "antilogic",
+    "dissoi logoi"
+  ],
+  "summary": "普罗泰戈拉相关的论辩术训练要求把冲突的理由说清、比较并置于公共判断中。后世关于“使较弱论证较强”的说法带有敌对材料的痕迹，不能简化成教人诡辩。",
+  "senses": [
+    {
+      "traditionId": "tradition-智者学派",
+      "label": "论辩术",
+      "explanation": "智者教育把说理能力看作城邦生活的技艺。它既可能服务竞争，也要求分析双方理由和判断后果；关于其具体课程只能依有限证言重建。",
+      "citations": [
+        {
+          "sourceId": "src-protagoras-testimonia",
+          "locator": "Aristotle, Rhetoric 1402a23; Diogenes Laertius 9.51",
+          "claim": "支持相反论证的后世证言及其不完整性。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "protagoras"
+  ],
+  "workIds": [
+    "protagoras-testimonia"
+  ],
+  "traditionIds": [
+    "tradition-智者学派"
+  ],
+  "sourceIds": [
+    "src-routledge-encyclopedia-philosophy",
+    "src-protagoras-testimonia"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "Protagoras entry: education and rhetoric",
+      "claim": "支持智者教育与论辩语境。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "保留材料的敌对转述与归属不确定性。"
+}

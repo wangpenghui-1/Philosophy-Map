@@ -1,0 +1,52 @@
+{
+  "id": "concept-抽象观念",
+  "slug": "抽象观念",
+  "entityType": "concept",
+  "name": "抽象观念",
+  "originalTerms": [
+    "abstract ideas"
+  ],
+  "summary": "贝克莱批评把一般词理解为对应一个剥去一切个别特征的心像。人可以用一般词处理许多个别情形，却不必拥有“抽象三角形”或“抽象物质”这样的对象。",
+  "senses": [
+    {
+      "traditionId": "tradition-经验主义",
+      "label": "抽象观念",
+      "explanation": "这项批评针对的不是概括能力，而是把概括误作无差别心像的哲学理论。它为贝克莱批评物质实体清除了一条语言和心理学上的前提。",
+      "citations": [
+        {
+          "sourceId": "src-berkeley-principles-1710",
+          "locator": "Introduction, §§6–25",
+          "claim": "支持抽象观念批评及一般词用法。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "george-berkeley"
+  ],
+  "workIds": [
+    "principles-human-knowledge",
+    "three-dialogues-hylas-philonous"
+  ],
+  "traditionIds": [
+    "tradition-经验主义"
+  ],
+  "sourceIds": [
+    "src-berkeley",
+    "src-berkeley-principles-1710"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Section 2.1",
+      "claim": "支持该概念的解释和作用。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "不把贝克莱的批评误写成反对一切普遍性或科学。"
+}

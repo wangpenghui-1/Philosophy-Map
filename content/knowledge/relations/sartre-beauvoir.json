@@ -1,0 +1,37 @@
+{
+  "id": "sartre-beauvoir",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "sartre"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "beauvoir"
+  },
+  "directed": false,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "共同论辩中的两条独立道路",
+  "explanation": "萨特与波伏娃长期阅读彼此作品、讨论手稿并共同介入公共议题，形成双向的思想交流；但波伏娃关于模糊性、处境、性别和相互自由的哲学路线不能被缩减为对萨特理论的应用。",
+  "note": "本关系记录公开的思想交流与合作，不用私人关系替代哲学论证，也不主张两人的观点完全一致。",
+  "citations": [
+    {
+      "sourceId": "src-beauvoir",
+      "locator": "Sections 1–4 on Beauvoir's philosophical development, ethics and existential phenomenology",
+      "claim": "支持波伏娃与萨特处于持续思想交流中，同时形成独立哲学立场的说明。"
+    },
+    {
+      "sourceId": "src-sartre-sep",
+      "locator": "Sections on existentialism, ethics and postwar intellectual life",
+      "claim": "支持两人在法国存在主义与战后公共思想语境中的合作和相互讨论。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05"
+}

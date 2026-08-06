@@ -1,0 +1,201 @@
+{
+  "id": "concept-善的生活",
+  "slug": "善的生活",
+  "entityType": "concept",
+  "name": "善的生活",
+  "originalTerms": [],
+  "summary": "“善的生活”是跨传统哲学问题的中文索引。它帮助连接人物与文本，但不表示不同语言、时代和传统中的相关术语具有完全相同的含义。",
+  "senses": [
+    {
+      "traditionId": "tradition-天台宗",
+      "label": "善的生活",
+      "explanation": "在智顗所属的思想语境中，“善的生活”是进入“不同佛教教说如何在修行中形成可实践的整体？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持智顗条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-朝鲜性理学",
+      "label": "善的生活",
+      "explanation": "在李滉所属的思想语境中，“善的生活”是进入“道德情感的规范性如何与一般情绪活动区分？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持李滉条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-日本古学",
+      "label": "善的生活",
+      "explanation": "在伊藤仁斋所属的思想语境中，“善的生活”是进入“伦理意义如何从日常人伦而非抽象形上原则中产生？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-japanese-philosophy-sourcebook",
+          "locator": "对应人物、学派与选文导言",
+          "claim": "支持伊藤仁斋条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-清代考据与哲学",
+      "label": "善的生活",
+      "explanation": "在戴震所属的思想语境中，“善的生活”是进入“抽象道德原则为何可能压制人的真实情感与需要？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持戴震条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-现代中国哲学",
+      "label": "善的生活",
+      "explanation": "在冯友兰所属的思想语境中，“善的生活”是进入“哲学反思如何提升人对自身生活意义的理解？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-chinese-philosophy",
+          "locator": "对应人物与学派条目",
+          "claim": "支持冯友兰条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-耆那教",
+      "label": "善的生活",
+      "explanation": "在筏驮摩那所属的思想语境中，“善的生活”是进入“生命如何通过严格伦理实践摆脱业的束缚？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持筏驮摩那条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-佛教哲学",
+      "label": "善的生活",
+      "explanation": "在马鸣所属的思想语境中，“善的生活”是进入“诗歌与叙事如何引导人理解觉悟之路？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-encyclopedia-indian-philosophies",
+          "locator": "相关卷中的人物、学派与文本条目",
+          "claim": "支持马鸣条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-前苏格拉底哲学",
+      "label": "善的生活",
+      "explanation": "在恩培多克勒所属的思想语境中，“善的生活”是进入“变化如何在基本成分不生不灭的条件下发生？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持恩培多克勒条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-经院哲学",
+      "label": "善的生活",
+      "explanation": "在阿伯拉尔所属的思想语境中，“善的生活”是进入“行动的道德性质主要取决于结果、规则还是行动者意向？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持阿伯拉尔条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    },
+    {
+      "traditionId": "tradition-道德与政治经济思想",
+      "label": "善的生活",
+      "explanation": "在亚当·斯密所属的思想语境中，“善的生活”是进入“个体如何形成能够超越自身偏私的道德判断？”这一问题的阅读线索；其具体含义必须结合原有术语、文本和论证判断。",
+      "citations": [
+        {
+          "sourceId": "src-routledge-encyclopedia-philosophy",
+          "locator": "同名人物条目及条目内参考书目",
+          "claim": "支持亚当·斯密条目中“善的生活”问题入口的思想背景。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "zhiyi",
+    "yi-hwang",
+    "ito-jinsai",
+    "dai-zhen",
+    "feng-youlan",
+    "mahavira",
+    "ashvaghosha",
+    "empedocles",
+    "peter-abelard",
+    "adam-smith"
+  ],
+  "workIds": [
+    "mohe-zhiguan",
+    "ten-diagrams-sage-learning",
+    "gomojigi",
+    "mengzi-zishu-zheng",
+    "history-chinese-philosophy-feng",
+    "agamas-jain",
+    "buddhacarita",
+    "empedocles-fragments",
+    "ethics-abelard",
+    "theory-moral-sentiments"
+  ],
+  "traditionIds": [
+    "tradition-天台宗",
+    "tradition-朝鲜性理学",
+    "tradition-日本古学",
+    "tradition-清代考据与哲学",
+    "tradition-现代中国哲学",
+    "tradition-耆那教",
+    "tradition-佛教哲学",
+    "tradition-前苏格拉底哲学",
+    "tradition-经院哲学",
+    "tradition-道德与政治经济思想"
+  ],
+  "sourceIds": [
+    "src-encyclopedia-chinese-philosophy",
+    "src-japanese-philosophy-sourcebook",
+    "src-encyclopedia-indian-philosophies",
+    "src-routledge-encyclopedia-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持智顗条目中“善的生活”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言",
+      "claim": "支持伊藤仁斋条目中“善的生活”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-encyclopedia-indian-philosophies",
+      "locator": "相关卷中的人物、学派与文本条目",
+      "claim": "支持筏驮摩那条目中“善的生活”问题入口的思想背景。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持恩培多克勒条目中“善的生活”问题入口的思想背景。"
+    }
+  ],
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的全量模板扩展生成；已隔离，不进入公开知识库，等待逐人物内容重建时决定是否采用。"
+}

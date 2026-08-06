@@ -1,0 +1,176 @@
+{
+  "id": "sartre",
+  "slug": "sartre",
+  "entityType": "person",
+  "names": {
+    "display": "萨特",
+    "english": "Jean-Paul Sartre",
+    "original": "Jean-Paul Charles Aymard Sartre",
+    "aliases": [
+      "让-保罗·萨特"
+    ]
+  },
+  "chronology": {
+    "label": "1905–1980",
+    "startYear": 1905,
+    "endYear": 1980,
+    "certainty": "established"
+  },
+  "primaryRegion": "欧洲",
+  "secondaryRegions": [],
+  "traditionIds": [
+    "tradition-存在主义"
+  ],
+  "conceptIds": [
+    "concept-存在先于本质",
+    "concept-自欺",
+    "concept-自在与自为"
+  ],
+  "questionIds": [
+    "self",
+    "freedom",
+    "reality"
+  ],
+  "guidingQuestion": "如果人没有预定本质，选择、责任与处境如何共同形成一个人？",
+  "thesis": "意识不能被任何既定身份完全规定；人必须在事实处境中通过选择承担自由及其对他人的责任。",
+  "summary": "萨特是20世纪法国存在主义与现象学的重要人物。他从意识的开放性、事实性和自由出发，分析人如何以自欺逃避责任，也讨论他人目光、政治行动和共同历史如何改变自由的现实条件。",
+  "workIds": [
+    "being-and-nothingness",
+    "existentialism-humanism"
+  ],
+  "placeLinks": [
+    {
+      "placeId": "paris-sartre",
+      "role": "activity"
+    }
+  ],
+  "sourceIds": [
+    "src-sartre-sep",
+    "src-sartre-existentialism-humanism-fr"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-sartre-sep",
+      "locator": "Sections on consciousness, freedom, bad faith and existentialism",
+      "claim": "支持萨特关于意识、自由、自欺与存在主义的思想概览。"
+    },
+    {
+      "sourceId": "src-sartre-existentialism-humanism-fr",
+      "locator": "Exposé",
+      "claim": "支持存在先于本质以及选择责任的公开表述。"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "从意识到自由",
+      "paragraphs": [
+        {
+          "text": "萨特继承胡塞尔的意向性分析，也回应海德格尔关于在世存在的研究，但他把问题更明确地推向意识的否定能力与人的自由。意识并不是储存事物表象的封闭容器，它总是朝向自身以外的对象，也能够与已经给定的事实拉开距离。正因为人不能彻底等同于自己的职业、性格或社会标签，生活才持续包含尚未实现的可能。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-sep",
+              "locator": "Sections on consciousness and ontology",
+              "claim": "支持萨特对意识开放性、否定性及可能性的分析。"
+            }
+          ]
+        },
+        {
+          "text": "这种自由不等于愿望都会成功。出生、身体、过去、社会制度和他人的行动构成事实性，限制一个人能够采取的道路。萨特的主张是：事实性不能自动替行动者决定这些条件意味着什么，也不能完全取消其回应方式。自由因此不是脱离世界，而是在无法自行选择全部起点的情况下仍要承担行动。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-sep",
+              "locator": "Sections on freedom and facticity",
+              "claim": "支持自由与事实性之间不可分离的关系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bad-faith",
+      "heading": "自欺与角色",
+      "paragraphs": [
+        {
+          "text": "萨特以“自欺”描述人逃避这种不安结构的方式。一个人可能把自己说成只能服从角色的东西，好像服务员、学生或某种身份已经决定了全部行为；也可能假装自己是没有过去和限制的纯粹自由。两种做法都把事实性与超越性强行分开，遮蔽了人既受条件限制、又不能完全被条件定义的处境。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-sep",
+              "locator": "Section on bad faith",
+              "claim": "支持自欺不是普通说谎，而是逃避事实性与自由双重结构的说明。"
+            }
+          ]
+        },
+        {
+          "text": "“存在先于本质”是萨特面向公众概括这种立场的著名表达。它并不是说人可以随意发明一切，也不是否认身体和历史，而是否认有一份先于生活、能够替每个人完成选择的固定人性说明书。选择同时表达了行动者认为何种生活值得肯定，因此自由总与责任相连。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-existentialism-humanism-fr",
+              "locator": "Exposé: « l’existence précède l’essence »",
+              "claim": "支持存在先于本质及选择责任的概括。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "others-politics",
+      "heading": "他人、共同世界与政治",
+      "paragraphs": [
+        {
+          "text": "他人的目光使主体发现自己也会成为他人世界中的对象。这一分析常被误解成所有关系都必然冲突；更准确地说，萨特揭示了自我理解不能完全由自己控制。羞耻、承认和竞争都显示自由发生在多个人共享的世界中，行动者既试图定义自己，也不断被他人的判断重新定位。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-sep",
+              "locator": "Sections on being-for-others",
+              "claim": "支持他人目光及主体客体化的分析。"
+            }
+          ]
+        },
+        {
+          "text": "萨特后期越来越关注历史、阶级、殖民主义和集体行动，试图说明个人自由怎样进入社会结构。其政治判断与具体介入具有争议，不能由早期存在主义公式直接推出。把他放入思想星图，重要的不是奉上一套生活格言，而是保留一条仍在争论的线索：人在何种意义上不能逃避自由，结构又在何种意义上真实地压缩自由。",
+          "citations": [
+            {
+              "sourceId": "src-sartre-sep",
+              "locator": "Sections on ethics, politics and later work",
+              "claim": "支持萨特思想由个人自由向历史与政治问题的扩展。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "media": {
+    "fullSrc": "/media/thinkers/full/sartre.webp",
+    "thumbSrc": "/media/thinkers/thumb/sartre.webp",
+    "alt": "萨特的艺术化人物形象",
+    "objectPosition": "50% 18%",
+    "depictionNote": "项目委托式艺术化人物形象，参考萨特成年时期的公开历史照片特征进行非写实重构。",
+    "presentationType": "stylized",
+    "authenticity": "interpretive",
+    "rightsStatus": "project-commissioned",
+    "credit": "思想星图艺术化人物形象"
+  },
+  "color": "#8d7c72",
+  "mapVisible": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04",
+  "representativeQuote": {
+    "text": "L’existence précède l’essence.",
+    "displayLanguage": "fr",
+    "textStatus": "original",
+    "originalLanguage": "fr",
+    "chineseTranslation": "存在先于本质。",
+    "annotation": "这句话否认人拥有一份先于生活完成的固定定义，强调选择如何逐渐形成一个人，并使其承担责任。",
+    "workId": "existentialism-humanism",
+    "sourceTitle": "L’existentialisme est un humanisme",
+    "sourceType": "primary-text",
+    "verificationStatus": "primary-verified",
+    "sourceId": "src-sartre-existentialism-humanism-fr",
+    "locator": "Exposé: « l’existence précède l’essence »"
+  }
+}

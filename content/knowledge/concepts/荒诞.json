@@ -1,0 +1,50 @@
+{
+  "id": "concept-荒诞",
+  "slug": "荒诞",
+  "entityType": "concept",
+  "name": "荒诞",
+  "originalTerms": [
+    "l'absurde"
+  ],
+  "summary": "荒诞不是人的情绪或世界的固有属性，而是人要求意义、统一和清晰，与世界无法给出终极回答之间持续发生的冲突。",
+  "senses": [
+    {
+      "traditionId": "tradition-荒诞哲学",
+      "label": "人的追问与世界的沉默",
+      "explanation": "加缪把荒诞理解为一种关系：人不能停止追问，世界却不给出能够终结追问的最后根据；承认这种张力并不等于放弃生活。",
+      "citations": [
+        {
+          "sourceId": "src-camus-myth-sisyphus-fr",
+          "locator": "Un raisonnement absurde",
+          "claim": "支持荒诞作为人与世界之间关系而非单一实体属性的说明。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "camus"
+  ],
+  "workIds": [
+    "myth-of-sisyphus"
+  ],
+  "traditionIds": [
+    "tradition-荒诞哲学"
+  ],
+  "sourceIds": [
+    "src-camus-myth-sisyphus-fr",
+    "src-camus-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Sections 1 and 3 on the paradoxes and structure of absurdity",
+      "claim": "支持荒诞概念的思想史定位与解释边界。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

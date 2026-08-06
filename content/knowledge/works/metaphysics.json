@@ -13,7 +13,7 @@
   ],
   "dateLabel": "公元前4世纪",
   "languages": [],
-  "summary": "《形而上学》是亚里士多德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "这组经后世编排的论著研究存在者之为存在者、实体、原因、潜能与现实，并讨论第一哲学和不动的第一推动者；各卷写作层次与统一性长期存在解释争论。",
   "conceptIds": [
     "concept-德性",
     "concept-实践智慧",
@@ -23,16 +23,16 @@
     "tradition-古希腊哲学"
   ],
   "sourceIds": [
-    "src-aristotle"
+    "src-aristotle-metaphysics"
   ],
   "citations": [
     {
-      "sourceId": "src-aristotle",
-      "locator": "Introduction and Section 2: the human good",
-      "claim": "支持《形而上学》的摘要主张：《形而上学》是亚里士多德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "sourceId": "src-aristotle-metaphysics",
+      "locator": "Sections on subject matter, substance, actuality and priority",
+      "claim": "支持《形而上学》的编排、核心问题和主要概念。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

@@ -1,0 +1,36 @@
+{
+  "id": "husserl-merleau-ponty",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "husserl"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "merleau-ponty"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "从意向性到身体知觉",
+  "explanation": "梅洛-庞蒂继承胡塞尔对意向性与生活世界的研究，并把现象学描述推进到身体、习惯和知觉场。",
+  "citations": [
+    {
+      "sourceId": "src-husserl",
+      "locator": "Sections on intentionality, epoché and the lifeworld",
+      "claim": "支持胡塞尔意向性和生活世界构成梅洛-庞蒂现象学出发点的说明。"
+    },
+    {
+      "sourceId": "src-merleau-ponty-sep",
+      "locator": "Sections on phenomenology, perception and embodiment",
+      "claim": "支持梅洛-庞蒂继承并改造胡塞尔现象学、转向身体知觉的说明。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "index",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journeys-v2",
+  "lastReviewedAt": "2026-08-04"
+}

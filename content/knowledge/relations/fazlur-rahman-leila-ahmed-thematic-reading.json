@@ -1,0 +1,38 @@
+{
+  "id": "fazlur-rahman-leila-ahmed-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "fazlur-rahman"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "leila-ahmed"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "莱拉·艾哈迈德与法兹鲁尔·拉赫曼都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调性别观念须在制度与殖民史中分析，不能把面纱或伊斯兰传统处理成单一不变的符号。；后者强调解释应从具体经文回到其历史道德原则，再由原则返回当代情境形成规范判断。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持莱拉·艾哈迈德一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持法兹鲁尔·拉赫曼一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

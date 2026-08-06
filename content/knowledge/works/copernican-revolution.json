@@ -1,0 +1,50 @@
+{
+  "id": "copernican-revolution",
+  "slug": "copernican-revolution",
+  "entityType": "work",
+  "title": "《哥白尼革命》",
+  "originalTitle": "The Copernican Revolution: Planetary Astronomy in the Development of Western Thought",
+  "authorRefs": [
+    {
+      "personId": "thomas-kuhn",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1957",
+  "languages": [
+    "en"
+  ],
+  "summary": "《哥白尼革命》追溯从古代到近代早期的行星天文学，考察哥白尼体系如何在数学、宇宙论、宗教与观测实践的交错中被提出和接受。它是库恩从科学史走向科学哲学的重要早期著作，而非后来“范式”概念的简单图解。",
+  "conceptIds": [
+    "concept-范式转换",
+    "concept-常规科学",
+    "concept-不可通约性"
+  ],
+  "traditionIds": [
+    "tradition-科学哲学"
+  ],
+  "sourceIds": [
+    "src-kuhn",
+    "src-kuhn-copernican-1957"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kuhn-copernican-1957",
+      "locator": "Preface and Chapters 1–8",
+      "claim": "支持该书研究对象和历史范围。"
+    },
+    {
+      "sourceId": "src-kuhn",
+      "locator": "Section 1: life and career",
+      "claim": "支持该书作为库恩第一部著作及其天文学史研究位置。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补入库恩早期科学史代表作，不把它倒读为《结构》的例证。"
+}

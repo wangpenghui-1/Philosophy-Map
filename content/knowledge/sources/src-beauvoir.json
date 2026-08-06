@@ -11,11 +11,11 @@
   "url": "https://plato.stanford.edu/entries/beauvoir/",
   "defaultLocator": "Sections on ambiguity, situated freedom and becoming woman",
   "language": "en",
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于本批人物页中模糊性、处境自由、性别与相互自由的二手研究定位。"
 }

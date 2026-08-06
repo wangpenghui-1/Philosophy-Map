@@ -11,32 +11,40 @@
       "certainty": "established"
     }
   ],
-  "dateLabel": "1710年",
+  "dateLabel": "1710",
   "languages": [
     "en"
   ],
-  "summary": "《人类知识原理》是进入贝克莱思想语境的代表文本入口。条目以“被感知即存在”为阅读线索，并对成书年代、作者归属或后世编订情况保留必要说明。",
+  "summary": "《人类知识原理》先批评抽象观念，随后论证感觉对象作为观念的存在在于被感知，并以精神和上帝说明经验秩序。它直接攻击不可知物质基底及其表象主义解释，而不是否认日常对象。",
   "conceptIds": [
-    "concept-被感知即存在"
+    "concept-被感知即存在",
+    "concept-抽象观念",
+    "concept-精神"
   ],
   "traditionIds": [
     "tradition-经验主义"
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-berkeley",
+    "src-berkeley-principles-1710"
   ],
   "citations": [
     {
-      "sourceId": "src-routledge-encyclopedia-philosophy",
-      "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-      "claim": "支持《人类知识原理》与贝克莱的文本关联及归属说明。"
+      "sourceId": "src-berkeley-principles-1710",
+      "locator": "Introduction; Part I, §§1–53",
+      "claim": "支持抽象观念、非物质论和精神/自然秩序的原典结构。"
+    },
+    {
+      "sourceId": "src-berkeley",
+      "locator": "Sections 2–3",
+      "claim": "支持该书的论证背景与解释争议。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充作品结构和反物质论的解释边界。"
 }

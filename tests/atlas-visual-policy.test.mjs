@@ -5,7 +5,10 @@ import {
   advanceAutoQuality,
   detailSheetSnapFromProgress,
   getFocusedThinkerIds,
+  getRenderPixelRatio,
+  getWebglRetryDelayMs,
   initialAutoQuality,
+  isWindowsEdgeUserAgent,
   parsePersistedVisualState,
   percentile,
   shouldDirectGlobeCamera,
@@ -24,6 +27,22 @@ test("auto quality starts conservatively and changes only after sustained eviden
   state = advanceAutoQuality(state, 12, 12_200);
   state = advanceAutoQuality(state, 12, 18_300);
   assert.equal(state.quality, "medium");
+});
+
+test("render DPR stays inside a pixel budget while preserving high-detail assets", () => {
+  assert.equal(getRenderPixelRatio(1440, 900, 2, "high"), 1.5);
+  assert.equal(getRenderPixelRatio(1920, 1080, 2, "high"), 1.39);
+  assert.equal(getRenderPixelRatio(3840, 2160, 2, "high"), 0.69);
+  assert.equal(getRenderPixelRatio(1440, 900, 2, "high", true), 1.15);
+  assert.equal(getRenderPixelRatio(1440, 900, 1, "high"), 1);
+  assert.equal(getRenderPixelRatio(1920, 1080, 2, "high", false, true), 1.16);
+});
+
+test("Windows Edge receives a conservative GPU profile and increasing retry delays", () => {
+  assert.equal(isWindowsEdgeUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) Edg/140.0"), true);
+  assert.equal(isWindowsEdgeUserAgent("Mozilla/5.0 (Macintosh) Edg/140.0"), false);
+  assert.equal(isWindowsEdgeUserAgent("Mozilla/5.0 (Windows NT 10.0) Chrome/140.0"), false);
+  assert.deepEqual([1, 2, 3, 4].map((count) => getWebglRetryDelayMs(count, true)), [1_500, 3_000, 6_000, 6_000]);
 });
 
 test("visual policy helpers remain deterministic", () => {

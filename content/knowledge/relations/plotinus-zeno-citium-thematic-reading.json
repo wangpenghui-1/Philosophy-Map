@@ -1,0 +1,38 @@
+{
+  "id": "plotinus-zeno-citium-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "plotinus"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "zeno-citium"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“实在”的两种回答",
+  "explanation": "普罗提诺与芝诺都触及“实在”，但各自的问题语境和论证目标不同：前者强调万有由太一经理智和灵魂层层流溢，哲学与内在净化使灵魂回归其统一根源。；后者强调德性在于理性地顺应自然，通过判断训练使行动与共同宇宙的秩序协调。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持普罗提诺一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持芝诺一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

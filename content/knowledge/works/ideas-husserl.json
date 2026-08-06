@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "husserl",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1913",
   "languages": [],
-  "summary": "《纯粹现象学通论》是胡塞尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "《观念 I》系统提出自然态度、悬置、现象学还原和先验意识，说明对象如何通过不同意向活动与显现方式获得意义。",
   "conceptIds": [
     "concept-意向性",
     "concept-悬置",
@@ -23,16 +23,17 @@
     "tradition-现象学"
   ],
   "sourceIds": [
-    "src-husserl"
+    "src-husserl",
+    "src-husserl-ideas-gibson"
   ],
   "citations": [
     {
-      "sourceId": "src-husserl",
-      "locator": "Sections on intentionality, epoché and the lifeworld",
-      "claim": "支持《纯粹现象学通论》的摘要主张：《纯粹现象学通论》是胡塞尔的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "sourceId": "src-husserl-ideas-gibson",
+      "locator": "§§27–33 and §§84–86",
+      "claim": "支持自然态度、悬置、还原和意向性分析的原典结构。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

@@ -1,0 +1,38 @@
+{
+  "id": "judith-butler-steve-biko-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "judith-butler"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "steve-biko"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“自我”的两种回答",
+  "explanation": "朱迪斯·巴特勒与史蒂夫·比科都触及“自我”，但各自的问题语境和论证目标不同：前者强调性别不是内在本质，而由受规训的重复行动构成，重复也为偏移和抵抗留下空间。；后者强调心理解放和黑人团结是政治行动的前提，被压迫者必须重新定义自身价值。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-companion-american-philosophy",
+      "locator": "对应人物与思想运动专章",
+      "claim": "支持朱迪斯·巴特勒一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持史蒂夫·比科一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

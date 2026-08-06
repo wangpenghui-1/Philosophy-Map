@@ -12,8 +12,10 @@
     }
   ],
   "dateLabel": "1949",
-  "languages": [],
-  "summary": "《第二性》是波伏娃的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "fr"
+  ],
+  "summary": "波伏娃综合哲学、文学、历史与经验材料，分析男性如何被设为普遍主体、女性如何被构造成“他者”，并说明性别不是固定本质，而是在身体和社会处境中形成。",
   "conceptIds": [
     "concept-处境",
     "concept-他者",
@@ -23,20 +25,21 @@
     "tradition-存在主义女性主义"
   ],
   "sourceIds": [
-    "src-beauvoir"
+    "src-beauvoir",
+    "src-beauvoir-second-sex-parshley"
   ],
   "citations": [
     {
       "sourceId": "src-beauvoir",
-      "locator": "Sections on ambiguity, situated freedom and becoming woman",
-      "claim": "支持《第二性》的摘要主张：《第二性》是波伏娃的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 7 on The Second Sex and woman as Other",
+      "claim": "支持女性作为他者及性别成为过程的作品概括。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充他者、身体处境与性别成为的作品说明。"
 }

@@ -32,7 +32,7 @@
   ],
   "guidingQuestion": "德性如何在完整的人生与共同体中成为实践？",
   "thesis": "好生活是德性、判断与行动在完整人生中的持续实践。",
-  "summary": "亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中的持续实践。 本站以德性、实践智慧、幸福为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "亚里士多德把幸福理解为完整一生中依德性而进行的活动，而不是短暂感受或外在奖赏。伦理判断需要实践智慧，在具体情境中协调情感、行动与共同生活，并由政治制度提供能够实践德性的条件。",
   "workIds": [
     "nicomachean-ethics",
     "metaphysics"
@@ -50,42 +50,89 @@
   "citations": [
     {
       "sourceId": "src-aristotle",
-      "locator": "Introduction and Section 2: the human good",
-      "claim": "支持亚里士多德的摘要主张：亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中…"
+      "locator": "Sections 1–5: eudaimonia, virtue, doctrine of the mean and practical wisdom",
+      "claim": "支持亚里士多德关于幸福、德性、适中与实践智慧的伦理学结构。"
+    },
+    {
+      "sourceId": "src-aristotle-ethics-ross",
+      "locator": "Books I–II, VI, VIII–X",
+      "claim": "支持幸福、德性养成、实践智慧、友爱与沉思生活的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "eudaimonia",
+      "heading": "幸福是一种生活活动",
       "paragraphs": [
         {
-          "text": "亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中的持续实践。 本站以德性、实践智慧、幸福为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《尼各马可伦理学》从一个日常事实出发：行动总以某种“好”为目标，但财富、荣誉和快乐往往又是为了别的东西。亚里士多德寻找的是我们因其本身而选择、并使其他目标获得方向的最高善。他称之为 eudaimonia，常译作“幸福”或“兴盛”。它不是一天的好心情，而是一个人在完整人生中把人的能力实践得好。",
           "citations": [
             {
-              "sourceId": "src-aristotle",
-              "locator": "Introduction and Section 2: the human good",
-              "claim": "支持本段主张：亚里士多德是公元前384–322活跃于地中海的古希腊哲学思想人物，主要追问“德性如何在完整的人生与共同体中成为实践？”。其核心主张可概括为：好生活是德性、判断与行动在完整人生中…"
+              "sourceId": "src-aristotle-ethics-ross",
+              "locator": "Book I, Chapters 1–7",
+              "claim": "支持最高善、幸福以及功能论证的原典依据。"
             }
           ]
         },
         {
-          "text": "核心问题：德性如何在完整的人生与共同体中成为实践？",
+          "text": "人的好生活与理性活动有关，但“理性”并不只指理论思考。选择、情感、身体习惯、友谊和公共行动都可被理由塑造。德性因此不是藏在内心的品质证书，而是稳定地以恰当方式行动和感受的能力。一个人偶尔做对一件事还不够；德性要通过长期实践成为可靠倾向。",
           "citations": [
             {
               "sourceId": "src-aristotle",
-              "locator": "Introduction and Section 2: the human good",
-              "claim": "支持本段主张：核心问题：德性如何在完整的人生与共同体中成为实践？"
+              "locator": "Sections 1–2: eudaimonia and virtue",
+              "claim": "支持幸福作为活动以及伦理德性通过习惯形成的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virtue-phronesis",
+      "heading": "适中不是折中，实践智慧不是公式",
+      "paragraphs": [
+        {
+          "text": "“中道”最容易被误解为任何事情都取中间值。亚里士多德所说的适中是“相对于我们”的恰当：勇敢处在鲁莽和怯懦之间，但面对不同危险、身份和责任，恰当行动并没有一个固定算术平均数。有些行为本身就不正当，也不存在适量的背叛或残酷。",
+          "citations": [
+            {
+              "sourceId": "src-aristotle-ethics-ross",
+              "locator": "Book II, Chapters 5–9",
+              "claim": "支持德性作为适中、相对于行动者以及并非所有行为都有中道的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：好生活是德性、判断与行动在完整人生中的持续实践。",
+          "text": "判断何为恰当需要实践智慧 phronēsis。它既不同于掌握普遍原理，也不同于只会达成既定目标的技巧。实践智慧同时审查目标和手段，理解具体情境中哪些事实具有伦理意义。它与品格互相依赖：没有良好欲望，聪明可能只成为算计；没有判断力，好意又可能在复杂处境中造成坏结果。",
           "citations": [
             {
               "sourceId": "src-aristotle",
-              "locator": "Introduction and Section 2: the human good",
-              "claim": "支持本段主张：核心主张：好生活是德性、判断与行动在完整人生中的持续实践。"
+              "locator": "Sections 3–4: general account of virtue and practical wisdom",
+              "claim": "支持实践智慧、品格与具体判断之间的关系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "community-limits",
+      "heading": "友爱、政治与这套伦理学的边界",
+      "paragraphs": [
+        {
+          "text": "幸福从来不是孤立个人的工程。友爱让人共同活动、互相看见并检验生活选择；城邦的法律和教育则影响公民能否形成德性。伦理学因而自然通向政治学：制度不只分配资源，也塑造习惯、身份和可实践的生活方式。亚里士多德仍承认健康、友人和一定外在资源的重要性，德性并不保证人在任何灾难中都同样幸福。",
+          "citations": [
+            {
+              "sourceId": "src-aristotle-ethics-ross",
+              "locator": "Books I, VIII–IX",
+              "claim": "支持外在善、友爱与幸福生活不可分离的论述。"
+            }
+          ]
+        },
+        {
+          "text": "这套理论也带着古希腊城邦的排除结构。亚里士多德没有把平等公民资格给予女性、奴隶和所有劳动者，其政治判断不能因德性伦理的当代复兴而被忽略。今天继承实践智慧、品格和共同体等资源，同时批判其等级制度，正是理解他与现代正义理论、女性主义和跨文化德性伦理关系的必要部分。",
+          "citations": [
+            {
+              "sourceId": "src-aristotle",
+              "locator": "Section 5 and discussions of objections and political context",
+              "claim": "支持亚里士多德伦理学与政治共同体的联系及其历史限制。"
             }
           ]
         }
@@ -105,13 +152,13 @@
   },
   "color": "#c3a15f",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成幸福、德性、实践智慧与共同体限制的分段扩写，待站主发布前终审。",
   "representativeQuote": {
     "text": "For the things we have to learn before we can do them, we learn by doing them.",
     "displayLanguage": "en",

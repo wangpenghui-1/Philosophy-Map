@@ -1,0 +1,38 @@
+{
+  "id": "henry-odera-oruka-souleymane-bachir-diagne-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "henry-odera-oruka"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "souleymane-bachir-diagne"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“知识”的两种回答",
+  "explanation": "苏莱曼·巴希尔·迪亚涅与亨利·奥德拉·奥鲁卡都触及“知识”，但各自的问题语境和论证目标不同：前者强调翻译不是复制同一意义，而是在非洲、伊斯兰与欧洲传统之间创造互通。；后者强调通过访谈区分民间智慧与贤哲的论证性反思，挑战哲学只存在于书面经典的偏见。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持苏莱曼·巴希尔·迪亚涅一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持亨利·奥德拉·奥鲁卡一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

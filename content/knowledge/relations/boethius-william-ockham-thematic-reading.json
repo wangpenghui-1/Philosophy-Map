@@ -1,0 +1,38 @@
+{
+  "id": "boethius-william-ockham-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "boethius"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "william-ockham"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“实在”的两种回答",
+  "explanation": "奥卡姆与波爱修斯都触及“实在”，但各自的问题语境和论证目标不同：前者强调个体首先存在，普遍项是心灵和语言中的符号；解释不应无必要地增设实体。；后者强调永恒并非无限时间而是对生命整体的同时把握，因此预知不必成为事件的强制原因。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持奥卡姆一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-routledge-encyclopedia-philosophy",
+      "locator": "同名人物条目及条目内参考书目",
+      "claim": "支持波爱修斯一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

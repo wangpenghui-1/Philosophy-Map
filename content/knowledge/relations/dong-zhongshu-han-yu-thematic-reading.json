@@ -1,0 +1,38 @@
+{
+  "id": "dong-zhongshu-han-yu-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "dong-zhongshu"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "han-yu"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "韩愈与董仲舒都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调以仁义和道统重建儒学的公共正当性，并强调师道与古文的教化作用。；后者强调君主政治应以仁义回应天道，灾异论述可成为约束权力的批评语言。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持韩愈一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持董仲舒一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

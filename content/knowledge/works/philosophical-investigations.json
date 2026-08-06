@@ -7,13 +7,15 @@
   "authorRefs": [
     {
       "personId": "wittgenstein",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
-  "dateLabel": "1953",
-  "languages": [],
-  "summary": "《哲学研究》是维特根斯坦的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "dateLabel": "1953（遗著）",
+  "languages": [
+    "de"
+  ],
+  "summary": "《哲学研究》以短段落、例子和反问考察词的使用、语言游戏、家族相似、规则遵循、私人语言与生活形式。它不以新的统一理论取代旧理论，而让哲学问题回到其实际语法和生活场景中重新观察。",
   "conceptIds": [
     "concept-语言游戏",
     "concept-意义",
@@ -23,20 +25,26 @@
     "tradition-分析哲学"
   ],
   "sourceIds": [
-    "src-wittgenstein"
+    "src-wittgenstein",
+    "src-wittgenstein-investigations-anscombe"
   ],
   "citations": [
     {
+      "sourceId": "src-wittgenstein-investigations-anscombe",
+      "locator": "§§1–43, 65–88, 201–242",
+      "claim": "支持语言游戏、意义、家族相似和规则遵循的段落定位。"
+    },
+    {
       "sourceId": "src-wittgenstein",
-      "locator": "Sections on the picture theory, language-games and forms of life",
-      "claim": "支持《哲学研究》的摘要主张：《哲学研究》是维特根斯坦的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 3",
+      "claim": "支持后期思想与早期转变的概述。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充遗著出版、段落结构和后期方法，不把它降为“意义即使用”。"
 }

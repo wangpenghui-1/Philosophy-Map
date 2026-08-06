@@ -7,13 +7,15 @@
   "authorRefs": [
     {
       "personId": "hume",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1739–1740",
-  "languages": [],
-  "summary": "《人性论》是休谟的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "languages": [
+    "en"
+  ],
+  "summary": "《人性论》分为“理解”“情感”“道德”三卷，试图以观察人性的方式说明观念、因果、人格同一性、激情和道德赞许。第一卷提出印象与观念的分析并质疑必然联系和实体自我；后二卷把行动与道德判断放回欲求、同情和情感之中。",
   "conceptIds": [
     "concept-习惯",
     "concept-因果",
@@ -23,20 +25,26 @@
     "tradition-苏格兰启蒙运动"
   ],
   "sourceIds": [
-    "src-hume"
+    "src-hume",
+    "src-hume-treatise-1739"
   ],
   "citations": [
     {
+      "sourceId": "src-hume-treatise-1739",
+      "locator": "Books I–III",
+      "claim": "支持三卷结构及其关于理解、激情和道德的主题。"
+    },
+    {
       "sourceId": "src-hume",
-      "locator": "Sections on causation, self, morals and skepticism",
-      "claim": "支持《人性论》的摘要主张：《人性论》是休谟的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2–4",
+      "claim": "支持《人性论》在休谟心灵理论、认识论、情感与伦理学中的位置。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "补充三卷结构和原典定位；其与后期《研究》的连续性及差异见人物页不确定性说明。"
 }

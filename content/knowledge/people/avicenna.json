@@ -31,7 +31,7 @@
   ],
   "guidingQuestion": "理性如何说明存在、灵魂与必然性？",
   "thesis": "在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。",
-  "summary": "阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。 本站以存在、本质、灵魂为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "阿维森纳把形而上学建立为关于“存在者之为存在者”的科学，并以本质与存在、可能与必然的区分说明世界为何需要第一原因。他同时研究灵魂、认识与医学，形成跨越多学科的哲学体系。",
   "workIds": [
     "healing",
     "salvation"
@@ -47,47 +47,96 @@
     }
   ],
   "sourceIds": [
-    "src-avicenna"
+    "src-avicenna",
+    "src-avicenna-healing-metaphysics-marmura",
+    "src-history-islamic-philosophy"
   ],
   "citations": [
     {
       "sourceId": "src-avicenna",
-      "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-      "claim": "支持阿维森纳的摘要主张：阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在…"
+      "locator": "Sections 1–5: metaphysics, essence and existence, modality, causality and cosmology",
+      "claim": "支持阿维森纳形而上学的学科结构、本质存在区分与必然者论证。"
+    },
+    {
+      "sourceId": "src-avicenna-healing-metaphysics-marmura",
+      "locator": "Books I, V and VIII–IX",
+      "claim": "支持存在、本质、可能者与必然者的原典定位。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "being-essence",
+      "heading": "形而上学研究什么",
       "paragraphs": [
         {
-          "text": "阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。 本站以存在、本质、灵魂为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "阿维森纳认为，形而上学不是只研究某一种最高物体，也不是预先把上帝当作未经证明的研究对象。它研究的是所有学科都会用到、却不由某一门特殊科学独占的“存在者之为存在者”。上帝作为第一原则要在这门科学中得到论证，而不是充当论证起点。这个安排把本体论与神学连接起来，同时保持两者的论证次序。",
           "citations": [
             {
               "sourceId": "src-avicenna",
-              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-              "claim": "支持本段主张：阿维森纳是980–1037活跃于伊斯兰思想世界的阿拉伯语哲学思想人物，主要追问“理性如何说明存在、灵魂与必然性？”。其核心主张可概括为：在继承并重构希腊哲学的同时，建立关于存在…"
+              "locator": "Sections 1–2: sources, importance, ontology and theology",
+              "claim": "支持形而上学的主题、第一原则在学科中的位置及本体论神学关系。"
             }
           ]
         },
         {
-          "text": "核心问题：理性如何说明存在、灵魂与必然性？",
+          "text": "本质回答“它是什么”，存在回答“它是否实际存在”。设想一匹马时，我们理解马的定义，却不能仅凭定义断定某匹马存在；同样，一个事物的本质本身既不要求存在，也不要求不存在。现实中的可能事物因原因而获得存在。这一区分后来经拉丁翻译深刻影响经院哲学，但不能简单等同于后世所有“本质—存在”理论。",
+          "citations": [
+            {
+              "sourceId": "src-avicenna-healing-metaphysics-marmura",
+              "locator": "Book V, Chapter 1; Book I, Chapters 5–7",
+              "claim": "支持本质自身的中立性以及本质与现实存在的区分。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modality-cause",
+      "heading": "可能者为什么指向必然者",
+      "paragraphs": [
+        {
+          "text": "阿维森纳用模态而非单纯时间起点来讨论第一原因。日常事物就其自身而言是“可能存在者”：它们可以存在，也可以不存在，实际存在时需要一个使之成为现实的原因。如果所有存在者都只是这种依赖性的可能者，整个因果秩序仍需要一个不从他者获得存在的“必然存在者”。",
           "citations": [
             {
               "sourceId": "src-avicenna",
-              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-              "claim": "支持本段主张：核心问题：理性如何说明存在、灵魂与必然性？"
+              "locator": "Sections 4.1–4.3: possibility, necessity and the necessary principle",
+              "claim": "支持从可能存在者到必然存在者的模态论证。"
             }
           ]
         },
         {
-          "text": "核心主张：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。",
+          "text": "必然存在者不是同类事物中最强大的一个成员，而是不存在本质与存在分离、也不依赖外因的第一原则。由此阿维森纳继续分析统一、因果和宇宙秩序。其宇宙论使用理智、天体灵魂和流溢等中世纪框架，今天未必被接受；但“依赖存在如何获得解释”的问题仍是当代模态形而上学和宗教哲学讨论他的主要原因。",
           "citations": [
             {
-              "sourceId": "src-avicenna",
-              "locator": "Introduction: Avicenna’s reading of Aristotle’s Metaphysics",
-              "claim": "支持本段主张：核心主张：在继承并重构希腊哲学的同时，建立关于存在与心灵的系统。"
+              "sourceId": "src-avicenna-healing-metaphysics-marmura",
+              "locator": "Book VIII, Chapters 1–7; Book IX",
+              "claim": "支持必然存在者的性质、因果链与宇宙论展开。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soul-transmission",
+      "heading": "灵魂、知识与跨语言传播",
+      "paragraphs": [
+        {
+          "text": "阿维森纳的哲学并不限于形而上学。他以“悬空人”思想实验追问：一个人与身体和外界感觉暂时隔绝时，是否仍会以某种方式意识到自身？这个论证并非简单证明灵魂能离开身体生活，而是强调自我觉知不能被还原为对身体对象的普通感知。灵魂论还讨论感觉、想象、估量和理智如何分工。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "Chapters on Ibn Sīnā's psychology, the soul and knowledge",
+              "claim": "支持悬空人、自我觉知及灵魂能力结构的概括。"
+            }
+          ]
+        },
+        {
+          "text": "《治愈之书》把逻辑、自然学、数学和形而上学组织为百科全书式体系，《拯救之书》则提供较简明的综合版本。阿维森纳通过阿拉伯语、波斯语和后来的拉丁译本进入不同知识世界；阿威罗伊、苏赫拉瓦迪、托马斯·阿奎那等人既继承也批评他。理解这种影响需要追踪具体译本和论题，不能只用“亚里士多德的转述者”概括他。",
+          "citations": [
+            {
+              "sourceId": "src-history-islamic-philosophy",
+              "locator": "Ibn Sīnā and the Avicennan tradition",
+              "claim": "支持阿维森纳著作体系、跨语言传播与后续接受。"
             }
           ]
         }
@@ -107,11 +156,11 @@
   },
   "color": "#5f9f9a",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板之一；完成存在、本质、模态、灵魂与传播的分段扩写，待站主发布前终审。"
 }

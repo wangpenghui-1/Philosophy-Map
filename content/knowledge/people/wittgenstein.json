@@ -29,9 +29,9 @@
     "self",
     "reality"
   ],
-  "guidingQuestion": "哲学困惑是否来自语言脱离了实际使用？",
-  "thesis": "意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。",
-  "summary": "维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。 本站以语言游戏、意义、生活形式为入口，连接其代表文本、思想关系与学术来源。",
+  "guidingQuestion": "哲学困惑是否常在语言离开实际使用时被制造出来？",
+  "thesis": "早期维特根斯坦考察语言如何描画事实及其限度；后期则把意义置于语言游戏、规则与生活形式中，以描述使用来解除哲学混乱，而不提供一套隐藏的本体论。",
+  "summary": "维特根斯坦的思想横跨两个显著不同的阶段：早期以逻辑和图像理论划定可说的界限，后期转向普通语言的实际使用、规则与生活形式。他的哲学工作常不是增加学说，而是让被语言误导的问题重新显出形状。",
   "workIds": [
     "tractatus",
     "philosophical-investigations"
@@ -44,47 +44,130 @@
   ],
   "sourceIds": [
     "src-wittgenstein",
+    "src-wittgenstein-tractatus-1922",
     "src-wittgenstein-investigations-anscombe"
   ],
   "citations": [
     {
       "sourceId": "src-wittgenstein",
-      "locator": "Sections on the picture theory, language-games and forms of life",
-      "claim": "支持维特根斯坦的摘要主张：维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而…"
+      "locator": "Sections 2–3 and 6",
+      "claim": "支持早晚期转变、语言游戏、规则、生活形式及解释争议的总体说明。"
+    },
+    {
+      "sourceId": "src-wittgenstein-tractatus-1922",
+      "locator": "Propositions 1–7, especially 2.1–2.225 and 6.54–7",
+      "claim": "支持事实图像、可说/可显示与沉默的原典定位。"
+    },
+    {
+      "sourceId": "src-wittgenstein-investigations-anscombe",
+      "locator": "§§1–43, 65–88, 201–242",
+      "claim": "支持意义即使用、语言游戏、家族相似、规则遵循与私人语言讨论。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "early-language-world",
+      "heading": "早期：语言怎样描画事实，又在哪里失去资格",
       "paragraphs": [
         {
-          "text": "维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。 本站以语言游戏、意义、生活形式为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《逻辑哲学论》把世界描述为事实的总体，而有意义的命题应当能够描画事实可能如何存在。命题不是简单复制对象，而是在逻辑形式上与它所表述的可能情形共享结构。维特根斯坦借此试图说明逻辑、语言和世界的边界：什么能被清楚地说，什么只能显示在语言的运作中。",
           "citations": [
             {
+              "sourceId": "src-wittgenstein-tractatus-1922",
+              "locator": "Propositions 1–4.121",
+              "claim": "支持世界、事实、图像理论和逻辑形式的原典定位。"
+            },
+            {
               "sourceId": "src-wittgenstein",
-              "locator": "Sections on the picture theory, language-games and forms of life",
-              "claim": "支持本段主张：维特根斯坦是1889–1951活跃于欧洲的分析哲学思想人物，主要追问“哲学困惑是否来自语言脱离了实际使用？”。其核心主张可概括为：意义存在于语言实践之中；澄清语言游戏能够解除而…"
+              "locator": "Section 2.1: Tractatus",
+              "claim": "支持早期语言与世界关系的学术概述。"
             }
           ]
         },
         {
-          "text": "核心问题：哲学困惑是否来自语言脱离了实际使用？",
+          "text": "这也解释了书末著名的“沉默”命题：当语言试图说出伦理、价值、形而上学或逻辑自身的终极根据时，往往越过了有意义陈述的条件。它不是让人蔑视这些事项，而是警惕哲学把不能作为事实说出的东西伪装成理论。如何理解这把“梯子”，至今有不同读法：有人认为它留下不可说的真理，有人认为它要求连书中的理论性句子也一同放下。",
           "citations": [
             {
+              "sourceId": "src-wittgenstein-tractatus-1922",
+              "locator": "Propositions 6.4–7, especially 6.54–7",
+              "claim": "支持可说、可显示、梯子和沉默的原典段落。"
+            },
+            {
               "sourceId": "src-wittgenstein",
-              "locator": "Sections on the picture theory, language-games and forms of life",
-              "claim": "支持本段主张：核心问题：哲学困惑是否来自语言脱离了实际使用？"
+              "locator": "Sections 2.2 and 2.3",
+              "claim": "支持《逻辑哲学论》关于无意义、伦理与解释分歧的说明。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "later-use-games",
+      "heading": "后期：一个词的意义在它被怎样使用",
+      "paragraphs": [
+        {
+          "text": "后期维特根斯坦不再寻找所有语言背后的一种逻辑本质。他让读者看请求、计数、命名、玩笑、祈祷、下棋等具体活动，称它们为“语言游戏”。一句话或一个词的意义，要在这些活动中的用途、回应和训练里考察。所谓“意义即使用”只适用于一大类情形，并不是一条能替代全部语言研究的口号。",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein-investigations-anscombe",
+              "locator": "§§1–43",
+              "claim": "支持语言游戏、意义即使用及其限定。"
+            },
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Sections 3.2–3.4",
+              "claim": "支持从逻辑形式转向多样语言实践的说明。"
             }
           ]
         },
         {
-          "text": "核心主张：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。",
+          "text": "这种转向也改变了哲学方法。许多哲学难题不是等待新事实来回答的科学问题，而是我们把词从原有用途抽离后产生的迷惑。维特根斯坦的做法是回到语法和使用，展示词在何处有家、何处被误用。这里的“语法”不是学校里的句法规则，而是使一种表达在生活中可理解的实践性条件。",
           "citations": [
             {
+              "sourceId": "src-wittgenstein-investigations-anscombe",
+              "locator": "§§89–133",
+              "claim": "支持哲学作为澄清而非理论、以及语法性考察。"
+            },
+            {
               "sourceId": "src-wittgenstein",
-              "locator": "Sections on the picture theory, language-games and forms of life",
-              "claim": "支持本段主张：核心主张：意义存在于语言实践之中；澄清语言游戏能够解除而非简单回答许多哲学问题。"
+              "locator": "Section 3.7: nature of philosophy",
+              "claim": "支持后期哲学方法的概述。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rules-private-language",
+      "heading": "规则与生活形式：理解不是藏在私人的心里",
+      "paragraphs": [
+        {
+          "text": "规则遵循问题问的是：一个人怎样知道下一步算“按同一规则”做？维特根斯坦指出，任何规则还可能被重新解释；若只靠我当下的内在感觉来保证正确，正确和“我以为正确”就没有区别。规则之所以能被学习、纠正和延续，依靠的是公开的训练、做法和判断的交织，而不是某个无法检验的私人对象。",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein-investigations-anscombe",
+              "locator": "§§138–242, especially §§201–202",
+              "claim": "支持规则遵循、解释的限度和公开实践。"
+            },
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Section 3.5: rule-following and private language",
+              "claim": "支持规则遵循争论及其解释边界。"
+            }
+          ]
+        },
+        {
+          "text": "“生活形式”指语言游戏赖以发生的人类行动、训练和共同反应的背景。它不等于任何群体都封闭在自己的世界、彼此永远无法理解；也不自动提供社会理论或文化相对主义。维特根斯坦的后期工作要求我们先看清实际使用的差异，再决定是否真的存在一个需要哲学解决的共同问题。",
+          "citations": [
+            {
+              "sourceId": "src-wittgenstein-investigations-anscombe",
+              "locator": "§§19, 23, 241–242",
+              "claim": "支持语言游戏、生活形式和共同实践的原典定位。"
+            },
+            {
+              "sourceId": "src-wittgenstein",
+              "locator": "Section 3.6: grammar and form of life",
+              "claim": "支持生活形式不宜被简化为封闭相对主义的解释边界。"
             }
           ]
         }
@@ -102,15 +185,16 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
+  "uncertainty": "“早期—后期”二分有助于入门，却会遮蔽过渡期和两阶段的连续问题；《逻辑哲学论》的梯子、后期规则遵循和生活形式也都有彼此竞争的解释。条目不把“意义即使用”当作可替代全部维特根斯坦哲学的单句公式。",
   "color": "#6c91a0",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第九位；补充早期图像理论、后期语言游戏、规则遵循、生活形式及解释争议。",
   "representativeQuote": {
     "text": "For a large class of cases—though not for all—in which we employ the word ‘meaning’ it can be defined thus: the meaning of a word is its use in the language.",
     "displayLanguage": "en",

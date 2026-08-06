@@ -1,0 +1,32 @@
+{
+  "id": "bertrand-russell-wittgenstein",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "bertrand-russell"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "wittgenstein"
+  },
+  "directed": true,
+  "relationType": "direct-influence",
+  "evidenceStatus": "established",
+  "title": "剑桥时期的逻辑与分歧",
+  "explanation": "弗雷格建议维特根斯坦赴剑桥向罗素学习。两人围绕逻辑和哲学基础密集交流，罗素还为《逻辑哲学论》英文版写序；维特根斯坦很快也批评这篇序言误解了自己的工作。这是一段明确的师友与思想互动，不是单向接受。",
+  "citations": [
+    {
+      "sourceId": "src-wittgenstein",
+      "locator": "Sections 1 and 2.1",
+      "claim": "支持弗雷格建议、剑桥交流、罗素序言及维特根斯坦的分歧。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "保留直接影响中的争论与自主性。"
+}

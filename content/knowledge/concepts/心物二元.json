@@ -3,18 +3,26 @@
   "slug": "心物二元",
   "entityType": "concept",
   "name": "心物二元",
-  "originalTerms": [],
-  "summary": "“心物二元”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。",
+  "originalTerms": [
+    "res cogitans",
+    "res extensa"
+  ],
+  "summary": "笛卡尔把心灵理解为思考之物，把身体和其他物体理解为广延之物。二者在概念和实在上可以区分，但具体的人又经验到饥饿、疼痛和行动中的紧密结合，由此产生相互作用难题。",
   "senses": [
     {
       "traditionId": "tradition-近代理性主义",
-      "label": "心物二元",
-      "explanation": "在笛卡尔条目中，“心物二元”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。",
+      "label": "思考实体与广延实体",
+      "explanation": "第六沉思以清楚分明的理解论证心与身可分，同时拒绝把人想成驾驶机器的心灵。伊丽莎白公主追问非广延心灵如何推动身体，迫使笛卡尔进一步说明心身结合。",
       "citations": [
         {
+          "sourceId": "src-descartes-meditations-haldane-ross",
+          "locator": "Meditation VI",
+          "claim": "支持心身实在区分与结合的原典论述。"
+        },
+        {
           "sourceId": "src-descartes",
-          "locator": "Sections on methodic doubt, mind and knowledge",
-          "claim": "支持“心物二元”义项：在笛卡尔条目中，“心物二元”是理解其核心问题与主张的入口；具体含义需结合相关文本和论证阅读。"
+          "locator": "Sections 4.1–4.2",
+          "claim": "支持相互作用问题、伊丽莎白的质疑及结合理论的解释。"
         }
       ]
     }
@@ -30,20 +38,26 @@
     "tradition-近代理性主义"
   ],
   "sourceIds": [
-    "src-descartes"
+    "src-descartes",
+    "src-descartes-meditations-haldane-ross"
   ],
   "citations": [
     {
+      "sourceId": "src-descartes-meditations-haldane-ross",
+      "locator": "Meditation VI",
+      "claim": "支持思考之物、广延之物和二者可分的论证。"
+    },
+    {
       "sourceId": "src-descartes",
-      "locator": "Sections on methodic doubt, mind and knowledge",
-      "claim": "支持心物二元的摘要主张：“心物二元”是思想星图中的概念索引，用于连接不同人物、文本和思想传统。相同译名不代表不同传统中的含义完全等同，阅读时应结合具体人物、语言和历史语境。"
+      "locator": "Sections 4.1–4.2",
+      "claim": "支持二元论的解释边界和心身结合难题。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "去除索引占位语，补充心物区分、人的结合经验和相互作用问题。"
 }

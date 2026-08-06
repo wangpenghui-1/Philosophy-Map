@@ -3,18 +3,20 @@
   "slug": "被感知即存在",
   "entityType": "concept",
   "name": "被感知即存在",
-  "originalTerms": [],
-  "summary": "“被感知即存在”是本知识库中的概念入口，用于连接相关人物、文本和传统。相似译名不自动视为同一概念，具体含义须结合语言、论证和历史语境辨析。",
+  "originalTerms": [
+    "esse est percipi"
+  ],
+  "summary": "“被感知即存在”说的是感觉对象作为观念的存在方式。贝克莱由此否定不可经验的物质基底，但仍以精神和上帝解释自然经验的稳定性。",
   "senses": [
     {
       "traditionId": "tradition-经验主义",
       "label": "被感知即存在",
-      "explanation": "在贝克莱及经验主义语境中，“被感知即存在”用于说明：感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。该义项不默认等同于其他传统中的相似译名。",
+      "explanation": "对象并非因某个个人暂时不看它就消失；贝克莱区分被动观念、有限精神与无限精神，用自然经验的规律性回应物体持续存在的难题。",
       "citations": [
         {
-          "sourceId": "src-routledge-encyclopedia-philosophy",
-          "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-          "claim": "支持贝克莱语境中的“被感知即存在”义项。"
+          "sourceId": "src-berkeley-principles-1710",
+          "locator": "Part I, §§3, 29–33",
+          "claim": "支持 esse est percipi 与自然秩序的原典定位。"
         }
       ]
     }
@@ -29,20 +31,21 @@
     "tradition-经验主义"
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy"
+    "src-berkeley",
+    "src-berkeley-principles-1710"
   ],
   "citations": [
     {
-      "sourceId": "src-routledge-encyclopedia-philosophy",
-      "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-      "claim": "支持“被感知即存在”作为贝克莱思想入口的概括。"
+      "sourceId": "src-berkeley",
+      "locator": "Sections 2–3",
+      "claim": "支持非物质论、物体持续存在和常识争议。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。"
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "限定为贝克莱的感觉对象理论，保留精神和神学解释。"
 }

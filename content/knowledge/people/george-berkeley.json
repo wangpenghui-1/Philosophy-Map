@@ -5,6 +5,7 @@
   "names": {
     "display": "贝克莱",
     "english": "George Berkeley",
+    "original": "George Berkeley",
     "aliases": []
   },
   "chronology": {
@@ -19,16 +20,19 @@
     "tradition-经验主义"
   ],
   "conceptIds": [
-    "concept-被感知即存在"
+    "concept-被感知即存在",
+    "concept-抽象观念",
+    "concept-精神"
   ],
   "questionIds": [
     "reality"
   ],
-  "guidingQuestion": "物质实体是否超出我们能够经验和说明的范围？",
-  "thesis": "感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。",
-  "summary": "贝克莱是欧洲与地中海经验主义的重要思想人物，主要追问“物质实体是否超出我们能够经验和说明的范围？”。其思想以“被感知即存在”为入口，主张感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+  "guidingQuestion": "如果我们只经验到观念，物质实体究竟还解释了什么？",
+  "thesis": "感觉对象的存在在于被感知；物质基底既不可被经验也无助于解释经验秩序。世界并未因此消失，而由有限精神、观念和上帝的持续知觉构成。",
+  "summary": "贝克莱在经验主义内部批判物质实体和抽象观念，把哲学问题从不可经验的基底转回具体的知觉、心灵和自然秩序。他的非物质论既不是说桌椅不存在，也不是把世界缩成个人主观幻想。",
   "workIds": [
-    "principles-human-knowledge"
+    "principles-human-knowledge",
+    "three-dialogues-hylas-philonous"
   ],
   "placeLinks": [
     {
@@ -37,48 +41,131 @@
     }
   ],
   "sourceIds": [
-    "src-routledge-encyclopedia-philosophy",
-    "src-berkeley-principles-1710"
+    "src-berkeley",
+    "src-berkeley-principles-1710",
+    "src-berkeley-dialogues-1713"
   ],
   "citations": [
     {
-      "sourceId": "src-routledge-encyclopedia-philosophy",
-      "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-      "claim": "支持贝克莱的身份、思想主张与历史语境概述。"
+      "sourceId": "src-berkeley",
+      "locator": "Sections 1–3",
+      "claim": "支持贝克莱生平、反物质论、抽象观念和自然解释的学术概述。"
+    },
+    {
+      "sourceId": "src-berkeley-principles-1710",
+      "locator": "Introduction; Part I, §§1–33, 45–53",
+      "claim": "支持抽象观念批判、esse est percipi、精神与自然秩序的原典定位。"
+    },
+    {
+      "sourceId": "src-berkeley-dialogues-1713",
+      "locator": "First–Third Dialogues",
+      "claim": "支持以对话回应物体持续存在、怀疑论和常识反驳。"
     }
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "ideas-matter",
+      "heading": "经验主义不必通向物质基底",
       "paragraphs": [
         {
-          "text": "贝克莱是欧洲与地中海经验主义的重要思想人物，主要追问“物质实体是否超出我们能够经验和说明的范围？”。其思想以“被感知即存在”为入口，主张感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。条目结合代表文本、活动地点和学术研究，提示相关年代、归属或解释中的不确定性。",
+          "text": "贝克莱从经验主义的起点出发：我们直接把握的是颜色、声音、触感等观念，而不是一个藏在观念背后的物质实体。若所谓物质被定义为完全独立于一切心灵、却又永远不能被感知的基底，它既没有进入经验，也没有解释观念为何以现在这种方式出现。贝克莱的非物质论由此不是凭空否认世界，而是要求物质论说明自己究竟增加了什么。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-              "claim": "支持贝克莱的身份、思想主张与历史语境概述。"
+              "sourceId": "src-berkeley-principles-1710",
+              "locator": "Part I, §§1–15",
+              "claim": "支持从观念、感知和物质基底问题出发的论证。"
+            },
+            {
+              "sourceId": "src-berkeley",
+              "locator": "Section 2: critique of materialism",
+              "claim": "支持贝克莱针对物质实体和表象主义的批评背景。"
             }
           ]
         },
         {
-          "text": "核心问题：物质实体是否超出我们能够经验和说明的范围？",
+          "text": "“存在即被感知，或去感知”中的前半句说的是感觉对象：一张桌子的颜色、形状和硬度作为观念而存在；后半句则说主动的精神能够感知、意志和思考。贝克莱因此并未把人、上帝或活动缩成一组被动感觉。把这句话误读成“我闭上眼睛桌子就消失”，恰好跳过了他用其他心灵和上帝说明经验持续性的部分。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-              "claim": "支持对贝克莱核心问题的概括。"
+              "sourceId": "src-berkeley-principles-1710",
+              "locator": "Part I, §§2–7 and 26–33",
+              "claim": "支持观念的被动性、精神的能动性和 esse est percipi/aut percipere。"
+            },
+            {
+              "sourceId": "src-berkeley",
+              "locator": "Sections 2 and 3.2.4",
+              "claim": "支持对未被个人感知物体持续存在问题的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abstraction-language",
+      "heading": "抽象观念为何会制造伪问题",
+      "paragraphs": [
+        {
+          "text": "贝克莱也攻击一种看似自然的抽象方式：先设想一个既非白也非黑、既非长也非短、却代表一切颜色和形状的“抽象三角形”或“抽象人”。他认为人能用一般词指向许多个别事物，却不必在心中拥有这样一个去掉一切特征的对象。哲学若把这种抽象对象当作真实材料，往往会为自己制造难以回答的问题。",
+          "citations": [
+            {
+              "sourceId": "src-berkeley-principles-1710",
+              "locator": "Introduction, §§6–25",
+              "claim": "支持对抽象观念的批评及一般词用法的说明。"
+            },
+            {
+              "sourceId": "src-berkeley",
+              "locator": "Section 2: abstract ideas",
+              "claim": "支持抽象观念批评在贝克莱体系中的作用。"
             }
           ]
         },
         {
-          "text": "核心主张：感觉对象的存在就在于被感知，持续秩序由精神及神的知觉说明而非不可知物质支撑。",
+          "text": "这项批评不等于禁止概括、科学或数学。贝克莱反对的是把概括能力理解成必须先拥有一个无差别的抽象形象；实际推理可以在具体符号、范例和规则中进行。这里的思想后来常被拿来和语言哲学并读，但它首先服务于贝克莱自己的目标：清除他认为由抽象名词和物质基底制造出来的形而上学困惑。",
           "citations": [
             {
-              "sourceId": "src-routledge-encyclopedia-philosophy",
-              "locator": "同名人物条目及条目内参考书目：“George Berkeley / 贝克莱”",
-              "claim": "支持对贝克莱核心主张的概括。"
+              "sourceId": "src-berkeley-principles-1710",
+              "locator": "Introduction, §§11–16",
+              "claim": "支持一般性、符号与抽象观念的区分。"
+            },
+            {
+              "sourceId": "src-berkeley",
+              "locator": "Section 2.1: abstract ideas",
+              "claim": "支持该批评并非反对一切普遍性思考的限定。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "god-nature-common-sense",
+      "heading": "自然秩序与常识世界如何保留下来",
+      "paragraphs": [
+        {
+          "text": "如果感觉对象依赖感知，人在离开房间后物体怎样仍然存在？贝克莱的答案诉诸上帝：自然经验具有我们不能任意支配的稳定、连贯和规律性，因为它由无限精神有序地呈现给有限精神。这个回答具有明显的神学前提；它不是现代读者必须接受的物理学理论，却是贝克莱避免把非物质论变成短暂私人幻觉的核心环节。",
+          "citations": [
+            {
+              "sourceId": "src-berkeley-principles-1710",
+              "locator": "Part I, §§29–33, 45–53",
+              "claim": "支持自然观念的稳定性、上帝和有限精神的论述。"
+            },
+            {
+              "sourceId": "src-berkeley-dialogues-1713",
+              "locator": "Third Dialogue",
+              "claim": "支持对未被感知物体与自然持续性的对话式回应。"
+            }
+          ]
+        },
+        {
+          "text": "贝克莱自称是在捍卫常识，而非否认它。人照样可以说火会烫、水会冷，日常物体也照样存在；他反对的是在这些实践之后再添加一个不可感知的物质承载者。批评者则质疑，这种说法是否真的保住了独立世界和科学因果。这个争论提醒我们：贝克莱的挑战不只是“唯心主义”标签，而是经验、解释和常识之间的紧张关系。",
+          "citations": [
+            {
+              "sourceId": "src-berkeley",
+              "locator": "Sections 3.2–3.3 and 4",
+              "claim": "支持贝克莱的常识辩护、科学解释和后续批评。"
+            },
+            {
+              "sourceId": "src-berkeley-dialogues-1713",
+              "locator": "Second and Third Dialogues",
+              "claim": "支持对怀疑论、常识和物质论反驳的文本结构。"
             }
           ]
         }
@@ -101,15 +188,16 @@
     "creator": "John Smibert",
     "retrievedAt": "2026-07-19"
   },
+  "uncertainty": "贝克莱如何解释未被感知的对象、上帝在其自然哲学中的地位，以及他对洛克和笛卡尔的表象主义批评是否准确，均有持续讨论。条目保留其神学论证，不把它误写成现代意义上的主观心理主义。",
   "color": "#7da7d9",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
-  "editedBy": "思想星图自动编辑流水线",
-  "reviewedBy": "automated-editorial-review/v2",
-  "lastReviewedAt": "2026-07-19",
-  "notes": "自动编辑流水线完成结构、来源定位与交叉字段审核；本记录不声称已经过外部同行评审。",
+  "version": 2,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第八位；补充非物质论、抽象观念、精神、自然秩序和常识争论。",
   "representativeQuote": {
     "text": "Their esse is percipi, nor is it possible they should have any existence, out of the minds or thinking things which perceive them.",
     "displayLanguage": "en",

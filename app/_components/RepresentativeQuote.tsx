@@ -10,6 +10,7 @@ interface RepresentativeQuoteProps {
 function quoteLabel(quote: RepresentativeQuoteData) {
   if (quote.displayLanguage === "zh-classical") return "古文原句";
   if (quote.displayLanguage === "zh-modern") return "中文原句";
+  if (quote.displayLanguage === "fr") return "法文原文";
   return quote.textStatus === "original" ? "英文原文" : "英文译文";
 }
 
@@ -21,8 +22,8 @@ function verificationLabel(quote: RepresentativeQuoteData) {
 }
 
 export default function RepresentativeQuote({ quote, sourceLabel, sourceHref, compact = false }: RepresentativeQuoteProps) {
-  const language = quote.displayLanguage === "en" ? "en" : quote.displayLanguage === "zh-classical" ? "zh-Hant" : "zh-CN";
-  const translationLabel = quote.displayLanguage === "en" ? "中文翻译" : "今译";
+  const language = quote.displayLanguage === "en" ? "en" : quote.displayLanguage === "fr" ? "fr" : quote.displayLanguage === "zh-classical" ? "zh-Hant" : "zh-CN";
+  const translationLabel = quote.displayLanguage === "en" || quote.displayLanguage === "fr" ? "中文翻译" : "今译";
 
   return (
     <figure className={`representative-quote${compact ? " representative-quote--compact" : ""}`}>

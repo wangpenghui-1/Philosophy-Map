@@ -46,7 +46,7 @@
     "sourceId": "src-analects-primary",
     "locator": "《卫灵公》第24章"
   },
-  "summary": "孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。 本站以仁、礼、修身为入口，连接其代表文本、思想关系与学术来源。",
+  "summary": "孔子把“怎样成为好人”放进学习、礼仪、家庭与政治生活的长期实践中。仁不是抽象善意，礼也不只是外在规矩：二者要求人在具体关系里学习体察、克制与恰当行动，并由此形成能够承担公共责任的君子人格。",
   "workIds": [
     "analects"
   ],
@@ -69,36 +69,78 @@
   ],
   "sections": [
     {
-      "id": "overview",
-      "heading": "思想概览",
+      "id": "ren",
+      "heading": "仁从他人的位置开始",
       "paragraphs": [
         {
-          "text": "孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。 本站以仁、礼、修身为入口，连接其代表文本、思想关系与学术来源。",
+          "text": "《论语》中的仁没有一次说尽的定义。它常表现为爱人、克己、忠恕、能够安顿他人。孔子用家庭、朋友、政事和利益的具体情境迫使学生判断：什么行动既不是只顾自己，也不是盲从习俗。仁更像需要练出的判断与关系能力。",
           "citations": [
             {
-              "sourceId": "src-confucius",
-              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
-              "claim": "支持本段主张：孔子是约公元前551–479活跃于东亚的儒家思想人物，主要追问“一个人如何在关系与共同生活中成为更好的人？”。其核心主张可概括为：以礼与仁的日常实践，塑造能够承担关系责任的人。…"
+              "sourceId": "src-analects-primary",
+              "locator": "《颜渊》《雍也》《卫灵公》相关章",
+              "claim": "支持仁、克己复礼与忠恕的原典定位。"
             }
           ]
         },
         {
-          "text": "核心问题：一个人如何在关系与共同生活中成为更好的人？",
+          "text": "“己所不欲，勿施于人”在这里首先是恕的操练：把他人的感受和处境带回自己的判断。它不是要消除亲疏关系，而是防止人在角色关系中把自己当成唯一尺度。",
+          "citations": [
+            {
+              "sourceId": "src-analects-primary",
+              "locator": "《卫灵公》24",
+              "claim": "支持恕与推己及人的表述。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "li",
+      "heading": "礼把情感、身体和场合训练到一起",
+      "paragraphs": [
+        {
+          "text": "礼包括言语、哀乐、祭祀、待客和政治仪式中的分寸，让人学习怎样表达敬意、哀伤、亲近与节制。若只机械遵守，礼会失去仁；若只有善意而没有可共同理解的形式，善意也可能无法落实。",
           "citations": [
             {
               "sourceId": "src-confucius",
-              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
-              "claim": "支持本段主张：核心问题：一个人如何在关系与共同生活中成为更好的人？"
+              "locator": "Sections on ritual, virtue and moral cultivation",
+              "claim": "支持礼、情感训练与仁的关系。"
             }
           ]
         },
         {
-          "text": "核心主张：以礼与仁的日常实践，塑造能够承担关系责任的人。",
+          "text": "学习不是积累信息，而是反复温习、提问、观察与改正，让知识进入性情和行动。君子不是天生优越者，而是愿意在关系中受教、能自我反省并避免把名位当作唯一目标的人。",
+          "citations": [
+            {
+              "sourceId": "src-analects-primary",
+              "locator": "《学而》《为政》《述而》相关章",
+              "claim": "支持学习、反省和君子人格。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "heading": "政治先问谁值得被信任",
+      "paragraphs": [
+        {
+          "text": "孔子不把政治只理解为刑罚和命令。他强调为政者的德行、名分与可信度：统治者若只靠惩罚，人可能规避而无羞耻；若能以德和礼引导，秩序才有内在认同。这并非否定制度，而是提醒制度效果离不开人的品格与日常实践。",
+          "citations": [
+            {
+              "sourceId": "src-analects-primary",
+              "locator": "《为政》3；《子路》3",
+              "claim": "支持德治、礼与正名的原典表述。"
+            }
+          ]
+        },
+        {
+          "text": "早期材料由弟子及后学编纂，后世儒家又赋予它不同政治含义。不能把《论语》直接等同于任何后来帝国制度，也不能把礼简单说成维护既定等级；其中的服从、批评与关系责任需逐段辨析。这些差异正是阅读与比较的起点。也正因此，孔子思想不能被压缩成一套静止的政治标签。它要求读者回到具体语境，分辨何为修身要求、何为后世制度化的选择，也承认实践总会遇到新的关系难题。",
           "citations": [
             {
               "sourceId": "src-confucius",
-              "locator": "Sections 3–4: ritual psychology, virtues and character formation",
-              "claim": "支持本段主张：核心主张：以礼与仁的日常实践，塑造能够承担关系责任的人。"
+              "locator": "Sections on textual history, political thought and reception",
+              "claim": "支持文本形成与后世接受的边界。"
             }
           ]
         }
@@ -116,14 +158,14 @@
     "rightsStatus": "project-commissioned",
     "credit": "思想星图艺术化人物形象"
   },
-  "uncertainty": "早期材料中的生平细节与后世叙述并不完全一致。",
+  "uncertainty": "《论语》由多层材料汇集，孔子生平细节和语录归属并非都能精确确定。仁、礼、君子等术语在不同章句中功能不同；后世儒学的制度化解释不能直接回投到孔子本人。",
   "color": "#82a987",
   "mapVisible": true,
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
-  "version": 1,
+  "version": 2,
   "editedBy": "思想星图编辑组",
-  "reviewedBy": "automated-migration-review/v1",
-  "lastReviewedAt": "2026-07-18",
-  "notes": "由公开演示版数据迁移；后续仍需逐条扩写与学术复核。"
+  "reviewedBy": "source-structure-review/journey-batch-v2",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "思想旅程人物逐人重写第十三位；补充仁、恕、礼、学习、政治与文本形成边界。"
 }

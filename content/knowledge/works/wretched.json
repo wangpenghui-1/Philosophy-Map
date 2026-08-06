@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "fanon",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1961",
   "languages": [],
-  "summary": "《全世界受苦的人》是法农的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "法农在生命最后阶段讨论去殖民、革命暴力、民族意识、独立后的阶级风险和殖民战争造成的精神创伤，强调解放必须改变制度与人的关系。",
   "conceptIds": [
     "concept-殖民",
     "concept-异化",
@@ -28,11 +28,11 @@
   "citations": [
     {
       "sourceId": "src-fanon",
-      "locator": "Introduction and sections on colonial subjectivity and liberation",
-      "claim": "支持《全世界受苦的人》的摘要主张：《全世界受苦的人》是法农的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Section 4: The Wretched of the Earth; Section 5: case studies",
+      "claim": "支持去殖民、民族资产阶级风险及殖民创伤的内容概览。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

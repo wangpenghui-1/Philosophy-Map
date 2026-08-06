@@ -1,0 +1,51 @@
+{
+  "id": "concept-无知之幕",
+  "slug": "无知之幕",
+  "entityType": "concept",
+  "name": "无知之幕",
+  "originalTerms": [
+    "veil of ignorance"
+  ],
+  "summary": "无知之幕让原则选择者暂时不知道自己的阶级、天赋、性别、族群和人生计划，以检验制度是否依赖对偶然优势的偏袒。",
+  "senses": [
+    {
+      "traditionId": "tradition-政治自由主义",
+      "label": "公平选择的知识限制",
+      "explanation": "无知之幕不是要求现实公民失去身份，而是在思想实验中限制可用信息，使任何人都不能按自己将占据的有利位置定制规则。",
+      "citations": [
+        {
+          "sourceId": "src-rawls-theory-justice-1971",
+          "locator": "§§3–4 and §24",
+          "claim": "支持无知之幕在原初状态中的功能。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "john-rawls"
+  ],
+  "workIds": [
+    "theory-justice"
+  ],
+  "traditionIds": [
+    "tradition-政治自由主义"
+  ],
+  "sourceIds": [
+    "src-rawls-theory-justice-1971",
+    "src-companion-american-philosophy"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-rawls-theory-justice-1971",
+      "locator": "§24: The Circumstances of Justice and the Veil of Ignorance",
+      "claim": "支持无知之幕的设定及其公平性目的。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增概念。"
+}

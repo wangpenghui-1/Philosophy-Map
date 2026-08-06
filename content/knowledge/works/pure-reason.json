@@ -7,13 +7,13 @@
   "authorRefs": [
     {
       "personId": "kant",
-      "role": "attributed-author",
-      "certainty": "supported"
+      "role": "author",
+      "certainty": "established"
     }
   ],
   "dateLabel": "1781／1787",
   "languages": [],
-  "summary": "《纯粹理性批判》是康德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。",
+  "summary": "康德在本书中考察经验知识的先验条件，区分现象与物自身，并以范畴、先验演绎和理性批判说明科学知识何以可能、形而上学为何必须受到限制。",
   "conceptIds": [
     "concept-批判",
     "concept-先验",
@@ -28,11 +28,11 @@
   "citations": [
     {
       "sourceId": "src-kant",
-      "locator": "Sections 2 and 5: knowledge, autonomy and freedom",
-      "claim": "支持《纯粹理性批判》的摘要主张：《纯粹理性批判》是康德的重要文本或文本传统。本索引保留原题、成书年代与人物关联，后续将补充版本史、核心概念和可靠译本。"
+      "locator": "Sections 2–4: Critique of Pure Reason, transcendental idealism and deduction",
+      "claim": "支持本书关于经验条件、先验唯心论与知识边界的摘要。"
     }
   ],
-  "contentTier": "index",
+  "contentTier": "standard",
   "editorialStatus": "published",
   "version": 1,
   "editedBy": "思想星图编辑组",

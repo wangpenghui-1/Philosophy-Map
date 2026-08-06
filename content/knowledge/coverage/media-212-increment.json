@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "releaseId": "media-public-212-increment",
+  "status": "release-candidate",
+  "baselineReleaseId": "media-public-210",
+  "baselinePeople": 210,
+  "addedPeople": 2,
+  "publicPeople": 212,
+  "generatedAt": "2026-08-04",
+  "policy": {
+    "generatedImagesPresentedAsHistorical": false,
+    "stylizedDepictionsExplicitlyLabeled": true,
+    "fullImage": {
+      "width": 800,
+      "height": 1000,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "width": 200,
+      "height": 250,
+      "format": "webp"
+    }
+  },
+  "members": [
+    {
+      "personId": "sartre",
+      "slug": "sartre",
+      "media": {
+        "fullSrc": "/media/thinkers/full/sartre.webp",
+        "thumbSrc": "/media/thinkers/thumb/sartre.webp",
+        "alt": "萨特的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "项目委托式艺术化人物形象，参考萨特成年时期的公开历史照片特征进行非写实重构。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    },
+    {
+      "personId": "merleau-ponty",
+      "slug": "merleau-ponty",
+      "media": {
+        "fullSrc": "/media/thinkers/full/merleau-ponty.webp",
+        "thumbSrc": "/media/thinkers/thumb/merleau-ponty.webp",
+        "alt": "梅洛-庞蒂的艺术化人物形象",
+        "objectPosition": "50% 18%",
+        "depictionNote": "项目委托式艺术化人物形象，参考梅洛-庞蒂成年时期的公开历史照片特征进行非写实重构。",
+        "presentationType": "stylized",
+        "authenticity": "interpretive",
+        "rightsStatus": "project-commissioned",
+        "credit": "思想星图艺术化人物形象"
+      }
+    }
+  ]
+}

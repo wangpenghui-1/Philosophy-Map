@@ -1,0 +1,50 @@
+{
+  "id": "concept-反抗",
+  "slug": "反抗",
+  "entityType": "concept",
+  "name": "反抗",
+  "originalTerms": [
+    "la révolte"
+  ],
+  "summary": "反抗是面对荒诞和压迫时既说“不”也守护某种共同价值的行动；它从个人拒绝出发，同时发现人与人共享的尊严和界限。",
+  "senses": [
+    {
+      "traditionId": "tradition-荒诞哲学",
+      "label": "从拒绝到共同价值",
+      "explanation": "加缪认为反抗者拒绝不可接受的处境时，也在肯定一条不应被任何人跨越的界线，因此反抗不能被化约为任意毁灭。",
+      "citations": [
+        {
+          "sourceId": "src-camus-rebel-fr",
+          "locator": "Introduction",
+          "claim": "支持反抗同时包含拒绝、肯定和共同价值的分析。"
+        }
+      ]
+    }
+  ],
+  "personIds": [
+    "camus"
+  ],
+  "workIds": [
+    "the-rebel-camus"
+  ],
+  "traditionIds": [
+    "tradition-荒诞哲学"
+  ],
+  "sourceIds": [
+    "src-camus-rebel-fr",
+    "src-camus-sep"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-camus-sep",
+      "locator": "Section 4.1: Absurdity, Rebellion, and Murder",
+      "claim": "支持加缪由荒诞转向反抗及共同性的思想发展。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/camus-v1",
+  "lastReviewedAt": "2026-08-05"
+}

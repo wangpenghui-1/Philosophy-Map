@@ -1,0 +1,44 @@
+{
+  "id": "sickness-unto-death",
+  "slug": "sickness-unto-death",
+  "entityType": "work",
+  "title": "《致死的疾病》",
+  "originalTitle": "Sygdommen til Døden",
+  "authorRefs": [
+    {
+      "personId": "kierkegaard",
+      "role": "author",
+      "certainty": "established"
+    }
+  ],
+  "dateLabel": "1849",
+  "languages": [
+    "da"
+  ],
+  "summary": "克尔凯郭尔以笔名安提—克利马库斯分析自我与绝望：自我是与自身相关的关系，绝望则表现为不愿成为自己或执意脱离自身来源而成为自己。",
+  "conceptIds": [
+    "concept-存在",
+    "concept-焦虑",
+    "concept-选择"
+  ],
+  "traditionIds": [
+    "tradition-存在哲学"
+  ],
+  "sourceIds": [
+    "src-kierkegaard",
+    "src-kierkegaard-sickness-lowrie"
+  ],
+  "citations": [
+    {
+      "sourceId": "src-kierkegaard-sickness-lowrie",
+      "locator": "Part I, A–C",
+      "claim": "支持自我的关系结构及绝望不同形式的文本定位。"
+    }
+  ],
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "editorial-review/journey-batch-02",
+  "lastReviewedAt": "2026-08-05"
+}

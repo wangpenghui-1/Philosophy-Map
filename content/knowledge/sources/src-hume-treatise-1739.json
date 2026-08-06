@@ -1,0 +1,21 @@
+{
+  "id": "src-hume-treatise-1739",
+  "entityType": "source",
+  "title": "A Treatise of Human Nature",
+  "authors": [
+    "David Hume"
+  ],
+  "sourceType": "primary-text",
+  "publication": "John Noon, London, 1739–1740; Hume Texts Online transcription",
+  "url": "https://davidhume.org/texts/t/",
+  "year": 1739,
+  "defaultLocator": "Book I, Parts I, III–IV; Book II, Part III; Book III, Part I",
+  "language": "en",
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/journey-batch-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "用于定位印象与观念、因果、自我、激情和道德的原典段落；在线转写便于检索，不替代版本校勘。"
+}

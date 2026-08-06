@@ -1,0 +1,38 @@
+{
+  "id": "liang-qichao-watsuji-tetsuro-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "liang-qichao"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "watsuji-tetsuro"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "梁启超与和辻哲郎都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调政治更新需要培养具有权利、责任和公共意识的新民，并重估中国思想史。；后者强调人存在于关系性的间柄之中，伦理运动在个体否定与共同体回归之间展开。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "对应人物与学派条目",
+      "claim": "支持梁启超一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-japanese-philosophy-sourcebook",
+      "locator": "对应人物、学派与选文导言",
+      "claim": "支持和辻哲郎一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

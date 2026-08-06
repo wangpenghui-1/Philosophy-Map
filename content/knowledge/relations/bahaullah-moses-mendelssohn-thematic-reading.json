@@ -1,0 +1,38 @@
+{
+  "id": "bahaullah-moses-mendelssohn-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "bahaullah"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "moses-mendelssohn"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "摩西·门德尔松与巴哈欧拉都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调信念不能由强制产生，国家应保障公民权利而宗教共同体依靠教导与自愿实践。；后者强调启示在历史中渐进展开，人类一体要求超越宗派和民族偏见并建立世界性伦理。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-history-jewish-philosophy",
+      "locator": "对应人物与时期专章",
+      "claim": "支持摩西·门德尔松一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-history-islamic-philosophy",
+      "locator": "对应人物及思想运动专章",
+      "claim": "支持巴哈欧拉一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

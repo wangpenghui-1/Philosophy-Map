@@ -1,0 +1,38 @@
+{
+  "id": "bruno-latour-ifi-amadiume-thematic-reading",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "bruno-latour"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "ifi-amadiume"
+  },
+  "directed": false,
+  "relationType": "thematic-resonance",
+  "evidenceStatus": "supported",
+  "title": "围绕“社会秩序”的两种回答",
+  "explanation": "布鲁诺·拉图尔与伊菲·阿马迪乌梅都触及“社会秩序”，但各自的问题语境和论证目标不同：前者强调行动能力分布于人类与非人行动者之间，现代社会的自然与社会分割需要被重新描述。；后者强调殖民前制度中的身份与权力并不总按二元生理性别排列，殖民治理重塑了性别结构。。把两者并读，是为了比较问题结构，而不是把概念差异抹平。",
+  "note": "编辑性主题共鸣；只用于延伸阅读，不主张历史传播、直接影响或共同术语具有完全相同的含义。",
+  "citations": [
+    {
+      "sourceId": "src-handbook-science-technology-studies",
+      "locator": "行动者网络、女性主义科学研究与相关作者专章",
+      "claim": "支持布鲁诺·拉图尔一侧的思想主张。"
+    },
+    {
+      "sourceId": "src-companion-african-philosophy",
+      "locator": "对应人物、地区传统与论题专章",
+      "claim": "支持伊菲·阿马迪乌梅一侧的思想主张。"
+    }
+  ],
+  "atlasVisibility": false,
+  "contentTier": "index",
+  "editorialStatus": "candidate",
+  "version": 1,
+  "editedBy": "思想星图自动编辑流水线",
+  "reviewedBy": "isolation-review/atlas-213-template-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "由已撤回的算法主题匹配生成；已隔离且不进入人物页或3D关系图，等待逐条学术复核。"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "zhuangzi-guo-xiang",
+  "entityType": "relation",
+  "from": {
+    "entityType": "person",
+    "id": "zhuangzi"
+  },
+  "to": {
+    "entityType": "person",
+    "id": "guo-xiang"
+  },
+  "directed": true,
+  "relationType": "text-transmission",
+  "evidenceStatus": "established",
+  "title": "注本塑造了今天读到的《庄子》",
+  "explanation": "郭象整理注释的三十三篇本成为《庄子》主要传世形态，并以“独化”重释文本，深刻影响后世阅读。",
+  "citations": [
+    {
+      "sourceId": "src-encyclopedia-chinese-philosophy",
+      "locator": "Entries on Zhuangzi and Guo Xiang",
+      "claim": "支持郭象注本在《庄子》传承及解释史中的关键作用。"
+    }
+  ],
+  "atlasVisibility": true,
+  "contentTier": "standard",
+  "editorialStatus": "published",
+  "version": 1,
+  "editedBy": "思想星图编辑组",
+  "reviewedBy": "source-structure-review/pilot-v1",
+  "lastReviewedAt": "2026-08-05",
+  "notes": "八位丰富人物页样板新增关系。"
+}

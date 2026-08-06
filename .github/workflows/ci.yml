@@ -1,16 +1,20 @@
-# Transitional manual fallback. Remove this file after quality-gates.yml has
-# produced a successful automatic run from the default branch.
-name: Quality gates manual fallback
+name: Quality gates
 
 permissions:
   contents: read
   pull-requests: read
 
 concurrency:
-  group: quality-manual-${{ github.ref }}
+  group: quality-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
+  push:
+    branches: [main, "codex/**", "agent/**"]
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+  merge_group:
   workflow_dispatch:
 
 jobs:
@@ -52,3 +56,12 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+
+  dependency-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate

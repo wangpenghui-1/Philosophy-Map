@@ -1,3 +1,4 @@
+# Keep this path stable: GitHub registers workflow automation by file path.
 name: Quality gates
 
 permissions:

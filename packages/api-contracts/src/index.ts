@@ -129,6 +129,17 @@ export const createSourceDraftSchema = sourceFieldsSchema.extend({
 export const updateSourceDraftSchema = sourceFieldsSchema.partial()
   .refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
 
+const relationCitationSchema = z.object({ sourceId: z.string().trim().min(1).max(220), locator: z.string().trim().min(1).max(1_000), claim: z.string().trim().min(1).max(2_000) });
+const relationFieldsSchema = z.object({
+  title: z.string().trim().min(1).max(300), explanation: z.string().trim().min(40).max(8_000), note: z.string().trim().max(4_000).nullable().optional(),
+  evidenceStatus: z.enum(["established", "supported", "disputed"]), atlasVisibility: z.boolean(), citations: z.array(relationCitationSchema).max(50),
+});
+export const createRelationDraftSchema = relationFieldsSchema.extend({
+  stableKey: z.string().trim().min(1).max(220), fromEntityId: z.string().trim().min(1).max(180), toEntityId: z.string().trim().min(1).max(180),
+  directed: z.boolean(), relationType: z.enum(["direct-influence", "text-transmission", "critique", "lineage", "thematic-resonance", "authorship", "participation", "conceptualization"]),
+}).refine((value) => value.relationType !== "thematic-resonance" || !value.directed, { message: "主题共鸣必须是非方向关系", path: ["directed"] });
+export const updateRelationDraftSchema = relationFieldsSchema.partial().refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
+
 export const progressUpdateSchema = z.object({
   progress: z.number().min(0).max(1),
   anchor: z.string().trim().max(220).nullable().optional(),

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { publicationActionSchema } from "../packages/api-contracts/src/index.ts";
-import { auditPayloadCitations, evaluateEditorialQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
+import { auditPayloadCitations, evaluateEditorialQuality, evaluateRelationQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
 import { isPrivateAddress } from "../apps/worker/src/outbox.ts";
 
 test("publication gate blocks standard content without sections or sources", () => {
@@ -109,4 +109,10 @@ test("source link checks reject local and private network targets", () => {
   assert.equal(isPrivateAddress("192.168.1.20"), true);
   assert.equal(isPrivateAddress("::1"), true);
   assert.equal(isPrivateAddress("8.8.8.8"), false);
+});
+
+test("relation gate separates thematic resonance from directed evidence claims", () => {
+  const report = evaluateRelationQuality({ fromEntityId: "a", toEntityId: "b", directed: true, relationType: "thematic-resonance", evidenceStatus: "disputed", title: "主题比较", explanation: "这是一段长度足够的关系解释，用来说明两种思想只是在问题结构上形成比较，并不主张存在历史影响。", citations: [{ sourceId: "source-a", locator: "1", claim: "支持比较" }] }, "2026-08-07T00:00:00.000Z");
+  assert.equal(report.readyToPublish, false);
+  assert.deepEqual(report.findings.map((item) => item.code), ["relation.resonance-directed", "relation.dispute-note-missing"]);
 });

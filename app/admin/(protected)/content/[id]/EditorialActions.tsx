@@ -12,22 +12,24 @@ const labels: Record<EditorialStatus, string> = {
   published: "发布版本",
 };
 
-export function EditorialActions({ id, etag, transitions }: { id: string; etag: string; transitions: EditorialStatus[] }) {
+export function EditorialActions({ id, etag, transitions, endpoint = "entity-versions", revision = false }: { id: string; etag: string; transitions: EditorialStatus[]; endpoint?: "entity-versions" | "relation-versions"; revision?: boolean }) {
   const router = useRouter();
-  const [pending, setPending] = useState<EditorialStatus>();
+  const [pending, setPending] = useState<EditorialStatus | "revision">();
   const [error, setError] = useState<string>();
 
-  async function transition(to: EditorialStatus) {
-    setPending(to);
+  async function act(to?: EditorialStatus) {
+    const action = to ?? "revision";
+    setPending(action);
     setError(undefined);
     try {
-      const response = await fetch(`/api/admin/v1/entity-versions/${id}/transition`, {
+      const response = await fetch(`/api/admin/v1/${endpoint}/${id}/${to ? "transition" : "revision"}`, {
         method: "POST",
-        headers: { "content-type": "application/json", "if-match": etag },
-        body: JSON.stringify({ to, note: `通过管理后台推进至 ${to}` }),
+        headers: { "content-type": "application/json", ...(to ? { "if-match": etag } : {}) },
+        body: JSON.stringify(to ? { to, note: `通过管理后台推进至 ${to}` } : {}),
       });
-      const result = await response.json() as { title?: string; detail?: string };
+      const result = await response.json() as { data?: { id?: string }; title?: string; detail?: string };
       if (!response.ok) throw new Error(result.detail ?? result.title ?? "状态更新失败。 ");
+      if (!to && result.data?.id && endpoint === "relation-versions") router.push(`/admin/relations/${result.data.id}`);
       router.refresh();
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "状态更新失败。 ");
@@ -36,10 +38,11 @@ export function EditorialActions({ id, etag, transitions }: { id: string; etag: 
     }
   }
 
-  if (!transitions.length) return <p className={styles.muted}>当前角色没有可执行的下一步动作。</p>;
+  if (!transitions.length && !revision) return <p className={styles.muted}>当前角色没有可执行的下一步动作。</p>;
   return (
     <div className={styles.editorialActions}>
-      {transitions.map((to) => <button disabled={Boolean(pending)} key={to} onClick={() => transition(to)} type="button">{pending === to ? "正在处理…" : labels[to]}</button>)}
+      {transitions.map((to) => <button disabled={Boolean(pending)} key={to} onClick={() => act(to)} type="button">{pending === to ? "正在处理…" : labels[to]}</button>)}
+      {revision && <button disabled={Boolean(pending)} onClick={() => act()} type="button">{pending === "revision" ? "正在创建…" : "创建后继修订"}</button>}
       {error && <p className={styles.formError} role="alert">{error}</p>}
     </div>
   );

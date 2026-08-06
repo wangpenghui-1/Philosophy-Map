@@ -1,7 +1,7 @@
 import type { AuthPrincipal } from "@atlas/auth";
 import { databaseSchema, getDatabase } from "@atlas/db";
 import { evaluateEditorialQuality, type EditorialStatus, type EntityType } from "@atlas/domain";
-import { and, count, desc, eq, ilike } from "drizzle-orm";
+import { and, count, desc, eq, ilike, inArray } from "drizzle-orm";
 import { knowledgeBase, knowledgeIndex } from "../../_data/knowledge";
 
 export interface AdminContentRow {
@@ -320,4 +320,58 @@ export async function getAdminSourceHistory(principal: AuthPrincipal, sourceId: 
     updatedAt: databaseSchema.sourceVersions.updatedAt,
   }).from(databaseSchema.sourceVersions).where(eq(databaseSchema.sourceVersions.sourceId, sourceId))
     .orderBy(desc(databaseSchema.sourceVersions.version));
+}
+
+const previewEntityTitle = new Map([
+  ...knowledgeBase.people.map((item) => [item.id, item.names.display] as const), ...knowledgeBase.concepts.map((item) => [item.id, item.name] as const),
+  ...knowledgeBase.traditions.map((item) => [item.id, item.name] as const), ...knowledgeBase.works.map((item) => [item.id, item.title] as const),
+]);
+
+async function getDatabaseEntityTitles(ids: string[]) {
+  if (!ids.length) return new Map<string, string>();
+  const rows = await getDatabase().select({
+    id: databaseSchema.entities.id,
+    title: databaseSchema.entityVersions.title,
+  }).from(databaseSchema.entities)
+    .innerJoin(databaseSchema.entityVersions, eq(databaseSchema.entityVersions.id, databaseSchema.entities.currentPublishedVersionId))
+    .where(inArray(databaseSchema.entities.id, ids));
+  return new Map(rows.map((row) => [row.id, row.title]));
+}
+
+export async function listAdminRelations(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return knowledgeBase.relations.map((item) => ({ id: item.id, versionId: item.id, title: item.title, directed: item.directed, relationType: item.relationType, evidenceStatus: item.evidenceStatus, status: item.editorialStatus, fromTitle: previewEntityTitle.get(item.from.id) ?? item.from.id, toTitle: previewEntityTitle.get(item.to.id) ?? item.to.id }));
+  const rows = await getDatabase().select({ id: databaseSchema.relations.stableKey, versionId: databaseSchema.relationVersions.id, title: databaseSchema.relationVersions.title, directed: databaseSchema.relations.directed, relationType: databaseSchema.relations.relationType, evidenceStatus: databaseSchema.relationVersions.evidenceStatus, status: databaseSchema.relationVersions.editorialStatus, fromEntityId: databaseSchema.relations.fromEntityId, toEntityId: databaseSchema.relations.toEntityId }).from(databaseSchema.relationVersions).innerJoin(databaseSchema.relations, eq(databaseSchema.relations.id, databaseSchema.relationVersions.relationId)).orderBy(desc(databaseSchema.relationVersions.updatedAt)).limit(150);
+  const titles = await getDatabaseEntityTitles([...new Set(rows.flatMap((row) => [row.fromEntityId, row.toEntityId]))]);
+  return rows.map((row) => ({ ...row, fromTitle: titles.get(row.fromEntityId) ?? row.fromEntityId, toTitle: titles.get(row.toEntityId) ?? row.toEntityId }));
+}
+export async function getAdminRelationVersion(principal: AuthPrincipal, id: string) {
+  if (principal.mode === "local-preview") {
+    const item = knowledgeBase.relations.find((relation) => relation.id === id); if (!item) return null; const date = new Date(`${item.lastReviewedAt ?? "1970-01-01"}T00:00:00.000Z`);
+    return { id: item.id, relationId: item.id, currentPublishedVersionId: item.id, stableKey: item.id, version: item.version, title: item.title, explanation: item.explanation, note: item.note ?? null, directed: item.directed, relationType: item.relationType, evidenceStatus: item.evidenceStatus as "established" | "supported" | "disputed", editorialStatus: item.editorialStatus, atlasVisibility: item.atlasVisibility, fromEntityId: item.from.id, toEntityId: item.to.id, fromTitle: previewEntityTitle.get(item.from.id) ?? item.from.id, toTitle: previewEntityTitle.get(item.to.id) ?? item.to.id, citations: item.citations, updatedAt: date };
+  }
+  const [record] = await getDatabase().select({ id: databaseSchema.relationVersions.id, relationId: databaseSchema.relations.id, stableKey: databaseSchema.relations.stableKey, currentPublishedVersionId: databaseSchema.relations.currentPublishedVersionId, version: databaseSchema.relationVersions.version, title: databaseSchema.relationVersions.title, explanation: databaseSchema.relationVersions.explanation, note: databaseSchema.relationVersions.note, directed: databaseSchema.relations.directed, relationType: databaseSchema.relations.relationType, evidenceStatus: databaseSchema.relationVersions.evidenceStatus, editorialStatus: databaseSchema.relationVersions.editorialStatus, atlasVisibility: databaseSchema.relationVersions.atlasVisibility, fromEntityId: databaseSchema.relations.fromEntityId, toEntityId: databaseSchema.relations.toEntityId, updatedAt: databaseSchema.relationVersions.updatedAt }).from(databaseSchema.relationVersions).innerJoin(databaseSchema.relations, eq(databaseSchema.relations.id, databaseSchema.relationVersions.relationId)).where(eq(databaseSchema.relationVersions.id, id)).limit(1); if (!record) return null;
+  const [citations, titles] = await Promise.all([
+    getDatabase().select({ sourceId: databaseSchema.sources.stableKey, locator: databaseSchema.citations.locator, claim: databaseSchema.citations.claim }).from(databaseSchema.citations).innerJoin(databaseSchema.sourceVersions, eq(databaseSchema.sourceVersions.id, databaseSchema.citations.sourceVersionId)).innerJoin(databaseSchema.sources, eq(databaseSchema.sources.id, databaseSchema.sourceVersions.sourceId)).where(eq(databaseSchema.citations.relationVersionId, id)),
+    getDatabaseEntityTitles([record.fromEntityId, record.toEntityId]),
+  ]);
+  return { ...record, fromTitle: titles.get(record.fromEntityId) ?? record.fromEntityId, toTitle: titles.get(record.toEntityId) ?? record.toEntityId, citations };
+}
+export async function getAdminRelationHistory(principal: AuthPrincipal, relationId: string) {
+  if (principal.mode === "local-preview") {
+    const relation = await getAdminRelationVersion(principal, relationId);
+    return relation ? [{ id: relation.id, version: relation.version, title: relation.title, editorialStatus: relation.editorialStatus, updatedAt: relation.updatedAt }] : [];
+  }
+  return getDatabase().select({
+    id: databaseSchema.relationVersions.id,
+    version: databaseSchema.relationVersions.version,
+    title: databaseSchema.relationVersions.title,
+    editorialStatus: databaseSchema.relationVersions.editorialStatus,
+    updatedAt: databaseSchema.relationVersions.updatedAt,
+  }).from(databaseSchema.relationVersions)
+    .where(eq(databaseSchema.relationVersions.relationId, relationId))
+    .orderBy(desc(databaseSchema.relationVersions.version));
+}
+export async function getAdminRelationEntityOptions(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return knowledgeIndex.map((item) => ({ id: item.id, title: item.title, entityType: item.entityType }));
+  return getDatabase().select({ id: databaseSchema.entities.stableKey, title: databaseSchema.entityVersions.title, entityType: databaseSchema.entities.entityType }).from(databaseSchema.entities).innerJoin(databaseSchema.entityVersions, eq(databaseSchema.entityVersions.id, databaseSchema.entities.currentPublishedVersionId)).orderBy(databaseSchema.entityVersions.title);
 }

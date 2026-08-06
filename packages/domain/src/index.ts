@@ -336,3 +336,21 @@ export function evaluateSourceQuality(input: SourceQualityInput, checkedAt = new
   if (!input.publicationYear) findings.push({ code: "source.year-missing", severity: "warning", message: "建议补充出版年份。" });
   return { readyToPublish: !findings.some((finding) => finding.severity === "blocker"), findings, checkedAt };
 }
+
+export interface RelationQualityInput {
+  fromEntityId: string; toEntityId: string; directed: boolean; relationType: string;
+  evidenceStatus: "established" | "supported" | "disputed"; title: string; explanation: string;
+  note?: string | null; citations: Array<{ sourceId: string; locator: string; claim: string }>;
+}
+
+export function evaluateRelationQuality(input: RelationQualityInput, checkedAt = new Date().toISOString()): EditorialQualityReport {
+  const findings: EditorialQualityFinding[] = [];
+  if (!input.fromEntityId || !input.toEntityId || input.fromEntityId === input.toEntityId) findings.push({ code: "relation.endpoints-invalid", severity: "blocker", message: "关系必须连接两个不同的有效实体。" });
+  if (!input.title.trim()) findings.push({ code: "relation.title-missing", severity: "blocker", message: "关系标题不能为空。" });
+  if (input.explanation.trim().length < 40) findings.push({ code: "relation.explanation-short", severity: "blocker", message: "关系说明至少需要40个字符。" });
+  if (input.relationType === "thematic-resonance" && input.directed) findings.push({ code: "relation.resonance-directed", severity: "blocker", message: "主题共鸣必须是非方向关系。" });
+  if (input.citations.length === 0) findings.push({ code: "relation.citations-missing", severity: "blocker", message: "关系至少需要一条可追溯引用。" });
+  if (input.citations.some((item) => !item.sourceId.trim() || !item.locator.trim() || !item.claim.trim())) findings.push({ code: "relation.citation-incomplete", severity: "blocker", message: "关系引用必须包含来源、定位和支持主张。" });
+  if (input.evidenceStatus === "disputed" && !input.note?.trim()) findings.push({ code: "relation.dispute-note-missing", severity: "blocker", message: "争议关系必须说明争议边界。" });
+  return { readyToPublish: !findings.some((item) => item.severity === "blocker"), findings, checkedAt };
+}

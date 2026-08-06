@@ -14,6 +14,7 @@ test("local owner can enter and leave the read-only admin preview", async ({ pag
   await expect(page.getByText("康德", { exact: true }).first()).toBeVisible();
   await page.getByRole("link", { name: "康德", exact: true }).first().click();
   await expect(page.getByRole("heading", { name: "发布质量门禁" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "逐段引用工作台" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "版本历史" })).toBeVisible();
   await expect(page.getByRole("button", { name: "创建后继修订" })).toHaveCount(0);
 

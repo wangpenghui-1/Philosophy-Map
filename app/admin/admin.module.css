@@ -54,7 +54,7 @@
 .metrics span, .metrics small { color: var(--admin-muted); font-size: 11px; }
 .metrics strong { color: var(--admin-bronze); font: 44px var(--font-serif, serif); font-weight: 400; }
 
-.panel, .editorForm, .workflowBar, .qualityPanel, .publicationControls { border: 1px solid var(--admin-line); background: rgba(12,14,11,.84); }
+.panel, .editorForm, .workflowBar, .qualityPanel, .publicationControls, .citationWorkbench { border: 1px solid var(--admin-line); background: rgba(12,14,11,.84); }
 .panelHeading { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 22px; border-bottom: 1px solid var(--admin-line); }
 .panelHeading h2 { margin: 4px 0 0; font: 24px var(--font-serif, serif); font-weight: 450; }
 .panelHeading a, .panelHeading > span { color: var(--admin-bronze); font-size: 11px; text-decoration: none; }
@@ -121,6 +121,23 @@
 .dangerAction button { justify-self: end; border-color: rgba(224,154,143,.55); color: #e09a8f; }
 .currentPointer { color: #8fc7a0; font-size: 10px; font-weight: 500; }
 
+.citationWorkbench { margin-top: 16px; padding-bottom: 24px; }
+.citationSections { display: grid; gap: 18px; padding: 20px 22px 0; }
+.citationSections article { border: 1px solid var(--admin-line); }
+.citationSections h3 { margin: 0; padding: 13px 16px; border-bottom: 1px solid var(--admin-line); color: var(--admin-bronze); font: 16px var(--font-serif, serif); font-weight: 450; }
+.citationParagraph { padding: 16px; border-top: 1px solid rgba(222,210,178,.08); }
+.citationParagraph:first-of-type { border-top: 0; }
+.citationParagraph > p { margin: 0 0 14px; color: #c8c8c0; font-size: 12px; line-height: 1.75; }
+.citationList { display: grid; gap: 8px; }
+.citationEditor { display: grid; grid-template-columns: minmax(180px, 1.2fr) minmax(120px, .7fr) minmax(220px, 1.5fr) auto; align-items: end; gap: 8px; }
+.citationEditor label { display: grid; gap: 5px; }
+.citationEditor label span { color: var(--admin-muted); font-size: 9px; }
+.citationEditor input, .citationEditor select { width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid var(--admin-line); background: #080907; color: var(--admin-paper); }
+.citationEditor button, .addCitation { padding: 9px 11px; border: 1px solid var(--admin-line); background: transparent; color: var(--admin-muted); cursor: pointer; }
+.addCitation { margin-top: 10px; color: var(--admin-bronze); border-color: rgba(198,169,104,.35); }
+.citationWorkbench > .formActions { padding: 0 22px; }
+.citationWorkbench > .formActions button { padding: 11px 15px; border: 1px solid var(--admin-bronze); background: var(--admin-bronze); color: #11120f; cursor: pointer; font-weight: 600; }
+
 .loginPage { display: grid; min-height: 100vh; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 70px 20px; }
 .loginBack { position: absolute; top: 24px; left: 24px; color: var(--admin-muted); text-decoration: none; font-size: 12px; }
 .loginCard { width: min(520px, calc(100vw - 40px)); padding: clamp(28px, 5vw, 50px); border: 1px solid var(--admin-line-strong); background: rgba(10,12,9,.9); box-shadow: 0 28px 100px rgba(0,0,0,.44); }
@@ -156,4 +173,6 @@
   .qualityFindings li code { grid-column: 2; }
   .publicationControls { grid-template-columns: 1fr; }
   .publicationControls > button { width: 100%; }
+  .citationEditor { grid-template-columns: 1fr; }
+  .citationEditor button { justify-self: start; }
 }

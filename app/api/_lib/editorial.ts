@@ -1,13 +1,28 @@
 import { createHash } from "node:crypto";
-import { and, eq, max } from "drizzle-orm";
+import { and, eq, inArray, max } from "drizzle-orm";
 import type { AuthPrincipal } from "@atlas/auth";
 import { requirePermission } from "@atlas/auth";
 import {
   assertEditorialTransition,
+  auditPayloadCitations,
   evaluateEditorialQuality,
   type EditorialStatus,
 } from "@atlas/domain";
 import { databaseSchema, getDatabase } from "@atlas/db";
+
+async function assertPayloadCitationsAreValid(payload: unknown) {
+  const audit = auditPayloadCitations(payload);
+  if (audit.errors.length) throw Object.assign(new Error(audit.errors.join(" ")), { status: 422 });
+  if (!audit.sourceIds.length) return;
+  const rows = await getDatabase().select({ stableKey: databaseSchema.sources.stableKey })
+    .from(databaseSchema.sources)
+    .where(inArray(databaseSchema.sources.stableKey, audit.sourceIds));
+  const found = new Set(rows.map((row) => row.stableKey));
+  const missing = audit.sourceIds.filter((sourceId) => !found.has(sourceId));
+  if (missing.length) {
+    throw Object.assign(new Error(`引用了不存在的来源：${missing.join("、")}`), { status: 422 });
+  }
+}
 
 export function versionEtag(record: { id: string; updatedAt: Date }) {
   const digest = createHash("sha256").update(`${record.id}:${record.updatedAt.toISOString()}`).digest("hex").slice(0, 20);
@@ -34,6 +49,7 @@ export async function createEntityDraft(
   },
 ) {
   requirePermission(principal, "knowledge:candidate:create");
+  await assertPayloadCitationsAreValid(input.payload);
   const database = getDatabase();
   return database.transaction(async (transaction) => {
     const [existing] = await transaction.select().from(databaseSchema.entities).where(and(
@@ -87,6 +103,7 @@ export async function updateEntityDraft(
   }>,
 ) {
   requirePermission(principal, "knowledge:draft:edit");
+  if (input.payload) await assertPayloadCitationsAreValid(input.payload);
   const database = getDatabase();
   const [current] = await database.select().from(databaseSchema.entityVersions)
     .where(eq(databaseSchema.entityVersions.id, id)).limit(1);

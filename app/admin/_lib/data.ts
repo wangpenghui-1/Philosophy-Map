@@ -18,6 +18,13 @@ export interface AdminContentRow {
   publicHref?: string;
 }
 
+export interface AdminSourceOption {
+  id: string;
+  title: string;
+  publication: string;
+  language: string;
+}
+
 interface AdminDashboardData {
   mode: "local-preview" | "database";
   catalog: Record<string, number>;
@@ -218,4 +225,26 @@ export async function getAdminVersionHistory(principal: AuthPrincipal, entityId:
 
 export function getAdminQualityReport(version: NonNullable<Awaited<ReturnType<typeof getAdminVersion>>>) {
   return evaluateEditorialQuality(version);
+}
+
+export async function getAdminSourceOptions(principal: AuthPrincipal): Promise<AdminSourceOption[]> {
+  if (principal.mode === "local-preview") {
+    return knowledgeBase.sources.map((source) => ({
+      id: source.id,
+      title: source.title,
+      publication: source.publication,
+      language: source.language,
+    })).sort((left, right) => left.title.localeCompare(right.title, "zh-CN"));
+  }
+  return getDatabase().select({
+    id: databaseSchema.sources.stableKey,
+    title: databaseSchema.sourceVersions.title,
+    publication: databaseSchema.sourceVersions.publication,
+    language: databaseSchema.sourceVersions.language,
+  }).from(databaseSchema.sources)
+    .innerJoin(
+      databaseSchema.sourceVersions,
+      eq(databaseSchema.sourceVersions.id, databaseSchema.sources.currentPublishedVersionId),
+    )
+    .orderBy(databaseSchema.sourceVersions.title);
 }

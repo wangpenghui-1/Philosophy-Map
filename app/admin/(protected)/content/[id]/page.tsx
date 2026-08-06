@@ -4,9 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { versionEtag } from "../../../../api/_lib/editorial";
 import { requireAdminPrincipal } from "../../../_lib/auth";
-import { getAdminQualityReport, getAdminVersion, getAdminVersionHistory } from "../../../_lib/data";
+import { getAdminQualityReport, getAdminSourceOptions, getAdminVersion, getAdminVersionHistory } from "../../../_lib/data";
 import styles from "../../../admin.module.css";
 import { DraftEditor } from "./DraftEditor";
+import { CitationWorkbench } from "./CitationWorkbench";
 import { EditorialActions } from "./EditorialActions";
 import { PublicationControls } from "./PublicationControls";
 
@@ -28,7 +29,10 @@ export default async function AdminContentVersionPage({ params }: { params: Prom
   const principal = await requireAdminPrincipal(`/admin/content/${id}`);
   const version = await getAdminVersion(principal, id);
   if (!version) notFound();
-  const history = await getAdminVersionHistory(principal, version.entityId);
+  const [history, sources] = await Promise.all([
+    getAdminVersionHistory(principal, version.entityId),
+    getAdminSourceOptions(principal),
+  ]);
   const quality = getAdminQualityReport(version);
   const etag = versionEtag(version);
   const canWrite = principal.mode !== "local-preview";
@@ -69,6 +73,7 @@ export default async function AdminContentVersionPage({ params }: { params: Prom
         ) : <p className={styles.qualityEmpty}>当前版本通过基础结构、正文和来源检查。</p>}
       </section>
       <DraftEditor editable={editable} etag={etag} version={version} />
+      <CitationWorkbench editable={editable} etag={etag} id={version.id} payload={version.payload} sources={sources} />
       {version.editorialStatus === "published" && (
         <PublicationControls
           canCreateRevision={canWrite && hasPermission(principal.role, "knowledge:candidate:create")}

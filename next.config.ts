@@ -3,6 +3,15 @@ import path from "node:path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  transpilePackages: [
+    "@atlas/domain",
+    "@atlas/api-contracts",
+    "@atlas/db",
+    "@atlas/knowledge",
+    "@atlas/ai",
+    "@atlas/auth",
+    "@atlas/observability",
+  ],
   poweredByHeader: false,
   compress: true,
   staticPageGenerationTimeout: 180,

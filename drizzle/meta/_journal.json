@@ -1,5 +1,20 @@
 {
   "version": "7",
-  "dialect": "sqlite",
-  "entries": []
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1786025124552,
+      "tag": "0000_striped_maestro",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1786029763011,
+      "tag": "0001_calm_shooting_star",
+      "breakpoints": true
+    }
+  ]
 }

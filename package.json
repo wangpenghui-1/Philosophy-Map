@@ -2,6 +2,10 @@
   "name": "atlas-of-ideas",
   "version": "0.4.0",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "engines": {
     "node": "22.x"
   },
@@ -26,12 +30,20 @@
     "content:batch:apply": "node scripts/content-batch-runner.mjs --batch 1 --apply",
     "content:batch:retry": "node scripts/content-batch-runner.mjs --batch 1 --retry",
     "content:batch:report": "node scripts/content-batch-runner.mjs --batch 1 --limit 0",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:shadow:check": "node --experimental-strip-types scripts/import-knowledge-shadow.mjs",
+    "db:shadow:apply": "node --experimental-strip-types scripts/import-knowledge-shadow.mjs --apply",
+    "admin:bootstrap": "node --experimental-strip-types scripts/bootstrap-admin.mjs",
+    "backend:shadow-check": "node --experimental-strip-types --test tests/backend-shadow.test.mjs",
+    "worker:run-once": "node --experimental-strip-types apps/worker/src/run-once.ts",
     "predev": "npm run content:build",
     "dev": "next dev --webpack",
     "prebuild": "npm run content:build",
     "build": "next build --webpack",
     "start": "next start",
-    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/western-core-quotes.test.mjs tests/bundle-budget.test.mjs tests/globe-marker-layout.test.mjs tests/atlas-visual-policy.test.mjs tests/journeys.test.mjs tests/content-production.test.mjs tests/review-pipeline.test.mjs",
+    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/western-core-quotes.test.mjs tests/bundle-budget.test.mjs tests/globe-marker-layout.test.mjs tests/atlas-visual-policy.test.mjs tests/journeys.test.mjs tests/content-production.test.mjs tests/review-pipeline.test.mjs tests/backend-shadow.test.mjs",
     "test:e2e": "NO_PROXY=localhost,127.0.0.1 no_proxy=localhost,127.0.0.1 playwright test",
     "test:e2e:update": "NO_PROXY=localhost,127.0.0.1 no_proxy=localhost,127.0.0.1 playwright test --update-snapshots",
     "test:all": "npm run lint && npm test && npm run test:e2e",
@@ -47,9 +59,11 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@react-three/postprocessing": "^3.0.4",
+    "drizzle-orm": "^0.45.2",
     "gsap": "^3.15.0",
     "motion": "^12.42.2",
-    "next": "16.2.6",
+    "next": "^16.3.0",
+    "postgres": "^3.4.9",
     "postprocessing": "^6.39.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
@@ -67,13 +81,14 @@
     "@types/react-dom": "19.2.3",
     "@types/three": "^0.184.0",
     "@types/topojson-client": "^3.1.5",
+    "drizzle-kit": "^0.31.10",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "16.3.0",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   },
   "overrides": {
-    "postcss": "8.5.10"
+    "postcss": "8.5.26"
   },
   "type": "module"
 }

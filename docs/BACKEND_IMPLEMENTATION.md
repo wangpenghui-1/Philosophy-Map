@@ -91,3 +91,12 @@ npm run admin:bootstrap
 3. 为公开会员接入邮件登录或OIDC，并完善会话与设备管理。
 4. 接入Redis限流、Inngest事件传递和OpenTelemetry/Sentry导出器。
 5. 以固定哲学问答集运行AI引用精确率、覆盖率和拒答评测，再开放公开入口。
+
+## 生产运行与灾备
+
+- 公共存活探针：`GET /api/health/live`；依赖就绪探针：`GET /api/health/ready`。
+- 管理员运行页：`/admin/system`；详细API需要`system:operate`，显示关键集成、Outbox和24小时AI费用。
+- `REQUIRE_PRODUCTION_SERVICES=1`时，数据库、Redis、媒体存储、邮件、扫描、AI和Sentry缺失或异常会使ready返回503；公开静态快照仍独立可读。
+- 备份与恢复策略位于`infra/backup-policy.json`和`infra/runbooks/`，目标RPO不超过24小时、RTO不超过4小时。
+- `npm run backup:verify`只检查策略；带绝对归档路径的`backup:verify:archive`检查时效、SHA-256和归档可读性。
+- `npm run restore:drill`默认只输出计划；执行模式只接受空的、带`atlas_restore_`前缀且不同于生产的临时数据库，不会清库或自动删除目标。

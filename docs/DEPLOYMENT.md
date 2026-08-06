@@ -19,7 +19,17 @@
 
 ## 环境变量
 
-当前公开站点不需要运行时密钥。后续功能如引入数据库、分析服务或外部API，应分别在Vercel的Development、Preview和Production环境中配置，并在本文记录变量名称、用途和是否必需。不要把真实值写入仓库、PR描述或构建日志。
+公开静态阅读不需要运行时密钥；会员、后台、AI和媒体能力需要生产服务。变量按职责分组：
+
+- 核心：`DATABASE_URL`、`AUTH_SECRET`、`APP_BASE_URL`、`APP_ENV=production`。
+- 账户：`RESEND_API_KEY`、`EMAIL_FROM`。
+- 限流：`UPSTASH_REDIS_REST_URL`、`UPSTASH_REDIS_REST_TOKEN`。
+- AI：`OPENAI_API_KEY`、模型名、Token上限和价格配置。
+- 媒体：S3/R2连接、私有桶、公开媒体域名、扫描服务地址与Token。
+- 监控：Sentry服务端/客户端DSN、构建期source map凭据、OpenTelemetry导出端点。
+- 就绪门禁：生产设置`REQUIRE_PRODUCTION_SERVICES=1`；缺少关键依赖时ready返回503，但已部署公开快照仍可读。
+
+所有值分别配置到Vercel Development、Preview和Production；Preview使用隔离数据库与桶，不能连接生产数据。不要把真实值写入仓库、PR描述、构建日志或备份报告。
 
 ## 持续部署
 
@@ -28,6 +38,8 @@ GitHub Actions负责内容完整性、Lint、TypeScript、生产构建、数据�
 1. 为Pull Request生成隔离的Preview URL；
 2. 在`main`更新后创建Production部署；
 3. 保留可即时回滚的历史部署。
+
+构建后运行`npm run release:manifest`并把`artifacts/production/release-manifest.json`保存为发布证据。Production至少保留三个已验证部署。
 
 部署验证必须同时核对Git提交、Vercel部署状态和正式URL，不能只根据环境变量或控制台配置推断上线成功。
 
@@ -40,6 +52,9 @@ npm run lint
 npm run typecheck
 npm test
 npm run test:e2e
+npm run backup:verify
+npm run restore:drill
+npm run release:manifest
 ```
 
 正式发布前使用`npm run review:full`生成完整审核报告。
@@ -49,3 +64,5 @@ Playwright默认使用独立的`3100`端口启动全新的Next.js生产服务器
 ## 回滚
 
 优先在Vercel中把上一个已验证的Production部署重新提升为正式版本，恢复服务后再通过普通revert提交修复`main`。不要通过force push重写生产历史。
+
+数据库迁移采用expand/migrate/contract：先新增兼容结构，再迁移数据并部署兼容代码，最后在至少两个稳定发布周期后移除旧结构。只有数据损坏且代码回滚无法解决时才执行PITR或备份恢复，流程见`infra/runbooks/backup-and-restore.md`。

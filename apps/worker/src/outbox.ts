@@ -1,4 +1,6 @@
 import { and, asc, eq, lte } from "drizzle-orm";
+import { lookup } from "node:dns/promises";
+import { isIP } from "node:net";
 import { closeDatabase, databaseSchema, getDatabase } from "@atlas/db";
 import { logEvent } from "@atlas/observability";
 
@@ -21,10 +23,31 @@ const refreshKnowledgeProjection: OutboxHandler = async (event) => {
     });
 };
 
+export function isPrivateAddress(address: string) {
+  if (address === "::1" || address.startsWith("fc") || address.startsWith("fd") || address.startsWith("fe80:")) return true;
+  if (isIP(address) !== 4) return false;
+  const [a, b] = address.split(".").map(Number);
+  return a === 10 || a === 127 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) || (a === 192 && b === 168);
+}
+
+const checkSourceLink: OutboxHandler = async (event) => {
+  const payload = event.payload as { url?: string };
+  if (!payload.url) throw new Error("Source link-check event has no URL.");
+  const url = new URL(payload.url);
+  if (!["http:", "https:"].includes(url.protocol)) throw new Error("Unsupported source URL protocol.");
+  const addresses = await lookup(url.hostname, { all: true });
+  if (!addresses.length || addresses.some((item) => isPrivateAddress(item.address))) throw new Error("Source URL resolves to a private address.");
+  const response = await fetch(url, { method: "HEAD", redirect: "manual", signal: AbortSignal.timeout(8_000) });
+  if (response.status < 200 || response.status >= 400) throw new Error(`Source URL returned HTTP ${response.status}.`);
+  logEvent("info", "Source URL check succeeded.", { module: "worker", operation: event.eventType, aggregateId: event.aggregateId, status: response.status });
+};
+
 const defaultHandlers: Record<string, OutboxHandler> = {
   "knowledge.entity.published": refreshKnowledgeProjection,
   "knowledge.entity.withdrawn": refreshKnowledgeProjection,
   "knowledge.entity.rolled-back": refreshKnowledgeProjection,
+  "knowledge.source.published": refreshKnowledgeProjection,
+  "source.link-check.requested": checkSourceLink,
 };
 
 export async function processOutboxBatch(

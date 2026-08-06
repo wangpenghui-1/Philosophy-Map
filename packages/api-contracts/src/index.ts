@@ -109,6 +109,26 @@ export const updateEntityDraftSchema = z.object({
   payload: z.record(z.string(), z.unknown()).optional(),
 }).refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
 
+const sourceFieldsSchema = z.object({
+  title: z.string().trim().min(1).max(500),
+  authors: z.array(z.string().trim().min(1).max(200)).min(1).max(50),
+  sourceType: z.string().trim().min(1).max(60),
+  publication: z.string().trim().min(1).max(1_000),
+  publicationYear: z.number().int().min(-3000).max(3000).nullable().optional(),
+  url: z.string().trim().url().refine((value) => ["http:", "https:"].includes(new URL(value).protocol), "仅支持 HTTP 或 HTTPS URL").nullable().optional(),
+  doi: z.string().trim().max(180).nullable().optional(),
+  isbn: z.string().trim().max(80).nullable().optional(),
+  language: z.string().trim().min(2).max(16),
+  payload: z.record(z.string(), z.unknown()).default({}),
+});
+
+export const createSourceDraftSchema = sourceFieldsSchema.extend({
+  stableKey: z.string().trim().min(1).max(220),
+});
+
+export const updateSourceDraftSchema = sourceFieldsSchema.partial()
+  .refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
+
 export const progressUpdateSchema = z.object({
   progress: z.number().min(0).max(1),
   anchor: z.string().trim().max(220).nullable().optional(),

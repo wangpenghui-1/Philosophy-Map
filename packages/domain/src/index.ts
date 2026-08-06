@@ -302,3 +302,37 @@ export function evaluateEditorialQuality(
     checkedAt,
   };
 }
+
+export interface SourceQualityInput {
+  title: string;
+  authors: string[];
+  sourceType: string;
+  publication: string;
+  publicationYear?: number | null;
+  url?: string | null;
+  doi?: string | null;
+  isbn?: string | null;
+  language: string;
+}
+
+export function evaluateSourceQuality(input: SourceQualityInput, checkedAt = new Date().toISOString()): EditorialQualityReport {
+  const findings: EditorialQualityFinding[] = [];
+  if (!input.title.trim()) findings.push({ code: "source.title-missing", severity: "blocker", message: "来源标题不能为空。" });
+  if (!input.authors.some((author) => author.trim())) findings.push({ code: "source.authors-missing", severity: "blocker", message: "至少需要一位作者或责任主体。" });
+  if (!input.sourceType.trim()) findings.push({ code: "source.type-missing", severity: "blocker", message: "来源类型不能为空。" });
+  if (!input.publication.trim()) findings.push({ code: "source.publication-missing", severity: "blocker", message: "出版信息或馆藏信息不能为空。" });
+  if (!input.language.trim()) findings.push({ code: "source.language-missing", severity: "blocker", message: "来源语言不能为空。" });
+  if (!input.url && !input.doi && !input.isbn) {
+    findings.push({ code: "source.locator-missing", severity: "blocker", message: "URL、DOI 或 ISBN 至少需要填写一项。" });
+  }
+  if (input.url) {
+    try {
+      const url = new URL(input.url);
+      if (!['http:', 'https:'].includes(url.protocol)) throw new Error("unsupported");
+    } catch {
+      findings.push({ code: "source.url-invalid", severity: "blocker", message: "来源 URL 必须是有效的 HTTP 或 HTTPS 地址。" });
+    }
+  }
+  if (!input.publicationYear) findings.push({ code: "source.year-missing", severity: "warning", message: "建议补充出版年份。" });
+  return { readyToPublish: !findings.some((finding) => finding.severity === "blocker"), findings, checkedAt };
+}

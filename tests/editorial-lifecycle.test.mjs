@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { publicationActionSchema } from "../packages/api-contracts/src/index.ts";
-import { auditPayloadCitations, evaluateEditorialQuality } from "../packages/domain/src/index.ts";
+import { auditPayloadCitations, evaluateEditorialQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
+import { isPrivateAddress } from "../apps/worker/src/outbox.ts";
 
 test("publication gate blocks standard content without sections or sources", () => {
   const report = evaluateEditorialQuality({
@@ -91,4 +92,21 @@ test("paragraph citation audit rejects malformed evidence and reports coverage",
     payload,
   }, "2026-08-07T00:00:00.000Z");
   assert.ok(quality.findings.some((finding) => finding.code === "citations.paragraph-coverage" && finding.severity === "blocker"));
+});
+
+test("source quality gate requires responsibility and a persistent locator", () => {
+  const blocked = evaluateSourceQuality({ title: "测试来源", authors: [], sourceType: "primary-text", publication: "测试出版社", language: "zh-CN" }, "2026-08-07T00:00:00.000Z");
+  assert.equal(blocked.readyToPublish, false);
+  assert.deepEqual(blocked.findings.filter((item) => item.severity === "blocker").map((item) => item.code), ["source.authors-missing", "source.locator-missing"]);
+  const ready = evaluateSourceQuality({ title: "测试来源", authors: ["测试作者"], sourceType: "primary-text", publication: "测试出版社", publicationYear: 2024, doi: "10.0000/example", language: "zh-CN" }, "2026-08-07T00:00:00.000Z");
+  assert.equal(ready.readyToPublish, true);
+  assert.deepEqual(ready.findings, []);
+});
+
+test("source link checks reject local and private network targets", () => {
+  assert.equal(isPrivateAddress("127.0.0.1"), true);
+  assert.equal(isPrivateAddress("10.20.30.40"), true);
+  assert.equal(isPrivateAddress("192.168.1.20"), true);
+  assert.equal(isPrivateAddress("::1"), true);
+  assert.equal(isPrivateAddress("8.8.8.8"), false);
 });

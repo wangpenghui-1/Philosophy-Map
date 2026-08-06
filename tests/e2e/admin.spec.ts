@@ -18,6 +18,15 @@ test("local owner can enter and leave the read-only admin preview", async ({ pag
   await expect(page.getByRole("heading", { name: "版本历史" })).toBeVisible();
   await expect(page.getByRole("button", { name: "创建后继修订" })).toHaveCount(0);
 
+  await page.goto("/admin/sources?q=Immanuel%20Kant");
+  await expect(page.getByRole("heading", { name: "来源资料库" })).toBeVisible();
+  await page.getByRole("link", { name: "Immanuel Kant", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "来源质量门禁" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "来源版本历史" })).toBeVisible();
+
+  await page.goto("/admin/sources/new");
+  await expect(page.getByText("只读来源快照")).toBeVisible();
+
   await page.goto("/admin/content/new");
   await expect(page.getByText("只读预览不能创建内容")).toBeVisible();
   await expect(page.getByRole("button", { name: "创建 candidate 版本" })).toBeDisabled();

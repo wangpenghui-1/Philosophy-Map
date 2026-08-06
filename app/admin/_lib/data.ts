@@ -25,6 +25,15 @@ export interface AdminSourceOption {
   language: string;
 }
 
+export interface AdminSourceRow extends AdminSourceOption {
+  versionId: string;
+  version: number;
+  status: EditorialStatus;
+  sourceType: string;
+  url?: string | null;
+  updatedAt: Date;
+}
+
 interface AdminDashboardData {
   mode: "local-preview" | "database";
   catalog: Record<string, number>;
@@ -247,4 +256,68 @@ export async function getAdminSourceOptions(principal: AuthPrincipal): Promise<A
       eq(databaseSchema.sourceVersions.id, databaseSchema.sources.currentPublishedVersionId),
     )
     .orderBy(databaseSchema.sourceVersions.title);
+}
+
+function previewSourceVersion(id: string) {
+  const source = knowledgeBase.sources.find((item) => item.id === id);
+  if (!source) return null;
+  const updatedAt = source.lastReviewedAt ? new Date(`${source.lastReviewedAt}T00:00:00.000Z`) : new Date(0);
+  return {
+    id: source.id, sourceId: source.id, stableKey: source.id, currentPublishedVersionId: source.id,
+    version: source.version, title: source.title, authors: source.authors, sourceType: source.sourceType,
+    publication: source.publication, publicationYear: source.year ?? null, url: source.url ?? null,
+    doi: source.doi ?? null, isbn: source.isbn ?? null, language: source.language,
+    editorialStatus: source.editorialStatus, payload: source, createdAt: updatedAt, updatedAt,
+  };
+}
+
+export async function listAdminSources(principal: AuthPrincipal, filters: { q?: string; status?: EditorialStatus | "all" } = {}): Promise<AdminSourceRow[]> {
+  if (principal.mode === "local-preview") {
+    const query = filters.q?.trim().toLocaleLowerCase("zh-CN") ?? "";
+    return knowledgeBase.sources.filter((source) => !query || `${source.title} ${source.id} ${source.authors.join(" ")}`.toLocaleLowerCase("zh-CN").includes(query))
+      .map((source) => {
+        const version = previewSourceVersion(source.id)!;
+        return { id: source.id, versionId: source.id, title: source.title, publication: source.publication, language: source.language,
+          version: source.version, status: source.editorialStatus, sourceType: source.sourceType, url: source.url, updatedAt: version.updatedAt };
+      }).slice(0, 150);
+  }
+  const conditions = [];
+  if (filters.q?.trim()) conditions.push(ilike(databaseSchema.sourceVersions.title, `%${filters.q.trim()}%`));
+  if (filters.status && filters.status !== "all") conditions.push(eq(databaseSchema.sourceVersions.editorialStatus, filters.status));
+  return getDatabase().select({
+    id: databaseSchema.sources.stableKey, versionId: databaseSchema.sourceVersions.id, title: databaseSchema.sourceVersions.title,
+    publication: databaseSchema.sourceVersions.publication, language: databaseSchema.sourceVersions.language,
+    version: databaseSchema.sourceVersions.version, status: databaseSchema.sourceVersions.editorialStatus,
+    sourceType: databaseSchema.sourceVersions.sourceType, url: databaseSchema.sourceVersions.url, updatedAt: databaseSchema.sourceVersions.updatedAt,
+  }).from(databaseSchema.sourceVersions).innerJoin(databaseSchema.sources, eq(databaseSchema.sources.id, databaseSchema.sourceVersions.sourceId))
+    .where(conditions.length ? and(...conditions) : undefined).orderBy(desc(databaseSchema.sourceVersions.updatedAt)).limit(150);
+}
+
+export async function getAdminSourceVersion(principal: AuthPrincipal, id: string) {
+  if (principal.mode === "local-preview") return previewSourceVersion(id);
+  const [record] = await getDatabase().select({
+    id: databaseSchema.sourceVersions.id, sourceId: databaseSchema.sourceVersions.sourceId,
+    stableKey: databaseSchema.sources.stableKey, currentPublishedVersionId: databaseSchema.sources.currentPublishedVersionId,
+    version: databaseSchema.sourceVersions.version, title: databaseSchema.sourceVersions.title, authors: databaseSchema.sourceVersions.authors,
+    sourceType: databaseSchema.sourceVersions.sourceType, publication: databaseSchema.sourceVersions.publication,
+    publicationYear: databaseSchema.sourceVersions.publicationYear, url: databaseSchema.sourceVersions.url,
+    doi: databaseSchema.sourceVersions.doi, isbn: databaseSchema.sourceVersions.isbn, language: databaseSchema.sourceVersions.language,
+    editorialStatus: databaseSchema.sourceVersions.editorialStatus, payload: databaseSchema.sourceVersions.payload,
+    createdAt: databaseSchema.sourceVersions.createdAt, updatedAt: databaseSchema.sourceVersions.updatedAt,
+  }).from(databaseSchema.sourceVersions).innerJoin(databaseSchema.sources, eq(databaseSchema.sources.id, databaseSchema.sourceVersions.sourceId))
+    .where(eq(databaseSchema.sourceVersions.id, id)).limit(1);
+  return record ?? null;
+}
+
+export async function getAdminSourceHistory(principal: AuthPrincipal, sourceId: string) {
+  if (principal.mode === "local-preview") {
+    const record = previewSourceVersion(sourceId);
+    return record ? [record] : [];
+  }
+  return getDatabase().select({
+    id: databaseSchema.sourceVersions.id, version: databaseSchema.sourceVersions.version,
+    title: databaseSchema.sourceVersions.title, editorialStatus: databaseSchema.sourceVersions.editorialStatus,
+    updatedAt: databaseSchema.sourceVersions.updatedAt,
+  }).from(databaseSchema.sourceVersions).where(eq(databaseSchema.sourceVersions.sourceId, sourceId))
+    .orderBy(desc(databaseSchema.sourceVersions.version));
 }

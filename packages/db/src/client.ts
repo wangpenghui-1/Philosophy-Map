@@ -38,3 +38,10 @@ export async function withUserContext<T>(userId: string, operation: (transaction
     return operation(transaction);
   });
 }
+
+export async function withAnonymousContext<T>(anonymousSessionHash: string, operation: (transaction: Parameters<Parameters<ReturnType<typeof getDatabase>["transaction"]>[0]>[0]) => Promise<T>) {
+  return getDatabase().transaction(async (transaction) => {
+    await transaction.execute(sql`select set_config('app.anonymous_session_hash', ${anonymousSessionHash}, true)`);
+    return operation(transaction);
+  });
+}

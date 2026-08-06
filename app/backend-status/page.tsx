@@ -45,6 +45,7 @@ export default function BackendStatusPage() {
           <div><dt>静态故障回退</dt><dd className={styles.ready}>已就绪</dd></div>
           <div><dt>PostgreSQL 持久化</dt><dd>{databaseReady ? "已配置" : "等待 DATABASE_URL"}</dd></div>
           <div><dt>OpenAI 模型回答</dt><dd>{modelReady ? "已配置" : "使用有据可查的抽取式回退"}</dd></div>
+          <div><dt>AI 共享限流</dt><dd>{process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN ? "Redis 已配置" : "单实例内存限流（生产前需配置 Redis）"}</dd></div>
         </dl>
       </section>
 
@@ -52,6 +53,7 @@ export default function BackendStatusPage() {
 
       <footer>
         <Link href="/admin/login">进入内容管理后台</Link>
+        <Link href="/chat">检查 AI 对话</Link>
         <Link href="/thinker/kant">检查公开人物页</Link>
         <Link href="/knowledge">返回知识库</Link>
       </footer>

@@ -1,0 +1,8 @@
+[
+  { "id": "kant-epistemology", "query": "康德的认识论为什么需要批判？", "expect": "grounded" },
+  { "id": "hume-kant", "query": "休谟如何影响康德？", "expect": "grounded" },
+  { "id": "zhuangzi-self", "query": "庄子的自我观是什么？", "expect": "grounded" },
+  { "id": "camus-absurd", "query": "加缪如何理解荒诞？", "expect": "grounded" },
+  { "id": "missing-person", "query": "虚构哲学家阿特拉斯九号有哪些著作？", "expect": "abstain" },
+  { "id": "missing-quote", "query": "请给出知识库没有收录的秘密手稿第九页原句", "expect": "abstain" }
+]

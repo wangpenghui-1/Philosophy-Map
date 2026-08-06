@@ -3,6 +3,10 @@ import { problemResponse } from "./http";
 
 const adapter = new DatabaseSessionAuthAdapter();
 
+export async function optionalPrincipal(request: Request) {
+  return adapter.resolve(request);
+}
+
 export async function authenticatedPrincipal(request: Request) {
   if (!["GET", "HEAD", "OPTIONS"].includes(request.method)) {
     const origin = request.headers.get("origin");

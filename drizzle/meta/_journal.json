@@ -36,6 +36,13 @@
       "when": 1786041704505,
       "tag": "0004_ordinary_blur",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1786045200000,
+      "tag": "0005_conversation_rls",
+      "breakpoints": true
     }
   ]
 }

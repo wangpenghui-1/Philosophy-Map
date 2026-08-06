@@ -1355,6 +1355,7 @@ export default function AtlasApp({
             </button>
             <button className="text-view-button" type="button" aria-label="打开文字探索" onClick={() => setListViewOpen(true)}>文字探索</button>
             <Link className="knowledge-button" href="/knowledge">知识库</Link>
+            <Link className="knowledge-button" href="/chat">AI 对话</Link>
             <Link className="knowledge-button" href="/account">账户</Link>
             <div className="mode-switch" aria-label="浏览模式">
               <button type="button" className={displayMode === "story" ? "is-active" : ""} onClick={() => changeMode("story")}>故事</button>

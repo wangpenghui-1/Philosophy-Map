@@ -21,6 +21,7 @@ export function KnowledgeHeader() {
       <nav aria-label="知识库导航">
         <Link href="/knowledge">知识库</Link>
         <Link href="/explore">3D探索</Link>
+        <Link href="/chat">AI 对话</Link>
         <Link href="/">思想故事</Link>
         <Link href="/account">我的账户</Link>
       </nav>

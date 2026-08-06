@@ -1,4 +1,5 @@
 import { createHash, randomBytes } from "node:crypto";
+import { optionalPrincipal } from "./auth";
 
 const cookieName = "atlas_anon";
 
@@ -22,4 +23,11 @@ export function resolveAnonymousSession(request: Request) {
     ...(process.env.NODE_ENV === "production" ? ["Secure"] : []),
   ].join("; ");
   return { hash, setCookie };
+}
+
+export async function resolveConversationIdentity(request: Request) {
+  const principal = await optionalPrincipal(request);
+  if (principal.subject) return { owner: { userId: principal.subject }, principal, setCookie: undefined, rateSubject: `user:${principal.subject}` };
+  const anonymous = resolveAnonymousSession(request);
+  return { owner: { anonymousSessionHash: anonymous.hash }, principal, setCookie: anonymous.setCookie, rateSubject: `anonymous:${anonymous.hash}` };
 }

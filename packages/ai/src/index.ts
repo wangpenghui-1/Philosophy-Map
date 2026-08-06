@@ -5,6 +5,7 @@ export interface ModelRequest {
   instructions: string;
   input: string;
   safetyIdentifier?: string;
+  signal?: AbortSignal;
 }
 
 export interface ModelResponse {
@@ -58,8 +59,10 @@ export class OpenAIResponsesGateway implements ModelGateway {
         store: false,
         instructions: request.instructions,
         input: request.input,
+        max_output_tokens: Number(process.env.OPENAI_MAX_OUTPUT_TOKENS ?? 1_200),
         ...(request.safetyIdentifier ? { safety_identifier: request.safetyIdentifier } : {}),
       }),
+      signal: request.signal ?? AbortSignal.timeout(Number(process.env.OPENAI_TIMEOUT_MS ?? 45_000)),
     });
     const payload = await response.json() as OpenAIResponsePayload;
     if (!response.ok) throw new Error(payload.error?.message ?? `OpenAI request failed with ${response.status}.`);
@@ -126,7 +129,17 @@ function deterministicAnswer(packet: EvidencePacket) {
 
 export function validateEvidenceMarkers(text: string, packet: EvidencePacket) {
   const markers = [...text.matchAll(/\[E(\d+)(?:\.\d+)?\]/g)].map((match) => Number(match[1]));
-  return markers.length > 0 && markers.every((marker) => marker >= 1 && marker <= packet.excerpts.length);
+  const factualParagraphs = text.split(/\n\n+/).map((paragraph) => paragraph.trim()).filter(Boolean);
+  return markers.length > 0
+    && markers.every((marker) => marker >= 1 && marker <= packet.excerpts.length)
+    && factualParagraphs.every((paragraph) => /\[E\d+(?:\.\d+)?\]/.test(paragraph));
+}
+
+export function estimateModelCost(usage?: { inputTokens?: number; outputTokens?: number }) {
+  const inputRate = Number(process.env.OPENAI_INPUT_USD_PER_MILLION ?? 0);
+  const outputRate = Number(process.env.OPENAI_OUTPUT_USD_PER_MILLION ?? 0);
+  const amount = ((usage?.inputTokens ?? 0) * inputRate + (usage?.outputTokens ?? 0) * outputRate) / 1_000_000;
+  return amount.toFixed(6);
 }
 
 export class GroundedConversationService {
@@ -141,7 +154,7 @@ export class GroundedConversationService {
     this.gateway = gateway;
   }
 
-  async answer(query: string, locale = "zh-CN", safetyIdentifier?: string): Promise<GroundedAnswer> {
+  async answer(query: string, locale = "zh-CN", safetyIdentifier?: string, signal?: AbortSignal): Promise<GroundedAnswer> {
     const evidence = this.repository.retrieveEvidence(query, locale, 8);
     const citations = uniqueCitations(evidence);
     if (!evidence.excerpts.length || !citations.length) {
@@ -177,6 +190,7 @@ export class GroundedConversationService {
         "使用通俗、准确的中文，并在术语第一次出现时解释。",
       ].join("\n"),
       input: `用户问题：${query}\n\n${evidencePrompt(evidence)}`,
+      signal,
     });
 
     if (!validateEvidenceMarkers(result.text, evidence)) {

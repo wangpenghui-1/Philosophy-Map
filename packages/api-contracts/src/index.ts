@@ -140,6 +140,38 @@ export const createRelationDraftSchema = relationFieldsSchema.extend({
 }).refine((value) => value.relationType !== "thematic-resonance" || !value.directed, { message: "主题共鸣必须是非方向关系", path: ["directed"] });
 export const updateRelationDraftSchema = relationFieldsSchema.partial().refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
 
+const journeyTransitionSchema = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("evidence-relation"), relationId: z.string().trim().min(1).max(220), label: z.string().trim().min(1).max(120) }),
+  z.object({ kind: z.literal("thematic-transition"), from: z.string().trim().min(1).max(180), to: z.string().trim().min(1).max(180), label: z.enum(["平行回答", "问题转向", "概念重构", "批判推进"]) }),
+]);
+const journeyNodeSchema = z.object({
+  id: z.string().trim().min(1).max(180), thinkerId: z.string().trim().min(1).max(180), eyebrow: z.string().trim().min(1).max(160),
+  title: z.string().trim().min(1).max(300), coreIdea: z.string().trim().min(10).max(1_000), body: z.string().trim().min(20).max(4_000),
+  transitionPrompt: z.string().trim().min(1).max(1_000), durationMs: z.number().int().min(5_000).max(120_000),
+  camera: z.object({ lat: z.number().min(-90).max(90), lon: z.number().min(-180).max(180), distance: z.number().min(1).max(20) }),
+  incomingTransition: journeyTransitionSchema.optional(),
+});
+const journeyFieldsBaseSchema = z.object({
+  slug: z.string().trim().min(1).max(220), locale: localeSchema, title: z.string().trim().min(1).max(300),
+  category: z.enum(["philosophical-question", "philosophical-tradition"]), availability: z.enum(["available", "coming-soon"]),
+  recommended: z.boolean().default(false), relatedJourneyId: z.string().trim().min(1).max(180).nullable().optional(),
+  question: z.string().trim().min(4).max(1_000), description: z.string().trim().min(20).max(2_000),
+  openingQuestion: z.string().trim().max(2_000).nullable().optional(), closingTitle: z.string().trim().max(300).nullable().optional(),
+  closingBody: z.string().trim().max(2_000).nullable().optional(), nodes: z.array(journeyNodeSchema).min(1).max(7),
+});
+function refineJourney(value: { nodes?: Array<{ id: string }>; relatedJourneyId?: string | null; slug?: string }, context: z.RefinementCtx) {
+  if (value.nodes) {
+    const ids = value.nodes.map((node) => node.id);
+    if (new Set(ids).size !== ids.length) context.addIssue({ code: "custom", path: ["nodes"], message: "旅程节点 ID 不能重复" });
+  }
+  if (value.relatedJourneyId && value.slug && value.relatedJourneyId === value.slug) context.addIssue({ code: "custom", path: ["relatedJourneyId"], message: "关联旅程不能指向自身" });
+}
+export const createJourneyDraftSchema = journeyFieldsBaseSchema.extend({ stableKey: z.string().trim().min(1).max(180) }).superRefine(refineJourney);
+export const updateJourneyDraftSchema = journeyFieldsBaseSchema.partial().superRefine((value, context) => {
+  if (!Object.keys(value).length) context.addIssue({ code: "custom", message: "至少提供一个需要更新的字段。 " });
+  refineJourney(value, context);
+});
+
 export const progressUpdateSchema = z.object({
   progress: z.number().min(0).max(1),
   anchor: z.string().trim().max(220).nullable().optional(),

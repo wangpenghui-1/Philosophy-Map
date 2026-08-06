@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { publicationActionSchema } from "../packages/api-contracts/src/index.ts";
-import { auditPayloadCitations, evaluateEditorialQuality, evaluateRelationQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
+import { auditPayloadCitations, evaluateEditorialQuality, evaluateJourneyQuality, evaluateRelationQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
 import { isPrivateAddress } from "../apps/worker/src/outbox.ts";
+import { journeyCatalog } from "../app/_data/journeys.ts";
 
 test("publication gate blocks standard content without sections or sources", () => {
   const report = evaluateEditorialQuality({
@@ -115,4 +116,30 @@ test("relation gate separates thematic resonance from directed evidence claims",
   const report = evaluateRelationQuality({ fromEntityId: "a", toEntityId: "b", directed: true, relationType: "thematic-resonance", evidenceStatus: "disputed", title: "主题比较", explanation: "这是一段长度足够的关系解释，用来说明两种思想只是在问题结构上形成比较，并不主张存在历史影响。", citations: [{ sourceId: "source-a", locator: "1", claim: "支持比较" }] }, "2026-08-07T00:00:00.000Z");
   assert.equal(report.readyToPublish, false);
   assert.deepEqual(report.findings.map((item) => item.code), ["relation.resonance-directed", "relation.dispute-note-missing"]);
+});
+
+test("journey gate requires a complete narrative chain", () => {
+  const node = (id, thinkerId, incomingTransition) => ({
+    id, thinkerId, eyebrow: "测试站点", title: "测试节点", coreIdea: "这是一段足够长度的核心思想说明。",
+    body: "这是一段足够长度的旅程节点正文，用于验证发布门禁是否能够检查完整叙事链。",
+    transitionPrompt: "接下来问题会如何变化？", durationMs: 10_000,
+    camera: { lat: 30, lon: 120, distance: 4 }, incomingTransition,
+  });
+  const nodes = [node("a", "a"), node("b", "b"), node("c", "c"), node("d", "d"), node("e", "e")];
+  const report = evaluateJourneyQuality({
+    stableKey: "test-journey", slug: "test-journey", title: "测试旅程", category: "philosophical-question", availability: "available",
+    question: "我们为什么需要一条完整的思想旅程？", description: "这是一段用于验证旅程质量门禁的完整简介。",
+    openingQuestion: "问题从哪里开始？", closingTitle: "测试结语", closingBody: "这是一段完整的测试结语。", nodes,
+  }, "2026-08-07T00:00:00.000Z");
+  assert.equal(report.readyToPublish, false);
+  assert.deepEqual(report.findings.map((item) => item.code), [
+    "journey.node-2-transition-missing", "journey.node-3-transition-missing", "journey.node-4-transition-missing", "journey.node-5-transition-missing",
+  ]);
+});
+
+test("all published journey snapshots satisfy the editorial quality contract", () => {
+  for (const journey of journeyCatalog) {
+    const report = evaluateJourneyQuality({ ...journey, stableKey: journey.id, slug: journey.id });
+    assert.equal(report.readyToPublish, true, `${journey.id}: ${report.findings.map((item) => item.message).join(" ")}`);
+  }
 });

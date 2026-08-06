@@ -2,6 +2,7 @@ import type { AuthPrincipal } from "@atlas/auth";
 import { databaseSchema, getDatabase } from "@atlas/db";
 import { evaluateEditorialQuality, type EditorialStatus, type EntityType } from "@atlas/domain";
 import { and, count, desc, eq, ilike, inArray } from "drizzle-orm";
+import { journeyCatalog } from "../../_data/journeys";
 import { knowledgeBase, knowledgeIndex } from "../../_data/knowledge";
 
 export interface AdminContentRow {
@@ -48,6 +49,7 @@ const snapshotCatalog = {
   works: knowledgeBase.works.length,
   sources: knowledgeBase.sources.length,
   relations: knowledgeBase.relations.length,
+  journeys: journeyCatalog.length,
 };
 
 function previewRows() {
@@ -118,6 +120,7 @@ export async function getAdminDashboard(principal: AuthPrincipal): Promise<Admin
   const [entityCount] = await database.select({ value: count() }).from(databaseSchema.entities);
   const [sourceCount] = await database.select({ value: count() }).from(databaseSchema.sources);
   const [relationCount] = await database.select({ value: count() }).from(databaseSchema.relations);
+  const [journeyCount] = await database.select({ value: count() }).from(databaseSchema.journeys);
   const recent = await database.select({
     id: databaseSchema.entityVersions.id,
     stableKey: databaseSchema.entities.stableKey,
@@ -135,7 +138,7 @@ export async function getAdminDashboard(principal: AuthPrincipal): Promise<Admin
 
   return {
     mode: "database" as const,
-    catalog: { entities: entityCount.value, sources: sourceCount.value, relations: relationCount.value },
+    catalog: { entities: entityCount.value, sources: sourceCount.value, relations: relationCount.value, journeys: journeyCount.value },
     statusCounts,
     recent,
   };
@@ -374,4 +377,127 @@ export async function getAdminRelationHistory(principal: AuthPrincipal, relation
 export async function getAdminRelationEntityOptions(principal: AuthPrincipal) {
   if (principal.mode === "local-preview") return knowledgeIndex.map((item) => ({ id: item.id, title: item.title, entityType: item.entityType }));
   return getDatabase().select({ id: databaseSchema.entities.stableKey, title: databaseSchema.entityVersions.title, entityType: databaseSchema.entities.entityType }).from(databaseSchema.entities).innerJoin(databaseSchema.entityVersions, eq(databaseSchema.entityVersions.id, databaseSchema.entities.currentPublishedVersionId)).orderBy(databaseSchema.entityVersions.title);
+}
+
+function previewJourneyVersion(id: string) {
+  const journey = journeyCatalog.find((item) => item.id === id);
+  if (!journey) return null;
+  const date = new Date(0);
+  return {
+    id: journey.id,
+    journeyId: journey.id,
+    currentPublishedVersionId: journey.id,
+    stableKey: journey.id,
+    version: 1,
+    locale: "zh-CN",
+    slug: journey.id,
+    title: journey.title,
+    summary: journey.description,
+    estimatedDurationMs: journey.estimatedDurationMs,
+    editorialStatus: "published" as const,
+    payload: { ...journey, slug: journey.id, locale: "zh-CN", editorialStatus: "published", version: 1 },
+    updatedAt: date,
+  };
+}
+
+export async function listAdminJourneys(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return journeyCatalog.map((journey) => ({
+    id: journey.id,
+    versionId: journey.id,
+    version: 1,
+    title: journey.title,
+    slug: journey.id,
+    status: "published" as const,
+    availability: journey.availability,
+    nodeCount: journey.nodes.length,
+    estimatedDurationMs: journey.estimatedDurationMs,
+    updatedAt: new Date(0),
+  }));
+  const rows = await getDatabase().select({
+    id: databaseSchema.journeys.stableKey,
+    versionId: databaseSchema.journeyVersions.id,
+    version: databaseSchema.journeyVersions.version,
+    title: databaseSchema.journeyVersions.title,
+    slug: databaseSchema.journeyVersions.slug,
+    status: databaseSchema.journeyVersions.editorialStatus,
+    payload: databaseSchema.journeyVersions.payload,
+    estimatedDurationMs: databaseSchema.journeyVersions.estimatedDurationMs,
+    updatedAt: databaseSchema.journeyVersions.updatedAt,
+  }).from(databaseSchema.journeyVersions)
+    .innerJoin(databaseSchema.journeys, eq(databaseSchema.journeys.id, databaseSchema.journeyVersions.journeyId))
+    .orderBy(desc(databaseSchema.journeyVersions.updatedAt)).limit(120);
+  return rows.map((row) => {
+    const payload = row.payload && typeof row.payload === "object" && !Array.isArray(row.payload) ? row.payload as Record<string, unknown> : {};
+    return { ...row, availability: String(payload.availability ?? "coming-soon"), nodeCount: Array.isArray(payload.nodes) ? payload.nodes.length : 0 };
+  });
+}
+
+export async function getAdminJourneyVersion(principal: AuthPrincipal, id: string) {
+  if (principal.mode === "local-preview") return previewJourneyVersion(id);
+  const [record] = await getDatabase().select({
+    id: databaseSchema.journeyVersions.id,
+    journeyId: databaseSchema.journeyVersions.journeyId,
+    currentPublishedVersionId: databaseSchema.journeys.currentPublishedVersionId,
+    stableKey: databaseSchema.journeys.stableKey,
+    version: databaseSchema.journeyVersions.version,
+    locale: databaseSchema.journeyVersions.locale,
+    slug: databaseSchema.journeyVersions.slug,
+    title: databaseSchema.journeyVersions.title,
+    summary: databaseSchema.journeyVersions.summary,
+    estimatedDurationMs: databaseSchema.journeyVersions.estimatedDurationMs,
+    editorialStatus: databaseSchema.journeyVersions.editorialStatus,
+    payload: databaseSchema.journeyVersions.payload,
+    updatedAt: databaseSchema.journeyVersions.updatedAt,
+  }).from(databaseSchema.journeyVersions)
+    .innerJoin(databaseSchema.journeys, eq(databaseSchema.journeys.id, databaseSchema.journeyVersions.journeyId))
+    .where(eq(databaseSchema.journeyVersions.id, id)).limit(1);
+  return record ?? null;
+}
+
+export async function getAdminJourneyHistory(principal: AuthPrincipal, journeyId: string) {
+  if (principal.mode === "local-preview") {
+    const record = previewJourneyVersion(journeyId);
+    return record ? [record] : [];
+  }
+  return getDatabase().select({
+    id: databaseSchema.journeyVersions.id,
+    version: databaseSchema.journeyVersions.version,
+    title: databaseSchema.journeyVersions.title,
+    editorialStatus: databaseSchema.journeyVersions.editorialStatus,
+    estimatedDurationMs: databaseSchema.journeyVersions.estimatedDurationMs,
+    updatedAt: databaseSchema.journeyVersions.updatedAt,
+  }).from(databaseSchema.journeyVersions)
+    .where(eq(databaseSchema.journeyVersions.journeyId, journeyId))
+    .orderBy(desc(databaseSchema.journeyVersions.version));
+}
+
+export async function getAdminJourneyThinkerOptions(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return knowledgeIndex.filter((item) => item.entityType === "person").map((item) => ({ id: item.id, title: item.title }));
+  return getDatabase().select({ id: databaseSchema.entities.stableKey, title: databaseSchema.entityVersions.title })
+    .from(databaseSchema.entities)
+    .innerJoin(databaseSchema.entityVersions, eq(databaseSchema.entityVersions.id, databaseSchema.entities.currentPublishedVersionId))
+    .where(eq(databaseSchema.entities.entityType, "person"))
+    .orderBy(databaseSchema.entityVersions.title);
+}
+
+export async function getAdminJourneyRelationOptions(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return knowledgeBase.relations.map((relation) => ({ id: relation.id, title: relation.title, fromId: relation.from.id, toId: relation.to.id, directed: relation.directed }));
+  const rows = await getDatabase().select({
+    id: databaseSchema.relations.stableKey,
+    title: databaseSchema.relationVersions.title,
+    fromEntityId: databaseSchema.relations.fromEntityId,
+    toEntityId: databaseSchema.relations.toEntityId,
+    directed: databaseSchema.relations.directed,
+  }).from(databaseSchema.relations)
+    .innerJoin(databaseSchema.relationVersions, eq(databaseSchema.relationVersions.id, databaseSchema.relations.currentPublishedVersionId));
+  const titles = await getDatabaseEntityTitles([...new Set(rows.flatMap((row) => [row.fromEntityId, row.toEntityId]))]);
+  return rows.map((row) => ({ id: row.id, title: row.title, fromId: row.fromEntityId, toId: row.toEntityId, fromTitle: titles.get(row.fromEntityId), toTitle: titles.get(row.toEntityId), directed: row.directed }));
+}
+
+export async function getAdminJourneyOptions(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return journeyCatalog.map((journey) => ({ id: journey.id, title: journey.title }));
+  return getDatabase().select({ id: databaseSchema.journeys.stableKey, title: databaseSchema.journeyVersions.title })
+    .from(databaseSchema.journeys)
+    .innerJoin(databaseSchema.journeyVersions, eq(databaseSchema.journeyVersions.id, databaseSchema.journeys.currentPublishedVersionId))
+    .orderBy(databaseSchema.journeyVersions.title);
 }

@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { eq, and } from "drizzle-orm";
 import { getDatabase, closeDatabase, databaseSchema } from "../packages/db/src/index.ts";
+import { journeyCatalog } from "../app/_data/journeys.ts";
 
 const projectRoot = path.resolve(import.meta.dirname, "..");
 const generatedRoot = path.join(projectRoot, "app", "_generated");
@@ -22,6 +23,7 @@ const typeByDirectory = {
 const manifest = Object.fromEntries([
   ...directories.map((directory) => [directory, knowledge[directory].length]),
   ["relations", knowledge.relations.length],
+  ["journeys", journeyCatalog.length],
 ]);
 
 for (const directory of directories) {
@@ -230,6 +232,52 @@ await database.transaction(async (transaction) => {
     await transaction.update(databaseSchema.relations)
       .set({ currentPublishedVersionId: version.id, updatedAt: new Date() })
       .where(eq(databaseSchema.relations.id, relation.id));
+  }
+
+  for (const record of journeyCatalog) {
+    const [existingJourney] = await transaction.select().from(databaseSchema.journeys)
+      .where(eq(databaseSchema.journeys.stableKey, record.id)).limit(1);
+    const journey = existingJourney ?? (await transaction.insert(databaseSchema.journeys)
+      .values({ stableKey: record.id }).returning())[0];
+    const [existingVersion] = await transaction.select().from(databaseSchema.journeyVersions).where(and(
+      eq(databaseSchema.journeyVersions.journeyId, journey.id),
+      eq(databaseSchema.journeyVersions.version, 1),
+      eq(databaseSchema.journeyVersions.locale, "zh-CN"),
+    )).limit(1);
+    const payload = { ...record, slug: record.id, locale: "zh-CN", editorialStatus: "published", version: 1 };
+    const version = existingVersion ?? (await transaction.insert(databaseSchema.journeyVersions).values({
+      journeyId: journey.id,
+      version: 1,
+      locale: "zh-CN",
+      slug: record.id,
+      title: record.title,
+      summary: record.description,
+      estimatedDurationMs: record.estimatedDurationMs,
+      editorialStatus: "published",
+      payload,
+      reviewedBy: "git-snapshot-import",
+      reviewedAt: new Date(),
+      publishedAt: new Date(),
+    }).returning())[0];
+    if (!existingVersion) {
+      for (const [ordinal, node] of record.nodes.entries()) {
+        const entity = entityMap.get(node.thinkerId)?.entity;
+        if (!entity) throw new Error(`Journey ${record.id} references missing thinker ${node.thinkerId}.`);
+        await transaction.insert(databaseSchema.journeyNodes).values({
+          journeyVersionId: version.id,
+          nodeKey: node.id,
+          ordinal,
+          entityId: entity.id,
+          title: node.title,
+          body: node.body,
+          camera: node.camera,
+          transition: node.incomingTransition,
+        });
+      }
+    }
+    await transaction.update(databaseSchema.journeys)
+      .set({ currentPublishedVersionId: version.id, updatedAt: new Date() })
+      .where(eq(databaseSchema.journeys.id, journey.id));
   }
 });
 

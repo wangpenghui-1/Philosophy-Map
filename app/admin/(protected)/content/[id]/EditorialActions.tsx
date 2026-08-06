@@ -12,7 +12,7 @@ const labels: Record<EditorialStatus, string> = {
   published: "发布版本",
 };
 
-export function EditorialActions({ id, etag, transitions, endpoint = "entity-versions", revision = false }: { id: string; etag: string; transitions: EditorialStatus[]; endpoint?: "entity-versions" | "relation-versions"; revision?: boolean }) {
+export function EditorialActions({ id, etag, transitions, endpoint = "entity-versions", revision = false }: { id: string; etag: string; transitions: EditorialStatus[]; endpoint?: "entity-versions" | "relation-versions" | "journey-versions"; revision?: boolean }) {
   const router = useRouter();
   const [pending, setPending] = useState<EditorialStatus | "revision">();
   const [error, setError] = useState<string>();
@@ -30,6 +30,7 @@ export function EditorialActions({ id, etag, transitions, endpoint = "entity-ver
       const result = await response.json() as { data?: { id?: string }; title?: string; detail?: string };
       if (!response.ok) throw new Error(result.detail ?? result.title ?? "状态更新失败。 ");
       if (!to && result.data?.id && endpoint === "relation-versions") router.push(`/admin/relations/${result.data.id}`);
+      if (!to && result.data?.id && endpoint === "journey-versions") router.push(`/admin/journeys/${result.data.id}`);
       router.refresh();
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "状态更新失败。 ");

@@ -354,3 +354,39 @@ export function evaluateRelationQuality(input: RelationQualityInput, checkedAt =
   if (input.evidenceStatus === "disputed" && !input.note?.trim()) findings.push({ code: "relation.dispute-note-missing", severity: "blocker", message: "争议关系必须说明争议边界。" });
   return { readyToPublish: !findings.some((item) => item.severity === "blocker"), findings, checkedAt };
 }
+
+export interface JourneyQualityNode {
+  id: string; thinkerId: string; eyebrow: string; title: string; coreIdea: string; body: string;
+  transitionPrompt: string; durationMs: number; camera: { lat: number; lon: number; distance: number };
+  incomingTransition?: { kind: "evidence-relation"; relationId: string; label: string }
+    | { kind: "thematic-transition"; from: string; to: string; label: string };
+}
+
+export interface JourneyQualityInput {
+  stableKey?: string; slug: string; title: string; category: string; availability: "available" | "coming-soon";
+  relatedJourneyId?: string | null; question: string; description: string; openingQuestion?: string | null;
+  closingTitle?: string | null; closingBody?: string | null; nodes: JourneyQualityNode[];
+}
+
+export function evaluateJourneyQuality(input: JourneyQualityInput, checkedAt = new Date().toISOString()): EditorialQualityReport {
+  const findings: EditorialQualityFinding[] = [];
+  if (!input.title.trim() || !input.slug.trim()) findings.push({ code: "journey.identity-missing", severity: "blocker", message: "旅程标题与 slug 不能为空。" });
+  if (input.question.trim().length < 4 || input.description.trim().length < 20) findings.push({ code: "journey.introduction-short", severity: "blocker", message: "旅程问题与简介需要完整说明探索范围。" });
+  if (input.relatedJourneyId && (input.relatedJourneyId === input.stableKey || input.relatedJourneyId === input.slug)) findings.push({ code: "journey.related-self", severity: "blocker", message: "关联旅程不能指向自身。" });
+  if (input.availability === "available" && (input.nodes.length < 5 || input.nodes.length > 7)) findings.push({ code: "journey.node-count", severity: "blocker", message: "可公开旅程必须包含 5 至 7 个节点。" });
+  if (input.availability === "available" && (!input.openingQuestion?.trim() || !input.closingTitle?.trim() || !input.closingBody?.trim())) findings.push({ code: "journey.boundary-copy-missing", severity: "blocker", message: "可公开旅程必须填写开场问题与结语。" });
+  const nodeIds = input.nodes.map((node) => node.id);
+  if (new Set(nodeIds).size !== nodeIds.length) findings.push({ code: "journey.node-id-duplicate", severity: "blocker", message: "旅程节点 ID 不能重复。" });
+  input.nodes.forEach((node, index) => {
+    if (!node.thinkerId.trim()) findings.push({ code: `journey.node-${index + 1}-thinker-missing`, severity: "blocker", message: `第 ${index + 1} 个节点没有绑定思想家。` });
+    if (!node.eyebrow.trim() || !node.title.trim() || node.coreIdea.trim().length < 10 || node.body.trim().length < 20 || !node.transitionPrompt.trim()) findings.push({ code: `journey.node-${index + 1}-copy-incomplete`, severity: "blocker", message: `第 ${index + 1} 个节点的叙事字段不完整。` });
+    if (node.durationMs < 5_000 || node.durationMs > 120_000) findings.push({ code: `journey.node-${index + 1}-duration`, severity: "blocker", message: `第 ${index + 1} 个节点的时长必须在 5 至 120 秒之间。` });
+    if (index === 0 && node.incomingTransition) findings.push({ code: "journey.first-transition", severity: "blocker", message: "第一个节点不能设置进入转场。" });
+    if (input.availability === "available" && index > 0 && !node.incomingTransition) findings.push({ code: `journey.node-${index + 1}-transition-missing`, severity: "blocker", message: `第 ${index + 1} 个节点缺少进入转场。` });
+    if (index > 0 && node.incomingTransition?.kind === "thematic-transition") {
+      const previous = input.nodes[index - 1];
+      if (node.incomingTransition.from !== previous.thinkerId || node.incomingTransition.to !== node.thinkerId) findings.push({ code: `journey.node-${index + 1}-thematic-endpoints`, severity: "blocker", message: `第 ${index + 1} 个节点的主题转场端点必须对应前后思想家。` });
+    }
+  });
+  return { readyToPublish: !findings.some((item) => item.severity === "blocker"), findings, checkedAt };
+}

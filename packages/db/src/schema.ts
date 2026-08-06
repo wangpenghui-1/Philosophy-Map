@@ -234,6 +234,9 @@ export const journeyVersions = pgTable("journey_versions", {
   estimatedDurationMs: integer("estimated_duration_ms").notNull(),
   editorialStatus: editorialStatusEnum("editorial_status").notNull(),
   payload: jsonb("payload").notNull(),
+  reviewedBy: text("reviewed_by"),
+  reviewedAt: timestamp("reviewed_at", { withTimezone: true }),
+  publishedAt: timestamp("published_at", { withTimezone: true }),
   ...timestamps,
 }, (table) => [uniqueIndex("journey_versions_number_locale_uq").on(table.journeyId, table.version, table.locale)]);
 

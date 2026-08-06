@@ -48,6 +48,7 @@ const defaultHandlers: Record<string, OutboxHandler> = {
   "knowledge.entity.rolled-back": refreshKnowledgeProjection,
   "knowledge.source.published": refreshKnowledgeProjection,
   "knowledge.relation.published": refreshKnowledgeProjection,
+  "journey.published": refreshKnowledgeProjection,
   "source.link-check.requested": checkSourceLink,
 };
 

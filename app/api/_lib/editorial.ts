@@ -2,7 +2,11 @@ import { createHash } from "node:crypto";
 import { and, eq, max } from "drizzle-orm";
 import type { AuthPrincipal } from "@atlas/auth";
 import { requirePermission } from "@atlas/auth";
-import { assertEditorialTransition, type EditorialStatus } from "@atlas/domain";
+import {
+  assertEditorialTransition,
+  evaluateEditorialQuality,
+  type EditorialStatus,
+} from "@atlas/domain";
 import { databaseSchema, getDatabase } from "@atlas/db";
 
 export function versionEtag(record: { id: string; updatedAt: Date }) {
@@ -128,11 +132,30 @@ export async function transitionEntityVersion(
     if (!current) return null;
     assertMatchingEtag(request, current);
     assertEditorialTransition(current.editorialStatus, to);
+    if (to === "published") {
+      const [entity] = await transaction.select({ entityType: databaseSchema.entities.entityType })
+        .from(databaseSchema.entities)
+        .where(eq(databaseSchema.entities.id, current.entityId)).limit(1);
+      if (!entity) return null;
+      const quality = evaluateEditorialQuality({ ...current, entityType: entity.entityType });
+      if (!quality.readyToPublish) {
+        const detail = quality.findings
+          .filter((finding) => finding.severity === "blocker")
+          .map((finding) => finding.message)
+          .join(" ");
+        throw Object.assign(new Error(detail), { status: 422, quality });
+      }
+    }
     const now = new Date();
+    const payload = current.payload && typeof current.payload === "object" && !Array.isArray(current.payload)
+      ? { ...current.payload as Record<string, unknown>, editorialStatus: to }
+      : { editorialStatus: to };
+    const returningToDraft = current.editorialStatus === "reviewed" && to === "edited";
     const [updated] = await transaction.update(databaseSchema.entityVersions).set({
       editorialStatus: to,
-      reviewedBy: to === "reviewed" ? principal.subject! : current.reviewedBy,
-      reviewedAt: to === "reviewed" ? now : current.reviewedAt,
+      payload,
+      reviewedBy: to === "reviewed" ? principal.subject! : returningToDraft ? null : current.reviewedBy,
+      reviewedAt: to === "reviewed" ? now : returningToDraft ? null : current.reviewedAt,
       publishedAt: to === "published" ? now : current.publishedAt,
       updatedAt: now,
     }).where(eq(databaseSchema.entityVersions.id, id)).returning();
@@ -163,5 +186,132 @@ export async function transitionEntityVersion(
       metadata: { from: current.editorialStatus, to, note },
     });
     return updated;
+  });
+}
+
+export async function createEntityRevision(
+  principal: AuthPrincipal,
+  sourceVersionId: string,
+  note?: string,
+) {
+  requirePermission(principal, "knowledge:candidate:create");
+  const database = getDatabase();
+  return database.transaction(async (transaction) => {
+    const [source] = await transaction.select().from(databaseSchema.entityVersions)
+      .where(eq(databaseSchema.entityVersions.id, sourceVersionId)).limit(1);
+    if (!source) return null;
+    if (source.editorialStatus !== "published") {
+      throw Object.assign(new Error("只能从不可变的已发布版本创建新修订。"), { status: 409 });
+    }
+    const [entity] = await transaction.select().from(databaseSchema.entities)
+      .where(eq(databaseSchema.entities.id, source.entityId)).limit(1);
+    if (!entity) return null;
+    if (entity.entityType === "source") {
+      throw Object.assign(new Error("来源版本需要在来源工作台中修订。"), { status: 409 });
+    }
+    const [latest] = await transaction.select({ value: max(databaseSchema.entityVersions.version) })
+      .from(databaseSchema.entityVersions)
+      .where(and(
+        eq(databaseSchema.entityVersions.entityId, source.entityId),
+        eq(databaseSchema.entityVersions.locale, source.locale),
+      ));
+    const sourcePayload = source.payload && typeof source.payload === "object" && !Array.isArray(source.payload)
+      ? source.payload as Record<string, unknown>
+      : {};
+    const [revision] = await transaction.insert(databaseSchema.entityVersions).values({
+      entityId: source.entityId,
+      version: (latest?.value ?? source.version) + 1,
+      locale: source.locale,
+      slug: source.slug,
+      title: source.title,
+      summary: source.summary,
+      contentTier: source.contentTier,
+      editorialStatus: "candidate",
+      schemaVersion: source.schemaVersion,
+      payload: { ...sourcePayload, editorialStatus: "candidate" },
+      createdBy: principal.subject!,
+      supersedesVersionId: source.id,
+    }).returning();
+    await transaction.insert(databaseSchema.auditEvents).values({
+      actorId: principal.subject!,
+      actorRole: principal.role,
+      action: "entity-version.revision-created",
+      resourceType: "entity-version",
+      resourceId: revision.id,
+      metadata: { entityId: source.entityId, sourceVersionId: source.id, note },
+    });
+    return revision;
+  });
+}
+
+export async function changeEntityPublication(
+  principal: AuthPrincipal,
+  targetVersionId: string,
+  action: "withdraw" | "rollback",
+  reason: string,
+  expectedCurrentVersionId: string | null,
+) {
+  requirePermission(principal, action === "withdraw" ? "knowledge:withdraw" : "knowledge:publish");
+  const database = getDatabase();
+  return database.transaction(async (transaction) => {
+    const [target] = await transaction.select().from(databaseSchema.entityVersions)
+      .where(eq(databaseSchema.entityVersions.id, targetVersionId)).limit(1);
+    if (!target) return null;
+    if (target.editorialStatus !== "published") {
+      throw Object.assign(new Error("撤回或回滚目标必须是不可变的已发布版本。"), { status: 409 });
+    }
+    const [entity] = await transaction.select().from(databaseSchema.entities)
+      .where(eq(databaseSchema.entities.id, target.entityId)).limit(1);
+    if (!entity) return null;
+    if (entity.currentPublishedVersionId !== expectedCurrentVersionId) {
+      throw Object.assign(new Error("公开版本已被其他操作改变，请刷新页面后重试。"), { status: 412 });
+    }
+    const now = new Date();
+
+    if (action === "withdraw") {
+      if (entity.currentPublishedVersionId !== target.id) {
+        throw Object.assign(new Error("只能撤回当前正在公开的版本。"), { status: 409 });
+      }
+      await transaction.update(databaseSchema.entities).set({
+        currentPublishedVersionId: null,
+        updatedAt: now,
+      }).where(eq(databaseSchema.entities.id, entity.id));
+    } else {
+      if (entity.currentPublishedVersionId === target.id) {
+        throw Object.assign(new Error("该版本已经是当前公开版本。"), { status: 409 });
+      }
+      await transaction.update(databaseSchema.entities).set({
+        currentPublishedVersionId: target.id,
+        updatedAt: now,
+      }).where(eq(databaseSchema.entities.id, entity.id));
+    }
+
+    await transaction.insert(databaseSchema.publicationEvents).values({
+      entityId: entity.id,
+      entityVersionId: target.id,
+      action: action === "withdraw" ? "withdrawn" : "rolled-back",
+      actorId: principal.subject!,
+      reason,
+    });
+    await transaction.insert(databaseSchema.outboxEvents).values({
+      aggregateType: "entity",
+      aggregateId: entity.id,
+      eventType: action === "withdraw" ? "knowledge.entity.withdrawn" : "knowledge.entity.rolled-back",
+      payload: {
+        entityId: entity.id,
+        entityVersionId: target.id,
+        previousVersionId: entity.currentPublishedVersionId,
+        locale: target.locale,
+      },
+    });
+    await transaction.insert(databaseSchema.auditEvents).values({
+      actorId: principal.subject!,
+      actorRole: principal.role,
+      action: `entity-version.${action}`,
+      resourceType: "entity-version",
+      resourceId: target.id,
+      metadata: { entityId: entity.id, previousVersionId: entity.currentPublishedVersionId, reason },
+    });
+    return { action, entityId: entity.id, entityVersionId: target.id, reason };
   });
 }

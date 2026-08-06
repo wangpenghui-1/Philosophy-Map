@@ -13,14 +13,18 @@ export interface OutboxEvent {
 
 export type OutboxHandler = (event: OutboxEvent) => Promise<void>;
 
-const defaultHandlers: Record<string, OutboxHandler> = {
-  "knowledge.entity.published": async (event) => {
-    logEvent("info", "Published entity requires snapshot and search refresh.", {
+const refreshKnowledgeProjection: OutboxHandler = async (event) => {
+    logEvent("info", "Knowledge publication changed; snapshot and search refresh are required.", {
       module: "worker",
       operation: event.eventType,
       aggregateId: event.aggregateId,
     });
-  },
+};
+
+const defaultHandlers: Record<string, OutboxHandler> = {
+  "knowledge.entity.published": refreshKnowledgeProjection,
+  "knowledge.entity.withdrawn": refreshKnowledgeProjection,
+  "knowledge.entity.rolled-back": refreshKnowledgeProjection,
 };
 
 export async function processOutboxBatch(

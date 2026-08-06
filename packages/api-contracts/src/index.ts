@@ -91,6 +91,16 @@ export const editorialTransitionSchema = z.object({
   note: z.string().trim().max(2_000).optional(),
 });
 
+export const createRevisionSchema = z.object({
+  note: z.string().trim().max(2_000).optional(),
+});
+
+export const publicationActionSchema = z.object({
+  action: z.enum(["withdraw", "rollback"]),
+  reason: z.string().trim().min(8).max(2_000),
+  expectedCurrentVersionId: z.string().uuid().nullable(),
+});
+
 export const updateEntityDraftSchema = z.object({
   slug: z.string().trim().min(1).max(220).optional(),
   title: z.string().trim().min(1).max(300).optional(),

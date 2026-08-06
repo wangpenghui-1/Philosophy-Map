@@ -45,7 +45,7 @@ export default async function AdminDashboardPage() {
             <thead><tr><th>标题</th><th>类型</th><th>版本</th><th>状态</th><th>语言</th></tr></thead>
             <tbody>{dashboard.recent.map((item) => (
               <tr key={item.id}>
-                <td>{item.publicHref ? <Link href={item.publicHref}>{item.title}</Link> : <Link href={`/admin/content/${item.id}`}>{item.title}</Link>}<small>{item.stableKey}</small></td>
+                <td><Link href={`/admin/content/${item.id}`}>{item.title}</Link><small>{item.stableKey}</small></td>
                 <td>{item.entityType}</td><td>v{item.version}</td><td><span className={`${styles.status} ${styles[`status_${item.status}`]}`}>{statusLabels[item.status]}</span></td><td>{item.locale}</td>
               </tr>
             ))}</tbody>

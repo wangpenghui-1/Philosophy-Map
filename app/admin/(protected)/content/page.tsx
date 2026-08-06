@@ -31,9 +31,9 @@ export default async function AdminContentPage({ searchParams }: { searchParams:
         <div className={styles.tableWrap}>
           <table><thead><tr><th>标题</th><th>类型</th><th>层级</th><th>版本</th><th>状态</th><th>操作</th></tr></thead>
             <tbody>{rows.map((item) => <tr key={item.id}>
-              <td><strong>{item.title}</strong><small>{item.slug}</small></td><td>{item.entityType}</td><td>{item.contentTier}</td><td>v{item.version}</td>
+              <td><strong><Link href={`/admin/content/${item.id}`}>{item.title}</Link></strong><small>{item.slug}</small></td><td>{item.entityType}</td><td>{item.contentTier}</td><td>v{item.version}</td>
               <td><span className={`${styles.status} ${styles[`status_${item.status}`]}`}>{item.status}</span></td>
-              <td>{item.publicHref ? <Link href={item.publicHref}>查看公开页</Link> : <Link href={`/admin/content/${item.id}`}>编辑版本</Link>}</td>
+              <td><Link href={`/admin/content/${item.id}`}>{principal.mode === "local-preview" ? "检查版本" : "编辑版本"}</Link>{item.publicHref && <> · <Link href={item.publicHref}>公开页</Link></>}</td>
             </tr>)}</tbody>
           </table>
         </div>

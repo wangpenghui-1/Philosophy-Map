@@ -1,6 +1,6 @@
 import type { AuthPrincipal } from "@atlas/auth";
 import { databaseSchema, getDatabase } from "@atlas/db";
-import type { EditorialStatus, EntityType } from "@atlas/domain";
+import { evaluateEditorialQuality, type EditorialStatus, type EntityType } from "@atlas/domain";
 import { and, count, desc, eq, ilike } from "drizzle-orm";
 import { knowledgeBase, knowledgeIndex } from "../../_data/knowledge";
 
@@ -47,6 +47,39 @@ function previewRows() {
     contentTier: item.contentTier,
     publicHref: item.href,
   }));
+}
+
+function previewVersion(id: string) {
+  const indexItem = knowledgeIndex.find((item) => item.id === id);
+  if (!indexItem) return null;
+  const directories = {
+    person: knowledgeBase.people,
+    concept: knowledgeBase.concepts,
+    tradition: knowledgeBase.traditions,
+    work: knowledgeBase.works,
+  } as const;
+  const record = directories[indexItem.entityType].find((item) => item.id === id);
+  if (!record) return null;
+  const reviewedAt = record.lastReviewedAt
+    ? new Date(`${record.lastReviewedAt}T00:00:00.000Z`)
+    : new Date(0);
+  return {
+    id: record.id,
+    entityId: record.id,
+    currentPublishedVersionId: record.id,
+    stableKey: record.id,
+    entityType: record.entityType,
+    title: indexItem.title,
+    slug: record.slug,
+    summary: record.summary,
+    locale: "zh-CN",
+    version: record.version,
+    editorialStatus: record.editorialStatus,
+    contentTier: record.contentTier,
+    payload: record,
+    createdAt: reviewedAt,
+    updatedAt: reviewedAt,
+  };
 }
 
 export async function getAdminDashboard(principal: AuthPrincipal): Promise<AdminDashboardData> {
@@ -127,10 +160,11 @@ export async function listAdminContent(
 }
 
 export async function getAdminVersion(principal: AuthPrincipal, id: string) {
-  if (principal.mode === "local-preview") return null;
+  if (principal.mode === "local-preview") return previewVersion(id);
   const [record] = await getDatabase().select({
     id: databaseSchema.entityVersions.id,
     entityId: databaseSchema.entityVersions.entityId,
+    currentPublishedVersionId: databaseSchema.entities.currentPublishedVersionId,
     stableKey: databaseSchema.entities.stableKey,
     entityType: databaseSchema.entities.entityType,
     title: databaseSchema.entityVersions.title,
@@ -147,4 +181,41 @@ export async function getAdminVersion(principal: AuthPrincipal, id: string) {
     .innerJoin(databaseSchema.entities, eq(databaseSchema.entities.id, databaseSchema.entityVersions.entityId))
     .where(eq(databaseSchema.entityVersions.id, id)).limit(1);
   return record ?? null;
+}
+
+export async function getAdminVersionHistory(principal: AuthPrincipal, entityId: string) {
+  if (principal.mode === "local-preview") {
+    const version = previewVersion(entityId);
+    return version ? [{
+      id: version.id,
+      version: version.version,
+      locale: version.locale,
+      title: version.title,
+      editorialStatus: version.editorialStatus,
+      createdAt: version.createdAt,
+      updatedAt: version.updatedAt,
+      publishedAt: version.updatedAt,
+      supersedesVersionId: null,
+      currentPublishedVersionId: version.currentPublishedVersionId,
+    }] : [];
+  }
+  return getDatabase().select({
+    id: databaseSchema.entityVersions.id,
+    version: databaseSchema.entityVersions.version,
+    locale: databaseSchema.entityVersions.locale,
+    title: databaseSchema.entityVersions.title,
+    editorialStatus: databaseSchema.entityVersions.editorialStatus,
+    createdAt: databaseSchema.entityVersions.createdAt,
+    updatedAt: databaseSchema.entityVersions.updatedAt,
+    publishedAt: databaseSchema.entityVersions.publishedAt,
+    supersedesVersionId: databaseSchema.entityVersions.supersedesVersionId,
+    currentPublishedVersionId: databaseSchema.entities.currentPublishedVersionId,
+  }).from(databaseSchema.entityVersions)
+    .innerJoin(databaseSchema.entities, eq(databaseSchema.entities.id, databaseSchema.entityVersions.entityId))
+    .where(eq(databaseSchema.entityVersions.entityId, entityId))
+    .orderBy(desc(databaseSchema.entityVersions.version));
+}
+
+export function getAdminQualityReport(version: NonNullable<Awaited<ReturnType<typeof getAdminVersion>>>) {
+  return evaluateEditorialQuality(version);
 }

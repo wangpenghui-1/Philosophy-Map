@@ -9,9 +9,13 @@ test("local owner can enter and leave the read-only admin preview", async ({ pag
   await expect(page.getByText("你正在查看本地只读预览")).toBeVisible();
   await expect(page.getByRole("heading", { name: "内容治理总览" })).toBeVisible();
 
-  await page.goto("/admin/content");
+  await page.goto("/admin/content?q=康德");
   await expect(page.getByRole("heading", { name: "知识内容" })).toBeVisible();
   await expect(page.getByText("康德", { exact: true }).first()).toBeVisible();
+  await page.getByRole("link", { name: "康德", exact: true }).first().click();
+  await expect(page.getByRole("heading", { name: "发布质量门禁" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "版本历史" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "创建后继修订" })).toHaveCount(0);
 
   await page.goto("/admin/content/new");
   await expect(page.getByText("只读预览不能创建内容")).toBeVisible();

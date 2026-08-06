@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { publicationActionSchema } from "../packages/api-contracts/src/index.ts";
+import { createMediaUploadSchema, publicationActionSchema } from "../packages/api-contracts/src/index.ts";
 import { auditPayloadCitations, evaluateEditorialQuality, evaluateJourneyQuality, evaluateRelationQuality, evaluateSourceQuality } from "../packages/domain/src/index.ts";
 import { isPrivateAddress } from "../apps/worker/src/outbox.ts";
 import { journeyCatalog } from "../app/_data/journeys.ts";
@@ -142,4 +142,17 @@ test("all published journey snapshots satisfy the editorial quality contract", (
     const report = evaluateJourneyQuality({ ...journey, stableKey: journey.id, slug: journey.id });
     assert.equal(report.readyToPublish, true, `${journey.id}: ${report.findings.map((item) => item.message).join(" ")}`);
   }
+});
+
+test("media upload contract rejects unapproved formats and malformed checksums", () => {
+  const base = {
+    fileName: "kant.webp", mimeType: "image/webp", byteSize: 12_000,
+    checksumSha256: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+    title: "康德肖像", altText: "康德的艺术化人物形象", purpose: "portrait",
+    rightsStatus: "project-commissioned", authenticity: "interpretive",
+    credit: "思想星图艺术化人物形象", entityStableKey: "kant",
+  };
+  assert.equal(createMediaUploadSchema.safeParse(base).success, true);
+  assert.equal(createMediaUploadSchema.safeParse({ ...base, mimeType: "text/html" }).success, false);
+  assert.equal(createMediaUploadSchema.safeParse({ ...base, checksumSha256: "not-a-checksum" }).success, false);
 });

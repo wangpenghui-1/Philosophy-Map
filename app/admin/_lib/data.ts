@@ -1,9 +1,10 @@
 import type { AuthPrincipal } from "@atlas/auth";
 import { databaseSchema, getDatabase } from "@atlas/db";
 import { evaluateEditorialQuality, type EditorialStatus, type EntityType } from "@atlas/domain";
-import { and, count, desc, eq, ilike, inArray } from "drizzle-orm";
+import { and, count, desc, eq, ilike, inArray, isNull } from "drizzle-orm";
 import { journeyCatalog } from "../../_data/journeys";
 import { knowledgeBase, knowledgeIndex } from "../../_data/knowledge";
+import { publicMediaUrl } from "../../api/_lib/media-storage";
 
 export interface AdminContentRow {
   id: string;
@@ -500,4 +501,56 @@ export async function getAdminJourneyOptions(principal: AuthPrincipal) {
     .from(databaseSchema.journeys)
     .innerJoin(databaseSchema.journeyVersions, eq(databaseSchema.journeyVersions.id, databaseSchema.journeys.currentPublishedVersionId))
     .orderBy(databaseSchema.journeyVersions.title);
+}
+
+function previewMediaRows() {
+  return knowledgeBase.people.flatMap((person) => {
+    const media = person.media;
+    if (!media.fullSrc && !media.thumbSrc) return [];
+    return [{
+      id: person.id, title: person.names.display, entityStableKey: person.id,
+      mimeType: "image/webp", byteSize: null, rightsStatus: media.rightsStatus,
+      authenticity: media.authenticity, credit: media.credit,
+      state: "ready", purpose: "portrait", altText: media.alt,
+      publicUrl: media.fullSrc ?? media.thumbSrc ?? null, updatedAt: new Date(0),
+    }];
+  });
+}
+
+export async function listAdminMedia(principal: AuthPrincipal) {
+  if (principal.mode === "local-preview") return previewMediaRows();
+  const rows = await getDatabase().select({
+    id: databaseSchema.mediaAssets.id, entityStableKey: databaseSchema.entities.stableKey,
+    mimeType: databaseSchema.mediaAssets.mimeType, byteSize: databaseSchema.mediaAssets.byteSize,
+    rightsStatus: databaseSchema.mediaAssets.rightsStatus, authenticity: databaseSchema.mediaAssets.authenticity,
+    credit: databaseSchema.mediaAssets.credit, storageKey: databaseSchema.mediaAssets.storageKey,
+    metadata: databaseSchema.mediaAssets.metadata, updatedAt: databaseSchema.mediaAssets.updatedAt,
+  }).from(databaseSchema.mediaAssets)
+    .leftJoin(databaseSchema.entities, eq(databaseSchema.entities.id, databaseSchema.mediaAssets.entityId))
+    .where(isNull(databaseSchema.mediaAssets.deletedAt))
+    .orderBy(desc(databaseSchema.mediaAssets.updatedAt)).limit(200);
+  return rows.map((row) => {
+    const metadata = row.metadata as Record<string, unknown>;
+    const state = String(metadata.state ?? "unknown");
+    return { ...row, title: String(metadata.title ?? metadata.fileName ?? row.storageKey), altText: String(metadata.altText ?? ""), purpose: String(metadata.purpose ?? "other"), state, publicUrl: state === "ready" ? publicMediaUrl(row.storageKey) : null };
+  });
+}
+
+export async function getAdminMediaAsset(principal: AuthPrincipal, id: string) {
+  if (principal.mode === "local-preview") return previewMediaRows().find((item) => item.id === id) ?? null;
+  const [row] = await getDatabase().select({
+    id: databaseSchema.mediaAssets.id, entityStableKey: databaseSchema.entities.stableKey,
+    mimeType: databaseSchema.mediaAssets.mimeType, byteSize: databaseSchema.mediaAssets.byteSize,
+    checksum: databaseSchema.mediaAssets.checksum, rightsStatus: databaseSchema.mediaAssets.rightsStatus,
+    authenticity: databaseSchema.mediaAssets.authenticity, credit: databaseSchema.mediaAssets.credit,
+    storageKey: databaseSchema.mediaAssets.storageKey, metadata: databaseSchema.mediaAssets.metadata,
+    deletedAt: databaseSchema.mediaAssets.deletedAt, createdAt: databaseSchema.mediaAssets.createdAt,
+    updatedAt: databaseSchema.mediaAssets.updatedAt,
+  }).from(databaseSchema.mediaAssets)
+    .leftJoin(databaseSchema.entities, eq(databaseSchema.entities.id, databaseSchema.mediaAssets.entityId))
+    .where(eq(databaseSchema.mediaAssets.id, id)).limit(1);
+  if (!row) return null;
+  const metadata = row.metadata as Record<string, unknown>;
+  const state = String(metadata.state ?? "unknown");
+  return { ...row, title: String(metadata.title ?? metadata.fileName ?? row.storageKey), altText: String(metadata.altText ?? ""), purpose: String(metadata.purpose ?? "other"), state, license: typeof metadata.license === "string" ? metadata.license : null, sourceUrl: typeof metadata.sourceUrl === "string" ? metadata.sourceUrl : null, publicUrl: state === "ready" ? publicMediaUrl(row.storageKey) : null };
 }

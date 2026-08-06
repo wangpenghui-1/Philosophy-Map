@@ -147,6 +147,15 @@
 .journeyNodeCard > header button { padding: 6px 8px; border-color: var(--admin-line); background: transparent; color: var(--admin-muted); font-size: 10px; }
 .journeyNodeCard > .formGrid { padding: 18px 16px 22px; }
 .addJourneyNode { margin: 16px; border-color: rgba(198,169,104,.4) !important; background: transparent !important; color: var(--admin-bronze) !important; }
+.mediaPreview { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(240px, 1.2fr); gap: 24px; margin-bottom: 18px; padding: 22px; border: 1px solid var(--admin-line); }
+.mediaPreview img { width: 100%; max-height: 440px; object-fit: contain; background: #050604; }
+.mediaPreview audio { width: 100%; align-self: center; }
+.mediaPreview > p { color: var(--admin-muted); }
+.mediaPreview dl { display: grid; align-content: start; gap: 14px; margin: 0; }
+.mediaPreview dl div { padding-bottom: 12px; border-bottom: 1px solid var(--admin-line); }
+.mediaPreview dt { color: var(--admin-muted); font-size: 9px; letter-spacing: .08em; }
+.mediaPreview dd { margin: 6px 0 0; color: var(--admin-paper); font-size: 12px; }
+.archiveButton { border-color: rgba(224,154,143,.55) !important; background: transparent !important; color: #e09a8f !important; }
 
 .loginPage { display: grid; min-height: 100vh; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 70px 20px; }
 .loginBack { position: absolute; top: 24px; left: 24px; color: var(--admin-muted); text-decoration: none; font-size: 12px; }
@@ -187,4 +196,5 @@
   .citationEditor button { justify-self: start; }
   .journeyNodeCard > header { align-items: flex-start; flex-direction: column; }
   .journeyNodeCard > header > div:last-child { flex-wrap: wrap; }
+  .mediaPreview { grid-template-columns: 1fr; }
 }

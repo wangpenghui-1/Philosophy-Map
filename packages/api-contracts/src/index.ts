@@ -172,6 +172,33 @@ export const updateJourneyDraftSchema = journeyFieldsBaseSchema.partial().superR
   refineJourney(value, context);
 });
 
+export const mediaMimeTypeSchema = z.enum([
+  "image/jpeg", "image/png", "image/webp", "image/avif",
+  "audio/mpeg", "audio/mp4", "audio/wav", "audio/webm",
+]);
+export const mediaPurposeSchema = z.enum(["portrait", "illustration", "document", "audio", "other"]);
+export const mediaAuthenticitySchema = z.enum(["historical", "documentary", "stylized", "interpretive", "synthetic", "unknown"]);
+const mediaMetadataFieldsSchema = z.object({
+  title: z.string().trim().min(1).max(300),
+  altText: z.string().trim().max(500),
+  purpose: mediaPurposeSchema,
+  rightsStatus: z.string().trim().min(1).max(160),
+  authenticity: mediaAuthenticitySchema,
+  credit: z.string().trim().min(1).max(500),
+  license: z.string().trim().max(300).nullable().optional(),
+  sourceUrl: z.string().trim().url().refine((value) => ["http:", "https:"].includes(new URL(value).protocol), "仅支持 HTTP 或 HTTPS URL").nullable().optional(),
+  entityStableKey: z.string().trim().min(1).max(180).nullable().optional(),
+});
+export const createMediaUploadSchema = mediaMetadataFieldsSchema.extend({
+  fileName: z.string().trim().min(1).max(240),
+  mimeType: mediaMimeTypeSchema,
+  byteSize: z.number().int().min(1).max(250_000_000),
+  checksumSha256: z.string().regex(/^[A-Za-z0-9+/]{43}=$/, "SHA-256 校验值必须是 Base64 格式"),
+});
+export const updateMediaMetadataSchema = mediaMetadataFieldsSchema.partial()
+  .refine((value) => Object.keys(value).length > 0, "至少提供一个需要更新的字段。 ");
+export const archiveMediaSchema = z.object({ reason: z.string().trim().min(8).max(2_000) });
+
 export const progressUpdateSchema = z.object({
   progress: z.number().min(0).max(1),
   anchor: z.string().trim().max(220).nullable().optional(),

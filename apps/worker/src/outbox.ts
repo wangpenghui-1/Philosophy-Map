@@ -42,6 +42,48 @@ const checkSourceLink: OutboxHandler = async (event) => {
   logEvent("info", "Source URL check succeeded.", { module: "worker", operation: event.eventType, aggregateId: event.aggregateId, status: response.status });
 };
 
+const scanMediaAsset: OutboxHandler = async (event) => {
+  const endpoint = process.env.MEDIA_SCAN_ENDPOINT?.trim();
+  const token = process.env.MEDIA_SCAN_TOKEN?.trim();
+  const bucket = process.env.S3_BUCKET?.trim();
+  const payload = event.payload as { assetId?: string; storageKey?: string };
+  const assetId = payload.assetId;
+  const storageKey = payload.storageKey;
+  if (!endpoint || !token || !bucket) throw new Error("Media scanner is not configured.");
+  const url = new URL(endpoint);
+  if (url.protocol !== "https:") throw new Error("Media scanner endpoint must use HTTPS.");
+  if (!assetId || !storageKey) throw new Error("Media scan event is incomplete.");
+  const response = await fetch(url, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ bucket, key: storageKey }),
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!response.ok) throw new Error(`Media scanner returned HTTP ${response.status}.`);
+  const result = await response.json() as { clean?: boolean; engine?: string; signature?: string | null };
+  if (typeof result.clean !== "boolean") throw new Error("Media scanner response is invalid.");
+  const database = getDatabase();
+  const [asset] = await database.select().from(databaseSchema.mediaAssets).where(eq(databaseSchema.mediaAssets.id, assetId)).limit(1);
+  if (!asset || asset.deletedAt) return;
+  const now = new Date();
+  const metadata = asset.metadata as Record<string, unknown>;
+  await database.transaction(async (transaction) => {
+    await transaction.update(databaseSchema.mediaAssets).set({
+      metadata: { ...metadata, state: result.clean ? "ready" : "rejected", scannedAt: now.toISOString(), scanEngine: result.engine ?? "external", scanSignature: result.signature ?? null },
+      updatedAt: now,
+    }).where(eq(databaseSchema.mediaAssets.id, assetId));
+    await transaction.insert(databaseSchema.auditEvents).values({
+      actorRole: "admin", action: result.clean ? "media.scan-clean" : "media.scan-rejected",
+      resourceType: "media-asset", resourceId: assetId,
+      metadata: { engine: result.engine ?? "external", signature: result.signature ?? null },
+    });
+    if (result.clean) await transaction.insert(databaseSchema.outboxEvents).values({
+      aggregateType: "media", aggregateId: assetId, eventType: "media.asset.ready",
+      payload: { assetId, storageKey },
+    });
+  });
+};
+
 const defaultHandlers: Record<string, OutboxHandler> = {
   "knowledge.entity.published": refreshKnowledgeProjection,
   "knowledge.entity.withdrawn": refreshKnowledgeProjection,
@@ -49,6 +91,8 @@ const defaultHandlers: Record<string, OutboxHandler> = {
   "knowledge.source.published": refreshKnowledgeProjection,
   "knowledge.relation.published": refreshKnowledgeProjection,
   "journey.published": refreshKnowledgeProjection,
+  "media.asset.ready": refreshKnowledgeProjection,
+  "media.scan.requested": scanMediaAsset,
   "source.link-check.requested": checkSourceLink,
 };
 

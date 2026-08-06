@@ -46,6 +46,16 @@ test("local owner can enter and leave the read-only admin preview", async ({ pag
   await page.goto("/admin/journeys/new");
   await expect(page.getByText("只读旅程快照")).toBeVisible();
 
+  await page.goto("/admin/media");
+  await expect(page.getByRole("heading", { name: "媒体资产", exact: true })).toBeVisible();
+  await page.getByRole("link", { name: "康德", exact: true }).click();
+  await expect(page.getByText("只读媒体快照")).toBeVisible();
+  await expect(page.getByRole("img", { name: "康德的艺术化人物形象" })).toBeVisible();
+
+  await page.goto("/admin/media/new");
+  await expect(page.getByText("只读媒体快照")).toBeVisible();
+  await expect(page.getByRole("button", { name: "上传媒体资产" })).toHaveCount(0);
+
   await page.goto("/admin/content/new");
   await expect(page.getByText("只读预览不能创建内容")).toBeVisible();
   await expect(page.getByRole("button", { name: "创建 candidate 版本" })).toBeDisabled();

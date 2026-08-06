@@ -434,6 +434,15 @@ export const memoryLinks = pgTable("memory_links", {
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 }, (table) => [primaryKey({ columns: [table.memoryId, table.entityId] })]);
 
+export const memoryEmbeddings = pgTable("memory_embeddings", {
+  memoryId: uuid("memory_id").references(() => memoryItems.id, { onDelete: "cascade" }).primaryKey(),
+  userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }).notNull(),
+  model: varchar("model", { length: 120 }).notNull(),
+  embedding: vector1536("embedding").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
+}, (table) => [index("memory_embeddings_user_idx").on(table.userId)]);
+
 export const memoryEvents = pgTable("memory_events", {
   id: uuid("id").defaultRandom().primaryKey(),
   memoryId: uuid("memory_id").references(() => memoryItems.id, { onDelete: "cascade" }).notNull(),

@@ -43,6 +43,13 @@
       "when": 1786045200000,
       "tag": "0005_conversation_rls",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1786045300000,
+      "tag": "0006_flimsy_ricochet",
+      "breakpoints": true
     }
   ]
 }

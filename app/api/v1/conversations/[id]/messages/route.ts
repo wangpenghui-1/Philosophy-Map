@@ -6,6 +6,7 @@ import { resolveConversationIdentity } from "../../../../_lib/anonymous-session"
 import { beginConversationRun, finishConversationRun } from "../../../../_lib/ai-runtime";
 import { appendConversationExchange, conversationExists } from "../../../../_lib/conversations";
 import { problemResponse, validationProblem } from "../../../../_lib/http";
+import { loadConfirmedMemoryContext } from "../../../../_lib/memories";
 import { rateLimit, requestNetworkKey } from "../../../../_lib/rate-limit";
 import { isSameOrigin } from "../../../../_lib/session";
 
@@ -38,7 +39,8 @@ export async function POST(
       try {
         send("ack", { conversationId: id, persistence: isDatabaseConfigured() ? "database" : "ephemeral" });
         const startedAt = Date.now();
-        const answer = await service.answer(parsed.data.content, parsed.data.locale, identity.rateSubject.slice(0, 64), runController.signal);
+        const memories = identity.owner.userId ? await loadConfirmedMemoryContext(identity.owner.userId) : [];
+        const answer = await service.answer(parsed.data.content, parsed.data.locale, identity.rateSubject.slice(0, 64), runController.signal, memories.map((memory) => `${memory.memoryType} · ${memory.label}: ${memory.value}`));
         send("retrieval", {
           excerpts: answer.evidence.excerpts.map((excerpt) => ({
             entityId: excerpt.entityId,
@@ -64,7 +66,7 @@ export async function POST(
           estimatedCostUsd: estimateModelCost(answer.usage),
         }, identity.owner);
         send("usage", { provider: answer.provider, model: answer.model, remaining: limit.remaining, ...answer.usage });
-        send("done", { abstained: answer.abstained, persisted, conversationId: id });
+        send("done", { abstained: answer.abstained, persisted, conversationId: id, memoryCount: memories.length });
       } catch (error) {
         send("error", {
           code: runController.signal.aborted ? "cancelled" : "grounded_answer_failed",

@@ -27,6 +27,8 @@ const specification = {
     "/me/library": { get: { summary: "读取收藏、阅读进度与旅程进度", responses: { "200": { description: "成功" } } } },
     "/me/favorites/{entityId}": { get: { summary: "读取收藏状态", responses: { "200": { description: "成功" } } }, put: { summary: "收藏知识实体", responses: { "200": { description: "成功" } } }, delete: { summary: "取消收藏", responses: { "204": { description: "成功" } } } },
     "/me/export": { post: { summary: "导出当前账户数据", responses: { "200": { description: "JSON 导出包" } } } },
+    "/me/memories": { get: { summary: "列出当前用户可见的长期记忆", responses: { "200": { description: "成功" } } }, post: { summary: "明确创建或确认一条长期记忆", responses: { "201": { description: "成功" }, "422": { description: "敏感属性拒存" } } } },
+    "/me/memories/{memoryId}": { patch: { summary: "修改或确认一条长期记忆", responses: { "200": { description: "成功" } } }, delete: { summary: "永久删除一条长期记忆", responses: { "204": { description: "成功" } } } },
     "/me/account": { delete: { summary: "硬删除账户与用户数据", responses: { "204": { description: "成功" } } } },
     "/conversations": { get: { summary: "列出当前匿名身份或账户的会话", responses: { "200": { description: "成功" } } }, post: { summary: "创建匿名或登录会话", responses: { "201": { description: "成功" }, "429": { description: "超过限额" } } } },
     "/conversations/{id}/messages": { post: { summary: "发送问题并接收 SSE 回答", responses: { "200": { description: "SSE 事件流" } } } },

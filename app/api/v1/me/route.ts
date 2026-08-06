@@ -23,7 +23,14 @@ export async function PATCH(request: Request) {
   if ("response" in auth) return auth.response;
   const parsed = profileUpdateSchema.safeParse(await request.json().catch(() => ({})));
   if (!parsed.success) return validationProblem(parsed.error);
-  const [profile] = await withUserContext(auth.principal.subject!, (transaction) => transaction.insert(databaseSchema.userProfiles).values({ userId: auth.principal.subject!, ...parsed.data })
-    .onConflictDoUpdate({ target: databaseSchema.userProfiles.userId, set: { ...parsed.data, updatedAt: new Date() } }).returning());
+  const [profile] = await withUserContext(auth.principal.subject!, async (transaction) => {
+    const updated = await transaction.insert(databaseSchema.userProfiles).values({ userId: auth.principal.subject!, ...parsed.data })
+      .onConflictDoUpdate({ target: databaseSchema.userProfiles.userId, set: { ...parsed.data, updatedAt: new Date() } }).returning();
+    if (parsed.data.memoryEnabled !== undefined) {
+      await transaction.insert(databaseSchema.consents).values({ userId: auth.principal.subject!, consentType: "long-term-memory", granted: parsed.data.memoryEnabled, policyVersion: "2026-08-07" });
+      await transaction.insert(databaseSchema.auditEvents).values({ actorId: auth.principal.subject!, actorRole: auth.principal.role, action: parsed.data.memoryEnabled ? "memory.enabled" : "memory.disabled", resourceType: "user", resourceId: auth.principal.subject! });
+    }
+    return updated;
+  });
   return jsonResponse(apiEnvelope({ profile }));
 }

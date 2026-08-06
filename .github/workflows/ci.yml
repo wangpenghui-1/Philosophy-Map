@@ -2,6 +2,7 @@ name: Quality gates
 
 permissions:
   contents: read
+  pull-requests: read
 
 concurrency:
   group: quality-${{ github.workflow }}-${{ github.ref }}
@@ -27,8 +28,18 @@ jobs:
           node-version: 22.15.0
           cache: npm
       - run: npm ci
+      - run: npm run security:audit
+      - run: npm run db:migrate:check
+      - run: npm run backup:verify
+      - run: npm run restore:drill
       - run: npx playwright install --with-deps chromium
       - run: npm run review:full
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-release-evidence
+          path: artifacts/production/
+          retention-days: 90
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -41,3 +52,12 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+
+  dependency-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate

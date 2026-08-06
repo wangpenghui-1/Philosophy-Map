@@ -1575,8 +1575,11 @@
   }
 
   @media (max-width: 460px) {
-    .header-actions { gap: 4px; }
-    .mode-switch button { min-width: 38px; font-size: 10px; }
+    .site-header { gap: 6px; padding-inline: 8px; }
+    .brand > span:last-child { display: none; }
+    .header-actions { min-width: 0; gap: 3px; }
+    .mode-switch { padding: 2px; }
+    .mode-switch button { min-width: 36px; padding-inline: 6px; font-size: 10px; }
     .globe-stage__topline span:last-child { display: none; }
     .story-overlay { top: 72px; }
     .story-overlay__meta span:last-child { display: none; }

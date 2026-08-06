@@ -50,6 +50,8 @@ npm run content:edit:check
 npm run content:release:check
 npm run lint
 npm run typecheck
+npm run security:audit
+npm run db:migrate:check
 npm test
 npm run test:e2e
 npm run backup:verify

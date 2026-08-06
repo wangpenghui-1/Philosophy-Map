@@ -1056,10 +1056,25 @@ function CameraDirector({
   suppressInitialDirection: boolean;
 }) {
   const { camera, invalidate, size } = useThree();
+  const [controlsReady, setControlsReady] = useState(false);
   const suppressInitialRef = useRef(suppressInitialDirection);
   const lastStoryFocusKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
+    let frame = 0;
+    const waitForControls = () => {
+      if (controlsRef.current) {
+        setControlsReady(true);
+        return;
+      }
+      frame = window.requestAnimationFrame(waitForControls);
+    };
+    waitForControls();
+    return () => window.cancelAnimationFrame(frame);
+  }, [controlsRef]);
+
+  useEffect(() => {
+    if (!controlsReady) return;
     if (suppressInitialRef.current) {
       suppressInitialRef.current = false;
       return;
@@ -1140,7 +1155,7 @@ function CameraDirector({
       abort();
       if (abortRef.current === abort) abortRef.current = null;
     };
-  }, [abortRef, camera, chapterIndex, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
+  }, [abortRef, camera, chapterIndex, controlsReady, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
 
   return null;
 }

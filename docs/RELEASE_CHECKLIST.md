@@ -32,6 +32,7 @@
 - 发布清单记录Git SHA、内容数量和静态投影SHA-256；至少有三个可回滚Production部署。
 - 域名、TLS、CSP、HSTS、Sentry脱敏、API限流和Secret扫描通过。
 - 桌面、390px、无WebGL、弱网、SSE断线恢复和公开静态故障回退通过。
+- `npm run deployment:check` 针对本次完整 Git SHA 输出 `accepted`，JSON/Markdown 报告已进入受控审计存储。
 
 ## 发布阻断条件
 
@@ -45,3 +46,4 @@
 - 尚未连接可远程操控的真实手机；发布后需在一台iOS或Android真机复核触控、后台恢复、温升和持续帧率。
 - 软件渲染环境不能代表真实GPU帧率；线上部署前仍应在目标设备补充稳定的帧率、内存和长任务遥测。
 - 尚未连接真实生产PostgreSQL、Redis、R2、邮件、扫描、Sentry和OpenAI时，只能判定代码与本地回退通过，不能声称生产部署验收完成。
+- 生产变量名称、人工证据文件或发布 SHA 任一缺失时，`deployment:check` 的 `blocked` 是发布阻断，不得手工改成通过。

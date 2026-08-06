@@ -19,3 +19,5 @@ Sentry 负责异常聚合；OpenTelemetry 串联请求、数据库和 Worker；V
 ## 发布与回滚
 
 发布前完成 `docs/RELEASE_CHECKLIST.md`。数据库迁移遵守向后兼容的 expand/migrate/contract 顺序；先迁移，再部署兼容代码，最后在至少两个稳定发布周期后清理旧字段。出现故障先恢复上一个 Vercel Production 部署；数据库只有在数据损坏且回滚代码无法解决时才走 PITR/恢复流程。
+
+每个 Production 发布都按 `infra/runbooks/deployment-acceptance.md` 重做严格验收。验收报告绑定完整 Git SHA，不得复用上一版本的人工证据。

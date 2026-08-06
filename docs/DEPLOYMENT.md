@@ -61,6 +61,10 @@ npm run release:manifest
 
 正式发布前使用`npm run review:full`生成完整审核报告。
 
+最终 Production 验收使用两步命令：`npm run deployment:report` 用于生成当前差距且不阻断终端，`npm run deployment:check` 用于严格判定。两者都会校验部署 SHA、公开页面、live/ready、后台登录与保护、API、安全响应头、生产变量名称和人工恢复证据。完整输入格式与操作顺序见`infra/runbooks/deployment-acceptance.md`。
+
+没有提供生产变量名称清单和逐项人工证据时，工具必须输出`blocked`。本地通过、Vercel 显示 Ready 或正式首页返回 200，任何单项都不能独立构成生产验收完成。
+
 Playwright默认使用独立的`3100`端口启动全新的Next.js生产服务器，避免复用本地开发服务或旧Vinext进程。只有明确设置`PLAYWRIGHT_REUSE_SERVER=1`时才复用已有测试服务器。
 
 ## 回滚

@@ -3,11 +3,14 @@ import { apiEnvelope } from "@atlas/api-contracts";
 import { databaseSchema, withUserContext } from "@atlas/db";
 import { authenticatedPrincipal } from "../../../_lib/auth";
 import { jsonResponse } from "../../../_lib/http";
+import { enforceRateLimit, withRateLimitHeaders } from "../../../_lib/rate-limit";
 
 export async function POST(request: Request) {
   const auth = await authenticatedPrincipal(request);
   if ("response" in auth) return auth.response;
   const userId = auth.principal.subject!;
+  const limited = await enforceRateLimit(request, "privacy:data-export", { limit: 2, windowSeconds: 60 * 60 }, userId);
+  if (limited.response) return withRateLimitHeaders(limited.response, limited.result);
   const exported = await withUserContext(userId, async (transaction) => {
     const [account, profile, consents, favorites, reading, journeys, memories, conversations, sessions] = await Promise.all([
       transaction.select({ id: databaseSchema.users.id, email: databaseSchema.users.email, emailVerifiedAt: databaseSchema.users.emailVerifiedAt, createdAt: databaseSchema.users.createdAt, updatedAt: databaseSchema.users.updatedAt }).from(databaseSchema.users).where(eq(databaseSchema.users.id, userId)),
@@ -35,5 +38,5 @@ export async function POST(request: Request) {
     await transaction.insert(databaseSchema.auditEvents).values({ actorId: userId, actorRole: auth.principal.role, action: "user-data.exported", resourceType: "user", resourceId: userId, metadata: { format: "json", schemaVersion: 1 } });
     return { account, profile, consents, sessions, favorites, readingProgress: reading, journeyProgress: journeys, memories, memoryLinks, memoryEvents, memoryEmbeddings, conversations, messages, messageCitations, modelRuns, usage };
   });
-  return jsonResponse(apiEnvelope({ exportedAt: new Date().toISOString(), schemaVersion: 1, ...exported }), { headers: { "content-disposition": `attachment; filename="atlas-export-${userId}.json"` } });
+  return withRateLimitHeaders(jsonResponse(apiEnvelope({ exportedAt: new Date().toISOString(), schemaVersion: 1, ...exported }), { headers: { "content-disposition": `attachment; filename="atlas-export-${userId}.json"` } }), limited.result);
 }

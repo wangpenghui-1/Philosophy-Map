@@ -7,10 +7,13 @@ import {
 } from "@atlas/auth";
 import { databaseSchema, getDatabase, isDatabaseConfigured } from "@atlas/db";
 import { jsonResponse, problemResponse, validationProblem } from "../../../../_lib/http";
+import { enforceRateLimit, withRateLimitHeaders } from "../../../../_lib/rate-limit";
 import { isSameOrigin, sessionCookie } from "../_lib";
 
 export async function POST(request: Request) {
   if (!isSameOrigin(request)) return problemResponse(403, "请求来源无效");
+  const limited = await enforceRateLimit(request, "auth:admin-login", { limit: 8, windowSeconds: 15 * 60 });
+  if (limited.response) return withRateLimitHeaders(limited.response, limited.result);
   if (!isDatabaseConfigured()) {
     return problemResponse(503, "数据库尚未配置", "请先配置 DATABASE_URL 并创建首个 owner 账户。 ");
   }
@@ -32,7 +35,7 @@ export async function POST(request: Request) {
     resourceType: "session",
     resourceId: session.sessionId,
   });
-  return jsonResponse(apiEnvelope({ role, expiresAt: session.expiresAt.toISOString() }), {
+  return withRateLimitHeaders(jsonResponse(apiEnvelope({ role, expiresAt: session.expiresAt.toISOString() }), {
     headers: { "set-cookie": sessionCookie(request, session.token, session.maxAge) },
-  });
+  }), limited.result);
 }

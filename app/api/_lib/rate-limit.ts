@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { problemResponse } from "./http";
 
 interface RateLimitOptions { limit: number; windowSeconds: number }
 interface LocalBucket { count: number; expiresAt: number }
@@ -48,4 +49,25 @@ export function requestNetworkKey(request: Request) {
   return request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim()
     ?? request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
     ?? "unknown-network";
+}
+
+export async function enforceRateLimit(
+  request: Request,
+  scope: string,
+  options: RateLimitOptions,
+  subject = requestNetworkKey(request),
+) {
+  const result = await rateLimit(scope, subject, options);
+  if (result.allowed) return { result };
+  return {
+    result,
+    response: problemResponse(429, "请求过于频繁", `请在 ${result.retryAfter} 秒后重试。`),
+  };
+}
+
+export function withRateLimitHeaders(response: Response, result: Awaited<ReturnType<typeof rateLimit>>) {
+  response.headers.set("x-ratelimit-remaining", String(result.remaining));
+  response.headers.set("x-ratelimit-backend", result.backend);
+  if (!result.allowed) response.headers.set("retry-after", String(result.retryAfter));
+  return response;
 }

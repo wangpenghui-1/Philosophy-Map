@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("security headers preserve chat and WebGL application boot", async ({ page }) => {
+test("security headers preserve chat and WebGL application boot", async ({ page, request }) => {
   const browserErrors: string[] = [];
   page.on("pageerror", (error) => browserErrors.push(error.message));
   page.on("console", (message) => {
@@ -21,4 +21,13 @@ test("security headers preserve chat and WebGL application boot", async ({ page 
   await page.waitForTimeout(1_000);
 
   expect(browserErrors).toEqual([]);
+
+  const live = await request.get("/api/health/live");
+  expect(live.status()).toBe(200);
+  expect((await live.json()).data.status).toBe("alive");
+  const ready = await request.get("/api/health/ready");
+  expect(ready.status()).toBe(200);
+  const readiness = (await ready.json()).data;
+  expect(readiness.snapshotAvailable).toBe(true);
+  expect(readiness.mode).toBe("static-compatible");
 });

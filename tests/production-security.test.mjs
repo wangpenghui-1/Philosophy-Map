@@ -59,3 +59,20 @@ test("production proxy declares nonce CSP and hardened response headers", async 
     assert.match(source, /delete event\.request\.data/);
   }
 });
+
+test("health probes preserve static compatibility and protect detailed operations", async () => {
+  const [health, live, ready, admin] = await Promise.all([
+    readFile(new URL("../app/api/_lib/health.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/health/live/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/health/ready/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/admin/v1/system/health/route.ts", import.meta.url), "utf8"),
+  ]);
+  assert.match(health, /snapshotAvailable: true/);
+  assert.match(health, /REQUIRE_PRODUCTION_SERVICES === "1"/);
+  assert.match(health, /outboxFailed/);
+  assert.match(health, /aiCostUsd24h/);
+  assert.match(live, /status: "alive"/);
+  assert.match(ready, /report\.status === "not-ready" \? 503 : 200/);
+  assert.match(admin, /system:operate/);
+  assert.match(admin, /cache-control": "no-store/);
+});

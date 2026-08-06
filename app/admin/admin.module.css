@@ -54,6 +54,22 @@
 .metrics span, .metrics small { color: var(--admin-muted); font-size: 11px; }
 .metrics strong { color: var(--admin-bronze); font: 44px var(--font-serif, serif); font-weight: 400; }
 
+.operationSummary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+.operationSummary > div { display: grid; min-height: 130px; align-content: space-between; padding: 18px; border: 1px solid var(--admin-line); background: rgba(255,255,255,.025); }
+.operationSummary span, .operationSummary small { color: var(--admin-muted); font-size: 10px; }
+.operationSummary strong { color: var(--admin-bronze); font: 30px var(--font-serif, serif); font-weight: 400; }
+.serviceGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.serviceGrid article { display: grid; gap: 12px; padding: 20px 22px; border-right: 1px solid var(--admin-line); border-bottom: 1px solid var(--admin-line); }
+.serviceGrid article:nth-child(2n) { border-right: 0; }
+.serviceGrid article > div { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.serviceGrid h3, .serviceGrid p { margin: 0; }
+.serviceGrid h3 { font: 17px var(--font-serif, serif); font-weight: 450; }
+.serviceGrid p, .serviceGrid small { color: var(--admin-muted); font-size: 11px; }
+.health_healthy, .health_configured, .health_missing, .health_unhealthy { font: 9px var(--font-mono, ui-monospace, monospace); letter-spacing: .08em; }
+.health_healthy, .health_configured { color: #8fc7a0; }
+.health_missing { color: #d0ae71; }
+.health_unhealthy { color: #e09a8f; }
+
 .panel, .editorForm, .workflowBar, .qualityPanel, .publicationControls, .citationWorkbench { border: 1px solid var(--admin-line); background: rgba(12,14,11,.84); }
 .panelHeading { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 22px; border-bottom: 1px solid var(--admin-line); }
 .panelHeading h2 { margin: 4px 0 0; font: 24px var(--font-serif, serif); font-weight: 450; }
@@ -177,6 +193,7 @@
   .sidebar footer { margin-top: 12px; }
   .main { padding: 28px 16px 60px; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .operationSummary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 620px) {
@@ -184,6 +201,8 @@
   .pageHeader h1 { font-size: 40px; }
   .primaryAction, .secondaryAction { text-align: center; }
   .metrics { grid-template-columns: 1fr 1fr; }
+  .operationSummary, .serviceGrid { grid-template-columns: 1fr; }
+  .serviceGrid article { border-right: 0; }
   .metrics a { min-height: 125px; }
   .filters, .formGrid { grid-template-columns: 1fr; }
   .fullField { grid-column: auto; }

@@ -1,4 +1,4 @@
-import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { HeadBucketCommand, HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 let client: S3Client | undefined;
@@ -43,6 +43,10 @@ export async function createMediaUploadUrl(input: {
 
 export async function inspectMediaObject(storageKey: string) {
   return storageClient().send(new HeadObjectCommand({ Bucket: bucket(), Key: storageKey, ChecksumMode: "ENABLED" }));
+}
+
+export async function probeMediaStorage() {
+  await storageClient().send(new HeadBucketCommand({ Bucket: bucket() }), { requestTimeout: 3_000 });
 }
 
 export function publicMediaUrl(storageKey: string) {

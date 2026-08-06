@@ -56,6 +56,15 @@ test("local owner can enter and leave the read-only admin preview", async ({ pag
   await expect(page.getByText("只读媒体快照")).toBeVisible();
   await expect(page.getByRole("button", { name: "上传媒体资产" })).toHaveCount(0);
 
+  await page.goto("/admin/system");
+  await expect(page.getByRole("heading", { name: "生产运行状态" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "关键服务" })).toBeVisible();
+  await expect(page.getByText("PostgreSQL", { exact: true })).toBeVisible();
+  await expect(page.getByText("static-compatible", { exact: true })).toBeVisible();
+  const systemHealth = await page.request.get("/api/admin/v1/system/health");
+  expect(systemHealth.status()).toBe(200);
+  expect((await systemHealth.json()).data.health.snapshotAvailable).toBe(true);
+
   await page.goto("/admin/content/new");
   await expect(page.getByText("只读预览不能创建内容")).toBeVisible();
   await expect(page.getByRole("button", { name: "创建 candidate 版本" })).toBeDisabled();

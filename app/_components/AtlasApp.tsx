@@ -292,7 +292,7 @@ function SourceLinks({ sourceIds }: { sourceIds: string[] }) {
           <li key={source.id}>
             <a href={source.url} target="_blank" rel="noreferrer">
               <span>{source.title}</span>
-              <small>{source.publisher} · {source.locator}</small>
+              <small>{source.publisher}</small>
             </a>
           </li>
         );
@@ -356,7 +356,7 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
           {thinkerWorks.map((work) => work ? (
             <li key={work.id}>
               <span>{work.title}</span>
-              <small>{work.originalTitle} · {work.dateLabel}</small>
+              <small>在人物长文中查看版本、原名与年代</small>
             </li>
           ) : null)}
         </ul>
@@ -499,7 +499,7 @@ function SearchDialog({ open, onClose, onSelect }: { open: boolean; onClose: () 
     const normalized = query.trim().toLowerCase();
     if (!normalized) return [];
     const workOwnerIds = works
-      .filter((work) => `${work.title} ${work.originalTitle ?? ""}`.toLowerCase().includes(normalized))
+      .filter((work) => work.title.toLowerCase().includes(normalized))
       .map((work) => work.thinkerId);
     return thinkers.filter((thinker) =>
       `${thinker.name} ${thinker.englishName} ${thinker.originalName ?? ""} ${thinker.keywords.join(" ")}`
@@ -999,6 +999,17 @@ export default function AtlasApp({
   }, [chapterIndex, initialized, isPlaying, journeyPhase, mode, reduceMotion, setChapterIndex, setMode, setPlaying]);
 
   const activeJourney = activeJourneyId ? journeyById.get(activeJourneyId) ?? null : null;
+  useEffect(() => {
+    if (!initialized || !activeJourneyId || !["playing", "paused", "completed"].includes(journeyPhase)) return;
+    const timeout = window.setTimeout(() => {
+      void fetch(`/api/v1/me/progress/journey/${encodeURIComponent(activeJourneyId)}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ nodeOrdinal: journeyNodeIndex, completed: journeyPhase === "completed" }),
+      });
+    }, 500);
+    return () => window.clearTimeout(timeout);
+  }, [activeJourneyId, initialized, journeyNodeIndex, journeyPhase]);
   const journeyStoryFocus = useMemo<GlobeStoryFocus | null>(() => {
     if (!activeJourney || displayJourneyPhase === "entry" || displayJourneyPhase === "idle" || displayJourneyPhase === "legacy") return null;
     const node = activeJourney.nodes[journeyNodeIndex] ?? activeJourney.nodes[0];
@@ -1344,6 +1355,7 @@ export default function AtlasApp({
             </button>
             <button className="text-view-button" type="button" aria-label="打开文字探索" onClick={() => setListViewOpen(true)}>文字探索</button>
             <Link className="knowledge-button" href="/knowledge">知识库</Link>
+            <Link className="knowledge-button" href="/account">账户</Link>
             <div className="mode-switch" aria-label="浏览模式">
               <button type="button" className={displayMode === "story" ? "is-active" : ""} onClick={() => changeMode("story")}>故事</button>
               <button type="button" className={displayMode === "explore" ? "is-active" : ""} onClick={() => changeMode("explore")}>探索</button>

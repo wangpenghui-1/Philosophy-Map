@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CitationList, CitationMarkers, KnowledgePage, KnowledgeTierBadge, RelatedLinks } from "../../_components/knowledge/KnowledgeChrome";
 import KnowledgeReadingProgress from "../../_components/knowledge/KnowledgeReadingProgress";
+import KnowledgeFavoriteButton from "../../_components/knowledge/KnowledgeFavoriteButton";
 import RepresentativeQuote from "../../_components/RepresentativeQuote";
 import {
   getKnowledgePerson,
@@ -56,7 +57,7 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
 
   return (
     <KnowledgePage>
-      <KnowledgeReadingProgress />
+      <KnowledgeReadingProgress entityId={thinker.id} />
       <main className="knowledge-article">
         <nav className="knowledge-breadcrumb"><Link href="/knowledge">知识库</Link><span>/</span><span>人物</span><span>/</span><strong>{thinker.names.display}</strong></nav>
         <header className="knowledge-article__hero">
@@ -83,7 +84,7 @@ export default async function ThinkerPage({ params }: { params: Promise<{ slug: 
               />
             ) : null}
             <p className="knowledge-article__lead">{thinker.summary}</p>
-            <div className="knowledge-article__actions"><Link href={`/explore?thinker=${thinker.slug}`}>在3D地球中定位</Link><Link href={`/knowledge?q=${encodeURIComponent(thinker.names.display)}`}>查看相关条目</Link></div>
+            <div className="knowledge-article__actions"><Link href={`/explore?thinker=${thinker.slug}`}>在3D地球中定位</Link><Link href={`/knowledge?q=${encodeURIComponent(thinker.names.display)}`}>查看相关条目</Link><KnowledgeFavoriteButton entityId={thinker.id} returnPath={`/thinker/${thinker.slug}`} /></div>
           </div>
         </header>
 

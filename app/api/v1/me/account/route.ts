@@ -3,8 +3,10 @@ import { accountDeleteSchema } from "@atlas/api-contracts";
 import { databaseSchema, getDatabase } from "@atlas/db";
 import { authenticatedPrincipal } from "../../../_lib/auth";
 import { problemResponse, validationProblem } from "../../../_lib/http";
+import { clearedSessionCookie, isSameOrigin } from "../../../_lib/session";
 
 export async function DELETE(request: Request) {
+  if (!isSameOrigin(request)) return problemResponse(403, "请求来源无效");
   const auth = await authenticatedPrincipal(request);
   if ("response" in auth) return auth.response;
   const parsed = accountDeleteSchema.safeParse(await request.json().catch(() => ({})));
@@ -27,6 +29,6 @@ export async function DELETE(request: Request) {
   if (!deleted.length) return problemResponse(404, "未找到账户");
   return new Response(null, {
     status: 204,
-    headers: { "set-cookie": "atlas_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0" },
+    headers: { "set-cookie": clearedSessionCookie(request) },
   });
 }

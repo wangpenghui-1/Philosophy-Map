@@ -171,16 +171,13 @@ const atlasSources = published.sources.map((source) => ({
   title: source.title,
   publisher: source.publication,
   url: source.url ?? (source.doi ? `https://doi.org/${source.doi}` : "#"),
-  locator: source.defaultLocator ?? "请参见条目中的具体引用定位",
   kind: source.sourceType,
 }));
 
 const atlasWorks = published.works.map((work) => ({
   id: work.id,
   title: work.title,
-  originalTitle: work.originalTitle,
   thinkerId: work.authorRefs[0].personId,
-  dateLabel: work.dateLabel,
 }));
 
 const atlasThinkers = published.people.map((person) => ({

@@ -66,6 +66,19 @@ export const adminLoginSchema = z.object({
   password: z.string().min(12).max(128),
 });
 
+const memberPasswordSchema = z.string().min(12).max(128)
+  .refine((value) => /[A-Za-z]/.test(value) && /[0-9]/.test(value), "密码至少包含一个字母和一个数字");
+export const memberRegisterSchema = z.object({
+  email: z.string().trim().toLowerCase().email().max(320),
+  password: memberPasswordSchema,
+  displayName: z.string().trim().min(1).max(120),
+  acceptPrivacy: z.literal(true),
+});
+export const memberLoginSchema = z.object({ email: z.string().trim().toLowerCase().email().max(320), password: z.string().min(1).max(128) });
+export const authTokenSchema = z.object({ token: z.string().min(32).max(220) });
+export const passwordResetRequestSchema = z.object({ email: z.string().trim().toLowerCase().email().max(320) });
+export const passwordResetSchema = authTokenSchema.extend({ password: memberPasswordSchema });
+
 export const createMemorySchema = memoryUpdateSchema.extend({
   memoryType: z.enum(["preference", "learning", "explicit"]),
   confirmed: z.boolean().default(true),
@@ -203,6 +216,7 @@ export const progressUpdateSchema = z.object({
   progress: z.number().min(0).max(1),
   anchor: z.string().trim().max(220).nullable().optional(),
 });
+export const journeyProgressUpdateSchema = z.object({ nodeOrdinal: z.number().int().min(0).max(100), completed: z.boolean().default(false) });
 
 export const accountDeleteSchema = z.object({
   confirmation: z.literal("DELETE MY ACCOUNT"),

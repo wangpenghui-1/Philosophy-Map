@@ -130,6 +130,7 @@ export async function authenticatePassword(email: string, password: string) {
     passwordHash: databaseSchema.passwordCredentials.passwordHash,
     failedAttempts: databaseSchema.passwordCredentials.failedAttempts,
     lockedUntil: databaseSchema.passwordCredentials.lockedUntil,
+    emailVerifiedAt: databaseSchema.users.emailVerifiedAt,
     disabledAt: databaseSchema.users.disabledAt,
     deletedAt: databaseSchema.users.deletedAt,
   }).from(databaseSchema.users)
@@ -139,7 +140,7 @@ export async function authenticatePassword(email: string, password: string) {
     )
     .where(eq(databaseSchema.users.email, normalizedEmail))
     .limit(1);
-  if (!record || record.disabledAt || record.deletedAt) return null;
+  if (!record || !record.emailVerifiedAt || record.disabledAt || record.deletedAt) return null;
   if (record.lockedUntil && record.lockedUntil > new Date()) return null;
 
   const valid = await verifyPassword(password, record.passwordHash);
@@ -160,6 +161,89 @@ export async function authenticatePassword(email: string, password: string) {
     lockedUntil: null,
     updatedAt: new Date(),
   }).where(eq(databaseSchema.passwordCredentials.userId, record.userId));
+  return record.userId;
+}
+
+const AUTH_TOKEN_TTL_MS = { "email-verification": 24 * 60 * 60_000, "password-reset": 60 * 60_000 } as const;
+
+export async function issueAuthToken(userId: string, purpose: keyof typeof AUTH_TOKEN_TTL_MS) {
+  const token = randomBytes(32).toString("base64url");
+  const tokenHash = createHash("sha256").update(token).digest("hex");
+  const expiresAt = new Date(Date.now() + AUTH_TOKEN_TTL_MS[purpose]);
+  const database = getDatabase();
+  await database.transaction(async (transaction) => {
+    await transaction.update(databaseSchema.authTokens).set({ consumedAt: new Date() }).where(and(
+      eq(databaseSchema.authTokens.userId, userId),
+      eq(databaseSchema.authTokens.purpose, purpose),
+      isNull(databaseSchema.authTokens.consumedAt),
+    ));
+    await transaction.insert(databaseSchema.authTokens).values({ userId, purpose, tokenHash, expiresAt });
+  });
+  return { token, expiresAt };
+}
+
+export async function registerMember(email: string, password: string, displayName: string) {
+  const normalizedEmail = email.trim().toLocaleLowerCase("en-US");
+  const database = getDatabase();
+  const [existing] = await database.select({ id: databaseSchema.users.id, verifiedAt: databaseSchema.users.emailVerifiedAt })
+    .from(databaseSchema.users).where(eq(databaseSchema.users.email, normalizedEmail)).limit(1);
+  if (existing) {
+    return { userId: existing.id, alreadyVerified: Boolean(existing.verifiedAt), created: false };
+  }
+  const passwordHash = await hashPassword(password);
+  const [user] = await database.transaction(async (transaction) => {
+    const inserted = await transaction.insert(databaseSchema.users).values({ email: normalizedEmail }).returning();
+    await transaction.insert(databaseSchema.passwordCredentials).values({ userId: inserted[0].id, passwordHash });
+    await transaction.insert(databaseSchema.userProfiles).values({ userId: inserted[0].id, displayName });
+    await transaction.insert(databaseSchema.userRoles).values({ userId: inserted[0].id, role: "member" });
+    await transaction.insert(databaseSchema.consents).values({ userId: inserted[0].id, consentType: "privacy-policy", granted: true, policyVersion: "2026-08-07" });
+    await transaction.insert(databaseSchema.auditEvents).values({ actorId: inserted[0].id, actorRole: "member", action: "auth.member.registered", resourceType: "user", resourceId: inserted[0].id });
+    return inserted;
+  });
+  return { userId: user.id, alreadyVerified: false, created: true };
+}
+
+async function findActiveAuthToken(token: string, purpose: keyof typeof AUTH_TOKEN_TTL_MS) {
+  const tokenHash = createHash("sha256").update(token).digest("hex");
+  const [record] = await getDatabase().select().from(databaseSchema.authTokens).where(and(
+    eq(databaseSchema.authTokens.tokenHash, tokenHash),
+    eq(databaseSchema.authTokens.purpose, purpose),
+    gt(databaseSchema.authTokens.expiresAt, new Date()),
+    isNull(databaseSchema.authTokens.consumedAt),
+  )).limit(1);
+  return record ?? null;
+}
+
+export async function verifyMemberEmail(token: string) {
+  const record = await findActiveAuthToken(token, "email-verification");
+  if (!record) return null;
+  const now = new Date();
+  await getDatabase().transaction(async (transaction) => {
+    await transaction.update(databaseSchema.authTokens).set({ consumedAt: now }).where(eq(databaseSchema.authTokens.id, record.id));
+    await transaction.update(databaseSchema.users).set({ emailVerifiedAt: now, updatedAt: now }).where(eq(databaseSchema.users.id, record.userId));
+    await transaction.insert(databaseSchema.auditEvents).values({ actorId: record.userId, actorRole: "member", action: "auth.member.email-verified", resourceType: "user", resourceId: record.userId });
+  });
+  return record.userId;
+}
+
+export async function requestPasswordReset(email: string) {
+  const normalizedEmail = email.trim().toLocaleLowerCase("en-US");
+  const [user] = await getDatabase().select({ id: databaseSchema.users.id, email: databaseSchema.users.email })
+    .from(databaseSchema.users).where(and(eq(databaseSchema.users.email, normalizedEmail), isNull(databaseSchema.users.disabledAt), isNull(databaseSchema.users.deletedAt))).limit(1);
+  return user ?? null;
+}
+
+export async function resetMemberPassword(token: string, password: string) {
+  const record = await findActiveAuthToken(token, "password-reset");
+  if (!record) return null;
+  const passwordHash = await hashPassword(password);
+  const now = new Date();
+  await getDatabase().transaction(async (transaction) => {
+    await transaction.update(databaseSchema.authTokens).set({ consumedAt: now }).where(eq(databaseSchema.authTokens.id, record.id));
+    await transaction.update(databaseSchema.passwordCredentials).set({ passwordHash, failedAttempts: 0, lockedUntil: null, passwordChangedAt: now, updatedAt: now }).where(eq(databaseSchema.passwordCredentials.userId, record.userId));
+    await transaction.update(databaseSchema.sessions).set({ revokedAt: now }).where(and(eq(databaseSchema.sessions.userId, record.userId), isNull(databaseSchema.sessions.revokedAt)));
+    await transaction.insert(databaseSchema.auditEvents).values({ actorId: record.userId, actorRole: "member", action: "auth.member.password-reset", resourceType: "user", resourceId: record.userId });
+  });
   return record.userId;
 }
 

@@ -1,6 +1,6 @@
 import { and, eq, isNull } from "drizzle-orm";
 import { apiEnvelope } from "@atlas/api-contracts";
-import { databaseSchema, getDatabase } from "@atlas/db";
+import { databaseSchema, getDatabase, withUserContext } from "@atlas/db";
 import { authenticatedPrincipal } from "../../../../_lib/auth";
 import { jsonResponse, problemResponse } from "../../../../_lib/http";
 
@@ -15,6 +15,22 @@ async function resolveEntity(stableKey: string) {
   return entity;
 }
 
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ entityId: string }> },
+) {
+  const auth = await authenticatedPrincipal(request);
+  if ("response" in auth) return auth.response;
+  const { entityId } = await params;
+  const entity = await resolveEntity(entityId);
+  if (!entity) return problemResponse(404, "未找到知识实体");
+  const [favorite] = await withUserContext(auth.principal.subject!, (transaction) => transaction.select({ entityId: databaseSchema.favorites.entityId }).from(databaseSchema.favorites).where(and(
+    eq(databaseSchema.favorites.userId, auth.principal.subject!),
+    eq(databaseSchema.favorites.entityId, entity.id),
+  )).limit(1));
+  return jsonResponse(apiEnvelope({ entityId, favorite: Boolean(favorite) }));
+}
+
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ entityId: string }> },
@@ -24,11 +40,10 @@ export async function PUT(
   const { entityId } = await params;
   const entity = await resolveEntity(entityId);
   if (!entity) return problemResponse(404, "未找到知识实体");
-  const database = getDatabase();
-  await database.insert(databaseSchema.favorites).values({
+  await withUserContext(auth.principal.subject!, (transaction) => transaction.insert(databaseSchema.favorites).values({
     userId: auth.principal.subject!,
     entityId: entity.id,
-  }).onConflictDoNothing();
+  }).onConflictDoNothing());
   return jsonResponse(apiEnvelope({ entityId, favorite: true }));
 }
 
@@ -41,10 +56,9 @@ export async function DELETE(
   const { entityId } = await params;
   const entity = await resolveEntity(entityId);
   if (!entity) return problemResponse(404, "未找到知识实体");
-  const database = getDatabase();
-  await database.delete(databaseSchema.favorites).where(and(
+  await withUserContext(auth.principal.subject!, (transaction) => transaction.delete(databaseSchema.favorites).where(and(
     eq(databaseSchema.favorites.userId, auth.principal.subject!),
     eq(databaseSchema.favorites.entityId, entity.id),
-  ));
+  )));
   return new Response(null, { status: 204 });
 }

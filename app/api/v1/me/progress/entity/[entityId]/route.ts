@@ -1,6 +1,6 @@
 import { and, eq, isNull } from "drizzle-orm";
 import { apiEnvelope, progressUpdateSchema } from "@atlas/api-contracts";
-import { databaseSchema, getDatabase } from "@atlas/db";
+import { databaseSchema, getDatabase, withUserContext } from "@atlas/db";
 import { authenticatedPrincipal } from "../../../../../_lib/auth";
 import { jsonResponse, problemResponse, validationProblem } from "../../../../../_lib/http";
 
@@ -20,7 +20,7 @@ export async function PUT(
       isNull(databaseSchema.entities.archivedAt),
     )).limit(1);
   if (!entity) return problemResponse(404, "未找到知识实体");
-  const [progress] = await database.insert(databaseSchema.readingProgress).values({
+  const [progress] = await withUserContext(auth.principal.subject!, (transaction) => transaction.insert(databaseSchema.readingProgress).values({
     userId: auth.principal.subject!,
     entityId: entity.id,
     progress: parsed.data.progress,
@@ -28,6 +28,6 @@ export async function PUT(
   }).onConflictDoUpdate({
     target: [databaseSchema.readingProgress.userId, databaseSchema.readingProgress.entityId],
     set: { ...parsed.data, updatedAt: new Date() },
-  }).returning();
+  }).returning());
   return jsonResponse(apiEnvelope(progress));
 }

@@ -22,6 +22,7 @@ export function KnowledgeHeader() {
         <Link href="/knowledge">知识库</Link>
         <Link href="/explore">3D探索</Link>
         <Link href="/">思想故事</Link>
+        <Link href="/account">我的账户</Link>
       </nav>
     </header>
   );

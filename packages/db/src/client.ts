@@ -1,5 +1,6 @@
 import { drizzle, type PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import postgres, { type Sql } from "postgres";
+import { sql } from "drizzle-orm";
 import * as schema from "./schema.ts";
 
 let sqlClient: Sql | null = null;
@@ -29,4 +30,11 @@ export async function closeDatabase() {
   if (sqlClient) await sqlClient.end({ timeout: 5 });
   sqlClient = null;
   database = null;
+}
+
+export async function withUserContext<T>(userId: string, operation: (transaction: Parameters<Parameters<ReturnType<typeof getDatabase>["transaction"]>[0]>[0]) => Promise<T>) {
+  return getDatabase().transaction(async (transaction) => {
+    await transaction.execute(sql`select set_config('app.user_id', ${userId}, true)`);
+    return operation(transaction);
+  });
 }

@@ -20,16 +20,13 @@ export interface Source {
   title: string;
   publisher: string;
   url: string;
-  locator: string;
   kind: "primary-text" | "scholarly-book" | "peer-reviewed-article" | "scholarly-encyclopedia" | "reference-dataset" | "archival-source";
 }
 
 export interface Work {
   id: string;
   title: string;
-  originalTitle?: string;
   thinkerId: string;
-  dateLabel: string;
 }
 
 export interface Thinker {

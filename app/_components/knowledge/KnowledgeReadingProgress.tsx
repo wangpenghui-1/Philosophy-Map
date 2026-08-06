@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function KnowledgeReadingProgress() {
+export default function KnowledgeReadingProgress({ entityId }: { entityId?: string }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -19,6 +19,18 @@ export default function KnowledgeReadingProgress() {
       window.removeEventListener("resize", update);
     };
   }, []);
+
+  useEffect(() => {
+    if (!entityId || progress < 0.05) return;
+    const timeout = window.setTimeout(() => {
+      void fetch(`/api/v1/me/progress/entity/${encodeURIComponent(entityId)}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ progress: Math.round(progress * 100) / 100, anchor: window.location.hash || null }),
+      });
+    }, 1_500);
+    return () => window.clearTimeout(timeout);
+  }, [entityId, progress]);
 
   return (
     <div className="knowledge-reading-progress" aria-hidden="true">

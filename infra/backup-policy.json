@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "objectives": {
+    "rpoHours": 24,
+    "rtoHours": 4
+  },
+  "postgres": {
+    "continuousRecovery": true,
+    "logicalBackupFrequencyHours": 24,
+    "logicalBackupRetentionDays": 35,
+    "quarterlyArchiveRetentionDays": 400,
+    "encryptedAtRest": true,
+    "encryptedInTransit": true,
+    "checksumRequired": true,
+    "restoreDrillFrequencyDays": 90,
+    "temporaryDatabasePrefix": "atlas_restore_"
+  },
+  "objectStorage": {
+    "privateBucket": true,
+    "versioningRequired": true,
+    "noncurrentVersionRetentionDays": 90,
+    "incompleteUploadExpiryDays": 7,
+    "inventoryFrequencyHours": 24
+  },
+  "publicSnapshots": {
+    "immutableDeploymentRequired": true,
+    "manifestRequired": true,
+    "minimumRollbackDeployments": 3
+  }
+}

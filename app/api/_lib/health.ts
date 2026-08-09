@@ -1,7 +1,8 @@
 import { and, count, eq, gte, sql, sum } from "drizzle-orm";
 import { databaseSchema, getDatabase, isDatabaseConfigured } from "@atlas/db";
 import { isEmailConfigured } from "./email";
-import { isMediaStorageConfigured, probeMediaStorage } from "./media-storage";
+import { isMediaStorageConfigured, isMediaUploadPolicyEnabled, probeMediaStorage } from "./media-storage";
+import { redisEnvironment } from "./rate-limit";
 
 export type ServiceHealthStatus = "healthy" | "configured" | "missing" | "unhealthy";
 
@@ -26,6 +27,7 @@ const requiredServiceNames = new Set(["database", "redis", "object-storage", "em
 let cachedReport: { expiresAt: number; value: SystemHealthReport } | null = null;
 
 function isRequired(name: string) {
+  if (["object-storage", "media-scanner"].includes(name) && !isMediaUploadPolicyEnabled()) return false;
   return process.env.REQUIRE_PRODUCTION_SERVICES === "1" && requiredServiceNames.has(name);
 }
 
@@ -58,8 +60,9 @@ async function probeDatabase() {
 }
 
 async function probeRedis() {
-  const url = process.env.UPSTASH_REDIS_REST_URL?.replace(/\/$/, "");
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  const redis = redisEnvironment();
+  const url = redis.url?.replace(/\/$/, "");
+  const token = redis.token;
   return activeProbe("redis", "Redis 限流与缓存", Boolean(url && token), async () => {
     const response = await fetch(`${url}/pipeline`, {
       method: "POST",
@@ -73,6 +76,9 @@ async function probeRedis() {
 }
 
 async function probeObjectStorage() {
+  if (!isMediaUploadPolicyEnabled()) {
+    return { name: "object-storage", label: "媒体上传", status: "configured", required: false, detail: "按零付费策略安全关闭；现有静态媒体继续可用" } satisfies ServiceHealth;
+  }
   return activeProbe("object-storage", "S3 / R2 媒体存储", isMediaStorageConfigured(), probeMediaStorage);
 }
 
@@ -84,10 +90,17 @@ export async function getSystemHealth(options: { fresh?: boolean } = {}): Promis
     redis,
     storage,
     configured("email", "Resend 邮件", isEmailConfigured(), "发件身份已配置"),
-    configured("media-scanner", "媒体恶意文件扫描", Boolean(process.env.MEDIA_SCAN_ENDPOINT && process.env.MEDIA_SCAN_TOKEN), "扫描服务已配置"),
-    configured("ai", "OpenAI 有据对话", Boolean(process.env.OPENAI_API_KEY && process.env.OPENAI_RESPONSE_MODEL), "模型与密钥已配置"),
-    configured("error-monitoring", "Sentry 错误监控", Boolean(process.env.SENTRY_DSN && process.env.NEXT_PUBLIC_SENTRY_DSN), "服务端与浏览器端 DSN 已配置"),
-    configured("telemetry", "OpenTelemetry 导出", Boolean(process.env.OTEL_EXPORTER_OTLP_ENDPOINT), "Trace 导出端点已配置"),
+    isMediaUploadPolicyEnabled()
+      ? configured("media-scanner", "媒体恶意文件扫描", Boolean(process.env.MEDIA_SCAN_ENDPOINT && process.env.MEDIA_SCAN_TOKEN), "扫描服务已配置")
+      : { name: "media-scanner", label: "媒体文件扫描", status: "configured", required: false, detail: "上传入口关闭，因此不接收待扫描文件" },
+    configured("ai", "双模型有据对话", Boolean(
+      process.env.OPENAI_API_KEY
+      && process.env.OPENAI_RESPONSE_MODEL
+      && process.env.DEEPSEEK_API_KEY
+      && process.env.DEEPSEEK_RESPONSE_MODEL
+    ), "OpenAI 主模型与 DeepSeek 回退模型已配置"),
+    configured("error-monitoring", "Sentry 错误监控", Boolean(process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN), "服务端与浏览器端 DSN 已配置"),
+    configured("telemetry", "OpenTelemetry 导出", Boolean(process.env.OTEL_EXPORTER_OTLP_ENDPOINT ?? process.env.SENTRY_OTLP_TRACES_URL), "Trace 导出端点已配置"),
   ];
   const productionRequired = process.env.REQUIRE_PRODUCTION_SERVICES === "1";
   const requiredFailure = services.some((service) => service.required && !["healthy", "configured"].includes(service.status));

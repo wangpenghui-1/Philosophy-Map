@@ -84,7 +84,7 @@ export const entityVersions = pgTable("entity_versions", {
   ...timestamps,
 }, (table) => [
   uniqueIndex("entity_versions_number_locale_uq").on(table.entityId, table.version, table.locale),
-  uniqueIndex("entity_versions_slug_locale_version_uq").on(table.slug, table.locale, table.version),
+  index("entity_versions_slug_locale_version_idx").on(table.slug, table.locale, table.version),
   index("entity_versions_public_lookup_idx").on(table.editorialStatus, table.locale, table.slug),
 ]);
 

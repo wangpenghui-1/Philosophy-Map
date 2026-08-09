@@ -50,6 +50,20 @@
       "when": 1786045300000,
       "tag": "0006_flimsy_ricochet",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1786309729441,
+      "tag": "0007_user-child-rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1786312500000,
+      "tag": "0008_entity-slug-scope",
+      "breakpoints": true
     }
   ]
 }

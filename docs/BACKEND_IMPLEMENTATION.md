@@ -8,7 +8,7 @@
 - 静态兼容Repository只读取构建器生成的published快照；candidate不会进入公共API或AI检索。
 - 已实现目录、实体、搜索、图谱、旅程、来源、Atlas Snapshot和OpenAPI端点。
 - `/chat`提供匿名与登录用户都可使用的对话界面；无数据库时为临时模式，配置数据库后按账户或匿名会话隔离保存消息、引用快照、模型运行、延迟、Token与费用估算。
-- OpenAI适配器使用Responses API并固定`store: false`；没有模型配置时使用站内证据的抽取式回答。
+- OpenAI与DeepSeek适配器都使用Responses API。OpenAI请求固定`store: false`，DeepSeek Responses API本身保持无状态；OpenAI为主模型，DeepSeek为故障回退，没有模型配置时使用站内证据的抽取式回答。
 - AI消息使用SSE返回`ack`、`retrieval`、`text.delta`、`citation`、`usage`、`done`与`error`；模型输出只要存在越界引用或任一事实段落没有证据标记，就退回可复现的抽取式答案。
 - 已实现会员邮箱验证、密码登录与重置、数据库会话、设备远程注销、个人设置、收藏、阅读/旅程进度、数据导出与账户硬删除。
 - 已实现候选版本创建、乐观并发控制、审核状态机、发布审计和发布Outbox。

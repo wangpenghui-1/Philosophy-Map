@@ -6,16 +6,21 @@ import * as schema from "./schema.ts";
 let sqlClient: Sql | null = null;
 let database: PostgresJsDatabase<typeof schema> | null = null;
 
+function databaseConnectionUrl() {
+  return process.env.DATABASE_APP_URL ?? process.env.DATABASE_URL;
+}
+
 export function isDatabaseConfigured() {
-  return Boolean(process.env.DATABASE_URL);
+  return Boolean(databaseConnectionUrl());
 }
 
 export function getDatabase() {
-  if (!process.env.DATABASE_URL) {
-    throw new Error("DATABASE_URL is not configured. Static compatibility mode remains available.");
+  const connectionUrl = databaseConnectionUrl();
+  if (!connectionUrl) {
+    throw new Error("DATABASE_APP_URL or DATABASE_URL is not configured. Static compatibility mode remains available.");
   }
   if (!database) {
-    sqlClient = postgres(process.env.DATABASE_URL, {
+    sqlClient = postgres(connectionUrl, {
       max: Number(process.env.DATABASE_POOL_SIZE ?? 5),
       idle_timeout: 20,
       connect_timeout: 10,

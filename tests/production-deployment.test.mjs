@@ -13,11 +13,12 @@ test("production acceptance inventory covers every critical service without stor
   const config = JSON.parse(await readFile(configUrl, "utf8"));
   const names = new Set(Object.values(config.environment).flat());
   for (const required of [
-    "DATABASE_URL", "AUTH_SECRET", "UPSTASH_REDIS_REST_TOKEN", "RESEND_API_KEY",
-    "OPENAI_API_KEY", "S3_SECRET_ACCESS_KEY", "MEDIA_SCAN_TOKEN", "SENTRY_DSN",
-    "SENTRY_AUTH_TOKEN", "OTEL_EXPORTER_OTLP_ENDPOINT", "INNGEST_SIGNING_KEY",
+    "DATABASE_APP_URL", "AUTH_SECRET", "UPSTASH_REDIS_REST_KV_REST_API_TOKEN", "RESEND_API_KEY",
+    "OPENAI_API_KEY", "DEEPSEEK_API_KEY", "MEDIA_UPLOADS_ENABLED", "NEXT_PUBLIC_SENTRY_DSN",
+    "SENTRY_AUTH_TOKEN", "SENTRY_OTLP_TRACES_URL", "INNGEST_SIGNING_KEY",
   ]) assert.ok(names.has(required), required);
   assert.equal(config.publicValueAssertions.REQUIRE_PRODUCTION_SERVICES, "1");
+  assert.equal(config.publicValueAssertions.MEDIA_UPLOADS_ENABLED, "0");
   assert.ok(config.manualGates.some((gate) => gate.id === "restore-drill"));
   assert.ok(config.manualGates.some((gate) => gate.id === "repository-protection"));
   assert.ok(config.probes.some((probe) => probe.semantic === "readiness"));
@@ -26,10 +27,10 @@ test("production acceptance inventory covers every critical service without stor
 test("environment evaluation reports only names and booleans, never secret values", async () => {
   const config = JSON.parse(await readFile(configUrl, "utf8"));
   const secret = "postgres://atlas:do-not-print@example.invalid/atlas";
-  const inventory = { source: "test", names: new Set(["DATABASE_URL"]), assertions: { DATABASE_URL: secret } };
+  const inventory = { source: "test", names: new Set(["DATABASE_APP_URL"]), assertions: { DATABASE_APP_URL: secret } };
   const report = evaluateEnvironment(config, inventory);
   assert.doesNotMatch(JSON.stringify(report), /do-not-print|postgres:\/\//);
-  assert.equal(report.groups.find((group) => group.group === "runtime").variables.find((item) => item.name === "DATABASE_URL").configured, true);
+  assert.equal(report.groups.find((group) => group.group === "runtime").variables.find((item) => item.name === "DATABASE_APP_URL").configured, true);
 });
 
 test("production checker dry-run performs no network request or artifact write", () => {

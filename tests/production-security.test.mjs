@@ -76,3 +76,40 @@ test("health probes preserve static compatibility and protect detailed operation
   assert.match(admin, /system:operate/);
   assert.match(admin, /cache-control": "no-store/);
 });
+
+test("RLS covers user-owned conversation and memory child records", async () => {
+  const migration = await readFile(new URL("../drizzle/0007_user-child-rls.sql", import.meta.url), "utf8");
+  for (const table of ["messages", "message_citations", "memory_links", "memory_events"]) {
+    assert.match(migration, new RegExp(`ALTER TABLE "${table}" ENABLE ROW LEVEL SECURITY`), table);
+    assert.match(migration, new RegExp(`CREATE POLICY "${table}_owner_policy"`), table);
+  }
+  assert.match(migration, /current_setting\('app\.user_id', true\)/);
+  assert.match(migration, /current_setting\('app\.anonymous_session_hash', true\)/);
+});
+
+test("entity slugs may overlap across entity types without changing public URLs", async () => {
+  const [schema, migration] = await Promise.all([
+    readFile(new URL("../packages/db/src/schema.ts", import.meta.url), "utf8"),
+    readFile(new URL("../drizzle/0008_entity-slug-scope.sql", import.meta.url), "utf8"),
+  ]);
+  assert.doesNotMatch(schema, /uniqueIndex\("entity_versions_slug_locale_version_uq"\)/);
+  assert.match(schema, /index\("entity_versions_slug_locale_version_idx"\)/);
+  assert.match(migration, /DROP INDEX IF EXISTS "entity_versions_slug_locale_version_uq"/);
+  assert.match(migration, /CREATE INDEX "entity_versions_slug_locale_version_idx"/);
+});
+
+test("zero-cost production policy disables media writes at the API and admin UI", async () => {
+  const [storage, media, uploadPage, mediaPage, readiness] = await Promise.all([
+    readFile(new URL("../app/api/_lib/media-storage.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/_lib/media.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/(protected)/media/new/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/(protected)/media/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../infra/production-readiness.json", import.meta.url), "utf8"),
+  ]);
+  assert.match(storage, /MEDIA_UPLOADS_ENABLED === "1"/);
+  assert.match(storage, /媒体上传已按零付费生产策略关闭/);
+  assert.match(media, /assertMediaUploadsEnabled\(\)/);
+  assert.match(uploadPage, /readOnly=!\{?uploadEnabled|readOnly=\{!uploadEnabled\}/);
+  assert.match(mediaPage, /uploadEnabled && <Link/);
+  assert.equal(JSON.parse(readiness).publicValueAssertions.MEDIA_UPLOADS_ENABLED, "0");
+});

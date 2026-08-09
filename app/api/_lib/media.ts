@@ -4,7 +4,7 @@ import { databaseSchema, getDatabase } from "@atlas/db";
 import { randomUUID } from "node:crypto";
 import { eq } from "drizzle-orm";
 import { assertMatchingEtag } from "./editorial";
-import { createMediaUploadUrl, inspectMediaObject, publicMediaUrl } from "./media-storage";
+import { assertMediaUploadsEnabled, createMediaUploadUrl, inspectMediaObject, publicMediaUrl } from "./media-storage";
 
 export interface MediaUploadInput {
   fileName: string; mimeType: string; byteSize: number; checksumSha256: string;
@@ -37,6 +37,7 @@ function mediaMetadata(input: MediaUploadInput, state: string) {
 
 export async function createMediaUpload(principal: AuthPrincipal, input: MediaUploadInput) {
   requirePermission(principal, "media:manage");
+  assertMediaUploadsEnabled();
   const database = getDatabase();
   const id = randomUUID();
   const entityId = await resolveEntityId(input.entityStableKey);
@@ -60,6 +61,7 @@ export async function createMediaUpload(principal: AuthPrincipal, input: MediaUp
 
 export async function completeMediaUpload(principal: AuthPrincipal, id: string) {
   requirePermission(principal, "media:manage");
+  assertMediaUploadsEnabled();
   const database = getDatabase();
   const [asset] = await database.select().from(databaseSchema.mediaAssets).where(eq(databaseSchema.mediaAssets.id, id)).limit(1);
   if (!asset || asset.deletedAt) return null;

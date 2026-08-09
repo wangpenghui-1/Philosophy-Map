@@ -1,5 +1,5 @@
 import { createMessageSchema } from "@atlas/api-contracts";
-import { estimateModelCost, GroundedConversationService, OpenAIResponsesGateway } from "@atlas/ai";
+import { createConfiguredModelGateway, estimateModelCost, GroundedConversationService } from "@atlas/ai";
 import { isDatabaseConfigured } from "@atlas/db";
 import { knowledgeRepository } from "../../../../_lib/backend";
 import { resolveConversationIdentity } from "../../../../_lib/anonymous-session";
@@ -26,9 +26,7 @@ export async function POST(
   if (!await conversationExists(id, identity.owner)) return problemResponse(404, "未找到会话");
   const limit = await rateLimit("ai-message", `${identity.rateSubject}:${requestNetworkKey(request)}`, { limit: identity.principal.subject ? 60 : 12, windowSeconds: 3600 });
   if (!limit.allowed) return problemResponse(429, "AI 对话额度已用完", `请在 ${limit.retryAfter} 秒后重试。`);
-  const gateway = process.env.OPENAI_API_KEY && process.env.OPENAI_RESPONSE_MODEL
-    ? new OpenAIResponsesGateway()
-    : undefined;
+  const gateway = createConfiguredModelGateway();
   const service = new GroundedConversationService(knowledgeRepository, gateway);
   const encoder = new TextEncoder();
   const runController = beginConversationRun(id);
@@ -63,7 +61,7 @@ export async function POST(
           usage: answer.usage,
           retrievalSnapshot: answer.evidence,
           latencyMs: Date.now() - startedAt,
-          estimatedCostUsd: estimateModelCost(answer.usage),
+          estimatedCostUsd: estimateModelCost(answer.usage, answer.provider),
         }, identity.owner);
         send("usage", { provider: answer.provider, model: answer.model, remaining: limit.remaining, ...answer.usage });
         send("done", { abstained: answer.abstained, persisted, conversationId: id, memoryCount: memories.length });

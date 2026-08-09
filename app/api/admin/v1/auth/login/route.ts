@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   const limited = await enforceRateLimit(request, "auth:admin-login", { limit: 8, windowSeconds: 15 * 60 });
   if (limited.response) return withRateLimitHeaders(limited.response, limited.result);
   if (!isDatabaseConfigured()) {
-    return problemResponse(503, "数据库尚未配置", "请先配置 DATABASE_URL 并创建首个 owner 账户。 ");
+    return problemResponse(503, "数据库尚未配置", "请先配置 DATABASE_APP_URL（本地受控运维也可使用 DATABASE_URL）并创建首个 owner 账户。 ");
   }
   const parsed = adminLoginSchema.safeParse(await request.json().catch(() => ({})));
   if (!parsed.success) return validationProblem(parsed.error);

@@ -25,10 +25,10 @@
 - Production使用非表所有者应用角色；迁移、影子导入和数据库投影对比通过。
 - 两个真实测试账户的收藏、会话、记忆与导出完全隔离；RLS、越权和账户硬删除通过。
 - owner完成初始化并启用MFA；管理员登录、审计、发布职责分离和并发ETag通过。
-- Redis、Resend、S3/R2、媒体扫描、OpenAI、Sentry和OpenTelemetry均在`/admin/system`显示正常。
+- Redis、Resend、OpenAI、DeepSeek、Sentry和OpenTelemetry均在`/admin/system`显示正常；媒体上传显示为按零付费策略关闭。
 - `REQUIRE_PRODUCTION_SERVICES=1`下`/api/health/ready`返回ready，`/api/health/live`返回200。
 - PostgreSQL PITR已开启；最新逻辑备份通过SHA-256与`pg_restore --list`；90天内完成过隔离恢复演练。
-- R2桶私有、版本控制、加密、生命周期和inventory已启用；quarantine对象无法公开访问。
+- 当前版本不启用 R2：后台不显示上传入口，上传 API 返回 503，现有静态媒体可读。未来启用时再验收私有桶、版本控制、加密、生命周期和 quarantine 隔离。
 - 发布清单记录Git SHA、内容数量和静态投影SHA-256；至少有三个可回滚Production部署。
 - 域名、TLS、CSP、HSTS、Sentry脱敏、API限流和Secret扫描通过。
 - 桌面、390px、无WebGL、弱网、SSE断线恢复和公开静态故障回退通过。
@@ -45,5 +45,5 @@
 
 - 尚未连接可远程操控的真实手机；发布后需在一台iOS或Android真机复核触控、后台恢复、温升和持续帧率。
 - 软件渲染环境不能代表真实GPU帧率；线上部署前仍应在目标设备补充稳定的帧率、内存和长任务遥测。
-- 尚未连接真实生产PostgreSQL、Redis、R2、邮件、扫描、Sentry和OpenAI时，只能判定代码与本地回退通过，不能声称生产部署验收完成。
+- 尚未连接真实生产 PostgreSQL、Redis、邮件、Sentry 和 AI 供应商时，只能判定代码与本地回退通过，不能声称生产部署验收完成。媒体上传若关闭，必须同时验证 UI 与 API 均不可写。
 - 生产变量名称、人工证据文件或发布 SHA 任一缺失时，`deployment:check` 的 `blocked` 是发布阻断，不得手工改成通过。

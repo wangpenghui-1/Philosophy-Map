@@ -3,7 +3,7 @@ import { getOperationalMetrics, getSystemHealth } from "../../../api/_lib/health
 import { requireAdminPrincipal } from "../../_lib/auth";
 import styles from "../../admin.module.css";
 
-const statusLabel = { healthy: "正常", configured: "已配置", missing: "未配置", unhealthy: "异常" } as const;
+const statusLabel = { healthy: "正常", configured: "已配置／已关闭", missing: "未配置", unhealthy: "异常" } as const;
 
 export default async function AdminSystemPage() {
   const principal = await requireAdminPrincipal("/admin/system");

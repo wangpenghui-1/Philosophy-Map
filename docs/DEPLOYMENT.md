@@ -21,15 +21,15 @@
 
 公开静态阅读不需要运行时密钥；会员、后台、AI和媒体能力需要生产服务。变量按职责分组：
 
-- 核心：`DATABASE_URL`、`AUTH_SECRET`、`APP_BASE_URL`、`APP_ENV=production`。
+- 核心：`DATABASE_URL` 只用于迁移和受控运维，`DATABASE_APP_URL` 使用最小权限角色供 Web 与 Worker 运行；另需 `AUTH_SECRET`、`APP_BASE_URL`、`APP_ENV=production`。应用在两者同时存在时优先使用 `DATABASE_APP_URL`。
 - 账户：`RESEND_API_KEY`、`EMAIL_FROM`。
 - 限流：`UPSTASH_REDIS_REST_URL`、`UPSTASH_REDIS_REST_TOKEN`。
-- AI：`OPENAI_API_KEY`、模型名、Token上限和价格配置。
-- 媒体：S3/R2连接、私有桶、公开媒体域名、扫描服务地址与Token。
+- AI：`OPENAI_API_KEY`、`OPENAI_RESPONSE_MODEL`、`DEEPSEEK_API_KEY`、`DEEPSEEK_RESPONSE_MODEL`、Token上限和价格配置。OpenAI为主模型，DeepSeek仅在主模型调用失败时接管；两个供应商都失败时继续使用站内证据摘录。
+- 媒体：当前生产设置 `MEDIA_UPLOADS_ENABLED=0`，不创建 R2 按量计费订阅，后台与 API 都拒绝上传；现有 `/public` 静态媒体继续使用。未来启用时必须同时配置私有 S3/R2、扫描服务和费用保护，并重新完成发布验收。
 - 监控：Sentry服务端/客户端DSN、构建期source map凭据、OpenTelemetry导出端点。
 - 就绪门禁：生产设置`REQUIRE_PRODUCTION_SERVICES=1`；缺少关键依赖时ready返回503，但已部署公开快照仍可读。
 
-所有值分别配置到Vercel Development、Preview和Production；Preview使用隔离数据库与桶，不能连接生产数据。不要把真实值写入仓库、PR描述、构建日志或备份报告。
+生产值只配置到 Vercel Production。Preview 在需要联调时单独创建隔离数据库、Redis 与媒体桶；在隔离资源尚未建立前保持无后端密钥的静态兼容模式，绝不能复用 Production 凭据。`DATABASE_URL` 不进入 Web 或 Worker 运行环境，只在独立的迁移、备份和恢复作业中按需注入。不要把真实值写入仓库、PR 描述、构建日志或备份报告。
 
 ## 持续部署
 

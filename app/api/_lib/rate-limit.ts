@@ -6,13 +6,19 @@ interface LocalBucket { count: number; expiresAt: number }
 
 const localBuckets = new Map<string, LocalBucket>();
 
+export function redisEnvironment() {
+  return {
+    url: process.env.UPSTASH_REDIS_REST_URL ?? process.env.UPSTASH_REDIS_REST_KV_REST_API_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN,
+  };
+}
+
 function safeKey(scope: string, subject: string) {
   return `atlas:${scope}:${createHash("sha256").update(subject).digest("hex").slice(0, 32)}`;
 }
 
 async function redisIncrement(key: string, windowSeconds: number) {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  const { url, token } = redisEnvironment();
   if (!url || !token) return null;
   const response = await fetch(`${url.replace(/\/$/, "")}/pipeline`, {
     method: "POST",
@@ -40,7 +46,7 @@ export async function rateLimit(scope: string, subject: string, options: RateLim
   const key = safeKey(scope, subject);
   let value: { count: number; retryAfter: number };
   let backend: "redis" | "memory" = "redis";
-  try { value = await redisIncrement(key, options.windowSeconds) ?? localIncrement(key, options.windowSeconds); if (!process.env.UPSTASH_REDIS_REST_URL) backend = "memory"; }
+  try { value = await redisIncrement(key, options.windowSeconds) ?? localIncrement(key, options.windowSeconds); if (!redisEnvironment().url) backend = "memory"; }
   catch { value = localIncrement(key, options.windowSeconds); backend = "memory"; }
   return { allowed: value.count <= options.limit, remaining: Math.max(0, options.limit - value.count), retryAfter: value.retryAfter, backend };
 }

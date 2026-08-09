@@ -3,6 +3,7 @@ import Link from "next/link";
 import { isDatabaseConfigured } from "@atlas/db";
 import { knowledgeBase } from "../_data/knowledge";
 import { BackendApiInspector, type BackendEndpoint } from "./BackendApiInspector";
+import { redisEnvironment } from "../api/_lib/rate-limit";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,13 @@ const endpoints = [
 
 export default function BackendStatusPage() {
   const databaseReady = isDatabaseConfigured();
-  const modelReady = Boolean(process.env.OPENAI_API_KEY && process.env.OPENAI_RESPONSE_MODEL);
+  const redisReady = redisEnvironment();
+  const modelReady = Boolean(
+    process.env.OPENAI_API_KEY
+    && process.env.OPENAI_RESPONSE_MODEL
+    && process.env.DEEPSEEK_API_KEY
+    && process.env.DEEPSEEK_RESPONSE_MODEL,
+  );
   return (
     <main className={styles.page}>
       <header>
@@ -43,9 +50,9 @@ export default function BackendStatusPage() {
         <dl>
           <div><dt>公共知识 API</dt><dd className={styles.ready}>已就绪</dd></div>
           <div><dt>静态故障回退</dt><dd className={styles.ready}>已就绪</dd></div>
-          <div><dt>PostgreSQL 持久化</dt><dd>{databaseReady ? "已配置" : "等待 DATABASE_URL"}</dd></div>
-          <div><dt>OpenAI 模型回答</dt><dd>{modelReady ? "已配置" : "使用有据可查的抽取式回退"}</dd></div>
-          <div><dt>AI 共享限流</dt><dd>{process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN ? "Redis 已配置" : "单实例内存限流（生产前需配置 Redis）"}</dd></div>
+          <div><dt>PostgreSQL 持久化</dt><dd>{databaseReady ? "已配置" : "等待 DATABASE_APP_URL / DATABASE_URL"}</dd></div>
+          <div><dt>AI 双模型回答</dt><dd>{modelReady ? "OpenAI 主模型 + DeepSeek 回退" : "使用有据可查的抽取式回退"}</dd></div>
+          <div><dt>AI 共享限流</dt><dd>{redisReady.url && redisReady.token ? "Redis 已配置" : "单实例内存限流（生产前需配置 Redis）"}</dd></div>
         </dl>
       </section>
 

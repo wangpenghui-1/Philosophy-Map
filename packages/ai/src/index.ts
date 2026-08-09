@@ -20,6 +20,14 @@ export interface ModelGateway {
   generate(request: ModelRequest): Promise<ModelResponse>;
 }
 
+interface ResponsesGatewayOptions {
+  apiKey?: string;
+  model?: string;
+  endpoint: string;
+  provider: string;
+  supportsSafetyIdentifier?: boolean;
+}
+
 interface OpenAIResponsePayload {
   id?: string;
   model?: string;
@@ -32,23 +40,26 @@ interface OpenAIResponsePayload {
   error?: { message?: string };
 }
 
-export class OpenAIResponsesGateway implements ModelGateway {
+class ResponsesGateway implements ModelGateway {
   private readonly apiKey: string | undefined;
   private readonly model: string | undefined;
+  private readonly endpoint: string;
+  private readonly provider: string;
+  private readonly supportsSafetyIdentifier: boolean;
 
-  constructor(
-    apiKey = process.env.OPENAI_API_KEY,
-    model = process.env.OPENAI_RESPONSE_MODEL,
-  ) {
-    this.apiKey = apiKey;
-    this.model = model;
+  constructor(options: ResponsesGatewayOptions) {
+    this.apiKey = options.apiKey;
+    this.model = options.model;
+    this.endpoint = options.endpoint;
+    this.provider = options.provider;
+    this.supportsSafetyIdentifier = options.supportsSafetyIdentifier ?? false;
   }
 
   async generate(request: ModelRequest): Promise<ModelResponse> {
     if (!this.apiKey || !this.model) {
-      throw new Error("OpenAI is not configured.");
+      throw new Error(`${this.provider} is not configured.`);
     }
-    const response = await fetch("https://api.openai.com/v1/responses", {
+    const response = await fetch(this.endpoint, {
       method: "POST",
       headers: {
         authorization: `Bearer ${this.apiKey}`,
@@ -60,21 +71,21 @@ export class OpenAIResponsesGateway implements ModelGateway {
         instructions: request.instructions,
         input: request.input,
         max_output_tokens: Number(process.env.OPENAI_MAX_OUTPUT_TOKENS ?? 1_200),
-        ...(request.safetyIdentifier ? { safety_identifier: request.safetyIdentifier } : {}),
+        ...(this.supportsSafetyIdentifier && request.safetyIdentifier ? { safety_identifier: request.safetyIdentifier } : {}),
       }),
       signal: request.signal ?? AbortSignal.timeout(Number(process.env.OPENAI_TIMEOUT_MS ?? 45_000)),
     });
     const payload = await response.json() as OpenAIResponsePayload;
-    if (!response.ok) throw new Error(payload.error?.message ?? `OpenAI request failed with ${response.status}.`);
+    if (!response.ok) throw new Error(payload.error?.message ?? `${this.provider} request failed with ${response.status}.`);
     const text = payload.output_text ?? payload.output
       ?.flatMap((item) => item.content ?? [])
       .filter((item) => item.type === "output_text")
       .map((item) => item.text ?? "")
       .join("") ?? "";
-    if (!text.trim()) throw new Error("OpenAI returned an empty response.");
+    if (!text.trim()) throw new Error(`${this.provider} returned an empty response.`);
     return {
       text,
-      provider: "openai",
+      provider: this.provider,
       model: payload.model ?? this.model,
       responseId: payload.id,
       usage: {
@@ -83,6 +94,67 @@ export class OpenAIResponsesGateway implements ModelGateway {
       },
     };
   }
+}
+
+export class OpenAIResponsesGateway extends ResponsesGateway {
+  constructor(
+    apiKey = process.env.OPENAI_API_KEY,
+    model = process.env.OPENAI_RESPONSE_MODEL,
+  ) {
+    super({
+      apiKey,
+      model,
+      endpoint: "https://api.openai.com/v1/responses",
+      provider: "openai",
+      supportsSafetyIdentifier: true,
+    });
+  }
+}
+
+export class DeepSeekResponsesGateway extends ResponsesGateway {
+  constructor(
+    apiKey = process.env.DEEPSEEK_API_KEY,
+    model = process.env.DEEPSEEK_RESPONSE_MODEL,
+  ) {
+    super({
+      apiKey,
+      model,
+      endpoint: "https://api.deepseek.com/responses",
+      provider: "deepseek",
+    });
+  }
+}
+
+export class FallbackModelGateway implements ModelGateway {
+  private readonly gateways: ModelGateway[];
+
+  constructor(gateways: ModelGateway[]) {
+    this.gateways = gateways;
+  }
+
+  async generate(request: ModelRequest): Promise<ModelResponse> {
+    const failures: unknown[] = [];
+    for (const gateway of this.gateways) {
+      try {
+        return await gateway.generate(request);
+      } catch (error) {
+        failures.push(error);
+      }
+    }
+    throw new AggregateError(failures, "All configured model providers failed.");
+  }
+}
+
+export function createConfiguredModelGateway(): ModelGateway | undefined {
+  const gateways: ModelGateway[] = [];
+  if (process.env.OPENAI_API_KEY && process.env.OPENAI_RESPONSE_MODEL) {
+    gateways.push(new OpenAIResponsesGateway());
+  }
+  if (process.env.DEEPSEEK_API_KEY && process.env.DEEPSEEK_RESPONSE_MODEL) {
+    gateways.push(new DeepSeekResponsesGateway());
+  }
+  if (!gateways.length) return undefined;
+  return gateways.length === 1 ? gateways[0] : new FallbackModelGateway(gateways);
 }
 
 export interface GroundedAnswer {
@@ -135,9 +207,10 @@ export function validateEvidenceMarkers(text: string, packet: EvidencePacket) {
     && factualParagraphs.every((paragraph) => /\[E\d+(?:\.\d+)?\]/.test(paragraph));
 }
 
-export function estimateModelCost(usage?: { inputTokens?: number; outputTokens?: number }) {
-  const inputRate = Number(process.env.OPENAI_INPUT_USD_PER_MILLION ?? 0);
-  const outputRate = Number(process.env.OPENAI_OUTPUT_USD_PER_MILLION ?? 0);
+export function estimateModelCost(usage?: { inputTokens?: number; outputTokens?: number }, provider = "openai") {
+  const prefix = provider === "deepseek" ? "DEEPSEEK" : "OPENAI";
+  const inputRate = Number(process.env[`${prefix}_INPUT_USD_PER_MILLION`] ?? 0);
+  const outputRate = Number(process.env[`${prefix}_OUTPUT_USD_PER_MILLION`] ?? 0);
   const amount = ((usage?.inputTokens ?? 0) * inputRate + (usage?.outputTokens ?? 0) * outputRate) / 1_000_000;
   return amount.toFixed(6);
 }

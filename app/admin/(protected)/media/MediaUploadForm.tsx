@@ -13,7 +13,7 @@ async function problemText(response: Response, fallback: string) {
   return payload?.detail ?? payload?.title ?? fallback;
 }
 
-export function MediaUploadForm({ readOnly, entities }: { readOnly: boolean; entities: Array<{ id: string; title: string }> }) {
+export function MediaUploadForm({ readOnly, disabledReason, entities }: { readOnly: boolean; disabledReason?: string; entities: Array<{ id: string; title: string }> }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string>();
@@ -41,7 +41,7 @@ export function MediaUploadForm({ readOnly, entities }: { readOnly: boolean; ent
     finally { setPending(false); }
   }
   return <form className={styles.editorForm} onSubmit={submit}>
-    {readOnly && <div className={styles.previewBanner}><strong>只读媒体快照</strong><span>连接数据库和 S3 兼容对象存储后才可上传文件。</span></div>}
+    {readOnly && <div className={styles.previewBanner}><strong>只读媒体快照</strong><span>{disabledReason ?? "当前环境仅提供只读媒体快照。"}</span></div>}
     <div className={styles.formGrid}>
       <label className={styles.fullField}><span>文件</span><input accept="image/jpeg,image/png,image/webp,image/avif,audio/mpeg,audio/mp4,audio/wav,audio/webm" disabled={readOnly} name="file" required type="file" /></label>
       <label><span>标题</span><input disabled={readOnly} name="title" required /></label>

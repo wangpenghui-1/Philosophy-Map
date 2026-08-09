@@ -13,6 +13,28 @@ export function isMediaStorageConfigured() {
   return Boolean(process.env.S3_ENDPOINT && process.env.S3_BUCKET && process.env.S3_ACCESS_KEY_ID && process.env.S3_SECRET_ACCESS_KEY);
 }
 
+export function isMediaUploadPolicyEnabled() {
+  return process.env.MEDIA_UPLOADS_ENABLED === "1";
+}
+
+export function areMediaUploadsEnabled() {
+  return isMediaUploadPolicyEnabled()
+    && isMediaStorageConfigured()
+    && Boolean(process.env.MEDIA_SCAN_ENDPOINT && process.env.MEDIA_SCAN_TOKEN);
+}
+
+export function assertMediaUploadsEnabled() {
+  if (!isMediaUploadPolicyEnabled()) {
+    throw Object.assign(new Error("媒体上传已按零付费生产策略关闭；现有静态媒体仍可正常使用。"), { status: 503 });
+  }
+  if (!isMediaStorageConfigured()) {
+    throw Object.assign(new Error("媒体对象存储尚未配置。"), { status: 503 });
+  }
+  if (!(process.env.MEDIA_SCAN_ENDPOINT && process.env.MEDIA_SCAN_TOKEN)) {
+    throw Object.assign(new Error("媒体扫描服务尚未配置，禁止接收未扫描文件。"), { status: 503 });
+  }
+}
+
 function storageClient() {
   if (!client) client = new S3Client({
     endpoint: required("S3_ENDPOINT"),

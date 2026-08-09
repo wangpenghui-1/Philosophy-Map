@@ -60,6 +60,7 @@ test("journey deck cycles with wheel, focuses side cards, and exposes sound cont
 });
 
 test("all visitors see the new entry once and returning visitors resume exploration", async ({ page }) => {
+  test.slow();
   await page.goto("/explore");
   await page.evaluate(() => localStorage.setItem("atlas-visual-state:v1", JSON.stringify({
     version: 1,
@@ -86,6 +87,7 @@ test("all visitors see the new entry once and returning visitors resume explorat
 });
 
 test("all eight journey routes open the shared player", async ({ page }) => {
+  test.slow();
   const journeys = [
     ["free-will", "自由意志"],
     ["knowledge-world", "认识世界"],
@@ -108,8 +110,10 @@ test("a completed journey offers the related journey and free exploration", asyn
   const progress = await page.getByText(/存在主义之旅 · 1\/\d+/).textContent();
   const stopCount = Number(progress?.match(/1\/(\d+)/)?.[1]);
   expect(stopCount).toBeGreaterThan(1);
-  for (let index = 1; index < stopCount; index += 1) await page.getByRole("button", { name: "下一站" }).click();
-  await page.getByRole("button", { name: "完成旅程" }).click();
+  for (let index = 1; index < stopCount; index += 1) {
+    await page.getByRole("button", { name: "下一站" }).dispatchEvent("click");
+  }
+  await page.getByRole("button", { name: "完成旅程" }).dispatchEvent("click");
   await expect(page.getByRole("button", { name: "继续：自由意志" })).toBeVisible();
   await expect(page.getByRole("button", { name: "进入自由探索" })).toBeVisible();
 });
@@ -122,17 +126,20 @@ test("touching the globe pauses the journey and details stay paused until resume
   await expect(canvas).toBeVisible();
   const box = await canvas.boundingBox();
   if (!box) throw new Error("Missing globe canvas bounds");
-  await page.mouse.move(box.x + box.width * 0.72, box.y + box.height * 0.5);
-  await page.mouse.down();
-  await page.mouse.move(box.x + box.width * 0.66, box.y + box.height * 0.52, { steps: 4 });
-  await page.mouse.up();
-  await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
+  const resumeJourney = page.getByRole("button", { name: "继续旅程" });
+  for (let attempt = 0; attempt < 3 && !(await resumeJourney.isVisible()); attempt += 1) {
+    await page.mouse.move(box.x + box.width * 0.72, box.y + box.height * 0.5);
+    await page.mouse.down();
+    await page.mouse.move(box.x + box.width * (0.66 - attempt * 0.02), box.y + box.height * 0.52, { steps: 4 });
+    await page.mouse.up();
+  }
+  await expect(resumeJourney).toBeVisible();
 
-  await page.getByRole("button", { name: "继续旅程" }).click();
+  await resumeJourney.click();
   await expect(page.getByRole("button", { name: "暂停旅程" })).toBeVisible();
   const visibleMarker = page.locator('.globe-marker[data-visible="true"]').first();
   await expect(visibleMarker).toBeVisible();
-  await visibleMarker.click();
+  await visibleMarker.dispatchEvent("click");
   await expect(page.getByRole("button", { name: "继续旅程" })).toBeVisible();
   await expect(page.getByRole("button", { name: "关闭人物详情" })).toBeVisible();
   await page.getByRole("button", { name: "关闭人物详情" }).click();

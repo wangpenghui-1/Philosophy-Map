@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.5.1 - 2026-08-10
+
+### Fixes
+
+- Restore vertical scrolling on login, registration, and other account pages while preserving the single-screen 3D atlas layout.
+
+### Tests
+
+- Add desktop and mobile short-screen regression coverage for account-page scrolling.
+
+### Documentation
+
+- Replace per-step Git authorization checkpoints with one unified review followed by the guarded automatic release workflow.
+
 ## 0.5.0 - 2026-08-10
 
 ### Features

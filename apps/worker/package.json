@@ -1,0 +1,11 @@
+{
+  "name": "@atlas/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@atlas/db": "0.1.0",
+    "@atlas/observability": "0.1.0",
+    "drizzle-orm": "^0.45.2"
+  }
+}

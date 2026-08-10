@@ -62,6 +62,13 @@ if (stages.at(-1).status === "passed") {
 
 stages.push(await run("npm", ["run", "lint"], "ESLint"));
 stages.push(await run("npm", ["run", "typecheck"], "TypeScript"));
+stages.push(await run("npm", ["run", "security:audit"], "Production dependency audit"));
+stages.push(await run("npm", ["run", "db:migrate:check"], "Migration journal consistency"));
+stages.push(await run("npm", ["run", "ai:eval"], "Grounded AI evaluation"));
+stages.push(await run("npm", ["run", "backup:verify"], "Backup policy"));
+stages.push(await run("npm", ["run", "restore:drill"], "Restore drill dry-run"));
+stages.push(await run("npm", ["run", "deployment:check:plan"], "Production deployment acceptance plan"));
+stages.push(await run("npm", ["run", "release:manifest"], "Public release manifest"));
 stages.push(await run("npm", ["test"], "Production build and data tests"));
 if (full) stages.push(await run("npm", ["run", "test:e2e"], "Desktop and mobile browser regression", { CI: process.env.CI ?? "" }));
 else stages.push({ id: "browser-regression", label: "Desktop and mobile browser regression", status: "not-run", exitCode: null, durationMs: 0, output: "Run npm run review:full before final approval." });

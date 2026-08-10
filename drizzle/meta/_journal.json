@@ -1,5 +1,69 @@
 {
   "version": "7",
-  "dialect": "sqlite",
-  "entries": []
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1786025124552,
+      "tag": "0000_striped_maestro",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1786029763011,
+      "tag": "0001_calm_shooting_star",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1786100000000,
+      "tag": "0002_source_versions_immutable",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1786038571952,
+      "tag": "0003_eminent_sersi",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1786041704505,
+      "tag": "0004_ordinary_blur",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1786045200000,
+      "tag": "0005_conversation_rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1786045300000,
+      "tag": "0006_flimsy_ricochet",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1786309729441,
+      "tag": "0007_user-child-rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1786312500000,
+      "tag": "0008_entity-slug-scope",
+      "breakpoints": true
+    }
+  ]
 }

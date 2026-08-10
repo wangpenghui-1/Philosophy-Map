@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "defaultBaseUrl": "https://www.ideaglobemap.cn",
+  "requestTimeoutMs": 8000,
+  "environment": {
+    "runtime": [
+      "DATABASE_APP_URL",
+      "AUTH_SECRET",
+      "APP_BASE_URL",
+      "APP_ENV",
+      "NEXT_PUBLIC_APP_ENV",
+      "REQUIRE_PRODUCTION_SERVICES",
+      "RESEND_API_KEY",
+      "EMAIL_FROM",
+      "UPSTASH_REDIS_REST_KV_REST_API_URL",
+      "UPSTASH_REDIS_REST_KV_REST_API_TOKEN",
+      "OPENAI_API_KEY",
+      "OPENAI_RESPONSE_MODEL",
+      "OPENAI_EMBEDDING_MODEL",
+      "DEEPSEEK_API_KEY",
+      "DEEPSEEK_RESPONSE_MODEL",
+      "MEDIA_UPLOADS_ENABLED",
+      "NEXT_PUBLIC_SENTRY_DSN",
+      "SENTRY_OTLP_TRACES_URL"
+    ],
+    "worker": [
+      "DATABASE_APP_URL",
+      "INNGEST_EVENT_KEY",
+      "INNGEST_SIGNING_KEY",
+      "OPENAI_API_KEY",
+      "OPENAI_RESPONSE_MODEL",
+      "OPENAI_EMBEDDING_MODEL",
+      "DEEPSEEK_API_KEY",
+      "DEEPSEEK_RESPONSE_MODEL",
+      "MEDIA_UPLOADS_ENABLED",
+      "SENTRY_OTLP_TRACES_URL"
+    ],
+    "build": [
+      "SENTRY_ORG",
+      "SENTRY_PROJECT",
+      "SENTRY_AUTH_TOKEN"
+    ]
+  },
+  "publicValueAssertions": {
+    "APP_ENV": "production",
+    "NEXT_PUBLIC_APP_ENV": "production",
+    "REQUIRE_PRODUCTION_SERVICES": "1",
+    "MEDIA_UPLOADS_ENABLED": "0",
+    "APP_BASE_URL": "https://www.ideaglobemap.cn"
+  },
+  "probes": [
+    {
+      "id": "public-home",
+      "label": "公开首页",
+      "path": "/",
+      "expectedStatuses": [200],
+      "bodyIncludes": "思想星图"
+    },
+    {
+      "id": "public-thinker",
+      "label": "公开人物静态页",
+      "path": "/thinker/kant",
+      "expectedStatuses": [200],
+      "bodyIncludes": "康德"
+    },
+    {
+      "id": "public-catalog",
+      "label": "公开目录 API",
+      "path": "/api/v1/catalog",
+      "expectedStatuses": [200],
+      "jsonDataRequired": true
+    },
+    {
+      "id": "public-snapshot",
+      "label": "公开 Atlas 快照 API",
+      "path": "/api/v1/atlas/snapshots/current",
+      "expectedStatuses": [200],
+      "jsonDataRequired": true
+    },
+    {
+      "id": "admin-login",
+      "label": "管理员登录页",
+      "path": "/admin/login",
+      "expectedStatuses": [200],
+      "bodyIncludes": "管理员"
+    },
+    {
+      "id": "member-chat",
+      "label": "有据对话页",
+      "path": "/chat",
+      "expectedStatuses": [200],
+      "bodyIncludes": "对话"
+    },
+    {
+      "id": "protected-admin",
+      "label": "后台未登录保护",
+      "path": "/admin/system",
+      "expectedStatuses": [303, 307, 308],
+      "redirect": "manual",
+      "locationIncludes": "/admin/login"
+    },
+    {
+      "id": "liveness",
+      "label": "存活探针",
+      "path": "/api/health/live",
+      "expectedStatuses": [200],
+      "semantic": "liveness"
+    },
+    {
+      "id": "readiness",
+      "label": "生产就绪探针",
+      "path": "/api/health/ready",
+      "expectedStatuses": [200],
+      "semantic": "readiness"
+    }
+  ],
+  "securityHeaders": {
+    "content-security-policy": [
+      "default-src 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'self'",
+      "upgrade-insecure-requests"
+    ],
+    "strict-transport-security": [
+      "max-age=63072000",
+      "includeSubDomains"
+    ],
+    "x-content-type-options": [
+      "nosniff"
+    ],
+    "x-frame-options": [
+      "SAMEORIGIN"
+    ],
+    "referrer-policy": [
+      "strict-origin-when-cross-origin"
+    ],
+    "permissions-policy": [
+      "camera=()",
+      "microphone=()",
+      "geolocation=()"
+    ]
+  },
+  "manualGates": [
+    {
+      "id": "ci-quality-gates",
+      "label": "本次完整 SHA 的 GitHub Actions 质量与供应链门禁全部通过"
+    },
+    {
+      "id": "repository-protection",
+      "label": "main 启用分支保护、必需检查与禁止强制推送"
+    },
+    {
+      "id": "postgres-production-role",
+      "label": "PostgreSQL 使用非表所有者应用角色，迁移和双用户 RLS 测试通过"
+    },
+    {
+      "id": "owner-mfa",
+      "label": "owner 已初始化、启用 MFA，并验证发布职责分离"
+    },
+    {
+      "id": "managed-services",
+      "label": "Redis、Resend、OpenAI、DeepSeek、Sentry 与 OTel 已在生产验证；媒体上传按零付费策略关闭"
+    },
+    {
+      "id": "backup-archive",
+      "label": "最新生产逻辑备份通过校验且 PostgreSQL PITR 已开启"
+    },
+    {
+      "id": "restore-drill",
+      "label": "隔离临时数据库恢复演练在 RPO/RTO 内完成"
+    },
+    {
+      "id": "object-storage-policy",
+      "label": "媒体上传入口与 API 已关闭；未来启用对象存储时再验证私有桶、版本化、加密与生命周期"
+    },
+    {
+      "id": "rollback-deployments",
+      "label": "至少三个已验证 Production 部署可立即回滚"
+    },
+    {
+      "id": "production-smoke",
+      "label": "桌面、移动、无 WebGL、弱网、SSE 恢复与静态故障回退通过"
+    }
+  ]
+}

@@ -58,6 +58,20 @@
 
 部署、环境变量、持续集成与回滚约定见 `docs/DEPLOYMENT.md`。
 
+## 后端兼容层
+
+后端正在按模块化单体逐步接入，现阶段不会替换公开站的静态内容真源：
+
+- `packages/domain` 保存内容状态机、角色与权限；
+- `packages/db` 保存 PostgreSQL、pgvector、用户、对话、记忆、审计与Outbox模型；
+- `packages/knowledge` 提供静态快照兼容Repository；
+- `packages/ai` 提供有据可查的检索回答与OpenAI Responses适配器；
+- `/api/v1` 提供版本化公开API，对话使用SSE；
+- `/admin/login`提供管理员登录；无数据库时仅在loopback地址开放只读预览；
+- `apps/worker` 消费事务Outbox，数据库未配置时不会启动。
+
+公共目录、人物页和3D地球仍从已发布静态快照读取。数据库或模型服务不可用时，这些功能不受影响。配置项、迁移边界和当前限制见 `docs/BACKEND_IMPLEMENTATION.md`。
+
 ## 本地验证
 
 ```bash
@@ -67,6 +81,9 @@ npm run content:media:check
 npm run dev
 npm run lint
 npm run typecheck
+npm run backend:shadow-check
+npm run db:shadow:check
+npm run admin:bootstrap
 npm test
 npm run test:e2e
 npm run test:all

@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -19,7 +20,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@atlas/domain": ["./packages/domain/src/index.ts"],
+      "@atlas/api-contracts": ["./packages/api-contracts/src/index.ts"],
+      "@atlas/db": ["./packages/db/src/index.ts"],
+      "@atlas/knowledge": ["./packages/knowledge/src/index.ts"],
+      "@atlas/ai": ["./packages/ai/src/index.ts"],
+      "@atlas/auth": ["./packages/auth/src/index.ts"],
+      "@atlas/observability": ["./packages/observability/src/index.ts"]
     }
   },
   "include": [

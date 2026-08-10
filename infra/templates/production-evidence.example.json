@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "environment": "production",
+  "baseUrl": "https://www.ideaglobemap.cn",
+  "release": "replace-with-full-git-sha",
+  "checks": {
+    "ci-quality-gates": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "repository-protection": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "postgres-production-role": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "owner-mfa": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "managed-services": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "backup-archive": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "restore-drill": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "object-storage-policy": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "rollback-deployments": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    },
+    "production-smoke": {
+      "status": "pending",
+      "checkedAt": null,
+      "evidence": ""
+    }
+  }
+}

@@ -525,7 +525,6 @@
   html { background: var(--ink-0); }
 
   body {
-    overflow: hidden;
     background:
       radial-gradient(circle at 47% 42%, color-mix(in oklch, var(--bronze) 7%, transparent), transparent 31%),
       linear-gradient(135deg, #050605 0%, #080907 55%, #050606 100%);

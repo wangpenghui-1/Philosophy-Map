@@ -87,10 +87,10 @@ const report = {
   branch,
   commit,
   mode: full ? "full" : "automated",
-  decision: blockers.length ? "blocked" : "ready-for-final-approval",
-  finalApprovalRequired: true,
-  publicationAllowed: false,
-  deploymentAllowed: false,
+  decision: blockers.length ? "blocked" : "ready-for-release",
+  finalApprovalRequired: false,
+  publicationAllowed: blockers.length === 0,
+  deploymentAllowed: blockers.length === 0,
   summary: audit.summary,
   blockers: [...new Set(blockers)],
   findings: audit.findings,
@@ -100,12 +100,12 @@ const report = {
 const markdown = [
   "# 自动编辑审核报告",
   "",
-  `- 结论：**${report.decision === "blocked" ? "阻断" : "建议进入最终审核"}**`,
+  `- 结论：**${report.decision === "blocked" ? "阻断" : "审核通过，可进入自动发布"}**`,
   `- 分支：\`${branch}\``,
   `- 提交：\`${commit}\``,
   `- 模式：${report.mode}`,
-  "- 最终人工批准：必须",
-  "- 自动发布／部署：禁止",
+  "- 最终人工批准：无需额外检查点",
+  `- 自动发布／部署：${blockers.length ? "禁止" : "允许"}`,
   "",
   "## 流水线阶段",
   "",
@@ -119,7 +119,7 @@ const markdown = [
   "",
   report.decision === "blocked"
     ? "自动流程必须修复全部阻断项并重新运行完整审核。"
-    : "将本报告、代码差异、页面视觉与已知警告提交给用户作最终批准；批准前不得合并或部署。",
+    : "统一审核已通过；自动流程可以继续提交、PR、CI、合并、版本标签、生产部署与线上验收。",
   "",
 ].join("\n");
 

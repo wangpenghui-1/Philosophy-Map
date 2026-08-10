@@ -15,3 +15,12 @@ test("protected account center redirects anonymous readers to member login", asy
   await page.goto("/account");
   await expect(page).toHaveURL(/\/account\/login\?next=%2Faccount$/);
 });
+
+test("account pages remain vertically scrollable on short screens", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 500 });
+  await page.goto("/account/register");
+
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollHeight)).toBeGreaterThan(500);
+  await page.mouse.wheel(0, 700);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+});

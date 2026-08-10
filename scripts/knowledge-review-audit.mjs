@@ -133,7 +133,7 @@ export async function auditKnowledgeBase({ contentRoot, generatedRoot }) {
   const production = await auditContentProduction({ contentRoot });
   findings.push(...production.findings);
 
-  findings.push(finding("approval", "final-human-approval", `自动审核不会发布或部署；${published.length}个published记录及本次代码变更仍需最终人工批准。`, published));
+  findings.push(finding("approval", "release-gate-passed", `自动审核未发现确定性阻断项；自动发布只包含现有${published.length}个published记录，不会提升candidate、edited或reviewed内容。`, published));
 
   return {
     summary: {

@@ -1,7 +1,7 @@
 import type { Permission, Role } from "@atlas/domain";
 import { hasPermission } from "@atlas/domain";
 import { createHash, randomBytes, scrypt as scryptCallback, timingSafeEqual } from "node:crypto";
-import { and, eq, gt, isNull } from "drizzle-orm";
+import { and, eq, gt, isNull, sql } from "drizzle-orm";
 import { databaseSchema, getDatabase, isDatabaseConfigured } from "@atlas/db";
 
 export interface AuthPrincipal {
@@ -193,6 +193,7 @@ export async function registerMember(email: string, password: string, displayNam
   const passwordHash = await hashPassword(password);
   const [user] = await database.transaction(async (transaction) => {
     const inserted = await transaction.insert(databaseSchema.users).values({ email: normalizedEmail }).returning();
+    await transaction.execute(sql`select set_config('app.user_id', ${inserted[0].id}, true)`);
     await transaction.insert(databaseSchema.passwordCredentials).values({ userId: inserted[0].id, passwordHash });
     await transaction.insert(databaseSchema.userProfiles).values({ userId: inserted[0].id, displayName });
     await transaction.insert(databaseSchema.userRoles).values({ userId: inserted[0].id, role: "member" });

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.5.2 - 2026-08-10
+
+### Performance
+
+- Run core review, desktop browser tests, and mobile browser tests in parallel behind the existing required `validate` gate.
+- Remove duplicate feature-branch push runs and avoid repeating the full browser suite after a protected merge to `main`.
+
+### Operations
+
+- Keep automatic publication blocked until both parallel browser jobs and dependency review pass, while allowing Production deployment and the lightweight post-merge audit to proceed in parallel.
+
 ## 0.5.1 - 2026-08-10
 
 ### Fixes

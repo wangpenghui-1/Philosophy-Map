@@ -38,3 +38,15 @@ test("release manifest hashes only generated public projections", async () => {
   assert.match(source, /atlas\.json/);
   assert.doesNotMatch(source, /DATABASE_URL|memory_items|conversations/);
 });
+
+test("CI runs one protected review per change and parallelizes browser coverage", async () => {
+  const workflow = await readFile(new URL("../.github/workflows/ci.yml", import.meta.url), "utf8");
+  assert.match(workflow, /push:\n    branches: \[main\]/);
+  assert.doesNotMatch(workflow, /codex\/\*\*|agent\/\*\*/);
+  assert.match(workflow, /core_review:/);
+  assert.match(workflow, /project: \[desktop-chromium, mobile-chromium\]/);
+  assert.match(workflow, /npm run review:automated/);
+  assert.match(workflow, /npm run test:e2e -- --project=/);
+  assert.match(workflow, /needs: \[core_review, browser_regression, dependency_review\]/);
+  assert.doesNotMatch(workflow, /npm run review:full/);
+});

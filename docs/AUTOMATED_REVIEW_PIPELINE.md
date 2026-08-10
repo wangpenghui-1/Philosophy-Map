@@ -51,7 +51,7 @@ npm run review:fix
 npm run review:full
 ```
 
-报告生成到 `artifacts/review/latest.json` 和 `artifacts/review/latest.md`。该目录不提交版本库；GitHub Actions在每次PR、`main`、`codex/**`和`agent/**`推送时运行完整审核，并保存30天。
+报告生成到 `artifacts/review/latest.json` 和 `artifacts/review/latest.md`。该目录不提交版本库。GitHub Actions 对每个 PR 只触发一次审核：核心审核、桌面浏览器和移动浏览器并行运行，再由必需的 `validate` 汇总门禁统一判定；合并后的 `main` 只复跑核心审核，不重复已经通过的浏览器套件。报告保存30天。
 
 ## 自动发布门禁
 

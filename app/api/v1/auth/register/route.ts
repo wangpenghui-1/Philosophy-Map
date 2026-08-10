@@ -1,12 +1,14 @@
 import { apiEnvelope, memberRegisterSchema } from "@atlas/api-contracts";
 import { issueAuthToken, registerMember } from "@atlas/auth";
 import { isDatabaseConfigured } from "@atlas/db";
+import { logEvent } from "@atlas/observability";
 import { isEmailConfigured, sendVerificationEmail } from "../../../_lib/email";
-import { jsonResponse, problemResponse, validationProblem } from "../../../_lib/http";
+import { jsonResponse, problemResponse, requestId, validationProblem } from "../../../_lib/http";
 import { enforceRateLimit, withRateLimitHeaders } from "../../../_lib/rate-limit";
 import { isSameOrigin } from "../../../_lib/session";
 
 export async function POST(request: Request) {
+  const registrationRequestId = requestId(request);
   if (!isSameOrigin(request)) return problemResponse(403, "请求来源无效");
   const limited = await enforceRateLimit(request, "auth:member-register", { limit: 5, windowSeconds: 60 * 60 });
   if (limited.response) return withRateLimitHeaders(limited.response, limited.result);
@@ -21,7 +23,14 @@ export async function POST(request: Request) {
     }
     return withRateLimitHeaders(jsonResponse(apiEnvelope({ accepted: true, message: "如果该邮箱可以注册，验证邮件会很快送达。" }), { status: 202 }), limited.result);
   } catch (error) {
-    const status = typeof error === "object" && error && "status" in error ? Number(error.status) : 500;
-    return problemResponse(status, "无法完成注册", error instanceof Error ? error.message : undefined);
+    logEvent("error", "Member registration failed", {
+      requestId: registrationRequestId,
+      module: "auth",
+      operation: "member-register",
+      errorName: error instanceof Error ? error.name : "UnknownError",
+    });
+    return problemResponse(500, "无法完成注册", "注册服务暂时不可用，请稍后重试。", {
+      instance: `urn:request:${registrationRequestId}`,
+    });
   }
 }

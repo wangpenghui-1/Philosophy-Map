@@ -39,6 +39,25 @@ test("user persistence routes set a transaction-local RLS context", async () => 
   }
 });
 
+test("member registration establishes its RLS identity before profile creation", async () => {
+  const source = await readFile(new URL("../packages/auth/src/index.ts", import.meta.url), "utf8");
+  const registration = source.slice(source.indexOf("export async function registerMember"), source.indexOf("async function findActiveAuthToken"));
+  const userInsert = registration.indexOf("insert(databaseSchema.users)");
+  const userContext = registration.indexOf("set_config('app.user_id'");
+  const profileInsert = registration.indexOf("insert(databaseSchema.userProfiles)");
+
+  assert.ok(userInsert >= 0, "registration must create the user first");
+  assert.ok(userContext > userInsert, "registration must derive the RLS identity from the created user");
+  assert.ok(profileInsert > userContext, "registration must set the RLS identity before writing the profile");
+});
+
+test("member registration never exposes database error details", async () => {
+  const route = await readFile(new URL("../app/api/v1/auth/register/route.ts", import.meta.url), "utf8");
+  assert.doesNotMatch(route, /problemResponse\([^\n]+error\.message/);
+  assert.match(route, /注册服务暂时不可用，请稍后重试。/);
+  assert.match(route, /errorName: error instanceof Error \? error\.name/);
+});
+
 test("auth token migration stores only unique token hashes with expiry and consumption", async () => {
   const migration = await readFile(new URL("../drizzle/0004_ordinary_blur.sql", import.meta.url), "utf8");
   assert.match(migration, /"token_hash" varchar\(128\) NOT NULL/);

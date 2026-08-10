@@ -71,7 +71,7 @@ stages.push(await run("npm", ["run", "deployment:check:plan"], "Production deplo
 stages.push(await run("npm", ["run", "release:manifest"], "Public release manifest"));
 stages.push(await run("npm", ["test"], "Production build and data tests"));
 if (full) stages.push(await run("npm", ["run", "test:e2e"], "Desktop and mobile browser regression", { CI: process.env.CI ?? "" }));
-else stages.push({ id: "browser-regression", label: "Desktop and mobile browser regression", status: "not-run", exitCode: null, durationMs: 0, output: "Run npm run review:full before final approval." });
+else stages.push({ id: "browser-regression", label: "Desktop and mobile browser regression", status: "not-run", exitCode: null, durationMs: 0, output: "The CI browser jobs must pass before automatic release." });
 
 const [branch, commit] = await Promise.all([
   gitValue(["branch", "--show-current"]),
@@ -81,16 +81,17 @@ const blockers = [
   ...stages.filter((stage) => stage.status === "failed").map((stage) => stage.label),
   ...audit.findings.filter((item) => item.severity === "blocker").map((item) => item.code),
 ];
+const releaseReady = blockers.length === 0 && full;
 const report = {
   schemaVersion: 1,
   generatedAt: new Date().toISOString(),
   branch,
   commit,
   mode: full ? "full" : "automated",
-  decision: blockers.length ? "blocked" : "ready-for-release",
+  decision: blockers.length ? "blocked" : full ? "ready-for-release" : "ready-for-ci-browser",
   finalApprovalRequired: false,
-  publicationAllowed: blockers.length === 0,
-  deploymentAllowed: blockers.length === 0,
+  publicationAllowed: releaseReady,
+  deploymentAllowed: releaseReady,
   summary: audit.summary,
   blockers: [...new Set(blockers)],
   findings: audit.findings,
@@ -100,12 +101,12 @@ const report = {
 const markdown = [
   "# 自动编辑审核报告",
   "",
-  `- 结论：**${report.decision === "blocked" ? "阻断" : "审核通过，可进入自动发布"}**`,
+  `- 结论：**${report.decision === "blocked" ? "阻断" : report.decision === "ready-for-release" ? "完整审核通过，可进入自动发布" : "核心审核通过，等待 CI 浏览器门禁"}**`,
   `- 分支：\`${branch}\``,
   `- 提交：\`${commit}\``,
   `- 模式：${report.mode}`,
   "- 最终人工批准：无需额外检查点",
-  `- 自动发布／部署：${blockers.length ? "禁止" : "允许"}`,
+  `- 自动发布／部署：${releaseReady ? "允许" : "禁止，等待剩余门禁"}`,
   "",
   "## 流水线阶段",
   "",
@@ -119,7 +120,9 @@ const markdown = [
   "",
   report.decision === "blocked"
     ? "自动流程必须修复全部阻断项并重新运行完整审核。"
-    : "统一审核已通过；自动流程可以继续提交、PR、CI、合并、版本标签、生产部署与线上验收。",
+    : report.decision === "ready-for-release"
+      ? "统一审核已通过；自动流程可以继续提交、PR、CI、合并、版本标签、生产部署与线上验收。"
+      : "核心审核已通过；必须等待并行的桌面和移动浏览器任务通过，再由 validate 汇总门禁允许发布。",
   "",
 ].join("\n");
 

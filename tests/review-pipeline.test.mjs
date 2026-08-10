@@ -42,3 +42,11 @@ test("knowledge review audit reports no deterministic blockers", async () => {
   assert.deepEqual(result.findings.filter((item) => item.severity === "blocker"), []);
   assert.ok(result.findings.some((item) => item.code === "release-gate-passed"));
 });
+
+test("core-only review cannot authorize release before browser gates pass", async () => {
+  const source = await readFile(new URL("../scripts/run-automated-review.mjs", import.meta.url), "utf8");
+  assert.match(source, /releaseReady = blockers\.length === 0 && full/);
+  assert.match(source, /ready-for-ci-browser/);
+  assert.match(source, /publicationAllowed: releaseReady/);
+  assert.match(source, /deploymentAllowed: releaseReady/);
+});

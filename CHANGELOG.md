@@ -12,7 +12,7 @@
 
 ### Documentation
 
-- Replace per-step Git authorization checkpoints with one unified review followed by the guarded automatic release workflow.
+- Replace per-step Git authorization checkpoints and the obsolete manual-approval report with one unified review followed by the guarded automatic release workflow.
 
 ## 0.5.0 - 2026-08-10
 

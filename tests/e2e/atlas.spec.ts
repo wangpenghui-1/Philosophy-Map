@@ -246,7 +246,7 @@ test("search traps focus and links the globe state to the reading page", async (
 test("question and timeline filters are reflected in the exploration URL", async ({ page }) => {
   await openHydrated(page, "/explore");
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("2026");
-  await page.getByRole("button", { name: "全部问题" }).click();
+  await page.getByRole("button", { name: "查看全部 6 个问题" }).click();
   await page.getByRole("button", { name: /我们真的自由吗/ }).click();
   await expect(page).toHaveURL(/question=freedom/);
   await page.getByRole("slider", { name: "历史时间轴" }).fill("1000");
@@ -277,8 +277,22 @@ test("question cards, globe utilities, and thinker preview keep a clear responsi
     && instructionBox.y + instructionBox.height > relationBox.y;
   expect(utilitiesOverlap).toBe(false);
 
-  await page.getByRole("button", { name: "全部问题" }).click();
+  const featuredCards = page.locator(".question-card");
+  const browseQuestions = page.getByRole("button", { name: "查看全部 6 个问题" });
+  const [lastFeaturedBox, browseBox] = await Promise.all([
+    featuredCards.last().boundingBox(),
+    browseQuestions.boundingBox(),
+  ]);
+  expect(lastFeaturedBox).not.toBeNull();
+  expect(browseBox).not.toBeNull();
+  if (!lastFeaturedBox || !browseBox) throw new Error("Missing question entry bounds");
+  expect(browseBox.x).toBeGreaterThan(lastFeaturedBox.x + lastFeaturedBox.width - 1);
+  expect(browseBox.x - (lastFeaturedBox.x + lastFeaturedBox.width)).toBeLessThanOrEqual(16);
+  expect(Math.abs(browseBox.y - lastFeaturedBox.y)).toBeLessThanOrEqual(2);
+
+  await browseQuestions.click();
   await expect(page.locator(".question-card")).toHaveCount(6);
+  await expect(page.getByRole("button", { name: "收起问题" })).toBeVisible();
   const radii = await page.locator(".question-card").evaluateAll((cards) => cards.map((card) => Number.parseFloat(getComputedStyle(card).borderRadius)));
   expect(radii.every((radius) => radius >= 18)).toBe(true);
 

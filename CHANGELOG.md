@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.7.2 - 2026-08-28
+
+### Fixes
+
+- Move the all-questions control out of the detached heading position and integrate it as a lightweight trailing entry beside the featured question cards.
+- Preserve a compact collapse action after expansion, a scrollable tail entry on mobile, and non-overlapping geometry at tablet and desktop widths.
+
+### Tests
+
+- Add focused layout coverage for card alignment, spacing, expansion, and the responsive all-questions control.
+
 ## 0.7.1 - 2026-08-28
 
 ### Fixes

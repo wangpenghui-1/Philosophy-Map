@@ -160,9 +160,6 @@ export function QuestionDock({
           <small>从问题进入思想史</small>
           <h1>{activePresentation ? activePresentation.title : "你想先追问什么？"}</h1>
         </div>
-        <button type="button" onClick={() => setExpanded((value) => !value)}>
-          {expanded ? "收起" : activePresentation ? "换个问题" : "全部问题"}
-        </button>
       </div>
       <div className="question-dock__cards" data-count={visiblePresentations.length}>
         {visiblePresentations.map((presentation) => (
@@ -178,6 +175,17 @@ export function QuestionDock({
             onPreview={onPreview}
           />
         ))}
+        {!activePresentation || expanded ? (
+          <button
+            className="question-dock__browse"
+            type="button"
+            aria-label={expanded ? "收起问题" : `查看全部 ${questionPresentations.length} 个问题`}
+            onClick={() => setExpanded((value) => !value)}
+          >
+            <span>{expanded ? "收起问题" : "查看全部"}</span>
+            <i aria-hidden="true">{expanded ? "←" : `${questionPresentations.length} →`}</i>
+          </button>
+        ) : null}
         {activePresentation && !expanded ? (
           <button className="question-dock__change" type="button" onClick={() => setExpanded(true)}>
             <span aria-hidden="true">＋</span>

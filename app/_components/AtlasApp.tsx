@@ -265,29 +265,36 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
 
   return (
     <motion.article
-      className="detail-card"
+      className="detail-card detail-card--thinker"
       key={thinker.id}
       initial={{ opacity: 0, x: 18 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.38 }}
     >
       <div className="detail-card__index">人物 · {String(thinkers.findIndex((item) => item.id === thinker.id) + 1).padStart(2, "0")}</div>
-      <div className="detail-card__heading">
-        <div>
-          <h2>{thinker.name}</h2>
-          <p>{thinker.englishName}</p>
+      <div className="thinker-preview__hero">
+        <ThinkerPortrait thinker={thinker} variant="full" className="thinker-preview__portrait" />
+        <div className="thinker-preview__identity">
+          <div className="detail-card__heading">
+            <div>
+              <h2>{thinker.name}</h2>
+              <p>{thinker.englishName}</p>
+            </div>
+            <span style={{ "--thinker-color": thinker.color } as React.CSSProperties}>{thinker.period}</span>
+          </div>
+          <div className="keyword-row keyword-row--preview" aria-label="关键词">
+            {thinker.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}
+          </div>
         </div>
-        <span style={{ "--thinker-color": thinker.color } as React.CSSProperties}>{thinker.period}</span>
       </div>
-      <ThinkerPortrait thinker={thinker} variant="full" />
       <section className="detail-card__statement">
         <small>核心思想</small>
         <p>{thinker.thesis}</p>
       </section>
-      <div className="keyword-row">
-        {thinker.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}
-      </div>
-      <div className="detail-actions">
+      <div className="detail-actions detail-actions--thinker">
+        <Link className="detail-actions__primary" href={`/thinker/${thinker.slug}`}>
+          查看人物详情 <span aria-hidden="true">→</span>
+        </Link>
         <button
           className={compareIds.includes(thinker.id) ? "is-active" : ""}
           type="button"
@@ -295,7 +302,6 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
         >
           {compareIds.includes(thinker.id) ? "已加入比较" : "加入比较"}
         </button>
-        <Link href={`/thinker/${thinker.slug}`}>深入阅读</Link>
       </div>
     </motion.article>
   );
@@ -721,6 +727,7 @@ export default function AtlasApp({
   const [questionPreviewOpen, setQuestionPreviewOpen] = useState(false);
   const [visibleRelationTypes, setVisibleRelationTypes] = useState<RelationType[]>(relationTypeOrder);
   const [introSequence, setIntroSequence] = useState<IntroSequence>("none");
+  const [uiHidden, setUiHidden] = useState(false);
   const mode = useAtlasStore((state) => state.mode);
   const isPlaying = useAtlasStore((state) => state.isPlaying);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
@@ -1332,7 +1339,7 @@ export default function AtlasApp({
   return (
     <MotionConfig reducedMotion="user">
       <div
-        className={`atlas-shell atlas-shell--${displayMode} atlas-shell--journey-${displayJourneyPhase}${detailOpen ? " atlas-shell--detail-open" : ""}${introSequence !== "none" ? ` atlas-shell--intro-${introSequence}` : ""}`}
+        className={`atlas-shell atlas-shell--${displayMode} atlas-shell--journey-${displayJourneyPhase}${detailOpen ? " atlas-shell--detail-open" : ""}${uiHidden ? " atlas-shell--ui-hidden" : ""}${introSequence !== "none" ? ` atlas-shell--intro-${introSequence}` : ""}`}
         data-hydrated={initialized ? "true" : "false"}
       >
         <a className="skip-link" href="#atlas-content">跳到思想内容</a>
@@ -1357,6 +1364,16 @@ export default function AtlasApp({
             <div className="globe-stage__topline">
               <span>WORLD PHILOSOPHY · {String(thinkers.length).padStart(2, "0")} VOICES</span>
             </div>
+            <button
+              className="immersive-toggle"
+              type="button"
+              aria-label={uiHidden ? "显示探索界面" : "隐藏界面，进入沉浸模式"}
+              aria-pressed={uiHidden}
+              onClick={() => setUiHidden((hidden) => !hidden)}
+            >
+              <span aria-hidden="true" />
+              <strong>{uiHidden ? "显示界面" : "沉浸模式"}</strong>
+            </button>
             <div className="globe-canvas-wrap">
               <GlobeCanvas
                 mode={displayMode}
@@ -1406,14 +1423,14 @@ export default function AtlasApp({
               ) : (
                 <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} />
               )
-            ) : (
+            ) : !displaySelectedThinkerId && !displaySelectedRelationId && !showCompare ? (
               <QuestionDock
                 activeQuestionId={activeQuestionId}
                 reducedMotion={reduceMotion}
                 onSelect={handleSelectQuestion}
                 onPreview={setHoveredQuestionId}
               />
-            )}
+            ) : null}
             {displayMode === "explore" ? (
               <RelationFilter visibleTypes={visibleRelationTypes} onToggle={toggleRelationType} />
             ) : null}

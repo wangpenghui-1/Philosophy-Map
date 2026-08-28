@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.7.0 - 2026-08-28
+
+### Features
+
+- Refine the globe-first interface with Apple-inspired liquid-glass controls, softer rounded cards, restrained depth, and a more coherent black-gold visual hierarchy.
+- Add a reversible immersive mode that hides navigation, question prompts, filters, timeline, and detail surfaces so the 3D globe can become the sole visual focus.
+- Upgrade thinker previews with a compact portrait-led layout, period and keyword context, core-idea summary, direct profile navigation, and comparison controls.
+
+### Fixes
+
+- Separate the globe instruction and relation controls to prevent overlap at desktop and tablet widths.
+- Automatically collapse the question dock when thinker, relation, or comparison details are active, reducing visual competition around the globe.
+
+### Tests
+
+- Add responsive geometry, rounded-card, thinker-preview, and immersive-mode E2E coverage and refresh desktop, tablet, and mobile visual snapshots.
+
 ## 0.6.0 - 2026-08-28
 
 ### Features

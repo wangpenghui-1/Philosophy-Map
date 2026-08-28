@@ -1,4 +1,4 @@
-@layer reset, tokens, base, layout, components, utilities;
+@layer reset, tokens, base, layout, components, utilities, cinematic, atlas-redesign, public-typography, atlas-polish;
 
 @layer reset {
   *, *::before, *::after { box-sizing: border-box; }
@@ -22,6 +22,431 @@
     --ease-cinema: cubic-bezier(.22, 1, .36, 1);
     --motion-micro: 180ms;
     --motion-panel: 420ms;
+  }
+}
+
+/* Apple-inspired liquid-glass refinement: compact translucent controls keep the
+   globe dominant while preserving the atlas' bronze museum palette. */
+@layer atlas-polish {
+  :root {
+    --atlas-glass: linear-gradient(145deg, rgba(24, 28, 24, .74), rgba(7, 9, 8, .58));
+    --atlas-glass-strong: linear-gradient(145deg, rgba(26, 30, 26, .9), rgba(7, 9, 8, .82));
+    --atlas-glass-border: rgba(255, 245, 218, .14);
+    --atlas-glass-highlight: rgba(255, 250, 232, .11);
+    --atlas-glass-shadow: 0 18px 54px rgba(0, 0, 0, .34), inset 0 1px 0 var(--atlas-glass-highlight);
+    --atlas-radius-control: 999px;
+    --atlas-radius-card: 22px;
+    --atlas-radius-panel: 26px;
+  }
+
+  .atlas-shell {
+    grid-template-rows: 70px minmax(0, 1fr) 68px;
+    background:
+      radial-gradient(circle at 46% 42%, rgba(66, 79, 62, .08), transparent 34%),
+      var(--museum-black);
+    transition: grid-template-rows 420ms var(--ease-cinema);
+  }
+
+  .site-header {
+    grid-template-columns: 240px minmax(0, 1fr) auto;
+    padding: 0 18px;
+    border-bottom: 0;
+    background: linear-gradient(180deg, rgba(3, 5, 4, .94), rgba(3, 5, 4, .66));
+    transition: opacity 240ms ease, transform 420ms var(--ease-cinema), visibility 240ms;
+    backdrop-filter: blur(24px) saturate(1.2);
+  }
+
+  .brand__seal {
+    border-color: rgba(205, 164, 93, .58);
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(205, 164, 93, .14), rgba(255, 255, 255, .02));
+    box-shadow: inset 0 1px 0 rgba(255, 245, 218, .12), 0 10px 30px rgba(0, 0, 0, .22);
+  }
+
+  .search-button,
+  .knowledge-button,
+  .more-menu > summary,
+  .question-dock__heading button,
+  .relation-filter > summary {
+    border: 1px solid var(--atlas-glass-border);
+    border-radius: var(--atlas-radius-control);
+    background: var(--atlas-glass);
+    box-shadow: inset 0 1px 0 var(--atlas-glass-highlight), 0 10px 26px rgba(0, 0, 0, .18);
+    backdrop-filter: blur(18px) saturate(1.18);
+  }
+
+  .search-button:hover,
+  .knowledge-button:hover,
+  .more-menu > summary:hover,
+  .question-dock__heading button:hover,
+  .relation-filter > summary:hover {
+    border-color: rgba(218, 180, 110, .42);
+    background: linear-gradient(145deg, rgba(47, 45, 35, .84), rgba(10, 12, 10, .68));
+    color: var(--paper);
+  }
+
+  .more-menu__panel,
+  .relation-filter__panel {
+    overflow: hidden;
+    border-color: var(--atlas-glass-border);
+    border-radius: 20px;
+    background: var(--atlas-glass-strong);
+    box-shadow: var(--atlas-glass-shadow);
+    backdrop-filter: blur(30px) saturate(1.24);
+  }
+
+  .more-menu__panel { padding: 9px; }
+  .more-menu__panel > a,
+  .more-menu__panel > button { border-radius: 12px; border-bottom-color: rgba(255, 245, 218, .07); }
+
+  .atlas-main { padding: 8px 12px 4px; transition: padding 420ms var(--ease-cinema); }
+
+  .globe-stage {
+    border-color: rgba(255, 245, 218, .1);
+    border-radius: var(--atlas-radius-panel);
+    background: #030504;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .38), inset 0 1px 0 rgba(255, 248, 226, .08);
+    transition: border-radius 420ms var(--ease-cinema), border-color 240ms ease, box-shadow 420ms ease;
+  }
+
+  .question-dock,
+  .story-overlay,
+  .journey-story-card,
+  .relation-filter,
+  .globe-instruction,
+  .focus-depth-control,
+  .globe-stage__topline {
+    transition: opacity 220ms ease, transform 420ms var(--ease-cinema), visibility 220ms;
+  }
+
+  .question-dock {
+    bottom: 20px;
+    left: 22px;
+    width: min(820px, calc(100% - 44px));
+  }
+
+  .question-dock.is-expanded { width: min(900px, calc(100% - 44px)); }
+  .question-dock__heading { align-items: center; gap: 18px; margin-bottom: 14px; }
+  .question-dock__heading small { text-shadow: 0 2px 18px #000; }
+  .question-dock__heading h1 {
+    margin-top: 7px;
+    max-width: 14em;
+    font-size: clamp(40px, 4.1vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.04em;
+    text-shadow: 0 3px 32px rgba(0, 0, 0, .9);
+  }
+  .question-dock.is-expanded .question-dock__heading h1 { font-size: clamp(34px, 3.5vw, 46px); }
+  .question-dock__heading button { padding-inline: 17px; }
+  .question-dock__cards { gap: 11px; }
+
+  .question-card {
+    min-height: 132px;
+    border-color: rgba(255, 245, 218, .13);
+    border-radius: var(--atlas-radius-card);
+    background: rgba(5, 7, 6, .82);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 250, 232, .09);
+    isolation: isolate;
+  }
+  .question-card::before {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(130deg, rgba(255, 255, 255, .16), transparent 27%, transparent 72%, color-mix(in oklch, var(--question-accent) 24%, transparent)) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    content: "";
+    pointer-events: none;
+  }
+  .question-card:hover,
+  .question-card:focus-visible,
+  .question-card.is-active {
+    transform: translateY(-3px) scale(1.01);
+    border-color: color-mix(in oklch, var(--question-accent) 52%, rgba(255, 255, 255, .2));
+    box-shadow: 0 24px 68px rgba(0, 0, 0, .42), 0 0 28px color-mix(in oklch, var(--question-glow) 72%, transparent), inset 0 1px 0 rgba(255, 250, 232, .14);
+  }
+  .question-card:focus-visible { outline: 2px solid color-mix(in oklch, var(--question-accent) 75%, var(--paper)); outline-offset: 3px; }
+  .question-card__art::after { background: linear-gradient(180deg, rgba(2, 3, 3, .02) 10%, rgba(2, 3, 3, .16) 45%, rgba(2, 3, 3, .94)); }
+  .question-card__copy { inset: auto 17px 15px; gap: 4px 12px; }
+  .question-card__copy small { color: rgba(244, 239, 226, .78); }
+  .question-card__copy strong { font-size: clamp(20px, 1.65vw, 24px); }
+  .question-card__copy i { font-size: 13px; }
+
+  .question-dock__change {
+    min-height: 132px;
+    border-color: var(--atlas-glass-border);
+    border-radius: var(--atlas-radius-card);
+    background: var(--atlas-glass);
+    box-shadow: inset 0 1px 0 var(--atlas-glass-highlight), 0 16px 40px rgba(0, 0, 0, .22);
+    backdrop-filter: blur(18px) saturate(1.18);
+  }
+
+  .relation-filter { top: 66px; right: 18px; bottom: auto; }
+  .relation-filter > summary { min-height: 42px; padding-inline: 15px; }
+  .relation-filter__panel { top: 50px; right: 0; bottom: auto; padding: 8px; }
+  .relation-filter__panel button { border-radius: 11px; }
+  .relation-filter__panel button:hover { background: rgba(255, 247, 224, .06); }
+
+  .globe-instruction {
+    top: 66px;
+    right: 136px;
+    bottom: auto;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 245, 218, .08);
+    border-radius: var(--atlas-radius-control);
+    background: linear-gradient(145deg, rgba(16, 19, 16, .56), rgba(7, 9, 8, .38));
+    color: rgba(244, 239, 226, .5);
+    box-shadow: inset 0 1px 0 rgba(255, 250, 232, .07);
+    letter-spacing: .08em;
+    backdrop-filter: blur(14px) saturate(1.12);
+  }
+
+  .immersive-toggle {
+    position: absolute;
+    z-index: 126;
+    top: 15px;
+    right: 17px;
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    gap: 9px;
+    padding: 0 15px 0 12px;
+    border: 1px solid var(--atlas-glass-border);
+    border-radius: var(--atlas-radius-control);
+    background: var(--atlas-glass);
+    color: var(--paper-soft);
+    box-shadow: inset 0 1px 0 var(--atlas-glass-highlight), 0 12px 34px rgba(0, 0, 0, .24);
+    opacity: .76;
+    transition: opacity 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms var(--ease-cinema), right 420ms var(--ease-cinema);
+    backdrop-filter: blur(20px) saturate(1.2);
+  }
+  .immersive-toggle:hover,
+  .immersive-toggle:focus-visible { border-color: rgba(218, 180, 110, .42); color: var(--paper); opacity: 1; transform: translateY(-1px); }
+  .immersive-toggle > span { position: relative; width: 17px; height: 17px; border: 1px solid currentColor; border-radius: 6px; opacity: .8; }
+  .immersive-toggle > span::after { position: absolute; inset: 4px; border: 1px solid currentColor; border-radius: 50%; content: ""; }
+  .immersive-toggle strong { font-size: 12px; font-weight: 500; letter-spacing: .04em; }
+  .globe-stage--detail-open .immersive-toggle { right: 420px; }
+
+  .detail-pane {
+    top: 18px;
+    right: 18px;
+    bottom: auto;
+    width: min(390px, calc(100% - 36px));
+    max-height: calc(100% - 34px);
+    grid-template-columns: minmax(0, 1fr);
+    border-color: var(--atlas-glass-border);
+    border-radius: var(--atlas-radius-panel);
+    background: var(--atlas-glass-strong);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .5), inset 0 1px 0 var(--atlas-glass-highlight);
+    backdrop-filter: blur(30px) saturate(1.22);
+  }
+  .detail-pane__rail { display: none; }
+  .detail-pane__close { top: 12px; right: 12px; border-color: var(--atlas-glass-border); background: rgba(18, 21, 18, .68); box-shadow: inset 0 1px 0 var(--atlas-glass-highlight), 0 8px 24px rgba(0, 0, 0, .24); }
+  .detail-card { min-height: 0; padding: 24px 24px 28px; }
+  .detail-card__index { font-size: 11px; }
+
+  .thinker-preview__hero {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: start;
+    gap: 17px;
+    margin-top: 18px;
+  }
+  .detail-card--thinker .thinker-preview__portrait.thinker-portrait--full {
+    width: 112px;
+    aspect-ratio: 4 / 5;
+    margin: 0;
+    border-color: rgba(255, 245, 218, .14);
+    border-radius: 17px;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, .34), inset 0 1px 0 rgba(255, 250, 232, .08);
+  }
+  .thinker-preview__identity { min-width: 0; }
+  .thinker-preview__identity .detail-card__heading { display: grid; gap: 11px; margin: 2px 0 0; }
+  .thinker-preview__identity .detail-card__heading h2 { font-size: clamp(28px, 2.7vw, 38px); line-height: 1; }
+  .thinker-preview__identity .detail-card__heading p { margin-top: 7px; font-size: 11px; line-height: 1.35; overflow-wrap: anywhere; }
+  .thinker-preview__identity .detail-card__heading > span {
+    width: fit-content;
+    max-width: 100%;
+    padding: 5px 8px;
+    overflow: hidden;
+    border: 1px solid color-mix(in oklch, var(--thinker-color) 36%, var(--atlas-glass-border));
+    border-radius: var(--atlas-radius-control);
+    background: color-mix(in oklch, var(--thinker-color) 8%, transparent);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .keyword-row--preview { gap: 6px; margin-top: 14px; }
+  .keyword-row--preview span {
+    padding: 5px 8px;
+    border-color: rgba(255, 245, 218, .11);
+    border-radius: var(--atlas-radius-control);
+    background: rgba(255, 250, 232, .035);
+    font-size: 12px;
+  }
+  .detail-card--thinker .detail-card__statement {
+    margin-top: 20px;
+    padding: 17px 18px 18px;
+    border: 1px solid rgba(255, 245, 218, .09);
+    border-radius: 17px;
+    background: linear-gradient(145deg, rgba(255, 250, 232, .055), rgba(255, 255, 255, .015));
+    box-shadow: inset 0 1px 0 rgba(255, 250, 232, .045);
+  }
+  .detail-card--thinker .detail-card__statement small { font-size: 11px; }
+  .detail-card--thinker .detail-card__statement p { margin-top: 9px; font-size: 15px; line-height: 1.75; }
+  .detail-actions--thinker { grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr); gap: 9px; margin-top: 18px; }
+  .detail-actions--thinker a,
+  .detail-actions--thinker button { min-height: 44px; border-radius: 14px; font-size: 13px; }
+  .detail-actions--thinker .detail-actions__primary {
+    display: flex;
+    grid-template: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-color: rgba(214, 173, 101, .48);
+    background: linear-gradient(145deg, rgba(190, 143, 71, .2), rgba(130, 96, 48, .1));
+    color: var(--paper);
+    box-shadow: inset 0 1px 0 rgba(255, 245, 218, .1);
+  }
+  .detail-actions__primary span { color: var(--bronze); transition: transform 180ms var(--ease-cinema); }
+  .detail-actions__primary:hover span { transform: translateX(3px); }
+
+  .question-detail__art,
+  .source-list a,
+  .compare-card__columns > div { border-radius: 16px; }
+
+  .bottom-dock {
+    margin: 4px 12px 8px;
+    overflow: hidden;
+    border-color: var(--atlas-glass-border);
+    border-radius: 19px;
+    background: var(--atlas-glass);
+    box-shadow: inset 0 1px 0 var(--atlas-glass-highlight), 0 14px 38px rgba(0, 0, 0, .26);
+    transition: opacity 220ms ease, transform 420ms var(--ease-cinema), visibility 220ms;
+    backdrop-filter: blur(22px) saturate(1.18);
+  }
+  .bottom-dock--explore { padding-inline: 18px; }
+  .timeline-density { opacity: .24; }
+
+  .atlas-shell--ui-hidden { grid-template-rows: 0 minmax(0, 1fr) 0; }
+  .atlas-shell--ui-hidden .site-header,
+  .atlas-shell--ui-hidden .bottom-dock,
+  .atlas-shell--ui-hidden .question-dock,
+  .atlas-shell--ui-hidden .story-overlay,
+  .atlas-shell--ui-hidden .journey-story-card,
+  .atlas-shell--ui-hidden .relation-filter,
+  .atlas-shell--ui-hidden .globe-instruction,
+  .atlas-shell--ui-hidden .globe-stage__topline,
+  .atlas-shell--ui-hidden .focus-depth-control,
+  .atlas-shell--ui-hidden .detail-pane,
+  .atlas-shell--ui-hidden .quality-indicator,
+  .atlas-shell--ui-hidden .earth-mode-switch,
+  .atlas-shell--ui-hidden .relation-hover-card {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .atlas-shell--ui-hidden .site-header { transform: translateY(-100%); }
+  .atlas-shell--ui-hidden .bottom-dock { transform: translateY(100%); }
+  .atlas-shell--ui-hidden .question-dock,
+  .atlas-shell--ui-hidden .story-overlay,
+  .atlas-shell--ui-hidden .journey-story-card { transform: translateY(24px); }
+  .atlas-shell--ui-hidden .detail-pane { transform: translate3d(calc(100% + 48px), 0, 0); }
+  .atlas-shell--ui-hidden .atlas-main { padding: 0; }
+  .atlas-shell--ui-hidden .globe-stage { border: 0; border-radius: 0; box-shadow: none; }
+  .atlas-shell--ui-hidden .immersive-toggle { top: 16px; right: 16px; opacity: .58; }
+
+  @media (max-width: 1180px) {
+    .question-dock { width: min(760px, calc(100% - 44px)); }
+    .question-dock.is-expanded { width: min(840px, calc(100% - 44px)); }
+    .question-dock__heading h1 { font-size: clamp(38px, 4.6vw, 50px); }
+    .globe-stage--detail-open .immersive-toggle { right: 410px; }
+  }
+
+  @media (max-height: 700px) and (min-width: 821px) {
+    .question-dock__heading { margin-bottom: 9px; }
+    .question-dock__heading h1,
+    .question-dock.is-expanded .question-dock__heading h1 { font-size: clamp(32px, 4vw, 40px); }
+    .question-card,
+    .question-dock__change { min-height: 112px; }
+    .question-card__copy { inset: auto 14px 11px; }
+    .question-card__copy strong { font-size: 19px; }
+  }
+
+  @media (max-width: 820px) {
+    .atlas-shell { grid-template-rows: 64px minmax(0, 1fr) 72px; }
+    .site-header { grid-template-columns: 1fr auto; padding-inline: 11px; }
+    .atlas-main { padding: 5px 6px 2px; }
+    .globe-stage { border-radius: 22px; }
+    .immersive-toggle { top: 12px; right: 11px; min-height: 40px; padding-inline: 11px 13px; }
+    .immersive-toggle strong { font-size: 11px; }
+    .globe-stage--detail-open .immersive-toggle { right: 11px; }
+
+    .question-dock,
+    .question-dock.is-expanded { bottom: 10px; padding-left: 12px; }
+    .question-dock__heading { padding-right: 12px; margin-bottom: 8px; }
+    .question-dock__heading h1,
+    .question-dock.is-expanded .question-dock__heading h1 { max-width: 7.5em; font-size: clamp(32px, 9.4vw, 42px); }
+    .question-dock__heading button { padding-inline: 13px; }
+    .question-dock__cards,
+    .question-dock.is-expanded .question-dock__cards,
+    .question-dock.has-active-question:not(.is-expanded) .question-dock__cards { gap: 10px; padding: 4px 12px 7px 0; }
+    .question-card { width: min(76vw, 330px); min-width: min(76vw, 330px); min-height: 146px; border-radius: 20px; }
+    .question-dock__change { min-height: 146px; border-radius: 20px; }
+
+    .relation-filter { top: 61px; right: 10px; bottom: auto; }
+    .relation-filter > summary { min-height: 42px; }
+    .relation-filter__panel { top: 49px; right: 0; bottom: auto; }
+    .globe-instruction { display: none; }
+
+    .detail-pane--active {
+      top: auto;
+      right: 6px;
+      bottom: 76px;
+      left: 6px;
+      width: auto;
+      max-height: none;
+      border-radius: 25px 25px 20px 20px;
+    }
+    .detail-pane > .detail-card { padding: 72px 20px 26px; }
+    .thinker-preview__hero { grid-template-columns: 104px minmax(0, 1fr); gap: 15px; margin-top: 14px; }
+    .detail-card--thinker .thinker-preview__portrait.thinker-portrait--full { width: 104px; border-radius: 16px; }
+    .thinker-preview__identity .detail-card__heading h2 { font-size: 30px; }
+    .detail-card--thinker .detail-card__statement { margin-top: 16px; padding: 14px 15px 15px; }
+    .detail-card--thinker .detail-card__statement p { font-size: 14px; line-height: 1.7; }
+    .detail-actions--thinker { margin-top: 14px; }
+    .bottom-dock { margin: 3px 6px 7px; border-radius: 17px; }
+
+    .atlas-shell--ui-hidden { grid-template-rows: 0 minmax(0, 1fr) 0; }
+    .atlas-shell--ui-hidden .atlas-main { padding: 0; }
+    .atlas-shell--ui-hidden .immersive-toggle { top: 12px; right: 11px; }
+  }
+
+  @media (max-width: 460px) {
+    .question-card { width: 76vw; min-width: 76vw; }
+    .question-card__copy { inset: auto 15px 13px; }
+    .question-card__copy strong { font-size: 21px; }
+    .thinker-preview__hero { grid-template-columns: 96px minmax(0, 1fr); gap: 13px; }
+    .detail-card--thinker .thinker-preview__portrait.thinker-portrait--full { width: 96px; }
+    .thinker-preview__identity .detail-card__heading h2 { font-size: 27px; }
+    .keyword-row--preview span { padding: 4px 7px; font-size: 11px; }
+    .detail-actions--thinker { grid-template-columns: 1fr 1fr; }
+    .detail-actions--thinker a,
+    .detail-actions--thinker button { min-height: 44px; font-size: 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .atlas-shell,
+    .site-header,
+    .bottom-dock,
+    .atlas-main,
+    .globe-stage,
+    .immersive-toggle { transition-duration: .12s !important; }
   }
 }
 

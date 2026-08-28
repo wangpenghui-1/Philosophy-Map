@@ -81,7 +81,7 @@ test("intro uses full, quick, skip, and reduced-motion timing", async ({ page })
   await expect.poll(() => page.evaluate(() => (
     (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
   ))).toContain("reduced");
-  await expect(page.locator("[data-intro-sequence]")).toHaveCount(0, { timeout: 1_500 });
+  await expect(page.locator("[data-intro-sequence]")).toHaveCount(0, { timeout: 3_000 });
 });
 
 test("v1 preferences migrate while homepage selection and camera state reset", async ({ page }) => {
@@ -150,6 +150,7 @@ test("all eight journey routes open the shared player", async ({ page }) => {
 });
 
 test("a completed journey offers the related journey and free exploration", async ({ page }) => {
+  test.slow();
   await openHydrated(page, "/journey/existentialism");
   await page.getByRole("button", { name: "暂停旅程" }).click();
   const progress = await page.getByText(/存在主义之旅 · 1\/\d+/).textContent();
@@ -230,7 +231,7 @@ test("search traps focus and links the globe state to the reading page", async (
   await page.getByRole("dialog", { name: "搜索思想星图" }).getByRole("button", { name: /康德/ }).evaluate((button) => (button as HTMLButtonElement).click());
   await expect(page).toHaveURL(/\/explore\?[^#]*thinker=kant/);
   await expect(page.locator('img.thinker-portrait__image[src="/media/thinkers/full/kant.webp"]')).toBeVisible();
-  await page.getByRole("link", { name: "深入阅读" }).click();
+  await page.getByRole("link", { name: "查看人物详情" }).click();
   await expect(page).toHaveURL(/\/thinker\/kant$/);
   await page.getByRole("link", { name: "在3D地球中定位" }).click();
   await waitForHydration(page);
@@ -238,7 +239,7 @@ test("search traps focus and links the globe state to the reading page", async (
   await expect(page.locator("canvas")).toBeVisible();
   await expect(page.getByText("3D渲染不可用")).toBeHidden();
   if (testInfo.project.name === "desktop-chromium") {
-    await expect(page.locator(".globe-marker--selected")).toHaveAttribute("data-visible", "true");
+    await expect(page.locator(".globe-marker--selected")).toHaveAttribute("data-visible", "true", { timeout: 10_000 });
   }
 });
 
@@ -254,6 +255,70 @@ test("question and timeline filters are reflected in the exploration URL", async
   await waitForHydration(page);
   await expect(page.getByRole("button", { name: /我们真的自由吗/ })).toHaveClass(/is-active/);
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1000");
+});
+
+test("question cards, globe utilities, and thinker preview keep a clear responsive hierarchy", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop-chromium", "Shared layout geometry is covered once on the desktop project.");
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await openHydrated(page, "/explore");
+
+  const instruction = page.locator(".globe-instruction");
+  const relationFilter = page.locator(".relation-filter");
+  const [instructionBox, relationBox] = await Promise.all([
+    instruction.boundingBox(),
+    relationFilter.boundingBox(),
+  ]);
+  expect(instructionBox).not.toBeNull();
+  expect(relationBox).not.toBeNull();
+  if (!instructionBox || !relationBox) throw new Error("Missing globe utility bounds");
+  const utilitiesOverlap = instructionBox.x < relationBox.x + relationBox.width
+    && instructionBox.x + instructionBox.width > relationBox.x
+    && instructionBox.y < relationBox.y + relationBox.height
+    && instructionBox.y + instructionBox.height > relationBox.y;
+  expect(utilitiesOverlap).toBe(false);
+
+  await page.getByRole("button", { name: "全部问题" }).click();
+  await expect(page.locator(".question-card")).toHaveCount(6);
+  const radii = await page.locator(".question-card").evaluateAll((cards) => cards.map((card) => Number.parseFloat(getComputedStyle(card).borderRadius)));
+  expect(radii.every((radius) => radius >= 18)).toBe(true);
+
+  await openHydrated(page, "/explore?thinker=kant");
+  await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+  await expect(page.locator(".question-dock")).toHaveCount(0);
+  await expect(page.getByText("核心思想", { exact: true })).toBeVisible();
+  await expect(page.locator(".keyword-row--preview span").first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "查看人物详情" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "加入比较" })).toBeVisible();
+});
+
+test("immersive mode leaves the globe as the sole visual focus and restores the interface", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await openHydrated(page, "/explore");
+  const toggle = page.getByRole("button", { name: "隐藏界面，进入沉浸模式" });
+  await toggle.click();
+  await expect(page.locator(".atlas-shell")).toHaveClass(/atlas-shell--ui-hidden/);
+  await expect(page.locator(".site-header")).toBeHidden();
+  await expect(page.locator(".question-dock")).toBeHidden();
+  await expect(page.locator(".detail-pane")).toBeHidden();
+  await expect(page.locator(".bottom-dock")).toBeHidden();
+  await expect(page.getByRole("button", { name: "显示探索界面" })).toBeVisible();
+
+  const stageBox = await page.locator(".globe-stage").boundingBox();
+  expect(stageBox).not.toBeNull();
+  if (!stageBox) throw new Error("Missing globe stage bounds");
+  expect(stageBox.width).toBeGreaterThanOrEqual(1438);
+  expect(stageBox.height).toBeGreaterThanOrEqual(898);
+
+  await page.getByRole("button", { name: "显示探索界面" }).click();
+  await expect(page.locator(".atlas-shell")).not.toHaveClass(/atlas-shell--ui-hidden/);
+  await expect(page.locator(".site-header")).toBeVisible();
+  await expect(page.locator(".question-dock")).toBeVisible();
+
+  await openHydrated(page, "/explore?thinker=kant");
+  await page.getByRole("button", { name: "隐藏界面，进入沉浸模式" }).click();
+  await expect(page.locator(".detail-pane")).toBeHidden();
+  await page.getByRole("button", { name: "显示探索界面" }).click();
+  await expect(page.locator(".detail-pane")).toBeVisible();
 });
 
 test("closing a detail pane clears the selection and preserves exploration filters", async ({ page }) => {

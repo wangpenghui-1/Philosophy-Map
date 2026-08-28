@@ -23,14 +23,15 @@ export interface AtlasPersistedVisualStateV1 {
   earthMode: "day" | "night";
   qualityPreference: QualityPreference;
   camera: GlobeCameraSnapshot | null;
+  soundEnabled?: boolean;
 }
 
-export interface PersistedStateValidators {
-  isQuestionId: (value: string) => value is QuestionId;
-  isThinkerSlug: (value: string) => boolean;
-  isRelationId: (value: string) => boolean;
-  minYear: number;
-  maxYear: number;
+export interface AtlasPersistedVisualStateV2 {
+  version: 2;
+  entrySeen: boolean;
+  earthMode: "day" | "night";
+  qualityPreference: QualityPreference;
+  soundEnabled: boolean;
 }
 
 export interface AutoQualityState {
@@ -40,7 +41,8 @@ export interface AutoQualityState {
   lastChangeAt: number;
 }
 
-export const ATLAS_VISUAL_STORAGE_KEY = "atlas-visual-state:v1";
+export const ATLAS_VISUAL_STORAGE_KEY = "atlas-visual-state:v2";
+export const ATLAS_VISUAL_LEGACY_STORAGE_KEY = "atlas-visual-state:v1";
 export const AUTO_QUALITY_COOLDOWN_MS = 10_000;
 export const AUTO_QUALITY_DOWNGRADE_MS = 2_000;
 export const AUTO_QUALITY_UPGRADE_MS = 6_000;
@@ -59,6 +61,12 @@ const RENDER_DPR_CAP: Record<EffectiveQuality, number> = {
 
 export const GLOBE_HIGH_QUALITY_WARMUP_MS = 3_500;
 export const GLOBE_NATIVE_CONTEXT_RESTORE_MS = 4_000;
+export const ATLAS_INTRO_DURATION_MS = {
+  full: 1_800,
+  quick: 800,
+  reduced: 120,
+} as const;
+export const QUESTION_CAMERA_SETTLE_MS = 900;
 
 const QUALITY_ORDER: EffectiveQuality[] = ["low", "medium", "high"];
 const DETAIL_SHEET_ORDER: DetailSheetSnap[] = ["peek", "half", "full"];
@@ -164,54 +172,41 @@ export function shouldDirectGlobeCamera(
   mode: AtlasMode,
   selectedThinkerId: string | null,
   selectedRelationId: string | null,
+  hasQuestionFocus = false,
 ) {
-  return mode === "story" || Boolean(selectedThinkerId || selectedRelationId);
+  return mode === "story" || hasQuestionFocus || Boolean(selectedThinkerId || selectedRelationId);
 }
 
 export function parsePersistedVisualState(
   raw: string | null,
-  validators: PersistedStateValidators,
-): AtlasPersistedVisualStateV1 | null {
-  if (!raw) return null;
-  try {
-    const value = JSON.parse(raw) as Partial<AtlasPersistedVisualStateV1>;
-    if (value.version !== 1 || typeof value.entrySeen !== "boolean") return null;
-    if (value.mode !== "story" && value.mode !== "explore") return null;
-    if (!Number.isFinite(value.timelineYear)
-      || Number(value.timelineYear) < validators.minYear
-      || Number(value.timelineYear) > validators.maxYear) return null;
-    const questionId = typeof value.questionId === "string" && validators.isQuestionId(value.questionId)
-      ? value.questionId
-      : null;
-    const thinkerSlug = typeof value.thinkerSlug === "string" && validators.isThinkerSlug(value.thinkerSlug)
-      ? value.thinkerSlug
-      : null;
-    const relationId = typeof value.relationId === "string" && validators.isRelationId(value.relationId)
-      ? value.relationId
-      : null;
-    const qualityPreference = value.qualityPreference === "auto"
-      || value.qualityPreference === "high"
-      || value.qualityPreference === "medium"
-      || value.qualityPreference === "low"
-      ? value.qualityPreference
-      : "auto";
-    const earthMode = value.earthMode === "day" ? "day" : "night";
-    const camera = isCameraSnapshot(value.camera) ? value.camera : null;
-    return {
-      version: 1,
-      entrySeen: value.entrySeen,
-      mode: value.mode,
-      timelineYear: Number(value.timelineYear),
-      questionId,
-      thinkerSlug,
-      relationId,
-      earthMode,
-      qualityPreference,
-      camera,
-    };
-  } catch {
-    return null;
-  }
+  legacyRaw: string | null = null,
+): AtlasPersistedVisualStateV2 | null {
+  const parse = (source: string | null): Record<string, unknown> | null => {
+    if (!source) return null;
+    try {
+      const value = JSON.parse(source) as unknown;
+      return value && typeof value === "object" ? value as Record<string, unknown> : null;
+    } catch {
+      return null;
+    }
+  };
+  const current = parse(raw);
+  const legacy = parse(legacyRaw);
+  const value = current?.version === 2 ? current : legacy?.version === 1 ? legacy : null;
+  if (!value || typeof value.entrySeen !== "boolean") return null;
+  const qualityPreference = value.qualityPreference === "auto"
+    || value.qualityPreference === "high"
+    || value.qualityPreference === "medium"
+    || value.qualityPreference === "low"
+    ? value.qualityPreference
+    : "auto";
+  return {
+    version: 2,
+    entrySeen: value.entrySeen,
+    earthMode: value.earthMode === "day" ? "day" : "night",
+    qualityPreference,
+    soundEnabled: typeof value.soundEnabled === "boolean" ? value.soundEnabled : false,
+  };
 }
 
 function isVector3Tuple(value: unknown): value is [number, number, number] {

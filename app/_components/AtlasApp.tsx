@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, MotionConfig, useReducedMotion, type PanInfo } from "motion/react";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -17,13 +18,11 @@ import {
   thinkerById,
   thinkerBySlug,
   thinkers,
-  workById,
   works,
   type QuestionId,
+  type RelationType,
 } from "../_data/atlas";
 import {
-  JOURNEY_INTRO_SEEN_VALUE,
-  JOURNEY_INTRO_STORAGE_KEY,
   emitJourneyEvent,
   formatJourneyRemaining,
   journeyById,
@@ -32,14 +31,27 @@ import {
   validateJourneyReferences,
   type JourneyDefinition,
 } from "../_data/journeys";
+import {
+  questionPresentationById,
+  relationTypeOrder,
+  type QuestionPresentation,
+} from "../_data/question-presentations";
 import { useAtlasStore, type AtlasMode } from "../_state/atlas-store";
 import type { EarthLightingMode, GlobeStoryFocus } from "./GlobeCanvas";
 import ThinkerPortrait from "./ThinkerPortrait";
-import RepresentativeQuote from "./RepresentativeQuote";
 import { DisplaySettings, FocusDepthControl } from "./AtlasVisualControls";
-import JourneyCarousel from "./JourneyCarousel";
 import {
+  AtlasHeader,
+  AtlasIntro,
+  QuestionDock,
+  RelationFilter,
+  type IntroSequence,
+} from "./AtlasFirstScreen";
+import {
+  ATLAS_VISUAL_LEGACY_STORAGE_KEY,
   ATLAS_VISUAL_STORAGE_KEY,
+  ATLAS_INTRO_DURATION_MS,
+  QUESTION_CAMERA_SETTLE_MS,
   advanceAutoQuality,
   initialAutoQuality,
   parsePersistedVisualState,
@@ -226,62 +238,6 @@ function JourneyOverlay({
   );
 }
 
-function QuestionRail({
-  activeQuestionId,
-  onSelect,
-}: {
-  activeQuestionId: QuestionId | null;
-  onSelect: (id: QuestionId | null) => void;
-}) {
-  return (
-    <aside className="question-rail" aria-label="按哲学问题筛选">
-      <div className="question-rail__header">
-        <span>问题坐标</span>
-        <button type="button" onClick={() => onSelect(null)} disabled={!activeQuestionId}>全部</button>
-      </div>
-      <div className="question-rail__items">
-        {questions.map((question, index) => (
-          <button
-            type="button"
-            key={question.id}
-            className={activeQuestionId === question.id ? "is-active" : ""}
-            onClick={() => onSelect(activeQuestionId === question.id ? null : question.id)}
-            style={{ "--question-color": question.color } as React.CSSProperties}
-          >
-            <small>{String(index + 1).padStart(2, "0")}</small>
-            <span>{question.label}</span>
-          </button>
-        ))}
-      </div>
-    </aside>
-  );
-}
-
-function RelationLegend({ onSelect }: { onSelect: (id: string) => void }) {
-  const types = [
-    { type: "direct-influence", className: "direct" },
-    { type: "text-transmission", className: "transmission" },
-    { type: "critique", className: "critique" },
-    { type: "lineage", className: "lineage" },
-    { type: "thematic-resonance", className: "resonance" },
-  ] as const;
-  return (
-    <aside className="relation-legend" aria-label="关系图例">
-      <span className="relation-legend__title">关系证据</span>
-      {types.map(({ type, className }) => {
-        const relation = relations.find((item) => item.type === type);
-        if (!relation) return null;
-        return (
-          <button type="button" key={type} onClick={() => onSelect(relation.id)}>
-            <i className={`line-sample line-sample--${className}`} />
-            <span>{relationTypeLabels[type]}</span>
-          </button>
-        );
-      })}
-    </aside>
-  );
-}
-
 function SourceLinks({ sourceIds }: { sourceIds: string[] }) {
   return (
     <ul className="source-list">
@@ -305,13 +261,7 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
   const thinker = thinkerById.get(thinkerId);
   const compareIds = useAtlasStore((state) => state.compareIds);
   const toggleCompare = useAtlasStore((state) => state.toggleCompare);
-  const selectRelation = useAtlasStore((state) => state.selectRelation);
   if (!thinker) return null;
-  const thinkerWorks = thinker.workIds.map((id) => workById.get(id)).filter(Boolean);
-  const thinkerRelations = relations.filter((relation) => relation.from === thinker.id || relation.to === thinker.id);
-  const representativeQuote = thinker.representativeQuote;
-  const quoteWork = representativeQuote?.workId ? workById.get(representativeQuote.workId) : null;
-  const quoteSource = representativeQuote ? sourceById.get(representativeQuote.sourceId) : null;
 
   return (
     <motion.article
@@ -321,7 +271,7 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.38 }}
     >
-      <div className="detail-card__index">人物档案 · {String(thinkers.findIndex((item) => item.id === thinker.id) + 1).padStart(2, "0")}</div>
+      <div className="detail-card__index">人物 · {String(thinkers.findIndex((item) => item.id === thinker.id) + 1).padStart(2, "0")}</div>
       <div className="detail-card__heading">
         <div>
           <h2>{thinker.name}</h2>
@@ -329,58 +279,14 @@ function ThinkerDetail({ thinkerId }: { thinkerId: string }) {
         </div>
         <span style={{ "--thinker-color": thinker.color } as React.CSSProperties}>{thinker.period}</span>
       </div>
-      <div className="detail-card__location">
-        <span>{thinker.region}</span>
-        <span>{thinker.anchors.map((anchor) => anchor.label).join(" · ")}</span>
-      </div>
-      <ThinkerPortrait thinker={thinker} variant="full" showNote />
-      {representativeQuote ? (
-        <RepresentativeQuote
-          quote={representativeQuote}
-          sourceLabel={`${quoteWork?.title ?? representativeQuote.sourceTitle} · ${representativeQuote.locator}`}
-          sourceHref={quoteSource?.url === "#" ? undefined : quoteSource?.url}
-          compact
-        />
-      ) : null}
+      <ThinkerPortrait thinker={thinker} variant="full" />
       <section className="detail-card__statement">
-        <small>他／她试图回答</small>
-        <h3>{thinker.question}</h3>
+        <small>核心思想</small>
         <p>{thinker.thesis}</p>
       </section>
       <div className="keyword-row">
         {thinker.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}
       </div>
-      <section className="detail-section">
-        <h4>代表文本</h4>
-        <ul className="work-list">
-          {thinkerWorks.map((work) => work ? (
-            <li key={work.id}>
-              <span>{work.title}</span>
-              <small>在人物长文中查看版本、原名与年代</small>
-            </li>
-          ) : null)}
-        </ul>
-      </section>
-      {thinkerRelations.length ? (
-        <section className="detail-section">
-          <h4>样片关系</h4>
-          <div className="related-links">
-            {thinkerRelations.map((relation) => (
-              <button type="button" key={relation.id} onClick={() => selectRelation(relation.id)}>
-                <span>{relation.title}</span>
-                <small>{relationTypeLabels[relation.type]}</small>
-              </button>
-            ))}
-          </div>
-        </section>
-      ) : null}
-      {thinker.uncertainty ? (
-        <p className="uncertainty-note"><strong>不确定性：</strong>{thinker.uncertainty}</p>
-      ) : null}
-      <section className="detail-section detail-section--sources">
-        <h4>学术来源</h4>
-        <SourceLinks sourceIds={thinker.sourceIds} />
-      </section>
       <div className="detail-actions">
         <button
           className={compareIds.includes(thinker.id) ? "is-active" : ""}
@@ -416,11 +322,45 @@ function RelationDetail({ relationId }: { relationId: string }) {
         <span>{to?.name}</span>
       </div>
       <p className="relation-explanation">{relation.explanation}</p>
-      {relation.note ? <p className="uncertainty-note"><strong>阅读提示：</strong>{relation.note}</p> : null}
-      <section className="detail-section detail-section--sources">
-        <h4>为什么可以这样连接</h4>
-        <SourceLinks sourceIds={relation.sourceIds} />
-      </section>
+      <details className="relation-evidence">
+        <summary>查看证据</summary>
+        {relation.note ? <p className="uncertainty-note"><strong>阅读提示：</strong>{relation.note}</p> : null}
+        <section className="detail-section detail-section--sources">
+          <h4>为什么可以这样连接</h4>
+          <SourceLinks sourceIds={relation.sourceIds} />
+        </section>
+      </details>
+    </motion.article>
+  );
+}
+
+function QuestionDetail({
+  presentation,
+  onStart,
+}: {
+  presentation: QuestionPresentation;
+  onStart: (journeyId: string) => void;
+}) {
+  return (
+    <motion.article
+      className="detail-card question-detail"
+      key={presentation.questionId}
+      initial={{ opacity: 0, x: 18 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 12 }}
+      transition={{ duration: .42, ease: [0.22, 1, 0.36, 1] }}
+      style={{ "--question-accent": presentation.theme.accent } as React.CSSProperties}
+    >
+      <div className="detail-card__index">问题入口</div>
+      <div className="question-detail__art" aria-hidden="true">
+        <Image src={presentation.artwork.avif640} alt="" width={640} height={400} sizes="380px" />
+      </div>
+      <h2>{presentation.title}</h2>
+      <p>{presentation.subtitle}</p>
+      <button type="button" onClick={() => onStart(presentation.primaryJourneyId)}>开始思想旅程</button>
+      {presentation.relatedJourneyIds?.length ? (
+        <small>也可继续：{presentation.relatedJourneyIds.map((id) => journeyById.get(id)?.title).filter(Boolean).join("、")}</small>
+      ) : null}
     </motion.article>
   );
 }
@@ -457,29 +397,6 @@ function CompareDetail({ ids }: { ids: string[] }) {
         <Link href={`/compare/${left.slug}/${right.slug}`}>分享比较</Link>
       </div>
     </motion.article>
-  );
-}
-
-function EmptyDetail({ onSelectRelation }: { onSelectRelation: (id: string) => void }) {
-  return (
-    <article className="detail-card detail-card--empty">
-      <div className="detail-card__index">扩展版 · {thinkers.length}个节点</div>
-      <h2>把注意力放在连接上</h2>
-      <p>点击人物，查看问题、主张和文本；点击关系线，查看它为什么存在。灰白虚线只表示主题共鸣。</p>
-      <div className="sample-stats">
-        <div><strong>{String(thinkers.length).padStart(2, "0")}</strong><span>人物节点</span></div>
-        <div><strong>{String(relations.length).padStart(2, "0")}</strong><span>证据关系</span></div>
-        <div><strong>{String(sourceById.size).padStart(2, "0")}</strong><span>权威来源</span></div>
-      </div>
-      <div className="related-links">
-        {relations.map((relation) => (
-          <button type="button" key={relation.id} onClick={() => onSelectRelation(relation.id)}>
-            <span>{relation.title}</span>
-            <small>{relationTypeLabels[relation.type]}</small>
-          </button>
-        ))}
-      </div>
-    </article>
   );
 }
 
@@ -780,16 +697,18 @@ function BottomDock({ mode, onTakeover }: { mode: AtlasMode; onTakeover: () => v
         />
         <div className="timeline-scale" aria-hidden="true"><span>前600</span><span>0</span><span>1000</span><span>{atlasTimelineEndYear}</span></div>
       </div>
-      <div className="compare-status">
-        <small>人物比较</small>
-        {compareThinkers.length ? <span>{compareThinkers.map((item) => item?.name).join(" × ")}</span> : <span>从人物档案加入</span>}
-      </div>
+      {compareThinkers.length ? (
+        <div className="compare-status">
+          <small>人物比较</small>
+          <span>{compareThinkers.map((item) => item?.name).join(" × ")}</span>
+        </div>
+      ) : null}
     </footer>
   );
 }
 
 export default function AtlasApp({
-  initialMode = "story",
+  initialMode = "explore",
   initialChapterId,
   initialJourneyId,
   initialThinkerSlug,
@@ -797,6 +716,11 @@ export default function AtlasApp({
 }: AtlasAppProps) {
   const reduceMotion = Boolean(useReducedMotion());
   const [earthMode, setEarthMode] = useState<EarthLightingMode>("night");
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [hoveredQuestionId, setHoveredQuestionId] = useState<QuestionId | null>(null);
+  const [questionPreviewOpen, setQuestionPreviewOpen] = useState(false);
+  const [visibleRelationTypes, setVisibleRelationTypes] = useState<RelationType[]>(relationTypeOrder);
+  const [introSequence, setIntroSequence] = useState<IntroSequence>("none");
   const mode = useAtlasStore((state) => state.mode);
   const isPlaying = useAtlasStore((state) => state.isPlaying);
   const chapterIndex = useAtlasStore((state) => state.chapterIndex);
@@ -818,7 +742,6 @@ export default function AtlasApp({
   const setMode = useAtlasStore((state) => state.setMode);
   const setPlaying = useAtlasStore((state) => state.setPlaying);
   const setChapterIndex = useAtlasStore((state) => state.setChapterIndex);
-  const showJourneyEntry = useAtlasStore((state) => state.showJourneyEntry);
   const startJourney = useAtlasStore((state) => state.startJourney);
   const pauseJourney = useAtlasStore((state) => state.pauseJourney);
   const resumeJourney = useAtlasStore((state) => state.resumeJourney);
@@ -845,6 +768,7 @@ export default function AtlasApp({
   );
   const initializationAppliedRef = useRef(false);
   const entrySeenRef = useRef(false);
+  const questionPreviewTimerRef = useRef<number | null>(null);
   const autoQualityRef = useRef<AutoQualityState>({
     quality: "medium",
     aboveBudgetSince: null,
@@ -887,13 +811,7 @@ export default function AtlasApp({
       || ["thinker", "relation", "question", "year"].some((key) => query.has(key));
     const persisted = parsePersistedVisualState(
       window.localStorage.getItem(ATLAS_VISUAL_STORAGE_KEY),
-      {
-        isQuestionId: (value): value is QuestionId => questions.some((item) => item.id === value),
-        isThinkerSlug: (value) => thinkerBySlug.has(value),
-        isRelationId: (value) => relationById.has(value),
-        minYear: atlasTimelineStartYear,
-        maxYear: atlasTimelineEndYear,
-      },
+      window.localStorage.getItem(ATLAS_VISUAL_LEGACY_STORAGE_KEY),
     );
     entrySeenRef.current = Boolean(persisted?.entrySeen || explicitRoute);
     const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
@@ -909,28 +827,32 @@ export default function AtlasApp({
       lastChangeAt: performance.now() - 20_000,
     };
     setEarthMode(persisted?.earthMode ?? "night");
+    setSoundEnabled(persisted?.soundEnabled ?? false);
 
-    const restoredCamera = !explicitRoute && persisted?.entrySeen ? persisted.camera : null;
-    const shouldShowJourneyIntro = window.location.pathname === "/"
-      && !initialJourney
-      && !initialChapterId
-      && window.localStorage.getItem(JOURNEY_INTRO_STORAGE_KEY) !== JOURNEY_INTRO_SEEN_VALUE;
+    // Every ordinary visit starts from a clean atlas. Shareable selections are
+    // restored only from the URL below; v1 camera and selection fields are ignored.
+    setQuestion(null);
+    selectThinker(null);
+    selectRelation(null);
+    clearCompare();
+    setTimelineYear(atlasTimelineEndYear);
+    setCameraSnapshot(null);
 
-    if (!explicitRoute && persisted?.entrySeen) {
-      setTimelineYear(persisted.timelineYear);
-      setQuestion(persisted.questionId);
-      if (persisted.thinkerSlug) {
-        const thinker = thinkerBySlug.get(persisted.thinkerSlug);
-        if (thinker) selectThinker(thinker.id);
-      } else if (persisted.relationId) {
-        selectRelation(persisted.relationId);
-      }
+    const nextIntroSequence: IntroSequence | null = !explicitRoute && !initialJourney && !initialChapterId
+      ? reduceMotion ? "reduced" : persisted?.entrySeen ? "quick" : "full"
+      : null;
+    if (nextIntroSequence) {
+      entrySeenRef.current = true;
+      window.localStorage.setItem(ATLAS_VISUAL_STORAGE_KEY, JSON.stringify({
+        version: 2,
+        entrySeen: true,
+        earthMode: persisted?.earthMode ?? "night",
+        qualityPreference: restoredPreference,
+        soundEnabled: persisted?.soundEnabled ?? false,
+      }));
     }
 
-    if (shouldShowJourneyIntro) {
-      window.localStorage.setItem(JOURNEY_INTRO_STORAGE_KEY, JOURNEY_INTRO_SEEN_VALUE);
-      showJourneyEntry();
-    } else if (initialJourney) {
+    if (initialJourney) {
       startJourney(initialJourney.id);
       emitJourneyEvent("start", { journeyId: initialJourney.id });
     } else if (initialChapterId) {
@@ -949,7 +871,10 @@ export default function AtlasApp({
     const relation = query.get("relation");
     const yearParam = query.get("year");
     const year = yearParam === null ? Number.NaN : Number(yearParam);
-    if (question && questions.some((item) => item.id === question)) setQuestion(question);
+    const shouldOpenQuestionPreview = Boolean(question && questions.some((item) => item.id === question));
+    if (shouldOpenQuestionPreview && question) {
+      setQuestion(question);
+    }
     if (Number.isFinite(year) && year >= atlasTimelineStartYear && year <= atlasTimelineEndYear) setTimelineYear(year);
     if (initialThinkerSlug) {
       const thinker = thinkerBySlug.get(initialThinkerSlug);
@@ -969,11 +894,29 @@ export default function AtlasApp({
     }
     if (relation && relationById.has(relation)) selectRelation(relation);
     const frame = window.requestAnimationFrame(() => {
-      setCameraSnapshot(restoredCamera);
+      if (nextIntroSequence) setIntroSequence(nextIntroSequence);
+      if (shouldOpenQuestionPreview) setQuestionPreviewOpen(true);
       setPersistenceReady(true);
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [initialChapterId, initialCompareSlugs, initialJourney, initialMode, initialThinkerSlug, leaveJourney, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuality, setQualityPreference, setQuestion, setTimelineYear, showJourneyEntry, startJourney, toggleCompare]);
+  }, [clearCompare, initialChapterId, initialCompareSlugs, initialJourney, initialMode, initialThinkerSlug, leaveJourney, reduceMotion, selectRelation, selectThinker, setChapterIndex, setMode, setPlaying, setQuality, setQualityPreference, setQuestion, setTimelineYear, startJourney, toggleCompare]);
+
+  useEffect(() => {
+    if (introSequence === "none") return;
+    const duration = ATLAS_INTRO_DURATION_MS[introSequence];
+    const finish = () => setIntroSequence("none");
+    const timer = window.setTimeout(finish, duration);
+    const events: Array<keyof WindowEventMap> = ["pointerdown", "wheel", "keydown"];
+    events.forEach((eventName) => window.addEventListener(eventName, finish, { once: true, passive: true }));
+    return () => {
+      window.clearTimeout(timer);
+      events.forEach((eventName) => window.removeEventListener(eventName, finish));
+    };
+  }, [introSequence]);
+
+  useEffect(() => () => {
+    if (questionPreviewTimerRef.current !== null) window.clearTimeout(questionPreviewTimerRef.current);
+  }, []);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 820px)");
@@ -1032,6 +975,19 @@ export default function AtlasApp({
         : []),
     };
   }, [activeJourney, displayJourneyPhase, journeyCameraRevision, journeyNodeIndex]);
+  const activeQuestionPresentation = activeQuestionId
+    ? questionPresentationById.get(activeQuestionId) ?? null
+    : null;
+  const questionGlobeFocus = useMemo<GlobeStoryFocus | null>(() => {
+    if (!activeQuestionPresentation || displayMode !== "explore") return null;
+    return {
+      key: `question:${activeQuestionPresentation.questionId}`,
+      camera: activeQuestionPresentation.camera,
+      thinkerIds: activeQuestionPresentation.thinkerIds,
+      relationIds: activeQuestionPresentation.relationIds,
+      thematicTransitions: [],
+    };
+  }, [activeQuestionPresentation, displayMode]);
 
   useEffect(() => {
     if (!initialized || !activeJourney || journeyPhase !== "playing" || !isPlaying) return;
@@ -1081,20 +1037,14 @@ export default function AtlasApp({
 
   const persistVisualState = useCallback((nextMode: AtlasMode = mode) => {
     if (nextMode === "explore") entrySeenRef.current = true;
-    const thinkerSlug = selectedThinkerId ? thinkerById.get(selectedThinkerId)?.slug ?? null : null;
     window.localStorage.setItem(ATLAS_VISUAL_STORAGE_KEY, JSON.stringify({
-      version: 1,
+      version: 2,
       entrySeen: entrySeenRef.current,
-      mode: nextMode,
-      timelineYear,
-      questionId: activeQuestionId,
-      thinkerSlug,
-      relationId: selectedRelationId,
       earthMode,
       qualityPreference,
-      camera: cameraSnapshot,
+      soundEnabled,
     }));
-  }, [activeQuestionId, cameraSnapshot, earthMode, mode, qualityPreference, selectedRelationId, selectedThinkerId, timelineYear]);
+  }, [earthMode, mode, qualityPreference, soundEnabled]);
 
   useEffect(() => {
     if (!persistenceReady) return;
@@ -1109,6 +1059,12 @@ export default function AtlasApp({
   }, [activeQuestionId, mode, timelineYear]);
 
   const handleCloseDetail = useCallback(() => {
+    if (questionPreviewOpen && !selectedThinkerId && !selectedRelationId && compareIds.length !== 2) {
+      setQuestionPreviewOpen(false);
+      setDetailSheetSnap("peek");
+      return;
+    }
+    setQuestionPreviewOpen(false);
     selectThinker(null);
     selectRelation(null);
     clearCompare();
@@ -1119,7 +1075,7 @@ export default function AtlasApp({
     if (activeQuestionId) params.set("question", activeQuestionId);
     params.set("year", String(timelineYear));
     window.history.replaceState({}, "", `/explore?${params.toString()}`);
-  }, [activeQuestionId, clearCompare, mode, selectRelation, selectThinker, timelineYear]);
+  }, [activeQuestionId, clearCompare, compareIds.length, mode, questionPreviewOpen, selectRelation, selectThinker, selectedRelationId, selectedThinkerId, timelineYear]);
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -1187,6 +1143,10 @@ export default function AtlasApp({
     setEarthMode(nextMode);
   };
 
+  const chooseSoundEnabled = (enabled: boolean) => {
+    setSoundEnabled(enabled);
+  };
+
   const handlePerformanceSample = useCallback((p75FrameMs: number) => {
     if (useAtlasStore.getState().qualityPreference !== "auto") return;
     const previous = autoQualityRef.current;
@@ -1226,6 +1186,8 @@ export default function AtlasApp({
   const handleStartJourney = useCallback((journeyId: string, source = "catalog") => {
     const journey = journeyById.get(journeyId);
     if (!journey || journey.availability !== "available") return;
+    setQuestionPreviewOpen(false);
+    setDetailSheetSnap("peek");
     startJourney(journeyId);
     setJourneyRemaining(journey.estimatedDurationMs);
     window.history.replaceState({}, "", `/journey/${journeyId}`);
@@ -1276,7 +1238,10 @@ export default function AtlasApp({
   const handleSelectThinker = useCallback((id: string | null) => {
     if (id) interruptJourney("thinker");
     selectThinker(id);
-    if (id) setDetailSheetSnap("half");
+    if (id) {
+      setQuestionPreviewOpen(false);
+      setDetailSheetSnap("half");
+    }
     if (mode !== "explore") return;
     const url = new URL(window.location.href);
     url.pathname = "/explore";
@@ -1297,10 +1262,37 @@ export default function AtlasApp({
     if (id) interruptJourney("relation");
     selectRelation(id);
     if (!id) return;
+    setQuestionPreviewOpen(false);
     setDetailSheetSnap("half");
     if (mode !== "explore") return;
     window.history.replaceState({}, "", `/explore?relation=${encodeURIComponent(id)}&year=${timelineYear}`);
   }, [interruptJourney, mode, selectRelation, timelineYear]);
+
+  const handleSelectQuestion = useCallback((id: QuestionId) => {
+    entrySeenRef.current = true;
+    if (questionPreviewTimerRef.current !== null) window.clearTimeout(questionPreviewTimerRef.current);
+    clearCompare();
+    setQuestion(id);
+    setQuestionPreviewOpen(false);
+    setDetailSheetSnap("half");
+    if (mode !== "explore") leaveJourney();
+    const url = new URL(window.location.href);
+    url.pathname = "/explore";
+    url.search = "";
+    url.searchParams.set("question", id);
+    url.searchParams.set("year", String(timelineYear));
+    window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+    questionPreviewTimerRef.current = window.setTimeout(
+      () => setQuestionPreviewOpen(true),
+      reduceMotion ? ATLAS_INTRO_DURATION_MS.reduced : QUESTION_CAMERA_SETTLE_MS,
+    );
+  }, [clearCompare, leaveJourney, mode, reduceMotion, setQuestion, timelineYear]);
+
+  const toggleRelationType = useCallback((type: RelationType) => {
+    setVisibleRelationTypes((current) => current.includes(type)
+      ? current.filter((item) => item !== type)
+      : relationTypeOrder.filter((item) => item === type || current.includes(item)));
+  }, []);
 
   useEffect(() => {
     if (!initialized || compareIds.length !== 2 || selectedThinkerId || selectedRelationId) return;
@@ -1309,24 +1301,22 @@ export default function AtlasApp({
     if (left && right) window.history.replaceState({}, "", `/compare/${left.slug}/${right.slug}`);
   }, [compareIds, initialized, selectedRelationId, selectedThinkerId]);
 
-  const changeMode = (nextMode: AtlasMode) => {
-    if (nextMode === "story") {
-      showJourneyEntry();
-      window.history.replaceState({}, "", "/");
-    } else {
-      entrySeenRef.current = true;
-      leaveJourney();
-      window.history.replaceState({}, "", "/explore");
-    }
-  };
-
   const showCompare = displayCompareIds.length === 2 && !displaySelectedThinkerId && !displaySelectedRelationId;
-  const detailOpen = Boolean(displaySelectedThinkerId || displaySelectedRelationId || showCompare);
+  const showQuestionPreview = Boolean(
+    questionPreviewOpen
+    && activeQuestionPresentation
+    && !displaySelectedThinkerId
+    && !displaySelectedRelationId
+    && !showCompare,
+  );
+  const detailOpen = Boolean(displaySelectedThinkerId || displaySelectedRelationId || showCompare || showQuestionPreview);
   const closeDetailLabel = displaySelectedThinkerId
     ? "关闭人物详情"
     : displaySelectedRelationId
       ? "关闭关系详情"
-      : "关闭比较详情";
+      : showCompare
+        ? "关闭比较详情"
+        : "关闭问题预览";
 
   const handleDetailDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const snaps: DetailSheetSnap[] = ["peek", "half", "full"];
@@ -1341,28 +1331,26 @@ export default function AtlasApp({
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className={`atlas-shell atlas-shell--${displayMode} atlas-shell--journey-${displayJourneyPhase}${detailOpen ? " atlas-shell--detail-open" : ""}`} data-hydrated={initialized ? "true" : "false"}>
+      <div
+        className={`atlas-shell atlas-shell--${displayMode} atlas-shell--journey-${displayJourneyPhase}${detailOpen ? " atlas-shell--detail-open" : ""}${introSequence !== "none" ? ` atlas-shell--intro-${introSequence}` : ""}`}
+        data-hydrated={initialized ? "true" : "false"}
+      >
         <a className="skip-link" href="#atlas-content">跳到思想内容</a>
-        <header className="site-header">
-          <Link className="brand" href="/" aria-label="思想星图首页">
-            <span className="brand__seal">I</span>
-            <span><strong>思想星图</strong><small>ATLAS OF IDEAS</small></span>
-          </Link>
-          <p className="site-header__prompt">人类在不同地方，如何回答相同的问题？</p>
-          <div className="header-actions">
-            <button className="search-button" type="button" aria-label="搜索思想星图" onClick={() => setSearchOpen(true)}>
-              <span>搜索</span><kbd>/</kbd>
-            </button>
-            <button className="text-view-button" type="button" aria-label="打开文字探索" onClick={() => setListViewOpen(true)}>文字探索</button>
-            <Link className="knowledge-button" href="/knowledge">知识库</Link>
-            <Link className="knowledge-button" href="/chat">AI 对话</Link>
-            <Link className="knowledge-button" href="/account">账户</Link>
-            <div className="mode-switch" aria-label="浏览模式">
-              <button type="button" className={displayMode === "story" ? "is-active" : ""} onClick={() => changeMode("story")}>故事</button>
-              <button type="button" className={displayMode === "explore" ? "is-active" : ""} onClick={() => changeMode("explore")}>探索</button>
-            </div>
-          </div>
-        </header>
+        <AtlasHeader
+          onSearch={() => setSearchOpen(true)}
+          onTextExplorer={() => setListViewOpen(true)}
+          settings={(
+            <DisplaySettings
+              earthMode={earthMode}
+              qualityPreference={qualityPreference}
+              effectiveQuality={quality}
+              soundEnabled={soundEnabled}
+              onEarthModeChange={chooseEarthMode}
+              onQualityPreferenceChange={chooseQualityPreference}
+              onSoundEnabledChange={chooseSoundEnabled}
+            />
+          )}
+        />
 
         <main id="atlas-content" className="atlas-main">
           <section className={`globe-stage${detailOpen ? " globe-stage--detail-open" : ""}`} aria-label="思想星图3D地球">
@@ -1377,15 +1365,19 @@ export default function AtlasApp({
                 isPlaying={isPlaying}
                 chapterIndex={displayChapterIndex}
                 storyFocus={journeyStoryFocus}
+                questionFocus={questionGlobeFocus}
                 selectedThinkerId={displaySelectedThinkerId}
                 selectedRelationId={displaySelectedRelationId}
                 activeQuestionId={activeQuestionId}
+                highlightQuestionId={hoveredQuestionId ?? activeQuestionId}
+                visibleRelationTypes={visibleRelationTypes}
                 timelineYear={timelineYear}
                 timelineScrubbing={isTimelineScrubbing}
                 quality={quality}
                 focusDepth={focusDepth}
                 cameraSnapshot={cameraSnapshot}
                 reduceMotion={reduceMotion}
+                ambientMotion={introSequence !== "none"}
                 onSelectThinker={handleSelectThinker}
                 onSelectRelation={handleSelectRelation}
                 onFallback={openSemanticExplorer}
@@ -1396,17 +1388,8 @@ export default function AtlasApp({
               />
             </div>
             <div className="globe-vignette" aria-hidden="true" />
-            <DisplaySettings
-              earthMode={earthMode}
-              qualityPreference={qualityPreference}
-              effectiveQuality={quality}
-              onEarthModeChange={chooseEarthMode}
-              onQualityPreferenceChange={chooseQualityPreference}
-            />
             {displayMode === "story" ? (
-              displayJourneyPhase === "entry" ? (
-                <JourneyCarousel onStart={handleStartJourney} onSkip={() => handleLeaveJourney("skip")} />
-              ) : activeJourney && (displayJourneyPhase === "playing" || displayJourneyPhase === "paused" || displayJourneyPhase === "completed") ? (
+              activeJourney && (displayJourneyPhase === "playing" || displayJourneyPhase === "paused" || displayJourneyPhase === "completed") ? (
                 <JourneyOverlay
                   journey={activeJourney}
                   nodeIndex={journeyNodeIndex}
@@ -1423,8 +1406,17 @@ export default function AtlasApp({
               ) : (
                 <StoryOverlay chapterIndex={displayChapterIndex} isPlaying={isPlaying} />
               )
-            ) : <QuestionRail activeQuestionId={activeQuestionId} onSelect={setQuestion} />}
-            {displayMode === "explore" ? <RelationLegend onSelect={handleSelectRelation} /> : null}
+            ) : (
+              <QuestionDock
+                activeQuestionId={activeQuestionId}
+                reducedMotion={reduceMotion}
+                onSelect={handleSelectQuestion}
+                onPreview={setHoveredQuestionId}
+              />
+            )}
+            {displayMode === "explore" ? (
+              <RelationFilter visibleTypes={visibleRelationTypes} onToggle={toggleRelationType} />
+            ) : null}
             {displayMode === "explore" && displaySelectedThinkerId && !isCompact ? (
               <FocusDepthControl value={focusDepth} onChange={setFocusDepth} />
             ) : null}
@@ -1455,12 +1447,13 @@ export default function AtlasApp({
             {detailOpen ? (
               <button className="detail-pane__close" type="button" aria-label={closeDetailLabel} onClick={handleCloseDetail}>×</button>
             ) : null}
-            <div className="detail-pane__rail"><span>ARCHIVE</span><i /></div>
             <AnimatePresence mode="wait">
               {displaySelectedThinkerId ? <ThinkerDetail thinkerId={displaySelectedThinkerId} />
                 : displaySelectedRelationId ? <RelationDetail relationId={displaySelectedRelationId} />
                   : showCompare ? <CompareDetail ids={displayCompareIds} />
-                    : <EmptyDetail onSelectRelation={handleSelectRelation} />}
+                    : showQuestionPreview && activeQuestionPresentation
+                      ? <QuestionDetail presentation={activeQuestionPresentation} onStart={(journeyId) => handleStartJourney(journeyId, "question")} />
+                      : null}
             </AnimatePresence>
           </motion.aside>
         </main>
@@ -1468,6 +1461,7 @@ export default function AtlasApp({
         <BottomDock mode={displayMode} onTakeover={() => persistVisualState("explore")} />
         <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} onSelect={handleSelectThinker} />
         <SemanticExplorer open={listViewOpen} onClose={() => setListViewOpen(false)} onSelect={handleSelectThinker} />
+        <AtlasIntro sequence={introSequence} onComplete={() => setIntroSequence("none")} />
       </div>
     </MotionConfig>
   );

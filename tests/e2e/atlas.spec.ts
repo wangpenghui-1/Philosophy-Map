@@ -12,14 +12,24 @@ async function waitForHydration(page: Page) {
   await expect(page.locator('[data-hydrated="true"]')).toBeVisible();
 }
 
-test("epistemology journey pauses and advances without losing its place", async ({ page }) => {
+async function openDisplaySettings(page: Page) {
+  await page.getByText("更多", { exact: true }).click();
+  await page.getByLabel("打开显示设置").click();
+}
+
+async function openTextExplorer(page: Page) {
+  await page.getByText("更多", { exact: true }).click();
+  await page.getByRole("button", { name: "文字探索", exact: true }).click();
+}
+
+test("homepage question cards focus the globe and launch a journey", async ({ page }) => {
   await openHydrated(page, "/");
-  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
-  const journeyCards = page.locator(".journey-deck-card");
-  await expect(journeyCards).toHaveCount(8);
-  const activeJourneyCard = page.locator(".journey-deck-card.is-active");
-  await expect(activeJourneyCard).toContainText("认识论");
-  await activeJourneyCard.click();
+  await page.mouse.click(900, 300);
+  await expect(page.locator(".question-card")).toHaveCount(3);
+  await page.getByRole("button", { name: "我们如何知道？：感官、推理与经验" }).click();
+  await expect(page).toHaveURL(/\/explore\?question=knowledge&year=2026/);
+  await expect(page.getByRole("button", { name: "开始思想旅程" })).toBeVisible({ timeout: 5_000 });
+  await page.getByRole("button", { name: "开始思想旅程" }).click();
   await expect(page.getByRole("heading", { name: "眼前所见，可能只是表象" })).toBeVisible();
   await expect(page.getByText("认识论之旅 · 1/7")).toBeVisible();
   const pause = page.getByRole("button", { name: "暂停旅程" });
@@ -30,36 +40,51 @@ test("epistemology journey pauses and advances without losing its place", async 
   await expect(page.getByText("平行回答", { exact: true })).toBeVisible();
 });
 
-test("journey deck cycles with wheel, focuses side cards, and exposes sound control", async ({ page }) => {
-  await openHydrated(page, "/");
-  const deck = page.locator(".journey-deck");
-  const activeCard = page.locator(".journey-deck-card.is-active");
-  await expect(activeCard).toContainText("认识论");
-  await expect(page.getByRole("button", { name: "关闭卡片切换音效" })).toHaveAttribute("aria-pressed", "true");
+test("intro uses full, quick, skip, and reduced-motion timing", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!window.sessionStorage.getItem("atlas-intro-test-ready")) {
+      window.localStorage.clear();
+      window.sessionStorage.setItem("atlas-intro-test-ready", "1");
+    }
+    const introSequences: string[] = [];
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences = introSequences;
+    const recordIntroSequence = () => {
+      document.querySelectorAll<HTMLElement>("[data-intro-sequence]").forEach((element) => {
+        const sequence = element.dataset.introSequence;
+        if (sequence && !introSequences.includes(sequence)) introSequences.push(sequence);
+      });
+    };
+    new MutationObserver(recordIntroSequence).observe(document, {
+      attributes: true,
+      attributeFilter: ["data-intro-sequence"],
+      childList: true,
+      subtree: true,
+    });
+  });
+  await page.goto("/");
+  await waitForHydration(page);
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("full");
+  await page.keyboard.press("Tab");
+  await expect(page.locator("[data-intro-sequence]")).toHaveCount(0);
 
-  await deck.hover();
-  await page.mouse.wheel(0, 120);
-  await expect(activeCard).toContainText("本体论");
+  await page.reload();
+  await waitForHydration(page);
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("quick");
 
-  const nextSideCard = page.locator('.journey-deck-card[data-offset="1"]');
-  await expect(nextSideCard).toHaveCount(1);
-  await nextSideCard.click();
-  await expect(activeCard).toContainText("存在主义");
-  await expect(page).toHaveURL(/\/$/);
-
-  const deckBox = await deck.boundingBox();
-  if (!deckBox) throw new Error("Missing journey deck bounds");
-  await page.mouse.move(deckBox.x + deckBox.width * 0.56, deckBox.y + deckBox.height * 0.55);
-  await page.mouse.down();
-  await page.mouse.move(deckBox.x + deckBox.width * 0.34, deckBox.y + deckBox.height * 0.55, { steps: 5 });
-  await page.mouse.up();
-  await expect(activeCard).toContainText("现象学");
-
-  await page.getByRole("button", { name: "关闭卡片切换音效" }).click();
-  await expect(page.getByRole("button", { name: "开启卡片切换音效" })).toHaveAttribute("aria-pressed", "false");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.reload();
+  await waitForHydration(page);
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("reduced");
+  await expect(page.locator("[data-intro-sequence]")).toHaveCount(0, { timeout: 1_500 });
 });
 
-test("all visitors see the new entry once and returning visitors resume exploration", async ({ page }) => {
+test("v1 preferences migrate while homepage selection and camera state reset", async ({ page }) => {
   test.slow();
   await page.goto("/explore");
   await page.evaluate(() => localStorage.setItem("atlas-visual-state:v1", JSON.stringify({
@@ -67,23 +92,43 @@ test("all visitors see the new entry once and returning visitors resume explorat
     entrySeen: true,
     mode: "explore",
     timelineYear: 1000,
-    questionId: null,
-    thinkerSlug: null,
-    relationId: null,
-    earthMode: "night",
-    qualityPreference: "auto",
-    camera: null,
+    questionId: "freedom",
+    thinkerSlug: "kant",
+    relationId: "hume-kant",
+    earthMode: "day",
+    qualityPreference: "high",
+    camera: { position: [0, 1, 5], target: [0, 0, 0], distance: 5.1 },
   })));
   await openHydrated(page, "/");
-  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
-  await page.getByRole("button", { name: "跳过，进入地图" }).click();
-  await expect.poll(() => page.evaluate(() => localStorage.getItem("atlas-journey-intro:v2"))).toBe("seen");
-  await expect(page).toHaveURL(/\/explore\?from=journey-skip/);
-  await page.goto("/");
-  await waitForHydration(page);
-  await expect(page.getByRole("button", { name: "探索", exact: true })).toHaveClass(/is-active/);
+  await page.mouse.click(900, 300);
+  await expect(page.locator(".question-card")).toHaveCount(3);
+  await expect(page.locator(".detail-pane")).not.toHaveClass(/detail-pane--active/);
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeHidden();
+  await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("2026");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v2") ?? "{}").qualityPreference)).toBe("high");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v2") ?? "{}").earthMode)).toBe("day");
+  await expect(page.evaluate(() => localStorage.getItem("atlas-visual-state:v1"))).resolves.not.toBeNull();
+});
+
+test("question hover is temporary, deep links skip intro, and relation controls only filter", async ({ page }) => {
+  await openHydrated(page, "/explore");
+  const initialUrl = page.url();
+  const reality = page.getByRole("button", { name: "世界是什么？：存在、物质与真实" });
+  await reality.hover();
+  await expect(page).toHaveURL(initialUrl);
+  await expect(page.locator(".detail-pane")).not.toHaveClass(/detail-pane--active/);
+
+  await page.getByText(/^关系 /).click();
+  const directInfluence = page.getByRole("button", { name: "有文献依据的直接影响" });
+  await expect(directInfluence).toHaveAttribute("aria-pressed", "true");
+  await directInfluence.click();
+  await expect(directInfluence).toHaveAttribute("aria-pressed", "false");
+  await expect(page).toHaveURL(initialUrl);
+  await expect(page.locator(".detail-pane")).not.toHaveClass(/detail-pane--active/);
+
+  await openHydrated(page, "/explore?question=self&year=2026");
+  await expect(page.locator("[data-intro-sequence]")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "开始思想旅程" })).toBeVisible();
 });
 
 test("all eight journey routes open the shared player", async ({ page }) => {
@@ -120,8 +165,7 @@ test("a completed journey offers the related journey and free exploration", asyn
 
 test("touching the globe pauses the journey and details stay paused until resumed", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop-chromium", "Pointer interruption is covered once on the reference desktop project.");
-  await openHydrated(page, "/");
-  await page.locator(".journey-deck-card.is-active").click();
+  await openHydrated(page, "/journey/epistemology");
   const canvas = page.locator("canvas");
   await expect(canvas).toBeVisible();
   const box = await canvas.boundingBox();
@@ -151,14 +195,14 @@ test("display settings preserve the canvas while changing light and quality", as
   const canvas = page.locator("canvas");
   await expect(canvas).toBeVisible();
   await canvas.evaluate((element) => { element.dataset.visualProbe = "stable"; });
-  await page.getByLabel("打开显示设置").click();
+  await openDisplaySettings(page);
   await page.getByRole("button", { name: "白昼" }).click();
   await page.getByRole("button", { name: /典藏/ }).click();
   await expect(page.locator('canvas[data-visual-probe="stable"]')).toBeVisible();
   await expect(page.locator(".globe-runtime")).toHaveAttribute("data-render-effects", "smaa");
   await expect(page.locator(".globe-runtime")).toHaveAttribute("data-render-effects", "bloom-smaa", { timeout: 5_000 });
   await expect.poll(() => page.locator(".globe-runtime").getAttribute("data-render-dpr")).not.toBeNull();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").qualityPreference)).toBe("high");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v2") ?? "{}").qualityPreference)).toBe("high");
 });
 
 test("selected thinkers expose relationship focus depth", async ({ page }, testInfo) => {
@@ -201,13 +245,14 @@ test("search traps focus and links the globe state to the reading page", async (
 test("question and timeline filters are reflected in the exploration URL", async ({ page }) => {
   await openHydrated(page, "/explore");
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("2026");
-  await page.getByRole("button", { name: /人是否自由/ }).click();
+  await page.getByRole("button", { name: "全部问题" }).click();
+  await page.getByRole("button", { name: /我们真的自由吗/ }).click();
   await expect(page).toHaveURL(/question=freedom/);
   await page.getByRole("slider", { name: "历史时间轴" }).fill("1000");
   await expect(page).toHaveURL(/year=1000/);
   await page.reload();
   await waitForHydration(page);
-  await expect(page.getByRole("button", { name: /人是否自由/ })).toHaveClass(/is-active/);
+  await expect(page.getByRole("button", { name: /我们真的自由吗/ })).toHaveClass(/is-active/);
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1000");
 });
 
@@ -221,7 +266,7 @@ test("closing a detail pane clears the selection and preserves exploration filte
   await page.reload();
   await waitForHydration(page);
   await expect(page.getByRole("slider", { name: "历史时间轴" })).toHaveValue("1000");
-  await expect(page.getByRole("button", { name: /怎样才算过好一生/ })).toHaveClass(/is-active/);
+  await expect(page.getByRole("button", { name: /怎样过好一生/ })).toHaveClass(/is-active/);
 });
 
 test("two selected thinkers produce and restore a shareable comparison", async ({ page }) => {
@@ -256,7 +301,7 @@ test("knowledge filters and search survive a URL reload", async ({ page }) => {
 
 test("the complete text explorer remains keyboard accessible", async ({ page }) => {
   await openHydrated(page, "/explore");
-  await page.getByRole("button", { name: "打开文字探索" }).click();
+  await openTextExplorer(page);
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "关系及其证据" })).toBeVisible();
   await expect(page.getByText("艺术化人物形象", { exact: false }).first()).toBeVisible();
@@ -266,7 +311,7 @@ test("the complete text explorer remains keyboard accessible", async ({ page }) 
 
 test("text explorer portraits keep their vertical frames without cropping", async ({ page }) => {
   await openHydrated(page, "/explore");
-  await page.getByRole("button", { name: "打开文字探索" }).click();
+  await openTextExplorer(page);
   const portraits = page.locator(".semantic-panel__grid .thinker-portrait");
   await expect(portraits).toHaveCount(atlasData.thinkers.length);
 
@@ -306,16 +351,16 @@ test("WebGL2 failure stays on the globe fallback until text exploration is reque
   await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
 });
 
-test("runtime WebGL loss waits for native recovery before remounting the canvas", async ({ page }) => {
-  await openHydrated(page, "/explore");
+test("runtime WebGL loss waits for native recovery before remounting the canvas", async ({ page }, testInfo) => {
+  await openHydrated(page, "/explore?thinker=kant");
   const canvas = page.locator("canvas");
   await expect(canvas).toBeVisible();
   await expect(canvas).toHaveAttribute("data-webgl-lifecycle", "ready");
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera ?? null)).not.toBeNull();
-  const cameraBeforeLoss = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera as {
-    position: number[];
-    target: number[];
-  });
+  if (testInfo.project.name === "desktop-chromium") {
+    await expect(page.locator('.globe-marker--selected[data-visible="true"]')).toBeVisible();
+  } else {
+    await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+  }
   await canvas.evaluate((element) => { element.dataset.contextProbe = "before-retry"; });
   await canvas.evaluate((element) => {
     element.dispatchEvent(new Event("webglcontextlost", { cancelable: true }));
@@ -329,17 +374,11 @@ test("runtime WebGL loss waits for native recovery before remounting the canvas"
   await expect(page.locator("canvas")).toBeVisible({ timeout: 8_000 });
   await expect(page.locator('canvas[data-context-probe="before-retry"]')).toHaveCount(0);
   await expect(page.locator("canvas")).toHaveCount(1);
-  await expect.poll(async () => {
-    const cameraAfterRecovery = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas-visual-state:v1") ?? "{}").camera as {
-      position: number[];
-      target: number[];
-    } | null);
-    if (!cameraAfterRecovery) return Number.POSITIVE_INFINITY;
-    return Math.max(
-      ...cameraBeforeLoss.position.map((value, index) => Math.abs(value - cameraAfterRecovery.position[index])),
-      ...cameraBeforeLoss.target.map((value, index) => Math.abs(value - cameraAfterRecovery.target[index])),
-    );
-  }).toBeLessThan(0.05);
+  if (testInfo.project.name === "desktop-chromium") {
+    await expect(page.locator('.globe-marker--selected[data-visible="true"]')).toBeVisible({ timeout: 8_000 });
+  } else {
+    await expect(page.getByRole("heading", { name: "康德" })).toBeVisible();
+  }
 });
 
 test("native WebGL restoration keeps the existing canvas and camera", async ({ page }) => {
@@ -381,7 +420,7 @@ test("Windows Edge uses the stable-high GPU profile after an unclean renderer ex
   await expect(page.getByText("正在点亮思想星图")).toBeVisible();
   const runtime = page.locator(".globe-runtime");
   await expect(runtime).toHaveAttribute("data-gpu-profile", "edge-stable", { timeout: 6_000 });
-  await page.getByLabel("打开显示设置").click();
+  await openDisplaySettings(page);
   await page.getByRole("button", { name: /典藏/ }).click();
   await expect(runtime).toHaveAttribute("data-render-effects", "smaa", { timeout: 5_000 });
   await expect.poll(async () => Number(await runtime.getAttribute("data-render-dpr"))).toBeLessThanOrEqual(1.25);
@@ -468,8 +507,7 @@ test("globe keeps its visible portrait markers within budget while selected peop
 
 test("reduced-motion mode keeps story controls usable", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await openHydrated(page, "/");
-  await page.locator(".journey-deck-card.is-active").click();
+  await openHydrated(page, "/journey/epistemology");
   await page.getByRole("button", { name: "暂停旅程" }).click();
   await page.getByRole("button", { name: "下一站" }).click();
   await expect(page.getByRole("heading", { name: "把“知道”拆成不同渠道" })).toBeVisible();
@@ -510,7 +548,43 @@ test("supported responsive widths have no horizontal overflow or hidden header c
   }
 });
 
-test("mobile details use the three-stage archive sheet", async ({ page }, testInfo) => {
+test("public pages keep visible text at or above the 11px floor", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop-chromium", "Typography is shared; one desktop browser audits computed styles.");
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const paths = [
+    "/",
+    "/explore?thinker=kant",
+    "/journey/epistemology",
+    "/thinker/kant",
+    "/knowledge",
+    "/compare/confucius/aristotle",
+    "/chat",
+    "/account/login",
+    "/journeys",
+  ];
+  for (const path of paths) {
+    await page.goto(path);
+    await expect(page.locator("body")).toBeVisible();
+    const offenders = await page.evaluate(() => [...document.body.querySelectorAll<HTMLElement>("*")]
+      .filter((element) => {
+        if (element.closest('[aria-hidden="true"]')) return false;
+        if (![...element.childNodes].some((node) => node.nodeType === Node.TEXT_NODE && node.textContent?.trim())) return false;
+        const style = getComputedStyle(element);
+        const bounds = element.getBoundingClientRect();
+        return style.display !== "none"
+          && style.visibility !== "hidden"
+          && Number(style.opacity) > 0
+          && bounds.width > 0
+          && bounds.height > 0
+          && Number.parseFloat(style.fontSize) < 11;
+      })
+      .slice(0, 20)
+      .map((element) => `${element.tagName.toLowerCase()}.${element.className}:${getComputedStyle(element).fontSize}:${element.textContent?.trim().slice(0, 24)}`));
+    expect(offenders, `${path} has undersized visible text`).toEqual([]);
+  }
+});
+
+test("mobile details use the three-stage bottom sheet", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile-chromium", "Mobile sheet behavior only applies to compact layouts.");
   await openHydrated(page, "/explore?thinker=kant");
   const detail = page.locator(".detail-pane");
@@ -519,16 +593,16 @@ test("mobile details use the three-stage archive sheet", async ({ page }, testIn
   await expect(detail).toHaveAttribute("data-snap", "full");
 });
 
-test("homepage journey entry matches desktop and mobile visual snapshots", async ({ page }, testInfo) => {
-  test.skip(Boolean(process.env.CI), "Journey-entry snapshots are reviewed on the reference machine.");
+test("homepage first screen matches desktop and mobile visual snapshots", async ({ page }, testInfo) => {
+  test.skip(Boolean(process.env.CI), "First-screen snapshots are reviewed on the reference machine.");
   const isMobile = testInfo.project.name === "mobile-chromium";
   await page.setViewportSize(isMobile ? { width: 390, height: 844 } : { width: 1440, height: 900 });
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
   await openHydrated(page, "/");
-  await expect(page.getByRole("heading", { name: "开启一次思想旅程" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "你想先追问什么？" })).toBeVisible();
   await page.waitForTimeout(1800);
-  await expect(page).toHaveScreenshot(isMobile ? "mobile-journey-entry-390x844.png" : "desktop-journey-entry-1440x900.png", {
+  await expect(page).toHaveScreenshot(isMobile ? "mobile-atlas-first-screen-390x844.png" : "desktop-atlas-first-screen-1440x900.png", {
     animations: "disabled",
     maxDiffPixelRatio: 0.1,
   });
@@ -539,7 +613,7 @@ test("critical interface layers match approved visual snapshots", async ({ page 
   const isMobile = testInfo.project.name === "mobile-chromium";
   if (isMobile) {
     await openHydrated(page, "/explore");
-    await page.getByRole("button", { name: "打开文字探索" }).click();
+    await openTextExplorer(page);
     await expect(page.getByRole("dialog", { name: "文字探索" })).toBeVisible();
   } else {
     await page.goto("/thinker/confucius");
@@ -621,9 +695,10 @@ test("cinematic museum views match the release-candidate visual set", async ({ p
 
   await page.setViewportSize({ width: 1024, height: 768 });
   await openHydrated(page, "/explore");
-  await page.getByLabel("打开显示设置").click();
+  await openDisplaySettings(page);
   await page.getByRole("button", { name: "白昼" }).click();
   await page.getByLabel("打开显示设置").click();
+  await page.getByText("更多", { exact: true }).click();
   await page.waitForTimeout(1300);
   await expect(page).toHaveScreenshot("tablet-explore-day-1024x768.png", {
     animations: "disabled",

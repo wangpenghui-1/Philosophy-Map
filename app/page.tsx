@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <AtlasApp initialMode="story" />;
+  return <AtlasApp initialMode="explore" />;
 }

@@ -21,6 +21,7 @@ import {
   thinkerById,
   thinkers,
   type Relation,
+  type RelationType,
   type QuestionId,
   type StoryChapter,
   type Thinker,
@@ -90,15 +91,19 @@ interface GlobeCanvasProps {
   isPlaying: boolean;
   chapterIndex: number;
   storyFocus?: GlobeStoryFocus | null;
+  questionFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   activeQuestionId: QuestionId | null;
+  highlightQuestionId: QuestionId | null;
+  visibleRelationTypes: RelationType[];
   timelineYear: number;
   timelineScrubbing: boolean;
   quality: QualityTier;
   focusDepth: FocusDepth;
   cameraSnapshot: GlobeCameraSnapshot | null;
   reduceMotion: boolean;
+  ambientMotion: boolean;
   onSelectThinker: (id: string) => void;
   onSelectRelation: (id: string) => void;
   onFallback: () => void;
@@ -475,12 +480,14 @@ function EarthSystem({
   globeRef,
   quality,
   reduceMotion,
+  ambientMotion,
   shared,
   stableGpuProfile,
 }: {
   globeRef: RefObject<THREE.Mesh | null>;
   quality: QualityTier;
   reduceMotion: boolean;
+  ambientMotion: boolean;
   shared: SharedEarthUniforms;
   stableGpuProfile: boolean;
 }) {
@@ -516,13 +523,13 @@ function EarthSystem({
   }, [dayMap, gl, loadedCloudMap, loadedNormalMap, loadedSpecularMap, loadedTextures, nightMap, quality, stableGpuProfile]);
 
   useEffect(() => {
-    if (reduceMotion || quality === "low") return;
+    if (reduceMotion || quality === "low" || !ambientMotion) return;
     const interval = window.setInterval(
       () => invalidate(),
       quality === "high" && !stableGpuProfile ? 1000 / 24 : 1000 / 18,
     );
     return () => window.clearInterval(interval);
-  }, [invalidate, quality, reduceMotion, stableGpuProfile]);
+  }, [ambientMotion, invalidate, quality, reduceMotion, stableGpuProfile]);
 
   const surfaceUniforms = useMemo(() => ({
     uDayMap: { value: dayMap },
@@ -1038,6 +1045,7 @@ function CameraDirector({
   mode,
   chapterIndex,
   storyFocus,
+  questionFocus,
   selectedThinkerId,
   selectedRelationId,
   reduceMotion,
@@ -1049,6 +1057,7 @@ function CameraDirector({
   mode: AtlasMode;
   chapterIndex: number;
   storyFocus?: GlobeStoryFocus | null;
+  questionFocus?: GlobeStoryFocus | null;
   selectedThinkerId: string | null;
   selectedRelationId: string | null;
   reduceMotion: boolean;
@@ -1058,7 +1067,7 @@ function CameraDirector({
   const { camera, invalidate, size } = useThree();
   const [controlsReady, setControlsReady] = useState(false);
   const suppressInitialRef = useRef(suppressInitialDirection);
-  const lastStoryFocusKeyRef = useRef<string | null>(null);
+  const lastFocusKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -1084,10 +1093,11 @@ function CameraDirector({
 
     const thinker = selectedThinkerId ? thinkerById.get(selectedThinkerId) : undefined;
     const relation = selectedRelationId ? relations.find((item) => item.id === selectedRelationId) : undefined;
-    if (!shouldDirectGlobeCamera(mode, selectedThinkerId, selectedRelationId)) return;
-    if (mode === "story" && !thinker && !relation && storyFocus) {
-      if (lastStoryFocusKeyRef.current === storyFocus.key) return;
-      lastStoryFocusKeyRef.current = storyFocus.key;
+    const directedFocus = mode === "story" ? storyFocus : questionFocus;
+    if (!shouldDirectGlobeCamera(mode, selectedThinkerId, selectedRelationId, Boolean(questionFocus))) return;
+    if (!thinker && !relation && directedFocus) {
+      if (lastFocusKeyRef.current === directedFocus.key) return;
+      lastFocusKeyRef.current = directedFocus.key;
     }
     const relationFrom = relation ? thinkerById.get(relation.from) : undefined;
     const relationTo = relation ? thinkerById.get(relation.to) : undefined;
@@ -1098,14 +1108,14 @@ function CameraDirector({
           return midpoint.lengthSq() < 0.01 ? fromDirection : midpoint.normalize();
         })()
       : null;
-    const storyThinker = storyFocus?.focusThinkerId ? thinkerById.get(storyFocus.focusThinkerId) : undefined;
+    const storyThinker = directedFocus?.focusThinkerId ? thinkerById.get(directedFocus.focusThinkerId) : undefined;
     const destination = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 3.72)
       : relationDirection
         ? relationDirection.clone().multiplyScalar(4.25)
         : storyThinker
-          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, storyFocus?.camera.distance ?? 4)
-          : cameraPositionFromPreset(storyFocus?.camera ?? storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
+          ? latLonToVector3(storyThinker.anchors[0].lat, storyThinker.anchors[0].lon, directedFocus?.camera.distance ?? 4)
+          : cameraPositionFromPreset(directedFocus?.camera ?? storyChapters[chapterIndex]?.camera ?? storyChapters[0].camera);
     const target = thinker
       ? latLonToVector3(thinker.anchors[0].lat, thinker.anchors[0].lon, 0.42)
       : relationDirection
@@ -1155,7 +1165,7 @@ function CameraDirector({
       abort();
       if (abortRef.current === abort) abortRef.current = null;
     };
-  }, [abortRef, camera, chapterIndex, controlsReady, controlsRef, invalidate, mode, onSnapshotChange, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
+  }, [abortRef, camera, chapterIndex, controlsReady, controlsRef, invalidate, mode, onSnapshotChange, questionFocus, reduceMotion, selectedRelationId, selectedThinkerId, size.width, storyFocus]);
 
   return null;
 }
@@ -1391,13 +1401,24 @@ function GlobeScene({
   const directorAbortRef = useRef<(() => void) | null>(null);
   const bloomGroupRef = useRef<THREE.Group | null>(null);
   const currentChapter = storyChapters[props.chapterIndex] ?? storyChapters[0];
-  const activeStoryFocus = useMemo<GlobeStoryFocus>(() => props.storyFocus ?? ({
-    key: currentChapter.id,
-    camera: currentChapter.camera,
-    thinkerIds: currentChapter.thinkerIds,
-    relationIds: currentChapter.relationIds,
-    thematicTransitions: [],
-  }), [currentChapter, props.storyFocus]);
+  const activeStoryFocus = useMemo<GlobeStoryFocus>(() => {
+    if (props.mode === "explore") {
+      return props.questionFocus ?? {
+        key: "explore:clean",
+        camera: storyChapters[0].camera,
+        thinkerIds: [],
+        relationIds: [],
+        thematicTransitions: [],
+      };
+    }
+    return props.storyFocus ?? {
+      key: currentChapter.id,
+      camera: currentChapter.camera,
+      thinkerIds: currentChapter.thinkerIds,
+      relationIds: currentChapter.relationIds,
+      thematicTransitions: [],
+    };
+  }, [currentChapter, props.mode, props.questionFocus, props.storyFocus]);
   const storyThinkerIds = useMemo(
     () => new Set(activeStoryFocus.thinkerIds),
     [activeStoryFocus.thinkerIds],
@@ -1414,7 +1435,7 @@ function GlobeScene({
     [selectedRelation],
   );
   const hoveredRelation = hoveredRelationId
-    ? relations.find((relation) => relation.id === hoveredRelationId)
+    ? relations.find((relation) => relation.id === hoveredRelationId && props.visibleRelationTypes.includes(relation.type))
     : undefined;
   const hoveredRelationEndpoints = useMemo(
     () => new Set(hoveredRelation ? [hoveredRelation.from, hoveredRelation.to] : []),
@@ -1423,6 +1444,10 @@ function GlobeScene({
   const focusedThinkerIds = useMemo(
     () => getFocusedThinkerIds(props.selectedThinkerId, props.focusDepth, relations),
     [props.focusDepth, props.selectedThinkerId],
+  );
+  const visibleRelationTypeSet = useMemo(
+    () => new Set(props.visibleRelationTypes),
+    [props.visibleRelationTypes],
   );
   const mountedAnchorIds = useMemo(
     () => getGlobeAnchorMountIds(
@@ -1442,13 +1467,11 @@ function GlobeScene({
         .filter((thinker) => {
           if (props.mode === "story" && props.storyFocus) return storyThinkerIds.has(thinker.id);
           if (props.mode === "story") return true;
-          const questionMatch = !props.activeQuestionId
-            || thinker.questionIds.includes(props.activeQuestionId);
-          return questionMatch && thinker.startYear <= props.timelineYear;
+          return thinker.startYear <= props.timelineYear;
         })
         .map((thinker) => thinker.id),
     ),
-    [props.activeQuestionId, props.mode, props.storyFocus, props.timelineYear, storyThinkerIds],
+    [props.mode, props.storyFocus, props.timelineYear, storyThinkerIds],
   );
   const shared = useMemo<SharedEarthUniforms>(() => ({
     uSunDirection: { value: new THREE.Vector3(4, 2.5, 5).normalize() },
@@ -1469,6 +1492,7 @@ function GlobeScene({
             globeRef={globeRef}
             quality={props.quality}
             reduceMotion={props.reduceMotion}
+            ambientMotion={props.ambientMotion}
             shared={shared}
             stableGpuProfile={stableGpuProfile}
           />
@@ -1485,13 +1509,18 @@ function GlobeScene({
           );
           const selected = props.selectedRelationId === relation.id;
           const hovered = hoveredRelationId === relation.id;
-          const storyEmphasis = props.mode === "story" && storyRelationIds.has(relation.id);
+          const storyEmphasis = (props.mode === "story" || Boolean(props.questionFocus)) && storyRelationIds.has(relation.id);
           const emphasized = selected || incidentToSelection || storyEmphasis;
           const dimmed = Boolean(
             focusedThinkerIds
             && (!focusedThinkerIds.has(relation.from) || !focusedThinkerIds.has(relation.to)),
+          ) || Boolean(
+            props.highlightQuestionId
+            && !storyRelationIds.has(relation.id)
+            && !incidentToSelection
+            && !selected,
           );
-          const visible = endpointsVisible && (
+          const visible = visibleRelationTypeSet.has(relation.type) && endpointsVisible && (
             (props.mode === "explore" && (!props.timelineScrubbing || selected || incidentToSelection))
             || storyEmphasis
             || selected
@@ -1530,11 +1559,14 @@ function GlobeScene({
               emphasized={
                 props.selectedThinkerId === thinker.id
                 || selectedRelationEndpoints.has(thinker.id)
-                || (props.mode === "story" && storyThinkerIds.has(thinker.id))
+                || ((props.mode === "story" || Boolean(props.questionFocus)) && storyThinkerIds.has(thinker.id))
               }
               selected={props.selectedThinkerId === thinker.id}
               hovered={hoveredRelationEndpoints.has(thinker.id)}
-              dimmed={Boolean(focusedThinkerIds && !focusedThinkerIds.has(thinker.id))}
+              dimmed={Boolean(
+                (focusedThinkerIds && !focusedThinkerIds.has(thinker.id))
+                || (props.highlightQuestionId && !thinker.questionIds.includes(props.highlightQuestionId)),
+              )}
               quality={props.quality}
               onSelect={props.onSelectThinker}
             />
@@ -1569,6 +1601,7 @@ function GlobeScene({
         mode={props.mode}
         chapterIndex={props.chapterIndex}
         storyFocus={activeStoryFocus}
+        questionFocus={props.questionFocus}
         selectedThinkerId={props.selectedThinkerId}
         selectedRelationId={props.selectedRelationId}
         reduceMotion={props.reduceMotion}
@@ -1818,7 +1851,7 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
     ? relations.find((relation) => relation.id === props.selectedRelationId)
     : undefined;
   const hoveredRelation = hoveredRelationId
-    ? relations.find((relation) => relation.id === hoveredRelationId)
+    ? relations.find((relation) => relation.id === hoveredRelationId && props.visibleRelationTypes.includes(relation.type))
     : undefined;
   const focusedThinkerIds = getFocusedThinkerIds(props.selectedThinkerId, props.focusDepth, relations);
   const mountedMarkerIds = new Set(
@@ -1880,7 +1913,10 @@ export default function GlobeCanvas(props: GlobeCanvasProps) {
           const visible = Boolean(item?.visible);
           const selected = props.selectedThinkerId === thinker.id;
           const clustered = Boolean(item && item.clusterCount > 1 && item.lod !== "near");
-          const dimmed = Boolean(focusedThinkerIds && !focusedThinkerIds.has(thinker.id));
+          const dimmed = Boolean(
+            (focusedThinkerIds && !focusedThinkerIds.has(thinker.id))
+            || (props.highlightQuestionId && !thinker.questionIds.includes(props.highlightQuestionId)),
+          );
           const hovered = Boolean(
             hoveredRelation
             && (hoveredRelation.from === thinker.id || hoveredRelation.to === thinker.id),

@@ -85,8 +85,11 @@ test("server-renders the Atlas product shell", async () => {
   const html = await response.text();
   assert.match(html, /思想星图/);
   assert.match(html, /ATLAS OF IDEAS/);
-  assert.match(html, /开启一次思想旅程/);
-  assert.match(html, /你凭什么说“我知道”/);
+  assert.match(html, /从问题进入思想史/);
+  assert.match(html, /你想先追问什么？/);
+  assert.match(html, /世界是什么？/);
+  assert.match(html, /我们如何知道？/);
+  assert.match(html, /怎样过好一生？/);
   assert.match(html, /展陈设置/);
   assert.match(html, /WORLD PHILOSOPHY/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is building|codex-preview/);

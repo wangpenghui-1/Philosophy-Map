@@ -14,14 +14,18 @@ export function DisplaySettings({
   earthMode,
   qualityPreference,
   effectiveQuality,
+  soundEnabled,
   onEarthModeChange,
   onQualityPreferenceChange,
+  onSoundEnabledChange,
 }: {
   earthMode: EarthLightingMode;
   qualityPreference: QualityPreference;
   effectiveQuality: EffectiveQuality;
+  soundEnabled: boolean;
   onEarthModeChange: (mode: EarthLightingMode) => void;
   onQualityPreferenceChange: (preference: QualityPreference) => void;
+  onSoundEnabledChange: (enabled: boolean) => void;
 }) {
   return (
     <details className="display-settings">
@@ -57,6 +61,14 @@ export function DisplaySettings({
               </button>
             ))}
           </div>
+        </fieldset>
+        <fieldset>
+          <legend>界面音效</legend>
+          <div className="segmented-control">
+            <button type="button" className={!soundEnabled ? "is-active" : ""} aria-pressed={!soundEnabled} onClick={() => onSoundEnabledChange(false)}>关闭</button>
+            <button type="button" className={soundEnabled ? "is-active" : ""} aria-pressed={soundEnabled} onClick={() => onSoundEnabledChange(true)}>开启</button>
+          </div>
+          <p className="display-settings__note">默认关闭；页面不会自动播放声音。</p>
         </fieldset>
       </div>
     </details>

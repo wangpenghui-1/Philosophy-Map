@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import * as THREE from "three";
 import {
+  ATLAS_INTRO_DURATION_MS,
+  QUESTION_CAMERA_SETTLE_MS,
   advanceAutoQuality,
   detailSheetSnapFromProgress,
   getFocusedThinkerIds,
@@ -53,8 +55,14 @@ test("visual policy helpers remain deterministic", () => {
   assert.deepEqual(timelineDensity([-600, 0, 1000, 2026], -600, 2026, 4), [1, 0, 0.5, 0.5]);
 });
 
+test("atlas motion timings match the first-screen interaction specification", () => {
+  assert.deepEqual(ATLAS_INTRO_DURATION_MS, { full: 1_800, quick: 800, reduced: 120 });
+  assert.equal(QUESTION_CAMERA_SETTLE_MS, 900);
+});
+
 test("exploration camera only directs toward an explicit selection", () => {
   assert.equal(shouldDirectGlobeCamera("explore", null, null), false);
+  assert.equal(shouldDirectGlobeCamera("explore", null, null, true), true);
   assert.equal(shouldDirectGlobeCamera("explore", "confucius", null), true);
   assert.equal(shouldDirectGlobeCamera("explore", null, "confucius-laozi"), true);
   assert.equal(shouldDirectGlobeCamera("story", null, null), true);
@@ -71,8 +79,26 @@ test("focus depth includes the selected thinker and deterministic graph hops", (
   assert.equal(getFocusedThinkerIds("a", "all", relations), null);
 });
 
-test("persisted visual state validates ids, ranges, preferences, and camera", () => {
+test("v2 visual state keeps only safe display preferences", () => {
   const parsed = parsePersistedVisualState(JSON.stringify({
+    version: 2,
+    entrySeen: true,
+    earthMode: "night",
+    qualityPreference: "auto",
+    soundEnabled: false,
+  }));
+  assert.deepEqual(parsed, {
+    version: 2,
+    entrySeen: true,
+    earthMode: "night",
+    qualityPreference: "auto",
+    soundEnabled: false,
+  });
+  assert.equal(parsePersistedVisualState("{}"), null);
+});
+
+test("v1 migration preserves display preferences and discards selections", () => {
+  const migrated = parsePersistedVisualState(null, JSON.stringify({
     version: 1,
     entrySeen: true,
     mode: "explore",
@@ -80,25 +106,17 @@ test("persisted visual state validates ids, ranges, preferences, and camera", ()
     questionId: "freedom",
     thinkerSlug: "kant",
     relationId: "hume-kant",
-    earthMode: "night",
-    qualityPreference: "auto",
+    earthMode: "day",
+    qualityPreference: "high",
     camera: { position: [0, 1, 6], target: [0, 0, 0], distance: 6.08 },
-  }), {
-    isQuestionId: (value) => value === "freedom",
-    isThinkerSlug: (value) => value === "kant",
-    isRelationId: (value) => value === "hume-kant",
-    minYear: -600,
-    maxYear: 2026,
+  }));
+  assert.deepEqual(migrated, {
+    version: 2,
+    entrySeen: true,
+    earthMode: "day",
+    qualityPreference: "high",
+    soundEnabled: false,
   });
-  assert.equal(parsed?.thinkerSlug, "kant");
-  assert.equal(parsed?.camera?.distance, 6.08);
-  assert.equal(parsePersistedVisualState("{}", {
-    isQuestionId: () => false,
-    isThinkerSlug: () => false,
-    isRelationId: () => false,
-    minYear: -600,
-    maxYear: 2026,
-  }), null);
 });
 
 test("elevated relation arcs never enter the globe", () => {

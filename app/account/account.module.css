@@ -32,3 +32,19 @@
 .danger { border-color: rgba(224,154,143,.35); }
 .danger button { border-color: rgba(224,154,143,.55); color: #e09a8f; }
 @media (max-width: 700px) { .header { align-items: flex-start; flex-direction: column; } .columns { grid-template-columns: 1fr; } .links { flex-direction: column; } }
+
+/* Public typography baseline: the account UI follows the same readable scale as the atlas. */
+.shell { font-size: 16px; }
+.brand small, .eyebrow { font-size: 11px; }
+.header nav a { display: inline-flex; min-height: 40px; align-items: center; font-size: 13px; }
+.authCard p, .hero p { font-size: 16px; line-height: 1.75; }
+.form label { font-size: 13px; }
+.form input, .form select, .form textarea { min-height: 44px; font-size: 16px; }
+.form button, .action { min-height: 44px; font-size: 14px; }
+.links a { display: inline-flex; min-height: 40px; align-items: center; font-size: 13px; }
+.panel li { font-size: 14px; line-height: 1.65; }
+.panel button { min-height: 40px; font-size: 13px; }
+
+@media (max-width: 700px) {
+  .header nav a, .links a, .form button, .action, .panel button { min-height: 44px; }
+}

@@ -291,8 +291,9 @@ test("question cards, globe utilities, and thinker preview keep a clear responsi
   await expect(page.getByRole("button", { name: "加入比较" })).toBeVisible();
 });
 
-test("immersive mode leaves the globe as the sole visual focus and restores the interface", async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 });
+test("immersive mode leaves the globe as the sole visual focus and restores the interface", async ({ page }, testInfo) => {
+  const compact = testInfo.project.name === "mobile-chromium";
+  await page.setViewportSize(compact ? { width: 390, height: 844 } : { width: 1440, height: 900 });
   await openHydrated(page, "/explore");
   const toggle = page.getByRole("button", { name: "隐藏界面，进入沉浸模式" });
   await toggle.click();
@@ -306,19 +307,27 @@ test("immersive mode leaves the globe as the sole visual focus and restores the 
   const stageBox = await page.locator(".globe-stage").boundingBox();
   expect(stageBox).not.toBeNull();
   if (!stageBox) throw new Error("Missing globe stage bounds");
-  expect(stageBox.width).toBeGreaterThanOrEqual(1438);
-  expect(stageBox.height).toBeGreaterThanOrEqual(898);
+  expect(stageBox.width).toBeGreaterThanOrEqual(compact ? 388 : 1438);
+  expect(stageBox.height).toBeGreaterThanOrEqual(compact ? 842 : 898);
+
+  const visibleMarker = page.locator('.globe-marker[data-visible="true"]').first();
+  await expect(visibleMarker).toBeVisible();
+  await visibleMarker.click();
+  await expect(page.locator(".detail-pane")).toBeVisible();
+  await expect(page.getByRole("button", { name: "关闭人物详情" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "查看人物详情" })).toBeVisible();
+  await expect(page.locator(".site-header")).toBeHidden();
+  await expect(page.locator(".bottom-dock")).toBeHidden();
+  await expect(page.getByRole("button", { name: "显示探索界面" })).toBeVisible();
+
+  await page.getByRole("button", { name: "关闭人物详情" }).click();
+  await expect(page.locator(".detail-pane")).toBeHidden();
+  await expect(page.locator(".atlas-shell")).toHaveClass(/atlas-shell--ui-hidden/);
 
   await page.getByRole("button", { name: "显示探索界面" }).click();
   await expect(page.locator(".atlas-shell")).not.toHaveClass(/atlas-shell--ui-hidden/);
   await expect(page.locator(".site-header")).toBeVisible();
   await expect(page.locator(".question-dock")).toBeVisible();
-
-  await openHydrated(page, "/explore?thinker=kant");
-  await page.getByRole("button", { name: "隐藏界面，进入沉浸模式" }).click();
-  await expect(page.locator(".detail-pane")).toBeHidden();
-  await page.getByRole("button", { name: "显示探索界面" }).click();
-  await expect(page.locator(".detail-pane")).toBeVisible();
 });
 
 test("closing a detail pane clears the selection and preserves exploration filters", async ({ page }) => {

@@ -343,7 +343,6 @@
   .atlas-shell--ui-hidden .globe-instruction,
   .atlas-shell--ui-hidden .globe-stage__topline,
   .atlas-shell--ui-hidden .focus-depth-control,
-  .atlas-shell--ui-hidden .detail-pane,
   .atlas-shell--ui-hidden .quality-indicator,
   .atlas-shell--ui-hidden .earth-mode-switch,
   .atlas-shell--ui-hidden .relation-hover-card {
@@ -356,16 +355,23 @@
   .atlas-shell--ui-hidden .question-dock,
   .atlas-shell--ui-hidden .story-overlay,
   .atlas-shell--ui-hidden .journey-story-card { transform: translateY(24px); }
-  .atlas-shell--ui-hidden .detail-pane { transform: translate3d(calc(100% + 48px), 0, 0); }
+  .atlas-shell--ui-hidden .detail-pane:not(.detail-pane--active) {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(calc(100% + 48px), 0, 0);
+    pointer-events: none;
+  }
   .atlas-shell--ui-hidden .atlas-main { padding: 0; }
   .atlas-shell--ui-hidden .globe-stage { border: 0; border-radius: 0; box-shadow: none; }
   .atlas-shell--ui-hidden .immersive-toggle { top: 16px; right: 16px; opacity: .58; }
+  .atlas-shell--ui-hidden .globe-stage--detail-open .immersive-toggle { right: 420px; }
 
   @media (max-width: 1180px) {
     .question-dock { width: min(760px, calc(100% - 44px)); }
     .question-dock.is-expanded { width: min(840px, calc(100% - 44px)); }
     .question-dock__heading h1 { font-size: clamp(38px, 4.6vw, 50px); }
     .globe-stage--detail-open .immersive-toggle { right: 410px; }
+    .atlas-shell--ui-hidden .globe-stage--detail-open .immersive-toggle { right: 410px; }
   }
 
   @media (max-height: 700px) and (min-width: 821px) {
@@ -425,6 +431,7 @@
     .atlas-shell--ui-hidden { grid-template-rows: 0 minmax(0, 1fr) 0; }
     .atlas-shell--ui-hidden .atlas-main { padding: 0; }
     .atlas-shell--ui-hidden .immersive-toggle { top: 12px; right: 11px; }
+    .atlas-shell--ui-hidden .globe-stage--detail-open .immersive-toggle { right: 11px; }
   }
 
   @media (max-width: 460px) {

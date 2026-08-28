@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.7.1 - 2026-08-28
+
+### Fixes
+
+- Keep the active thinker preview visible in immersive mode while navigation, question prompts, filters, and the timeline remain hidden.
+- Reposition the interface reveal control beside desktop thinker previews while retaining its compact top-right placement on mobile.
+
+### Tests
+
+- Verify real marker clicks on desktop and mobile, the direct thinker-profile link, and closing the preview without leaving immersive mode.
+
 ## 0.7.0 - 2026-08-28
 
 ### Features

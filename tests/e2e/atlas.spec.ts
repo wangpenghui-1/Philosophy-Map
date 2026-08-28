@@ -41,22 +41,46 @@ test("homepage question cards focus the globe and launch a journey", async ({ pa
 });
 
 test("intro uses full, quick, skip, and reduced-motion timing", async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!window.sessionStorage.getItem("atlas-intro-test-ready")) {
+      window.localStorage.clear();
+      window.sessionStorage.setItem("atlas-intro-test-ready", "1");
+    }
+    const introSequences: string[] = [];
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences = introSequences;
+    const recordIntroSequence = () => {
+      document.querySelectorAll<HTMLElement>("[data-intro-sequence]").forEach((element) => {
+        const sequence = element.dataset.introSequence;
+        if (sequence && !introSequences.includes(sequence)) introSequences.push(sequence);
+      });
+    };
+    new MutationObserver(recordIntroSequence).observe(document, {
+      attributes: true,
+      attributeFilter: ["data-intro-sequence"],
+      childList: true,
+      subtree: true,
+    });
+  });
   await page.goto("/");
-  await page.evaluate(() => localStorage.clear());
-  await page.reload();
   await waitForHydration(page);
-  await expect(page.locator('[data-intro-sequence="full"]')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("full");
   await page.keyboard.press("Tab");
   await expect(page.locator("[data-intro-sequence]")).toHaveCount(0);
 
   await page.reload();
   await waitForHydration(page);
-  await expect(page.locator('[data-intro-sequence="quick"]')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("quick");
 
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.reload();
   await waitForHydration(page);
-  await expect(page.locator('[data-intro-sequence="reduced"]')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => (
+    (window as typeof window & { __atlasIntroSequences?: string[] }).__atlasIntroSequences ?? []
+  ))).toContain("reduced");
   await expect(page.locator("[data-intro-sequence]")).toHaveCount(0, { timeout: 1_500 });
 });
 

@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.0 - 2026-08-28
+
+### Features
+
+- Redesign the homepage and `/explore` as a question-led 3D globe experience with three featured prompts, six complete question cards, progressive previews, compact controls, and a dedicated eight-journey directory.
+- Add responsive black-gold question artwork, stable camera presets, question and relation highlighting, deep-link restoration, and preference-only `atlas-visual-state:v2` migration.
+- Upgrade typography and interaction sizing across public pages while preserving the existing serif content and sans-serif interface system.
+
+### Accessibility and Performance
+
+- Add reduced-motion intro behavior, keyboard and focus coverage, mobile snap cards, a three-stage detail sheet, WebGL fallback continuity, and an 11px minimum visible-text gate.
+- Keep the interactive globe on demand-driven rendering after entry and retain marker budgets, automatic quality fallback, and Windows Edge recovery behavior.
+
+### Security
+
+- Update the transitive `nanoid` dependency to 3.3.18 to resolve the current production dependency advisory.
+
+### Tests and Documentation
+
+- Cover question configuration, artwork budgets, intro timing, state migration, URL behavior, relation filters, responsive layouts, public typography, WebGL recovery, and desktop/mobile visual snapshots.
+- Document the six generated illustration prompts, intended use, responsive exports, compression results, and media provenance.
+
 ## 0.5.2 - 2026-08-10
 
 ### Performance

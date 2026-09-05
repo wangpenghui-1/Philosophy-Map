@@ -1,13 +1,16 @@
 # Globe rendering sources
 
 The runtime textures in this folder were retrieved from the official Three.js
-examples on 2026-07-18:
+examples on 2026-07-18 and re-encoded to WebP by
+`npm run media:globe:optimize`, which keeps the original pixel dimensions and
+retains any source files. `npm run media:globe:check` verifies all five runtime
+maps, their dimensions, transparency, decoding, and the 850 KB total budget:
 
-- `earth-day.jpg`: https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg
-- `earth-night.png`: https://threejs.org/examples/textures/planets/earth_lights_2048.png
-- `earth-normal.jpg`: https://threejs.org/examples/textures/planets/earth_normal_2048.jpg
-- `earth-specular.jpg`: https://threejs.org/examples/textures/planets/earth_specular_2048.jpg
-- `earth-clouds.png`: https://threejs.org/examples/textures/planets/earth_clouds_1024.png
+- `earth-day.webp`: https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg
+- `earth-night.webp`: https://threejs.org/examples/textures/planets/earth_lights_2048.png
+- `earth-normal.webp`: https://threejs.org/examples/textures/planets/earth_normal_2048.jpg
+- `earth-specular.webp`: https://threejs.org/examples/textures/planets/earth_specular_2048.jpg
+- `earth-clouds.webp`: https://threejs.org/examples/textures/planets/earth_clouds_1024.png
 - `countries-50m.json`: `world-atlas@2.0.2` (Natural Earth source data)
 
 The rendering approach was checked against these public references:

@@ -636,6 +636,31 @@ test("supported responsive widths have no horizontal overflow or hidden header c
   }
 });
 
+test("missing pages offer readable responsive routes back to published content", async ({ page }) => {
+  const response = await page.goto("/not-a-public-page");
+  expect(response?.status()).toBe(404);
+  await expect(page.getByRole("heading", { name: "这个地址上没有条目" })).toBeVisible();
+  const exits = page.getByRole("navigation", { name: "继续探索" });
+  await expect(exits.getByRole("link")).toHaveCount(3);
+  const geometry = await exits.getByRole("link").evaluateAll((links) => links.map((link) => {
+    const rect = link.getBoundingClientRect();
+    return { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom, height: rect.height };
+  }));
+  const width = page.viewportSize()!.width;
+  for (const rect of geometry) {
+    expect(rect.left).toBeGreaterThanOrEqual(0);
+    expect(rect.right).toBeLessThanOrEqual(width);
+    expect(rect.height).toBeGreaterThanOrEqual(140);
+  }
+  for (let index = 1; index < geometry.length; index++) {
+    if (width <= 680) expect(geometry[index].top).toBeGreaterThan(geometry[index - 1].bottom);
+    else expect(geometry[index].left).toBeGreaterThan(geometry[index - 1].right);
+  }
+  await exits.getByRole("link", { name: /浏览全部条目/ }).click();
+  await expect(page).toHaveURL(/\/knowledge$/);
+  await expect(page.getByRole("heading", { name: "从人物出发，沿着概念与文本阅读思想史" })).toBeVisible();
+});
+
 test("public pages keep visible text at or above the 11px floor", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop-chromium", "Typography is shared; one desktop browser audits computed styles.");
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -649,6 +674,7 @@ test("public pages keep visible text at or above the 11px floor", async ({ page 
     "/chat",
     "/account/login",
     "/journeys",
+    "/not-a-public-page",
   ];
   for (const path of paths) {
     await page.goto(path);
@@ -668,7 +694,7 @@ test("public pages keep visible text at or above the 11px floor", async ({ page 
       })
       .slice(0, 20)
       .map((element) => `${element.tagName.toLowerCase()}.${element.className}:${getComputedStyle(element).fontSize}:${element.textContent?.trim().slice(0, 24)}`));
-    expect(offenders, `${path} has undersized visible text`).toEqual([]);
+    expect.soft(offenders, `${path} has undersized visible text`).toEqual([]);
   }
 });
 

@@ -130,8 +130,8 @@ test("the live globe uses budgeted surface anchors, portrait assets, and local d
 
   assert.match(source, /layoutGlobeMarkers\(/);
   assert.match(source, /thinker\.media\.thumbSrc/);
-  assert.match(source, /earth-day\.jpg/);
-  assert.match(source, /earth-night\.png/);
+  assert.match(source, /earth-day\.webp/);
+  assert.match(source, /earth-night\.webp/);
   assert.match(source, /getGlobeAnchorMountIds\(/);
   assert.match(source, /circleGeometry/);
   assert.match(source, /ringGeometry/);

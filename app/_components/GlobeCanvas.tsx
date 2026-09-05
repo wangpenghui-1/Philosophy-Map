@@ -52,11 +52,11 @@ import {
 const MARKER_RADIUS = GLOBE_RADIUS + 0.065;
 const DETAIL_BORDERS_URL = "/media/globe/countries-50m.json";
 const EARTH_TEXTURE_URLS = [
-  "/media/globe/earth-day.jpg",
-  "/media/globe/earth-night.png",
-  "/media/globe/earth-normal.jpg",
-  "/media/globe/earth-specular.jpg",
-  "/media/globe/earth-clouds.png",
+  "/media/globe/earth-day.webp",
+  "/media/globe/earth-night.webp",
+  "/media/globe/earth-normal.webp",
+  "/media/globe/earth-specular.webp",
+  "/media/globe/earth-clouds.webp",
 ] as const;
 
 type GlobePowerPreference = "default" | "high-performance";

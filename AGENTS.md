@@ -52,3 +52,13 @@
 - 新的大型功能或相互独立的高风险工作可使用 `codex/<简短任务名>` 分支。
 - 修复默认提升补丁版本，新功能默认提升次版本，破坏性变更提升主版本；检测到例外时在统一审核中说明。
 - 已存在的版本标签不得移动或覆盖；发布失败时创建后续修复版本。
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

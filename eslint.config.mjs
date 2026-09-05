@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Browser reports contain bundled third-party code, not project sources.
+    "playwright-report/**",
+    "test-results/**",
+    "blob-report/**",
   ]),
 ]);
 

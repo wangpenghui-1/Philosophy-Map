@@ -9,9 +9,12 @@ function contentSecurityPolicy(nonce: string) {
   } catch {
     // An invalid deployment value must not be copied into a response header.
   }
+  // `next dev --webpack` serves modules through `eval`, so the development
+  // policy has to allow it. Production keeps the strict nonce-only policy.
+  const developmentScriptSources = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
   return [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'wasm-unsafe-eval'`,
+    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'wasm-unsafe-eval'${developmentScriptSources}`,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:" + (mediaOrigin ? ` ${mediaOrigin}` : ""),
     "font-src 'self' data:",

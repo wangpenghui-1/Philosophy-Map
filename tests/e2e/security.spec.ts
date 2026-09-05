@@ -10,6 +10,7 @@ test("security headers preserve chat and WebGL application boot", async ({ page,
   const chat = await page.goto("/chat");
   expect(chat?.status()).toBe(200);
   expect(chat?.headers()["content-security-policy"]).toContain("script-src 'self' 'nonce-");
+  expect(chat?.headers()["content-security-policy"]).not.toContain("'unsafe-eval'");
   expect(chat?.headers()["x-content-type-options"]).toBe("nosniff");
   expect(chat?.headers()["x-request-id"]).toBeTruthy();
   await expect(page.getByRole("heading", { name: "有据可查的哲学对话" })).toBeVisible();

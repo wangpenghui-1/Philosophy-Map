@@ -414,6 +414,7 @@ test("publishes exactly the current release and keeps non-published records out 
 
 test("returns 404 for invalid public resource routes", async () => {
   const responses = await Promise.all([
+    render("/not-a-public-page"),
     render("/thinker/not-a-thinker"),
     render("/story/not-a-chapter"),
     render("/compare/confucius/confucius"),

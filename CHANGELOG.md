@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.7.3 - 2026-09-05
+
+### Fixes
+
+- Complete the custom 404 page with readable navigation cards, responsive layouts, and links back to the globe, knowledge library, and journeys.
+- Consolidate public typography into its component rules while preserving readable journey controls, search metadata, and uncertainty notes.
+- Allow Webpack's development evaluator only in development; keep the production Content Security Policy strict.
+- Exclude generated browser reports from source linting so repeat reviews remain reliable.
+
+### Performance and Security
+
+- Replace the five globe textures with WebP at their original dimensions, reducing their combined size by 63% while retaining cloud transparency.
+- Verify texture format, dimensions, transparency, decoding, and the total size budget before every production build; retain source files during future conversions.
+- Synchronize the Sharp dependency and update compatible Browserslist, fast-uri, and fflate security patches.
+
+### Tests
+
+- Cover missing-route HTTP status, desktop/mobile recovery navigation, the public text-size floor, and the production script policy.
+
 ## 0.7.2 - 2026-08-28
 
 ### Fixes

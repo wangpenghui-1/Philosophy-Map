@@ -91,8 +91,8 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
-    "@tailwindcss/postcss": "4.2.1",
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
@@ -100,9 +100,9 @@
     "@types/topojson-client": "^3.1.5",
     "drizzle-kit": "^0.31.10",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.3.0",
-    "sharp": "^0.35.3",
-    "tailwindcss": "4.2.1",
+    "eslint-config-next": "16.3.4",
+    "sharp": "^0.35.4",
+    "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
   },
   "overrides": {
